@@ -3,104 +3,286 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>全球 145 大海滨与海岛度假胜地硬核排行榜 | Global Beach & Island Resort Rankings</title>
+  <meta name="theme-color" content="#0b2540" />
+  <title>全球 145 大海滨与海岛度假胜地硬核排行榜 | Global Beach &amp; Island Resort Rankings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', '"Segoe UI"', 'Roboto', 'sans-serif']
+          },
+          colors: {
+            ocean: { 950: '#071a2e', 900: '#0b2540', 800: '#0e3a57', 700: '#0f5470' }
+          },
+          boxShadow: {
+            soft: '0 1px 2px rgba(15,23,42,.04), 0 4px 16px -4px rgba(15,23,42,.06)',
+            lift: '0 2px 4px rgba(15,23,42,.04), 0 12px 32px -8px rgba(15,23,42,.14)'
+          }
+        }
+      }
+    };
+  </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-feature-settings: "cv11", "ss01";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+    ::selection { background: #bae6fd; color: #0c4a6e; }
+    .tnum { font-variant-numeric: tabular-nums; }
+
     /* Custom scrollbar for wide table */
     ::-webkit-scrollbar {
       height: 8px;
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #f1f5f9;
+      background: transparent;
     }
     ::-webkit-scrollbar-thumb {
       background: #cbd5e1;
-      border-radius: 4px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
     }
     ::-webkit-scrollbar-thumb:hover {
       background: #94a3b8;
+      background-clip: padding-box;
+    }
+
+    /* Form controls */
+    .field-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 6px;
+      letter-spacing: .02em;
+    }
+    .select {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background-color: #f8fafc;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2394a3b8'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 18px;
+      padding: 0 34px 0 12px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #1e293b;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s, background-color .15s;
+    }
+    .select:hover { border-color: #cbd5e1; background-color: #fff; }
+    .select:focus { outline: none; border-color: #38bdf8; background-color: #fff; box-shadow: 0 0 0 4px rgba(56,189,248,.18); }
+
+    /* Range sliders with filled track — uses --pct and --c CSS vars */
+    input[type="range"].range {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--c, #0284c7) 0%, var(--c, #0284c7) var(--pct, 50%), #e2e8f0 var(--pct, 50%), #e2e8f0 100%);
+      cursor: pointer;
+      outline: none;
+    }
+    input[type="range"].range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--c, #0284c7);
+      box-shadow: 0 1px 3px rgba(15,23,42,.25);
+      transition: transform .12s;
+    }
+    input[type="range"].range::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--c, #0284c7);
+      box-shadow: 0 1px 3px rgba(15,23,42,.25);
+    }
+    input[type="range"].range:hover::-webkit-slider-thumb,
+    input[type="range"].range:active::-webkit-slider-thumb { transform: scale(1.15); }
+    input[type="range"].range:focus-visible { box-shadow: 0 0 0 4px rgba(56,189,248,.25); }
+
+    /* Sticky table header inside the scroll container */
+    .sticky-head th {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    /* Hub guide numbered lists */
+    .hub-list { counter-reset: hub; }
+    .hub-list > li {
+      counter-increment: hub;
+      position: relative;
+      padding-left: 30px;
+      line-height: 1.65;
+    }
+    .hub-list > li::before {
+      content: counter(hub);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--hub-c, #0ea5e9);
+      color: #fff;
+    }
+
+    /* Details marker */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+    .anim-fade-up { animation: fadeUp .35s ease-out both; }
+    .anim-modal { animation: modalIn .22s ease-out both; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen pb-24">
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-28">
 
   <!-- Top Hero Banner -->
-  <header class="bg-gradient-to-r from-sky-900 via-cyan-900 to-teal-900 text-white shadow-lg">
-    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 py-7">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-cyan-200 mb-2">
+  <header class="relative overflow-hidden bg-gradient-to-br from-ocean-950 via-ocean-800 to-teal-800 text-white">
+    <!-- Decorative glows -->
+    <div class="pointer-events-none absolute -top-32 -left-24 w-[480px] h-[480px] rounded-full bg-cyan-400/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-40 right-0 w-[560px] h-[560px] rounded-full bg-teal-300/15 blur-3xl"></div>
+    <div class="pointer-events-none absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 22px 22px;"></div>
+
+    <div class="relative max-w-[1600px] mx-auto px-4 sm:px-6 pt-8 pb-16 sm:pb-20">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div class="max-w-4xl">
+          <div class="inline-flex flex-wrap items-center gap-x-2 gap-y-1 px-3 py-1 rounded-full bg-white/10 ring-1 ring-inset ring-white/20 backdrop-blur text-[11px] sm:text-xs font-medium text-cyan-100 mb-4">
             <span>🌊 WMO / NOAA 30年气候基准</span>
-            <span>·</span>
+            <span class="text-white/30">·</span>
             <span>8维量化打分</span>
-            <span>·</span>
+            <span class="text-white/30">·</span>
             <span>Booking.com / Google Flights 实测核验</span>
           </div>
-          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            全球 145 大海滨与海岛度假胜地硬核排行榜
+          <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.25]">
+            全球 <span class="bg-gradient-to-r from-cyan-200 via-teal-100 to-amber-200 bg-clip-text text-transparent">145</span> 大海滨与海岛度假胜地<br class="hidden sm:block" />硬核排行榜
           </h1>
-          <p class="text-sky-100/90 text-xs sm:text-sm mt-1.5 max-w-4xl leading-relaxed">
-            包含 <strong>🔥 100 大“365天真热带”胜地</strong>（最冷月夜间低温 ≥ 18.0°C 且 最冷月海水温度 ≥ 21.0°C）与 <strong>☀️ 45 大“季节性/亚热带/地中海”胜地</strong>（当季巅峰总分 ≥ 76.5 分）。严格执行<strong>“非45分钟一日游圈绝不合并”</strong>铁律。
+          <p class="text-sky-100/80 text-[13px] sm:text-sm mt-3 max-w-3xl leading-relaxed">
+            包含 <strong class="text-white">🔥 100 大“365天真热带”胜地</strong>（最冷月夜间低温 ≥ 18.0°C 且 最冷月海水温度 ≥ 21.0°C）与 <strong class="text-white">☀️ 45 大“季节性/亚热带/地中海”胜地</strong>（当季巅峰总分 ≥ 76.5 分）。严格执行<strong class="text-white">“非45分钟一日游圈绝不合并”</strong>铁律。
           </p>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2.5">
-          <button onclick="openCompareModal()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow transition flex items-center gap-1.5">
+        <div class="flex flex-wrap items-center gap-2.5 lg:justify-end lg:max-w-md">
+          <button onclick="openCompareModal()" class="h-10 px-4 rounded-xl bg-gradient-to-b from-amber-300 to-amber-500 hover:from-amber-200 hover:to-amber-400 text-slate-950 font-bold text-[13px] shadow-lg shadow-amber-900/30 ring-1 ring-inset ring-white/30 transition flex items-center gap-1.5">
             <span>⚔️ 海岛雷达图 PK</span>
           </button>
-          <button onclick="exportCSV()" class="px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/25 font-semibold text-xs sm:text-sm transition flex items-center gap-1.5">
+          <button onclick="exportCSV()" class="h-10 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white ring-1 ring-inset ring-white/25 backdrop-blur font-semibold text-[13px] transition flex items-center gap-1.5">
             <span>📥 导出当前榜单 CSV</span>
           </button>
-          <a href="#eliminated-section" class="px-3.5 py-2 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-100 border border-rose-400/30 font-medium text-xs sm:text-sm transition">
+          <a href="#eliminated-section" class="h-10 px-3.5 inline-flex items-center rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-100 ring-1 ring-inset ring-rose-300/30 font-medium text-[13px] transition">
             🚫 查看淘汰区守门员 (Key West / 佛得角)
           </a>
         </div>
       </div>
 
+      <!-- Hero stats -->
+      <dl class="mt-7 grid grid-cols-2 sm:grid-cols-5 gap-px rounded-2xl overflow-hidden bg-white/10 ring-1 ring-white/15 backdrop-blur">
+        <div class="bg-ocean-950/30 px-4 py-3">
+          <dt class="text-[11px] text-sky-200/70">收录胜地</dt>
+          <dd class="text-2xl font-extrabold tnum">145</dd>
+        </div>
+        <div class="bg-ocean-950/30 px-4 py-3">
+          <dt class="text-[11px] text-rose-200/80">🔥 365天真热带</dt>
+          <dd class="text-2xl font-extrabold tnum">100</dd>
+        </div>
+        <div class="bg-ocean-950/30 px-4 py-3">
+          <dt class="text-[11px] text-sky-200/80">☀️ 季节性 / 地中海</dt>
+          <dd class="text-2xl font-extrabold tnum">45</dd>
+        </div>
+        <div class="bg-ocean-950/30 px-4 py-3">
+          <dt class="text-[11px] text-emerald-200/80">📐 评分维度</dt>
+          <dd class="text-2xl font-extrabold tnum">8 <span class="text-sm font-semibold text-white/60">维</span></dd>
+        </div>
+        <div class="bg-ocean-950/30 px-4 py-3 col-span-2 sm:col-span-1">
+          <dt class="text-[11px] text-amber-200/80">📏 统一准入线</dt>
+          <dd class="text-2xl font-extrabold tnum">76.5 <span class="text-sm font-semibold text-white/60">分</span></dd>
+        </div>
+      </dl>
+
       <!-- 3 Core Rules Pill Bar -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 pt-4 border-t border-white/15 text-xs">
-        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
-          <div class="font-bold text-cyan-200">🌡️ 铁律一：生理体感温度硬指标（不按死板纬度）</div>
-          <p class="text-sky-100/80 mt-1">真热带榜要求全年最冷月<strong>夜间平均低温 ≥ 18.0°C</strong>（晚间海风不穿外套）且<strong>最冷月表层水温 ≥ 21.0°C</strong>（全年365天可裸泳下水）。</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4 text-xs">
+        <div class="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.1] transition rounded-2xl p-4 ring-1 ring-inset ring-white/10">
+          <span class="absolute -right-1 -top-3 text-6xl font-black text-white/[0.06] select-none">01</span>
+          <div class="font-bold text-cyan-200 text-[13px]">🌡️ 铁律一：生理体感温度硬指标（不按死板纬度）</div>
+          <p class="text-sky-100/75 mt-1.5 leading-relaxed">真热带榜要求全年最冷月<strong class="text-white/90">夜间平均低温 ≥ 18.0°C</strong>（晚间海风不穿外套）且<strong class="text-white/90">最冷月表层水温 ≥ 21.0°C</strong>（全年365天可裸泳下水）。</p>
         </div>
-        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
-          <div class="font-bold text-amber-200">🧭 铁律二：45分钟一日游圈独立拆分原则</div>
-          <p class="text-sky-100/80 mt-1">不同城市/岛屿严禁强行打包！夏威夷拆4岛、泰国拆6地、斯里兰卡拆南北、红海拆3城。仅共享45分钟船程/车程圈（如芭堤雅+格兰岛20m快艇）可组合。</p>
+        <div class="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.1] transition rounded-2xl p-4 ring-1 ring-inset ring-white/10">
+          <span class="absolute -right-1 -top-3 text-6xl font-black text-white/[0.06] select-none">02</span>
+          <div class="font-bold text-amber-200 text-[13px]">🧭 铁律二：45分钟一日游圈独立拆分原则</div>
+          <p class="text-sky-100/75 mt-1.5 leading-relaxed">不同城市/岛屿严禁强行打包！夏威夷拆4岛、泰国拆6地、斯里兰卡拆南北、红海拆3城。仅共享45分钟船程/车程圈（如芭堤雅+格兰岛20m快艇）可组合。</p>
         </div>
-        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
-          <div class="font-bold text-emerald-200">📏 铁律三：统一 76.5 分准入底线</div>
-          <p class="text-sky-100/80 mt-1">真热带榜第100名（芭堤雅+格兰岛 76.5分）与季节性榜第45名（北海涠洲岛 76.5分）同分对齐。低于76.5分的 Key West (73.5)、佛得角 (71.5) 均退入淘汰区。</p>
+        <div class="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.1] transition rounded-2xl p-4 ring-1 ring-inset ring-white/10">
+          <span class="absolute -right-1 -top-3 text-6xl font-black text-white/[0.06] select-none">03</span>
+          <div class="font-bold text-emerald-200 text-[13px]">📏 铁律三：统一 76.5 分准入底线</div>
+          <p class="text-sky-100/75 mt-1.5 leading-relaxed">真热带榜第100名（芭堤雅+格兰岛 76.5分）与季节性榜第45名（北海涠洲岛 76.5分）同分对齐。低于76.5分的 Key West (73.5)、佛得角 (71.5) 均退入淘汰区。</p>
         </div>
       </div>
     </div>
+
+    <!-- Wave divider -->
+    <svg class="absolute bottom-0 left-0 w-full h-10 sm:h-14 text-slate-50" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="currentColor" d="M0,48 C180,80 360,80 540,56 C720,32 900,8 1080,20 C1260,32 1350,56 1440,60 L1440,80 L0,80 Z"></path>
+    </svg>
   </header>
 
-  <main class="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-6">
+  <main class="relative max-w-[1600px] mx-auto px-4 sm:px-6 -mt-4 space-y-5">
 
     <!-- Curated Departure Hub Guide (Collapsible) -->
-    <details class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
-      <summary class="px-5 py-3.5 cursor-pointer flex items-center justify-between bg-gradient-to-r from-slate-50 to-sky-50/50 hover:bg-sky-50/60 transition select-none">
-        <div class="flex items-center gap-2.5">
-          <span class="text-lg">✈️</span>
-          <span class="font-bold text-slate-800 text-sm sm:text-base">三大出发地（上海 / 香港 / 法兰克福）直飞便利度与品质严选指南</span>
-          <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-sky-100 text-sky-800">点击展开对比</span>
-        </div>
-        <span class="text-xs text-slate-500 group-open:rotate-180 transition-transform">▼</span>
-      </summary>
-      <div class="p-5 border-t border-slate-200 grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
-        <!-- Frankfurt Hub -->
-        <div class="rounded-xl border border-amber-200 bg-amber-50/30 p-4">
-          <div class="font-bold text-amber-900 text-sm flex items-center justify-between">
-            <span>🇩🇪 法兰克福 (FRA) 出发直飞 Top 5</span>
-            <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">重品质 & 便利度</span>
+    <details class="bg-white rounded-2xl ring-1 ring-slate-200/80 shadow-soft overflow-hidden group">
+      <summary class="px-5 py-4 cursor-pointer flex items-center justify-between gap-3 hover:bg-slate-50/80 transition select-none">
+        <div class="flex items-center gap-3 min-w-0">
+          <span class="shrink-0 w-9 h-9 rounded-xl bg-gradient-to-br from-sky-500 to-indigo-500 text-white flex items-center justify-center text-base shadow-sm">✈️</span>
+          <div class="min-w-0">
+            <div class="font-bold text-slate-900 text-sm sm:text-[15px] truncate">三大出发地（上海 / 香港 / 法兰克福）直飞便利度与品质严选指南</div>
+            <div class="text-[11px] text-slate-500 mt-0.5">每个枢纽 5 个精选直飞海岛 · 含飞行时长与实测机+酒总价</div>
           </div>
-          <p class="text-slate-600 mt-1">为什么不选佛得角？佛得角冬春大西洋信风狂浪禁泳、荒漠无聊（仅71.5分）。从FRA出发真正顶级的直飞海岛：</p>
-          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+        </div>
+        <span class="shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sky-50 text-sky-700 ring-1 ring-inset ring-sky-100">
+          <span class="group-open:hidden">点击展开对比</span><span class="hidden group-open:inline">收起</span>
+          <svg class="w-3.5 h-3.5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </span>
+      </summary>
+      <div class="p-5 border-t border-slate-100 grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <!-- Frankfurt Hub -->
+        <div class="rounded-2xl ring-1 ring-amber-200/70 bg-gradient-to-b from-amber-50/70 to-white p-4" style="--hub-c:#d97706">
+          <div class="font-bold text-amber-950 text-sm flex items-center justify-between gap-2">
+            <span>🇩🇪 法兰克福 (FRA) 出发直飞 Top 5</span>
+            <span class="text-[11px] font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full whitespace-nowrap">重品质 &amp; 便利度</span>
+          </div>
+          <p class="text-slate-500 mt-1.5 leading-relaxed">为什么不选佛得角？佛得角冬春大西洋信风狂浪禁泳、荒漠无聊（仅71.5分）。从FRA出发真正顶级的直飞海岛：</p>
+          <ol class="hub-list mt-3 space-y-2 text-slate-700">
             <li><strong>🇸🇨 塞舌尔 (93.5分)</strong>：Condor/Discover 直飞 9.5h，时差仅 +2h，全球第一花岗岩粉白沙滩。</li>
             <li><strong>🇲🇻 马尔代夫 (93.0分)</strong>：Lufthansa/Condor 直飞马累 10h，时差 +3h，一岛一酒店水屋天花板。</li>
             <li><strong>🇲🇺 毛里求斯 (90.0分)</strong>：直飞 11h，时差 +2h，莫纳山海底瀑布视觉奇观 + 顶奢服务（注：7–9月水温22.8°C略微偏凉）。</li>
@@ -110,13 +292,13 @@
         </div>
 
         <!-- Shanghai Hub -->
-        <div class="rounded-xl border border-blue-200 bg-blue-50/30 p-4">
-          <div class="font-bold text-blue-900 text-sm flex items-center justify-between">
+        <div class="rounded-2xl ring-1 ring-blue-200/70 bg-gradient-to-b from-blue-50/70 to-white p-4" style="--hub-c:#2563eb">
+          <div class="font-bold text-blue-950 text-sm flex items-center justify-between gap-2">
             <span>🇨🇳 上海 (PVG/SHA) 出发直飞优选</span>
-            <span class="text-[11px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">实测机+酒总价</span>
+            <span class="text-[11px] font-semibold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full whitespace-nowrap">实测机+酒总价</span>
           </div>
-          <p class="text-slate-600 mt-1">上海拥有全亚洲最密集的免签海岛直飞网，3.5h–8h直达：</p>
-          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+          <p class="text-slate-500 mt-1.5 leading-relaxed">上海拥有全亚洲最密集的免签海岛直飞网，3.5h–8h直达：</p>
+          <ol class="hub-list mt-3 space-y-2 text-slate-700">
             <li><strong>🇲🇾 沙巴亚庇 (81.5分 · 性价比冠军)</strong>：直飞 4h40m，双人机+4★海景含早总价仅 <strong>$976</strong>，免签看世界前三日落。</li>
             <li><strong>🇯🇵 冲绳那霸 (83.0分 · 季节榜#17)</strong>：直飞仅 <strong>2h15m</strong>，双人机+4★海景总价 <strong>$1,053</strong>，5–10月渡嘉敷岛果冻海无敌。</li>
             <li><strong>🇹🇭 普吉岛 (84.0分)</strong>：直飞 5h10m，双人机+4★海景总价 <strong>$1,148</strong>，酒店餐饮成熟度满分。</li>
@@ -126,13 +308,13 @@
         </div>
 
         <!-- Hong Kong Hub -->
-        <div class="rounded-xl border border-purple-200 bg-purple-50/30 p-4">
-          <div class="font-bold text-purple-900 text-sm flex items-center justify-between">
+        <div class="rounded-2xl ring-1 ring-purple-200/70 bg-gradient-to-b from-purple-50/70 to-white p-4" style="--hub-c:#9333ea">
+          <div class="font-bold text-purple-950 text-sm flex items-center justify-between gap-2">
             <span>🇭🇰 香港 (HKG) 出发直飞优选</span>
-            <span class="text-[11px] bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">独家航点优势</span>
+            <span class="text-[11px] font-semibold bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full whitespace-nowrap">独家航点优势</span>
           </div>
-          <p class="text-slate-600 mt-1">香港除覆盖全部东南亚海岛外，还拥有帕劳、苏梅岛、斐济等独家直飞航线：</p>
-          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+          <p class="text-slate-500 mt-1.5 leading-relaxed">香港除覆盖全部东南亚海岛外，还拥有帕劳、苏梅岛、斐济等独家直飞航线：</p>
+          <ol class="hub-list mt-3 space-y-2 text-slate-700">
             <li><strong>🇵🇼 帕劳 (83.5分 · 潜水圣地)</strong>：香港直飞仅 <strong>4h00m</strong>，洛克群岛70%原始珊瑚覆盖率+牛奶湖火山泥。</li>
             <li><strong>🇹🇭 苏梅岛 (85.0分)</strong>：香港直飞岛上花园机场仅 <strong>3h25m</strong>，省去曼谷转机折腾。</li>
             <li><strong>🇫🇯 斐济外岛 (91.0分)</strong>：斐济航空香港直飞楠迪 <strong>10h10m</strong>，直通南太平洋蓝色泻湖。</li>
@@ -144,15 +326,16 @@
     </details>
 
     <!-- Custom Weight Sliders Engine -->
-    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pb-4 border-b border-slate-100">
-        <div>
-          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-            <span>🎛️ 个性化权重实时算分引擎</span>
-            <span class="text-xs font-normal text-slate-500">拖动滑块或点击下方预设，145个海滨胜地将实时重新计算百分制得分并重排座次</span>
-          </h2>
+    <section class="bg-white rounded-2xl ring-1 ring-slate-200/80 shadow-soft p-5">
+      <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white flex items-center justify-center text-base shadow-sm">🎛️</span>
+          <div>
+            <h2 class="text-[15px] font-bold text-slate-900">个性化权重实时算分引擎</h2>
+            <p class="text-xs text-slate-500 mt-0.5">拖动滑块或点击右侧预设，145个海滨胜地将实时重新计算百分制得分并重排座次</p>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-1.5">
+        <div class="flex flex-wrap gap-1.5 p-1 rounded-2xl bg-slate-100/80">
           <button data-preset="default" onclick="applyPreset('default')">⚖️ 标准综合权重</button>
           <button data-preset="water" onclick="applyPreset('water')">🤿 潜水与果冻海控</button>
           <button data-preset="honeymoon" onclick="applyPreset('honeymoon')">💎 蜜月颜值与水屋</button>
@@ -162,28 +345,31 @@
         </div>
       </div>
 
-      <div id="weight-sliders-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 mt-4">
+      <!-- Weight distribution bar -->
+      <div id="weight-distribution-bar" class="flex h-2 rounded-full overflow-hidden mt-4 bg-slate-100" title="当前权重占比分布"></div>
+
+      <div id="weight-sliders-container" class="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-2.5 mt-3">
         <!-- Populated by app.js -->
       </div>
     </section>
 
     <!-- Filter & Control Bar -->
-    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+    <section class="bg-white rounded-2xl ring-1 ring-slate-200/80 shadow-soft p-5 space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-3">
         <!-- 1. Category Filter -->
         <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">📋 榜单范围切换</label>
-          <select id="filter-category" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <label for="filter-category" class="field-label">📋 榜单范围切换</label>
+          <select id="filter-category" class="select">
             <option value="all">🌍 全球 145 大合并总榜 (100+45)</option>
-            <option value="tropical">🔥 365天真热带 Top 100 (夜≥18°C & 水≥21°C)</option>
+            <option value="tropical">🔥 365天真热带 Top 100 (夜≥18°C &amp; 水≥21°C)</option>
             <option value="seasonal">☀️ 季节性/亚热带/地中海 Top 45</option>
           </select>
         </div>
 
         <!-- 2. Departure Hub -->
         <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">✈️ 出发地航线视角</label>
-          <select id="filter-hub" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <label for="filter-hub" class="field-label">✈️ 出发地航线视角</label>
+          <select id="filter-hub" class="select">
             <option value="all">🌐 全球视角 (显示沪/港/德直飞标签)</option>
             <option value="SHA">🇨🇳 上海出发 (PVG/SHA)</option>
             <option value="HKG">🇭🇰 香港出发 (HKG)</option>
@@ -193,8 +379,8 @@
 
         <!-- 3. Region Filter -->
         <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">🗺️ 地理区域</label>
-          <select id="filter-region" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <label for="filter-region" class="field-label">🗺️ 地理区域</label>
+          <select id="filter-region" class="select">
             <option value="all">全部 7 大区域</option>
             <option value="南太平洋">🏝️ 南太平洋</option>
             <option value="印度洋与东非">🇮🇳 印度洋与东非</option>
@@ -208,8 +394,8 @@
 
         <!-- 4. Min Coldest-Month Water Temp -->
         <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">🌊 最冷月水温底线</label>
-          <select id="filter-water-temp" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <label for="filter-water-temp" class="field-label">🌊 最冷月水温底线</label>
+          <select id="filter-water-temp" class="select">
             <option value="0">不限最冷月水温</option>
             <option value="21">≥ 21.0°C (全年可下水基准线)</option>
             <option value="24">≥ 24.0°C (冬春依然温水舒适)</option>
@@ -219,17 +405,19 @@
 
         <!-- 5. Price Slider -->
         <div>
-          <div class="flex items-center justify-between text-xs mb-1">
-            <span class="font-semibold text-slate-600">💰 5晚4★海景预算上限</span>
-            <span id="price-slider-label" class="font-bold text-sky-700">不限 ($7,000+)</span>
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <label for="filter-price" class="field-label !mb-0 whitespace-nowrap">💰 5晚4★海景预算上限</label>
+            <span id="price-slider-label" class="text-[11px] font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full whitespace-nowrap tnum">不限 ($7,000+)</span>
           </div>
-          <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" class="w-full accent-sky-600 cursor-pointer h-2 bg-slate-200 rounded-lg mt-1.5" />
+          <div class="h-10 flex items-center px-1">
+            <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" class="range" style="--pct:100%" />
+          </div>
         </div>
 
         <!-- 6. Sort Order -->
         <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">🔃 排序方式</label>
-          <select id="filter-sort" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <label for="filter-sort" class="field-label">🔃 排序方式</label>
+          <select id="filter-sort" class="select">
             <option value="score-desc">🏆 加权总分 (从高到低)</option>
             <option value="price-asc">💰 5晚4★海景房价 (从低到高)</option>
             <option value="cp-desc">⚡ 性价比指数 (高分低价优先)</option>
@@ -242,83 +430,104 @@
       </div>
 
       <!-- Second row of filter bar: Search, Checkboxes, View Toggle -->
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pt-3 border-t border-slate-100">
-        <div class="flex flex-wrap items-center gap-4">
-          <div class="relative w-full sm:w-72">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pt-4 border-t border-slate-100">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
+          <div class="relative w-full sm:w-80">
+            <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/></svg>
             <input
               id="filter-search"
               type="text"
-              placeholder="🔍 搜索海岛名、国家、鲸鲨、水屋、免签..."
-              class="w-full rounded-lg border border-slate-300 pl-3 pr-8 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              placeholder="搜索海岛名、国家、鲸鲨、水屋、免签..."
+              class="w-full h-10 rounded-xl border border-slate-200 bg-slate-50 pl-9 pr-9 text-[13px] placeholder:text-slate-400 hover:border-slate-300 focus:bg-white focus:outline-none focus:border-sky-400 focus:ring-4 focus:ring-sky-400/20 transition"
             />
+            <button id="filter-search-clear" type="button" onclick="clearSearch()" class="hidden absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/70 flex items-center justify-center text-sm" aria-label="清空搜索">×</button>
           </div>
 
-          <label class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 cursor-pointer select-none">
-            <input id="filter-nonstop" type="checkbox" class="rounded text-sky-600 focus:ring-sky-500" />
+          <label class="inline-flex items-center gap-2 text-[13px] font-medium text-slate-700 cursor-pointer select-none">
+            <input id="filter-nonstop" type="checkbox" class="peer sr-only" />
+            <span class="relative w-9 h-5 rounded-full bg-slate-200 transition peer-checked:bg-sky-600 peer-focus-visible:ring-4 peer-focus-visible:ring-sky-400/30 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-4 after:h-4 after:rounded-full after:bg-white after:shadow after:transition peer-checked:after:translate-x-4"></span>
             <span>✈️ 仅看直飞目的地</span>
           </label>
 
-          <label class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 cursor-pointer select-none">
-            <input id="filter-verified" type="checkbox" class="rounded text-sky-600 focus:ring-sky-500" />
+          <label class="inline-flex items-center gap-2 text-[13px] font-medium text-slate-700 cursor-pointer select-none">
+            <input id="filter-verified" type="checkbox" class="peer sr-only" />
+            <span class="relative w-9 h-5 rounded-full bg-slate-200 transition peer-checked:bg-emerald-600 peer-focus-visible:ring-4 peer-focus-visible:ring-emerald-400/30 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-4 after:h-4 after:rounded-full after:bg-white after:shadow after:transition peer-checked:after:translate-x-4"></span>
             <span>✅ 仅看已实测实时房价</span>
           </label>
 
-          <button onclick="resetFilters()" class="text-xs font-medium text-sky-600 hover:text-sky-800 underline">
+          <button onclick="resetFilters()" class="inline-flex items-center gap-1 text-[13px] font-medium text-slate-500 hover:text-sky-700 transition">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z" clip-rule="evenodd"/></svg>
             重置全部筛选
           </button>
         </div>
 
         <div class="flex items-center gap-2 self-end md:self-auto">
-          <span class="text-xs text-slate-400">视图:</span>
-          <button id="btn-view-table" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">📊 全维表格</button>
-          <button id="btn-view-cards" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200">🗂️ 卡片网格</button>
+          <span class="text-xs text-slate-400">视图</span>
+          <div class="inline-flex p-1 rounded-xl bg-slate-100">
+            <button id="btn-view-table" class="view-btn">📊 全维表格</button>
+            <button id="btn-view-cards" class="view-btn">🗂️ 卡片网格</button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Live KPI Summary Bar -->
-    <section class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div class="relative overflow-hidden bg-white rounded-2xl p-4 ring-1 ring-slate-200/80 shadow-soft">
+        <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-slate-400 to-slate-200"></div>
         <div class="text-[11px] text-slate-500 font-medium">当前匹配海滨胜地</div>
-        <div class="text-2xl font-extrabold text-slate-900 mt-0.5"><span id="kpi-total-count">145</span> <span class="text-xs font-normal text-slate-400">/ 145</span></div>
+        <div class="text-[28px] leading-tight font-extrabold text-slate-900 mt-1 tnum"><span id="kpi-total-count">145</span> <span class="text-xs font-medium text-slate-400">/ 145</span></div>
       </div>
-      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+      <div class="relative overflow-hidden bg-white rounded-2xl p-4 ring-1 ring-slate-200/80 shadow-soft">
+        <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-rose-500 to-orange-300"></div>
         <div class="text-[11px] text-rose-600 font-semibold">🔥 365天真热带 (夜≥18/水≥21)</div>
-        <div class="text-2xl font-extrabold text-rose-600 mt-0.5" id="kpi-tropical-count">100</div>
+        <div class="text-[28px] leading-tight font-extrabold text-rose-600 mt-1 tnum" id="kpi-tropical-count">100</div>
       </div>
-      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+      <div class="relative overflow-hidden bg-white rounded-2xl p-4 ring-1 ring-slate-200/80 shadow-soft">
+        <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-sky-500 to-cyan-300"></div>
         <div class="text-[11px] text-sky-600 font-semibold">☀️ 季节性/亚热带/地中海</div>
-        <div class="text-2xl font-extrabold text-sky-600 mt-0.5" id="kpi-seasonal-count">45</div>
+        <div class="text-[28px] leading-tight font-extrabold text-sky-600 mt-1 tnum" id="kpi-seasonal-count">45</div>
       </div>
-      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+      <div class="relative overflow-hidden bg-white rounded-2xl p-4 ring-1 ring-slate-200/80 shadow-soft">
+        <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-300"></div>
         <div class="text-[11px] text-emerald-700 font-semibold">💰 当前筛选最低5晚4★海景</div>
-        <div class="text-sm sm:text-base font-extrabold text-emerald-700 mt-1 truncate" id="kpi-avg-price">—</div>
+        <div class="text-base font-extrabold text-emerald-700 mt-2 truncate tnum" id="kpi-avg-price">—</div>
       </div>
-      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm col-span-2 sm:col-span-1">
+      <div class="relative overflow-hidden bg-gradient-to-br from-amber-50 to-white rounded-2xl p-4 ring-1 ring-amber-200/70 shadow-soft col-span-2 sm:col-span-2 lg:col-span-1">
+        <div class="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-200"></div>
         <div class="text-[11px] text-amber-700 font-semibold">👑 当前权重榜首</div>
-        <div class="text-sm sm:text-base font-extrabold text-slate-900 mt-1 truncate" id="kpi-top-dest">—</div>
+        <div class="text-base font-extrabold text-slate-900 mt-2 truncate" id="kpi-top-dest">—</div>
       </div>
     </section>
 
     <!-- Table View -->
-    <section id="table-view-container" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
+    <section id="table-view-container" class="bg-white rounded-2xl ring-1 ring-slate-200/80 shadow-soft overflow-hidden">
+      <div class="px-5 py-3 flex flex-wrap items-center justify-between gap-2 border-b border-slate-100">
+        <div id="results-summary" class="text-xs text-slate-500"></div>
+        <div class="flex flex-wrap items-center gap-3 text-[11px] text-slate-500">
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-gradient-to-br from-amber-400 to-orange-500"></span>≥90</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-gradient-to-br from-emerald-500 to-teal-600"></span>85–90</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-gradient-to-br from-sky-500 to-cyan-600"></span>80–85</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-slate-200"></span>&lt;80</span>
+        </div>
+      </div>
+      <div class="overflow-auto max-h-[calc(100vh-140px)] min-h-[320px]">
+        <table class="w-full text-left border-collapse sticky-head">
           <thead>
-            <tr class="bg-slate-800 text-white text-[11px] uppercase tracking-wider">
-              <th class="py-3 px-2.5 text-center">排名</th>
-              <th class="py-3 px-3">海滨/海岛目的地 (点击直飞或标签可筛选)</th>
-              <th class="py-3 px-2 text-center" title="最冷月夜间平均低温 / 最冷月表层海水温度">最冷月<br/>夜温/水温</th>
-              <th class="py-3 px-2.5 text-center bg-sky-900">加权总分<br/>(满分100)</th>
-              <th class="py-3 px-1.5 text-center">🏖️海沙<br/>(25)</th>
-              <th class="py-3 px-1.5 text-center">⛰️风景<br/>(15)</th>
-              <th class="py-3 px-1.5 text-center">🤿玩水<br/>(15)</th>
-              <th class="py-3 px-1.5 text-center">🌊风浪<br/>(10)</th>
-              <th class="py-3 px-1.5 text-center">🏨酒店<br/>(10)</th>
-              <th class="py-3 px-1.5 text-center">🦞餐饮<br/>(10)</th>
-              <th class="py-3 px-1.5 text-center">🌋陆地<br/>(10)</th>
-              <th class="py-3 px-1.5 text-center">🛡️省心<br/>(5)</th>
-              <th class="py-3 px-3 text-right">5晚4★海景含税(双人)<br/>& 实时核验链接</th>
+            <tr class="text-white text-[11px] tracking-wide">
+              <th class="bg-slate-900 py-3 px-2.5 text-center font-semibold">排名</th>
+              <th class="bg-slate-900 py-3 px-3 font-semibold">海滨/海岛目的地 <span class="font-normal text-slate-400">(点击直飞或标签可筛选)</span></th>
+              <th class="bg-slate-900 py-3 px-2 text-center font-semibold" title="最冷月夜间平均低温 / 最冷月表层海水温度">最冷月<br/>夜温/水温</th>
+              <th class="bg-sky-900 py-3 px-2.5 text-center font-semibold">加权总分<br/><span class="font-normal text-sky-300">(满分100)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🏖️海沙<br/><span class="font-normal text-slate-400">(25)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">⛰️风景<br/><span class="font-normal text-slate-400">(15)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🤿玩水<br/><span class="font-normal text-slate-400">(15)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🌊风浪<br/><span class="font-normal text-slate-400">(10)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🏨酒店<br/><span class="font-normal text-slate-400">(10)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🦞餐饮<br/><span class="font-normal text-slate-400">(10)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🌋陆地<br/><span class="font-normal text-slate-400">(10)</span></th>
+              <th class="bg-slate-900 py-3 px-1.5 text-center font-semibold">🛡️省心<br/><span class="font-normal text-slate-400">(5)</span></th>
+              <th class="bg-slate-900 py-3 px-3 text-right font-semibold">5晚4★海景含税(双人)<br/><span class="font-normal text-slate-400">&amp; 实时核验链接</span></th>
             </tr>
           </thead>
           <tbody id="destinations-tbody">
@@ -334,13 +543,14 @@
     </section>
 
     <!-- Eliminated Gatekeepers Section -->
-    <section id="eliminated-section" class="bg-white rounded-2xl border border-rose-200 shadow-sm overflow-hidden">
-      <div class="bg-rose-50/80 px-5 py-3.5 border-b border-rose-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+    <section id="eliminated-section" class="scroll-mt-6 bg-white rounded-2xl ring-1 ring-rose-200/80 shadow-soft overflow-hidden">
+      <div class="bg-gradient-to-r from-rose-50 to-white px-5 py-4 border-b border-rose-100 flex items-start gap-3">
+        <span class="shrink-0 w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 text-white flex items-center justify-center text-base shadow-sm">🚫</span>
         <div>
-          <h3 class="text-sm sm:text-base font-bold text-rose-950 flex items-center gap-2">
-            <span>🚫 淘汰区守门员对标参考（满足最冷月夜温≥18°C & 水温≥21°C，但综合得分 &lt; 76.5 分未上榜）</span>
+          <h3 class="text-sm sm:text-[15px] font-bold text-rose-950">
+            淘汰区守门员对标参考<span class="font-medium text-rose-900/70">（满足最冷月夜温≥18°C &amp; 水温≥21°C，但综合得分 &lt; 76.5 分未上榜）</span>
           </h3>
-          <p class="text-xs text-rose-800/80 mt-0.5">
+          <p class="text-xs text-rose-900/70 mt-1">
             为什么第 100 名是<strong>芭堤雅+格兰岛 (76.5分)</strong>，而 Key West、圣淘沙、佛得角、槟城被淘汰？以下为同标准量化得分拆解：
           </p>
         </div>
@@ -348,13 +558,13 @@
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="bg-slate-100 text-slate-600 text-xs border-b border-slate-200">
-              <th class="py-2.5 px-3">未上榜目的地</th>
+            <tr class="bg-slate-50 text-slate-500 text-[11px] font-semibold border-b border-slate-200">
+              <th class="py-2.5 px-4">未上榜目的地</th>
               <th class="py-2.5 px-2 text-center">最冷月夜温/水温</th>
               <th class="py-2.5 px-2 text-center">总分 (&lt;76.5)</th>
               <th class="py-2.5 px-2 text-center">8维细分得分拆解</th>
               <th class="py-2.5 px-2">5晚4★海景房价</th>
-              <th class="py-2.5 px-3">淘汰核心原因 (对比 #100 芭堤雅+格兰岛 76.5分)</th>
+              <th class="py-2.5 px-4">淘汰核心原因 (对比 #100 芭堤雅+格兰岛 76.5分)</th>
             </tr>
           </thead>
           <tbody id="eliminated-tbody">
@@ -364,31 +574,41 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="pt-4 pb-2 text-center text-[11px] text-slate-400 leading-relaxed">
+      气候数据：WMO / NOAA / JMA / BOM 30年统计基准 · 房价与航班：Booking.com / Google Flights 实测核验 · 价格随日期浮动，请以实时链接为准
+    </footer>
+
   </main>
 
+  <!-- Back to top -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0})" class="fixed right-4 bottom-24 z-30 w-10 h-10 rounded-full bg-white text-slate-600 shadow-lift ring-1 ring-slate-200 hover:text-sky-700 hover:-translate-y-0.5 transition opacity-0 pointer-events-none flex items-center justify-center" aria-label="回到顶部">
+    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/></svg>
+  </button>
+
   <!-- Floating Bottom PK Comparison Bar -->
-  <div id="compare-floating-bar" class="fixed bottom-4 inset-x-4 max-w-4xl mx-auto bg-slate-900/95 backdrop-blur text-white rounded-2xl shadow-2xl border border-slate-700 px-4 py-3 z-40 flex flex-wrap items-center justify-between gap-3">
-    <div class="flex items-center gap-2 flex-wrap">
-      <span class="text-xs font-bold text-amber-400">⚔️ PK 对比栏 (最多3个):</span>
+  <div id="compare-floating-bar" class="fixed bottom-4 inset-x-4 max-w-5xl mx-auto bg-slate-900/90 backdrop-blur-xl text-white rounded-2xl shadow-2xl shadow-slate-900/30 ring-1 ring-white/10 px-4 py-2.5 z-40 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2.5 flex-wrap min-w-0">
+      <span class="text-xs font-bold text-amber-300 whitespace-nowrap">⚔️ <span class="hidden sm:inline">PK 对比栏 </span><span class="font-medium text-slate-400 hidden sm:inline">(最多3个)</span></span>
       <div id="compare-selected-pills" class="flex flex-wrap gap-1.5"></div>
     </div>
-    <div class="flex items-center gap-2">
-      <button onclick="clearCompare()" class="px-2.5 py-1 text-xs text-slate-300 hover:text-white">清空</button>
-      <button onclick="openCompareModal()" class="px-4 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow transition">
+    <div class="flex items-center gap-1.5">
+      <button onclick="clearCompare()" class="px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition">清空</button>
+      <button onclick="openCompareModal()" class="px-4 py-1.5 rounded-xl bg-gradient-to-b from-amber-300 to-amber-500 hover:from-amber-200 hover:to-amber-400 text-slate-950 font-bold text-xs shadow transition">
         生成 8维雷达图 PK ↗
       </button>
     </div>
   </div>
 
   <!-- PK Comparison Modal -->
-  <div id="compare-modal" class="hidden fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
-      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white z-10">
+  <div id="compare-modal" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4" onclick="if(event.target===this) closeCompareModal()">
+    <div class="anim-modal bg-white rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl ring-1 ring-slate-200" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
+      <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white/90 backdrop-blur z-10">
         <div>
-          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">⚔️ 海岛硬核实力 8 维雷达图 PK 对比</h3>
-          <p class="text-xs text-slate-500">基于当前设定的权重实时对比各维度表现、气候底线与房价水平</p>
+          <h3 id="compare-modal-title" class="text-base sm:text-lg font-extrabold text-slate-900">⚔️ 海岛硬核实力 8 维雷达图 PK 对比</h3>
+          <p class="text-xs text-slate-500 mt-0.5">基于当前设定的权重实时对比各维度表现、气候底线与房价水平 · 每行最优值高亮</p>
         </div>
-        <button onclick="closeCompareModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center">✕</button>
+        <button onclick="closeCompareModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center transition" aria-label="关闭">✕</button>
       </div>
       <div id="compare-modal-body" class="p-6">
         <!-- Populated by app.js -->
