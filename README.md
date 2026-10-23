@@ -97,3 +97,28 @@ python3 -m http.server 8080
    - **涵盖范围**：完整收录 **1. 法国米迪运河（Canal du Midi）**、**2. 法国阿尔萨斯（Alsace-Lorraine）**、**3. 英国北威尔士兰戈伦窄船（Llangollen Canal）**、**4. 苏格兰喀里多尼亚运河与尼斯湖（Caledonian Canal & Loch Ness）**、**5. 意大利威尼斯泻湖（Venetian Lagoon）**、**6. 英国泰晤士河（River Thames）**、**7. 荷兰风车与湖区（Netherlands）**、**8. 法国洛特河（River Lot）**、**9. 比利时根特与布鲁日（Belgium Ghent & Bruges）**、**10. 法国勃艮第（Burgundy — 尼维尔内运河与索恩河双线）** 的 **2027年6月初 8天7晚 3卧室精确单一报价总表**，以及 **全部 10 条航线 Day 1 至 Day 8 逐日停泊行程与每天 2 张 100% 精确匹配地标实景图（共 80 天、160 张实景图，图片存放于 [`rankings/images/canals/`](./rankings/images/canals/)）**。
 
 
+
+---
+
+## 🚂🚢 全球豪华火车、各国卧铺与内河/运河/日本豪华游轮全景指南库（纯文档与数据版，暂未建网页）
+
+本仓库新增两大深度价格调研、空间性价比（`$/㎡/晚`）与分级避坑指南文档，以及对应的结构化 JS 数据集：
+
+1. 🚂 **[全球豪华观光火车、夜火车与各国卧铺全景指南与性价比排行榜 (`rankings/luxury_and_sleeper_trains_global.md`)](./rankings/luxury_and_sleeper_trains_global.md)**
+   - **全球 14 大豪华火车性价比与每平米单价排行**：涵盖南非《蓝色列车 Blue Train》（$102/㎡/晚）、《非洲之傲 Rovos Rail》（$112/㎡/晚）、西班牙国铁 Renfe 四大专列（《坎塔布里亚大豪华号》《安达卢西亚之星》《绿海岸快车》及全包仅 $190/晚的《拉罗夫拉快车 El Expreso de La Robla》）、印度《王公快车》、加拿大《The Canadian Prestige》、澳洲《The Ghan》、秘鲁《Andean Explorer》、苏格兰《Royal Scotsman》与欧洲《VSOE 东方快车》。
+   - **日本“御三家”顶奢卧铺与定期寝台**：《九州七星号》《四季岛号》《瑞风号》（含 35㎡ 独占整节车厢套房价格倒挂分析）、《The Royal Express》及平民定期寝台《Sunrise 出云/濑户号》。
+   - **美铁 Amtrak 热门风景线 vs. 俄铁 RZD 2人包间卧铺**：扣除恶劣天气季后的 Amtrak 最低档（Low Bucket）实测底价（双人同行立省 40% 机制，Roomette vs. Bedroom），以及俄铁一等 2人平铺软卧 `СВ`（低至 $22–$43/㎡/晚）与独立淋浴大床高包 `Люкс VIP` 全路线价格表。
+   - **除中俄外全球 6 大“干净整洁且实惠”的卧铺体系**：芬兰 `VR Santa Claus Express` 北极双层独卫夜车（人均 $65 住独卫）、泰国国铁 `SRT` 中车长客造不锈钢红丝绒新车、乌兹别克斯坦 & 哈萨克斯坦 `Talgo`、奥地利 `ÖBB 新一代 Nightjet` 太空舱 & 中欧 `EuroNight`/`RegioJet`、高加索 `Stadler` 新车。
+   - **全球「夜间停车过夜（Overnight Stabling）」火车全盘点**：区分“每晚 100% 停站睡觉的观光专列”与“早登车+晚下车在站台睡饱的平价定期夜车”（瑞典 `SJ` 马尔默夜车、英国 `Night Riviera`）。
+   - **中国近年 8 大豪华旅游专列红黑榜与新疆线 PK**：《丝路梦享号》《呼伦贝尔号》《星光·澜湄号》《熊猫专列·成都号》《新东方快车（金钻 vs. 蓝钻无独卫陷阱）》《林都号》《大河之南号》每晚单价、大巴时长、夜间赶路过夜实况，以及**中国普通卧铺「双层纵向动卧 CRH2E-NG / 智能动卧 CR400AF-AE」vs.「假动卧绿巨人 CR200J」vs.「Z字头 25T」平稳度终极排行与选铺防晃指南**。
+
+2. 🚢 **[全球内河游轮、欧洲运河船与日本豪华邮轮全景指南与价格分档榜 (`rankings/river_canal_and_luxury_cruises_global.md`)](./rankings/river_canal_and_luxury_cruises_global.md)**
+   - **欧洲运河游船（Canal Cruise）最低价对比**：全包式奢华酒店驳船（CroisiEurope 法国佩尼什船、European Waterways、Belmond Afloat in France）vs. 自驾运河船（Le Boat / Nicols / Locaboat）。
+   - **全球 6 大传奇内河顶奢河轮横向对标**：中国三峡《长江探索号 Yangzi Explorer》（31㎡全阳台套房仅 $323/晚、$10.4/㎡/晚，性价比全球第一）对标多瑙河、莱茵河、尼罗河、美国密西西比河（PVSA 法案保护下最低 $571/晚）与缅甸伊洛瓦底江。
+   - **维京河轮（Viking）中美官网实时底价实测**：美国英文官网（`vikingrivercruises.com` 11月最低 $1,999/7晚）vs. 中国官网（`vikingcruises.cn` 全中文一价全包实时价及旺季价格倒挂彩蛋）。
+   - **埃及尼罗河游轮 5 大档次全船司实时底价总表**：揭秘 10 年前 $30/晚历史真相，完整收录从第 1 档本土五星船（$85/晚全包）、第 2 档德资 Jaz/Steigenberger、第 3 档 Mövenpick/Sonesta、第 4 档 Historia/Kazazian/Viking 到第 5 档顶奢 **The Oberoi Zahra/Philae** 与 **A&K Sanctuary (Sun Boat III/IV & 2026新船 Nile Seray)** 的官方实时价格表。
+   - **中国长江三峡游轮 5 大档次全船司分级表**：从 ¥800 平价世代船到总统/黄金、华夏神女/美维凯悦、世纪绿洲/长江叁号，直至顶奢《长江探索号》。
+   - **日本本土 5 大豪华邮轮与海上旅馆**：濑户内海漂浮木造旅馆 `guntû（ガンツウ）`、日本邮船 2025 全新旗舰 `飞鸟 III (Asuka III)` 与 `飞鸟 II`、商船三井全套房船 `三井海洋富士 (Mitsui Ocean Fuji)` & `樱花号`（原世邦顶奢船，全包酒水岸上游性价比冠军），以及外资母港对照 `钻石公主号`。
+
+3. 🗂️ **[火车与游轮结构化数据源 (`data_trains_and_cruises.js`)](./data_trains_and_cruises.js)**
+   - 导出 `window.GLOBAL_LUXURY_TRAINS_RANKING`、`window.JAPAN_LUXURY_AND_SLEEPER_TRAINS`、`window.AMTRAK_POPULAR_SLEEPER_ROUTES`、`window.RUSSIA_RZD_2BERTH_SLEEPERS`、`window.CLEAN_AFFORDABLE_SLEEPERS_EX_CN_RU`、`window.CHINA_LUXURY_TRAINS_RANKING`、`window.CHINA_SLEEPER_STABILITY_RANKING` 与 `window.GLOBAL_RIVER_AND_LUXURY_CRUISES` 八大结构化数据集。
