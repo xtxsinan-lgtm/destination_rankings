@@ -207,3 +207,25 @@ python3 -m http.server 8080
 
 2. 🗂️ **[房车线路与 16 城跨季比价结构化数据源 (`data_rv_routes.js`)](./data_rv_routes.js)**
    - 导出 `window.RV_ROUTES_TOP10`、`window.RV_ELIMINATED_ROUTES` 与 `window.RV_CITY_CHECKOUT_DB` 三大结构化数据集。
+
+---
+
+## ⛵ 全球与欧洲双体帆船（4卧 Catamaran + 船长）航线规划与实时报价库（纯文档与数据版，暂未建网页）
+
+本仓库新增针对 **4 卧双体帆船（40–45 英尺，如 Lagoon 42 / Bali 4.2 / FP Astrea 42 / Bali Catspace）+ 雇佣专业船长（Skipper）+ 必选基地杂费 + 港口/浮球费 + 燃油费** 的 **7 天全包实时报价拆解与全球航线库**：
+
+1. 🏆 **[全球 5 大最值得体验的双体帆船航线规划书 (`rankings/sailing_top5_routes.md`)](./rankings/sailing_top5_routes.md)**
+   - **核心内容**：针对已体验过克罗地亚航线的进阶玩家，精选全球 **5 条殿堂级双体帆船航线**——**1. 希腊·爱奥尼亚群岛南线 (Lefkada)**、**2. 意大利撒丁岛北 + 法国科西嘉 (La Maddalena & Bonifacio)**、**3. 意大利西西里·伊奥利亚七大火山群岛 (Aeolian Islands)**、**4. 加勒比海英属维尔京群岛 (BVI)**、**5. 法属波利尼西亚·大溪地顺风群岛 (Raiatea $\rightarrow$ Taha'a $\rightarrow$ Bora Bora)**，包含 **7 天全包落地总价六维拆解总表**、实时可验证船源链接及 **Day 1 至 Day 7 每日航程、锚地玩水与岸上餐饮停泊攻略**。
+
+2. 🌍 **[全球与欧洲双体帆船硬核指南与航线百科全书 (`rankings/sailing_routes_global_guide.md`)](./rankings/sailing_routes_global_guide.md)**
+   - **完整收录 7 大板块**：
+     - **全球 Top 5 航线规划与全包报价拆解**；
+     - **欧洲媲美/超越克罗地亚的 4 大神仙替代航线深度对比**（及为何排除基克拉泽斯 Meltemi 强北风区的排雷说明）；
+     - **希腊莱夫卡达（Lefkada）南爱奥尼亚海 7 天环线沿途 8 大古镇/海湾详解**（每站配 2 张 Wikimedia 实景图）；
+     - **撒丁岛北+科西嘉（Bonifacio）、土耳其戈杰克（Göcek & Fethiye）、西西里火山群岛（Aeolian Islands）三条 7 天航线共 18 个核心停靠站点详解**（每站配 2 张实景图）；
+     - **加勒比海 BVI vs. 欧洲地中海航线六大维度正面 PK** 与三大标志性站点实景；
+     - **除欧洲与 BVI 外的全球 6 大世界级帆船圣地全览**（大溪地 Bora Bora、塞舌尔群岛、巴哈马 Exumas 猪岛与护士鲨、格林纳丁斯 Tobago Cays、泰国普吉攀牙湾喀斯特峰林+随船泰厨、澳洲大堡礁圣灵群岛白天堂流沙海滩与观鲸）；
+     - **欧洲夏季（6–9月）7 大热门海区全包价格横向对比、主流比价平台（Boataround / SamBoat / Click&Boat / GlobeSailor）与直营船队名录，以及 26 艘代表性 4 卧双体帆船 2027 年 6/7/8/9 月实时价格核验总表**。
+
+3. 🗂️ **[双体帆船航线与实时报价结构化数据源 (`data_sailing_routes.js`)](./data_sailing_routes.js)**
+   - 导出 `window.SAILING_TOP5_ROUTES`、`window.SAILING_GLOBAL_DESTINATIONS`、`window.SAILING_BVI_VS_EUROPE`、`window.SAILING_EUROPEAN_PRICE_BENCHMARKS`、`window.SAILING_PLATFORMS_AND_FLEETS`、`window.SAILING_VERIFIED_BOATS_2027` 与 `window.SAILING_ROUTE_STOPS_GALLERY` 七大结构化数据集。
