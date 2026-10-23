@@ -193,3 +193,17 @@ python3 -m http.server 8080
 
 3. 🗂️ **[双体帆船航线与实时报价结构化数据源 (`data_sailing_routes.js`)](./data_sailing_routes.js)**
    - 导出 `window.SAILING_TOP5_ROUTES`、`window.SAILING_GLOBAL_DESTINATIONS`、`window.SAILING_BVI_VS_EUROPE`、`window.SAILING_EUROPEAN_PRICE_BENCHMARKS`、`window.SAILING_PLATFORMS_AND_FLEETS`、`window.SAILING_VERIFIED_BOATS_2027` 与 `window.SAILING_ROUTE_STOPS_GALLERY` 七大结构化数据集。
+
+
+---
+
+## 🚐 全球 10 大殿堂级房车自驾线路 & 五大洲 16 城（2大3小）全包价格硬核数据库（纯文档与数据版，暂未建网页）
+
+本仓库新增针对 **2大3小（五口之家，需 6–7 铺位大型 C 型/鹅头房车，标配 ≥3 张独立床位与独立卫浴）**、**7～9 天黄金闭环**、**气候适宜月份** 的全球房车自驾选线与 16 城实时结账页全包价格数据库：
+
+1. 🏆 **[全球 10 大殿堂级房车自驾线路 & 五大洲 16 城全包价格硬核数据库 (`rankings/rv_motorhome_routes_top10_and_pricing.md`)](./rankings/rv_motorhome_routes_top10_and_pricing.md)**
+   - **独立严选全球 Top 10 房车自驾线路**：按“位置特权（对标景区天价酒店的降维打击力）”、“大车驾驶友好度”、“单周黄金里程（650–1,450km）”与“营地亲子/温泉/生态体验”四大硬指标，评选出 **1. 美国·阿拉斯加（基奈半岛+荷马角+迪纳利）**、**2. 加拿大·落基山脉（班夫+冰原大道+贾斯珀）**、**3. 新西兰·南岛大环线（含哈斯特通道与西海岸雨林冰川）**、**4. 美国·大黄石生态圈（大提顿+黄石+熊牙公路）**、**5. 日本·北海道（富良野美瑛+道东三湖+知床森林野天温泉线）**、**6. 挪威·罗弗敦群岛午夜阳光线 / 双峡湾线**、**7. 美国·犹他州“Mighty 5”红岩峡谷+12号景观公路+鲍威尔湖**、**8. 澳大利亚·昆士兰阳光与黄金海岸亲子线 / 塔斯马尼亚环岛**、**9. 德奥意·多洛米蒂与阿尔卑斯五星奢华营地环线**、**10. 冰岛·黄金圈与南岸冰火奇观线 / 苏格兰高地天空岛线**，并附带为何清退加州 1 号公路 Big Sur 段与爱尔兰/康沃尔窄路的排雷说明。
+   - **五大洲 16 城 2026–2027 实时结账页（Step 1 Checkout）全包价格拆解**：基于 Camper Champ 及各大主流车行（Maui、Britz、Apollo、Star RV、Mighty、JUCY、Freedom、Cruise America/Canada、Road Bear、El Monte、CanaDream、Fraserway、McRent、Indie Campers、Touring Cars、Europcar/Holdur）实时数据，完整收录美国（安克雷奇、丹佛、洛杉矶、拉斯维加斯）、加拿大（卡尔加里、温哥华、多伦多）、欧洲大陆（马德里、米兰、巴黎、慕尼黑、法兰克福）、北欧与北大西洋（挪威奥斯陆/卑尔根 + 瑞典斯德哥尔摩/德国汉堡跨国提车立省 37%–47% 方案、冰岛 6 月极昼季 Indie 半价彩蛋、爱尔兰都柏林/北爱自提方案）及澳新（布里斯班、墨尔本、悉尼、奥克兰、基督城）的 **7 晚裸车价 + 零起赔全险 + 5人床品厨具包 + 里程包/柴油税 + 7晚营地与燃油费** 全落地总表。
+
+2. 🗂️ **[房车线路与 16 城跨季比价结构化数据源 (`data_rv_routes.js`)](./data_rv_routes.js)**
+   - 导出 `window.RV_ROUTES_TOP10`、`window.RV_ELIMINATED_ROUTES` 与 `window.RV_CITY_CHECKOUT_DB` 三大结构化数据集。
