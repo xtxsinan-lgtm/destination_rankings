@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全球 145 大海滨与海岛度假胜地硬核排行榜 | Global Beach & Island Resort Rankings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+    /* Custom scrollbar for wide table */
+    ::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-24">
+
+  <!-- Top Hero Banner -->
+  <header class="bg-gradient-to-r from-sky-900 via-cyan-900 to-teal-900 text-white shadow-lg">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 py-7">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-cyan-200 mb-2">
+            <span>🌊 WMO / NOAA 30年气候基准</span>
+            <span>·</span>
+            <span>8维量化打分</span>
+            <span>·</span>
+            <span>Booking.com / Google Flights 实测核验</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            全球 145 大海滨与海岛度假胜地硬核排行榜
+          </h1>
+          <p class="text-sky-100/90 text-xs sm:text-sm mt-1.5 max-w-4xl leading-relaxed">
+            包含 <strong>🔥 100 大“365天真热带”胜地</strong>（最冷月夜间低温 ≥ 18.0°C 且 最冷月海水温度 ≥ 21.0°C）与 <strong>☀️ 45 大“季节性/亚热带/地中海”胜地</strong>（当季巅峰总分 ≥ 76.5 分）。严格执行<strong>“非45分钟一日游圈绝不合并”</strong>铁律。
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button onclick="openCompareModal()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow transition flex items-center gap-1.5">
+            <span>⚔️ 海岛雷达图 PK</span>
+          </button>
+          <button onclick="exportCSV()" class="px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/25 font-semibold text-xs sm:text-sm transition flex items-center gap-1.5">
+            <span>📥 导出当前榜单 CSV</span>
+          </button>
+          <a href="#eliminated-section" class="px-3.5 py-2 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-100 border border-rose-400/30 font-medium text-xs sm:text-sm transition">
+            🚫 查看淘汰区守门员 (Key West / 佛得角)
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Core Rules Pill Bar -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 pt-4 border-t border-white/15 text-xs">
+        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+          <div class="font-bold text-cyan-200">🌡️ 铁律一：生理体感温度硬指标（不按死板纬度）</div>
+          <p class="text-sky-100/80 mt-1">真热带榜要求全年最冷月<strong>夜间平均低温 ≥ 18.0°C</strong>（晚间海风不穿外套）且<strong>最冷月表层水温 ≥ 21.0°C</strong>（全年365天可裸泳下水）。</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+          <div class="font-bold text-amber-200">🧭 铁律二：45分钟一日游圈独立拆分原则</div>
+          <p class="text-sky-100/80 mt-1">不同城市/岛屿严禁强行打包！夏威夷拆4岛、泰国拆6地、斯里兰卡拆南北、红海拆3城。仅共享45分钟船程/车程圈（如芭堤雅+格兰岛20m快艇）可组合。</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+          <div class="font-bold text-emerald-200">📏 铁律三：统一 76.5 分准入底线</div>
+          <p class="text-sky-100/80 mt-1">真热带榜第100名（芭堤雅+格兰岛 76.5分）与季节性榜第45名（北海涠洲岛 76.5分）同分对齐。低于76.5分的 Key West (73.5)、佛得角 (71.5) 均退入淘汰区。</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+    <!-- Curated Departure Hub Guide (Collapsible) -->
+    <details class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
+      <summary class="px-5 py-3.5 cursor-pointer flex items-center justify-between bg-gradient-to-r from-slate-50 to-sky-50/50 hover:bg-sky-50/60 transition select-none">
+        <div class="flex items-center gap-2.5">
+          <span class="text-lg">✈️</span>
+          <span class="font-bold text-slate-800 text-sm sm:text-base">三大出发地（上海 / 香港 / 法兰克福）直飞便利度与品质严选指南</span>
+          <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-sky-100 text-sky-800">点击展开对比</span>
+        </div>
+        <span class="text-xs text-slate-500 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="p-5 border-t border-slate-200 grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <!-- Frankfurt Hub -->
+        <div class="rounded-xl border border-amber-200 bg-amber-50/30 p-4">
+          <div class="font-bold text-amber-900 text-sm flex items-center justify-between">
+            <span>🇩🇪 法兰克福 (FRA) 出发直飞 Top 5</span>
+            <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">重品质 & 便利度</span>
+          </div>
+          <p class="text-slate-600 mt-1">为什么不选佛得角？佛得角冬春大西洋信风狂浪禁泳、荒漠无聊（仅71.5分）。从FRA出发真正顶级的直飞海岛：</p>
+          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+            <li><strong>🇸🇨 塞舌尔 (93.5分)</strong>：Condor/Discover 直飞 9.5h，时差仅 +2h，全球第一花岗岩粉白沙滩。</li>
+            <li><strong>🇲🇻 马尔代夫 (93.0分)</strong>：Lufthansa/Condor 直飞马累 10h，时差 +3h，一岛一酒店水屋天花板。</li>
+            <li><strong>🇲🇺 毛里求斯 (90.0分)</strong>：直飞 11h，时差 +2h，莫纳山海底瀑布视觉奇观 + 顶奢服务（注：7–9月水温22.8°C略微偏凉）。</li>
+            <li><strong>🇴🇲 阿曼·萨拉拉 / 马斯喀特 (82.0~83.5分)</strong>：直飞马斯喀特仅 <strong>6h30m</strong>（时差+2h），冬春最冷月夜温18.8°C、水温23.5°C，比大加那利与红海更暖且极致安全！</li>
+            <li><strong>🇪🇬 埃及红海·赫尔格达/马萨阿拉姆 (81.5~83.0分)</strong>：直飞仅 <strong>4h30m</strong>，5–11月珊瑚礁浮潜冠绝中东（1–2月夜温10°C需注意保暖）。</li>
+          </ol>
+        </div>
+
+        <!-- Shanghai Hub -->
+        <div class="rounded-xl border border-blue-200 bg-blue-50/30 p-4">
+          <div class="font-bold text-blue-900 text-sm flex items-center justify-between">
+            <span>🇨🇳 上海 (PVG/SHA) 出发直飞优选</span>
+            <span class="text-[11px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">实测机+酒总价</span>
+          </div>
+          <p class="text-slate-600 mt-1">上海拥有全亚洲最密集的免签海岛直飞网，3.5h–8h直达：</p>
+          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+            <li><strong>🇲🇾 沙巴亚庇 (81.5分 · 性价比冠军)</strong>：直飞 4h40m，双人机+4★海景含早总价仅 <strong>$976</strong>，免签看世界前三日落。</li>
+            <li><strong>🇯🇵 冲绳那霸 (83.0分 · 季节榜#17)</strong>：直飞仅 <strong>2h15m</strong>，双人机+4★海景总价 <strong>$1,053</strong>，5–10月渡嘉敷岛果冻海无敌。</li>
+            <li><strong>🇹🇭 普吉岛 (84.0分)</strong>：直飞 5h10m，双人机+4★海景总价 <strong>$1,148</strong>，酒店餐饮成熟度满分。</li>
+            <li><strong>🇮🇩 巴厘岛 (82.0分)</strong>：东航/吉祥直飞 6h15m，双人机+4★海景总价 <strong>$1,424</strong>，悬崖别墅与乌布雨林全球独一档。</li>
+            <li><strong>🇲🇻 马尔代夫 (93.0分)</strong>：东航直飞马累 8h05m，双人机+4★居民岛海景 $1,797（5★一价全包水屋含水飞 $5,088）。</li>
+          </ol>
+        </div>
+
+        <!-- Hong Kong Hub -->
+        <div class="rounded-xl border border-purple-200 bg-purple-50/30 p-4">
+          <div class="font-bold text-purple-900 text-sm flex items-center justify-between">
+            <span>🇭🇰 香港 (HKG) 出发直飞优选</span>
+            <span class="text-[11px] bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">独家航点优势</span>
+          </div>
+          <p class="text-slate-600 mt-1">香港除覆盖全部东南亚海岛外，还拥有帕劳、苏梅岛、斐济等独家直飞航线：</p>
+          <ol class="mt-2.5 space-y-1.5 text-slate-700 list-decimal list-inside">
+            <li><strong>🇵🇼 帕劳 (83.5分 · 潜水圣地)</strong>：香港直飞仅 <strong>4h00m</strong>，洛克群岛70%原始珊瑚覆盖率+牛奶湖火山泥。</li>
+            <li><strong>🇹🇭 苏梅岛 (85.0分)</strong>：香港直飞岛上花园机场仅 <strong>3h25m</strong>，省去曼谷转机折腾。</li>
+            <li><strong>🇫🇯 斐济外岛 (91.0分)</strong>：斐济航空香港直飞楠迪 <strong>10h10m</strong>，直通南太平洋蓝色泻湖。</li>
+            <li><strong>🇻🇳 富国岛 / 芽庄 (80.0~80.5分)</strong>：直飞 2h15m–2h50m，双人机+酒总价 <strong>$980–$1,191</strong>。</li>
+            <li><strong>🇲🇾 沙巴亚庇 (81.5分)</strong>：直飞仅 <strong>3h05m</strong>，双人机+4★海景含早总价仅 <strong>$971</strong>！</li>
+          </ol>
+        </div>
+      </div>
+    </details>
+
+    <!-- Custom Weight Sliders Engine -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pb-4 border-b border-slate-100">
+        <div>
+          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <span>🎛️ 个性化权重实时算分引擎</span>
+            <span class="text-xs font-normal text-slate-500">拖动滑块或点击下方预设，145个海滨胜地将实时重新计算百分制得分并重排座次</span>
+          </h2>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <button data-preset="default" onclick="applyPreset('default')">⚖️ 标准综合权重</button>
+          <button data-preset="water" onclick="applyPreset('water')">🤿 潜水与果冻海控</button>
+          <button data-preset="honeymoon" onclick="applyPreset('honeymoon')">💎 蜜月颜值与水屋</button>
+          <button data-preset="family" onclick="applyPreset('family')">👶 亲子平浪与省心</button>
+          <button data-preset="explorer" onclick="applyPreset('explorer')">🌋 吃货与陆地探险</button>
+          <button data-preset="pureBeach" onclick="applyPreset('pureBeach')">🏖️ 纯海滩自然硬实力</button>
+        </div>
+      </div>
+
+      <div id="weight-sliders-container" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 mt-4">
+        <!-- Populated by app.js -->
+      </div>
+    </section>
+
+    <!-- Filter & Control Bar -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+        <!-- 1. Category Filter -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">📋 榜单范围切换</label>
+          <select id="filter-category" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="all">🌍 全球 145 大合并总榜 (100+45)</option>
+            <option value="tropical">🔥 365天真热带 Top 100 (夜≥18°C & 水≥21°C)</option>
+            <option value="seasonal">☀️ 季节性/亚热带/地中海 Top 45</option>
+          </select>
+        </div>
+
+        <!-- 2. Departure Hub -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">✈️ 出发地航线视角</label>
+          <select id="filter-hub" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="all">🌐 全球视角 (显示沪/港/德直飞标签)</option>
+            <option value="SHA">🇨🇳 上海出发 (PVG/SHA)</option>
+            <option value="HKG">🇭🇰 香港出发 (HKG)</option>
+            <option value="FRA">🇩🇪 法兰克福出发 (FRA)</option>
+          </select>
+        </div>
+
+        <!-- 3. Region Filter -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">🗺️ 地理区域</label>
+          <select id="filter-region" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="all">全部 7 大区域</option>
+            <option value="南太平洋">🏝️ 南太平洋</option>
+            <option value="印度洋与东非">🇮🇳 印度洋与东非</option>
+            <option value="东南亚与东亚">🥥 东南亚与东亚</option>
+            <option value="中东与红海">🐪 中东与红海</option>
+            <option value="加勒比与大西洋">🏴‍☠️ 加勒比与大西洋</option>
+            <option value="美洲与夏威夷">🌺 美洲与夏威夷</option>
+            <option value="澳新与地中海/亚热带">🏛️ 澳新与地中海/亚热带</option>
+          </select>
+        </div>
+
+        <!-- 4. Min Coldest-Month Water Temp -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">🌊 最冷月水温底线</label>
+          <select id="filter-water-temp" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="0">不限最冷月水温</option>
+            <option value="21">≥ 21.0°C (全年可下水基准线)</option>
+            <option value="24">≥ 24.0°C (冬春依然温水舒适)</option>
+            <option value="26">≥ 26.0°C (赤道级365天温泉海)</option>
+          </select>
+        </div>
+
+        <!-- 5. Price Slider -->
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-semibold text-slate-600">💰 5晚4★海景预算上限</span>
+            <span id="price-slider-label" class="font-bold text-sky-700">不限 ($7,000+)</span>
+          </div>
+          <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" class="w-full accent-sky-600 cursor-pointer h-2 bg-slate-200 rounded-lg mt-1.5" />
+        </div>
+
+        <!-- 6. Sort Order -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">🔃 排序方式</label>
+          <select id="filter-sort" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+            <option value="score-desc">🏆 加权总分 (从高到低)</option>
+            <option value="price-asc">💰 5晚4★海景房价 (从低到高)</option>
+            <option value="cp-desc">⚡ 性价比指数 (高分低价优先)</option>
+            <option value="beach-desc">🏖️ 纯海滩硬实力 (海沙+风浪+玩水)</option>
+            <option value="water-desc">🌊 最冷月水温 (从高到低)</option>
+            <option value="night-desc">🌙 最冷月夜温 (从高到低)</option>
+            <option value="price-desc">💎 顶奢房价 (从高到低)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Second row of filter bar: Search, Checkboxes, View Toggle -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pt-3 border-t border-slate-100">
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="relative w-full sm:w-72">
+            <input
+              id="filter-search"
+              type="text"
+              placeholder="🔍 搜索海岛名、国家、鲸鲨、水屋、免签..."
+              class="w-full rounded-lg border border-slate-300 pl-3 pr-8 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+          </div>
+
+          <label class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 cursor-pointer select-none">
+            <input id="filter-nonstop" type="checkbox" class="rounded text-sky-600 focus:ring-sky-500" />
+            <span>✈️ 仅看直飞目的地</span>
+          </label>
+
+          <label class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 cursor-pointer select-none">
+            <input id="filter-verified" type="checkbox" class="rounded text-sky-600 focus:ring-sky-500" />
+            <span>✅ 仅看已实测实时房价</span>
+          </label>
+
+          <button onclick="resetFilters()" class="text-xs font-medium text-sky-600 hover:text-sky-800 underline">
+            重置全部筛选
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2 self-end md:self-auto">
+          <span class="text-xs text-slate-400">视图:</span>
+          <button id="btn-view-table" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">📊 全维表格</button>
+          <button id="btn-view-cards" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200">🗂️ 卡片网格</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live KPI Summary Bar -->
+    <section class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+        <div class="text-[11px] text-slate-500 font-medium">当前匹配海滨胜地</div>
+        <div class="text-2xl font-extrabold text-slate-900 mt-0.5"><span id="kpi-total-count">145</span> <span class="text-xs font-normal text-slate-400">/ 145</span></div>
+      </div>
+      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+        <div class="text-[11px] text-rose-600 font-semibold">🔥 365天真热带 (夜≥18/水≥21)</div>
+        <div class="text-2xl font-extrabold text-rose-600 mt-0.5" id="kpi-tropical-count">100</div>
+      </div>
+      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+        <div class="text-[11px] text-sky-600 font-semibold">☀️ 季节性/亚热带/地中海</div>
+        <div class="text-2xl font-extrabold text-sky-600 mt-0.5" id="kpi-seasonal-count">45</div>
+      </div>
+      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+        <div class="text-[11px] text-emerald-700 font-semibold">💰 当前筛选最低5晚4★海景</div>
+        <div class="text-sm sm:text-base font-extrabold text-emerald-700 mt-1 truncate" id="kpi-avg-price">—</div>
+      </div>
+      <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm col-span-2 sm:col-span-1">
+        <div class="text-[11px] text-amber-700 font-semibold">👑 当前权重榜首</div>
+        <div class="text-sm sm:text-base font-extrabold text-slate-900 mt-1 truncate" id="kpi-top-dest">—</div>
+      </div>
+    </section>
+
+    <!-- Table View -->
+    <section id="table-view-container" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-800 text-white text-[11px] uppercase tracking-wider">
+              <th class="py-3 px-2.5 text-center">排名</th>
+              <th class="py-3 px-3">海滨/海岛目的地 (点击直飞或标签可筛选)</th>
+              <th class="py-3 px-2 text-center" title="最冷月夜间平均低温 / 最冷月表层海水温度">最冷月<br/>夜温/水温</th>
+              <th class="py-3 px-2.5 text-center bg-sky-900">加权总分<br/>(满分100)</th>
+              <th class="py-3 px-1.5 text-center">🏖️海沙<br/>(25)</th>
+              <th class="py-3 px-1.5 text-center">⛰️风景<br/>(15)</th>
+              <th class="py-3 px-1.5 text-center">🤿玩水<br/>(15)</th>
+              <th class="py-3 px-1.5 text-center">🌊风浪<br/>(10)</th>
+              <th class="py-3 px-1.5 text-center">🏨酒店<br/>(10)</th>
+              <th class="py-3 px-1.5 text-center">🦞餐饮<br/>(10)</th>
+              <th class="py-3 px-1.5 text-center">🌋陆地<br/>(10)</th>
+              <th class="py-3 px-1.5 text-center">🛡️省心<br/>(5)</th>
+              <th class="py-3 px-3 text-right">5晚4★海景含税(双人)<br/>& 实时核验链接</th>
+            </tr>
+          </thead>
+          <tbody id="destinations-tbody">
+            <!-- Populated by app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Cards View (Hidden by default) -->
+    <section id="cards-view-container" class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <!-- Populated by app.js -->
+    </section>
+
+    <!-- Eliminated Gatekeepers Section -->
+    <section id="eliminated-section" class="bg-white rounded-2xl border border-rose-200 shadow-sm overflow-hidden">
+      <div class="bg-rose-50/80 px-5 py-3.5 border-b border-rose-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <div>
+          <h3 class="text-sm sm:text-base font-bold text-rose-950 flex items-center gap-2">
+            <span>🚫 淘汰区守门员对标参考（满足最冷月夜温≥18°C & 水温≥21°C，但综合得分 &lt; 76.5 分未上榜）</span>
+          </h3>
+          <p class="text-xs text-rose-800/80 mt-0.5">
+            为什么第 100 名是<strong>芭堤雅+格兰岛 (76.5分)</strong>，而 Key West、圣淘沙、佛得角、槟城被淘汰？以下为同标准量化得分拆解：
+          </p>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-600 text-xs border-b border-slate-200">
+              <th class="py-2.5 px-3">未上榜目的地</th>
+              <th class="py-2.5 px-2 text-center">最冷月夜温/水温</th>
+              <th class="py-2.5 px-2 text-center">总分 (&lt;76.5)</th>
+              <th class="py-2.5 px-2 text-center">8维细分得分拆解</th>
+              <th class="py-2.5 px-2">5晚4★海景房价</th>
+              <th class="py-2.5 px-3">淘汰核心原因 (对比 #100 芭堤雅+格兰岛 76.5分)</th>
+            </tr>
+          </thead>
+          <tbody id="eliminated-tbody">
+            <!-- Populated by app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Bottom PK Comparison Bar -->
+  <div id="compare-floating-bar" class="fixed bottom-4 inset-x-4 max-w-4xl mx-auto bg-slate-900/95 backdrop-blur text-white rounded-2xl shadow-2xl border border-slate-700 px-4 py-3 z-40 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="text-xs font-bold text-amber-400">⚔️ PK 对比栏 (最多3个):</span>
+      <div id="compare-selected-pills" class="flex flex-wrap gap-1.5"></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="clearCompare()" class="px-2.5 py-1 text-xs text-slate-300 hover:text-white">清空</button>
+      <button onclick="openCompareModal()" class="px-4 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow transition">
+        生成 8维雷达图 PK ↗
+      </button>
+    </div>
+  </div>
+
+  <!-- PK Comparison Modal -->
+  <div id="compare-modal" class="hidden fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white z-10">
+        <div>
+          <h3 class="text-base sm:text-lg font-extrabold text-slate-900">⚔️ 海岛硬核实力 8 维雷达图 PK 对比</h3>
+          <p class="text-xs text-slate-500">基于当前设定的权重实时对比各维度表现、气候底线与房价水平</p>
+        </div>
+        <button onclick="closeCompareModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold flex items-center justify-center">✕</button>
+      </div>
+      <div id="compare-modal-body" class="p-6">
+        <!-- Populated by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="data_part2.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
