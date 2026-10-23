@@ -3,2730 +3,978 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oceanic Atlas · 全球 145 大海滨与海岛度假图鉴</title>
-  <meta name="description" content="以生理体感夜温（≥18.0°C）与表层海水温度（≥21.0°C）为基准的全球 145 处海滨与海岛度假胜地量化图鉴。涵盖八维评分实验室、上海/香港/法兰克福直飞航线与双人五晚实测房价。" />
-  <meta name="theme-color" content="#0d0c0b" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0c0b'/%3E%3Cg fill='none' stroke='%23e3a043' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M6 21c3-2.5 6-2.5 9 0s6 2.5 9 0'/%3E%3Cpath d='M9 16a7 7 0 0 1 14 0'/%3E%3C/g%3E%3Ccircle cx='16' cy='11.5' r='1.8' fill='%23e3a043'/%3E%3C/svg%3E" />
+  <title>Oceanic Atlas · 全球 145 处海岸度假图鉴</title>
+  <meta name="description" content="以最冷月夜温 ≥18°C、水温 ≥21°C 为底线，按八项指标评出的全球 145 处海滨与海岛度假地。附上海、香港、法兰克福直飞航线与双人五晚实测房价。" />
+  <meta name="theme-color" content="#f5f0e7" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23f5f0e7'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23e0674a'/%3E%3Cpath d='M4 19h24v9H4z' fill='%2314425f'/%3E%3Cpath d='M4 19c4 2 8 2 12 0s8-2 12 0' fill='none' stroke='%237fd3cf' stroke-width='2'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Noto+Serif+SC:wght@500;600;700&display=swap" />
-  <script>
-    (function () {
-      try {
-        var q = location.search.match(/[?&]theme=(light|dark)/);
-        var t = q ? q[1] : localStorage.getItem("oa-theme");
-        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
-      } catch (e) {}
-    })();
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" />
   <style>
     /* ==========================================================================
-       Oceanic Atlas — Editorial Stylesheet
-       Default theme: Nocturnal Chart (dark). [data-theme="light"]: Archival Paper.
+       Oceanic Atlas — Resort travel-magazine stylesheet
+       Sand paper base · deep ocean ink · lagoon teal · coral accent
        ========================================================================== */
 
     :root {
-      color-scheme: dark;
+      --sand: #f5f0e7;
+      --paper: #fbf8f2;
+      --shell: #ece4d5;
+      --dune: #dccfb8;
+      --ocean: #14425f;
+      --ocean-deep: #0c2c42;
+      --lagoon: #2b8b92;
+      --lagoon-soft: #d5ecea;
+      --coral: #e0674a;
+      --coral-soft: #f8ddd3;
+      --ink: #1d2b34;
+      --ink-2: #4b5a63;
+      --ink-3: #87918f;
+      --line: #e3dacb;
+      --line-2: #cfc3ae;
 
-      --bg: #0d0c0b;
-      --bg-raised: #141311;
-      --bg-sunken: #090908;
-      --bg-hover: #1a1916;
-      --line: #24221e;
-      --line-strong: #3a3731;
-      --rule: #5a554b;
-      --text: #ece8df;
-      --text-2: #b1ab9e;
-      --text-3: #7b766c;
-      --accent: #e3a043;
-      --accent-strong: #f2b766;
-      --accent-ink: #1a1205;
-      --accent-wash: rgba(227, 160, 67, 0.12);
-      --sea: #5ba8a0;
-      --sea-wash: rgba(91, 168, 160, 0.12);
-      --overlay: rgba(6, 6, 5, 0.78);
-      --shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.85);
-      --knob: #f3f1ea;
-      --grain-opacity: 0.045;
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+      --sans: "DM Sans", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
 
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-        "Noto Sans SC", "Microsoft YaHei", sans-serif;
-      --font-serif: "Noto Serif SC", "Songti SC", "Source Han Serif SC", "STSong", Georgia, serif;
-      --font-latin: "Newsreader", Georgia, "Times New Roman", serif;
-      --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
-
-      --wrap: 1360px;
-      --gutter: clamp(20px, 4vw, 48px);
-      --header-h: 60px;
-
-      --r-1: 2px;
-      --r-2: 3px;
-      --r-3: 4px;
-
-      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      --wrap: 1240px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
-    [data-theme="light"] {
-      color-scheme: light;
-
-      --bg: #f3efe6;
-      --bg-raised: #f9f7f1;
-      --bg-sunken: #e9e4d8;
-      --bg-hover: #ebe6da;
-      --line: #ddd7ca;
-      --line-strong: #c7c0b1;
-      --rule: #8f887a;
-      --text: #1d1b17;
-      --text-2: #4d4940;
-      --text-3: #857f72;
-      --accent: #9c5408;
-      --accent-strong: #7f4405;
-      --accent-ink: #ffffff;
-      --accent-wash: rgba(156, 84, 8, 0.08);
-      --sea: #1f6f68;
-      --sea-wash: rgba(31, 111, 104, 0.08);
-      --overlay: rgba(30, 27, 22, 0.5);
-      --shadow: 0 40px 80px -44px rgba(48, 38, 22, 0.4);
-      --knob: #ffffff;
-      --grain-opacity: 0.065;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-      scroll-behavior: smooth;
-      scroll-padding-top: calc(var(--header-h) + 24px);
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-sans);
-      font-size: 14.5px;
+      background: var(--sand);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-      transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
+      font-feature-settings: "tnum" 1, "lnum" 1;
+      font-variant-numeric: lining-nums tabular-nums;
     }
+    h1, h2, h3, h4, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
+    ol, ul { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    svg { display: block; }
+    [hidden] { display: none !important; }
+    ::selection { background: var(--coral-soft); color: var(--ocean-deep); }
 
-    /* Subtle film grain so large surfaces feel like tactile paper/stone */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 90;
-      pointer-events: none;
-      opacity: var(--grain-opacity);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
+    .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
 
-    h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote {
-      margin: 0;
-    }
+    .icon { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+    .icon-fill { fill: currentColor; stroke: none; }
+    [data-icon] { display: inline-flex; }
 
-    ul, ol {
-      padding: 0;
-      list-style: none;
-    }
-
-    img, svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    button, input, select {
-      font: inherit;
-      color: inherit;
-    }
-
-    button {
-      cursor: pointer;
-      background: none;
-      border: 0;
-      padding: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    strong {
-      font-weight: 600;
-    }
-
-    ::selection {
-      background: rgba(227, 160, 67, 0.32);
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: var(--wrap);
-      margin: 0 auto;
-      padding: 0 var(--gutter);
-    }
-
-    .icon {
-      width: 15px;
-      height: 15px;
-      flex-shrink: 0;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .icon-fill {
-      fill: currentColor;
-      stroke: none;
-    }
-
-    .mono, .tnum {
-      font-family: var(--font-mono);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .code {
-      font-family: var(--font-mono);
-      font-variant-numeric: tabular-nums;
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--sans);
       font-size: 11.5px;
-      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--lagoon);
     }
+    .mono, .code { font-family: var(--sans); font-variant-numeric: tabular-nums; }
+    .code { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--lagoon); }
+
+    /* Buttons & links ------------------------------------------------------ */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: 46px; padding: 0 24px;
+      border: 1px solid var(--ocean); border-radius: 999px;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--ocean);
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .btn:hover { background: var(--ocean); color: var(--paper); }
+    .btn-solid { background: var(--ocean); color: var(--paper); }
+    .btn-solid:hover { background: var(--ocean-deep); border-color: var(--ocean-deep); }
+    .btn-light { border-color: rgba(255,255,255,0.7); color: #fff; }
+    .btn-light:hover { background: #fff; color: var(--ocean); }
 
     .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      color: var(--accent);
-      transition: color 0.2s;
-    }
-
-    .text-link:hover {
-      color: var(--accent-strong);
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-    }
-
-    kbd {
-      display: inline-block;
-      min-width: 18px;
-      padding: 0 5px;
-      border: 1px solid var(--line-strong);
-      border-bottom-width: 2px;
-      border-radius: 3px;
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      line-height: 16px;
-      text-align: center;
-      color: var(--text-3);
-    }
-
-    /* --------------------------------------------------------------------------
-       Header
-       -------------------------------------------------------------------------- */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      height: var(--header-h);
-      background: var(--bg);
-      background: color-mix(in srgb, var(--bg) 86%, transparent);
-      -webkit-backdrop-filter: saturate(1.3) blur(14px);
-      backdrop-filter: saturate(1.3) blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      height: 100%;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 22px;
-      height: 22px;
-      color: var(--accent);
-    }
-
-    .brand-name {
-      font-family: var(--font-latin);
-      font-size: 19px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    .brand-sub {
-      padding-left: 10px;
-      border-left: 1px solid var(--line-strong);
-      font-size: 12px;
-      line-height: 1;
-      color: var(--text-3);
-      white-space: nowrap;
-    }
-
-    .site-nav {
-      display: flex;
-      align-self: stretch;
-      gap: 2px;
-    }
-
-    .site-nav a {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      padding: 0 10px;
-      font-size: 13.5px;
-      color: var(--text-2);
-      white-space: nowrap;
-      transition: color 0.2s;
-    }
-
-    .nav-no {
-      font-family: var(--font-latin);
-      font-size: 12px;
-      font-style: italic;
-      color: var(--text-3);
-      transition: color 0.2s;
-    }
-
-    .site-nav a:hover {
-      color: var(--text);
-    }
-
-    .site-nav a:hover .nav-no {
-      color: var(--accent);
-    }
-
-    .header-tools {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: auto;
-      flex-shrink: 0;
-    }
-
-    .search-trigger {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      height: 32px;
-      padding: 0 7px 0 9px;
-      border: 1px solid var(--line);
-      border-radius: var(--r-2);
-      background: var(--bg-raised);
-      font-size: 13px;
-      color: var(--text-3);
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13.5px; font-weight: 500; color: var(--ocean);
+      border-bottom: 1px solid transparent;
       transition: border-color 0.2s, color 0.2s;
     }
+    .text-link:hover { border-color: currentColor; }
 
-    .search-trigger:hover {
-      border-color: var(--line-strong);
-      color: var(--text-2);
+    /* Header ---------------------------------------------------------------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(245, 240, 231, 0.88);
+      -webkit-backdrop-filter: saturate(1.4) blur(14px);
+      backdrop-filter: saturate(1.4) blur(14px);
+      border-bottom: 1px solid var(--line);
     }
-
-    .ghost-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      height: 32px;
-      padding: 0 10px;
-      border: 1px solid transparent;
-      border-radius: var(--r-2);
-      font-size: 13px;
-      color: var(--text-2);
-      white-space: nowrap;
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
-    }
-
-    .ghost-btn:hover {
-      color: var(--text);
-      border-color: var(--line);
-      background: var(--bg-raised);
-    }
-
-    /* --------------------------------------------------------------------------
-       Buttons, chips, inputs, switches
-       -------------------------------------------------------------------------- */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      height: 36px;
-      padding: 0 14px;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-2);
-      font-size: 13.5px;
-      color: var(--text);
-      white-space: nowrap;
-      transition: background 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
-    }
-
-    .btn:hover {
-      background: var(--bg-hover);
-    }
-
-    .btn-solid {
-      border-color: var(--text);
-      background: var(--text);
-      color: var(--bg);
-    }
-
-    .btn-solid:hover {
-      background: var(--text);
-      opacity: 0.88;
-    }
-
-    .btn-quiet {
-      padding: 0 4px;
-      border-color: transparent;
-      color: var(--text-2);
-    }
-
-    .btn-quiet:hover {
-      background: none;
-      color: var(--text);
-    }
-
-    .btn .icon {
-      width: 14px;
-      height: 14px;
-      transition: transform 0.3s var(--ease);
-    }
-
-    .btn:hover .icon {
-      transform: translateX(2px);
-    }
-
-    .btn-solid:hover .icon {
-      transform: translateY(2px);
-    }
-
-    .btn-xs {
-      height: 26px;
-      padding: 0 8px;
-      font-size: 12px;
-    }
-
-    .chips {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .chips::-webkit-scrollbar {
-      display: none;
-    }
-
-    .chip-sep {
-      width: 1px;
-      height: 16px;
-      margin: 0 6px;
-      background: var(--line-strong);
-      flex-shrink: 0;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      height: 30px;
-      padding: 0 11px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--text-2);
-      white-space: nowrap;
+    .header-inner { display: flex; align-items: center; gap: 32px; height: 68px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ocean); }
+    .brand-mark { width: 26px; height: 26px; color: var(--coral); }
+    .brand-name { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1; }
+    .site-nav { display: flex; gap: 26px; margin-left: auto; font-size: 13.5px; color: var(--ink-2); }
+    .site-nav a { position: relative; padding: 4px 0; transition: color 0.2s; }
+    .site-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--coral); transform: scaleX(0); transition: transform 0.3s var(--ease); }
+    .site-nav a:hover { color: var(--ocean); }
+    .site-nav a:hover::after { transform: scaleX(1); }
+    .header-tools { display: flex; align-items: center; gap: 6px; }
+    .tool-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      height: 36px; padding: 0 14px; border-radius: 999px;
+      font-size: 13px; color: var(--ink-2);
       transition: background 0.2s, color 0.2s;
     }
-
-    .chip:hover {
-      background: var(--bg-hover);
-      color: var(--text);
-    }
-
-    .chip[aria-pressed="true"],
-    .chip[aria-selected="true"] {
-      background: var(--text);
-      color: var(--bg);
-    }
-
-    .chip .count {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-3);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .chip[aria-pressed="true"] .count,
-    .chip[aria-selected="true"] .count {
-      color: inherit;
-      opacity: 0.6;
-    }
-
-    .field {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    .field > [data-icon] {
-      position: absolute;
-      left: 10px;
-      display: flex;
-      color: var(--text-3);
-      pointer-events: none;
-    }
-
-    .input {
-      width: 240px;
-      height: 34px;
-      padding: 0 28px 0 32px;
-      border: 1px solid var(--line);
-      border-radius: var(--r-2);
-      background: var(--bg-raised);
-      font-size: 13px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .input::placeholder {
-      color: var(--text-3);
-    }
-
-    .input:focus {
-      outline: none;
-      border-color: var(--line-strong);
-      box-shadow: 0 0 0 3px var(--accent-wash);
-    }
-
-    .input-clear {
-      position: absolute;
-      right: 6px;
-      display: grid;
-      place-items: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      color: var(--text-3);
-    }
-
-    .input-clear[hidden] {
-      display: none;
-    }
-
-    .input-clear:hover {
-      color: var(--text);
-      background: var(--bg-hover);
-    }
-
-    .select {
-      -webkit-appearance: none;
-      appearance: none;
-      height: 34px;
-      max-width: 100%;
-      padding: 0 30px 0 11px;
-      border: 1px solid var(--line);
-      border-radius: var(--r-2);
-      background: var(--bg-raised)
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238a867c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
-        no-repeat right 9px center / 13px;
-      font-size: 13px;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-
-    .select:hover,
-    .select:focus {
-      border-color: var(--line-strong);
-      outline: none;
-    }
-
-    .switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      color: var(--text-2);
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-    }
-
-    .switch input {
-      position: relative;
-      width: 28px;
-      height: 16px;
-      margin: 0;
-      border-radius: 999px;
-      background: var(--line-strong);
-      -webkit-appearance: none;
-      appearance: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .switch input::after {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--knob);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      transition: transform 0.25s var(--ease);
-    }
-
-    .switch input:checked {
-      background: var(--accent);
-    }
-
-    .switch input:checked::after {
-      transform: translateX(12px);
-    }
-
-    .segmented {
-      display: inline-flex;
-      padding: 2px;
-      border: 1px solid var(--line);
-      border-radius: var(--r-2);
-      background: var(--bg-raised);
-    }
-
-    .segmented button {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      height: 28px;
-      padding: 0 9px;
-      border-radius: 3px;
-      font-size: 12.5px;
-      color: var(--text-3);
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .segmented button:hover {
-      color: var(--text);
-    }
-
-    .segmented button[aria-pressed="true"] {
-      background: var(--bg-hover);
-      color: var(--text);
-      box-shadow: inset 0 0 0 1px var(--line);
-    }
-
-    /* Hairline range sliders (dark_rides Lab style) */
-    input[type="range"] {
-      width: 100%;
-      height: 20px;
-      margin: 6px 0 0;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      height: 2px;
-      border-radius: 2px;
-      background: linear-gradient(
-        to right,
-        var(--accent) 0%,
-        var(--accent) var(--pct, 50%),
-        var(--line-strong) var(--pct, 50%),
-        var(--line-strong) 100%
-      );
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      width: 14px;
-      height: 14px;
-      margin-top: -6px;
-      border: 3.5px solid var(--bg-raised);
-      border-radius: 50%;
-      background: var(--text);
-      box-shadow: 0 0 0 1px var(--line-strong);
-      -webkit-appearance: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    input[type="range"]:hover::-webkit-slider-thumb {
-      background: var(--accent);
-      transform: scale(1.1);
-    }
-
-    input[type="range"]::-moz-range-track {
-      height: 2px;
-      background: var(--line-strong);
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 8px;
-      height: 8px;
-      border: 3.5px solid var(--bg-raised);
-      border-radius: 50%;
-      background: var(--text);
-      box-shadow: 0 0 0 1px var(--line-strong);
-    }
-
-    /* --------------------------------------------------------------------------
-       Cover (Editorial Hero)
-       -------------------------------------------------------------------------- */
-
-    .cover {
-      --mx: 28%;
-      --my: 82%;
-      position: relative;
-      overflow: hidden;
-      padding: 28px 0 clamp(64px, 9vw, 132px);
-      border-bottom: 1px solid var(--line);
-      isolation: isolate;
-    }
-
-    .cover::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(circle 540px at var(--mx) var(--my), var(--accent-wash), transparent 70%);
-      pointer-events: none;
-    }
-
-    .cover-track {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      fill: none;
-      stroke-linecap: round;
-      pointer-events: none;
-      -webkit-mask-image: radial-gradient(circle 420px at var(--mx) var(--my), #000 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.08) 100%);
-      mask-image: radial-gradient(circle 420px at var(--mx) var(--my), #000 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.08) 100%);
-    }
-
-    .cover-track .rail {
-      stroke: var(--text-3);
-      stroke-width: 1.2;
-    }
-
-    .cover-track .ties {
-      stroke: var(--line-strong);
-      stroke-width: 18;
-      stroke-linecap: butt;
-      stroke-dasharray: 1.5 14;
-    }
-
-    .cover-track .isotherm {
-      stroke: var(--accent);
-      stroke-width: 1;
-      stroke-dasharray: 4 6;
-      opacity: 0.65;
-    }
-
-    .cover-track .vessel {
-      fill: var(--bg);
-      stroke: var(--accent);
-      stroke-width: 1.4;
-      stroke-linejoin: round;
-    }
-
-    .dateline {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 10px 0;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--line);
-      font-size: 12.5px;
-      color: var(--text-3);
-    }
-
-    .dateline span:last-child {
-      font-family: var(--font-latin);
-      font-size: 14px;
-      font-style: italic;
-    }
-
-    .cover-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.85fr);
-      gap: 72px;
-      align-items: start;
-      margin-top: 64px;
-    }
-
-    .display {
-      font-family: var(--font-serif);
-      font-size: clamp(42px, 5.2vw, 74px);
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      word-break: keep-all;
-    }
-
-    .display em {
-      font-family: var(--font-latin);
-      font-style: italic;
-      font-weight: 500;
-      color: var(--accent);
-      padding: 0 4px;
-    }
-
-    .hero-lede {
-      max-width: 32em;
-      margin-top: 34px;
-      font-family: var(--font-serif);
-      font-size: 17.5px;
-      font-weight: 500;
-      line-height: 1.85;
-      color: var(--text);
-    }
-
-    .hero-count {
-      max-width: 36em;
-      margin-top: 18px;
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text-3);
-    }
-
-    .hero-count b {
-      font-family: var(--font-latin);
-      font-size: 17px;
-      font-weight: 500;
-      color: var(--text);
-      font-variant-numeric: lining-nums;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
-      margin-top: 32px;
-    }
-
-    /* Plate on the right of Cover */
-    .plate {
-      margin-top: 8px;
-    }
-
-    .lab-sheet {
-      position: relative;
-      border: 1px solid var(--line-strong);
-      background: var(--bg-sunken);
-    }
-
-    .lab-sheet::before,
-    .lab-sheet::after {
-      content: "";
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      border-color: var(--rule);
-      border-style: solid;
-      pointer-events: none;
-    }
-
-    .lab-sheet::before {
-      left: -6px;
-      top: -6px;
-      border-width: 1px 0 0 1px;
-    }
-
-    .lab-sheet::after {
-      right: -6px;
-      bottom: -6px;
-      border-width: 0 1px 1px 0;
-    }
-
-    .title-block {
-      display: flex;
-      border-top: 1px solid var(--line-strong);
-      font-size: 11.5px;
-      color: var(--text-2);
-    }
-
-    .title-block span {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      padding: 6px 12px;
-      border-left: 1px solid var(--line-strong);
-      white-space: nowrap;
-      font-family: var(--font-mono);
-    }
-
-    .title-block span:first-child {
-      border-left: 0;
-    }
-
-    .title-block span:last-child {
-      flex: 1;
-      justify-content: flex-end;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .title-block small {
-      font-family: var(--font-sans);
-      font-size: 10.5px;
-      color: var(--text-3);
-    }
-
-    .plate-caption {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 10px 0 0;
-      font-size: 12px;
-      color: var(--text-3);
-    }
-
-    .plate-no {
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      color: var(--text-2);
-    }
-
-    .plate-body {
-      margin-top: 20px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .plate-kicker {
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-    }
-
-    .plate-text {
-      margin-top: 10px;
-      font-family: var(--font-serif);
-      font-size: 18.5px;
-      font-weight: 500;
-      line-height: 1.7;
-    }
-
-    .plate-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-top: 16px;
-      font-size: 13px;
-    }
-
-    .plate-shuffle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      color: var(--text-3);
-      transition: color 0.2s;
-    }
-
-    .plate-shuffle:hover {
-      color: var(--text);
-    }
-
-    .plate-shuffle .icon {
-      width: 13px;
-      height: 13px;
-      transition: transform 0.5s var(--ease);
-    }
-
-    .plate-shuffle:hover .icon {
-      transform: rotate(180deg);
-    }
-
-    /* --------------------------------------------------------------------------
-       Contents Strip
-       -------------------------------------------------------------------------- */
-
-    .contents {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      border-bottom: 1px solid var(--line);
-    }
-
-    .contents a {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      align-content: start;
-      gap: 4px 10px;
-      padding: 24px 20px 26px;
-      border-left: 1px solid var(--line);
-      transition: background 0.25s;
-    }
-
-    .contents a:first-child {
-      padding-left: 0;
-      border-left: 0;
-    }
-
-    .contents .no {
-      grid-row: span 2;
-      font-family: var(--font-latin);
-      font-size: 15px;
-      font-style: italic;
-      line-height: 1.5;
-      color: var(--text-3);
-      transition: color 0.2s;
-    }
-
-    .contents .t {
-      font-family: var(--font-serif);
-      font-size: 16.5px;
-      font-weight: 600;
-      line-height: 1.5;
-      transition: color 0.2s;
-    }
-
-    .contents .d {
-      font-size: 12.5px;
-      line-height: 1.65;
-      color: var(--text-3);
-    }
-
-    .contents a:hover .no,
-    .contents a:hover .t {
-      color: var(--accent);
-    }
-
-    /* --------------------------------------------------------------------------
-       Sections & Chapter Openers
-       -------------------------------------------------------------------------- */
-
-    .section {
-      padding-top: 72px;
-      padding-bottom: 88px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .chapter-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 20px 32px;
-    }
-
-    .chapter-head-main {
-      display: grid;
-      grid-template-columns: 42px minmax(0, 1fr);
-      align-items: baseline;
-    }
-
-    .chapter-no {
-      font-family: var(--font-latin);
-      font-size: 22px;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--accent);
-    }
-
+    .tool-btn:hover { background: var(--shell); color: var(--ocean); }
+    .tool-btn kbd { font-family: var(--sans); font-size: 11px; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 4px; padding: 0 5px; line-height: 17px; }
+    .tool-btn.is-primary { background: var(--ocean); color: var(--paper); }
+    .tool-btn.is-primary:hover { background: var(--ocean-deep); }
+
+    /* Hero ------------------------------------------------------------------ */
+    .hero { position: relative; min-height: min(860px, 92vh); overflow: hidden; color: var(--ocean); isolation: isolate; }
+    .hero-scene { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
+    .hero-scene .wave { animation: drift 14s ease-in-out infinite alternate; }
+    .hero-scene .wave.w2 { animation-duration: 18s; animation-delay: -4s; }
+    .hero-scene .wave.w3 { animation-duration: 22s; animation-delay: -9s; }
+    .hero-scene .shimmer { animation: shimmer 6s ease-in-out infinite; }
+    @keyframes drift { from { transform: translateX(-30px); } to { transform: translateX(30px); } }
+    @keyframes shimmer { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.7; } }
+    @media (prefers-reduced-motion: reduce) { .hero-scene .wave, .hero-scene .shimmer { animation: none; } }
+
+    .hero-inner { position: relative; padding: clamp(56px, 8vh, 96px) 0 0; }
+    .hero h1 {
+      max-width: 13em;
+      margin-top: 22px;
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.6vw, 76px);
+      font-weight: 300;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: var(--ocean-deep);
+    }
+    .hero h1 em { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--coral); letter-spacing: 0; padding: 0 0.06em; }
+    .hero-lede { max-width: 34em; margin-top: 26px; font-size: 16.5px; line-height: 1.95; color: var(--ink-2); }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 36px; }
+
+    .hero-stats {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      color: #fff;
+    }
+    .hero-stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,0.28); }
+    .hero-stat { padding: 22px 0 30px; }
+    .hero-stat + .hero-stat { padding-left: 28px; border-left: 1px solid rgba(255,255,255,0.18); }
+    .hero-stat b { display: block; font-family: var(--display); font-size: clamp(34px, 3.6vw, 48px); font-weight: 500; line-height: 1; letter-spacing: -0.01em; }
+    .hero-stat span { display: block; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.78); }
+
+    /* Sections -------------------------------------------------------------- */
+    .section { padding: clamp(80px, 10vw, 128px) 0; }
+    .section.is-paper { background: var(--paper); }
+    .section.is-shell { background: var(--shell); }
+    .section-head { max-width: 760px; margin: 0 auto 52px; text-align: center; }
+    .section-head.is-left { margin-left: 0; text-align: left; }
     .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(26px, 2.8vw, 34px);
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    .section-note {
-      margin-top: 6px;
-      font-size: 13.5px;
-      color: var(--text-3);
-    }
-
-    /* --------------------------------------------------------------------------
-       Weight Calibration Deck
-       -------------------------------------------------------------------------- */
-
-    .weight-deck {
-      margin-top: 28px;
-      border-top: 1.5px solid var(--rule);
-      border-bottom: 1px solid var(--line-strong);
-      background: var(--bg-raised);
-    }
-
-    .weight-presets-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px 20px;
-      padding: 12px 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .weight-presets-label {
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      letter-spacing: 0.04em;
-      color: var(--text-3);
-      text-transform: uppercase;
-    }
-
-    .weight-dist-strip {
-      display: flex;
-      height: 3px;
-      background: var(--bg-sunken);
-      overflow: hidden;
-    }
-
-    .weight-dist-seg {
-      height: 100%;
-      border-right: 1px solid var(--bg);
-      transition: width 0.25s var(--ease);
-    }
-
-    .weight-grid {
-      display: grid;
-      grid-template-columns: repeat(8, minmax(0, 1fr));
-    }
-
-    .weight-cell {
-      padding: 14px 16px 16px;
-      border-left: 1px solid var(--line);
-    }
-
-    .weight-cell:first-child {
-      border-left: 0;
-    }
-
-    .weight-cell-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 6px;
-    }
-
-    .weight-cell-name {
-      font-family: var(--font-serif);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .weight-cell-max {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-3);
-    }
-
-    .weight-cell-val {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .weight-cell-num {
-      font-family: var(--font-latin);
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1;
-      color: var(--text);
-    }
-
-    .weight-cell-pct {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--accent);
-    }
-
-    .weight-cell-desc {
-      margin-top: 6px;
-      font-size: 11.5px;
-      line-height: 1.45;
-      color: var(--text-3);
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* --------------------------------------------------------------------------
-       Summary Strip (Spec Grid)
-       -------------------------------------------------------------------------- */
-
-    .kpi-strip {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      margin-top: 28px;
-      border-top: 1px solid var(--line-strong);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .kpi-cell {
-      padding: 14px 18px 16px;
-      border-left: 1px solid var(--line);
-    }
-
-    .kpi-cell:first-child {
-      padding-left: 0;
-      border-left: 0;
-    }
-
-    .kpi-cell dt {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.03em;
-      color: var(--text-3);
-    }
-
-    .kpi-cell dd {
-      margin-top: 4px;
-      font-family: var(--font-latin);
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--text);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .kpi-cell dd.is-serif {
-      font-family: var(--font-serif);
-      font-size: 16.5px;
-      font-weight: 600;
-      margin-top: 7px;
-    }
-
-    .kpi-cell dd small {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-3);
-      font-weight: 400;
-    }
-
-    /* --------------------------------------------------------------------------
-       Sticky Filter Toolbar
-       -------------------------------------------------------------------------- */
-
-    .toolbar {
-      position: sticky;
-      top: var(--header-h);
-      z-index: 20;
-      margin: 24px 0 32px;
-      padding: 12px 0;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--line);
-      background: var(--bg);
-      background: color-mix(in srgb, var(--bg) 92%, transparent);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-    }
-
-    .toolbar-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px 14px;
-      margin-top: 10px;
-    }
-
-    .toolbar-row .spacer {
-      flex: 1;
-    }
-
-    .price-filter {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12.5px;
-      color: var(--text-2);
-    }
-
-    .price-filter input[type="range"] {
-      width: 96px;
-      margin: 0;
-    }
-
-    .price-filter output {
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      color: var(--accent);
-      min-width: 64px;
-    }
-
-    .result-count {
-      font-size: 12.5px;
-      color: var(--text-3);
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
-    }
-
-    .result-count strong {
-      font-family: var(--font-latin);
-      font-size: 16px;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* --------------------------------------------------------------------------
-       Book-Style Data Table
-       -------------------------------------------------------------------------- */
-
-    .table-wrap {
-      overflow-x: auto;
-      border-top: 1.5px solid var(--rule);
-      border-bottom: 1.5px solid var(--rule);
-    }
-
-    .data-table {
-      width: 100%;
-      min-width: 1140px;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      line-height: 1.6;
-    }
-
-    .data-table th {
-      position: sticky;
-      top: 0;
-      z-index: 4;
-      padding: 11px 10px;
-      border-bottom: 1px solid var(--line-strong);
-      background: var(--bg);
-      font-size: 11.5px;
-      font-weight: 500;
-      text-align: left;
-      color: var(--text-3);
-      white-space: nowrap;
-    }
-
-    .data-table th.num,
-    .data-table td.num {
-      text-align: center;
-    }
-
-    .data-table th.right,
-    .data-table td.right {
-      text-align: right;
-    }
-
-    .data-table th small {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 400;
-      color: var(--text-3);
-      opacity: 0.75;
-    }
-
-    .data-table td {
-      padding: 15px 10px;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
-    }
-
-    .data-table tbody tr {
-      transition: background 0.15s;
-    }
-
-    .data-table tbody tr:hover {
-      background: var(--bg-hover);
-    }
-
-    .data-table tbody tr.is-compared {
-      background: var(--accent-wash);
-    }
-
-    .data-table tbody tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .t-rank {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-3);
-    }
-
-    .t-rank.is-top {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .t-dest-head {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .t-title {
-      font-family: var(--font-serif);
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text);
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .t-title:hover {
-      color: var(--accent);
-    }
-
-    .t-en {
-      font-family: var(--font-latin);
-      font-style: italic;
-      font-size: 14px;
-      color: var(--text-3);
-    }
-
-    .t-meta {
-      margin-top: 3px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px 10px;
-      font-size: 12px;
-      color: var(--text-3);
-    }
-
-    .t-cat-mark {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--accent);
-    }
-
-    .t-cat-mark.is-seasonal {
-      color: var(--sea);
-    }
-
-    .t-flights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 6px;
-    }
-
-    .flight-code {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 1px 6px;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-1);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-2);
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .flight-code:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .t-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 6px;
-    }
-
-    .tag-btn {
-      padding: 1px 6px;
-      border-radius: var(--r-1);
-      background: var(--bg-raised);
-      border: 1px solid var(--line);
-      font-size: 11.5px;
-      color: var(--text-2);
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .tag-btn:hover {
-      border-color: var(--line-strong);
-      color: var(--text);
-    }
-
-    .t-note {
-      margin-top: 6px;
-      font-size: 12.5px;
-      line-height: 1.65;
-      color: var(--text-2);
-      max-width: 440px;
-    }
-
-    .t-climate {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      line-height: 1.55;
-      white-space: nowrap;
-    }
-
-    .t-climate-sub {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 3px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      color: var(--text-3);
-    }
-
-    .t-climate-sub .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .t-climate-sub.is-seasonal .dot {
-      background: var(--sea);
-    }
-
-    .t-total {
-      font-family: var(--font-latin);
-      font-size: 21px;
-      font-weight: 500;
-      line-height: 1.1;
-      color: var(--text);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .t-total.is-elite {
-      color: var(--accent);
-    }
-
-    .t-delta {
-      display: block;
-      margin-top: 3px;
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      color: var(--text-3);
-    }
-
-    .t-delta.up {
-      color: var(--accent);
-    }
-
-    .dim-cell {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      min-width: 36px;
-    }
-
-    .dim-val {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-2);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .dim-val.is-high {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .dim-bar {
-      width: 30px;
-      height: 2px;
-      background: var(--line-strong);
-      overflow: hidden;
-    }
-
-    .dim-bar > i {
-      display: block;
-      height: 100%;
-      background: var(--text-2);
-    }
-
-    .dim-bar.is-high > i {
-      background: var(--accent);
-    }
-
-    .t-price {
-      font-family: var(--font-mono);
-      font-size: 14.5px;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .t-price-note {
-      margin-top: 2px;
-      font-size: 11.5px;
-      color: var(--text-3);
-      max-width: 195px;
-      margin-left: auto;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .t-price-note .v-dot {
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      margin-right: 4px;
-      border-radius: 50%;
-      background: var(--sea);
-      vertical-align: middle;
-    }
-
-    .t-actions {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 8px;
-      font-size: 12px;
-    }
-
-    /* --------------------------------------------------------------------------
-       Editorial Card Grid (.ride-grid)
-       -------------------------------------------------------------------------- */
-
-    .ride-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 48px 32px;
-    }
-
-    .ride-card {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .ride-link {
-      display: block;
-      flex: 1;
-      cursor: pointer;
-    }
-
-    .thumb {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-1);
-      background: var(--bg-sunken);
-    }
-
-    .ride-link:hover .thumb {
-      border-color: var(--rule);
-    }
-
-    .ride-body {
-      padding-top: 14px;
-    }
-
-    .ride-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      font-size: 12px;
-      color: var(--text-3);
-    }
-
-    .ride-meta .year {
-      flex-shrink: 0;
-      font-family: var(--font-latin);
-      font-size: 15px;
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .ride-title {
-      margin-top: 5px;
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 1.38;
-      transition: color 0.2s;
-    }
-
-    .ride-link:hover .ride-title {
-      color: var(--accent);
-    }
-
-    .ride-en {
-      margin-top: 2px;
-      font-family: var(--font-latin);
-      font-size: 14.5px;
-      font-style: italic;
-      line-height: 1.4;
-      color: var(--text-3);
-    }
-
-    .ride-summary {
-      margin-top: 10px;
-      font-size: 13.5px;
-      line-height: 1.75;
-      color: var(--text-2);
-    }
-
-    .ride-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
       margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-      font-size: 12.5px;
-      color: var(--text-3);
+      font-family: var(--serif);
+      font-size: clamp(30px, 3.4vw, 44px);
+      font-weight: 300;
+      line-height: 1.3;
+      letter-spacing: 0.03em;
+      color: var(--ocean-deep);
     }
+    .section-title em { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--coral); }
+    .section-note { margin-top: 16px; font-size: 15px; line-height: 1.9; color: var(--ink-2); }
+
+    /* Editor's note (cover feature) ---------------------------------------- */
+    .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
+    .feature-copy .eyebrow { color: var(--coral); }
+    .feature-quote {
+      margin-top: 22px;
+      font-family: var(--serif);
+      font-size: clamp(19px, 1.7vw, 23px);
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--ocean-deep);
+    }
+    .feature-quote::before { content: "“"; display: block; height: 44px; font-family: var(--display); font-size: 88px; line-height: 1; color: var(--coral); }
+    .feature-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); }
+    .feature-count { margin-left: auto; font-family: var(--display); font-size: 18px; font-style: italic; color: var(--ink-3); }
+    .feature-next { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-2); }
+    .feature-next:hover { color: var(--coral); }
+    .feature-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .feature-pair .postcard:nth-child(2) { margin-top: 48px; }
+    .vs-caption { grid-column: 1 / -1; margin-top: 6px; font-size: 13px; color: var(--ink-3); text-align: center; }
+
+    /* Postcards (data-driven seascape cards) -------------------------------- */
+    .postcard {
+      position: relative;
+      display: flex; flex-direction: column;
+      background: var(--paper);
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(20, 66, 95, 0.06), 0 12px 32px -18px rgba(20, 66, 95, 0.35);
+      overflow: hidden;
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    }
+    .postcard:hover { transform: translateY(-4px); box-shadow: 0 1px 2px rgba(20, 66, 95, 0.06), 0 22px 44px -20px rgba(20, 66, 95, 0.45); }
+    .pc-scene { position: relative; aspect-ratio: 4 / 3; overflow: hidden; cursor: pointer; }
+    .pc-scene svg { width: 100%; height: 100%; }
+    .pc-rank {
+      position: absolute; top: 14px; left: 16px;
+      font-family: var(--display); font-size: 15px; font-style: italic; color: rgba(12, 44, 66, 0.75);
+    }
+    .pc-score {
+      position: absolute; right: 14px; bottom: 14px;
+      display: flex; align-items: baseline; gap: 3px;
+      padding: 6px 12px 5px; border-radius: 999px;
+      background: rgba(251, 248, 242, 0.92);
+      color: var(--ocean-deep);
+    }
+    .pc-score b { font-family: var(--display); font-size: 22px; font-weight: 600; line-height: 1; }
+    .pc-score small { font-size: 11px; color: var(--ink-3); }
+    .pc-badge {
+      position: absolute; top: 12px; right: 12px;
+      padding: 3px 10px; border-radius: 999px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.04em;
+      background: rgba(251, 248, 242, 0.9); color: var(--lagoon);
+    }
+    .pc-badge.is-seasonal { color: var(--coral); }
+    .pc-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 18px; }
+    .pc-meta { font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+    .pc-title { margin-top: 6px; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.4; color: var(--ocean-deep); cursor: pointer; }
+    .pc-title:hover { color: var(--coral); }
+    .pc-en { font-family: var(--display); font-size: 16px; font-style: italic; color: var(--ink-3); line-height: 1.3; }
+    .pc-facts { display: flex; gap: 16px; margin-top: 12px; font-size: 12.5px; color: var(--ink-2); }
+    .pc-facts span b { font-weight: 600; color: var(--ocean); }
+    .pc-summary { margin-top: 12px; font-size: 13.5px; line-height: 1.8; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .pc-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+    .pc-price b { font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--ocean-deep); }
+    .pc-price small { font-size: 11.5px; color: var(--ink-3); margin-left: 4px; }
+    .pc-actions { display: flex; align-items: center; gap: 12px; }
+    .feature-pair .pc-body { padding: 14px 16px; }
+    .feature-pair .pc-title { font-size: 17px; }
+    .feature-pair .pc-facts { margin-top: 8px; }
+
+    .ride-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 8px; }
 
     .compare-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 6px;
-      border-radius: var(--r-1);
-      font-size: 12px;
-      color: var(--text-3);
-      transition: color 0.2s;
+      display: inline-flex; align-items: center; gap: 5px;
+      height: 30px; padding: 0 12px; border-radius: 999px;
+      border: 1px solid var(--line-2);
+      font-size: 12.5px; color: var(--ink-2);
+      transition: all 0.2s;
     }
+    .compare-toggle:hover { border-color: var(--ocean); color: var(--ocean); }
+    .compare-toggle[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); color: var(--paper); }
 
-    .compare-toggle .icon {
-      width: 12px;
-      height: 12px;
-    }
-
-    .compare-toggle:hover {
-      color: var(--text);
-    }
-
-    .compare-toggle[aria-pressed="true"] {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .empty-state {
-      grid-column: 1 / -1;
-      padding: 72px 20px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .empty-state h3 {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-    .empty-state p {
-      margin: 8px 0 18px;
-      font-size: 13.5px;
-      color: var(--text-3);
-    }
-
-    /* --------------------------------------------------------------------------
-       Hub Matrix & Rules Grid
-       -------------------------------------------------------------------------- */
-
-    .three-col-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-top: 32px;
-      border-top: 1.5px solid var(--rule);
-      border-bottom: 1.5px solid var(--rule);
-    }
-
-    .three-col-cell {
-      padding: 24px 24px 28px;
-      border-left: 1px solid var(--line);
-    }
-
-    .three-col-cell:first-child {
-      padding-left: 0;
-      border-left: 0;
-    }
-
-    .three-col-cell:last-child {
-      padding-right: 0;
-    }
-
-    .col-kicker {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      color: var(--accent);
-    }
-
-    .col-title {
-      margin-top: 8px;
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 1.35;
-    }
-
-    .col-lede {
-      margin-top: 8px;
-      font-size: 13.5px;
-      line-height: 1.75;
-      color: var(--text-2);
-    }
-
-    .hub-items {
-      margin-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .hub-item {
-      display: grid;
-      grid-template-columns: 24px minmax(0, 1fr);
-      gap: 8px;
-      padding: 11px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 13px;
-      line-height: 1.65;
-      color: var(--text-2);
-    }
-
-    .hub-item:last-child {
-      border-bottom: 0;
-    }
-
-    .hub-item .no {
-      font-family: var(--font-latin);
-      font-style: italic;
-      font-size: 14px;
-      color: var(--text-3);
-    }
-
-    .hub-item strong {
-      font-family: var(--font-serif);
-      color: var(--text);
-    }
-
-    /* --------------------------------------------------------------------------
-       Blueprint Drawings (.bp)
-       -------------------------------------------------------------------------- */
-
-    .bp text {
-      font-family: var(--font-mono);
-    }
-
-    .bp-grid {
-      stroke: var(--line);
-      stroke-width: 1;
-    }
-
-    .bp-ink {
-      fill: none;
-      stroke: var(--text-2);
-      stroke-width: 1.3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .bp-faint {
-      fill: none;
-      stroke: var(--line-strong);
-      stroke-width: 1;
-    }
-
-    .bp-dash {
-      fill: none;
-      stroke: var(--text-3);
-      stroke-width: 1;
-      stroke-dasharray: 3 4;
-    }
-
-    .bp-move {
-      fill: none;
-      stroke: var(--accent);
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .bp-move-body {
-      fill: var(--accent-wash);
-      stroke: var(--accent);
-      stroke-width: 1.6;
-      stroke-linejoin: round;
-    }
-
-    .bp-sea-body {
-      fill: var(--sea-wash);
-      stroke: var(--sea);
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-    }
-
-    .bp-dot-accent {
-      fill: var(--accent);
-    }
-
-    .bp-label {
-      fill: var(--text-3);
-      font-size: 10px;
-    }
-
-    .bp-label-strong {
-      fill: var(--text-2);
-      font-size: 10.5px;
-    }
-
-    .bp-title {
-      fill: var(--text);
-      font-size: 11.5px;
-      letter-spacing: 0.03em;
-    }
-
-    .bp-tag {
-      fill: var(--accent);
-      font-size: 10.5px;
-    }
-
-    /* --------------------------------------------------------------------------
-       Compare Tray + Dialogs
-       -------------------------------------------------------------------------- */
-
-    .compare-tray {
-      position: fixed;
-      left: 50%;
-      bottom: 22px;
-      z-index: 60;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      max-width: calc(100vw - 32px);
-      padding: 6px 6px 6px 16px;
-      border-radius: 999px;
-      background: var(--text);
-      color: var(--bg);
-      box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.55);
-      font-size: 13px;
-      transform: translate(-50%, 160%);
-      transition: transform 0.4s var(--ease);
-    }
-
-    .compare-tray.is-visible {
-      transform: translate(-50%, 0);
-    }
-
-    .tray-label {
-      white-space: nowrap;
-      opacity: 0.7;
-    }
-
-    .tray-items {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .tray-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 4px 2px 10px;
-      border: 1px solid rgba(127, 127, 127, 0.35);
-      border-radius: 999px;
-      white-space: nowrap;
-      font-size: 12.5px;
-    }
-
-    .tray-item button {
-      display: grid;
-      place-items: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      opacity: 0.65;
-    }
-
-    .tray-item button:hover {
-      opacity: 1;
-    }
-
-    .tray-go {
-      height: 30px;
-      padding: 0 14px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--accent-ink);
-      font-weight: 600;
-      font-size: 12.5px;
-      white-space: nowrap;
-    }
-
-    .backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      overflow-y: auto;
-      padding: 5vh 20px 40px;
-      background: var(--overlay);
-      -webkit-backdrop-filter: blur(6px);
-      backdrop-filter: blur(6px);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.25s, visibility 0.25s;
-    }
-
-    .backdrop.is-open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .dialog {
-      position: relative;
-      width: 100%;
-      max-width: 1080px;
-      overflow: hidden;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-3);
-      background: var(--bg-raised);
-      box-shadow: var(--shadow);
-      transform: translateY(14px);
-      transition: transform 0.35s var(--ease);
-    }
-
-    .backdrop.is-open .dialog {
-      transform: none;
-    }
-
-    .dialog-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .dialog-head h2 {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-    .dialog-close {
-      display: grid;
-      place-items: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--bg-hover);
-      color: var(--text);
-    }
-
-    .dialog-close:hover {
-      background: var(--line-strong);
-    }
-
-    .dialog-body {
-      padding: 24px;
-    }
-
-    .compare-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
-      gap: 32px;
-      align-items: start;
-    }
-
-    /* Command Palette */
-    .palette-backdrop {
-      padding-top: 12vh;
-    }
-
-    .palette {
-      width: 100%;
-      max-width: 620px;
-      overflow: hidden;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-3);
-      background: var(--bg-raised);
-      box-shadow: var(--shadow);
-    }
-
-    .palette-input {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      height: 52px;
-      padding: 0 16px;
-      border-bottom: 1px solid var(--line);
-      color: var(--text-3);
-    }
-
-    .palette-input input {
-      flex: 1;
-      border: 0;
+    /* Weights -------------------------------------------------------------- */
+    .preset-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      height: 38px; padding: 0 18px; border-radius: 999px;
+      border: 1px solid var(--line-2);
       background: transparent;
-      font-size: 15px;
-      color: var(--text);
-      outline: none;
-    }
-
-    .palette-results {
-      max-height: min(56vh, 460px);
-      overflow-y: auto;
-      padding: 6px;
-    }
-
-    .palette-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: var(--r-2);
-      font-size: 13.5px;
-      text-align: left;
-    }
-
-    .palette-item:hover {
-      background: var(--bg-hover);
-    }
-
-    .palette-item .sub {
-      margin-left: auto;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-3);
-    }
-
-    /* --------------------------------------------------------------------------
-       Footer
-       -------------------------------------------------------------------------- */
-
-    .site-footer {
-      position: relative;
-      overflow: hidden;
-      padding: 68px 0 36px;
-      border-top: 1px solid var(--rule);
-      font-size: 13px;
-      color: var(--text-3);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.55fr)) minmax(0, 0.9fr);
-      gap: 44px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-    }
-
-    .footer-note,
-    .colophon {
-      margin-top: 12px;
-      line-height: 1.85;
-    }
-
-    .footer-h {
-      margin-bottom: 12px;
-      font-size: 12px;
-      color: var(--text);
-    }
-
-    .footer-links a {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 0;
-      color: var(--text-2);
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--text);
-    }
-
-    .footer-wordmark {
-      margin: 64px 0 0;
-      font-family: var(--font-latin);
-      font-size: clamp(54px, 12.6vw, 176px);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 0.9;
-      letter-spacing: -0.035em;
+      font-size: 13.5px; color: var(--ink-2);
+      transition: all 0.2s;
       white-space: nowrap;
-      color: transparent;
-      -webkit-text-stroke: 1px var(--line-strong);
-      user-select: none;
     }
+    .chip:hover { border-color: var(--ocean); color: var(--ocean); }
+    .chip[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); color: var(--paper); }
+    .chip .count { font-size: 11.5px; opacity: 0.6; }
 
-    .footer-base {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--line);
-      font-size: 12px;
+    .weight-dist-strip { display: flex; height: 6px; margin: 40px 0 0; border-radius: 999px; overflow: hidden; background: var(--line); }
+    .weight-dist-seg { height: 100%; transition: width 0.35s var(--ease); }
+    .weight-dist-seg + .weight-dist-seg { box-shadow: inset 2px 0 0 var(--paper); }
+    .weight-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 12px; font-size: 12px; color: var(--ink-3); }
+    .weight-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+
+    .weight-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+    .weight-cell { padding: 20px 20px 18px; background: var(--sand); border-radius: 4px; }
+    .weight-cell-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .weight-cell-name { font-family: var(--serif); font-size: 16px; font-weight: 500; color: var(--ocean-deep); }
+    .weight-cell-max { font-size: 11.5px; color: var(--ink-3); }
+    .weight-cell-val { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
+    .weight-cell-num { font-family: var(--display); font-size: 34px; font-weight: 500; line-height: 1; color: var(--ocean); }
+    .weight-cell-pct { font-size: 12px; font-weight: 600; color: var(--coral); }
+    .weight-cell-desc { margin-top: 10px; font-size: 12.5px; line-height: 1.7; color: var(--ink-3); }
+
+    input[type="range"] { width: 100%; height: 22px; margin: 10px 0 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer; }
+    input[type="range"]::-webkit-slider-runnable-track { height: 3px; border-radius: 3px; background: linear-gradient(to right, var(--lagoon) 0%, var(--lagoon) var(--pct, 50%), var(--line-2) var(--pct, 50%), var(--line-2) 100%); }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7.5px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ocean); box-shadow: 0 2px 6px rgba(20,66,95,0.2); transition: transform 0.15s; }
+    input[type="range"]:hover::-webkit-slider-thumb { transform: scale(1.12); }
+    input[type="range"]::-moz-range-track { height: 3px; border-radius: 3px; background: var(--line-2); }
+    input[type="range"]::-moz-range-progress { height: 3px; border-radius: 3px; background: var(--lagoon); }
+    input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ocean); }
+
+    /* Index: KPI + toolbar ------------------------------------------------- */
+    .kpi-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-bottom: 40px; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); }
+    .kpi-cell { padding: 20px 0 20px 24px; }
+    .kpi-cell:first-child { padding-left: 0; }
+    .kpi-cell + .kpi-cell { border-left: 1px solid var(--line); }
+    .kpi-cell dt { font-size: 12px; color: var(--ink-3); }
+    .kpi-cell dd { margin-top: 6px; font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.1; color: var(--ocean-deep); }
+    .kpi-cell dd small { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); }
+    .kpi-cell dd.is-text { font-family: var(--serif); font-size: 18px; font-weight: 500; padding-top: 8px; }
+    .kpi-cell dd .mono { font-family: var(--display); font-size: 26px; font-weight: 600; }
+
+    .toolbar {
+      position: sticky; top: 68px; z-index: 20;
+      margin: 0 -24px 0; padding: 16px 24px;
+      background: rgba(245, 240, 231, 0.94);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
-
-    /* --------------------------------------------------------------------------
-       Responsive
-       -------------------------------------------------------------------------- */
-
-    @media (max-width: 1200px) {
-      .brand-sub { display: none; }
-      .weight-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .weight-cell:nth-child(5) { border-left: 0; }
-      .weight-cell:nth-child(n + 5) { border-top: 1px solid var(--line); }
-      .contents { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .contents a:nth-child(4) { padding-left: 0; border-left: 0; }
-      .contents a:nth-child(n + 4) { border-top: 1px solid var(--line); }
+    .toolbar .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+    .toolbar .chips::-webkit-scrollbar { display: none; }
+    .toolbar .chip { height: 32px; padding: 0 14px; font-size: 13px; }
+    .chip-sep { flex: none; width: 1px; margin: 4px 6px; background: var(--line-2); }
+    .toolbar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 12px; }
+    .field { position: relative; display: inline-flex; align-items: center; }
+    .field > [data-icon] { position: absolute; left: 14px; color: var(--ink-3); pointer-events: none; }
+    .input, .select {
+      height: 38px; border: 1px solid var(--line-2); border-radius: 999px;
+      background: var(--paper);
+      font-size: 13px; color: var(--ink);
+      transition: border-color 0.2s;
     }
-
-    @media (max-width: 1024px) {
-      .cover-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 44px; }
-      .three-col-grid { grid-template-columns: 1fr; }
-      .three-col-cell { padding: 20px 0; border-left: 0; border-top: 1px solid var(--line); }
-      .three-col-cell:first-child { border-top: 0; }
-      .compare-layout { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .kpi-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .kpi-cell:nth-child(odd) { padding-left: 0; border-left: 0; }
-      .kpi-cell:nth-child(n + 3) { border-top: 1px solid var(--line); }
+    .input { width: 240px; padding: 0 32px 0 38px; }
+    .input:focus, .select:focus { outline: none; border-color: var(--ocean); }
+    .input::-webkit-search-cancel-button { display: none; }
+    .input-clear { position: absolute; right: 10px; width: 20px; height: 20px; border-radius: 50%; font-size: 15px; line-height: 20px; color: var(--ink-3); }
+    .input-clear:hover { background: var(--shell); color: var(--ink); }
+    .select {
+      padding: 0 34px 0 16px;
+      -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2387918f' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='M4.5 6.5L8 10l3.5-3.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; background-size: 14px;
+      cursor: pointer;
     }
+    .price-filter { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
+    .price-filter input { width: 120px; margin: 0; }
+    .price-filter output { min-width: 58px; font-weight: 600; color: var(--ocean); }
+    .switch { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; user-select: none; }
+    .switch input { -webkit-appearance: none; appearance: none; position: relative; width: 32px; height: 18px; margin: 0; border-radius: 999px; background: var(--line-2); cursor: pointer; transition: background 0.2s; }
+    .switch input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); transition: transform 0.2s var(--ease); }
+    .switch input:checked { background: var(--lagoon); }
+    .switch input:checked::after { transform: translateX(14px); }
+    .reset-btn { font-size: 13px; color: var(--ink-3); }
+    .reset-btn:hover { color: var(--coral); }
+    .spacer { flex: 1; }
+    .segmented { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--shell); }
+    .segmented button { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 14px; border-radius: 999px; font-size: 13px; color: var(--ink-2); transition: all 0.2s; }
+    .segmented button[aria-pressed="true"] { background: var(--paper); color: var(--ocean); box-shadow: 0 1px 3px rgba(20,66,95,0.12); }
+    .results-summary { margin: 22px 0 8px; font-size: 13px; color: var(--ink-3); }
 
-    @media (max-width: 780px) {
-      .site-header { height: auto; }
-      .header-inner { flex-wrap: wrap; padding-top: 10px; gap: 0 12px; }
-      .site-nav { order: 3; width: 100%; overflow-x: auto; padding: 6px 0; border-top: 1px solid var(--line); margin-top: 8px; }
-      .header-tools .ghost-btn .label,
-      .search-trigger .label,
-      .search-trigger kbd { display: none; }
+    /* Table ---------------------------------------------------------------- */
+    .table-wrap { overflow-x: auto; }
+    .data-table { width: 100%; min-width: 1120px; border-collapse: collapse; font-size: 13.5px; }
+    .data-table th {
+      padding: 14px 10px; border-bottom: 1px solid var(--line-2);
+      font-size: 12px; font-weight: 500; color: var(--ink-3); text-align: left; vertical-align: bottom; white-space: nowrap;
+    }
+    .data-table th small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); opacity: 0.75; }
+    .data-table td { padding: 22px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .data-table .num { text-align: center; }
+    .data-table .right { text-align: right; }
+    .data-table tbody tr { transition: background 0.2s; }
+    .data-table tbody tr:hover { background: rgba(255, 255, 255, 0.5); }
+    .data-table tbody tr.is-compared { background: rgba(213, 236, 234, 0.45); }
+
+    .t-rank { font-family: var(--display); font-size: 22px; font-style: italic; color: var(--ink-3); }
+    .t-rank.is-top { color: var(--coral); }
+    .t-dest-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+    .t-title { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ocean-deep); cursor: pointer; transition: color 0.2s; }
+    .t-title:hover { color: var(--coral); }
+    .t-en { font-family: var(--display); font-size: 15px; font-style: italic; color: var(--ink-3); }
+    .t-meta { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 4px; font-size: 12px; color: var(--ink-3); }
+    .t-cat-mark { font-weight: 600; color: var(--lagoon); }
+    .t-cat-mark.is-seasonal { color: var(--coral); }
+    .t-flights { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .flight-code { display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 11.5px; color: var(--ink-2); transition: all 0.2s; }
+    button.flight-code:hover { border-color: var(--lagoon); color: var(--lagoon); }
+    .t-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag-btn { height: 22px; padding: 0 9px; border-radius: 3px; background: var(--shell); font-size: 11.5px; color: var(--ink-2); transition: all 0.2s; }
+    .tag-btn:hover { background: var(--lagoon-soft); color: var(--lagoon); }
+    .t-note { margin-top: 10px; font-size: 13px; line-height: 1.8; color: var(--ink-2); }
+    .t-climate { font-size: 13px; line-height: 1.7; color: var(--ink); white-space: nowrap; }
+    .t-climate-sub { white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; margin-top: 4px; font-size: 11.5px; color: var(--lagoon); }
+    .t-climate-sub .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .t-climate-sub.is-seasonal { color: var(--coral); }
+    .t-total { font-family: var(--display); font-size: 28px; font-weight: 600; line-height: 1; color: var(--ocean); }
+    .t-total.is-elite { color: var(--coral); }
+    .t-delta { display: block; margin-top: 4px; font-size: 11.5px; color: var(--ink-3); }
+    .t-delta.up { color: var(--lagoon); }
+    .dim-cell { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+    .dim-val { font-size: 13px; color: var(--ink-2); }
+    .dim-val.is-high { font-weight: 600; color: var(--ocean); }
+    .dim-bar { position: relative; display: block; width: 30px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+    .dim-bar i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--dune); }
+    .dim-bar.is-high i { background: var(--lagoon); }
+    .t-price { font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--ocean-deep); }
+    .t-price-note { max-width: 210px; margin-left: auto; font-size: 11.5px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .v-dot { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: var(--lagoon); vertical-align: 1px; }
+    .t-actions { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 12px; }
+
+    .empty-state { padding: 72px 20px; text-align: center; }
+    .empty-state h3 { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--ocean-deep); }
+    .empty-state p { margin: 10px 0 22px; font-size: 14px; color: var(--ink-3); }
+
+    /* Hubs ----------------------------------------------------------------- */
+    .hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .hub-card { display: flex; flex-direction: column; padding: 36px 32px 30px; border-radius: 4px; color: #fff; }
+    .hub-card.h1 { background: var(--ocean); }
+    .hub-card.h2 { background: var(--lagoon); }
+    .hub-card.h3 { background: #b9573f; }
+    .hub-code { font-family: var(--display); font-size: 64px; font-weight: 500; line-height: 0.9; letter-spacing: 0.02em; }
+    .hub-city { margin-top: 10px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+    .hub-lede { margin-top: 10px; font-size: 13.5px; line-height: 1.8; color: rgba(255,255,255,0.78); }
+    .hub-items { margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hub-item { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.14); }
+    .hub-item strong { font-family: var(--serif); font-size: 15px; font-weight: 500; }
+    .hub-item .t { font-family: var(--display); font-size: 19px; font-weight: 600; text-align: right; }
+    .hub-item p { grid-column: 1 / -1; font-size: 12.5px; line-height: 1.7; color: rgba(255,255,255,0.72); }
+    .hub-card .btn { margin-top: 26px; align-self: flex-start; height: 40px; font-size: 13px; }
+
+    /* Method --------------------------------------------------------------- */
+    .method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
+    .method-figure { font-family: var(--display); font-size: clamp(56px, 6vw, 80px); font-weight: 500; line-height: 1; color: var(--coral); letter-spacing: -0.01em; }
+    .method-figure small { font-size: 0.42em; color: var(--ink-3); margin-left: 4px; }
+    .method-title { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line-2); font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--ocean-deep); }
+    .method-text { margin-top: 12px; font-size: 14px; line-height: 1.95; color: var(--ink-2); }
+    .method-text strong { font-weight: 600; color: var(--ocean); }
+
+    /* Footer --------------------------------------------------------------- */
+    .site-footer { background: var(--ocean-deep); color: rgba(255,255,255,0.72); padding: 88px 0 32px; font-size: 13.5px; }
+    .footer-top { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 0.7fr)); gap: 48px; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; }
+    .footer-note { max-width: 30em; margin-top: 18px; line-height: 1.9; }
+    .footer-h { margin-bottom: 14px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #7fd3cf; }
+    .footer-links a { display: block; padding: 4px 0; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-wordmark { margin-top: 72px; font-family: var(--display); font-size: clamp(56px, 11vw, 168px); font-weight: 500; font-style: italic; line-height: 0.9; letter-spacing: -0.01em; color: rgba(255,255,255,0.08); white-space: nowrap; user-select: none; }
+    .footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer-base kbd { font-family: var(--sans); border: 1px solid rgba(255,255,255,0.25); border-radius: 4px; padding: 0 5px; }
+
+    /* Compare tray --------------------------------------------------------- */
+    .compare-tray {
+      position: fixed; left: 50%; bottom: 22px; z-index: 60;
+      display: flex; align-items: center; gap: 12px;
+      max-width: calc(100% - 32px);
+      padding: 8px 8px 8px 20px; border-radius: 999px;
+      background: var(--ocean-deep); color: #fff;
+      box-shadow: 0 18px 40px -12px rgba(12,44,66,0.55);
+      font-size: 13px;
+      transform: translate(-50%, 140%); opacity: 0;
+      transition: transform 0.4s var(--ease), opacity 0.3s;
+    }
+    .compare-tray.is-visible { transform: translate(-50%, 0); opacity: 1; }
+    .tray-label { white-space: nowrap; color: rgba(255,255,255,0.6); }
+    .tray-items { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+    .tray-item { display: inline-flex; align-items: center; gap: 4px; padding: 3px 4px 3px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); white-space: nowrap; }
+    .tray-item button { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: rgba(255,255,255,0.6); }
+    .tray-item button:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .tray-clear { padding: 0 6px; color: rgba(255,255,255,0.6); white-space: nowrap; }
+    .tray-clear:hover { color: #fff; }
+    .tray-go { height: 34px; padding: 0 18px; border-radius: 999px; background: var(--coral); color: #fff; font-weight: 500; white-space: nowrap; }
+    .tray-go:hover { background: #cf583c; }
+
+    /* Dialogs -------------------------------------------------------------- */
+    .backdrop {
+      position: fixed; inset: 0; z-index: 100;
+      display: flex; align-items: flex-start; justify-content: center;
+      overflow-y: auto; padding: 5vh 20px 40px;
+      background: rgba(12, 44, 66, 0.42);
+      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .backdrop.is-open { opacity: 1; visibility: visible; }
+    .dialog {
+      position: relative; width: 100%; max-width: 1080px;
+      background: var(--paper); border-radius: 6px; overflow: hidden;
+      box-shadow: 0 40px 80px -30px rgba(12,44,66,0.5);
+      transform: translateY(16px); transition: transform 0.4s var(--ease);
+    }
+    .backdrop.is-open .dialog { transform: none; }
+    .dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 26px 32px 20px; border-bottom: 1px solid var(--line); }
+    .dialog-head h2 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--ocean-deep); }
+    .dialog-head p { margin-top: 4px; font-size: 13px; color: var(--ink-3); }
+    .dialog-close { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--shell); color: var(--ink-2); transition: all 0.2s; }
+    .dialog-close:hover { background: var(--ocean); color: #fff; }
+    .dialog-body { padding: 28px 32px 32px; }
+    .compare-layout { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr); gap: 36px; align-items: start; }
+    .radar-wrap { padding: 12px; background: var(--sand); border-radius: 4px; }
+    .radar-wrap svg { width: 100%; height: auto; }
+    .radar-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 16px; font-size: 13px; color: var(--ink-2); }
+    .radar-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 7px; vertical-align: 0; }
+    .compare-table { min-width: 520px; }
+    .compare-table td { padding: 13px 10px; }
+    .compare-table td:first-child { min-width: 128px; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
+    .best-mark { color: var(--coral); margin-left: 4px; }
+
+    .dossier-hero { position: relative; aspect-ratio: 21 / 8; overflow: hidden; }
+    .dossier-hero svg { width: 100%; height: 100%; }
+    .dossier-hero .dialog-close { position: absolute; top: 18px; right: 18px; background: rgba(251,248,242,0.9); }
+    .dossier-head { padding: 26px 32px 0; }
+    .dossier-head .eyebrow { color: var(--coral); }
+    .dossier-head h2 { margin-top: 8px; font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.3; color: var(--ocean-deep); }
+    .dossier-head h2 span { margin-left: 10px; font-family: var(--display); font-size: 22px; font-style: italic; color: var(--ink-3); }
+    .dossier-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .dossier-stats div { padding: 14px 0 14px 18px; }
+    .dossier-stats div:first-child { padding-left: 0; }
+    .dossier-stats div + div { border-left: 1px solid var(--line); }
+    .dossier-stats dt { font-size: 12px; color: var(--ink-3); }
+    .dossier-stats dd { margin-top: 2px; font-family: var(--display); font-size: 26px; font-weight: 600; color: var(--ocean-deep); }
+    .dossier-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+    .block-h { margin-bottom: 8px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lagoon); }
+    .dim-row { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .dim-row-head { display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; }
+    .dim-row-head strong { font-weight: 500; color: var(--ocean-deep); }
+    .dim-row-head small { margin-left: 6px; font-size: 11.5px; color: var(--ink-3); }
+    .dim-row-bar { height: 4px; margin-top: 7px; border-radius: 4px; background: var(--line); overflow: hidden; }
+    .dim-row-bar i { display: block; height: 100%; border-radius: 4px; background: var(--lagoon); }
+    .flight-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+    .flight-row .ok { font-weight: 500; color: var(--lagoon); text-align: right; }
+    .flight-row .no { color: var(--ink-3); }
+    .dossier-note { margin-top: 22px; font-family: var(--serif); font-size: 15.5px; line-height: 1.95; color: var(--ink); }
+    .dossier-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+    /* Palette -------------------------------------------------------------- */
+    .palette-backdrop { padding-top: 14vh; }
+    .palette { width: 100%; max-width: 620px; background: var(--paper); border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(12,44,66,0.5); }
+    .palette-input { display: flex; align-items: center; gap: 12px; height: 58px; padding: 0 20px; border-bottom: 1px solid var(--line); color: var(--ink-3); }
+    .palette-input input { flex: 1; border: 0; background: transparent; font-size: 15.5px; color: var(--ink); outline: none; }
+    .palette-input kbd { font-family: var(--sans); font-size: 11px; border: 1px solid var(--line-2); border-radius: 4px; padding: 1px 6px; }
+    .palette-results { max-height: min(56vh, 460px); overflow-y: auto; padding: 8px; }
+    .palette-item { display: flex; align-items: center; gap: 14px; width: 100%; padding: 10px 12px; border-radius: 4px; font-size: 14px; text-align: left; }
+    .palette-item:hover { background: var(--sand); }
+    .palette-item .sub { margin-left: auto; font-size: 12.5px; color: var(--ink-3); }
+
+    /* Responsive ----------------------------------------------------------- */
+    @media (max-width: 1180px) {
+      .site-nav { display: none; }
+      .header-tools { margin-left: auto; }
+      .ride-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kpi-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .kpi-cell:nth-child(4) { padding-left: 0; border-left: 0; }
+      .kpi-cell:nth-child(n + 4) { border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 960px) {
+      .feature, .compare-layout, .dossier-grid { grid-template-columns: 1fr; }
+      .hub-grid, .method-grid { grid-template-columns: 1fr; }
       .weight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .weight-cell:nth-child(odd) { border-left: 0; }
-      .weight-cell:nth-child(n + 3) { border-top: 1px solid var(--line); }
-      .contents { grid-template-columns: 1fr; }
-      .contents a, .contents a:nth-child(4) { padding: 16px 0; border-left: 0; border-top: 1px solid var(--line); }
-      .contents a:first-child { border-top: 0; }
-      .toolbar { position: static; }
-      .toolbar-row .field, .input { width: 100%; flex: 1 1 100%; }
-      .dateline-mid { display: none; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-top > div:first-child { grid-column: 1 / -1; }
+      .hero-stats .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-stat:nth-child(3) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 36px); }
+      .header-tools .label, .tool-btn kbd { display: none; }
+      .hero { min-height: 820px; }
+      .ride-grid, .feature-pair { grid-template-columns: 1fr; }
+      .feature-pair .postcard:nth-child(2) { margin-top: 0; }
+      .weight-grid { grid-template-columns: 1fr; }
+      .kpi-strip { grid-template-columns: 1fr 1fr; }
+      .kpi-cell, .kpi-cell:nth-child(4) { padding-left: 0; border-left: 0 !important; }
+      .kpi-cell:nth-child(n + 2) { border-top: 1px solid var(--line); }
+      .toolbar { position: static; margin: 0; padding: 12px 0; }
+      .input, .field { width: 100%; }
+      .dossier-stats { grid-template-columns: 1fr 1fr; }
+      .dossier-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
+      .dialog-head, .dialog-body, .dossier-head { padding-left: 20px; padding-right: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Sticky Masthead -->
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Oceanic Atlas 首页">
         <span data-brand></span>
         <span class="brand-name">Oceanic Atlas</span>
-        <span class="brand-sub">全球海滨与海岛度假图鉴</span>
       </a>
-      <nav class="site-nav" aria-label="章节导航">
-        <a href="#weights"><span class="nav-no">I</span><span>权重调校</span></a>
-        <a href="#index"><span class="nav-no">II</span><span>榜单索引</span></a>
-        <a href="#hubs"><span class="nav-no">III</span><span>直飞航线</span></a>
-        <a href="#rules"><span class="nav-no">IV</span><span>评估准则</span></a>
-        <a href="#eliminated-section"><span class="nav-no">V</span><span>落选辨析</span></a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#feature-section">编辑手记</a>
+        <a href="#weights">按偏好排序</a>
+        <a href="#index">全部榜单</a>
+        <a href="#hubs">直飞航线</a>
+        <a href="#rules">评分方法</a>
+        <a href="#eliminated-section">遗珠</a>
       </nav>
       <div class="header-tools">
-        <button class="search-trigger" type="button" onclick="openPalette()" aria-label="快速搜索">
+        <button class="tool-btn" type="button" onclick="openPalette()" aria-label="搜索目的地">
           <span data-icon="search"></span><span class="label">搜索</span><kbd>⌘K</kbd>
         </button>
-        <button class="ghost-btn" type="button" onclick="openCompareModal()">
+        <button class="tool-btn" type="button" onclick="exportCSV()" aria-label="导出 CSV">
+          <span data-icon="download"></span><span class="label">导出</span>
+        </button>
+        <button class="tool-btn is-primary" type="button" onclick="openCompareModal()">
           <span data-icon="columns"></span><span class="label" id="header-compare-label">对比 (3)</span>
         </button>
-        <button class="ghost-btn" type="button" onclick="exportCSV()">
-          <span data-icon="download"></span><span class="label">导出 CSV</span>
-        </button>
-        <button class="ghost-btn" type="button" id="theme-toggle" onclick="toggleTheme()"></button>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- Editorial Cover -->
-    <div class="cover" id="cover">
-      <svg class="cover-track" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+    <!-- Hero: illustrated seascape -->
+    <section class="hero" id="cover">
+      <svg class="hero-scene" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
-          <path id="isotherm-path" d="M-80 585 C 210 595 340 510 540 520 S 820 600 1020 565 S 1260 495 1540 545" />
+          <linearGradient id="hs-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f7f1e6" />
+            <stop offset="0.6" stop-color="#f6e6d4" />
+            <stop offset="1" stop-color="#f3d9c2" />
+          </linearGradient>
+          <linearGradient id="hs-sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a6f8f" />
+            <stop offset="0.45" stop-color="#1d5a7a" />
+            <stop offset="1" stop-color="#123f5a" />
+          </linearGradient>
+          <linearGradient id="hs-lagoon" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#58bfbf" />
+            <stop offset="1" stop-color="#8fdcd3" />
+          </linearGradient>
+          <radialGradient id="hs-sun" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#f08a63" />
+            <stop offset="1" stop-color="#e0674a" />
+          </radialGradient>
+          <radialGradient id="hs-glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#f3b48f" stop-opacity="0.55" />
+            <stop offset="1" stop-color="#f3b48f" stop-opacity="0" />
+          </radialGradient>
         </defs>
-        <use class="ties" href="#isotherm-path" />
-        <path class="rail" d="M-80 578 C 210 588 340 503 540 513 S 820 593 1020 558 S 1260 488 1540 538" />
-        <path class="rail" d="M-80 592 C 210 602 340 517 540 527 S 820 607 1020 572 S 1260 502 1540 552" />
-        <path class="isotherm" d="M-80 548 C 240 555 380 475 590 490 S 860 565 1080 530 S 1290 465 1540 510" />
-        <g class="vessel">
-          <path d="M-24 -8 h48 l-6 7 h-36 z" />
-          <path d="M-2 -8 v-18 l14 13 h-14" />
-          <animateMotion dur="54s" repeatCount="indefinite" rotate="auto"><mpath href="#isotherm-path" /></animateMotion>
+        <rect width="1440" height="860" fill="url(#hs-sky)" />
+        <circle cx="1080" cy="540" r="260" fill="url(#hs-glow)" />
+        <circle cx="1080" cy="560" r="84" fill="url(#hs-sun)" />
+        <!-- distant island -->
+        <path d="M820 640 C 880 625 905 590 935 582 C 960 575 975 598 1000 610 C 1030 625 1080 632 1130 640 Z" fill="#7a9aa3" opacity="0.55" />
+        <path d="M1180 640 C 1220 632 1240 620 1265 618 C 1290 617 1320 632 1360 640 Z" fill="#7a9aa3" opacity="0.4" />
+        <!-- sea -->
+        <rect y="640" width="1440" height="220" fill="url(#hs-sea)" />
+        <g class="shimmer" stroke="#f6c4a6" stroke-width="2" stroke-linecap="round">
+          <path d="M1040 656h80M1020 670h120M1050 684h60M1010 699h140M1060 714h40" />
+        </g>
+        <g fill="none" stroke="#ffffff" stroke-linecap="round">
+          <path class="wave" d="M-60 690 C 120 682 260 698 420 690 S 760 680 920 690 S 1260 700 1500 688" stroke-opacity="0.18" stroke-width="1.5" />
+          <path class="wave w2" d="M-60 735 C 160 726 300 744 480 735 S 820 724 1000 735 S 1300 746 1500 733" stroke-opacity="0.14" stroke-width="1.5" />
+          <path class="wave w3" d="M-60 790 C 140 780 330 800 520 790 S 860 778 1040 790 S 1320 802 1500 788" stroke-opacity="0.12" stroke-width="1.5" />
         </g>
       </svg>
 
-      <div class="wrap">
-        <div class="dateline">
-          <span>第一版 · 二〇二六年秋 · WMO / NOAA 30年气候基准</span>
-          <span class="dateline-mid">全球海滨与海岛度假胜地量化图鉴</span>
-          <span>Vol. I — 145 Destinations</span>
-        </div>
-
-        <div class="cover-grid">
-          <div class="cover-text">
-            <h1 class="display" id="hero-title">以体感与水温<br />丈量 <em>145</em> 座海岸</h1>
-            <p class="hero-lede">
-              摒弃死板的南北回归线，只问两件直接决定度假体感的事：最冷月的夜晚吹海风要不要穿外套（夜间低温 ≥ 18.0°C），最冷月的海水能不能随时赤身下泳（表层水温 ≥ 21.0°C）。本图鉴按八项指标将全球海滨与海岛逐一量化拆解，并附上海、香港、法兰克福三大枢纽直飞航程与双人五晚实测房价。
-            </p>
-            <p class="hero-count">
-              目前收录 <b>145</b> 处独立度假地，分为 <b>100</b> 处全年真热带与 <b>45</b> 处季节性胜地，覆盖 <b>7</b> 大海域，统一准入底线 <b>76.5</b> 分。
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-solid" href="#index"><span>浏览榜单索引</span><span data-icon="arrowDown"></span></a>
-              <a class="btn btn-quiet" href="#weights"><span>调校八维权重</span><span data-icon="arrowRight"></span></a>
-              <button class="btn btn-quiet" type="button" onclick="openCompareModal()"><span>海岛雷达图对比</span><span data-icon="arrowRight"></span></button>
-            </div>
-          </div>
-
-          <!-- Interactive Blueprint Plate -->
-          <figure class="plate" id="feature" aria-label="气候与选岛辨析"></figure>
+      <div class="wrap hero-inner">
+        <span class="eyebrow">The Shoreline Edit · 2026 全球海岸度假图鉴</span>
+        <h1>寻一片冬天也能<br />下水的海，共 <em>145</em> 处</h1>
+        <p class="hero-lede">
+          我们只问两件事：最冷的那个月，夜里吹海风要不要穿外套（夜温 ≥ 18°C）；海水能不能随时下去游（水温 ≥ 21°C）。按这把尺子，加上海水、风景、酒店、吃住等八项打分，整理出这份可以按你的偏好重新排序的海岸清单。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#index"><span>浏览全部 145 处</span><span data-icon="arrowDown"></span></a>
+          <a class="text-link" href="#weights"><span>按我的旅行方式重排</span><span data-icon="arrowRight"></span></a>
         </div>
       </div>
-    </div>
 
-    <!-- Chapter Contents Strip -->
-    <div class="wrap">
-      <nav class="contents" aria-label="图鉴章节">
-        <a href="#weights">
-          <span class="no">I</span>
-          <span class="t">权重调校</span>
-          <span class="d">八项指标自由配比、六组旅行偏好预设与实时重排</span>
-        </a>
-        <a href="#index">
-          <span class="no">II</span>
-          <span class="t">榜单索引</span>
-          <span class="d">100 处全年真热带与 45 处季节性胜地全维数据检索</span>
-        </a>
-        <a href="#hubs">
-          <span class="no">III</span>
-          <span class="t">直飞航线</span>
-          <span class="d">上海、香港、法兰克福三大枢纽直飞航时与机酒总价</span>
-        </a>
-        <a href="#rules">
-          <span class="no">IV</span>
-          <span class="t">评估准则</span>
-          <span class="d">生理体感硬指标、45 分钟一日游圈拆分与 76.5 分底线</span>
-        </a>
-        <a href="#eliminated-section">
-          <span class="no">V</span>
-          <span class="t">落选辨析</span>
-          <span class="d">对标第 100 名芭堤雅，拆解 Key West、佛得角为何落选</span>
-        </a>
-      </nav>
-    </div>
-
-    <!-- Chapter I: Weight Calibration Deck -->
-    <section class="wrap section" id="weights">
-      <header class="chapter-head">
-        <div class="chapter-head-main">
-          <span class="chapter-no">I</span>
-          <div>
-            <h2 class="section-title">八维权重调校实验室</h2>
-            <p class="section-note">拖动任意维度滑块或切换旅行偏好预设，145 处目的地的百分制得分与座次将实时重算。</p>
-          </div>
+      <div class="hero-stats">
+        <div class="wrap">
+          <div class="hero-stat"><b>145</b><span>处海滨与海岛目的地</span></div>
+          <div class="hero-stat"><b>100</b><span>处全年真热带，四季可游</span></div>
+          <div class="hero-stat"><b>45</b><span>处季节性海岸，旺季巅峰</span></div>
+          <div class="hero-stat"><b>18° / 21°</b><span>最冷月夜温 / 水温底线</span></div>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <div class="weight-deck">
-        <div class="weight-presets-bar">
-          <span class="weight-presets-label">Preset Calibration · 预设模型</span>
-          <div class="chips">
-            <button class="chip" type="button" data-preset="default" onclick="applyPreset('default')">标准综合权重</button>
-            <button class="chip" type="button" data-preset="water" onclick="applyPreset('water')">潜水与果冻海</button>
-            <button class="chip" type="button" data-preset="honeymoon" onclick="applyPreset('honeymoon')">蜜月颜值与水屋</button>
-            <button class="chip" type="button" data-preset="family" onclick="applyPreset('family')">亲子平浪与省心</button>
-            <button class="chip" type="button" data-preset="explorer" onclick="applyPreset('explorer')">餐饮与陆地探索</button>
-            <button class="chip" type="button" data-preset="pureBeach" onclick="applyPreset('pureBeach')">纯海滩自然硬实力</button>
-          </div>
+    <!-- Editor's note -->
+    <section class="section is-paper" id="feature-section">
+      <div class="wrap">
+        <div class="feature" id="feature" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Weights -->
+    <section class="section" id="weights">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="eyebrow">Your Way to Travel</span>
+          <h2 class="section-title">每个人心里的<em>好海岛</em>，都不一样</h2>
+          <p class="section-note">潜水客在意能见度，带娃的家庭在意风浪，蜜月旅行更看重水屋与风景。选一种旅行方式，或者自己拖动八项权重，下方榜单会立刻重新排序。</p>
+        </header>
+        <div class="preset-row" role="group" aria-label="旅行偏好预设">
+          <button class="chip" type="button" data-preset="default" onclick="applyPreset('default')">综合标准</button>
+          <button class="chip" type="button" data-preset="water" onclick="applyPreset('water')">潜水与清澈海水</button>
+          <button class="chip" type="button" data-preset="honeymoon" onclick="applyPreset('honeymoon')">蜜月与水屋</button>
+          <button class="chip" type="button" data-preset="family" onclick="applyPreset('family')">亲子与平静海面</button>
+          <button class="chip" type="button" data-preset="explorer" onclick="applyPreset('explorer')">美食与陆地探索</button>
+          <button class="chip" type="button" data-preset="pureBeach" onclick="applyPreset('pureBeach')">只看海滩本身</button>
         </div>
-        <div id="weight-distribution-bar" class="weight-dist-strip" title="当前八维权重占比"></div>
+        <div id="weight-distribution-bar" class="weight-dist-strip" title="当前八项权重占比"></div>
+        <div id="weight-legend" class="weight-legend"></div>
         <div id="weight-sliders-container" class="weight-grid"></div>
       </div>
     </section>
 
-    <!-- Chapter II: Main Ranking Index -->
-    <section class="wrap section" id="index">
-      <header class="chapter-head">
-        <div class="chapter-head-main">
-          <span class="chapter-no">II</span>
-          <div>
-            <h2 class="section-title">全球海滨与海岛榜单索引</h2>
-            <p class="section-note">点击目的地名称可展开八维海图详单，或勾选最多三处海岛进行横向对比。</p>
-          </div>
-        </div>
-        <div id="results-summary" class="mono" style="font-size:12px;color:var(--text-3)"></div>
-      </header>
+    <!-- Index -->
+    <section class="section is-paper" id="index">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="eyebrow">The List</span>
+          <h2 class="section-title">全部 145 处海岸</h2>
+          <p class="section-note">点击名称查看完整档案，勾选「对比」可将最多三处放在一起比较。</p>
+        </header>
 
-      <!-- Live KPI Spec Strip -->
-      <dl class="kpi-strip">
-        <div class="kpi-cell">
-          <dt>MATCHED · 当前匹配</dt>
-          <dd><span id="kpi-total-count">145</span> <small>/ 145</small></dd>
-        </div>
-        <div class="kpi-cell">
-          <dt>TROPICAL · 365天真热带</dt>
-          <dd id="kpi-tropical-count">100</dd>
-        </div>
-        <div class="kpi-cell">
-          <dt>SEASONAL · 季节性海岸</dt>
-          <dd id="kpi-seasonal-count">45</dd>
-        </div>
-        <div class="kpi-cell">
-          <dt>FLOOR PRICE · 最低5晚4★海景</dt>
-          <dd class="is-serif" id="kpi-avg-price">—</dd>
-        </div>
-        <div class="kpi-cell">
-          <dt>LEADING · 当前权重榜首</dt>
-          <dd class="is-serif" id="kpi-top-dest">—</dd>
-        </div>
-      </dl>
+        <dl class="kpi-strip">
+          <div class="kpi-cell"><dt>当前符合条件</dt><dd><span id="kpi-total-count">145</span> <small>/ 145</small></dd></div>
+          <div class="kpi-cell"><dt>全年真热带</dt><dd id="kpi-tropical-count">100</dd></div>
+          <div class="kpi-cell"><dt>季节性海岸</dt><dd id="kpi-seasonal-count">45</dd></div>
+          <div class="kpi-cell"><dt>最低 5 晚房价</dt><dd class="is-text" id="kpi-avg-price">—</dd></div>
+          <div class="kpi-cell"><dt>当前排名第一</dt><dd class="is-text" id="kpi-top-dest">—</dd></div>
+        </dl>
 
-      <!-- Sticky Filter Toolbar -->
-      <div class="toolbar">
-        <div class="chips" id="chip-bar" role="group" aria-label="按分类与海域筛选"></div>
+        <div class="toolbar">
+          <div class="chips" id="chip-bar" role="group" aria-label="按分类与海域筛选"></div>
 
-        <!-- Hidden selects kept in sync for state compatibility -->
-        <select id="filter-category" hidden>
-          <option value="all">all</option>
-          <option value="tropical">tropical</option>
-          <option value="seasonal">seasonal</option>
-        </select>
-        <select id="filter-region" hidden>
-          <option value="all">all</option>
-          <option value="南太平洋">南太平洋</option>
-          <option value="印度洋与东非">印度洋与东非</option>
-          <option value="东南亚与东亚">东南亚与东亚</option>
-          <option value="中东与红海">中东与红海</option>
-          <option value="加勒比与大西洋">加勒比与大西洋</option>
-          <option value="美洲与夏威夷">美洲与夏威夷</option>
-          <option value="澳新与地中海/亚热带">澳新与地中海/亚热带</option>
-        </select>
-
-        <div class="toolbar-row">
-          <label class="field">
-            <span data-icon="search"></span>
-            <input id="filter-search" class="input" type="search" placeholder="筛选目的地、国家、鲸鲨、水屋…" autocomplete="off" />
-            <button id="filter-search-clear" type="button" class="input-clear" onclick="clearSearch()" hidden aria-label="清空">×</button>
-          </label>
-
-          <select id="filter-hub" class="select" aria-label="出发地航线视角">
-            <option value="all">全部航线视角 (沪/港/德)</option>
-            <option value="SHA">上海出发 (PVG/SHA)</option>
-            <option value="HKG">香港出发 (HKG)</option>
-            <option value="FRA">法兰克福出发 (FRA)</option>
+          <select id="filter-category" hidden>
+            <option value="all">all</option><option value="tropical">tropical</option><option value="seasonal">seasonal</option>
+          </select>
+          <select id="filter-region" hidden>
+            <option value="all">all</option>
+            <option value="南太平洋">南太平洋</option>
+            <option value="印度洋与东非">印度洋与东非</option>
+            <option value="东南亚与东亚">东南亚与东亚</option>
+            <option value="中东与红海">中东与红海</option>
+            <option value="加勒比与大西洋">加勒比与大西洋</option>
+            <option value="美洲与夏威夷">美洲与夏威夷</option>
+            <option value="澳新与地中海/亚热带">澳新与地中海/亚热带</option>
           </select>
 
-          <select id="filter-water-temp" class="select" aria-label="最冷月水温底线">
-            <option value="0">不限最冷月水温</option>
-            <option value="21">水温 ≥ 21.0°C (全年适泳线)</option>
-            <option value="24">水温 ≥ 24.0°C (冬春温水)</option>
-            <option value="26">水温 ≥ 26.0°C (赤道暖海)</option>
-          </select>
-
-          <select id="filter-sort" class="select" aria-label="排序方式">
-            <option value="score-desc">排序：加权总分 ↓</option>
-            <option value="price-asc">排序：5晚房价 ↑</option>
-            <option value="cp-desc">排序：性价比指数 ↓</option>
-            <option value="beach-desc">排序：纯海滩硬实力 ↓</option>
-            <option value="water-desc">排序：最冷月水温 ↓</option>
-            <option value="night-desc">排序：最冷月夜温 ↓</option>
-            <option value="price-desc">排序：顶奢房价 ↓</option>
-          </select>
-
-          <div class="price-filter" title="5晚4★海景含税双人预算上限">
-            <span>预算</span>
-            <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" style="--pct:100%" />
-            <output id="price-slider-label">不限</output>
-          </div>
-
-          <label class="switch">
-            <input id="filter-nonstop" type="checkbox" />
-            <span>仅看直飞</span>
-          </label>
-
-          <label class="switch">
-            <input id="filter-verified" type="checkbox" />
-            <span>已实测房价</span>
-          </label>
-
-          <button type="button" class="btn-quiet" style="font-size:12.5px" onclick="resetFilters()">重置</button>
-
-          <span class="spacer"></span>
-
-          <div class="segmented" role="group" aria-label="视图方式">
-            <button type="button" id="btn-view-table" aria-pressed="true"><span data-icon="list"></span><span>表格</span></button>
-            <button type="button" id="btn-view-cards" aria-pressed="false"><span data-icon="grid"></span><span>图鉴</span></button>
+          <div class="toolbar-row">
+            <label class="field">
+              <span data-icon="search"></span>
+              <input id="filter-search" class="input" type="search" placeholder="搜索目的地、国家、鲸鲨、水屋…" autocomplete="off" />
+              <button id="filter-search-clear" type="button" class="input-clear" onclick="clearSearch()" hidden aria-label="清空">×</button>
+            </label>
+            <select id="filter-hub" class="select" aria-label="出发城市">
+              <option value="all">任意出发地</option>
+              <option value="SHA">从上海出发</option>
+              <option value="HKG">从香港出发</option>
+              <option value="FRA">从法兰克福出发</option>
+            </select>
+            <select id="filter-water-temp" class="select" aria-label="最冷月水温">
+              <option value="0">水温不限</option>
+              <option value="21">最冷月水温 ≥ 21°C</option>
+              <option value="24">最冷月水温 ≥ 24°C</option>
+              <option value="26">最冷月水温 ≥ 26°C</option>
+            </select>
+            <select id="filter-sort" class="select" aria-label="排序">
+              <option value="score-desc">按综合得分</option>
+              <option value="price-asc">房价从低到高</option>
+              <option value="cp-desc">按性价比</option>
+              <option value="beach-desc">按海滩本身</option>
+              <option value="water-desc">按冬季水温</option>
+              <option value="night-desc">按冬季夜温</option>
+              <option value="price-desc">房价从高到低</option>
+            </select>
+            <div class="price-filter" title="双人 5 晚 4★ 海景房预算上限">
+              <span>预算</span>
+              <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" style="--pct:100%" />
+              <output id="price-slider-label">不限</output>
+            </div>
+            <label class="switch"><input id="filter-nonstop" type="checkbox" /><span>仅直飞</span></label>
+            <label class="switch"><input id="filter-verified" type="checkbox" /><span>房价已核验</span></label>
+            <button type="button" class="reset-btn" onclick="resetFilters()">重置</button>
+            <span class="spacer"></span>
+            <div class="segmented" role="group" aria-label="视图">
+              <button type="button" id="btn-view-table" aria-pressed="true"><span data-icon="list"></span><span>列表</span></button>
+              <button type="button" id="btn-view-cards" aria-pressed="false"><span data-icon="grid"></span><span>明信片</span></button>
+            </div>
           </div>
         </div>
+
+        <p id="results-summary" class="results-summary"></p>
+
+        <div id="table-view-container" class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="num" style="width:52px">#</th>
+                <th>目的地</th>
+                <th class="num">最冷月<small>夜温 / 水温</small></th>
+                <th class="num">综合<small>满分 100</small></th>
+                <th class="num">海水沙滩<small>25</small></th>
+                <th class="num">风景<small>15</small></th>
+                <th class="num">玩水<small>15</small></th>
+                <th class="num">风浪<small>10</small></th>
+                <th class="num">酒店<small>10</small></th>
+                <th class="num">美食<small>10</small></th>
+                <th class="num">陆地<small>10</small></th>
+                <th class="num">省心<small>5</small></th>
+                <th class="right">5 晚参考价<small>双人 · 4★ 海景</small></th>
+              </tr>
+            </thead>
+            <tbody id="destinations-tbody"></tbody>
+          </table>
+        </div>
+
+        <div id="cards-view-container" class="ride-grid" hidden></div>
       </div>
-
-      <!-- Book-Style Table View -->
-      <div id="table-view-container" class="table-wrap">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th class="num" style="width:52px">#</th>
-              <th>目的地 / 海域与最佳季节</th>
-              <th class="num">最冷月<small>夜温 / 水温</small></th>
-              <th class="num">加权总分<small>满分 100</small></th>
-              <th class="num">海沙<small>/ 25</small></th>
-              <th class="num">风景<small>/ 15</small></th>
-              <th class="num">玩水<small>/ 15</small></th>
-              <th class="num">风浪<small>/ 10</small></th>
-              <th class="num">酒店<small>/ 10</small></th>
-              <th class="num">餐饮<small>/ 10</small></th>
-              <th class="num">陆地<small>/ 10</small></th>
-              <th class="num">省心<small>/ 5</small></th>
-              <th class="right">5晚4★海景参考价<small>双人含税 · 实时核验</small></th>
-            </tr>
-          </thead>
-          <tbody id="destinations-tbody"></tbody>
-        </table>
-      </div>
-
-      <!-- Editorial Card Grid View -->
-      <div id="cards-view-container" class="ride-grid" hidden></div>
     </section>
 
-    <!-- Chapter III: Three Departure Hubs -->
-    <section class="wrap section" id="hubs">
-      <header class="chapter-head">
-        <div class="chapter-head-main">
-          <span class="chapter-no">III</span>
-          <div>
-            <h2 class="section-title">三大枢纽直飞航线与品质严选</h2>
-            <p class="section-note">从上海、香港、法兰克福出发，综合航程时长、时差与双人机酒实测总价筛选出的直飞海岛标杆。</p>
-          </div>
-        </div>
-      </header>
-
-      <div class="three-col-grid">
-        <div class="three-col-cell">
-          <div class="col-kicker">
-            <span>HUB 01 · SHANGHAI (PVG / SHA)</span>
-            <button type="button" class="text-link" onclick="filterByHub('SHA')">筛选上海直飞 →</button>
-          </div>
-          <h3 class="col-title">上海出发直飞优选</h3>
-          <p class="col-lede">覆盖全亚洲最密集的免签海岛直飞网，2 至 8 小时航程内兼具高性价比与顶奢水屋。</p>
-          <ol class="hub-items">
-            <li class="hub-item"><span class="no">i</span><div><strong>沙巴亚庇</strong> <span class="code">81.5分</span> — 直飞 <span class="mono">4h40m</span>，双人机+4★海景含早实测仅 <span class="mono">$976</span>，免签落日与外岛浮潜性价比之冠。</div></li>
-            <li class="hub-item"><span class="no">ii</span><div><strong>冲绳那霸与庆良间</strong> <span class="code">83.0分</span> — 直飞仅 <span class="mono">2h15m</span>，双人机+4★海景 <span class="mono">$1,053</span>，5–10月渡嘉敷岛果冻海无敌。</div></li>
-            <li class="hub-item"><span class="no">iii</span><div><strong>普吉岛</strong> <span class="code">84.0分</span> — 直飞 <span class="mono">5h10m</span>，双人机+4★海景 <span class="mono">$1,148</span>，酒店硬件与餐饮成熟度满分。</div></li>
-            <li class="hub-item"><span class="no">iv</span><div><strong>巴厘岛</strong> <span class="code">82.0分</span> — 直飞 <span class="mono">6h15m</span>，双人机+4★海景 <span class="mono">$1,424</span>，乌鲁瓦图悬崖泳池别墅与雨林文化独一档。</div></li>
-            <li class="hub-item"><span class="no">v</span><div><strong>马尔代夫</strong> <span class="code">93.0分</span> — 东航直飞马累 <span class="mono">8h05m</span>，4★居民岛海景机酒 <span class="mono">$1,797</span>（5★一价全包水屋含水飞 <span class="mono">$5,088</span>）。</div></li>
-          </ol>
-        </div>
-
-        <div class="three-col-cell">
-          <div class="col-kicker">
-            <span>HUB 02 · HONG KONG (HKG)</span>
-            <button type="button" class="text-link" onclick="filterByHub('HKG')">筛选香港直飞 →</button>
-          </div>
-          <h3 class="col-title">香港出发直飞优选</h3>
-          <p class="col-lede">除覆盖全部东南亚海岛外，还拥有帕劳、苏梅岛、斐济等独家直飞航点优势。</p>
-          <ol class="hub-items">
-            <li class="hub-item"><span class="no">i</span><div><strong>帕劳</strong> <span class="code">83.5分</span> — 香港直飞仅 <span class="mono">4h00m</span>，洛克群岛原始珊瑚覆盖率与牛奶湖火山泥世界顶级。</div></li>
-            <li class="hub-item"><span class="no">ii</span><div><strong>苏梅岛</strong> <span class="code">85.0分</span> — 直飞岛上花园机场仅 <span class="mono">3h25m</span>，省去曼谷转机或车船联运折腾。</div></li>
-            <li class="hub-item"><span class="no">iii</span><div><strong>斐济外岛</strong> <span class="code">91.0分</span> — 斐济航空直飞楠迪 <span class="mono">10h10m</span>，直通玛玛努卡与亚萨瓦群岛蓝色泻湖。</div></li>
-            <li class="hub-item"><span class="no">iv</span><div><strong>富国岛 / 芽庄</strong> <span class="code">80.5分</span> — 直飞 <span class="mono">2h15m–2h50m</span>，双人机+4★海景总价 <span class="mono">$980–$1,191</span>。</div></li>
-            <li class="hub-item"><span class="no">v</span><div><strong>沙巴亚庇</strong> <span class="code">81.5分</span> — 直飞仅 <span class="mono">3h05m</span>，双人机+4★海景含早实测仅 <span class="mono">$971</span>。</div></li>
-          </ol>
-        </div>
-
-        <div class="three-col-cell">
-          <div class="col-kicker">
-            <span>HUB 03 · FRANKFURT (FRA)</span>
-            <button type="button" class="text-link" onclick="filterByHub('FRA')">筛选法兰克福直飞 →</button>
-          </div>
-          <h3 class="col-title">法兰克福出发直飞优选</h3>
-          <p class="col-lede">冬季避寒不必妥协去荒漠大浪的佛得角（71.5分），以下五处直飞航点在品质与水温上全面胜出。</p>
-          <ol class="hub-items">
-            <li class="hub-item"><span class="no">i</span><div><strong>塞舌尔</strong> <span class="code">91.5分</span> — Condor/Discover 直飞 <span class="mono">9h35m</span>，时差仅 <span class="mono">+2h</span>，花岗岩粉白沙滩全球第一。</div></li>
-            <li class="hub-item"><span class="no">ii</span><div><strong>马尔代夫</strong> <span class="code">93.0分</span> — Lufthansa/Condor 直飞马累 <span class="mono">10h00m</span>，时差 <span class="mono">+3h</span>，一岛一酒店水屋天花板。</div></li>
-            <li class="hub-item"><span class="no">iii</span><div><strong>毛里求斯</strong> <span class="code">90.0分</span> — 直飞 <span class="mono">11h05m</span>，时差 <span class="mono">+2h</span>，外堡礁环绕平浪泻湖与莫纳山海底瀑布奇观。</div></li>
-            <li class="hub-item"><span class="no">iv</span><div><strong>阿曼·萨拉拉 / 马斯喀特</strong> <span class="code">83.5分</span> — 直飞仅 <span class="mono">6h30m</span>，冬春最冷月夜温 <span class="mono">18.8°C</span>、水温 <span class="mono">23.5°C</span>，比加那利更暖且极安全。</div></li>
-            <li class="hub-item"><span class="no">v</span><div><strong>埃及红海·赫尔格达 / 马萨阿拉姆</strong> <span class="code">83.0分</span> — 直飞仅 <span class="mono">4h30m</span>，5–11月珊瑚礁浮潜冠绝中东。</div></li>
-          </ol>
+    <!-- Hubs -->
+    <section class="section" id="hubs">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="eyebrow">Fly Direct</span>
+          <h2 class="section-title">从三座城市，直飞去海边</h2>
+          <p class="section-note">按航程、时差和双人机酒实测总价，为上海、香港、法兰克福各挑出五处直飞可达的海岛。</p>
+        </header>
+        <div class="hub-grid">
+          <article class="hub-card h1">
+            <div class="hub-code">PVG</div>
+            <h3 class="hub-city">从上海出发</h3>
+            <p class="hub-lede">亚洲最密集的海岛直飞网，2 到 8 小时之内，从高性价比到顶级水屋都有。</p>
+            <ol class="hub-items">
+              <li class="hub-item"><strong>沙巴亚庇</strong><span class="t">4h40</span><p>双人机酒含早实测仅 $976，免签、落日和外岛浮潜。</p></li>
+              <li class="hub-item"><strong>冲绳那霸与庆良间</strong><span class="t">2h15</span><p>机酒 $1,053，5–10 月渡嘉敷岛的果冻海。</p></li>
+              <li class="hub-item"><strong>普吉岛</strong><span class="t">5h10</span><p>机酒 $1,148，酒店与餐饮成熟度最高。</p></li>
+              <li class="hub-item"><strong>巴厘岛</strong><span class="t">6h15</span><p>机酒 $1,424，悬崖泳池别墅与雨林文化。</p></li>
+              <li class="hub-item"><strong>马尔代夫</strong><span class="t">8h05</span><p>居民岛机酒 $1,797；一价全包水屋含水飞 $5,088。</p></li>
+            </ol>
+            <button type="button" class="btn btn-light" onclick="filterByHub('SHA')">查看上海直飞 <span data-icon="arrowRight"></span></button>
+          </article>
+          <article class="hub-card h2">
+            <div class="hub-code">HKG</div>
+            <h3 class="hub-city">从香港出发</h3>
+            <p class="hub-lede">覆盖全部东南亚海岛，另有帕劳、苏梅、斐济等独家直飞。</p>
+            <ol class="hub-items">
+              <li class="hub-item"><strong>帕劳</strong><span class="t">4h00</span><p>洛克群岛原始珊瑚与牛奶湖，世界级。</p></li>
+              <li class="hub-item"><strong>苏梅岛</strong><span class="t">3h25</span><p>直降岛上花园机场，免去曼谷转机。</p></li>
+              <li class="hub-item"><strong>斐济外岛</strong><span class="t">10h10</span><p>直飞楠迪，转玛玛努卡与亚萨瓦蓝色泻湖。</p></li>
+              <li class="hub-item"><strong>富国岛 / 芽庄</strong><span class="t">2h15</span><p>双人机酒 $980–$1,191。</p></li>
+              <li class="hub-item"><strong>沙巴亚庇</strong><span class="t">3h05</span><p>双人机酒含早实测仅 $971。</p></li>
+            </ol>
+            <button type="button" class="btn btn-light" onclick="filterByHub('HKG')">查看香港直飞 <span data-icon="arrowRight"></span></button>
+          </article>
+          <article class="hub-card h3">
+            <div class="hub-code">FRA</div>
+            <h3 class="hub-city">从法兰克福出发</h3>
+            <p class="hub-lede">冬天避寒不必将就风大浪急的佛得角，这五处在水温与品质上全面胜出。</p>
+            <ol class="hub-items">
+              <li class="hub-item"><strong>塞舌尔</strong><span class="t">9h35</span><p>时差仅 +2h，花岗岩巨石与粉白沙滩。</p></li>
+              <li class="hub-item"><strong>马尔代夫</strong><span class="t">10h00</span><p>时差 +3h，一岛一酒店的水屋。</p></li>
+              <li class="hub-item"><strong>毛里求斯</strong><span class="t">11h05</span><p>外堡礁环抱的平静泻湖与"海底瀑布"。</p></li>
+              <li class="hub-item"><strong>阿曼 萨拉拉 / 马斯喀特</strong><span class="t">6h30</span><p>冬季夜温 18.8°C、水温 23.5°C，安全省心。</p></li>
+              <li class="hub-item"><strong>埃及红海</strong><span class="t">4h30</span><p>5–11 月的珊瑚礁浮潜，中东最佳。</p></li>
+            </ol>
+            <button type="button" class="btn btn-light" onclick="filterByHub('FRA')">查看法兰克福直飞 <span data-icon="arrowRight"></span></button>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Chapter IV: Core Methodology & Rules -->
-    <section class="wrap section" id="rules">
-      <header class="chapter-head">
-        <div class="chapter-head-main">
-          <span class="chapter-no">IV</span>
+    <!-- Method -->
+    <section class="section is-paper" id="rules">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="eyebrow">How We Rate</span>
+          <h2 class="section-title">三条规则，决定谁能上榜</h2>
+        </header>
+        <div class="method-grid">
           <div>
-            <h2 class="section-title">核心评估准则与分榜方法</h2>
-            <p class="section-note">为什么大加那利岛与圣灵群岛归入季节性榜？为什么夏威夷必须拆成四座独立岛屿？</p>
+            <div class="method-figure">18°<small>/ 21°C</small></div>
+            <h3 class="method-title">用身体感受划线，而不是纬度</h3>
+            <p class="method-text">依据 WMO / NOAA 30 年气候统计，只有最冷月<strong>夜温 ≥ 18°C</strong>（晚上不用加外套）且<strong>水温 ≥ 21°C</strong>（随时能下水）的地方，才算「全年真热带」。圣灵群岛 7 月夜温 17.1°C，只差 0.9°C，也只能归入季节性海岸。</p>
           </div>
-        </div>
-      </header>
-
-      <div class="three-col-grid">
-        <div class="three-col-cell">
-          <div class="col-kicker"><span>RULE 01 · PHYSIOLOGICAL THRESHOLD</span><span>≥ 18°C / ≥ 21°C</span></div>
-          <h3 class="col-title">生理体感温度硬指标</h3>
-          <p class="col-lede">
-            摒弃死板的南北回归线纬度切分，基于 WMO / NOAA 30 年气候统计基准，仅当全年最冷月<strong>夜间平均低温 ≥ 18.0°C</strong>（晚间海风吹拂无需穿外套）且<strong>最冷月表层水温 ≥ 21.0°C</strong>（全年 365 天可随时下海游泳）同时达标，方能进入「全年真热带 Top 100」。差 0.9°C 的圣灵群岛（7月夜温 17.1°C）与冲绳、大加那利均归入「季节性海岸 Top 45」。
-          </p>
-        </div>
-        <div class="three-col-cell">
-          <div class="col-kicker"><span>RULE 02 · 45-MINUTE DAY-TRIP RADIUS</span><span>NO BUNDLING</span></div>
-          <h3 class="col-title">45分钟一日游圈独立拆分</h3>
-          <p class="col-lede">
-            严禁将相距数小时车程或需乘飞机中转的不同城市或岛屿强行打包成高分全能怪！夏威夷拆分为茂宜、可爱、欧胡、大岛 4 处独立词条；泰国拆分为普吉、苏梅、甲米、丽贝、斯米兰、芭堤雅 6 处；斯里兰卡拆分为南岸与东岸。仅当主城与离岛处于 <strong>≤ 45 分钟快艇/轮渡一日游圈</strong>（如芭堤雅+格兰岛、那霸+渡嘉敷岛）时允许合并评估。
-          </p>
-        </div>
-        <div class="three-col-cell">
-          <div class="col-kicker"><span>RULE 03 · UNIFIED CUTOFF LINE</span><span>SCORE ≥ 76.5</span></div>
-          <h3 class="col-title">统一 76.5 分准入底线</h3>
-          <p class="col-lede">
-            所有目的地按统一百分制标尺（海沙水质 25 · 自然风景 15 · 玩水体验 15 · 风浪舒适 10 · 酒店硬件 10 · 餐饮美食 10 · 陆地不无聊 10 · 安全省心 5）严格量化。全年真热带榜第 100 名（芭堤雅+格兰岛 <strong>76.5 分</strong>）与季节性榜第 45 名（北海涠洲岛 <strong>76.5 分</strong>）同分对齐；低于 76.5 分的目的地均退入落选辨析表。
-          </p>
+          <div>
+            <div class="method-figure">45<small>分钟</small></div>
+            <h3 class="method-title">不把几座岛打包成一个</h3>
+            <p class="method-text">相距几小时车程、或要再坐飞机的地方必须分开评。夏威夷拆为茂宜、可爱、欧胡、大岛四处；泰国拆为普吉、苏梅、甲米等六处。只有主岛与离岛在<strong>45 分钟船程</strong>以内（如那霸与渡嘉敷岛）才允许合并。</p>
+          </div>
+          <div>
+            <div class="method-figure">76.5<small>分</small></div>
+            <h3 class="method-title">统一的上榜分数线</h3>
+            <p class="method-text">百分制分配为：海水沙滩 25、风景 15、玩水 15、风浪 10、酒店 10、美食 10、陆地 10、安全省心 5。真热带第 100 名芭堤雅与季节性第 45 名涠洲岛同为<strong>76.5 分</strong>，低于此线的列入下方「遗珠」。</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Chapter V: Eliminated Gatekeepers -->
-    <section class="wrap section" id="eliminated-section" style="border-bottom:0">
-      <header class="chapter-head">
-        <div class="chapter-head-main">
-          <span class="chapter-no">V</span>
-          <div>
-            <h2 class="section-title">落选守门员辨析参考</h2>
-            <p class="section-note">满足全年最冷月夜温 ≥ 18°C 且水温 ≥ 21°C，但因单一维度硬伤导致综合得分低于 76.5 分准入底线的知名海岛。</p>
-          </div>
+    <!-- Eliminated -->
+    <section class="section" id="eliminated-section">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="eyebrow">Near Misses</span>
+          <h2 class="section-title">气候达标，却差一点上榜</h2>
+          <p class="section-note">这些地方全年温暖，但因为某一项明显短板，综合分没能达到 76.5。</p>
+        </header>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>目的地</th>
+                <th class="num">最冷月夜温 / 水温</th>
+                <th class="num">综合分</th>
+                <th>八项得分（珊瑚色为短板）</th>
+                <th>5 晚参考价</th>
+                <th>落选原因</th>
+              </tr>
+            </thead>
+            <tbody id="eliminated-tbody"></tbody>
+          </table>
         </div>
-      </header>
-
-      <div class="table-wrap" style="margin-top:28px">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>未上榜目的地</th>
-              <th class="num">最冷月夜温 / 水温</th>
-              <th class="num">综合得分 (&lt; 76.5)</th>
-              <th>八维细分得分拆解</th>
-              <th>5晚4★海景参考价</th>
-              <th>落选核心原因（对标 #100 芭堤雅+格兰岛 76.5分）</th>
-            </tr>
-          </thead>
-          <tbody id="eliminated-tbody"></tbody>
-        </table>
       </div>
     </section>
   </main>
 
-  <!-- Editorial Footer -->
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div>
           <a class="footer-brand" href="#top"><span data-brand></span><span class="brand-name">Oceanic Atlas</span></a>
-          <p class="footer-note">一部按生理体感气候底线与八维量化指标编纂的全球海滨与海岛度假胜地图鉴。气候统计源自 WMO / NOAA / JMA / BOM 30 年基准，参考房价与直飞航线核验自 Booking.com 与 Google Flights。</p>
+          <p class="footer-note">按体感气候底线与八项指标整理的全球海滨与海岛度假清单。气候数据来自 WMO / NOAA / JMA / BOM 30 年统计，房价与航线核验自 Booking.com 与 Google Flights。</p>
         </div>
         <div>
-          <p class="footer-h">章节导航</p>
-          <nav class="footer-links" aria-label="页脚章节">
-            <a href="#weights">I · 权重调校</a>
-            <a href="#index">II · 榜单索引</a>
-            <a href="#hubs">III · 直飞航线</a>
-            <a href="#rules">IV · 评估准则</a>
-            <a href="#eliminated-section">V · 落选辨析</a>
+          <p class="footer-h">浏览</p>
+          <nav class="footer-links" aria-label="页脚导航">
+            <a href="#weights">按偏好排序</a>
+            <a href="#index">全部榜单</a>
+            <a href="#hubs">直飞航线</a>
+            <a href="#rules">评分方法</a>
+            <a href="#eliminated-section">遗珠</a>
           </nav>
         </div>
         <div>
           <p class="footer-h">快速筛选</p>
           <nav class="footer-links" aria-label="快速筛选">
-            <a href="#index" onclick="setCategoryChip('tropical')">全年真热带 Top 100</a>
-            <a href="#index" onclick="setCategoryChip('seasonal')">季节性海岸 Top 45</a>
-            <a href="#index" onclick="filterByHub('SHA')">上海直飞目的地</a>
-            <a href="#index" onclick="filterByHub('HKG')">香港直飞目的地</a>
-            <a href="#index" onclick="filterByHub('FRA')">法兰克福直飞目的地</a>
+            <a href="#index" onclick="setCategoryChip('tropical')">全年真热带 100 处</a>
+            <a href="#index" onclick="setCategoryChip('seasonal')">季节性海岸 45 处</a>
+            <a href="#index" onclick="filterByHub('SHA')">上海直飞</a>
+            <a href="#index" onclick="filterByHub('HKG')">香港直飞</a>
+            <a href="#index" onclick="filterByHub('FRA')">法兰克福直飞</a>
           </nav>
-        </div>
-        <div>
-          <p class="footer-h">版本与排印说明</p>
-          <p class="colophon">标题与正文以 Noto Serif SC 与 Newsreader 排印，气候、航程与价格数据使用 IBM Plex Mono。零构建依赖，支持日间纸本与夜间海图双主题切换。</p>
         </div>
       </div>
       <p class="footer-wordmark" aria-hidden="true">Oceanic Atlas</p>
       <div class="footer-base">
-        <span>© 2026 Oceanic Atlas · 第一版 · 全球 145 大海滨与海岛度假图鉴</span>
-        <span>按 <kbd>/</kbd> 或 <kbd>⌘</kbd><kbd>K</kbd> 快速搜索 · 按 <kbd>T</kbd> 切换日夜主题</span>
+        <span>© 2026 Oceanic Atlas · 全球 145 处海岸度假图鉴</span>
+        <span>按 <kbd>/</kbd> 或 <kbd>⌘K</kbd> 快速搜索</span>
       </div>
     </div>
   </footer>
 
-  <!-- Bottom Pill Compare Tray -->
-  <div id="compare-floating-bar" class="compare-tray" role="region" aria-label="海岛对比栏">
-    <span class="tray-label">对比栏 (最多3处)</span>
+  <div id="compare-floating-bar" class="compare-tray" role="region" aria-label="对比栏">
+    <span class="tray-label">对比</span>
     <div id="compare-selected-pills" class="tray-items"></div>
-    <button type="button" class="ghost-btn" style="color:inherit;height:28px;padding:0 8px;font-size:12px" onclick="clearCompare()">清空</button>
-    <button type="button" class="tray-go" onclick="openCompareModal()">雷达图对比 →</button>
+    <button type="button" class="tray-clear" onclick="clearCompare()">清空</button>
+    <button type="button" class="tray-go" onclick="openCompareModal()">开始对比</button>
   </div>
 
-  <!-- PK Comparison Dialog -->
   <div id="compare-modal" class="backdrop" onclick="if(event.target===this) closeCompareModal()">
     <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
       <div class="dialog-head">
         <div>
-          <h2 id="compare-modal-title">海岛八维硬实力横向对比</h2>
-          <p style="font-size:12px;color:var(--text-3);margin-top:2px">基于当前设定的权重实时对比各维度表现、最冷月气候底线与房价水平（★ 标记同项最优）</p>
+          <h2 id="compare-modal-title">并排比较</h2>
+          <p>按当前权重计算，珊瑚色 ★ 标记每一项的最佳者。</p>
         </div>
         <button type="button" class="dialog-close" onclick="closeCompareModal()" aria-label="关闭"><span data-icon="close"></span></button>
       </div>
@@ -2734,33 +982,23 @@
     </div>
   </div>
 
-  <!-- Destination Dossier Dialog -->
   <div id="dest-modal" class="backdrop" onclick="if(event.target===this) closeDestModal()">
-    <div class="dialog" style="max-width:880px" role="dialog" aria-modal="true" aria-labelledby="dest-modal-title">
-      <div class="dialog-head">
-        <div>
-          <span class="code" id="dest-modal-kicker"></span>
-          <h2 id="dest-modal-title" style="margin-top:2px"></h2>
-        </div>
-        <button type="button" class="dialog-close" onclick="closeDestModal()" aria-label="关闭"><span data-icon="close"></span></button>
-      </div>
-      <div id="dest-modal-body" class="dialog-body"></div>
+    <div class="dialog" style="max-width:920px" role="dialog" aria-modal="true" aria-labelledby="dest-modal-title">
+      <div id="dest-modal-body"></div>
     </div>
   </div>
 
-  <!-- Command Palette Dialog -->
   <div id="palette-backdrop" class="backdrop palette-backdrop" onclick="if(event.target===this) closePalette()">
-    <div class="palette" role="dialog" aria-modal="true" aria-label="快速搜索目的地">
+    <div class="palette" role="dialog" aria-modal="true" aria-label="搜索目的地">
       <div class="palette-input">
         <span data-icon="search"></span>
-        <input id="palette-input" type="text" placeholder="输入海岛名、国家、区域或特色（如：鲸鲨、水屋、免签）…" autocomplete="off" spellcheck="false" />
+        <input id="palette-input" type="text" placeholder="海岛名、国家、海域或特色，如：鲸鲨、水屋、免签" autocomplete="off" spellcheck="false" />
         <kbd>Esc</kbd>
       </div>
       <div id="palette-results" class="palette-results"></div>
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="data.js"></script>
   <script src="data_part2.js"></script>
   <script src="app.js"></script>

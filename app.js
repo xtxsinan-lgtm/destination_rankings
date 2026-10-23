@@ -1,5 +1,5 @@
 // Oceanic Atlas — Global 145 Beach & Island Resort Destinations
-// Zero-dependency editorial application engine
+// Zero-dependency travel-magazine application engine
 
 const MAX_SCORES = {
   seaSand: 25,
@@ -59,6 +59,8 @@ const SORT_LABELS = {
   "night-desc": "最冷月夜温 ↓",
   "price-desc": "顶奢房价 ↓"
 };
+
+const WEIGHT_COLORS = ["#14425f", "#2b8b92", "#7fcfc8", "#e0674a", "#c9a36b", "#f0a98e", "#5f7f78", "#b9c3c1"];
 
 const REGIONS = [
   "南太平洋",
@@ -314,152 +316,129 @@ function getProcessedData() {
 }
 
 // ---------------------------------------------------------------------------
-// Blueprint SVG Generators (.bp aesthetic)
+// Postcard seascapes — each destination gets a data-driven illustrated scene:
+//   sky & sea palette  -> region
+//   lagoon band height -> calmness (wider shallow lagoon = calmer water)
+//   lagoon brightness  -> sea & sand score
+//   island silhouette  -> scenery score
+//   sun height         -> coldest-month water temperature
 // ---------------------------------------------------------------------------
 
-function buildCardBlueprintSVG(dest, rank) {
-  const W = 360;
-  const H = 202;
-  const cx = 258;
-  const cy = 104;
-  const R = 64;
-  const keys = Object.keys(MAX_SCORES);
-  const n = keys.length;
+const REGION_PALETTES = {
+  "南太平洋":            { sky: ["#f7efe4", "#f4d9c3"], lagoon: "#6fd3cc", sea: "#1f6f8b", deep: "#134a66", land: "#6f8f86" },
+  "印度洋与东非":        { sky: ["#f6f0e6", "#efdcc6"], lagoon: "#82dcd4", sea: "#1d6a8f", deep: "#12466a", land: "#7d978f" },
+  "东南亚与东亚":        { sky: ["#f5ecdd", "#eed3b2"], lagoon: "#72c9b8", sea: "#287383", deep: "#174f5e", land: "#6c8a74" },
+  "中东与红海":          { sky: ["#f7ecdc", "#f0cfa9"], lagoon: "#63c6c9", sea: "#1e5f86", deep: "#123f5e", land: "#b49a7a" },
+  "加勒比与大西洋":      { sky: ["#eef3f2", "#f3e2d0"], lagoon: "#86e0d8", sea: "#2379a6", deep: "#15527a", land: "#78968c" },
+  "美洲与夏威夷":        { sky: ["#f7eee4", "#f3d5c4"], lagoon: "#6cc5c6", sea: "#1d6283", deep: "#123f5a", land: "#5f7f78" },
+  "澳新与地中海/亚热带": { sky: ["#eef1ef", "#e9e3d6"], lagoon: "#7ccbd4", sea: "#245d80", deep: "#163f5c", land: "#8a9a86" }
+};
 
-  const pt = (i, ratio) => {
-    const a = (Math.PI * 2 * i) / n - Math.PI / 2;
-    const r = R * ratio;
-    return [Math.round((cx + r * Math.cos(a)) * 10) / 10, Math.round((cy + r * Math.sin(a)) * 10) / 10];
-  };
+function hashStr(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0);
+}
 
-  const rings = [0.5, 1.0].map(r => {
-    const pts = keys.map((_, i) => pt(i, r).join(",")).join(" ");
-    return `<polygon points="${pts}" class="${r === 1 ? 'bp-ink' : 'bp-faint'}" fill="none"/>`;
-  }).join("");
+function buildPostcardSVG(dest, opts = {}) {
+  const W = opts.wide ? 1050 : 400;
+  const H = opts.wide ? 400 : 300;
+  const pal = REGION_PALETTES[dest.region] || REGION_PALETTES["南太平洋"];
+  const h = hashStr(dest.id);
+  const uid = `${opts.prefix || "pc"}-${dest.id}`;
+  const s = dest.scores;
 
-  const axes = keys.map((k, i) => {
-    const [x, y] = pt(i, 1.0);
-    const [lx, ly] = pt(i, 1.24);
-    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="bp-faint"/>` +
-           `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" class="bp-label">${DIM_LABELS[k].short}</text>`;
-  }).join("");
+  const horizon = Math.round(H * 0.52);
+  const calm = s.calmness / 10;
+  const lagoonTop = Math.round(H - (H - horizon) * (0.22 + calm * 0.38));
+  const clarity = Math.min(1, s.seaSand / 25);
+  const lagoonOpacity = (0.55 + clarity * 0.45).toFixed(2);
 
-  const polyPts = keys.map((k, i) => pt(i, Math.min(1, dest.scores[k] / MAX_SCORES[k]))).map(p => p.join(",")).join(" ");
-  const dots = keys.map((k, i) => {
-    const [x, y] = pt(i, Math.min(1, dest.scores[k] / MAX_SCORES[k]));
-    return `<circle cx="${x}" cy="${y}" r="2" class="bp-dot-accent"/>`;
-  }).join("");
+  const warm = Math.max(0, Math.min(1, (dest.coldestWater - 14) / 14));
+  const sunR = Math.round(H * 0.085);
+  const sunX = Math.round(W * (0.62 + ((h % 23) / 100)));
+  const sunY = Math.round(horizon - sunR * 0.6 - warm * (horizon * 0.5));
 
-  const catCode = dest.category === "tropical" ? `TROP #${pad2(dest.origRank)}` : `SEAS #${pad2(dest.origRank)}`;
-  const polyClass = dest.category === "tropical" ? "bp-move-body" : "bp-sea-body";
+  const scen = s.scenery / 15;
+  const peakH = Math.round((H * 0.06) + scen * H * 0.16);
+  const isLeft = (h >> 3) % 2 === 0;
+  const iw = W * (0.32 + ((h >> 5) % 10) / 60);
+  const ix = isLeft ? W * 0.04 : W * 0.96 - iw;
+  const px = ix + iw * (0.35 + ((h >> 7) % 30) / 100);
+  const island = `M${ix.toFixed(0)} ${horizon} C ${(ix + iw * 0.15).toFixed(0)} ${horizon - peakH * 0.35} ${(px - iw * 0.12).toFixed(0)} ${horizon - peakH} ${px.toFixed(0)} ${horizon - peakH} C ${(px + iw * 0.1).toFixed(0)} ${horizon - peakH} ${(ix + iw * 0.8).toFixed(0)} ${horizon - peakH * 0.25} ${(ix + iw).toFixed(0)} ${horizon} Z`;
+
+  const sandTop = Math.round(H * 0.9);
+  const wv = (y, amp, ph) => `M0 ${y} C ${W * 0.2} ${y - amp} ${W * 0.35} ${y + amp} ${W * 0.5} ${y} S ${W * 0.8} ${y - amp + ph} ${W} ${y}`;
 
   return `
-    <svg class="bp" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <pattern id="bp-g-${dest.id}" width="18" height="18" patternUnits="userSpaceOnUse">
-          <path d="M18 0H0V18" class="bp-grid" fill="none"/>
-        </pattern>
+        <linearGradient id="${uid}-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="${pal.sky[0]}"/><stop offset="1" stop-color="${pal.sky[1]}"/>
+        </linearGradient>
+        <linearGradient id="${uid}-sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="${pal.sea}"/><stop offset="1" stop-color="${pal.deep}"/>
+        </linearGradient>
+        <linearGradient id="${uid}-lag" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="${pal.lagoon}" stop-opacity="${lagoonOpacity}"/><stop offset="1" stop-color="#bfeee6" stop-opacity="0.95"/>
+        </linearGradient>
       </defs>
-      <rect width="${W}" height="${H}" fill="url(#bp-g-${dest.id})"/>
-      <text x="16" y="26"><tspan class="bp-tag">${esc(dest._iso || "GL")} · ${catCode}</tspan></text>
-      <text x="16" y="44" class="bp-label">RANK ${pad2(rank)} · ${esc(dest.region)}</text>
-
-      <text x="16" y="92" font-family="Newsreader, Georgia, serif" font-size="34" font-style="italic" fill="var(--text)">${dest.weightedTotal.toFixed(1)}<tspan dx="7" dy="-3" class="bp-label" font-style="normal">/ 100</tspan></text>
-
-      <path d="M16 112H142" class="bp-faint"/>
-      <text x="16" y="130" class="bp-label">NIGHT MIN   ${dest.coldestNight.toFixed(1)}°C</text>
-      <text x="16" y="146" class="bp-label">WATER MIN   ${dest.coldestWater.toFixed(1)}°C</text>
-      <text x="16" y="162" class="bp-label">5N 4★ REF   $${dest.priceMin.toLocaleString()}</text>
-      <text x="16" y="184" class="bp-tag">${dest.coldestNight >= 18 && dest.coldestWater >= 21 ? "● 365D SWIMABLE" : "○ SEASONAL PEAK"}</text>
-
-      ${rings}${axes}
-      <polygon points="${polyPts}" class="${polyClass}"/>
-      ${dots}
+      <rect width="${W}" height="${H}" fill="url(#${uid}-sky)"/>
+      <circle cx="${sunX}" cy="${sunY}" r="${sunR * 2.4}" fill="#f2b08c" opacity="0.18"/>
+      <circle cx="${sunX}" cy="${sunY}" r="${sunR}" fill="#e7774f"/>
+      <path d="${island}" fill="${pal.land}" opacity="0.75"/>
+      <rect y="${horizon}" width="${W}" height="${H - horizon}" fill="url(#${uid}-sea)"/>
+      <path d="M0 ${lagoonTop} C ${W * 0.25} ${lagoonTop - 8} ${W * 0.6} ${lagoonTop + 8} ${W} ${lagoonTop - 4} V ${H} H 0 Z" fill="url(#${uid}-lag)"/>
+      <g fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.2">
+        <path d="${wv(horizon + (lagoonTop - horizon) * 0.35, 3, 2)}" stroke-opacity="0.22"/>
+        <path d="${wv(horizon + (lagoonTop - horizon) * 0.7, 4, -2)}" stroke-opacity="0.16"/>
+        <path d="${wv(lagoonTop + (sandTop - lagoonTop) * 0.45, 5, 3)}" stroke-opacity="0.35"/>
+      </g>
+      <path d="M0 ${sandTop} C ${W * 0.3} ${sandTop - 10} ${W * 0.65} ${sandTop + 6} ${W} ${sandTop - 6} V ${H} H 0 Z" fill="#f1e6d2"/>
+      <path d="M0 ${sandTop} C ${W * 0.3} ${sandTop - 10} ${W * 0.65} ${sandTop + 6} ${W} ${sandTop - 6}" fill="none" stroke="#fff" stroke-width="2" stroke-opacity="0.8"/>
     </svg>
   `;
 }
 
-function shortZh(zh) {
-  if (!zh) return "";
-  const part = zh.includes("·") ? zh.split("·").pop() : zh;
-  return part.split("与")[0].split("/")[0].slice(0, 7);
-}
-
-function buildPairPlateSVG(dA, dB) {
-  const W = 620;
-  const H = 290;
-  const cx = 166;
-  const cy = 168;
-  const R = 74;
-  const keys = Object.keys(MAX_SCORES);
-  const n = keys.length;
-
-  const pt = (i, ratio) => {
-    const a = (Math.PI * 2 * i) / n - Math.PI / 2;
-    const r = R * ratio;
-    return [Math.round((cx + r * Math.cos(a)) * 10) / 10, Math.round((cy + r * Math.sin(a)) * 10) / 10];
-  };
-
-  const rings = [0.33, 0.66, 1.0].map(r => {
-    const pts = keys.map((_, i) => pt(i, r).join(",")).join(" ");
-    return `<polygon points="${pts}" class="${r === 1 ? 'bp-ink' : 'bp-faint'}" fill="none"/>`;
-  }).join("");
-
-  const axes = keys.map((k, i) => {
-    const [x, y] = pt(i, 1.0);
-    const [lx, ly] = pt(i, 1.24);
-    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="bp-faint"/>` +
-           `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" class="bp-label">${DIM_LABELS[k].short}</text>`;
-  }).join("");
-
-  const polyOf = (d, cls) => {
-    const pts = keys.map((k, i) => pt(i, Math.min(1, d.scores[k] / MAX_SCORES[k])).join(",")).join(" ");
-    return `<polygon points="${pts}" class="${cls}"/>`;
-  };
-
-  const bars = keys.map((k, idx) => {
-    const y = 66 + idx * 24;
-    const meta = DIM_LABELS[k];
-    const wA = Math.round((dA.scores[k] / meta.max) * 140);
-    const wB = Math.round((dB.scores[k] / meta.max) * 140);
-    return `
-      <text x="344" y="${y + 8}" class="bp-label">${meta.short}</text>
-      <rect x="382" y="${y}" width="${wA}" height="4" fill="var(--accent)"/>
-      <rect x="382" y="${y + 6}" width="${wB}" height="4" fill="var(--sea)"/>
-      <text x="532" y="${y + 8}" class="bp-label">${dA.scores[k]} / ${dB.scores[k]}</text>
-    `;
-  }).join("");
-
-  const nameA = shortZh(dA._zh);
-  const nameB = shortZh(dB._zh);
-
+function postcardHTML(d, rank, opts = {}) {
+  const isCompared = state.compareIds.includes(d.id);
+  const isTrop = d.category === "tropical";
+  const compact = opts.compact;
   return `
-    <svg class="bp" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="海岛八维对比海图">
-      <defs>
-        <pattern id="bp-cover-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M20 0H0V20" class="bp-grid" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="${W}" height="${H}" fill="url(#bp-cover-grid)"/>
-      <path d="M322 20V272" class="bp-faint"/>
-
-      <text x="20" y="28"><tspan class="bp-tag">A · ${esc(nameA)}</tspan><tspan dx="8" class="bp-label">${dA.weightedTotal.toFixed(1)}分 · 夜${dA.coldestNight}°C / 水${dA.coldestWater}°C</tspan></text>
-      <text x="20" y="45"><tspan class="bp-label-strong" fill="var(--sea)">B · ${esc(nameB)}</tspan><tspan dx="8" class="bp-label">${dB.weightedTotal.toFixed(1)}分 · 夜${dB.coldestNight}°C / 水${dB.coldestWater}°C</tspan></text>
-
-      ${rings}${axes}
-      ${polyOf(dB, "bp-sea-body")}
-      ${polyOf(dA, "bp-move-body")}
-
-      <text x="344" y="28" class="bp-title">EIGHT-DIMENSION TELEMETRY</text>
-      <text x="344" y="45" class="bp-label">上轨(金) ${esc(nameA)} · 下轨(青) ${esc(nameB)}</text>
-      ${bars}
-      <text x="344" y="270" class="bp-label">5N 4★ REF: $${dA.priceMin.toLocaleString()} vs $${dB.priceMin.toLocaleString()}</text>
-    </svg>
+    <article class="postcard">
+      <div class="pc-scene" onclick="openDestModal('${d.id}')">
+        ${buildPostcardSVG(d, { prefix: opts.prefix || "pc" })}
+        ${rank ? `<span class="pc-rank">No. ${rank}</span>` : ""}
+        <span class="pc-badge${isTrop ? "" : " is-seasonal"}">${isTrop ? "全年可游" : "季节性"}</span>
+        <span class="pc-score"><b>${d.weightedTotal.toFixed(1)}</b><small>/100</small></span>
+      </div>
+      <div class="pc-body">
+        <p class="pc-meta">${esc(d.region)}</p>
+        <h3 class="pc-title" onclick="openDestModal('${d.id}')">${esc(d._zh)}</h3>
+        ${d._en ? `<p class="pc-en">${esc(d._en)}</p>` : ""}
+        <div class="pc-facts">
+          <span>夜 <b>${d.coldestNight.toFixed(1)}°</b></span>
+          <span>水 <b>${d.coldestWater.toFixed(1)}°</b></span>
+          <span>$<b>${d.priceMin.toLocaleString()}</b></span>
+        </div>
+        ${compact ? "" : `
+          <p class="pc-summary">${esc(d.note || "")}</p>
+          <div class="pc-foot">
+            <span class="pc-price"><b>$${d.priceMin.toLocaleString()}</b><small>5 晚起</small></span>
+            <span class="pc-actions">
+              <a class="text-link" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">房价 ${icon("external")}</a>
+              <button type="button" class="compare-toggle" aria-pressed="${isCompared}" onclick="toggleCompare('${d.id}')">
+                ${icon(isCompared ? "check" : "plus")}<span>${isCompared ? "已选" : "对比"}</span>
+              </button>
+            </span>
+          </div>`}
+      </div>
+    </article>
   `;
 }
 
 // ---------------------------------------------------------------------------
-// Cover Feature Plate
+// Editor's Note (cover feature)
 // ---------------------------------------------------------------------------
 
 function renderCoverFeature() {
@@ -472,30 +451,21 @@ function renderCoverFeature() {
   if (!dA || !dB) return;
 
   el.innerHTML = `
-    <div class="lab-sheet">
-      <div class="lab-canvas">${buildPairPlateSVG(dA, dB)}</div>
-      <div class="title-block">
-        <span><small>PLATE</small> ${pad2(state.factIndex + 1)} / ${pad2(COVER_FACTS.length)} · WMO 30Y SST</span>
-        <span>${esc(f.fig)}</span>
+    <div class="feature-copy">
+      <span class="eyebrow">编辑手记 · ${esc(f.kicker.replace(/^你可能不知道\s*·\s*/, ""))}</span>
+      <blockquote class="feature-quote">${esc(f.text)}</blockquote>
+      <div class="feature-foot">
+        <button type="button" class="btn btn-solid" onclick="comparePair('${dA.id}', '${dB.id}')">
+          <span>${esc(f.linkLabel)}</span>${icon("arrowRight")}
+        </button>
+        <button type="button" class="feature-next" onclick="nextCoverFact()">${icon("refresh")}<span>下一则</span></button>
+        <span class="feature-count">${state.factIndex + 1} / ${COVER_FACTS.length}</span>
       </div>
     </div>
-    <figcaption class="plate-caption">
-      <span class="plate-no">图 ${pad2(state.factIndex + 1)} / ${pad2(COVER_FACTS.length)}</span>
-      <span>${esc(f.caption)}</span>
-    </figcaption>
-    <div class="plate-body">
-      <p class="plate-kicker">${esc(f.kicker)}</p>
-      <blockquote class="plate-text">${esc(f.text)}</blockquote>
-      <div class="plate-foot">
-        <button type="button" class="text-link" onclick="comparePair('${dA.id}', '${dB.id}')">
-          <span class="code">${esc(dA._iso)}/${esc(dB._iso)}</span>
-          <span>${esc(f.linkLabel)}</span>
-          ${icon("arrowRight")}
-        </button>
-        <button type="button" class="plate-shuffle" onclick="nextCoverFact()">
-          ${icon("refresh")}<span>换一条</span>
-        </button>
-      </div>
+    <div class="feature-pair">
+      ${postcardHTML(dA, 0, { compact: true, prefix: "fa" })}
+      ${postcardHTML(dB, 0, { compact: true, prefix: "fb" })}
+      <p class="vs-caption">${esc(f.caption)}</p>
     </div>
   `;
 }
@@ -572,9 +542,9 @@ function renderFlightBadge(dest) {
     const hubName = state.hubFilter === "SHA" ? "上海" : state.hubFilter === "HKG" ? "香港" : "法兰克福";
     if (hubData && hubData.nonstop) {
       const pkgText = hubData.total2p ? ` · 双人机酒 $${hubData.total2p.toLocaleString()}` : "";
-      return `<div class="t-flights"><span class="flight-code" style="border-color:var(--accent);color:var(--accent)">${hubName}直飞 ${esc(hubData.duration)}${pkgText}</span></div>`;
+      return `<div class="t-flights"><span class="flight-code" style="border-color:var(--lagoon);color:var(--lagoon)">${hubName}直飞 ${esc(hubData.duration)}${pkgText}</span></div>`;
     }
-    return `<div class="t-flights"><span style="font-size:11px;color:var(--text-3)">该枢纽需中转</span></div>`;
+    return `<div class="t-flights"><span style="font-size:11.5px;color:var(--ink-3)">该城市需转机</span></div>`;
   }
 
   const pushHub = (code, label) => {
@@ -640,7 +610,7 @@ function renderApp() {
   const summaryEl = document.getElementById("results-summary");
   if (summaryEl) {
     const presetName = state.activePreset === "custom" ? "自定义权重" : (WEIGHT_PRESETS[state.activePreset]?.label || "");
-    summaryEl.textContent = `DISPLAYING ${data.length} / 145 · ${SORT_LABELS[state.sortBy] || ""} · ${presetName}`;
+    summaryEl.textContent = `共 ${data.length} 处 · ${SORT_LABELS[state.sortBy] || ""} · 权重：${presetName}`;
   }
 
   const tableContainer = document.getElementById("table-view-container");
@@ -683,8 +653,8 @@ function renderTable(data) {
     const rank = idx + 1;
     const isCompared = state.compareIds.includes(d.id);
     const catMark = d.category === "tropical"
-      ? `<span class="t-cat-mark" title="全年最冷月夜温≥18°C 且 水温≥21°C">${esc(d._iso)} · 真热带 #${pad2(d.origRank)}</span>`
-      : `<span class="t-cat-mark is-seasonal" title="季节性/亚热带/地中海">${esc(d._iso)} · 季节性 #${pad2(d.origRank)}</span>`;
+      ? `<span class="t-cat-mark" title="全年最冷月夜温≥18°C 且 水温≥21°C">真热带 No.${d.origRank}</span>`
+      : `<span class="t-cat-mark is-seasonal" title="季节性/亚热带/地中海">季节性 No.${d.origRank}</span>`;
 
     const diff = Math.round((d.weightedTotal - d.defaultTotal) * 10) / 10;
     const diffHtml = diff !== 0
@@ -699,7 +669,7 @@ function renderTable(data) {
     return `
       <tr class="${isCompared ? "is-compared" : ""}">
         <td class="num">
-          <span class="t-rank ${rank <= 3 ? "is-top" : ""}">${pad2(rank)}</span>
+          <span class="t-rank ${rank <= 3 ? "is-top" : ""}">${rank}</span>
         </td>
         <td style="min-width:280px;max-width:390px">
           <div class="t-dest-head">
@@ -711,7 +681,7 @@ function renderTable(data) {
             <span>·</span>
             <span>${esc(d.region)}</span>
             <span>·</span>
-            <span>最佳：${esc(d.bestSeason)}</span>
+            <span>最佳 ${esc(d.bestSeason)}</span>
           </div>
           ${renderFlightBadge(d)}
           ${renderTags(d.tags)}
@@ -759,40 +729,7 @@ function renderCards(data) {
     return;
   }
 
-  container.innerHTML = data.map((d, idx) => {
-    const rank = idx + 1;
-    const isCompared = state.compareIds.includes(d.id);
-
-    return `
-      <article class="ride-card">
-        <div class="ride-link" onclick="openDestModal('${d.id}')">
-          <div class="thumb">${buildCardBlueprintSVG(d, rank)}</div>
-          <div class="ride-body">
-            <p class="ride-meta">
-              <span>${esc(d.region)} · 最佳 ${esc(d.bestSeason)}</span>
-              <span class="year">#${pad2(rank)}</span>
-            </p>
-            <h3 class="ride-title">${esc(d._zh)}</h3>
-            ${d._en ? `<p class="ride-en">${esc(d._en)}</p>` : ""}
-            <p class="ride-summary">${esc(d.note || "")}</p>
-          </div>
-        </div>
-        ${renderFlightBadge(d)}
-        <div class="ride-foot">
-          <span>
-            <span class="code">$${d.priceMin.toLocaleString()}</span>
-            <span> · ${esc(cleanPriceDisplay(d.priceDisplay).slice(0, 22))}</span>
-          </span>
-          <span style="display:inline-flex;align-items:center;gap:10px">
-            <a class="text-link" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">房价 ${icon("external")}</a>
-            <button type="button" class="compare-toggle" aria-pressed="${isCompared}" onclick="toggleCompare('${d.id}')">
-              ${icon(isCompared ? "check" : "plus")}<span>${isCompared ? "已选" : "对比"}</span>
-            </button>
-          </span>
-        </div>
-      </article>
-    `;
-  }).join("");
+  container.innerHTML = data.map((d, idx) => postcardHTML(d, idx + 1)).join("");
 }
 
 // ---------------------------------------------------------------------------
@@ -807,7 +744,7 @@ function renderEliminatedSection() {
     const parsed = parseDestName(d);
     const dimText = Object.entries(DIM_LABELS).map(([k, meta]) => {
       const weak = d.scores[k] / meta.max < 0.6;
-      return `<span class="mono" style="${weak ? 'color:var(--accent);font-weight:600' : 'color:var(--text-2)'}">${meta.short} ${d.scores[k]}</span>`;
+      return `<span class="mono" style="${weak ? 'color:var(--coral);font-weight:600' : 'color:var(--ink-2)'}">${meta.short} ${d.scores[k]}</span>`;
     }).join(" · ");
 
     return `
@@ -817,10 +754,10 @@ function renderEliminatedSection() {
           ${parsed.en ? `<span class="t-en" style="display:block">${esc(parsed.en)}</span>` : ""}
         </td>
         <td class="num mono" style="white-space:nowrap">夜 ${d.coldestNight}°C / 水 ${d.coldestWater}°C</td>
-        <td class="num"><span class="t-total" style="font-size:18px;color:var(--text-2)">${d.total.toFixed(1)}</span></td>
+        <td class="num"><span class="t-total" style="font-size:24px;color:var(--ink-3)">${d.total.toFixed(1)}</span></td>
         <td style="font-size:12px;min-width:260px">${dimText}</td>
-        <td class="mono" style="font-size:12.5px;white-space:nowrap">${esc(d.priceDisplay)}</td>
-        <td style="font-size:13px;color:var(--text-2);min-width:280px">${esc(d.reason)}</td>
+        <td class="mono" style="font-size:12.5px;white-space:nowrap">${esc(cleanPriceDisplay(d.priceDisplay))}</td>
+        <td style="font-size:13px;color:var(--ink-2);min-width:280px;line-height:1.8">${esc(d.reason)}</td>
       </tr>
     `;
   }).join("");
@@ -887,10 +824,17 @@ function syncWeightUI() {
     distBar.innerHTML = totalWeight > 0
       ? Object.entries(DIM_LABELS).map(([key, meta], i) => {
           const w = (state.weights[key] / totalWeight) * 100;
-          const bg = i % 2 === 0 ? "var(--accent)" : "var(--text-3)";
+          const bg = WEIGHT_COLORS[i % WEIGHT_COLORS.length];
           return w > 0 ? `<div class="weight-dist-seg" style="width:${w}%;background:${bg}" title="${meta.name} ${Math.round(w)}%"></div>` : "";
         }).join("")
       : "";
+  }
+
+  const legend = document.getElementById("weight-legend");
+  if (legend) {
+    legend.innerHTML = Object.entries(DIM_LABELS).map(([key, meta], i) =>
+      `<span><i style="background:${WEIGHT_COLORS[i]}"></i>${meta.short} ${totalWeight > 0 ? Math.round((state.weights[key] / totalWeight) * 100) : 0}%</span>`
+    ).join("");
   }
 
   document.querySelectorAll("[data-preset]").forEach(btn => {
@@ -967,14 +911,14 @@ window.openCompareModal = function() {
   const items = state.compareIds.map(id => allData.find(d => d.id === id)).filter(Boolean);
 
   if (items.length === 0) {
-    content.innerHTML = `<div class="empty-state"><h3>尚未选择对比海岛</h3><p>请在榜单中点击「+ 对比」按钮，最多可勾选 3 处海岛进行雷达图比对。</p></div>`;
+    content.innerHTML = `<div class="empty-state"><h3>还没有选择要比较的目的地</h3><p>在榜单中点击「对比」，最多可以选三处放在一起看。</p></div>`;
     modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
     return;
   }
 
-  const strokes = ["var(--accent)", "var(--sea)", "var(--text)"];
-  const fills = ["var(--accent-wash)", "var(--sea-wash)", "rgba(127,127,127,0.12)"];
+  const strokes = ["#14425f", "#e0674a", "#2b8b92"];
+  const fills = ["rgba(20,66,95,0.14)", "rgba(224,103,74,0.14)", "rgba(43,139,146,0.14)"];
 
   const bestMark = (vals, higherBetter = true) => {
     if (items.length < 2) return vals.map(() => false);
@@ -983,7 +927,7 @@ window.openCompareModal = function() {
   };
 
   const tdCell = (html, isBest) =>
-    `<td class="mono">${html}${isBest ? ' <span style="color:var(--accent)">★</span>' : ""}</td>`;
+    `<td>${html}${isBest ? '<span class="best-mark">★</span>' : ""}</td>`;
 
   const weighted = items.map(d => d.weightedTotal);
   const prices = items.map(d => d.priceMin);
@@ -992,50 +936,39 @@ window.openCompareModal = function() {
   content.innerHTML = `
     <div class="compare-layout">
       <div>
-        <div class="lab-sheet">
-          <div class="lab-canvas">${buildMultiRadarSVG(items, strokes, fills)}</div>
-          <div class="title-block">
-            <span><small>RADAR</small> 8-AXIS NORMALIZED</span>
-            <span>${items.map(d => d._iso).join(" / ")}</span>
-          </div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:12.5px">
-          ${items.map((d, i) => `
-            <span style="display:inline-flex;align-items:center;gap:6px">
-              <i style="width:10px;height:10px;border-radius:50%;background:${strokes[i]};display:inline-block"></i>
-              <strong>${esc(d._zh)}</strong> <span class="mono">(${d.weightedTotal.toFixed(1)})</span>
-            </span>
-          `).join("")}
+        <div class="radar-wrap">${buildMultiRadarSVG(items, strokes, fills)}</div>
+        <div class="radar-legend">
+          ${items.map((d, i) => `<span><i style="background:${strokes[i]}"></i>${esc(d._zh)} · ${d.weightedTotal.toFixed(1)}</span>`).join("")}
         </div>
       </div>
 
       <div class="table-wrap">
-        <table class="data-table" style="min-width:520px">
+        <table class="data-table compare-table">
           <thead>
             <tr>
-              <th>对比指标</th>
-              ${items.map(d => `<th><span style="font-family:var(--font-serif);font-size:14px;color:var(--text)">${esc(d._zh)}</span><small>${esc(d._en)}</small></th>`).join("")}
+              <th></th>
+              ${items.map((d, i) => `<th><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${strokes[i]};margin-right:6px"></span><span style="font-family:var(--serif);font-size:15px;color:var(--ocean-deep)">${esc(d._zh)}</span><small style="font-family:var(--display);font-style:italic;font-size:13px">${esc(d._en)}</small></th>`).join("")}
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>当前加权总分</td>
-              ${bestMark(weighted).map((b, i) => tdCell(`<strong>${weighted[i].toFixed(1)}</strong> / 100`, b)).join("")}
+              <td>综合得分</td>
+              ${bestMark(weighted).map((b, i) => tdCell(`<span class="t-total" style="font-size:24px">${weighted[i].toFixed(1)}</span>`, b)).join("")}
             </tr>
             <tr>
               <td>最冷月夜温 / 水温</td>
-              ${bestMark(waters).map((b, i) => tdCell(`夜 ${items[i].coldestNight}°C · 水 ${items[i].coldestWater}°C`, b)).join("")}
+              ${bestMark(waters).map((b, i) => tdCell(`${items[i].coldestNight}° / ${items[i].coldestWater}°C`, b)).join("")}
             </tr>
             <tr>
-              <td>5晚4★海景参考价</td>
-              ${bestMark(prices, false).map((b, i) => tdCell(`<strong>$${items[i].priceMin.toLocaleString()}</strong><div style="font-family:var(--font-sans);font-size:11px;color:var(--text-3)">${esc(cleanPriceDisplay(items[i].priceDisplay))}</div>`, b)).join("")}
+              <td>5 晚参考价</td>
+              ${bestMark(prices, false).map((b, i) => tdCell(`<strong style="color:var(--ocean-deep)">$${items[i].priceMin.toLocaleString()}</strong><div style="font-size:11.5px;color:var(--ink-3);margin-top:2px">${esc(cleanPriceDisplay(items[i].priceDisplay))}</div>`, b)).join("")}
             </tr>
             ${Object.entries(DIM_LABELS).map(([k, meta]) => {
               const vals = items.map(d => d.scores[k]);
               return `
                 <tr>
-                  <td>${meta.name} <span class="mono" style="color:var(--text-3)">/${meta.max}</span></td>
-                  ${bestMark(vals).map((b, i) => tdCell(`${vals[i]} / ${meta.max}`, b)).join("")}
+                  <td>${meta.name} <span style="color:var(--ink-3);font-size:11.5px">/ ${meta.max}</span></td>
+                  ${bestMark(vals).map((b, i) => tdCell(`${vals[i]}`, b)).join("")}
                 </tr>
               `;
             }).join("")}
@@ -1044,8 +977,8 @@ window.openCompareModal = function() {
               ${items.map(d => `<td style="font-size:12.5px">${esc(d.bestSeason)}</td>`).join("")}
             </tr>
             <tr>
-              <td>实时房价核验</td>
-              ${items.map(d => `<td><a class="text-link" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">Booking 核验 ${icon("external")}</a></td>`).join("")}
+              <td>实时房价</td>
+              ${items.map(d => `<td><a class="text-link" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">Booking ${icon("external")}</a></td>`).join("")}
             </tr>
           </tbody>
         </table>
@@ -1064,10 +997,10 @@ window.closeCompareModal = function() {
 };
 
 function buildMultiRadarSVG(items, strokes, fills) {
-  const size = 340;
+  const size = 380;
   const cx = size / 2;
   const cy = size / 2;
-  const radius = 112;
+  const radius = 116;
   const keys = Object.keys(MAX_SCORES);
   const n = keys.length;
 
@@ -1077,48 +1010,39 @@ function buildMultiRadarSVG(items, strokes, fills) {
     return [Math.round((cx + r * Math.cos(a)) * 10) / 10, Math.round((cy + r * Math.sin(a)) * 10) / 10];
   };
 
-  const rings = [0.25, 0.5, 0.75, 1.0].map(r => {
-    const pts = keys.map((_, i) => pointFor(i, r).join(",")).join(" ");
-    return `<polygon points="${pts}" class="${r === 1 ? "bp-ink" : "bp-faint"}" fill="none" />`;
-  }).join("");
+  const rings = [0.25, 0.5, 0.75, 1.0].map(r =>
+    `<circle cx="${cx}" cy="${cy}" r="${radius * r}" fill="${r === 1 ? "#fbf8f2" : "none"}" stroke="#d9cdb8" stroke-width="${r === 1 ? 1.2 : 0.8}" ${r === 1 ? "" : 'stroke-dasharray="2 4"'}/>`
+  ).reverse().join("");
 
   const axes = keys.map((k, i) => {
     const [x, y] = pointFor(i, 1.0);
-    const [lx, ly] = pointFor(i, 1.22);
+    const [lx, ly] = pointFor(i, 1.28);
     return `
-      <line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="bp-faint" />
-      <text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" class="bp-label-strong">${DIM_LABELS[k].name}</text>
+      <line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#e3dacb" stroke-width="0.8"/>
+      <text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="12" font-family="Noto Sans SC, sans-serif" fill="#4b5a63">${DIM_LABELS[k].name}</text>
     `;
   }).join("");
 
   const polygons = items.map((d, idx) => {
     const pts = keys.map((k, i) => pointFor(i, Math.min(1, d.scores[k] / MAX_SCORES[k])));
-    const dots = pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2.8" fill="var(--bg)" stroke="${strokes[idx]}" stroke-width="1.8" />`).join("");
-    return `<polygon points="${pts.map(p => p.join(",")).join(" ")}" fill="${fills[idx]}" stroke="${strokes[idx]}" stroke-width="2" />${dots}`;
+    const dots = pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3" fill="#fbf8f2" stroke="${strokes[idx]}" stroke-width="1.8"/>`).join("");
+    return `<polygon points="${pts.map(p => p.join(",")).join(" ")}" fill="${fills[idx]}" stroke="${strokes[idx]}" stroke-width="1.8" stroke-linejoin="round"/>${dots}`;
   }).join("");
 
   return `
-    <svg class="bp" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="bp-modal-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M20 0H0V20" class="bp-grid" fill="none"/>
-        </pattern>
-      </defs>
-      <rect width="${size}" height="${size}" fill="url(#bp-modal-grid)"/>
+    <svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="八项得分雷达图">
       ${rings}${axes}${polygons}
     </svg>
   `;
 }
 
 // ---------------------------------------------------------------------------
-// Destination Dossier Dialog (#dest-modal)
+// Destination dossier dialog (#dest-modal)
 // ---------------------------------------------------------------------------
 
 window.openDestModal = function(id) {
   const modal = document.getElementById("dest-modal");
   const body = document.getElementById("dest-modal-body");
-  const titleEl = document.getElementById("dest-modal-title");
-  const kickerEl = document.getElementById("dest-modal-kicker");
   if (!modal || !body) return;
 
   const all = getProcessedData();
@@ -1126,69 +1050,66 @@ window.openDestModal = function(id) {
   const d = all.find(x => x.id === id) || fallbackAll.find(x => x.id === id);
   if (!d) return;
 
-  const rank = all.findIndex(x => x.id === id) + 1 || d.origRank;
+  const rank = all.findIndex(x => x.id === id) + 1;
   const isCompared = state.compareIds.includes(d.id);
-
-  if (kickerEl) {
-    kickerEl.textContent = `${d._iso || "GL"} · ${d.category === "tropical" ? "365D TROPICAL" : "SEASONAL COAST"} #${pad2(d.origRank)} · ${d.region}`;
-  }
-  if (titleEl) {
-    titleEl.innerHTML = `${esc(d._zh)} ${d._en ? `<span style="font-family:var(--font-latin);font-style:italic;font-weight:400;font-size:18px;color:var(--text-3);margin-left:8px">${esc(d._en)}</span>` : ""}`;
-  }
+  const isTrop = d.category === "tropical";
 
   const f = d.flights || {};
   const flightRows = [
-    ["上海 (PVG/SHA)", f.SHA],
-    ["香港 (HKG)", f.HKG],
-    ["法兰克福 (FRA)", f.FRA]
+    ["上海", f.SHA],
+    ["香港", f.HKG],
+    ["法兰克福", f.FRA]
   ].map(([hub, info]) => {
     if (info && info.nonstop) {
-      return `<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:12.5px"><span>${hub}</span><span class="mono" style="color:var(--accent)">直飞 ${esc(info.duration)} ${info.airline ? "· " + esc(info.airline) : ""} ${info.total2p ? "· 双人机酒 $" + info.total2p.toLocaleString() : ""}</span></div>`;
+      const extra = [info.airline, info.total2p ? `双人机酒 $${info.total2p.toLocaleString()}` : ""].filter(Boolean).join(" · ");
+      return `<div class="flight-row"><span>从${hub}</span><span class="ok">直飞 ${esc(info.duration)}${extra ? `<br><small style="font-weight:400;color:var(--ink-3)">${esc(extra)}</small>` : ""}</span></div>`;
     }
-    return `<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:12.5px"><span>${hub}</span><span style="color:var(--text-3)">需中转联程</span></div>`;
+    return `<div class="flight-row"><span>从${hub}</span><span class="no">需转机</span></div>`;
   }).join("");
 
   body.innerHTML = `
-    <div class="compare-layout">
-      <div>
-        <div class="lab-sheet">
-          <div class="lab-canvas">${buildCardBlueprintSVG(d, rank)}</div>
-          <div class="title-block">
-            <span><small>ID</small> ${esc(d.id)}</span>
-            <span><small>SEASON</small> ${esc(d.bestSeason)}</span>
-          </div>
-        </div>
-        <p style="margin-top:16px;font-size:14px;line-height:1.8;color:var(--text-2)">${esc(d.note || "")}</p>
-        <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px">
-          <a class="btn btn-solid" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">Booking 实时房价核验 ${icon("external")}</a>
-          <button type="button" class="btn" onclick="toggleCompare('${d.id}');openDestModal('${d.id}')">
-            ${icon(isCompared ? "check" : "plus")}<span>${isCompared ? "已加入对比栏" : "加入横向对比"}</span>
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <div style="border-top:1.5px solid var(--rule);padding-top:12px">
-          <div class="mono" style="font-size:11px;color:var(--text-3)">EIGHT-DIMENSION BREAKDOWN · 八维量化拆解</div>
+    <div class="dossier-hero">
+      ${buildPostcardSVG(d, { wide: true, prefix: "dm" })}
+      <button type="button" class="dialog-close" onclick="closeDestModal()" aria-label="关闭">${icon("close")}</button>
+    </div>
+    <div class="dossier-head">
+      <span class="eyebrow">${esc(d.region)} · ${isTrop ? "全年真热带" : "季节性海岸"} 原榜第 ${d.origRank} 名</span>
+      <h2 id="dest-modal-title">${esc(d._zh)}${d._en ? `<span>${esc(d._en)}</span>` : ""}</h2>
+      <dl class="dossier-stats">
+        <div><dt>当前排名</dt><dd>${rank > 0 ? `No. ${rank}` : "—"}</dd></div>
+        <div><dt>综合得分</dt><dd>${d.weightedTotal.toFixed(1)}</dd></div>
+        <div><dt>最冷月夜温 / 水温</dt><dd>${d.coldestNight}° / ${d.coldestWater}°</dd></div>
+        <div><dt>5 晚参考价</dt><dd>$${d.priceMin.toLocaleString()}</dd></div>
+      </dl>
+    </div>
+    <div class="dialog-body">
+      <div class="dossier-grid">
+        <div>
+          <p class="block-h">八项得分</p>
           ${Object.entries(DIM_LABELS).map(([k, meta]) => {
             const pct = Math.min(100, Math.round((d.scores[k] / meta.max) * 100));
             return `
-              <div style="padding:8px 0;border-bottom:1px solid var(--line)">
-                <div style="display:flex;justify-content:space-between;font-size:13px">
-                  <span><strong>${meta.name}</strong> <span style="font-size:11.5px;color:var(--text-3)">${meta.desc}</span></span>
-                  <span class="mono">${d.scores[k]} / ${meta.max}</span>
-                </div>
-                <div style="height:3px;background:var(--line-strong);margin-top:5px">
-                  <div style="height:100%;width:${pct}%;background:var(--accent)"></div>
-                </div>
+              <div class="dim-row">
+                <div class="dim-row-head"><span><strong>${meta.name}</strong><small>${meta.desc}</small></span><span>${d.scores[k]} / ${meta.max}</span></div>
+                <div class="dim-row-bar"><i style="width:${pct}%"></i></div>
               </div>
             `;
           }).join("")}
         </div>
-
-        <div style="margin-top:20px">
-          <div class="mono" style="font-size:11px;color:var(--text-3);margin-bottom:6px">DIRECT FLIGHT MATRIX · 三大枢纽直飞核验</div>
+        <div>
+          <p class="block-h">最佳季节</p>
+          <p style="font-size:14px;color:var(--ink)">${esc(d.bestSeason)}</p>
+          <p class="block-h" style="margin-top:24px">直飞航线</p>
           ${flightRows}
+          <p class="dossier-note">${esc(d.note || "")}</p>
+          ${renderTags(d.tags)}
+          <p style="margin-top:14px;font-size:12.5px;color:var(--ink-3)">房价说明：${esc(cleanPriceDisplay(d.priceDisplay))}</p>
+          <div class="dossier-actions">
+            <a class="btn btn-solid" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">在 Booking 查看实时房价 ${icon("external")}</a>
+            <button type="button" class="btn" onclick="toggleCompare('${d.id}');openDestModal('${d.id}')">
+              ${icon(isCompared ? "check" : "plus")}<span>${isCompared ? "已加入对比" : "加入对比"}</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1235,14 +1156,14 @@ function renderPaletteResults(q) {
     : all.slice(0, 12);
 
   if (!matches.length) {
-    box.innerHTML = `<div style="padding:28px;text-align:center;color:var(--text-3);font-size:13px">未找到匹配的目的地</div>`;
+    box.innerHTML = `<div style="padding:28px;text-align:center;color:var(--ink-3);font-size:13px">未找到匹配的目的地</div>`;
     return;
   }
 
   box.innerHTML = matches.map(d => `
     <button type="button" class="palette-item" onclick="closePalette();openDestModal('${d.id}')">
-      <span class="code">${esc(d._iso)} · ${d.weightedTotal.toFixed(1)}</span>
-      <span><strong>${esc(d._zh)}</strong> <span style="font-family:var(--font-latin);font-style:italic;color:var(--text-3)">${esc(d._en)}</span></span>
+      <span class="code" style="min-width:34px">${d.weightedTotal.toFixed(1)}</span>
+      <span><strong style="font-family:var(--serif);font-weight:500;color:var(--ocean-deep)">${esc(d._zh)}</strong> <span style="font-family:var(--display);font-style:italic;color:var(--ink-3)">${esc(d._en)}</span></span>
       <span class="sub">$${d.priceMin.toLocaleString()}</span>
     </button>
   `).join("");
@@ -1409,9 +1330,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-icon]").forEach(el => { el.innerHTML = icon(el.getAttribute("data-icon")); });
 
   const params = new URLSearchParams(window.location.search);
-  const qTheme = params.get("theme");
-  if (qTheme === "light" || qTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", qTheme);
+  const qSearch = params.get("q");
+  if (qSearch) {
+    state.searchQuery = qSearch;
+    const si = document.getElementById("filter-search");
+    if (si) si.value = qSearch;
+    updateSearchClearBtn();
   }
   const qView = params.get("view");
   if (qView === "cards" || qView === "table") {
@@ -1503,9 +1427,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "/") {
       e.preventDefault();
       openPalette();
-    } else if (e.key.toLowerCase() === "t") {
-      e.preventDefault();
-      toggleTheme();
     }
   });
 });
