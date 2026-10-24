@@ -56,7 +56,7 @@ window.SAILING_TOP5_ROUTES = [
     "photos": [
       {
         "caption": "凯法利尼亚岛菲斯卡多 Fiskardo 完好保存的威尼斯彩色建筑与游艇港",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fiskardo%2C_Kefalonia.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Fiskardo%2C_Kefalonia.jpg/1280px-Fiskardo%2C_Kefalonia.jpg"
       },
       {
         "caption": "伊萨卡岛基奥尼 Kioni 马蹄形海湾与红顶石屋全景",
@@ -113,7 +113,9 @@ window.SAILING_TOP5_ROUTES = [
         "daytimeHighlights": "—",
         "eveningPortAndDining": "距离 Preveza/Aktion (PVK) 机场仅 25 分钟车程"
       }
-    ]
+    ],
+    "lat": 38.833,
+    "lon": 20.711
   },
   {
     "rank": 2,
@@ -160,11 +162,11 @@ window.SAILING_TOP5_ROUTES = [
     "photos": [
       {
         "caption": "高悬于70米白垩悬崖之上的法国科西嘉博尼法乔 Bonifacio 古城",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Citadel_and_cliffs_of_Bonifacio.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Citadel_and_cliffs_of_Bonifacio.jpg/1280px-Citadel_and_cliffs_of_Bonifacio.jpg"
       },
       {
         "caption": "卡普雷拉岛 Cala Coticcio 被称为“欧洲大溪地”的花岗岩果冻海",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Cala_Coticcio.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Cala_Coticcio.jpg/1280px-Cala_Coticcio.jpg"
       }
     ],
     "itinerary7Days": [
@@ -217,7 +219,9 @@ window.SAILING_TOP5_ROUTES = [
         "daytimeHighlights": "—",
         "eveningPortAndDining": "距奥尔比亚机场（Olbia Costa Smeralda Airport）仅 25 分钟车程"
       }
-    ]
+    ],
+    "lat": 41.033,
+    "lon": 9.533
   },
   {
     "rank": 3,
@@ -262,11 +266,11 @@ window.SAILING_TOP5_ROUTES = [
     "photos": [
       {
         "caption": "夜晚在海面上观赏斯特龙博利活火山 Stromboli 喷发赤红岩浆",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg/1280px-Mt_Stromboli_Mesmerising_Explosion.jpg"
       },
       {
         "caption": "帕纳雷阿岛 Panarea 天然柱状玄武岩泳池海湾 Cala Junco",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Cala_Junco.JPG"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Cala_Junco.JPG/1280px-Cala_Junco.JPG"
       }
     ],
     "itinerary7Days": [
@@ -319,7 +323,9 @@ window.SAILING_TOP5_ROUTES = [
         "daytimeHighlights": "—",
         "eveningPortAndDining": "前往卡塔尼亚机场（CTA）或顺游陶尔米纳（Taormina）古希腊剧场"
       }
-    ]
+    ],
+    "lat": 38.128,
+    "lon": 15.105
   },
   {
     "rank": 4,
@@ -433,7 +439,9 @@ window.SAILING_TOP5_ROUTES = [
         "daytimeHighlights": "—",
         "eveningPortAndDining": "乘车去牛肉岛机场（EIS）或乘快艇 50 分钟回美属圣托马斯（STT）返程"
       }
-    ]
+    ],
+    "lat": 18.425,
+    "lon": -64.62
   },
   {
     "rank": 5,
@@ -476,11 +484,11 @@ window.SAILING_TOP5_ROUTES = [
     "photos": [
       {
         "caption": "博拉博拉岛耸立在七色泻湖中央的奥特马努火山峰 Mount Otemanu",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Mount_Otemanu_Bora_Bora.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Mount_Otemanu_Bora_Bora.jpg/1280px-Mount_Otemanu_Bora_Bora.jpg"
       },
       {
         "caption": "外围珊瑚环礁保护下如镜面般平静的博拉博拉荧光蓝泻湖",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg/1280px-Bora-Bora_Lagoon_-_French_Polynesia.jpg"
       }
     ],
     "itinerary7Days": [
@@ -533,7 +541,9 @@ window.SAILING_TOP5_ROUTES = [
         "daytimeHighlights": "—",
         "eveningPortAndDining": "距 Raiatea 机场（RFP）仅 10 分钟车程，乘机 45 分钟返回帕皮提（PPT）国际机场"
       }
-    ]
+    ],
+    "lat": -16.733,
+    "lon": -151.44
   }
 ];
 
@@ -1571,8 +1581,8 @@ window.SAILING_VERIFIED_BOATS_2027 = [
         "disc": 15
       },
       "July": {
-        "list": 66100,
-        "now": 56515,
+        "list": 6610,
+        "now": 5652,
         "disc": 15
       },
       "August": {
@@ -2227,7 +2237,7 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "莱夫卡达镇海滨游艇码头与彩色老城",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Lefkada_Town_IMG_5597.jpg_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Lefkada_Town_IMG_5597.jpg_-_panoramio.jpg/1280px-Lefkada_Town_IMG_5597.jpg_-_panoramio.jpg"
         },
         {
           "caption": "莱夫卡达尼德里 Nydri 海湾与远眺王子群岛",
@@ -2245,11 +2255,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "梅加尼西岛 Spilia 海湾锚地与山顶 Spartochori 村庄",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Spilio%2C_Meganisi.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Spilio%2C_Meganisi.jpg/1280px-Spilio%2C_Meganisi.jpg"
         },
         {
           "caption": "从梅加尼西岛 Spartochori 悬崖小镇俯瞰爱奥尼亚海湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Spartochori%2C_Meganisi.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Spartochori%2C_Meganisi.jpg/1280px-Spartochori%2C_Meganisi.jpg"
         }
       ]
     },
@@ -2285,7 +2295,7 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
         },
         {
           "caption": "基奥尼 Kioni 港湾清澈见底的帆船停泊区",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Ithaca_-_Kioni_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ithaca_-_Kioni_-_panoramio.jpg/1280px-Ithaca_-_Kioni_-_panoramio.jpg"
         }
       ]
     },
@@ -2317,11 +2327,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "凯法利尼亚岛菲斯卡多 Fiskardo 完好保存的威尼斯彩色建筑与游艇港",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fiskardo%2C_Kefalonia.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Fiskardo%2C_Kefalonia.jpg/1280px-Fiskardo%2C_Kefalonia.jpg"
         },
         {
           "caption": "菲斯卡多 Fiskardo 港湾中心紧贴海面的海鲜餐桌与帆船",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Center_of_Fiskardo_Greece_2022.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Center_of_Fiskardo_Greece_2022.jpg/1280px-Center_of_Fiskardo_Greece_2022.jpg"
         }
       ]
     },
@@ -2335,11 +2345,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "凯法利尼亚岛阿索斯 Assos 威尼斯城堡半岛地峡与牛奶蓝海湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Assos_Greece_Kefalonia.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Assos_Greece_Kefalonia.jpg/1280px-Assos_Greece_Kefalonia.jpg"
         },
         {
           "caption": "阿索斯 Assos 海湾岸边的彩色小屋与透明浅滩",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Assos_Greece_Kefalonia2.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Assos_Greece_Kefalonia2.jpg/1280px-Assos_Greece_Kefalonia2.jpg"
         }
       ]
     },
@@ -2353,11 +2363,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "莱夫卡达南端希沃塔湾 Sivota 360度群山环抱的天然避风峡湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Sivota%2C_Greece_-_panoramio_%282%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Sivota%2C_Greece_-_panoramio_%282%29.jpg/1280px-Sivota%2C_Greece_-_panoramio_%282%29.jpg"
         },
         {
           "caption": "希沃塔湾 Sivota 岸边餐厅专属游艇木栈桥与清澈海面",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Sivota%2C_Greece_-_panoramio_%283%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Sivota%2C_Greece_-_panoramio_%283%29.jpg/1280px-Sivota%2C_Greece_-_panoramio_%283%29.jpg"
         }
       ]
     },
@@ -2376,11 +2386,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "撒丁岛切尔沃港 Porto Cervo 游艇码头与色彩柔和的岸边小镇",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Porto_Cervo%2C_Arzachena_OT%2C_Sardinia%2C_Italy_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Porto_Cervo%2C_Arzachena_OT%2C_Sardinia%2C_Italy_-_panoramio.jpg/1280px-Porto_Cervo%2C_Arzachena_OT%2C_Sardinia%2C_Italy_-_panoramio.jpg"
         },
         {
           "caption": "切尔沃港翡翠海岸停泊的帆船与碧绿海水",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Porto_Cervo%2C_Sardinia_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Porto_Cervo%2C_Sardinia_-_panoramio.jpg/1280px-Porto_Cervo%2C_Sardinia_-_panoramio.jpg"
         }
       ]
     },
@@ -2392,11 +2402,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "马达莱纳岛 La Maddalena 古镇全景与港口",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/La_Maddalena%2C_panorama_%2803%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/La_Maddalena%2C_panorama_%2803%29.jpg/1280px-La_Maddalena%2C_panorama_%2803%29.jpg"
         },
         {
           "caption": "卡普雷拉岛 Cala Coticcio 被称为“小大溪地”的透明花岗岩海湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Cala_Coticcio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Cala_Coticcio.jpg/1280px-Cala_Coticcio.jpg"
         }
       ]
     },
@@ -2408,7 +2418,7 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "布德利岛 Budelli 传奇粉红沙滩与翡翠泻湖",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Spiaggia_Rosa%2C_Cala_di_Roto_%28Isola_di_Budelli%29%2C_Arcipelago_di_La_Maddalena%2C_Sardegna%2C_Italia%2C_Mar_Mediterraneo.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Spiaggia_Rosa%2C_Cala_di_Roto_%28Isola_di_Budelli%29%2C_Arcipelago_di_La_Maddalena%2C_Sardegna%2C_Italia%2C_Mar_Mediterraneo.jpg/1280px-Spiaggia_Rosa%2C_Cala_di_Roto_%28Isola_di_Budelli%29%2C_Arcipelago_di_La_Maddalena%2C_Sardegna%2C_Italia%2C_Mar_Mediterraneo.jpg"
         },
         {
           "caption": "斯帕尔吉岛 Spargi 的 Cala Corsara 透明果冻海湾",
@@ -2424,11 +2434,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "法国科西嘉拉韦齐群岛 Îles Lavezzi 的巨石与碧蓝浅滩",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cala_du_Chiesa_-_%C3%AEles_Lavezzi.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Cala_du_Chiesa_-_%C3%AEles_Lavezzi.jpg/1280px-Cala_du_Chiesa_-_%C3%AEles_Lavezzi.jpg"
         },
         {
           "caption": "拉韦齐群岛停满双体帆船的天然避风锚地",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Iles_Lavezzi_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Iles_Lavezzi_-_panoramio.jpg/1280px-Iles_Lavezzi_-_panoramio.jpg"
         }
       ]
     },
@@ -2440,11 +2450,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "高悬于70米白垩悬崖之上的法国科西嘉博尼法乔 Bonifacio 古城",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Citadel_and_cliffs_of_Bonifacio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Citadel_and_cliffs_of_Bonifacio.jpg/1280px-Citadel_and_cliffs_of_Bonifacio.jpg"
         },
         {
           "caption": "从海上仰望博尼法乔悬崖上的千年老房子与海蚀奇岩",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Corsica_Bonifacio_Grain_de_Sable_Capo_Pertusato.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Corsica_Bonifacio_Grain_de_Sable_Capo_Pertusato.jpg/1280px-Corsica_Bonifacio_Grain_de_Sable_Capo_Pertusato.jpg"
         }
       ]
     },
@@ -2456,11 +2466,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "撒丁岛北端圣特雷莎加卢拉 Santa Teresa Gallura 海岸全景",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Santa_Teresa_Gallura_-_Panorama_%2801%29.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Santa_Teresa_Gallura_-_Panorama_%2801%29.JPG/1280px-Santa_Teresa_Gallura_-_Panorama_%2801%29.JPG"
         },
         {
           "caption": "圣特雷莎加卢拉彩色海湾与清澈见底的海水",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Santa_Teresa_Gallura_68DSC_0646_%2849669862218%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Santa_Teresa_Gallura_68DSC_0646_%2849669862218%29.jpg/1280px-Santa_Teresa_Gallura_68DSC_0646_%2849669862218%29.jpg"
         }
       ]
     }
@@ -2474,11 +2484,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "群山与松林环抱的戈杰克 Göcek 游艇海湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/G%C3%B6cek.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/G%C3%B6cek.jpg/1280px-G%C3%B6cek.jpg"
         },
         {
           "caption": "傍晚时分宁静如镜的 Port Göcek 水道与步道",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Port_G%C3%B6cek_early_evening.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Port_G%C3%B6cek_early_evening.jpg/1280px-Port_G%C3%B6cek_early_evening.jpg"
         }
       ]
     },
@@ -2506,11 +2516,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "亚瑟贾群岛 Yassıca Islands 延伸入海的浅水沙嘴与帆船锚地",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Yass%C4%B1ca_Adalar%C4%B1_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Yass%C4%B1ca_Adalar%C4%B1_-_panoramio.jpg/1280px-Yass%C4%B1ca_Adalar%C4%B1_-_panoramio.jpg"
         },
         {
           "caption": "亚瑟贾群岛星罗棋布的松林小岛与平静的绿松石海面",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Yass%C4%B1ca_Adalar%C4%B1_-_panoramio_%281%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Yass%C4%B1ca_Adalar%C4%B1_-_panoramio_%281%29.jpg/1280px-Yass%C4%B1ca_Adalar%C4%B1_-_panoramio_%281%29.jpg"
         }
       ]
     },
@@ -2522,11 +2532,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "贝德里·拉赫米湾 Bedri Rahmi Bay 著名的巨石鱼形彩绘",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Fish_Figure_on_a_Rock_Painted_By_Bedri_Rahmi_Ey%C3%BCbo%C4%9Flu%2C_located_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Fish_Figure_on_a_Rock_Painted_By_Bedri_Rahmi_Ey%C3%BCbo%C4%9Flu%2C_located_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg/1280px-Fish_Figure_on_a_Rock_Painted_By_Bedri_Rahmi_Ey%C3%BCbo%C4%9Flu%2C_located_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg"
         },
         {
           "caption": "贝德里·拉赫米湾岸边隐于松林中的私家栈桥餐厅 Onno",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Restauran_%28Onno%29_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Restauran_%28Onno%29_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg/1280px-Restauran_%28Onno%29_in_Bedri_Rahmi_Bay_in_G%C3%B6cek.jpg"
         }
       ]
     },
@@ -2538,11 +2548,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "圣尼古拉岛 Gemiler Island 海湾锚地与山上的拜占庭古城遗址",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/St._Nicolas_Koyu..._-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/St._Nicolas_Koyu..._-_panoramio.jpg/1280px-St._Nicolas_Koyu..._-_panoramio.jpg"
         },
         {
           "caption": "费特希耶山谷中保存完好的百年石屋古镇 Kayaköy",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Kayak%C3%B6y_2014.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kayak%C3%B6y_2014.jpg/1280px-Kayak%C3%B6y_2014.jpg"
         }
       ]
     },
@@ -2554,11 +2564,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "从高空俯瞰峭壁环抱的蝴蝶谷 Butterfly Valley 海湾与白沙滩",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Butterfly_valley_view.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Butterfly_valley_view.jpg/1280px-Butterfly_valley_view.jpg"
         },
         {
           "caption": "蝴蝶谷清澈的蓝绿色海面与停泊的游船",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Butterfly_Valley_Oludeniz_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Butterfly_Valley_Oludeniz_-_panoramio.jpg/1280px-Butterfly_Valley_Oludeniz_-_panoramio.jpg"
         }
       ]
     }
@@ -2572,11 +2582,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "武尔卡诺岛 Vulcano 冒着蒸汽的火山口与东侧港湾 Porto di Levante",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Italy_Vulcano_Porto_di_Levante.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Italy_Vulcano_Porto_di_Levante.jpg/1280px-Italy_Vulcano_Porto_di_Levante.jpg"
         },
         {
           "caption": "武尔卡诺岛西侧 Porto di Ponente 黑沙滩与帆船锚地",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Vulcano_-_Porto_di_ponente_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Vulcano_-_Porto_di_ponente_-_panoramio.jpg/1280px-Vulcano_-_Porto_di_ponente_-_panoramio.jpg"
         }
       ]
     },
@@ -2588,11 +2598,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "利帕里岛 Lipari 热闹的 Marina Corta 小港与海防古堡",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Lipari_Castle_and_Marina_Corta_4-2017.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Lipari_Castle_and_Marina_Corta_4-2017.jpg/1280px-Lipari_Castle_and_Marina_Corta_4-2017.jpg"
         },
         {
           "caption": "利帕里海防卫城巨岩与岸边的巴洛克教堂",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Lipari._Rupe_del_Castello_di_Lipari_da_Marina_Corta_%2801519%29.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lipari._Rupe_del_Castello_di_Lipari_da_Marina_Corta_%2801519%29.JPG/1280px-Lipari._Rupe_del_Castello_di_Lipari_da_Marina_Corta_%2801519%29.JPG"
         }
       ]
     },
@@ -2604,11 +2614,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "鸟瞰萨利纳岛 Salina 壮观的双子火山锥地貌",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Aerial_image_of_Salina_%28view_from_the_southwest%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Aerial_image_of_Salina_%28view_from_the_southwest%29.jpg/1280px-Aerial_image_of_Salina_%28view_from_the_southwest%29.jpg"
         },
         {
           "caption": "萨利纳岛绿意盎然的海岸梯田与海湾小镇",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Salina_S%C3%BCdwest.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Salina_S%C3%BCdwest.JPG/1280px-Salina_S%C3%BCdwest.JPG"
         }
       ]
     },
@@ -2620,11 +2630,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "菲利库迪岛 Filicudi 海中拔地而起的 71 米火山岩柱 La Canna",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Filicudi_from_ENE%2C_%27Scolgio_della_Fortuna%27_and_%27Faraglione_La_Canna%27_rocks%2C_Alicudi_%28Eolian_Islands%29.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Filicudi_from_ENE%2C_%27Scolgio_della_Fortuna%27_and_%27Faraglione_La_Canna%27_rocks%2C_Alicudi_%28Eolian_Islands%29.jpg/1280px-Filicudi_from_ENE%2C_%27Scolgio_della_Fortuna%27_and_%27Faraglione_La_Canna%27_rocks%2C_Alicudi_%28Eolian_Islands%29.jpg"
         },
         {
           "caption": "菲利库迪岛宁静的火山海岸与渔村港湾",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Filicudi_estate_2021.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Filicudi_estate_2021.jpg/1280px-Filicudi_estate_2021.jpg"
         }
       ]
     },
@@ -2636,11 +2646,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "帕纳雷阿岛 Panarea 著名的天然玄武岩泳池海湾 Cala Junco",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Cala_Junco.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Cala_Junco.JPG/1280px-Cala_Junco.JPG"
         },
         {
           "caption": "从帕纳雷阿岛青铜时代史前村落遗址俯瞰翡翠海湾与帆船",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Panarea_-_vista_dal_villaggio_preistorico.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Panarea_-_vista_dal_villaggio_preistorico.jpg/1280px-Panarea_-_vista_dal_villaggio_preistorico.jpg"
         }
       ]
     },
@@ -2652,11 +2662,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "从海面仰望高耸入云的斯特龙博利活火山岛 Stromboli 与山脚下的白色村庄",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Stromboli_from_the_sea_2018.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Stromboli_from_the_sea_2018.jpg/1280px-Stromboli_from_the_sea_2018.jpg"
         },
         {
           "caption": "夜晚在海面上观赏斯特龙博利火山 Stromboli 喷发赤红岩浆的震撼奇观",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg/1280px-Mt_Stromboli_Mesmerising_Explosion.jpg"
         }
       ]
     },
@@ -2679,7 +2689,7 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
         },
         {
           "caption": "The Baths 巨型花岗岩围绕出的天然海水泳池与白沙滩",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/The_Baths_%28Virgin_Gorda%29.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/The_Baths_%28Virgin_Gorda%29.JPG/1280px-The_Baths_%28Virgin_Gorda%29.JPG"
         }
       ]
     },
@@ -2695,7 +2705,7 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
         },
         {
           "caption": "Jost Van Dyke 岛绿松石色的海湾与加勒比群岛风光",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Karibik_-_Brit._Jungferninseln_-_Jost_van_Dyke_%E2%80%93_and_Little_Jost_van_Dyke_-_panoramio.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Karibik_-_Brit._Jungferninseln_-_Jost_van_Dyke_%E2%80%93_and_Little_Jost_van_Dyke_-_panoramio.jpg/1280px-Karibik_-_Brit._Jungferninseln_-_Jost_van_Dyke_%E2%80%93_and_Little_Jost_van_Dyke_-_panoramio.jpg"
         }
       ]
     },
@@ -2735,11 +2745,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "法属波利尼西亚博拉博拉岛 Bora Bora 耸立在七色泻湖中央的奥特马努山",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Mount_Otemanu_Bora_Bora.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Mount_Otemanu_Bora_Bora.jpg/1280px-Mount_Otemanu_Bora_Bora.jpg"
         },
         {
           "caption": "博拉博拉岛外环礁保护下如蓝宝石般的平静泻湖",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg/1280px-Bora-Bora_Lagoon_-_French_Polynesia.jpg"
         }
       ]
     },
@@ -2755,11 +2765,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "塞舌尔拉迪格岛 La Digue 举世闻名的花岗岩海滩 Anse Source d'Argent",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Anse_Source_d%27Argent_3-La_Digue.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Anse_Source_d%27Argent_3-La_Digue.jpg/1280px-Anse_Source_d%27Argent_3-La_Digue.jpg"
         },
         {
           "caption": "拉迪格岛翡翠色浅礁与奇特的粉灰花岗岩巨石",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Anse_source_d_argent_2.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Anse_source_d_argent_2.jpg/1280px-Anse_source_d_argent_2.jpg"
         }
       ]
     },
@@ -2773,11 +2783,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "巴哈马埃克苏马群岛 Exuma Cays 如发光翡翠般的浅水沙洲",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Goat_Cay%2C_Exuma%2C_The_Bahamas.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Goat_Cay%2C_Exuma%2C_The_Bahamas.jpg/1280px-Goat_Cay%2C_Exuma%2C_The_Bahamas.jpg"
         },
         {
           "caption": "巴哈马埃克苏马群岛著名的游泳小猪 Pig Beach",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Vorobek_Bahamas_-_swimming_pigs.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Vorobek_Bahamas_-_swimming_pigs.jpg/1280px-Vorobek_Bahamas_-_swimming_pigs.jpg"
         }
       ]
     },
@@ -2811,11 +2821,11 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "泰国攀牙湾 Phang Nga Bay 壮观的海上喀斯特石灰岩峰林",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Phang_Nga_Bay%2C_Karst_islands%2C_Thailand.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Phang_Nga_Bay%2C_Karst_islands%2C_Thailand.jpg/1280px-Phang_Nga_Bay%2C_Karst_islands%2C_Thailand.jpg"
         },
         {
           "caption": "攀牙湾水平如镜的航道与孤峰奇石",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Phang_Nga_Bay%2C_Karst_islands_2%2C_Thailand.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Phang_Nga_Bay%2C_Karst_islands_2%2C_Thailand.jpg/1280px-Phang_Nga_Bay%2C_Karst_islands_2%2C_Thailand.jpg"
         }
       ]
     },
@@ -2830,19 +2840,17 @@ window.SAILING_ROUTE_STOPS_GALLERY = {
       "photos": [
         {
           "caption": "澳大利亚圣灵群岛希尔湾 Hill Inlet 与白天堂海滩梦幻的流沙旋涡",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Hill_Inlet_and_Whitehaven_Beach.jpg"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Hill_Inlet_and_Whitehaven_Beach.jpg/1280px-Hill_Inlet_and_Whitehaven_Beach.jpg"
         },
         {
           "caption": "圣灵群岛 Whitehaven Beach 纯白硅砂与蓝绿色大堡礁内海",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Hill_Inlet_at_the_end_of_Whitehaven_Beach_in_the_Whitsundays.JPG"
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Hill_Inlet_at_the_end_of_Whitehaven_Beach_in_the_Whitsundays.JPG/1280px-Hill_Inlet_at_the_end_of_Whitehaven_Beach_in_the_Whitsundays.JPG"
         }
       ]
     }
   ]
 };
 
-
-// Expanded Global Top 20 Catamaran Sailing Routes
 window.SAILING_ROUTES_TOP20 = [
   {
     "rank": 1,
@@ -2898,7 +2906,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "凯法利尼亚岛菲斯卡多 Fiskardo 完好保存的威尼斯彩色建筑与游艇港",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Fiskardo%2C_Kefalonia.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Fiskardo%2C_Kefalonia.jpg/1280px-Fiskardo%2C_Kefalonia.jpg"
       },
       {
         "caption": "伊萨卡岛基奥尼 Kioni 马蹄形海湾与红顶石屋全景",
@@ -2960,7 +2968,9 @@ window.SAILING_ROUTES_TOP20 = [
     "seaCalmness": "5/5 极平静内海",
     "waterBeauty": "5/5 荧光牛奶蓝",
     "townAndFood": "4.8/5 威尼斯古镇+免费栈桥餐厅",
-    "perPersonShoulderEUR": 1030
+    "perPersonShoulderEUR": 1030,
+    "lat": 38.833,
+    "lon": 20.711
   },
   {
     "rank": 2,
@@ -3007,11 +3017,11 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "高悬于70米白垩悬崖之上的法国科西嘉博尼法乔 Bonifacio 古城",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Citadel_and_cliffs_of_Bonifacio.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Citadel_and_cliffs_of_Bonifacio.jpg/1280px-Citadel_and_cliffs_of_Bonifacio.jpg"
       },
       {
         "caption": "卡普雷拉岛 Cala Coticcio 被称为“欧洲大溪地”的花岗岩果冻海",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Cala_Coticcio.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Cala_Coticcio.jpg/1280px-Cala_Coticcio.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3069,7 +3079,9 @@ window.SAILING_ROUTES_TOP20 = [
     "seaCalmness": "4.2/5 群岛遮蔽(海峡有风)",
     "waterBeauty": "5/5 粉红沙滩果冻海",
     "townAndFood": "5/5 千年白垩悬崖古堡",
-    "perPersonShoulderEUR": 1236
+    "perPersonShoulderEUR": 1236,
+    "lat": 41.033,
+    "lon": 9.533
   },
   {
     "rank": 3,
@@ -3114,11 +3126,11 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "夜晚在海面上观赏斯特龙博利活火山 Stromboli 喷发赤红岩浆",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mt_Stromboli_Mesmerising_Explosion.jpg/1280px-Mt_Stromboli_Mesmerising_Explosion.jpg"
       },
       {
         "caption": "帕纳雷阿岛 Panarea 天然柱状玄武岩泳池海湾 Cala Junco",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Cala_Junco.JPG"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Cala_Junco.JPG/1280px-Cala_Junco.JPG"
       }
     ],
     "itinerary7Days": [
@@ -3176,7 +3188,9 @@ window.SAILING_ROUTES_TOP20 = [
     "seaCalmness": "4.4/5 深水火山海",
     "waterBeauty": "4.7/5 火山黑沙与翡翠蚀洞",
     "townAndFood": "5/5 夜看活火山喷发+米其林",
-    "perPersonShoulderEUR": 1110
+    "perPersonShoulderEUR": 1110,
+    "lat": 38.128,
+    "lon": 15.105
   },
   {
     "rank": 4,
@@ -3295,7 +3309,9 @@ window.SAILING_ROUTES_TOP20 = [
     "seaCalmness": "5/5 德雷克水道全封闭",
     "waterBeauty": "5/5 珊瑚礁海龟与巨石浴场",
     "townAndFood": "4.2/5 赤脚沙滩酒吧与烤龙虾",
-    "perPersonShoulderEUR": 1062
+    "perPersonShoulderEUR": 1062,
+    "lat": 18.425,
+    "lon": -64.62
   },
   {
     "rank": 5,
@@ -3338,11 +3354,11 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "博拉博拉岛耸立在七色泻湖中央的奥特马努火山峰 Mount Otemanu",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Mount_Otemanu_Bora_Bora.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Mount_Otemanu_Bora_Bora.jpg/1280px-Mount_Otemanu_Bora_Bora.jpg"
       },
       {
         "caption": "外围珊瑚环礁保护下如镜面般平静的博拉博拉荧光蓝泻湖",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Bora-Bora_Lagoon_-_French_Polynesia.jpg/1280px-Bora-Bora_Lagoon_-_French_Polynesia.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3400,7 +3416,9 @@ window.SAILING_ROUTES_TOP20 = [
     "seaCalmness": "5/5 外环礁100%挡浪泻湖",
     "waterBeauty": "5/5 地球颜值天花板翡翠泻湖",
     "townAndFood": "4.5/5 香草珍珠农场与波拉波拉",
-    "perPersonShoulderEUR": 1168
+    "perPersonShoulderEUR": 1168,
+    "lat": -16.733,
+    "lon": -151.44
   },
   {
     "rank": 6,
@@ -3435,7 +3453,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "厄吕代尼兹蓝色泻湖 Ölüdeniz 与巴巴达格滑翔伞雪山",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/%C3%96l%C3%BCdeniz_from_Babada%C4%9F.jpg/960px-%C3%96l%C3%BCdeniz_from_Babada%C4%9F.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Yachts_in_G%C3%B6cek_Bay%2C_Turkey_%2849070927017%29.jpg/1280px-Yachts_in_G%C3%B6cek_Bay%2C_Turkey_%2849070927017%29.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3461,7 +3479,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "返回费特希耶古城区逛鱼市（自己挑活鱼由旁边餐馆加工）"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 36.75,
+    "lon": 28.94
   },
   {
     "rank": 7,
@@ -3496,7 +3516,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "赫瓦尔岛 Hvar 中世纪西班牙古堡俯瞰帕克莱尼群岛与双体帆船群",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Hvar_from_fortress.jpg/960px-Hvar_from_fortress.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/View-of-Hvar-from-Harbour.jpg/1280px-View-of-Hvar-from-Harbour.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3522,7 +3542,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "返回世界遗产古城特罗吉尔漫步中世纪石巷"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 43.503,
+    "lon": 16.433
   },
   {
     "rank": 8,
@@ -3557,7 +3579,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "科尔丘拉古城 Korčula 伸入蔚蓝亚得里亚海的中世纪红顶半岛",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Korcula_old_town.jpg/960px-Korcula_old_town.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Kor%C4%8Dula_Old_Town%2C_Croatia_%282024%29.jpg/1280px-Kor%C4%8Dula_Old_Town%2C_Croatia_%282024%29.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3576,7 +3598,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "夜泊科尔丘拉古城城墙脚下，在松林顶层的 Massimo 塔楼酒吧看日落"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 42.67,
+    "lon": 18.127
   },
   {
     "rank": 9,
@@ -3611,7 +3635,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "拉迪格岛德阿让海滩 Anse Source d'Argent 粉红沙滩与巨型光滑花岗岩",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Anse_Source_d%27Argent_2-La_Digue.jpg/960px-Anse_Source_d%27Argent_2-La_Digue.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Anse_Source_d%27Argent_2-La_Digue.jpg/1280px-Anse_Source_d%27Argent_2-La_Digue.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3630,7 +3654,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "停靠拉迪格岛 La Passe 小港，享用地道克里奥尔咖喱章鱼晚宴"
       }
     ],
-    "regionGroup": "印度洋与亚太远征"
+    "regionGroup": "印度洋与亚太远征",
+    "lat": -4.64,
+    "lon": 55.47
   },
   {
     "rank": 10,
@@ -3665,7 +3691,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "埃克苏马群岛 Big Major Cay 在透明浅海里向双体船游来的巴哈马游泳小猪",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Swimming_pigs_in_the_Bahamas.jpg/960px-Swimming_pigs_in_the_Bahamas.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Staniel_cay_airport_view_looking_east.jpg/1280px-Staniel_cay_airport_view_looking_east.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3684,7 +3710,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "在 Staniel Cay Yacht Club 喝朗姆酒、吃鲜炸海螺丸 Conch Fritters"
       }
     ],
-    "regionGroup": "加勒比与美洲"
+    "regionGroup": "加勒比与美洲",
+    "lat": 25.02,
+    "lon": -77.27
   },
   {
     "rank": 11,
@@ -3719,7 +3747,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "多巴哥群礁 Tobago Cays 被马蹄形珊瑚礁保护的绿松石泻湖与双体船锚地",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tobago_Cays_from_Baradal.jpg/960px-Tobago_Cays_from_Baradal.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Tobago_Cays_Rainbow_-_panoramio.jpg/1280px-Tobago_Cays_Rainbow_-_panoramio.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3738,7 +3766,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "参加沙滩长桌海盗篝火晚宴（当地渔民现烤整只加勒比大龙虾，约 $45/人）"
       }
     ],
-    "regionGroup": "加勒比与美洲"
+    "regionGroup": "加勒比与美洲",
+    "lat": 13.13,
+    "lon": -61.2
   },
   {
     "rank": 12,
@@ -3773,7 +3803,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "攀牙湾与甲米宏岛 Hong Island 垂直耸立于碧绿海面上的喀斯特石灰岩巨峰",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ko_Tapu_Phang_Nga_Bay.jpg/960px-Ko_Tapu_Phang_Nga_Bay.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Phang_Nga_Bay%2C_Karst_formations%2C_Thailand.jpg/1280px-Phang_Nga_Bay%2C_Karst_formations%2C_Thailand.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3792,7 +3822,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "在甲板星空下做泰式按摩或去皮皮岛海滩看火焰杂耍秀"
       }
     ],
-    "regionGroup": "印度洋与亚太远征"
+    "regionGroup": "印度洋与亚太远征",
+    "lat": 8.17,
+    "lon": 98.34
   },
   {
     "rank": 13,
@@ -3827,7 +3859,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "圣灵群岛白天堂海滩希尔湾 Hill Inlet 潮汐交汇形成的松石绿与纯白硅沙漩涡",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hill_Inlet_Whitsundays.jpg/960px-Hill_Inlet_Whitsundays.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Whitehaven_Beach_-_Northern_End.jpg/1280px-Whitehaven_Beach_-_Northern_End.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3846,7 +3878,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "停靠汉密尔顿岛豪华游艇会，在 Bommie Deck 喝香槟看日落"
       }
     ],
-    "regionGroup": "印度洋与亚太远征"
+    "regionGroup": "印度洋与亚太远征",
+    "lat": -20.27,
+    "lon": 148.72
   },
   {
     "rank": 14,
@@ -3881,7 +3915,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "梅诺卡岛 Cala Macarella 与 Macarelleta 如游泳池般透明的松林果冻海湾",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Cala_Macarelleta_-_Menorca.jpg/960px-Cala_Macarelleta_-_Menorca.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Cala_Macarella.jpg/1280px-Cala_Macarella.jpg"
       }
     ],
     "itinerary7Days": [
@@ -3900,7 +3934,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "上岸品尝正宗墨鱼海鲜饭 Paella 与梅诺卡龙虾汤 Caldereta de Langosta"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 39.565,
+    "lon": 2.63
   },
   {
     "rank": 15,
@@ -3935,7 +3971,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "伊德拉岛 Hydra 层层叠叠的18世纪船长石宅环抱着马蹄形无车古港",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hydra_town_and_harbour.jpg/960px-Hydra_town_and_harbour.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Hydra_Harbour_2013.JPG/1280px-Hydra_Harbour_2013.JPG"
       }
     ],
     "itinerary7Days": [
@@ -3954,7 +3990,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "在斯佩察岛旧港坐马车漫游、吃炭烤章鱼"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 37.91,
+    "lon": 23.71
   },
   {
     "rank": 16,
@@ -3989,7 +4027,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "普罗奇达岛 Procida Corricella 渔港如马卡龙糖果盒般堆叠的彩色渔民小屋",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Procida_Corricella.jpg/960px-Procida_Corricella.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Procida_Corricella.jpg/1280px-Procida_Corricella.jpg"
       }
     ],
     "itinerary7Days": [
@@ -4008,7 +4046,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "乘小艇登上 Nerano 海湾著名的岸边餐厅吃西葫芦意面 Spaghetti alla Nerano"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 40.66,
+    "lon": 14.79
   },
   {
     "rank": 17,
@@ -4043,7 +4083,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "斯科派洛斯岛 Skopelos 耸立在海岬巨岩顶端的《妈妈咪呀》婚礼教堂 Agios Ioannis",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Agios_Ioannis_Sto_Kastri_Skopelos.jpg/960px-Agios_Ioannis_Sto_Kastri_Skopelos.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Hafen_Skopelos_Stadt.jpg/1280px-Hafen_Skopelos_Stadt.jpg"
       }
     ],
     "itinerary7Days": [
@@ -4062,7 +4102,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "锚泊在 Kyra Panagia 修道院绝壁海湾看满天繁星"
       }
     ],
-    "regionGroup": "欧洲地中海"
+    "regionGroup": "欧洲地中海",
+    "lat": 39.163,
+    "lon": 23.49
   },
   {
     "rank": 18,
@@ -4097,7 +4139,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "圣约翰岛 Trunk Bay 世界闻名的白沙滩与水下珊瑚礁国家公园浮潜步道",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Trunk_Bay_St_John_USVI.jpg/960px-Trunk_Bay_St_John_USVI.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Trunk_Bay%2C_St._John_USVI.jpg/1280px-Trunk_Bay%2C_St._John_USVI.jpg"
       }
     ],
     "itinerary7Days": [
@@ -4116,7 +4158,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "返回 Cruz Bay 小镇喝朗姆潘趣酒"
       }
     ],
-    "regionGroup": "加勒比与美洲"
+    "regionGroup": "加勒比与美洲",
+    "lat": 18.333,
+    "lon": -64.93
   },
   {
     "rank": 19,
@@ -4152,7 +4196,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "圣卢西亚世界自然遗产双子火山峰 The Pitons 下锚泊的双体帆船",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Pitons_St_Lucia.jpg/960px-Pitons_St_Lucia.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/PetitPiton.JPG/1280px-PetitPiton.JPG"
       }
     ],
     "itinerary7Days": [
@@ -4171,7 +4215,9 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "在双子峰日落余晖中享用冰镇法式桃红葡萄酒"
       }
     ],
-    "regionGroup": "加勒比与美洲"
+    "regionGroup": "加勒比与美洲",
+    "lat": 14.47,
+    "lon": -60.87
   },
   {
     "rank": 20,
@@ -4206,7 +4252,7 @@ window.SAILING_ROUTES_TOP20 = [
     "photos": [
       {
         "caption": "伯利兹大堡礁 Silk Caye 被五彩珊瑚礁环绕的微型白沙洲与清澈泻湖",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Silk_Caye_Belize.jpg/960px-Silk_Caye_Belize.jpg"
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Caye_Caulker_Belize_aerial_%2820688990128%29.jpg/1280px-Caye_Caulker_Belize_aerial_%2820688990128%29.jpg"
       }
     ],
     "itinerary7Days": [
@@ -4225,6 +4271,8 @@ window.SAILING_ROUTES_TOP20 = [
         "eveningPortAndDining": "返回 Placencia 漫步吉尼斯纪录最窄彩色木栈道街吃椰浆海鲜"
       }
     ],
-    "regionGroup": "加勒比与美洲"
+    "regionGroup": "加勒比与美洲",
+    "lat": 16.513,
+    "lon": -88.37
   }
 ];

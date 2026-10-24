@@ -147,7 +147,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 43.268,
+    "lon": 2.719
   },
   {
     "rank": 2,
@@ -296,7 +298,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 48.736,
+    "lon": 7.247
   },
   {
     "rank": 3,
@@ -445,7 +449,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 52.97,
+    "lon": -3.17
   },
   {
     "rank": 4,
@@ -594,7 +600,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 57.145,
+    "lon": -4.68
   },
   {
     "rank": 5,
@@ -743,7 +751,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 45.44,
+    "lon": 12.33
   },
   {
     "rank": 6,
@@ -892,7 +902,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 51.484,
+    "lon": -0.604
   },
   {
     "rank": 7,
@@ -1041,7 +1053,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 52.09,
+    "lon": 5.121
   },
   {
     "rank": 8,
@@ -1190,7 +1204,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 44.447,
+    "lon": 1.441
   },
   {
     "rank": 9,
@@ -1339,7 +1355,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 51.054,
+    "lon": 3.725
   },
   {
     "rank": 10,
@@ -1488,7 +1506,9 @@ window.CANAL_ROUTES_TOP20 = [
           }
         ]
       }
-    ]
+    ],
+    "lat": 47.213,
+    "lon": 4.874
   },
   {
     "rank": 11,
@@ -1509,7 +1529,7 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€4,150 ($4,820 USD / Horizon 4 全独卫)",
     "perPerson9PaxEUR": "€460 /人/周 ($535 USD)",
     "bestFleetModels": "Le Boat Horizon 3 / Horizon 4 (北美全系标配最新五星豪华船队)",
-    "coverImage": "rankings/images/canals/canada_rideau_1.jpg",
+    "coverImage": "rankings/images/canals/r11_d5_1.jpg",
     "highlights": [
       "北美唯一可自驾欧洲同款 Horizon 五星游艇的联合国世界遗产水道，90% 航程穿行于星罗棋布的天然冰川湖泊与枫林岛屿间",
       "每座 1832 年古石船闸都是一个修剪整齐的国家公园大草坪！傍晚直接把船停在船闸草坪岸边，点篝火烤棉花糖、划免费皮划艇",
@@ -1524,11 +1544,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "里多运河百年石闸与游艇过闸实景",
-            "src": "rankings/images/canals/canada_rideau_1.jpg"
+            "src": "rankings/images/canals/r11_d1_1.jpg"
           },
           {
             "caption": "里多运河国家公园草坪停泊点",
-            "src": "rankings/images/canals/canada_rideau_2.jpg"
+            "src": "rankings/images/canals/r11_d1_2.jpg"
           }
         ]
       },
@@ -1539,11 +1559,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "里多运河水岸风光",
-            "src": "rankings/images/canals/canada_rideau_3.jpg"
+            "src": "rankings/images/canals/r11_d2_1.jpg"
           },
           {
             "caption": "里多运河历史石船闸",
-            "src": "rankings/images/canals/canada_rideau_4.jpg"
+            "src": "rankings/images/canals/r11_d2_2.jpg"
           }
         ]
       },
@@ -1554,11 +1574,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "大里多湖与运河航道",
-            "src": "rankings/images/canals/canada_rideau_5.jpg"
+            "src": "rankings/images/canals/r11_d3_1.jpg"
           },
           {
             "caption": "里多运河傍晚停泊",
-            "src": "rankings/images/canals/canada_rideau_6.jpg"
+            "src": "rankings/images/canals/r11_d3_2.jpg"
           }
         ]
       },
@@ -1569,11 +1589,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "里多运河石闸群",
-            "src": "rankings/images/canals/canada_rideau_1.jpg"
+            "src": "rankings/images/canals/r11_d4_1.jpg"
           },
           {
             "caption": "里多运河森林航道",
-            "src": "rankings/images/canals/canada_rideau_3.jpg"
+            "src": "rankings/images/canals/r11_d4_2.jpg"
           }
         ]
       },
@@ -1584,11 +1604,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "琼斯瀑布阶梯船闸与湖湾",
-            "src": "rankings/images/canals/canada_rideau_2.jpg"
+            "src": "rankings/images/canals/r11_d5_1.jpg"
           },
           {
             "caption": "里多运河游艇巡航",
-            "src": "rankings/images/canals/canada_rideau_4.jpg"
+            "src": "rankings/images/canals/r11_d5_2.jpg"
           }
         ]
       },
@@ -1599,11 +1619,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "里多运河清澈湖湾",
-            "src": "rankings/images/canals/canada_rideau_5.jpg"
+            "src": "rankings/images/canals/r11_d6_1.jpg"
           },
           {
             "caption": "里多运河黄昏",
-            "src": "rankings/images/canals/canada_rideau_6.jpg"
+            "src": "rankings/images/canals/r11_d6_2.jpg"
           }
         ]
       },
@@ -1614,11 +1634,11 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "里多运河古镇停泊",
-            "src": "rankings/images/canals/canada_rideau_1.jpg"
+            "src": "rankings/images/canals/r11_d7_1.jpg"
           },
           {
             "caption": "里多运河水道",
-            "src": "rankings/images/canals/canada_rideau_2.jpg"
+            "src": "rankings/images/canals/r11_d7_2.jpg"
           }
         ]
       },
@@ -1629,15 +1649,17 @@ window.CANAL_ROUTES_TOP20 = [
         "photos": [
           {
             "caption": "渥太华国会山旁的里多运河船闸",
-            "src": "rankings/images/canals/canada_rideau_3.jpg"
+            "src": "rankings/images/canals/r11_d8_1.jpg"
           },
           {
             "caption": "里多运河全景",
-            "src": "rankings/images/canals/canada_rideau_4.jpg"
+            "src": "rankings/images/canals/r11_d8_2.jpg"
           }
         ]
       }
-    ]
+    ],
+    "lat": 44.904,
+    "lon": -76.02
   },
   {
     "rank": 12,
@@ -1658,14 +1680,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,950 – €4,100",
     "perPerson9PaxEUR": "€325 – €430 /人/周",
     "bestFleetModels": "Le Boat Vision 4 SL / Mystique · Nicols Confort 1350 (夏朗德河本土造船厂旗舰)",
-    "coverImage": "rankings/images/canals/france_alsace_2.jpg",
+    "coverImage": "rankings/images/canals/r12_cover.jpg",
     "highlights": [
       "被法国国王弗朗索瓦一世盛赞为“法兰西最美最清澈的河流”，全程零商用货船，河水清澈见底可直接跳水游泳",
       "把船直接停在干邑（Cognac）轩尼诗（Hennessy）、人头马（Rémy Martin）与马爹利百年酒窖正门品鉴 XO",
       "探访桑特（Saintes）古罗马凯旋门与圆形竞技场，乘坐百年手拉过河渡船前往水岸古堡餐厅"
     ],
     "mooringTip": "夏朗德河沿岸市政草坪桩位几乎全部免费！Nicols 船厂总部就在附近，强烈推荐租其 4卧4独立卫浴的 Confort 1350。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 45.696,
+    "lon": -0.329
   },
   {
     "rank": 13,
@@ -1686,14 +1710,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,780 – €3,950",
     "perPerson9PaxEUR": "€310 – €415 /人/周",
     "bestFleetModels": "Locaboat Pénichette 1400FB · Le Boat Vision 3 · Les Canalous Tarpon 42",
-    "coverImage": "rankings/images/canals/france_midi_2.jpg",
+    "coverImage": "rankings/images/canals/r13_cover.jpg",
     "highlights": [
       "驾船凌空驶过由埃菲尔公司参与建造、长达 662 米的镀金路灯铁艺水槽桥——布里亚尔跨卢瓦尔河水道桥（Pont-canal de Briare）",
       "停靠在山顶葡萄园名城桑塞尔（Sancerre）脚下的圣萨蒂尔港，品尝世界顶级的长相思白葡萄酒配山羊奶酪（Crottin de Chavignol）",
       "顺访奥尔良运河古镇与吉安（Gien）百年皇家彩陶工坊，距巴黎仅 1.5 小时车程"
     ],
     "mooringTip": "驾船通过 662 米长的布里亚尔铁水槽桥时，两侧是72盏美好年代复古街灯，脚下是奔腾的卢瓦尔河，拍照极其出片。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 47.64,
+    "lon": 2.739
   },
   {
     "rank": 14,
@@ -1714,14 +1740,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€3,950 ($4,550 USD / 6-8人旗舰船)",
     "perPerson9PaxEUR": "€490 /人/周 ($560 USD)",
     "bestFleetModels": "Erie Canal Adventures 42ft Packet Boat · Mid-Lakes Navigation Lockmaster",
-    "coverImage": "rankings/images/canals/usa_erie_1.jpg",
+    "coverImage": "rankings/images/canals/r14_cover.jpg",
     "highlights": [
       "体验塑造美国近代史的传奇大运河，通过按响汽笛召唤守桥员将整座公路铁桥垂直升起（Lift Bridges）的独特仪式",
       "直抵洛克波特（Lockport）震撼的 34/35 号双联巨闸（一次升降 15 米），与旁边 1842 年五级古石闸同框",
       "每天停靠在 Fairport、Spencerport、Brockport 等维多利亚风情美东小镇中心码头（免费水电与淋浴），距离尼亚加拉大瀑布仅 35 分钟车程"
     ],
     "mooringTip": "纽约州运河局对自驾游船极其慷慨：沿途小镇中心码头大多提供 48 小时免费停靠及免费岸电、热水淋浴间！",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 43.17,
+    "lon": -78.69
   },
   {
     "rank": 15,
@@ -1742,14 +1770,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,890 – €4,150",
     "perPerson9PaxEUR": "€320 – €440 /人/周",
     "bestFleetModels": "Le Boat Horizon 4 / Elegance · Silver Line Cruisers · Carrickcraft",
-    "coverImage": "rankings/images/canals/uk_narrowboat_2.jpg",
+    "coverImage": "rankings/images/canals/r15_cover.jpg",
     "highlights": [
       "全欧洲最宽阔、完全没有商用驳船干扰的纯休闲水道，穿行在翡翠绿草甸与辽阔的德格湖（Lough Derg）之间",
       "把船直接停在公元 544 年创建的克朗麦克诺伊斯（Clonmacnoise）千年凯尔特高十字架修道院遗址水岸码头",
       "傍晚停靠在 Terryglass 或 Garrykennedy 湖湾小村，走进百年茅草屋酒馆听现场爱尔兰风笛与小提琴民谣、喝健力士黑啤"
     ],
     "mooringTip": "香农河上所有公共浮桥码头（Public Jetties）均由爱尔兰水道局维护，停泊完全免费，仅用智能卡刷水闸与淋浴。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 53.946,
+    "lon": -8.09
   },
   {
     "rank": 16,
@@ -1770,14 +1800,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,850 – €4,100",
     "perPerson9PaxEUR": "€315 – €435 /人/周",
     "bestFleetModels": "Le Boat Vision 3 / Horizon 4 · Kuhnle-Tours Kormoran 1280 · Locaboat",
-    "coverImage": "rankings/images/canals/france_alsace_5.jpg",
+    "coverImage": "rankings/images/canals/r16_cover.jpg",
     "highlights": [
       "由 1,000 多座清澈见底的冰川湖泊通过森林运河串联而成，被誉为“欧洲的亚马逊与千湖天堂”，夏天随时抛锚跳入湖中游泳",
       "开船直抵腓特烈大帝青年时代居住的洛可可艺术瑰宝——莱茵斯贝格水上宫殿（Schloss Rheinsberg）湖心正门",
       "驶入德国最大的内湖米里茨湖（Lake Müritz）国家公园，用望远镜观察白尾海雕与鱼鹰，品尝刚出炉的炭熏鲜鱼配德国鲜啤"
     ],
     "mooringTip": "德国此区实施特殊免照政策（Charterschein）：无需考德国游艇驾照，基地培训后即可合法驾驶 15 米内大型游艇。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 53.43,
+    "lon": 12.7
   },
   {
     "rank": 17,
@@ -1798,14 +1830,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€3,100 – €3,600",
     "perPerson9PaxEUR": "€290 – €350 /人/周",
     "bestFleetModels": "ABC Boat Hire · Foxhangers · Anglo Welsh 68ft Narrowboat",
-    "coverImage": "rankings/images/canals/uk_narrowboat_4.jpg",
+    "coverImage": "rankings/images/canals/r17_cover.jpg",
     "highlights": [
       "将英式彩绘窄船直接开进世界遗产名城巴斯（Bath）市中心 Sydney Wharf，步行探访古罗马浴场、皇家新月楼与简·奥斯汀中心",
       "两次跨越新古典主义建筑杰作——埃文克利夫水道桥（Avoncliff）与巴斯蜜色石头打造的邓达斯高架水桥（Dundas Aqueduct）",
       "东侧可远观英国运河史上最震撼的凯恩希尔 29 级阶梯连闸（Caen Hill Flight of 29 Locks）与巨石阵周边白马山丘"
     ],
     "mooringTip": "新手建议从 Hilperton 往西开往 Bath（全程仅约 10 座船闸，风景极佳）；若想挑战 29 连闸需预留整整 5 小时体力。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 51.381,
+    "lon": -2.359
   },
   {
     "rank": 18,
@@ -1826,14 +1860,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,850 – €4,100",
     "perPerson9PaxEUR": "€315 – €430 /人/周",
     "bestFleetModels": "Le Boat Horizon 3 / Vision 4 · Nicols Estivale Octo · Locaboat",
-    "coverImage": "rankings/images/canals/france_midi_5.jpg",
+    "coverImage": "rankings/images/canals/r18_cover.jpg",
     "highlights": [
       "全法国最省力的“零船闸航线”，穿行在数万只野生粉红火烈鸟、卡马格白马群与黑色公牛栖息的自然保护区湿地",
       "把游艇直接停在 13 世纪十字军东征出发港——艾格莫尔特（Aigues-Mortes）完整保存的四边形中世纪高墙与粉红盐田脚下",
       "随时停靠在 Palavas 或 La Grande-Motte，步行 5 分钟跨过沙丘就是地中海金色沙滩，还能在托湖（Étang de Thau）吃现撬布齐格生蚝"
     ],
     "mooringTip": "完全不想操作船闸、且想兼顾“开船 + 地中海沙滩玩水 + 看火烈鸟”的亲子家庭，卡马格是全欧洲第一首选。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 43.567,
+    "lon": 4.191
   },
   {
     "rank": 19,
@@ -1854,14 +1890,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€3,850 ($6,300 AUD / 5-6卧顶奢带按摩池浮动别墅)",
     "perPerson9PaxEUR": "€385 /人/周 (10-12人分摊)",
     "bestFleetModels": "Unforgettable Houseboats (Mannum) · Liba Liba · Wow Factor (5-6卧全落地窗双体浮动豪宅)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Murray_River_cliffs_near_Nildottie.jpg/1280px-Murray_River_cliffs_near_Nildottie.jpg",
+    "coverImage": "rankings/images/canals/r19_cover.jpg",
     "highlights": [
       "颠覆欧洲传统窄小河船认知：澳洲墨累河房船是宽达 8–10 米、带落地玻璃全景客厅、美式烧烤台与顶层加热按摩浴缸（Rooftop Jacuzzi）的水上现代豪宅！",
       "无需找码头：傍晚直接把船头顶在拥有数百万年历史的百米橙黄色石灰岩巨崖（Big Bend Cliffs）与赤桉树沙滩岸边（Bank Mooring 免费）",
       "清晨在甲板喝咖啡看野生袋鼠在岸边喝水、粉红凤头鹦鹉与鹈鹕掠过水面，顺访南澳巴罗萨/河地百年酒庄"
     ],
     "mooringTip": "11月至次年4月北半球寒冬时，南澳墨累河正值阳光灿烂的暖季，是反季节房船度假的全球天花板。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": -34.43,
+    "lon": 139.62
   },
   {
     "rank": 20,
@@ -1882,14 +1920,16 @@ window.CANAL_ROUTES_TOP20 = [
     "price4CabinsEUR": "€2,950 ($3,380 USD / 4-5卧皇家米船全包)",
     "perPerson9PaxEUR": "€325 /人/周 (含全部三餐与船员服务)",
     "bestFleetModels": "Spice Coast Cruises (CGH Earth) · Xandari Riverscapes · Oberoi Vrinda (奢华定制)",
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Houseboat_in_Kerala_Backwaters.jpg/1280px-Houseboat_in_Kerala_Backwaters.jpg",
+    "coverImage": "rankings/images/canals/r20_cover.jpg",
     "highlights": [
       "被《国家地理》列为“人生必去50大目的地”之一：乘坐由菠萝麻绳与竹木无钉捆扎而成的传统弧顶米船（Kettuvallam）穿行在低于海平面的翡翠稻田与椰林水巷",
       "全程配备 3 名专属船员（船长、舵手与主厨），每天在船头市场采购现捕大虎虾与螃蟹，用芭蕉叶奉上地道喀拉拉咖喱盛宴",
       "换乘独木舟深入狭窄水村看翠鸟捕鱼、探访百年圣玛丽古教堂与阿育吠陀草药庄园"
     ],
     "mooringTip": "喀拉拉回水区一般精选 3天2晚 或 4天3晚 航程最精华，建议认准 CGH Earth (Spice Coast) 或 Xandari 旗下高卫生标准精品船队。",
-    "itinerary8Days": []
+    "itinerary8Days": [],
+    "lat": 9.498,
+    "lon": 76.338
   }
 ];
 

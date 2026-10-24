@@ -11,6 +11,8 @@ window.RV_ROUTES_TOP20 = [
     country: "美国",
     continent: "北美",
     pickupCity: "安克雷奇 (Anchorage, AK)",
+    lat: 61.2181,
+    lon: -149.9003,
     routeLoop: "安克雷奇 → 迪纳利国家公园 → 西沃德复活湾冰川出海 → 荷马角7公里海滩尖端 → 怀特蒂尔冰川 → 安克雷奇",
     distanceKm: 1450,
     dailyDriveHours: "1.8–2.4 小时",
@@ -33,7 +35,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全球房车对酒店形成最大降维打击之地！阿拉斯加旺季普通木屋两间房需 $5,000+/周（¥3.6万），而6月上旬租一辆7人准新房车含2,380免费英里与0起赔全险仅 $1,824；推门10米就是太平洋，白头海雕在车顶盘旋，海獭岸边仰泳，车内直接煮鲜活帝王蟹与大比目鱼。",
     proTip: "【省钱与抢位秘籍】① 6月上旬安克雷奇 C30 (30尺7人车) 裸车 $1,030 竟比 C25 小车还便宜 $215；选 Indie Family 7人车免费送 2,380 英里/周。② 迪纳利园内 Savage River 营地需提前 6 个月在 Recreation.gov 锁定；若选 Cruise America，直接去安克雷奇 Walmart 买全新被褥($90)替代车行$375床品包，立省 $285。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Homer_Spit_in_Alaska.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Homer_Spit_2.jpg/1280px-Homer_Spit_2.jpg"
   },
   {
     rank: 2,
@@ -43,6 +45,8 @@ window.RV_ROUTES_TOP20 = [
     country: "加拿大",
     continent: "北美",
     pickupCity: "卡尔加里 (Calgary) / 温哥华 (Vancouver)",
+    lat: 51.0447,
+    lon: -114.0719,
     routeLoop: "卡尔加里 → 班夫国家公园 → 露易丝湖 & 梦莲湖 → 93号冰原大道 (佩托湖/哥伦比亚冰原) → 贾斯珀国家公园 → 卡尔加里",
     distanceKm: 850,
     dailyDriveHours: "1.2–1.8 小时",
@@ -75,6 +79,8 @@ window.RV_ROUTES_TOP20 = [
     country: "新西兰",
     continent: "大洋洲",
     pickupCity: "基督城 (Christchurch) / 皇后镇 (Queenstown)",
+    lat: -43.5321,
+    lon: 172.6362,
     routeLoop: "基督城 → 特卡波湖暗夜星空 → 库克山雪山 → 瓦纳卡 → 哈斯特通道 → 福克斯/弗朗茨约瑟夫雨林冰川 → 皇后镇 → 米尔福德峡湾 → 基督城",
     distanceKm: 1350,
     dailyDriveHours: "1.8–2.3 小时",
@@ -98,7 +104,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全球房车水电桩（Powered Sites）与排污站密度最高！加入哈斯特通道与西海岸温带雨林冰川后，一周内集齐银河星空保护区、翡翠冰川湖、延伸进雨林的冰川以及塔斯曼海浪涛。",
     proTip: "【澳新计费与儿童座椅红线】① 11月平季选基督城本土 Freedom 6 / Tui 6 裸车仅 $1,255–$1,300（比2月旺季省 $1,500+），且已免费包无限里程+5人羽绒被厨具。② 别漏算新西兰柴油道路税 RUC（约 $68/8天）。③ 法规红线：澳新6人房车后排仅配 2 个 ISOFIX/顶部锚点，第3个孩子必须年满7周岁使用成人安全带。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Tekapo_New_Zealand.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Lupins_near_lake_tekapo_region.jpg/1280px-Lupins_near_lake_tekapo_region.jpg"
   },
   {
     rank: 4,
@@ -108,6 +114,8 @@ window.RV_ROUTES_TOP20 = [
     country: "美国",
     continent: "北美",
     pickupCity: "盐湖城 (Salt Lake City) / 丹佛 (Denver)",
+    lat: 40.7608,
+    lon: -111.891,
     routeLoop: "盐湖城/丹佛 → 杰克逊霍尔 → 大提顿国家公园 → 黄石8字大环线 (老忠实/大棱镜/大峡谷/喇嘛山谷野牛群) → 熊牙公路 → 返程",
     distanceKm: 1200,
     dailyDriveHours: "1.5–2.2 小时",
@@ -140,6 +148,8 @@ window.RV_ROUTES_TOP20 = [
     country: "日本",
     continent: "亚洲与非洲",
     pickupCity: "札幌新千岁机场 (Sapporo CTS)",
+    lat: 42.7752,
+    lon: 141.6923,
     routeLoop: "新千岁机场 → 富良野/美瑛彩色花田 → 十胜岳/层云峡温泉 → 道东三湖 (阿寒湖/摩周湖/屈斜路湖砂汤) → 知床半岛世界自然遗产 → 新千岁",
     distanceKm: 950,
     dailyDriveHours: "1.5–2.0 小时",
@@ -162,7 +172,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "亚洲唯一入选！国内直飞仅 3–4 小时、几乎零时差。日本丰田 Camroad 底盘鹅头车长仅 5.2 米（和丰田埃尔法差不多长，毫无大车压迫感），却神奇塞入额头双人床+车尾上下铺+中部卡座床。每天傍晚停入森林营地步行泡天然露天温泉（仅¥35/人），车旁烤北海道A5和牛、吃夕张蜜瓜与毛蟹。",
     proTip: "【日本房车贴士】日本房车通常不流行在车内洗澡，因为每个 Auto Campground（汽车露营场）10分钟车程内必有绝美日归温泉（日帰り温泉）！搭配北海道高速公路周游券（Hokkaido Expressway Pass, HEP）7天无限跑高速，省钱又省心。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Farm_Tomita_in_Furano_Hokkaido.JPG?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E5%AF%8C%E7%94%B0_%28Farm_Tomita%29_%40_%E5%AF%8C%E8%89%AF%E9%87%8E_%28Furano%29_-_panoramio_%281%29.jpg/1280px-%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E5%AF%8C%E7%94%B0_%28Farm_Tomita%29_%40_%E5%AF%8C%E8%89%AF%E9%87%8E_%28Furano%29_-_panoramio_%281%29.jpg"
   },
   {
     rank: 6,
@@ -172,6 +182,8 @@ window.RV_ROUTES_TOP20 = [
     country: "挪威",
     continent: "欧洲",
     pickupCity: "博德 / 埃沃内斯 / 特罗姆瑟 (或瑞典基律纳/斯德哥尔摩跨国提车)",
+    lat: 67.2804,
+    lon: 14.4049,
     routeLoop: "埃沃内斯/博德 → E10国家景观公路 → 亨宁斯韦尔足球场岛 → 兰贝格北极白沙滩 → 雷讷 (Reine) & 奥镇 → 安岛观鲸 → 仙女岛 (Senja) → 返程",
     distanceKm: 750,
     dailyDriveHours: "1.2–1.8 小时",
@@ -204,6 +216,8 @@ window.RV_ROUTES_TOP20 = [
     country: "美国",
     continent: "北美",
     pickupCity: "拉斯维加斯 (Las Vegas, NV)",
+    lat: 36.1699,
+    lon: -115.1398,
     routeLoop: "拉斯维加斯 → 锡安国家公园 → 布莱斯峡谷 → 犹他12号全美景观公路 → 圆顶礁 → 拱门国家公园 → 纪念碑谷 → 鲍威尔湖/羚羊谷 → 大峡谷 → 拉斯维加斯",
     distanceKm: 1350,
     dailyDriveHours: "1.8–2.4 小时",
@@ -236,6 +250,8 @@ window.RV_ROUTES_TOP20 = [
     country: "澳大利亚",
     continent: "大洋洲",
     pickupCity: "布里斯班 (Brisbane, BNE)",
+    lat: -27.4698,
+    lon: 153.0251,
     routeLoop: "布里斯班 → 阳光海岸 (澳洲动物园/努沙国家公园) → 赫维湾 (出海看座头鲸) → 黄金海岸 (主题乐园群 & 水上乐园营地) → 拜伦湾灯塔 → 布里斯班",
     distanceKm: 700,
     dailyDriveHours: "1.0–1.5 小时",
@@ -259,7 +275,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全球3娃放电最轻松、营地游乐设施最逆天的路线！澳大利亚的 BIG4 与 NRMA 假日公园本身就是巨型儿童度假村——房车停稳插上水电后，3个孩子直接冲去玩巨型充气跳跳枕（Jumping Pillow）、水上滑梯、迷你高尔夫和脚踏卡丁车，爸妈在车旁树荫下喝冰白葡萄酒煎澳洲和牛。",
     proTip: "【布里斯班省钱王炸】布里斯班11月选 `Star RV Polaris 6`（与 Apollo/Maui 同属 THL 集团的高端车）8天裸车仅 $1,018 USD，且免费包无限里程、5–6人全套床品浴巾与厨具！购买第三方全险（RentalCover 约$115）替代柜台 $419 Value Pack 可再省 $300（需信用卡预授权 AUD $7,500 押金）。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Surfers_Paradise_from_Q1_2015.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Surfers_Paradise_Beach%2C_Gold_Coast%2C_Queensland%2C_Australia.jpg/1280px-Surfers_Paradise_Beach%2C_Gold_Coast%2C_Queensland%2C_Australia.jpg"
   },
   {
     rank: 9,
@@ -269,6 +285,8 @@ window.RV_ROUTES_TOP20 = [
     country: "意大利 / 奥地利 / 德国",
     continent: "欧洲",
     pickupCity: "米兰 (Milan) / 慕尼黑 (Munich)",
+    lat: 45.4642,
+    lon: 9.19,
     routeLoop: "米兰/慕尼黑 → 加尔达湖 (Gardaland乐园) → 多洛米蒂山脉 (休斯山/刀锋山/布莱耶斯湖/Sexten) → 奥地利蒂罗尔 → 新天鹅堡 → 德国乐高乐园 → 返程",
     distanceKm: 850,
     dailyDriveHours: "1.3–1.9 小时",
@@ -291,7 +309,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "刷新你对房车营地认知的欧洲五星级奢华露营（Luxury Glamping）天花板！在多洛米蒂锯齿状白云石雪山脚下泡着35°C无边恒温泳池，第二天开往新天鹅堡与德国乐高乐园。米兰提车6人自动挡房车全包仅需约1万元人民币/周，比住多洛米蒂五星酒店省下75%。",
     proTip: "【米兰/慕尼黑提车攻略】① 米兰5月 Indie 6人自动挡裸车仅 $847/周（全包约 $1,423），慕尼黑9月 McRent 6人顶配车从5月的 $1,779 降至 $1,222（直降 $557）。② 途经奥地利高速（如 Brenner Pass A13）务必在入境前加油站买好 10天电子高速贴（Vignette, 约 €11.50），避免高额罚单。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Maddalena_in_Val_di_Funes.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Panorama_invernale_da_Santa_Maddalena_in_Val_di_Funes.JPG/1280px-Panorama_invernale_da_Santa_Maddalena_in_Val_di_Funes.JPG"
   },
   {
     rank: 10,
@@ -301,6 +319,8 @@ window.RV_ROUTES_TOP20 = [
     country: "冰岛",
     continent: "欧洲",
     pickupCity: "雷克雅未克 / 凯夫拉维克国际机场 (KEF)",
+    lat: 64.1466,
+    lon: -21.9426,
     routeLoop: "凯夫拉维克机场 → 黄金圈 (辛格维利尔/盖歇尔间歇泉/黄金瀑布) → 塞里雅兰水帘洞瀑布 → 斯科加瀑布过夜 → 维克黑沙滩 & 海鹦鹉崖 → 瓦特纳冰川 → 杰古沙龙冰河湖与钻石沙滩 → 蓝湖温泉 → 返程",
     distanceKm: 900,
     dailyDriveHours: "1.4–2.0 小时",
@@ -323,7 +343,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "放弃7天强跑1,700km大环岛的疲惫折磨，把时间全部留给浓缩冰岛70%顶级奇观的南岸！直接把车停在60米高的斯科加瀑布正下方听水声入眠，清晨看数万只海鹦鹉（Puffin）在黑沙滩悬崖起飞，午后在杰古沙龙冰河湖看千年蓝冰入海。",
     proTip: "【6月极昼价格漏洞与防风铁律】① 6月冰岛24小时日不落，本土车行收费 $3,168–$3,783/周，而 `Indie Campers` 自动挡仍按淡季价仅收 $1,492（含零起赔全险+床品+暖气气瓶全包仅 $2,235，立省 $1,700+）！② 冰岛狂风吹折车门（Wind-gust door damage）所有保险一律拒赔，停车必须车头迎风，上下车双手抓牢车门！",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Skogafoss_Waterfall_in_Iceland.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Sk%C3%B3gafoss_July_2014.JPG/1280px-Sk%C3%B3gafoss_July_2014.JPG"
   },
   {
     rank: 11,
@@ -333,6 +353,8 @@ window.RV_ROUTES_TOP20 = [
     country: "挪威",
     continent: "欧洲",
     pickupCity: "卑尔根 (Bergen) / 奥斯陆 (Oslo)（或瑞典斯德哥尔摩/德国汉堡跨国提车）",
+    lat: 60.3913,
+    lon: 5.3221,
     routeLoop: "卑尔根/奥斯陆 → 哈当厄尔峡湾果园与沃링斯大瀑布 → 弗洛姆高山小火车 → 松恩峡湾水岸 → 布里克斯达尔冰川 → 盖朗厄尔峡湾渡轮 → 返程",
     distanceKm: 820,
     dailyDriveHours: "1.4–2.0 小时",
@@ -355,7 +377,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "不用飞进北极圈，即可体验世界自然遗产峡湾之王！清晨推开车门就是如镜面般的千米深邃峡湾与轰鸣垂落的雪山瀑布，带孩子坐弗洛姆高山齿轮小火车、在哈当厄尔峡湾果园现摘甜樱桃，连人带房车直接开上盖朗厄尔观景渡轮。",
     proTip: "【挪威峡湾渡轮车长省钱法则】挪威峡湾渡轮按车长阶梯收费：车长 ≤6.0米算小车价，6.01–7.0米与 >7.0米差价明显；建议选 6.99米以内的紧凑型6人鹅头车（如 Sunlight A68 / Carado A361），并注册 AutoPASS Ferje 享渡轮 50% 折扣。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Geirangerfjord_from_Flydalsjuvet_2013_06.JPG?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Geirangerfjord_from_%C3%98rnesvingen%2C_2013_June.jpg/1280px-Geirangerfjord_from_%C3%98rnesvingen%2C_2013_June.jpg"
   },
   {
     rank: 12,
@@ -365,6 +387,8 @@ window.RV_ROUTES_TOP20 = [
     country: "澳大利亚",
     continent: "大洋洲",
     pickupCity: "霍巴特 (Hobart) / 朗塞斯顿 (Launceston)",
+    lat: -42.8821,
+    lon: 147.3272,
     routeLoop: "霍巴特 → 布鲁尼岛 (现开生蚝与白袋鼠) → 菲欣纳国家公园 (酒杯湾白沙滩) → 火焰湾橙红花岗岩海岸 → 摇篮山国家公园 (野生袋熊营地) → 霍巴特",
     distanceKm: 950,
     dailyDriveHours: "1.5–2.1 小时",
@@ -388,7 +412,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全世界野生有袋动物密度最高的纯净宝岛！没有毒蛇猛兽的恐惧，黄昏坐在房车遮阳棚下吃塔斯马尼亚三文鱼和车厘子时，野生袋熊（Wombat）、小沙袋鼠（Pademelon）和针鼹直接走到车门前散步，孩子们兴奋到尖叫。",
     proTip: "【塔州提车与国家公园通行证】霍巴特机场提车首选本土口碑王 `Cruisin Motorhomes` 或 `Star RV / Apollo`（无需从墨尔本花 $1,200 坐 Spirit of Tasmania 跨海渡轮运车）；进岛先买一张 Tasmania Parks Pass 假日车辆通票（约 AUD $89/车，畅行全岛所有国家公园8周）。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Dove_Lake_Cradle_Mountain_Tasmania.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Boat_shed_and_Cradle_Mountain_at_Dove_Lake%2C_Tas.jpg/1280px-Boat_shed_and_Cradle_Mountain_at_Dove_Lake%2C_Tas.jpg"
   },
   {
     rank: 13,
@@ -398,6 +422,8 @@ window.RV_ROUTES_TOP20 = [
     country: "英国 (苏格兰)",
     continent: "欧洲",
     pickupCity: "爱丁堡 (Edinburgh) / 格拉斯哥 (Glasgow)",
+    lat: 55.9533,
+    lon: -3.1883,
     routeLoop: "爱丁堡 → 罗蒙湖国家公园 → 格伦科峡谷 (007取景地) → 格伦芬南高架桥 (哈利波特蒸汽火车) → 跨海大桥进天空岛 (老人峰/仙女池/牛津裙岩) → 爱莲朵娜古堡 → 尼斯湖 → 爱丁堡",
     distanceKm: 880,
     dailyDriveHours: "1.5–2.1 小时",
@@ -431,6 +457,8 @@ window.RV_ROUTES_TOP20 = [
     country: "加拿大",
     continent: "北美",
     pickupCity: "温哥华 (Vancouver, YVR)",
+    lat: 49.2827,
+    lon: -123.1207,
     routeLoop: "温哥华提车 → BC Ferries 跨海渡轮 → 维多利亚 (布查特花园/观虎鲸) → 帕克斯维尔温暖浅滩 → 麦克米伦千年巨杉古森林 → 托菲诺 (太平洋边缘国家公园冲浪海滩) → 纳奈莫渡轮 → 温哥华",
     distanceKm: 680,
     dailyDriveHours: "1.0–1.6 小时",
@@ -454,7 +482,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "单周里程仅 680 公里、把海洋生态与原始温带雨林结合得最治愈的路线！托菲诺海景度假村（如 Wickaninnish Inn）一晚高达 $900+，而你的房车就停在隔壁同一片海滩的千年红雪松树下；白天带孩子在退潮礁石滩摸紫海星与海葵、出海看虎鲸与海獭，傍晚吃托菲诺著名的 Tofitian 珍宝蟹。",
     proTip: "【BC Ferries 大房车渡轮省钱技巧】温哥华往返温哥华岛（Tsawwassen ↔ Swartz Bay / Duke Point）渡轮按每英尺车长计费；务必提前在 `bcferries.com` 预订清早或晚间非高峰航班（Saver Fare），30尺房车单程可从 $180 降至约 $115 USD。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Long_Beach,_Pacific_Rim_National_Park.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Long_Beach_Panorama_-_Pacific_Rim_National_Park_-_Vancouver_Island_BC_-_Canada_-_02.jpg/1280px-Long_Beach_Panorama_-_Pacific_Rim_National_Park_-_Vancouver_Island_BC_-_Canada_-_02.jpg"
   },
   {
     rank: 15,
@@ -464,6 +492,8 @@ window.RV_ROUTES_TOP20 = [
     country: "澳大利亚",
     continent: "大洋洲",
     pickupCity: "墨尔本 (Melbourne, MEL)",
+    lat: -37.8136,
+    lon: 144.9631,
     routeLoop: "墨尔本 → 洛恩 & 阿波罗湾 (桉树林寻野生考拉) → 十二门徒岩与伦敦断桥 → 仙女港 → 格兰屏国家公园 (袋鼠草坪营地) → 巴拉瑞特疏芬山淘金镇 → 菲利普岛神仙小企鹅归巢 → 墨尔本",
     distanceKm: 780,
     dailyDriveHours: "1.3–1.8 小时",
@@ -487,7 +517,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "不去挤一日游大巴的当天往返折腾，用房车把大洋路走成真正的慢享度假！傍晚当所有旅游大巴撤离十二门徒岩后，你和孩子独占金红色的南大洋落日；转入内陆格兰屏山脉，上百只野生袋鼠就在房车门外草坪跳跃，最后在菲利普岛看全世界最小的神仙企鹅摇摇摆摆归巢。",
     proTip: "【不走回头路环线设计】千万不要原路折返大洋路沿海弯道！从墨尔本顺时针走沿海公路（B100）到瓦南布尔后，北上走内陆宽阔平坦的高速经格兰屏山脉（Halls Gap）与疏芬山淘金镇回墨尔本，既不晕车又多看一倍风景。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Twelve_Apostles_Victoria_Australia_2010.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Princetown_%28AU%29%2C_Port_Campbell_National_Park%2C_Twelve_Apostles_--_2019_--_0969.jpg/1280px-Princetown_%28AU%29%2C_Port_Campbell_National_Park%2C_Twelve_Apostles_--_2019_--_0969.jpg"
   },
   {
     rank: 16,
@@ -497,6 +527,8 @@ window.RV_ROUTES_TOP20 = [
     country: "美国",
     continent: "北美",
     pickupCity: "西雅图 (Seattle, SEA) / 波特兰 (Portland, OR)",
+    lat: 47.6062,
+    lon: -122.3321,
     routeLoop: "西雅图 → 班布里奇渡轮 → 飓风岭雪山 → 新月湖 → 霍河温带雨林 (Hoh Rain Forest) → 鲁比海滩潮汐池 → 俄勒冈101海岸 (阿斯托里亚/卡农海滩干草堆岩/蒂拉穆克芝士工厂) → 西雅图/波特兰",
     distanceKm: 1050,
     dailyDriveHours: "1.5–2.2 小时",
@@ -519,7 +551,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "完美替代狭窄晕车的加州1号公路大苏尔段！俄勒冈与华盛顿州101海岸公路平坦宽阔，且俄勒冈州立公园（Oregon State Parks）拥有全美公认最顶级的全水电海滨森林营地（带免费热水淋浴间，仅 $42/晚）。白天带孩子在满披绿色苔藓的霍河魔法雨林探险、在鲁比海滩摸紫海星、参观 Tillamook 巨型冰淇淋工厂。",
     proTip: "【俄勒冈免消费税福利】俄勒冈州全州 0% 消费税（Sales Tax = 0%）！若从波特兰（Portland）提车并在当地超市大采购，所有物资与餐饮立省 9%–10% 州税，且俄勒冈全水电州立公园营地提前 6 个月在 `oregonstateparks.reserveamerica.com` 开放预订。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Haystack_Rock_at_Cannon_Beach_in_Oregon.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Cannon_Beach_October_2019_panorama_2.jpg/1280px-Cannon_Beach_October_2019_panorama_2.jpg"
   },
   {
     rank: 17,
@@ -529,6 +561,8 @@ window.RV_ROUTES_TOP20 = [
     country: "新西兰",
     continent: "大洋洲",
     pickupCity: "奥克兰 (Auckland, AKL)",
+    lat: -36.8485,
+    lon: 174.7633,
     routeLoop: "奥克兰 → 科罗曼德尔半岛 (热水海滩挖沙温泉 & 教堂湾) → 玛塔玛塔霍比屯 → 罗托鲁瓦 (地热喷泉/泥浆浴/天际滑车) → 陶波湖 (胡卡瀑布/地热温泉营地) → 怀托摩萤火虫洞 → 奥克兰",
     distanceKm: 820,
     dailyDriveHours: "1.2–1.8 小时",
@@ -552,7 +586,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "比南岛更轻松、更暖和、对低龄三娃家庭更友好的火山地热童话环线！白天带孩子们去《指环王》霍比屯钻袋底洞、在怀托摩地下暗河看满天繁星般的蓝光萤火虫、坐罗托鲁瓦 Skyline Luge 滑板车；傍晚在科罗曼德尔热水海滩亲手拿铲子挖出冒热气的海滩温泉池。",
     proTip: "【热水海滩潮汐铁律】科罗曼德尔 Hot Water Beach 的海底地下温泉眼只有在**最低潮（Low Tide）前后 2 小时内**才会露出水面！务必根据潮汐表安排抵达该营地的下午或清晨时段，TOP 10 营地前台可直接租借挖沙铁锹。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Champagne_Pool,_Wai-O-Tapu_Thermal_Wonderland.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/ChampagnePool-Wai-O-Tapu_rotated_MC.jpg/1280px-ChampagnePool-Wai-O-Tapu_rotated_MC.jpg"
   },
   {
     rank: 18,
@@ -562,6 +596,8 @@ window.RV_ROUTES_TOP20 = [
     country: "法国",
     continent: "欧洲",
     pickupCity: "巴黎 (Paris Orly / CDG)",
+    lat: 48.8566,
+    lon: 2.3522,
     routeLoop: "巴黎提车 → 卢瓦尔河谷 (香波堡/舍农索水上城堡/达芬奇克洛吕斯城堡) → 圣米歇尔山潮汐修道院 → 圣马洛海盗城 → 布列塔尼粉红花岗岩海岸 → 巴黎",
     distanceKm: 920,
     dailyDriveHours: "1.4–2.0 小时",
@@ -594,6 +630,8 @@ window.RV_ROUTES_TOP20 = [
     country: "美国",
     continent: "北美",
     pickupCity: "亚特兰大 (Atlanta) / 夏洛特 (Charlotte) / 华盛顿特区 (Washington D.C.)",
+    lat: 33.749,
+    lon: -84.388,
     routeLoop: "夏洛特/亚特兰大 → 大烟山国家公园 (凯兹湾黑熊谷/同步萤火虫) → 切罗基印第安领地 → 阿什维尔 (全美最大私人庄园比特摩尔庄园) → 蓝岭景观公路核心段 (林维尔峡谷/爷爷山悬索桥) → 返程",
     distanceKm: 960,
     dailyDriveHours: "1.4–2.0 小时",
@@ -616,7 +654,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全美访问量第1的国家公园与“美国最美景观大道”的王炸组合！长达755公里的蓝岭公路（Blue Ridge Parkway）**法律明令禁止任何商业卡车通行**，全程限速 45 mph（72 km/h），开大房车如同在云端森林画廊里巡航；6月初睡在 Elkmont 营地看森林同步萤火虫，10月看海拔落差带来的五彩斑斓红叶海洋。",
     proTip: "【蓝岭公路隧道净高核查】蓝岭公路北卡罗来纳段共有 26 条山体石拱隧道，中心车道净高均 ≥12英尺6英寸（3.8米），但石拱两侧弧顶较低；驾驶 3.3米高的 C30 房车通过隧道时，记住**稍微偏向道路中线行驶**即可稳稳通过。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Ridge_Parkway_Autumn.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg/1280px-Blue_Ridge_Parkway_-_Autumn_Along_the_Blue_Ridge_Parkway_-_NARA_-_7717434.jpg"
   },
   {
     rank: 20,
@@ -626,6 +664,8 @@ window.RV_ROUTES_TOP20 = [
     country: "南非",
     continent: "亚洲与非洲",
     pickupCity: "开普敦 (Cape Town) / 伊丽莎白港 (Gqeberha / Port Elizabeth)",
+    lat: -33.9249,
+    lon: 18.4241,
     routeLoop: "开普敦 → 赫曼努斯 (岸上观南露脊鲸) → 厄加勒斯角 (印度洋与大西洋交汇点) → 荒野国家公园湖区 → 奈斯纳泻湖生蚝小镇 → 普莱滕贝格湾 → 齐齐卡马国家公园 (暴风河印度洋悬索桥) → 返程/异地还车",
     distanceKm: 780,
     dailyDriveHours: "1.3–1.9 小时",
@@ -648,7 +688,7 @@ window.RV_ROUTES_TOP20 = [
     ],
     highlight: "全球物价最低、视觉冲击力最狂野的海洋森林房车线！花园大道所在的西开普省属于**100%无疟疾安全区（Malaria-Free）**，N2 国家级公路宽阔平坦；南非国家公园局（SANParks）的官方营地实行 24 小时门禁安保与围栏管理，花 $30 就能把房车停在齐齐卡马印度洋惊涛拍岸的礁石正前方，在车旁用南非传统烤肉架（Braai）烤鸵鸟肉排、吃 $1.5 一只的奈斯纳野生生蚝。",
     proTip: "【花园大道安全与营地预订铁律】① 在南非开房车**只住 SANParks 国营营地或高评分连锁带门禁的 Caravan Parks**（严禁路边野营），且绝不夜间赶路。② 齐齐卡马 Storms River Mouth 的海景第一排全水电营位（Stands 1–25）是全非洲最抢手的神仙机位，需提前 6–9 个月在 `sanparks.org` 预订。",
-    coverImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Tsitsikamma_National_Park_Suspension_Bridge.jpg?width=900"
+    coverImage: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Tsitsikamma_National_Park_%28ZA%29%2C_Kanus_an_der_K%C3%BCste_--_2024_--_1990.jpg/1280px-Tsitsikamma_National_Park_%28ZA%29%2C_Kanus_an_der_K%C3%BCste_--_2024_--_1990.jpg"
   }
 ];
 

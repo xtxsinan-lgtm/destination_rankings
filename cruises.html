@@ -4,238 +4,398 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Grand Fleet Index · 全球 50 大奢华邮轮、内河河轮与加拉帕戈斯游艇图鉴</title>
-  <meta name="description" content="全球50艘殿堂级奢华邮轮权威图鉴：涵盖海洋六星邮轮与酒店超级游艇、主流巨轮双层复式与船中船(Star Class/The Retreat/Yacht Club)、全球传奇内河河轮（三峡探索号/多瑙河/尼罗河/亚马逊）及加拉帕戈斯/印尼科考帆船，含$/㎡/晚空间性价比与实测底价矩阵。" />
+  <meta name="description" content="全球50艘殿堂级奢华邮轮权威图鉴：海洋六星邮轮与酒店超级游艇、主流巨轮双层复式与船中船、全球传奇内河河轮及加拉帕戈斯/印尼科考帆船，含 $/㎡/晚 空间性价比、船员乘客比与实测底价矩阵。" />
+  <meta name="theme-color" content="#13233f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Grand Fleet Index · 全球 50 大奢华邮轮与远征河轮" />
+  <meta property="og:description" content="按每平米每晚空间单价、船员乘客比与实测全包底价，硬核拆解全球 50 艘标杆邮轮、河轮与远征游艇。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/cruises.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Grand Fleet Index · 全球 50 大奢华邮轮与远征河轮" />
+  <meta name="twitter:description" content="按每平米每晚空间单价、船员乘客比与实测全包底价，硬核拆解全球 50 艘标杆邮轮、河轮与远征游艇。" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2313233f'/%3E%3Ccircle cx='16' cy='17' r='7' fill='%23c9a24e'/%3E%3Cpath d='M6 22h20l-3 5H9z' fill='%23f4ecd8'/%3E%3Crect x='13' y='9' width='3' height='8' fill='%23a8322a'/%3E%3Crect x='17' y='10' width='3' height='7' fill='%23a8322a'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&family=Marcellus&family=Marcellus+SC&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
+    /* ==========================================================================
+       The Grand Fleet Index — Art-Deco golden-age ocean-liner poster stylesheet
+       Ivory paper · deep navy · champagne gold · funnel red · sunburst & stepped rules
+       ========================================================================== */
     :root {
-      --bg: #050c16;
-      --bg-elev: #0a1729;
-      --card: rgba(11, 24, 43, 0.88);
-      --edge: rgba(229, 193, 104, 0.24);
-      --edge-strong: rgba(229, 193, 104, 0.58);
-      --gold: #e5c168;
-      --gold-soft: rgba(229, 193, 104, 0.15);
-      --cyan: #4fd1c5;
-      --cyan-soft: rgba(79, 209, 197, 0.14);
-      --bronze: #c87d4b;
-      --emerald: #4ade80;
-      --text: #f5f7fa;
-      --muted: #9eb3cc;
-      --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif SC', serif;
-      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-      --shadow: 0 22px 55px rgba(2, 6, 14, 0.72);
+      --ivory: #f4ecd8;
+      --paper: #efe3c6;
+      --card: #fbf6ea;
+      --navy: #13233f;
+      --navy-2: #0b1730;
+      --navy-3: #24406e;
+      --gold: #b8913a;
+      --gold-2: #d9bb6a;
+      --gold-3: #f1dfa6;
+      --red: #a8322a;
+      --teal: #2f6f73;
+      --ink: #1b2233;
+      --ink-2: #4a5268;
+      --ink-3: #8a8676;
+      --line: rgba(19, 35, 63, 0.16);
+      --line-2: rgba(19, 35, 63, 0.32);
+      --deco: "Limelight", "Marcellus", serif;
+      --caps: "Marcellus SC", "Marcellus", serif;
+      --latin: "Marcellus", Georgia, serif;
+      --thin: "Poiret One", "Marcellus", sans-serif;
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --topH: 64px;
+      --c-ocean: #13233f;
+      --c-mega: #a8322a;
+      --c-river: #2f6f73;
+      --c-exped: #b8913a;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body {
-      font-family: var(--sans);
-      background:
-        radial-gradient(circle at 18% 8%, rgba(229, 193, 104, 0.13), transparent 36%),
-        radial-gradient(circle at 82% 14%, rgba(79, 209, 197, 0.12), transparent 38%),
-        linear-gradient(180deg, #040911 0%, #050c16 50%, #081324 100%);
-      color: var(--text);
-      line-height: 1.65;
-      min-height: 100vh;
+      margin: 0; color: var(--ink); background-color: var(--ivory); overflow-x: hidden;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.28 0 0 0 0 0.12 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      font-family: var(--sans); font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased;
     }
+    h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1380px, calc(100% - 40px)); margin: 0 auto; }
+    button, input, select { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(184, 145, 58, 0.35); }
+    .wrap { width: min(1280px, 100% - 48px); margin-inline: auto; }
 
-    /* Topbar */
-    .topbar {
-      position: sticky; top: 0; z-index: 90;
-      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      background: rgba(4, 9, 17, 0.88);
-      border-bottom: 1px solid var(--edge);
-    }
-    .topbar-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; padding: 12px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 15px; color: var(--gold); white-space: nowrap; }
-    .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
-    .switch { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
-    .switch a {
-      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted);
-      border: 1px solid transparent; white-space: nowrap; transition: all 0.2s;
-    }
-    .switch a:hover { color: var(--text); border-color: var(--edge); }
-    .switch a[aria-current="page"] {
-      color: #050c16; background: linear-gradient(135deg, var(--gold), #f5dc93);
-      font-weight: 600; box-shadow: 0 4px 16px rgba(229, 193, 104, 0.35);
-    }
+    /* ---------- Deco primitives ---------- */
+    .rule-step { height: 14px; background:
+      linear-gradient(var(--gold), var(--gold)) center 2px / 100% 1px no-repeat,
+      linear-gradient(var(--gold), var(--gold)) center 11px / 100% 1px no-repeat,
+      linear-gradient(var(--navy), var(--navy)) center 5px / 72% 4px no-repeat; }
+    .chev { display: inline-block; width: 26px; height: 10px; background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 10'%3E%3Cpath d='M1 1l6 4-6 4M8 1l6 4-6 4M15 1l6 4-6 4' fill='none' stroke='%23b8913a' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat center/contain; }
 
-    /* Hero */
-    .hero {
-      position: relative; overflow: hidden;
-      padding: 68px 0 48px;
-      border-bottom: 1px solid var(--edge);
-      background:
-        linear-gradient(180deg, rgba(5, 12, 22, 0.42) 0%, rgba(5, 12, 22, 0.96) 100%),
-        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Silver_Nova_in_Geirangerfjord.jpg/1600px-Silver_Nova_in_Geirangerfjord.jpg') center/cover no-repeat;
-    }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--gold); background: rgba(6, 15, 28, 0.85);
-      border: 1px solid var(--edge); padding: 6px 14px; border-radius: 999px;
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      font-family: var(--serif); font-size: clamp(32px, 4.8vw, 56px);
-      line-height: 1.13; font-weight: 700; margin-bottom: 18px;
-    }
-    .hero h1 em { font-style: normal; color: var(--gold); }
-    .hero h1 span.cyan { color: var(--cyan); }
-    .hero .lede { max-width: 950px; font-size: 16.5px; color: #dbe6f5; margin-bottom: 26px; }
+    /* ---------- Topbar ---------- */
+    .top { position: sticky; top: 0; z-index: 60; background: var(--navy); color: var(--ivory);
+      box-shadow: 0 1px 0 var(--gold), 0 4px 0 var(--navy), 0 5px 0 rgba(184,145,58,.6); }
+    .top-inner { display: flex; align-items: center; gap: 22px; min-height: 60px; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo svg { width: 30px; height: 30px; }
+    .logo b { font-family: var(--deco); font-weight: 400; font-size: 21px; letter-spacing: 0.06em; color: var(--gold-3); }
+    .logo small { font-family: var(--caps); font-size: 11px; letter-spacing: 0.3em; color: var(--gold-2); opacity: .85; }
+    .switch { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; font-size: 12.5px; }
+    .switch::-webkit-scrollbar { display: none; }
+    .switch a { position: relative; padding: 6px 10px; white-space: nowrap; color: rgba(244,236,216,.72); transition: color .2s; }
+    .switch a:hover { color: var(--gold-3); }
+    .switch a[aria-current="page"] { color: var(--navy); background: linear-gradient(180deg, var(--gold-3), var(--gold-2)); font-weight: 700;
+      clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px); }
 
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px;
-    }
-    .stat-card {
-      background: rgba(8, 18, 34, 0.86); border: 1px solid var(--edge);
-      border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(10px);
-    }
-    .stat-card b { display: block; font-family: var(--mono); font-size: 24px; color: var(--gold); }
-    .stat-card span { font-size: 12.5px; color: var(--muted); }
+    /* ---------- Hero ---------- */
+    .hero { position: relative; overflow: hidden; padding: 64px 0 76px; border-bottom: 1px solid var(--line-2); }
+    .hero::before { content: ""; position: absolute; left: 50%; top: 120%; width: 2400px; height: 2400px; transform: translate(-30%, -50%); z-index: -1;
+      background: repeating-conic-gradient(from 0deg, rgba(184,145,58,.10) 0 4deg, transparent 4deg 9deg); border-radius: 50%; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 12px; font-family: var(--caps); font-size: 13px; letter-spacing: .32em; color: var(--red); }
+    .kicker::before, .kicker::after { content: ""; width: 30px; height: 7px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+    .hero h1 { margin-top: 22px; font-family: var(--serif); font-weight: 900; font-size: clamp(36px, 5vw, 66px); line-height: 1.18; color: var(--navy); letter-spacing: .01em; }
+    .hero h1 .num { font-family: var(--deco); font-weight: 400; color: var(--gold); font-size: 1.25em; line-height: .8; vertical-align: -0.04em;
+      text-shadow: 3px 3px 0 var(--navy); }
+    .hero h1 .en { display: block; font-family: var(--thin); font-weight: 400; font-size: .42em; letter-spacing: .28em; color: var(--ink-2); margin-top: 10px; }
+    .hero .lede { max-width: 38em; margin-top: 22px; font-family: var(--serif); font-size: 16px; line-height: 1.95; color: var(--ink-2); }
+    .hero .lede strong { color: var(--navy); font-weight: 700; background: linear-gradient(transparent 62%, rgba(217,187,106,.45) 62%); }
+    .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 34px; border-top: 2px solid var(--navy); border-bottom: 1px solid var(--navy); position: relative; }
+    .stats::before { content: ""; position: absolute; left: 0; right: 0; top: 3px; border-top: 1px solid var(--gold); }
+    .stats div { padding: 16px 12px 14px; text-align: center; }
+    .stats div + div { border-left: 1px solid var(--line-2); }
+    .stats b { display: block; font-family: var(--deco); font-weight: 400; font-size: clamp(22px, 2.3vw, 32px); line-height: 1.05; color: var(--navy); }
+    .stats b small { font-family: var(--latin); font-size: .5em; color: var(--gold); margin-left: 2px; }
+    .stats span { display: block; margin-top: 6px; font-size: 11.5px; color: var(--ink-2); line-height: 1.45; }
 
-    .pillars-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 12px;
-    }
-    .pillar {
-      background: var(--card); border: 1px solid var(--edge);
-      border-radius: 14px; padding: 18px;
-    }
-    .pillar h3 { font-size: 15px; color: var(--gold); margin-bottom: 6px; }
-    .pillar p { font-size: 13px; color: var(--muted); }
+    .poster { position: relative; justify-self: center; width: min(430px, 100%); }
+    .poster-frame { position: relative; padding: 12px; background: var(--navy); border-radius: 215px 215px 6px 6px; box-shadow: 0 30px 60px -30px rgba(11,23,48,.7); }
+    .poster-frame::before { content: ""; position: absolute; inset: 5px; border: 1px solid var(--gold); border-radius: 210px 210px 3px 3px; pointer-events: none; }
+    .poster svg { display: block; width: 100%; height: auto; border-radius: 203px 203px 2px 2px; }
+    .poster-cap { margin-top: 14px; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--caps); letter-spacing: .26em; font-size: 12px; color: var(--navy); }
+    .poster-cap b { font-family: var(--deco); font-weight: 400; font-size: 22px; letter-spacing: .08em; color: var(--red); }
+    .waves-anim { animation: drift 9s linear infinite; }
+    .waves-anim.slow { animation-duration: 14s; }
+    @keyframes drift { to { transform: translateX(-60px); } }
+    .smoke { animation: puff 6s ease-in-out infinite; transform-origin: center; }
+    @keyframes puff { 0%,100% { opacity: .55; transform: translateY(0); } 50% { opacity: .85; transform: translateY(-6px); } }
 
-    /* Interactive Decision Labs */
-    .labs-wrap {
-      margin: 34px 0 28px; background: rgba(8, 19, 35, 0.92);
-      border: 1px solid var(--edge); border-radius: 18px; padding: 22px 24px;
-    }
-    .lab-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-    .lab-tab {
-      padding: 10px 16px; border-radius: 10px; font-size: 13.5px; font-weight: 600;
-      background: rgba(255,255,255,0.04); border: 1px solid var(--edge);
-      color: var(--muted); cursor: pointer; transition: all 0.2s;
-    }
-    .lab-tab.active {
-      background: linear-gradient(135deg, rgba(229,193,104,0.22), rgba(79,209,197,0.16));
-      color: var(--gold); border-color: var(--gold);
-    }
-    .lab-pane { display: none; }
-    .lab-pane.active { display: block; }
+    /* ---------- Sections ---------- */
+    .section { padding: 84px 0 40px; }
+    .sec-head { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 26px; align-items: start; margin-bottom: 36px; }
+    .sec-no { position: relative; width: 96px; height: 96px; display: grid; place-items: center; color: var(--gold-3); background: var(--navy);
+      clip-path: polygon(30% 0, 70% 0, 70% 12%, 88% 12%, 88% 30%, 100% 30%, 100% 70%, 88% 70%, 88% 88%, 70% 88%, 70% 100%, 30% 100%, 30% 88%, 12% 88%, 12% 70%, 0 70%, 0 30%, 12% 30%, 12% 12%, 30% 12%); }
+    .sec-no span { font-family: var(--deco); font-size: 36px; line-height: 1; }
+    .sec-eyebrow { font-family: var(--caps); font-size: 12.5px; letter-spacing: .34em; color: var(--red); display: flex; align-items: center; gap: 10px; }
+    .sec-head h2 { margin-top: 6px; font-family: var(--serif); font-weight: 900; font-size: clamp(25px, 3vw, 38px); line-height: 1.3; color: var(--navy); }
+    .sec-head p { margin-top: 10px; max-width: 48em; color: var(--ink-2); line-height: 1.9; font-size: 14.5px; }
 
-    .table-wrap {
-      overflow-x: auto; background: rgba(4, 11, 21, 0.85);
-      border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
-    }
-    table.data-table { width: 100%; border-collapse: collapse; font-size: 12.8px; }
-    table.data-table th, table.data-table td {
-      padding: 11px 13px; border-bottom: 1px solid rgba(255,255,255,0.07); text-align: left;
-    }
-    table.data-table th {
-      background: rgba(3, 8, 16, 0.95); color: var(--gold);
-      font-family: var(--mono); font-size: 11.5px; white-space: nowrap;
-    }
-    table.data-table tr:hover { background: rgba(229, 193, 104, 0.05); }
+    /* Method cards */
+    .cards4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+    .mcard { position: relative; padding: 30px 22px 24px; background: var(--card); border: 1px solid var(--line-2); transition: transform .3s var(--ease), box-shadow .3s; }
+    .mcard::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(184,145,58,.45); pointer-events: none; }
+    .mcard:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(11,23,48,.5); }
+    .mcard .rn { font-family: var(--deco); font-size: 40px; line-height: 1; color: var(--gold); }
+    .mcard .lab { margin-top: 8px; font-family: var(--caps); letter-spacing: .2em; font-size: 11.5px; color: var(--red); }
+    .mcard h3 { margin-top: 6px; font-family: var(--serif); font-size: 17px; font-weight: 700; color: var(--navy); line-height: 1.45; }
+    .mcard p { margin-top: 10px; font-size: 13.5px; line-height: 1.85; color: var(--ink-2); }
+    .mcard .fan { position: absolute; right: 14px; top: 14px; width: 46px; height: 24px; opacity: .55;
+      background: repeating-conic-gradient(from -90deg at 50% 100%, var(--gold) 0 6deg, transparent 6deg 15deg); clip-path: ellipse(50% 100% at 50% 100%); }
 
-    /* Filter Bar */
-    .filter-bar {
-      position: sticky; top: 57px; z-index: 70;
-      background: rgba(6, 15, 28, 0.94); backdrop-filter: blur(14px);
-      border: 1px solid var(--edge); border-radius: 16px;
-      padding: 16px 18px; margin-bottom: 24px;
-      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
-    }
-    .search-box {
-      flex: 1 1 250px; background: rgba(3, 8, 16, 0.9);
-      border: 1px solid var(--edge); border-radius: 10px;
-      padding: 9px 14px; color: var(--text); font-size: 13.5px;
-    }
-    .chip-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-    .chip {
-      padding: 6px 12px; border-radius: 999px; font-size: 12px;
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--edge);
-      color: var(--muted); cursor: pointer; transition: all 0.18s;
-    }
-    .chip:hover { color: var(--text); border-color: var(--gold); }
-    .chip.active { background: var(--gold); color: #050c16; font-weight: 600; border-color: var(--gold); }
-    .sort-select {
-      background: rgba(3, 8, 16, 0.95); color: var(--gold);
-      border: 1px solid var(--edge-strong); border-radius: 10px;
-      padding: 8px 12px; font-size: 12.5px; font-family: var(--sans);
-    }
+    /* ---------- Viz: space ledger ---------- */
+    .panel { position: relative; background: var(--card); border: 1px solid var(--line-2); padding: 26px 26px 22px; }
+    .panel::before { content: ""; position: absolute; inset: 6px; border: 1px solid rgba(184,145,58,.4); pointer-events: none; }
+    .panel-head { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin-bottom: 18px; position: relative; }
+    .panel-head h3 { font-family: var(--serif); font-size: 18px; color: var(--navy); }
+    .panel-head h3 small { display: block; font-family: var(--caps); font-size: 11px; letter-spacing: .26em; color: var(--gold); font-weight: 400; }
+    .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink-2); }
+    .legend i { display: inline-block; width: 12px; height: 12px; margin-right: 5px; vertical-align: -1px; }
+    .seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--navy); }
+    .seg button { padding: 6px 12px; font-size: 12.5px; color: var(--navy); transition: background .2s, color .2s; }
+    .seg button + button { border-left: 1px solid var(--line-2); }
+    .seg button:hover { background: rgba(184,145,58,.15); }
+    .seg button[aria-pressed="true"] { background: var(--navy); color: var(--gold-3); }
+    .ledger { columns: 2; column-gap: 40px; column-rule: 1px solid rgba(184,145,58,.35); position: relative; }
+    .lrow { break-inside: avoid; display: grid; grid-template-columns: 34px minmax(0, 168px) minmax(0, 1fr) 58px; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px dashed var(--line); font-size: 12.5px; cursor: pointer; }
+    .lrow:hover { background: rgba(217,187,106,.14); }
+    .lrow .r { font-family: var(--latin); color: var(--ink-3); font-size: 11.5px; }
+    .lrow .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+    .lrow .track { position: relative; height: 12px; background: repeating-linear-gradient(90deg, rgba(19,35,63,.06) 0 1px, transparent 1px 10%); }
+    .lrow .bar { position: absolute; left: 0; top: 0; bottom: 0; transform-origin: left; transition: transform .7s var(--ease); }
+    .lrow .bar::after { content: ""; position: absolute; right: -1px; top: -3px; bottom: -3px; width: 3px; background: inherit; }
+    .lrow .v { text-align: right; font-family: var(--latin); font-weight: 700; color: var(--navy); }
+    .ledger-note { margin-top: 14px; font-size: 12.5px; color: var(--ink-2); position: relative; }
+    .ledger-note b { color: var(--red); }
 
-    /* Cruise Cards Grid */
-    .cruises-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-bottom: 60px; }
-    .cruise-card {
-      background: var(--card); border: 1px solid var(--edge);
-      border-radius: 18px; overflow: hidden; box-shadow: var(--shadow);
-      display: flex; flex-direction: column; justify-content: space-between;
-    }
-    .cc-media { position: relative; height: 220px; background: #030811; }
-    .cc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .cc-rank {
-      position: absolute; top: 12px; left: 12px;
-      background: rgba(4, 10, 19, 0.9); border: 1px solid var(--gold);
-      color: var(--gold); font-family: var(--mono); font-weight: 700;
-      padding: 5px 11px; border-radius: 9px; font-size: 14px;
-    }
-    .cc-domain {
-      position: absolute; top: 12px; right: 12px;
-      background: rgba(4, 15, 28, 0.9); border: 1px solid var(--cyan);
-      color: var(--cyan); font-size: 11.5px; padding: 4px 10px; border-radius: 999px;
-    }
-    .cc-price-tag {
-      position: absolute; bottom: 12px; right: 12px;
-      background: rgba(5, 12, 22, 0.92); border: 1px solid var(--gold);
-      padding: 6px 12px; border-radius: 10px; text-align: right;
-    }
-    .cc-price-tag b { font-family: var(--mono); font-size: 17px; color: var(--gold); display: block; }
-    .cc-price-tag small { font-size: 10.5px; color: var(--emerald); font-family: var(--mono); }
+    .viz2 { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 22px; margin-top: 22px; }
+    .scatter svg { width: 100%; height: auto; display: block; position: relative; }
+    .scatter circle { transition: r .2s, opacity .2s; cursor: pointer; }
+    .scatter circle:hover { opacity: 1 !important; stroke: var(--navy); stroke-width: 2; }
+    .podium { display: grid; gap: 12px; position: relative; }
+    .pod { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line-2); background: var(--ivory); }
+    .pod .k { font-family: var(--deco); font-size: 26px; color: var(--gold); text-align: center; line-height: 1; }
+    .pod .k small { display: block; font-family: var(--caps); font-size: 9.5px; letter-spacing: .14em; color: var(--ink-3); margin-top: 4px; }
+    .pod b { display: block; font-family: var(--serif); font-size: 14px; color: var(--navy); line-height: 1.4; }
+    .pod span { font-size: 12px; color: var(--ink-2); }
 
-    .cc-body { padding: 20px 22px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
-    .cc-title { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .cc-brand { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-bottom: 10px; }
+    /* ---------- Labs (salons) ---------- */
+    .salon-tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 2px solid var(--navy); margin-bottom: 0; }
+    .salon-tab { position: relative; padding: 12px 18px 10px; font-family: var(--serif); font-size: 14px; font-weight: 600; color: var(--ink-2); border: 1px solid transparent; border-bottom: 0; transition: color .2s, background .2s; }
+    .salon-tab small { display: block; font-family: var(--caps); font-weight: 400; font-size: 10.5px; letter-spacing: .22em; color: var(--gold); }
+    .salon-tab:hover { color: var(--navy); background: rgba(217,187,106,.15); }
+    .salon-tab[aria-selected="true"] { color: var(--gold-3); background: var(--navy); }
+    .salon-tab[aria-selected="true"] small { color: var(--gold-2); }
+    .salon { display: none; background: var(--card); border: 1px solid var(--line-2); border-top: 0; padding: 26px; }
+    .salon.active { display: block; animation: fadeIn .35s var(--ease); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .salon > p.intro { font-family: var(--serif); font-size: 14.5px; color: var(--ink-2); line-height: 1.9; margin-bottom: 18px; max-width: 60em; }
+    .salon > p.intro strong { color: var(--navy); }
+    .salon h4 { font-family: var(--serif); font-size: 16.5px; color: var(--navy); margin: 26px 0 10px; display: flex; align-items: center; gap: 10px; }
+    .salon h4:first-of-type { margin-top: 6px; }
+    .salon h4 small { font-family: var(--caps); font-weight: 400; font-size: 11px; letter-spacing: .24em; color: var(--gold); }
+    .tw { overflow-x: auto; border: 1px solid var(--navy); background: var(--ivory); max-width: 100%; }
+    table.deco { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
+    table.deco th { position: sticky; top: 0; background: var(--navy); color: var(--gold-3); font-family: var(--caps); font-weight: 400; letter-spacing: .12em; font-size: 11.5px; text-align: left; padding: 11px 12px; white-space: nowrap; border-bottom: 3px double var(--gold); }
+    table.deco td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.6; }
+    table.deco tr:nth-child(even) td { background: rgba(239,227,198,.45); }
+    table.deco tr:hover td { background: rgba(217,187,106,.2); }
+    table.deco .money { font-family: var(--latin); font-weight: 700; color: var(--navy); white-space: nowrap; }
+    table.deco .money small { display: block; font-weight: 400; color: var(--ink-3); font-size: 11px; white-space: normal; min-width: 150px; line-height: 1.5; margin: 2px 0; }
+    table.deco td .pill { white-space: normal; }
+    table.deco.wide { min-width: 1120px; }
+    table.deco.wide td:nth-child(2) { min-width: 190px; }
+    table.deco details summary { cursor: pointer; color: var(--teal); font-size: 12px; list-style: none; }
+    table.deco details summary::before { content: "▸ "; }
+    table.deco details[open] summary::before { content: "▾ "; }
+    table.deco details div { font-size: 12px; color: var(--ink-3); margin-top: 4px; }
+    table.deco .muted { color: var(--ink-3); font-size: 12px; }
+    table.deco a.lnk { color: var(--red); border-bottom: 1px solid rgba(168,50,42,.35); font-size: 12px; white-space: nowrap; }
+    table.deco .camp { display: inline-block; padding: 2px 8px; font-size: 11px; font-family: var(--caps); letter-spacing: .1em; border: 1px solid currentColor; white-space: nowrap; }
+    .heat { position: relative; display: block; }
+    .heat i { position: absolute; left: 0; bottom: -4px; height: 3px; background: var(--gold); }
+    .pill { display: inline-block; margin: 2px 4px 2px 0; padding: 1px 8px; font-size: 11.5px; border: 1px solid var(--line-2); background: var(--card); white-space: nowrap; }
+    .pill.sky { border-color: var(--teal); color: var(--teal); }
+    .pill.star { border-color: var(--gold); color: #7d5f1c; background: rgba(217,187,106,.18); }
+    .divide { position: relative; margin: 6px 0 22px; padding: 18px 18px 12px; border: 1px solid var(--line-2); background: var(--ivory); }
+    .drow { display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr) 70px; gap: 10px; align-items: center; font-size: 12.5px; padding: 3px 0; }
+    .drow .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .drow .tr { position: relative; height: 14px; }
+    .drow .bb { position: absolute; left: 0; top: 0; bottom: 0; }
+    .drow .bb.over::after { content: "▸▸"; position: absolute; right: -18px; top: -3px; font-size: 11px; color: var(--red); }
+    .drow .vv { text-align: right; font-family: var(--latin); font-weight: 700; color: var(--navy); }
+    .divide .line500 { position: absolute; top: -18px; bottom: 0; border-left: 2px dashed var(--red); pointer-events: none; }
+    .divide .line500 span { position: absolute; top: -2px; left: 6px; font-family: var(--caps); font-size: 10.5px; letter-spacing: .14em; color: var(--red); white-space: nowrap; background: var(--ivory); padding: 0 4px; }
+    .tiers3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .tcard { padding: 18px; border: 1px solid var(--line-2); background: var(--ivory); position: relative; }
+    .tcard:nth-child(2) { border-color: var(--teal); }
+    .tcard:nth-child(3) { background: var(--navy); color: var(--ivory); border-color: var(--gold); }
+    .tcard:nth-child(3) h5, .tcard:nth-child(3) p { color: var(--ivory); }
+    .tcard:nth-child(3) .pill { background: transparent; color: var(--gold-3); border-color: var(--gold); }
+    .tcard h5 { font-family: var(--serif); font-size: 15px; color: var(--navy); margin: 0 0 8px; }
+    .tcard p { font-size: 13px; line-height: 1.8; color: var(--ink-2); margin-top: 8px; }
+    .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .vs-card { border: 1px solid var(--navy); background: var(--ivory); }
+    .vs-card header { padding: 14px 16px; background: var(--navy); color: var(--gold-3); font-family: var(--serif); font-weight: 700; font-size: 15px; border-bottom: 3px double var(--gold); }
+    .vs-card .take { padding: 14px 16px; font-size: 13px; line-height: 1.85; color: var(--ink-2); border-bottom: 1px solid var(--line); font-family: var(--serif); }
+    .vs-card dl { margin: 0; }
+    .vs-card .dim { display: grid; grid-template-columns: 76px 1fr 1fr; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+    .vs-card .dim > * { padding: 10px 12px; line-height: 1.65; }
+    .vs-card .dim dt { font-family: var(--caps); color: var(--red); font-size: 12px; background: rgba(239,227,198,.5); }
+    .vs-card .dim dd { margin: 0; }
+    .vs-card .dim dd + dd { border-left: 1px dashed var(--line-2); }
+    .vs-card .dim.head > * { font-family: var(--serif); font-weight: 700; color: var(--navy); background: rgba(217,187,106,.22); }
 
-    .cc-specs {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
-      background: rgba(3, 9, 18, 0.72); border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px; padding: 10px 12px; margin-bottom: 12px;
-    }
-    .cc-spec span { display: block; font-size: 10.5px; color: var(--muted); }
-    .cc-spec b { font-size: 12.5px; color: var(--cyan); font-family: var(--mono); }
+    /* ---------- Filter bar ---------- */
+    .filters { position: sticky; top: calc(var(--topH) + 6px); z-index: 30; margin-bottom: 30px; padding: 12px 16px; display: flex; flex-direction: column; gap: 10px;
+      background: rgba(251,246,234,.97); border: 1px solid var(--navy); box-shadow: 0 0 0 4px var(--ivory), 0 0 0 5px rgba(184,145,58,.6), 0 18px 30px -22px rgba(11,23,48,.5); }
+    .f-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+    .f-label { font-family: var(--caps); font-size: 11.5px; letter-spacing: .2em; color: var(--red); }
+    .search { flex: 1 1 260px; display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 12px; border: 1px solid var(--line-2); background: var(--ivory); }
+    .search svg { width: 16px; height: 16px; fill: none; stroke: var(--navy); stroke-width: 1.6; flex: none; }
+    .search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font-family: var(--serif); font-size: 13.5px; }
+    .sort { height: 38px; padding: 0 10px; border: 1px solid var(--navy); background: var(--navy); color: var(--gold-3); font-size: 12.5px; max-width: 100%; }
+    .tally { margin-left: auto; font-family: var(--caps); letter-spacing: .14em; font-size: 12.5px; color: var(--ink-2); white-space: nowrap; }
+    .tally b { font-family: var(--deco); font-weight: 400; font-size: 24px; color: var(--navy); letter-spacing: 0; }
 
-    .cc-highlight { font-size: 13px; color: #dce7f5; margin-bottom: 10px; }
-    .cc-tip {
-      font-size: 12px; color: #f5dfb0; background: var(--gold-soft);
-      border-left: 3px solid var(--gold); padding: 8px 11px; border-radius: 6px; margin-bottom: 12px;
-    }
-    .cc-foot {
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
-      padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11.5px; color: var(--muted);
-    }
-    .btn-link {
-      padding: 5px 12px; border-radius: 999px; background: var(--cyan-soft);
-      color: var(--cyan); border: 1px solid var(--cyan); font-family: var(--mono); font-size: 11.5px; white-space: nowrap;
-    }
+    /* ---------- Boarding pass cards ---------- */
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    .pass { position: relative; display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line-2);
+      box-shadow: 0 14px 30px -24px rgba(11,23,48,.55); transition: transform .3s var(--ease), box-shadow .3s; }
+    .pass:hover { transform: translateY(-5px); box-shadow: 0 28px 46px -26px rgba(11,23,48,.6); }
+    .pass.t0 { border-color: var(--gold); }
+    .pass-media { position: relative; height: 236px; overflow: hidden; background: var(--navy); }
+    .pass-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s var(--ease); filter: saturate(.9) contrast(1.03); }
+    .pass:hover .pass-media img { transform: scale(1.06); }
+    .pass-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,23,48,.35) 0%, transparent 34%, transparent 58%, rgba(11,23,48,.8) 100%); pointer-events: none; }
+    .rank { position: absolute; left: 14px; top: 14px; z-index: 2; width: 66px; height: 66px; display: grid; place-items: center; background: var(--navy); color: var(--gold-3);
+      clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%); }
+    .rank::before { content: ""; position: absolute; inset: 3px; background: transparent; border: 1px solid var(--gold); clip-path: inherit; }
+    .rank small { position: absolute; top: 9px; font-family: var(--caps); font-size: 8.5px; letter-spacing: .2em; color: var(--gold-2); }
+    .rank b { font-family: var(--deco); font-weight: 400; font-size: 27px; line-height: 1; margin-top: 8px; }
+    .stamp { position: absolute; right: 16px; top: 14px; z-index: 2; width: 70px; height: 70px; border-radius: 50%; display: grid; place-items: center; text-align: center;
+      border: 2px solid currentColor; outline: 1px solid currentColor; outline-offset: -7px; transform: rotate(-12deg); background: rgba(251,246,234,.9); line-height: 1; }
+    .stamp b { font-family: var(--deco); font-weight: 400; font-size: 20px; display: block; }
+    .stamp small { display: block; font-family: var(--caps); font-size: 7.5px; letter-spacing: .14em; margin-top: 3px; }
+    .stamp.T0 { color: var(--red); }
+    .stamp.T1 { color: var(--navy); }
+    .stamp.T15 { color: #8a6a22; }
+    .media-foot { position: absolute; left: 16px; right: 16px; bottom: 12px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; color: var(--ivory); }
+    .dom { font-family: var(--caps); font-size: 11px; letter-spacing: .2em; padding: 3px 10px; border: 1px solid rgba(241,223,166,.7); background: rgba(11,23,48,.55); white-space: nowrap; }
+    .fare { text-align: right; }
+    .fare b { font-family: var(--deco); font-weight: 400; font-size: 28px; line-height: 1; color: var(--gold-3); }
+    .fare small { display: block; font-size: 11px; opacity: .85; }
+    .pass-body { padding: 18px 22px 16px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .airline { display: flex; justify-content: space-between; gap: 10px; font-family: var(--caps); font-size: 10.5px; letter-spacing: .24em; color: var(--gold); border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+    .pass h3 { font-family: var(--serif); font-weight: 900; font-size: 19px; line-height: 1.4; color: var(--navy); }
+    .pass .en { font-family: var(--latin); font-size: 13px; color: var(--ink-2); letter-spacing: .03em; margin-top: 2px; }
+    .pass .meta { font-size: 12.5px; color: var(--ink-2); margin-top: 4px; }
+    .fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--navy); }
+    .fld { padding: 7px 10px 8px; border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); min-width: 0; }
+    .fld:nth-child(4n) { border-right: 0; }
+    .fld.wide { grid-column: span 2; }
+    .fld.full { grid-column: 1 / -1; border-right: 0; }
+    .fld span { display: block; font-family: var(--caps); font-size: 9.5px; letter-spacing: .16em; color: var(--ink-3); white-space: nowrap; }
+    .fld b { display: block; font-family: var(--latin); font-size: 15px; color: var(--navy); line-height: 1.35; overflow-wrap: anywhere; }
+    .fld b.s { font-family: var(--serif); font-size: 13px; font-weight: 600; }
+    .fld .mbar { display: block; margin-top: 5px; height: 4px; background: rgba(19,35,63,.1); position: relative; }
+    .fld .mbar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gold); }
+    .fields .fld:nth-last-child(-n+4) { border-bottom: 0; }
+    .incl { font-size: 12.5px; color: #7d5f1c; background: rgba(217,187,106,.16); padding: 7px 10px; border-left: 3px solid var(--gold); }
+    .hl { font-family: var(--serif); font-size: 13.5px; line-height: 1.85; color: var(--ink); }
+    .tip { font-size: 12.5px; line-height: 1.8; color: var(--ink-2); padding: 9px 12px; border: 1px dashed var(--line-2); background: var(--ivory); }
+    .tip b { color: var(--red); font-family: var(--caps); letter-spacing: .12em; font-weight: 400; }
+    .perf { position: relative; height: 22px; margin: 0 -1px; }
+    .perf::before { content: ""; position: absolute; left: 14px; right: 14px; top: 50%; border-top: 2px dotted var(--line-2); }
+    .perf::after { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(circle at 0 50%, var(--ivory) 0 10px, transparent 10.5px),
+      radial-gradient(circle at 100% 50%, var(--ivory) 0 10px, transparent 10.5px); }
+    .stub { padding: 4px 22px 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: center; font-size: 12px; color: var(--ink-2); }
+    .stub .sail span { font-family: var(--caps); letter-spacing: .16em; font-size: 10px; color: var(--ink-3); display: block; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: var(--navy); color: var(--gold-3); font-family: var(--caps); letter-spacing: .14em; font-size: 11.5px; white-space: nowrap; transition: background .2s; }
+    .btn:hover { background: var(--red); }
+    .stub .shared-slot { grid-column: 1 / -1; }
+    .shared-slot .sw-bar { border-top: 1px solid var(--line); margin-top: 4px; }
+    .shared-slot .sw-btn { border-radius: 0; border-color: var(--line-2); background: var(--ivory); color: var(--navy); }
+    .shared-slot .sw-dist { border-radius: 0; background: rgba(19,35,63,.07); }
+    .empty { grid-column: 1 / -1; text-align: center; padding: 60px 20px; font-family: var(--serif); color: var(--ink-2); border: 1px dashed var(--line-2); }
+    .credit { position: absolute; right: 8px; bottom: 2px; z-index: 1; font-size: 9px; color: rgba(255,255,255,.0); }
 
-    .foot { padding: 50px 0; border-top: 1px solid var(--edge); color: var(--muted); font-size: 13px; text-align: center; }
+    /* ---------- Footer ---------- */
+    .foot { margin-top: 70px; background: var(--navy); color: rgba(244,236,216,.8); padding: 54px 0 36px; position: relative; overflow: hidden; }
+    .foot::before { content: ""; position: absolute; left: 50%; top: 100%; width: 1200px; height: 1200px; transform: translate(-50%, -50%); border-radius: 50%;
+      background: repeating-conic-gradient(rgba(217,187,106,.08) 0 3deg, transparent 3deg 8deg); }
+    .foot-inner { position: relative; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
+    .foot h4 { font-family: var(--deco); font-weight: 400; font-size: 30px; color: var(--gold-3); letter-spacing: .04em; }
+    .foot p { margin-top: 10px; font-size: 13px; line-height: 1.9; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; align-content: flex-start; }
+    .foot nav a { color: rgba(244,236,216,.75); border-bottom: 1px solid transparent; }
+    .foot nav a:hover, .foot nav a[aria-current="page"] { color: var(--gold-3); border-bottom-color: var(--gold); }
+    .sig { position: relative; margin-top: 30px; padding-top: 16px; border-top: 1px solid rgba(217,187,106,.35); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      font-family: var(--caps); letter-spacing: .24em; font-size: 11.5px; color: var(--gold-2); }
 
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .cards4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .viz2 { grid-template-columns: 1fr; }
+    }
     @media (max-width: 980px) {
-      .cruises-grid, .hero-stats, .pillars-grid { grid-template-columns: 1fr; }
-      .cc-specs { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .poster { width: min(360px, 100%); }
+      .grid, .vs, .tiers3 { grid-template-columns: 1fr; }
+      .ledger { columns: 1; }
+    }
+    @media (max-width: 720px) {
+      .wrap { width: calc(100% - 28px); }
+      .top-inner { flex-wrap: wrap; gap: 4px 12px; padding: 8px 0 6px; min-height: 0; }
+      .switch { margin-left: 0; width: 100%; }
+      .logo small { display: none; }
+      .hero { padding: 40px 0 56px; }
+      .hero h1 .num { text-shadow: 2px 2px 0 var(--navy); }
+      .kicker { letter-spacing: .18em; font-size: 11.5px; }
+      .kicker::after { display: none; }
+      .section { padding: 56px 0 24px; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats div:nth-child(odd) { border-left: 0; }
+      .stats div:nth-child(n+3) { border-top: 1px solid var(--line-2); }
+      .stats div:last-child { grid-column: 1 / -1; }
+      .sec-head { grid-template-columns: 1fr; gap: 14px; }
+      .sec-no { width: 70px; height: 70px; }
+      .sec-no span { font-size: 26px; }
+      .cards4 { grid-template-columns: 1fr; }
+      .panel, .salon { padding: 18px 14px; }
+      .lrow { grid-template-columns: 28px minmax(0, 118px) minmax(0, 1fr) 50px; gap: 6px; }
+      .drow { grid-template-columns: minmax(0, 120px) minmax(0, 1fr) 56px; }
+      .salon-tab { padding: 10px 12px 8px; font-size: 13px; flex: 1 1 45%; }
+      .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fld:nth-child(4n) { border-right: 1px solid var(--line-2); }
+      .fld:nth-child(2n) { border-right: 0; }
+      .fld.wide { grid-column: 1 / -1; border-right: 0; }
+      .fields .fld:nth-last-child(-n+4) { border-bottom: 1px solid var(--line-2); }
+      .fields .fld:last-child { border-bottom: 0; }
+      .pass-media { height: 200px; }
+      .filters { position: static; }
+      .tally { margin-left: 0; }
+      .vs-card .dim { grid-template-columns: 1fr; }
+      .vs-card .dim dd + dd { border-left: 0; border-top: 1px dashed var(--line-2); }
+      .foot-inner { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="index.html"><span class="dot"></span><span>Destination Atlas · 全球奢华邮轮图鉴</span></a>
+  <header class="top" id="topbar">
+    <div class="wrap top-inner">
+      <a class="logo" href="index.html" aria-label="The Grand Fleet Index 首页">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#d9bb6a" stroke-width="1"/><g stroke="#b8913a" stroke-width="1"><path d="M16 4v6M7.5 7.5l4 4M24.5 7.5l-4 4M4 16h6M28 16h-6"/></g><circle cx="16" cy="17" r="5" fill="#d9bb6a"/><path d="M6 21h20l-3 5H9z" fill="#f4ecd8"/></svg>
+        <b>GRAND FLEET</b><small>邮轮图鉴</small>
+      </a>
       <nav class="switch" aria-label="榜单切换">
         <a href="index.html">图鉴总览</a>
         <a href="beaches.html">海岸度假 145</a>
@@ -253,292 +413,602 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">The Grand Fleet Index · Ocean, River & Galapagos Ultra-Luxury Atlas</span>
-      <h1>皇家航海蓝图与<em>香槟金甲板</em><br />全球 50 大奢华邮轮与远征河轮 <span class="cyan">Top 50</span></h1>
-      <p class="lede">
-        当预算来到 <strong>$400–$1,500/人/晚</strong>，你究竟该选世邦/银海/丽晶/意铂等真六星全套房邮轮，还是四季/丽思卡尔顿/安缦超级游艇，抑或皇家加勒比双层复式 Star Class 与名人邮轮 The Retreat 船中船？本图鉴将全球 50 艘标杆船舰（涵盖 <strong>海洋顶奢、巨轮船中船复式、全球传奇内河、加拉帕戈斯与印尼科考帆船</strong> 四大领域）按 <strong>每平米每晚空间单价 ($/㎡/晚)</strong>、<strong>船员乘客比</strong> 与 <strong>实测全包底价</strong> 进行硬核拆解。
-      </p>
-      <div class="hero-stats">
-        <div class="stat-card"><b>50 艘</b><span>海洋 / 船中船 / 内河 / 科考全覆盖</span></div>
-        <div class="stat-card"><b>$7.3 起</b><span>MSC游艇会双层复式 $/㎡/晚 空间王</span></div>
-        <div class="stat-card"><b>$10.4</b><span>2025新船《长江探索号》$/㎡/晚</span></div>
-        <div class="stat-card"><b>1 : 1</b><span>顶奢邮轮白金管家与船员乘客配比</span></div>
-        <div class="stat-card"><b>4 大矩阵</b><span>含14家主流船底价 & 尼罗河/加拉帕戈斯分档</span></div>
-      </div>
-
-      <div class="pillars-grid">
-        <div class="pillar">
-          <h3>📐 1. 算“每平米每晚 ($/㎡/晚)”空间价值</h3>
-          <p>普通大船阳台房仅 16㎡，而 RCI 双层复式 LOFT 达 51–67㎡（仅 $8/㎡/晚），世邦/意铂入门套房即 35㎡（$15–$17/㎡/晚），长江探索号 31㎡ 仅 $10.4/㎡/晚。</p>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="kicker">The Grand Fleet Index · MMXXVI</span>
+          <h1>香槟金甲板上的<br /><span class="num">50</span> 艘殿堂级邮轮<span class="en">OCEAN · RIVER · EXPEDITION</span></h1>
+          <p class="lede">
+            当预算来到 <strong>$400–$1,500/人/晚</strong>，你该选世邦、银海、丽晶、意铂等真六星全套房邮轮，还是四季、丽思卡尔顿、安缦超级游艇，抑或皇家加勒比 Star Class 双层复式与名人邮轮 The Retreat 船中船？本图鉴把全球 50 艘标杆船舰——<strong>海洋顶奢、巨轮船中船、传奇内河、加拉帕戈斯与印尼科考帆船</strong>四大舰队——按 <strong>每平米每晚空间单价 ($/㎡/晚)</strong>、<strong>船员乘客比</strong> 与 <strong>实测全包底价</strong> 逐一拆解。
+          </p>
+          <div class="stats" id="hero-stats"></div>
         </div>
-        <div class="pillar">
-          <h3>🥂 2. 穿透“一价全包”含金量</h3>
-          <p>丽晶七海连每站岸上观光与名酒洗衣全包；世邦包冲浪鱼子酱与香槟；银海包白金管家；而皇家加勒比 Star Class 包全船付费餐厅无限吃与 Royal Genie 免排队。</p>
-        </div>
-        <div class="pillar">
-          <h3>⚓ 3. 小船进核心内港 vs 大船玩水上乐园</h3>
-          <p>带娃追求滑道大秀选 25 万吨《海洋标志号》或《迪士尼宝藏号》套房；夫妻追求直接停进波尔多/塞维利亚/威尼斯中心或直插北极点，选 3 万吨内奢华小船。</p>
-        </div>
-        <div class="pillar">
-          <h3>🐢 4. 加拉帕戈斯与尼罗河选船铁律</h3>
-          <p>加拉帕戈斯优先选 16–20 人双体游艇（如 Hermes / Eco Galaxy，登陆点最全且常送往返机票）；尼罗河认准拥有独立私人码头的 Oberoi 或现代美学 Historia。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="wrap">
-    <!-- INTERACTIVE COMPARISON LABS -->
-    <section class="labs-wrap">
-      <div class="lab-tabs">
-        <button class="lab-tab active" onclick="switchLab('lab-1', this)">⚔️ Lab 1: $500/人/晚分水岭 — 皇家双层复式/Retreat vs 真六星邮轮怎么选？</button>
-        <button class="lab-tab" onclick="switchLab('lab-2', this)">📊 Lab 2: 全球 14 大主流/轻奢邮轮 7 晚四档舱房实测底价矩阵</button>
-        <button class="lab-tab" onclick="switchLab('lab-3', this)">🏺 Lab 3: 埃及尼罗河 5 大档次 & 加拉帕戈斯 4 大档位性价比王速查</button>
-      </div>
-
-      <!-- Lab 1 -->
-      <div id="lab-1" class="lab-pane active">
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px;">
-          当预算达到 <strong>$3,000–$5,500/人/7晚（约 $430–$780/晚）</strong>，你既能买到皇家加勒比/MSC/名人邮轮的 <strong>50–69㎡ 双层挑空复式套房</strong>，也能买到世邦/银海/意铂/丽晶的 <strong>33–35㎡ 全包六星套房</strong>。下表列出实测含税底价与空间单价对比：
-        </p>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>阵营分类</th>
-                <th>船司与代表船型</th>
-                <th>套房名称与面积</th>
-                <th>7晚实测含税总价/人</th>
-                <th>折合每晚 & 空间单价</th>
-                <th>核心礼遇与决选建议</th>
-              </tr>
-            </thead>
-            <tbody id="lab1-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Lab 2 -->
-      <div id="lab-2" class="lab-pane">
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px;">
-          涵盖全球 14 家主流、高阶与小船精品邮轮公司 2026–2027 航季 <strong>7 晚航线全网最低实测含税价（内舱 / 海景 / 阳台 / 套房）</strong>：
-        </p>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>邮轮品牌</th>
-                <th>档次定位</th>
-                <th>内舱 7晚底价</th>
-                <th>海景 7晚底价</th>
-                <th>阳台 7晚底价</th>
-                <th>套房 7晚底价</th>
-                <th>实测标杆航次与行家点评</th>
-              </tr>
-            </thead>
-            <tbody id="lab2-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Lab 3 -->
-      <div id="lab-3" class="lab-pane">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
-          <div>
-            <h4 style="color:var(--gold);margin-bottom:8px;">🇪🇬 埃及尼罗河游轮 5 大档次（卢克索↔阿斯旺 4晚全包）</h4>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr><th>档次</th><th>代表游轮</th><th>4晚参考价</th><th>每晚均价</th><th>核心亮点</th></tr>
-                </thead>
-                <tbody id="nile-tbody"></tbody>
-              </table>
-            </div>
+        <figure class="poster">
+          <div class="poster-frame">
+            <svg viewBox="0 0 400 520" role="img" aria-label="装饰艺术风格海报：远洋邮轮船艏劈开波浪，背后是放射状的金色太阳">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6ecd2"/><stop offset=".55" stop-color="#efd9a2"/><stop offset="1" stop-color="#e2b866"/></linearGradient>
+                <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c8"/><stop offset=".7" stop-color="#e9c46a"/><stop offset="1" stop-color="#c9952f"/></radialGradient>
+                <linearGradient id="hullL" x1="0" x2="1"><stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#13233f"/></linearGradient>
+                <linearGradient id="hullR" x1="0" x2="1"><stop offset="0" stop-color="#2a4778"/><stop offset="1" stop-color="#1a2f55"/></linearGradient>
+                <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24406e"/><stop offset="1" stop-color="#0b1730"/></linearGradient>
+              </defs>
+              <rect width="400" height="520" fill="url(#sky)"/>
+              <g id="rays" transform="translate(200 300)" fill="#c9952f" opacity=".28"></g>
+              <circle cx="200" cy="300" r="92" fill="url(#sun)"/>
+              <g fill="none" stroke="#b8913a" stroke-width="1" opacity=".7"><circle cx="200" cy="300" r="104"/><circle cx="200" cy="300" r="112" stroke-dasharray="2 5"/></g>
+              <!-- stepped deco clouds -->
+              <g fill="#fbf6ea" opacity=".85">
+                <path d="M24 150h70v-8h40v8h26v10H24z"/><path d="M266 118h52v-7h34v7h28v9H266z"/>
+              </g>
+              <!-- gulls -->
+              <g fill="none" stroke="#13233f" stroke-width="1.6" stroke-linecap="round"><path d="M70 96q7-7 14 0q7-7 14 0"/><path d="M110 76q5-5 10 0q5-5 10 0"/><path d="M318 176q5-5 10 0q5-5 10 0"/></g>
+              <!-- funnels -->
+              <g class="smoke" fill="#fbf6ea" opacity=".7"><ellipse cx="150" cy="138" rx="26" ry="9"/><ellipse cx="206" cy="112" rx="30" ry="10"/><ellipse cx="258" cy="140" rx="24" ry="8"/></g>
+              <g>
+                <path d="M136 250l6-100h26l4 100z" fill="#a8322a"/><path d="M142 150h26l1 18h-28z" fill="#13233f"/>
+                <path d="M244 250l4-100h26l6 100z" fill="#8d2a23"/><path d="M248 150h26l1 18h-28z" fill="#13233f"/>
+                <path d="M188 256l4-130h32l4 130z" fill="#b8392f"/><path d="M192 126h32l1 22h-34z" fill="#0b1730"/>
+                <g stroke="#d9bb6a" stroke-width="1.2"><path d="M141 174h28M247 174h28M191 154h34"/></g>
+              </g>
+              <!-- superstructure -->
+              <path d="M112 300v-34h22v-12h132v12h22v34z" fill="#fbf6ea"/>
+              <path d="M124 286v-14h152v14z" fill="#e8d6aa"/>
+              <g fill="#13233f"><rect x="132" y="276" width="6" height="5"/><rect x="146" y="276" width="6" height="5"/><rect x="160" y="276" width="6" height="5"/><rect x="174" y="276" width="6" height="5"/><rect x="220" y="276" width="6" height="5"/><rect x="234" y="276" width="6" height="5"/><rect x="248" y="276" width="6" height="5"/><rect x="262" y="276" width="6" height="5"/></g>
+              <!-- hull: bow seen head-on -->
+              <path d="M200 262L200 470L58 470L104 300z" fill="url(#hullL)"/>
+              <path d="M200 262L296 300L342 470L200 470z" fill="url(#hullR)"/>
+              <path d="M200 262v208" stroke="#d9bb6a" stroke-width="1.6"/>
+              <path d="M84 376L200 352L316 376" fill="none" stroke="#d9bb6a" stroke-width="2"/>
+              <path d="M70 420L200 400L330 420" fill="none" stroke="#a8322a" stroke-width="5"/>
+              <g fill="#d9bb6a"><circle cx="160" cy="322" r="3"/><circle cx="240" cy="322" r="3"/></g>
+              <!-- sea -->
+              <rect y="440" width="400" height="80" fill="url(#sea)"/>
+              <g class="waves-anim slow"><path d="M-60 452q15-10 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0V520H-60z" fill="#24406e"/></g>
+              <g class="waves-anim"><path d="M-60 474q15-10 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0V520H-60z" fill="#13233f"/></g>
+              <g fill="none" stroke="#d9bb6a" stroke-width="1.2" opacity=".8" class="waves-anim slow"><path d="M-60 492q15-8 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0"/></g>
+              <!-- bow spray -->
+              <path d="M200 470c-30-6-60-2-96 10c26-16 56-26 96-26c40 0 70 10 96 26c-36-12-66-16-96-10z" fill="#fbf6ea"/>
+              <path d="M200 462l-34-8 34 2 34-2z" fill="#fbf6ea" opacity=".8"/>
+              <rect y="500" width="400" height="20" fill="#0b1730"/>
+              <text x="200" y="515" text-anchor="middle" font-family="Marcellus SC, serif" font-size="10" letter-spacing="5" fill="#d9bb6a">CROISIÈRES DE LUXE</text>
+            </svg>
           </div>
+          <figcaption class="poster-cap"><span>Ligne Transatlantique</span><b>Nº 50</b></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no"><span>I</span></div>
           <div>
-            <h4 style="color:var(--cyan);margin-bottom:8px;">🐢 加拉帕戈斯 4 大档位性价比王（5天4晚–6天5晚全包）</h4>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr><th>档位</th><th>首选船名与船型</th><th>实测促销价</th><th>每晚均价</th><th>必选理由</th></tr>
-                </thead>
-                <tbody id="gala-tbody"></tbody>
-              </table>
+            <div class="sec-eyebrow"><span class="chev"></span>THE MANIFEST · 评定章程</div>
+            <h2>四条航海铁律：怎样读懂一张奢华船票</h2>
+            <p>同样是 $500/晚，你买到的可能是 16㎡ 普通阳台房，也可能是 60㎡ 双层复式；可能全包鱼子酱香槟，也可能连 Wi-Fi 都另算。以下四条准则贯穿全部 50 艘船的评定。</p>
+          </div>
+        </div>
+        <div class="cards4">
+          <article class="mcard"><span class="fan"></span><div class="rn">I</div><div class="lab">SPACE VALUE</div><h3>算“每平米每晚 $/㎡/晚”</h3><p>普通大船阳台房仅 16㎡，而 RCI 双层复式 LOFT 达 51–67㎡（约 $8/㎡/晚），世邦/意铂入门套房即 35㎡（$15–$17/㎡/晚），长江探索号 31㎡ 仅 $10.4/㎡/晚。</p></article>
+          <article class="mcard"><span class="fan"></span><div class="rn">II</div><div class="lab">ALL-INCLUSIVE</div><h3>穿透“一价全包”含金量</h3><p>丽晶七海连每站岸上观光与名酒洗衣全包；世邦包冲浪鱼子酱与香槟；银海包白金管家；皇家加勒比 Star Class 包全船付费餐厅无限吃与 Royal Genie 免排队。</p></article>
+          <article class="mcard"><span class="fan"></span><div class="rn">III</div><div class="lab">PORT vs PARK</div><h3>小船进内港 vs 大船玩乐园</h3><p>带娃追求滑道大秀选 25 万吨《海洋标志号》或《迪士尼宝藏号》套房；夫妻想直接停进波尔多/塞维利亚/威尼斯中心或直插北极点，选 3 万吨内奢华小船。</p></article>
+          <article class="mcard"><span class="fan"></span><div class="rn">IV</div><div class="lab">EXPEDITION RULES</div><h3>加拉帕戈斯与尼罗河选船</h3><p>加拉帕戈斯优先选 16–20 人双体游艇（如 Hermes / Eco Galaxy，登陆点最全且常送往返机票）；尼罗河认准拥有独立私人码头的 Oberoi 或现代美学 Historia。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="space">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no"><span>II</span></div>
+          <div>
+            <div class="sec-eyebrow"><span class="chev"></span>THE SPACE LEDGER · 空间价值账簿</div>
+            <h2>$/㎡/晚：每一美元买到多少甲板</h2>
+            <p>把每艘船标杆套房的每晚单价除以套房面积，得出“空间单价”。条越短越超值；点击任一行即可跳到对应登船卡。</p>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h3><small>Deck Plan · Price per ㎡ per night</small>50 艘船空间单价排行（从低到高）</h3>
+            <div class="seg" id="ledger-seg" role="group" aria-label="空间账簿船队筛选"></div>
+          </div>
+          <div class="ledger" id="ledger"></div>
+          <p class="ledger-note" id="ledger-note"></p>
+        </div>
+        <div class="viz2">
+          <div class="panel scatter">
+            <div class="panel-head">
+              <h3><small>Privacy × Service</small>载客量 vs 每名船员服务乘客数</h3>
+              <div class="legend" id="scatter-legend"></div>
             </div>
+            <div id="scatter"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3><small>Captain's Table</small>甲板之最</h3></div>
+            <div class="podium" id="podium"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FILTER BAR FOR TOP 50 -->
-    <div class="filter-bar">
-      <input type="search" id="cruise-search" class="search-box" placeholder="搜索邮轮、船司、海域（如：世邦、银海、皇家加勒比、三峡、尼罗河、加拉帕戈斯、安缦）..." oninput="renderCruises()" />
-      <div class="chip-group" id="domain-chips">
-        <button class="chip active" onclick="setDomain('ALL', this)">全部 50 艘</button>
-        <button class="chip" onclick="setDomain('海洋顶奢与超级游艇', this)">🛥️ 海洋顶奢与超级游艇 (19)</button>
-        <button class="chip" onclick="setDomain('主流大船顶奢船中船与复式', this)">👑 巨轮船中船与双层复式 (7)</button>
-        <button class="chip" onclick="setDomain('全球传奇内河与雨林河轮', this)">🏞️ 全球传奇内河与雨林 (14)</button>
-        <button class="chip" onclick="setDomain('加拉帕戈斯与印尼科考帆船', this)">🐢 加拉帕戈斯与印尼帆船 (10)</button>
-      </div>
-      <select id="cruise-sort" class="sort-select" onchange="renderCruises()">
-        <option value="rank">按综合殿堂排名 (Top 1 → 50)</option>
-        <option value="sqmValAsc">按空间性价比 $/㎡/晚 从低到高 (最超值大房)</option>
-        <option value="priceAsc">按每晚单价 $/晚 从低到高</option>
-        <option value="suiteSqmDesc">按套房面积 ㎡ 从大到小</option>
-        <option value="paxAsc">按载客人数从少到多 (最私密)</option>
-      </select>
-    </div>
+    <section class="section" id="labs">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no"><span>III</span></div>
+          <div>
+            <div class="sec-eyebrow"><span class="chev"></span>THE SALONS · 决策沙龙</div>
+            <h2>五间头等舱沙龙：底价矩阵与对决实验室</h2>
+            <p>$500 分水岭、皇家加勒比套房阶级、14 家主流邮轮 7 晚底价、尼罗河 / 加拉帕戈斯 / 印尼帆船分档，以及两组品牌正面对决——全部来自航次实测含税价。</p>
+          </div>
+        </div>
+        <div class="salon-tabs" role="tablist" id="salon-tabs">
+          <button class="salon-tab" role="tab" aria-selected="true" data-pane="lab-1"><small>Salon I</small>$500 分水岭 · 复式 vs 六星</button>
+          <button class="salon-tab" role="tab" aria-selected="false" data-pane="lab-rci"><small>Salon II</small>皇家加勒比套房阶级</button>
+          <button class="salon-tab" role="tab" aria-selected="false" data-pane="lab-2"><small>Salon III</small>14 大主流邮轮 7 晚矩阵</button>
+          <button class="salon-tab" role="tab" aria-selected="false" data-pane="lab-3"><small>Salon IV</small>尼罗河 · 加拉帕戈斯 · 印尼</button>
+          <button class="salon-tab" role="tab" aria-selected="false" data-pane="lab-vs"><small>Salon V</small>品牌正面对决</button>
+        </div>
 
-    <div id="cruises-container" class="cruises-grid"></div>
+        <div id="lab-1" class="salon active" role="tabpanel">
+          <p class="intro">预算达到 <strong>$3,000–$5,500/人/7晚（约 $430–$780/晚）</strong>时，你既能买到皇家加勒比 / MSC / 名人邮轮的 <strong>50–90㎡ 双层挑空复式套房</strong>，也能买到世邦 / 银海 / 意铂 / 丽晶的 <strong>33–35㎡ 全包六星套房</strong>。下图以每人每晚实测最低价对齐，红色虚线即 $500 分水岭。</p>
+          <div class="divide" id="divide"></div>
+          <h4>巨轮双层复式 · 全船司最低价 <small>Duplex &amp; Loft Suites</small></h4>
+          <div class="tw"><table class="deco wide"><thead><tr><th>#</th><th>船司 / 船级</th><th>套房（代码）与面积</th><th>阶级与礼遇</th><th>最低总价/人</th><th>最低每晚/人</th></tr></thead><tbody id="duplex-tbody"></tbody></table></div>
+          <h4>真·六星与超级游艇 · 7 晚阳台套房底价 <small>Ultra-Luxury 7-Night</small></h4>
+          <div class="tw"><table class="deco wide"><thead><tr><th>#</th><th>船司 / 船名</th><th>航次与港口</th><th>套房</th><th>7 晚总价/人</th><th>每晚/人</th><th>全包内容</th><th>备选航次</th></tr></thead><tbody id="ultra-tbody"></tbody></table></div>
+        </div>
+
+        <div id="lab-rci" class="salon" role="tabpanel">
+          <p class="intro">皇家加勒比把套房分为 <strong>Sea / Sky / Star</strong> 三个阶级，礼遇差距远大于面积差距。$500/晚 是 Sky Class 的甜点区——下表列出各船级在该价位内可订的套房与实测含税价，并附名人邮轮 The Retreat 横向对比。</p>
+          <div class="tiers3" id="rci-tiers"></div>
+          <h4>$500/晚以内可订套房 · 实测航次 <small>Suites At or Under $500 / Night</small></h4>
+          <div class="tw"><table class="deco"><thead><tr><th>船级 / 船名</th><th>航次</th><th>可订套房（代码 · 阶级 · 总价/人 · 每晚）</th><th>链接</th></tr></thead><tbody id="rci-tbody"></tbody></table></div>
+        </div>
+
+        <div id="lab-2" class="salon" role="tabpanel">
+          <p class="intro">涵盖全球 14 家主流、高阶与小船精品邮轮公司 2026–2027 航季 <strong>7 晚航线全网最低实测含税价（内舱 / 海景 / 阳台 / 套房）</strong>。金色细条为该列相对价位；“—” 表示该船型无此舱等或未取得报价。</p>
+          <div class="tw"><table class="deco"><thead><tr><th>#</th><th>邮轮品牌</th><th>档次定位</th><th>内舱 7晚</th><th>海景 7晚</th><th>阳台 7晚</th><th>套房 7晚</th><th>最低每晚</th><th>标杆航次与备注</th></tr></thead><tbody id="lab2-tbody"></tbody></table></div>
+        </div>
+
+        <div id="lab-3" class="salon" role="tabpanel">
+          <p class="intro">从 Top 50 中抽出 <strong>埃及尼罗河</strong>、<strong>加拉帕戈斯群岛</strong> 与 <strong>印尼科莫多 / 四王群岛</strong> 三大远征水域的船只，按每晚单价分档；并附印尼 Phinisi 双桅帆船的包船与散订价目。</p>
+          <h4 id="nile-h">🇪🇬 埃及尼罗河 · 卢克索 ↔ 阿斯旺 <small>Nile Tiers</small></h4>
+          <div class="tw"><table class="deco"><thead><tr><th>档次</th><th>船名</th><th>套房 / 面积</th><th>每晚/人</th><th>$/㎡/晚</th><th>载客 · 船员比</th><th>为什么选它</th></tr></thead><tbody id="nile-tbody"></tbody></table></div>
+          <h4 id="gala-h">🐢 加拉帕戈斯群岛 · 远征游艇分档 <small>Galápagos Tiers</small></h4>
+          <div class="tw"><table class="deco"><thead><tr><th>档次</th><th>船名</th><th>套房 / 面积</th><th>每晚/人</th><th>$/㎡/晚</th><th>载客 · 船员比</th><th>为什么选它</th></tr></thead><tbody id="gala-tbody"></tbody></table></div>
+          <h4>⛵ 印尼 Phinisi 双桅帆船 · 包船与散订 <small>Indonesian Phinisi Yachts</small></h4>
+          <div class="tw"><table class="deco"><thead><tr><th>船名 / 品牌</th><th>规格</th><th>预订方式</th><th>阳台配置</th><th>价格</th><th>海域</th></tr></thead><tbody id="phinisi-tbody"></tbody></table></div>
+        </div>
+
+        <div id="lab-vs" class="salon" role="tabpanel">
+          <p class="intro">两组最常被拿来比较的品牌：同出 R-Class 姊妹船的 <strong>精钻 vs 大洋</strong>，以及同属 Premium 阵营的 <strong>精致 vs 荷美</strong>。</p>
+          <div class="vs" id="vs"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fleet">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no"><span>IV</span></div>
+          <div>
+            <div class="sec-eyebrow"><span class="chev"></span>THE BOARDING PASSES · 头等登船卡</div>
+            <h2>Top 50 舰队名录</h2>
+            <p>每张登船卡记录船名、套房、面积、乘客数、船员比、空间单价与核验航次；撕线下方的存根可加入心愿单或标记已航行。</p>
+          </div>
+        </div>
+        <div class="filters" id="filters">
+          <div class="f-row">
+            <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" id="cruise-search" placeholder="搜索船名、船司、海域（世邦、银海、三峡、尼罗河、加拉帕戈斯、安缦…）" aria-label="搜索邮轮" /></label>
+            <select id="cruise-sort" class="sort" aria-label="排序">
+              <option value="rank">综合殿堂排名 1 → 50</option>
+              <option value="sqmValAsc">空间单价 $/㎡/晚 低 → 高</option>
+              <option value="priceAsc">每晚单价 $/晚 低 → 高</option>
+              <option value="suiteSqmDesc">套房面积 ㎡ 大 → 小</option>
+              <option value="paxAsc">载客人数 少 → 多（最私密）</option>
+            </select>
+            <span class="tally" id="tally"></span>
+          </div>
+          <div class="f-row">
+            <span class="f-label">舰队</span>
+            <div class="seg" id="domain-seg" role="group" aria-label="舰队筛选"></div>
+            <span class="f-label">等级</span>
+            <div class="seg" id="tier-seg" role="group" aria-label="等级筛选"></div>
+          </div>
+        </div>
+        <div id="cruises-container" class="grid"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      <p>The Grand Fleet Index · Global Top 50 Luxury Cruises, River Vessels & Expedition Yachts · 数据基于 2026–2027 航季实测含税船票与套房面积核算</p>
+      <div class="foot-inner">
+        <div>
+          <h4>The Grand Fleet Index</h4>
+          <p>全球 50 大奢华邮轮、巨轮船中船、传奇内河河轮与远征游艇图鉴。价格为 2026–2027 航季实测含税船票（每人，双人入住），面积为官方套房室内面积；空间单价 = 每晚单价 ÷ 面积。航次价格随时浮动，请以船司官网为准。</p>
+        </div>
+        <nav aria-label="站点导航">
+          <a href="index.html">图鉴总览</a>
+          <a href="beaches.html">海岸度假 145</a>
+          <a href="cruises.html" aria-current="page">奢华邮轮 50</a>
+          <a href="canals.html">运河房船 20</a>
+          <a href="sailing.html">帆船航线 20</a>
+          <a href="rv.html">房车自驾 20</a>
+          <a href="shows.html">驻场大秀 100</a>
+          <a href="themeparks.html">主题乐园 100</a>
+          <a href="ski.html">全球雪场 100</a>
+          <a href="aquariums.html">水族馆 35</a>
+          <a href="zoos.html">动物园 40</a>
+          <a href="museums.html">重器博物馆 100</a>
+        </nav>
+      </div>
+      <div class="sig"><span>Bon Voyage · Destination Atlas</span><span>Photos · Wikimedia Commons</span><span>MMXXVI</span></div>
     </div>
   </footer>
 
   <script src="data_cruises_top50.js"></script>
+  <script src="shared_widgets.js" defer></script>
   <script>
-    let activeDomain = 'ALL';
+  (function () {
+    "use strict";
+    var ALL = (window.LUXURY_CRUISES_TOP50 || []).slice();
+    var DOMAINS = [
+      { key: "海洋顶奢与超级游艇", short: "海洋顶奢", en: "OCEAN", color: "var(--c-ocean)", hex: "#13233f" },
+      { key: "主流大船顶奢船中船与复式", short: "巨轮船中船", en: "MEGA-SHIP", color: "var(--c-mega)", hex: "#a8322a" },
+      { key: "全球传奇内河与雨林河轮", short: "传奇内河", en: "RIVER", color: "var(--c-river)", hex: "#2f6f73" },
+      { key: "加拉帕戈斯与印尼科考帆船", short: "远征帆船", en: "EXPEDITION", color: "var(--c-exped)", hex: "#b8913a" }
+    ];
+    var DOM = {}; DOMAINS.forEach(function (d) { DOM[d.key] = d; });
+    var FALLBACK = "data:image/svg+xml," + encodeURIComponent(
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'><rect width='640' height='360' fill='#13233f'/>" +
+      "<g transform='translate(320 250)' fill='#b8913a' opacity='.25'>" +
+      Array.apply(null, Array(18)).map(function (_, i) { return "<path d='M0 0L-9 -330L9 -330z' transform='rotate(" + (i * 10 - 85) + ")'/>"; }).join("") +
+      "</g><circle cx='320' cy='250' r='70' fill='#d9bb6a'/><path d='M150 250h340l-40 56H190z' fill='#f4ecd8'/>" +
+      "<rect x='270' y='196' width='22' height='54' fill='#a8322a'/><rect x='308' y='186' width='24' height='64' fill='#a8322a'/><rect x='348' y='196' width='22' height='54' fill='#a8322a'/>" +
+      "<rect y='306' width='640' height='54' fill='#0b1730'/><text x='320' y='340' text-anchor='middle' font-family='Georgia,serif' font-size='16' letter-spacing='8' fill='#d9bb6a'>THE GRAND FLEET</text></svg>");
+    window.FLEET_FALLBACK = FALLBACK;
 
-    function switchLab(labId, btn) {
-      document.querySelectorAll('.lab-pane').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.lab-tab').forEach(b => b.classList.remove('active'));
-      document.getElementById(labId).classList.add('active');
-      btn.classList.add('active');
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+    function num(n) { return typeof n === "number" && isFinite(n); }
+    function usd(n) { return num(n) ? "$" + Math.round(n).toLocaleString("en-US") : "—"; }
+    function usd1(n) { return num(n) ? "$" + n.toFixed(1) : "—"; }
+    function crewNum(s) { var m = /1\s*[:：]\s*([\d.]+)/.exec(s || ""); return m ? parseFloat(m[1]) : null; }
+    function splitName(name) {
+      var m = /^(.*?)\s*\(([^()]*[A-Za-z][^()]*)\)\s*$/.exec(name || "");
+      if (m) return { zh: m[1].trim(), en: m[2].trim() };
+      return { zh: name || "", en: "" };
+    }
+    function shortName(c) { var z = splitName(c.name).zh; return z.split(" / ")[0].split("/")[0].trim(); }
+    function img(src, alt) {
+      return '<img src="' + esc(src || FALLBACK) + '" alt="' + esc(alt) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=window.FLEET_FALLBACK" />';
+    }
+    ALL.forEach(function (c) { c._crew = crewNum(c.crewRatio); c._short = shortName(c); });
+    var maxSqmVal = Math.max.apply(null, ALL.map(function (c) { return c.pricePerSqmPerNightUsd || 0; }));
+
+    /* ---------- Hero ---------- */
+    (function hero() {
+      var rays = document.getElementById("rays");
+      if (rays) { var h = ""; for (var i = 0; i < 36; i++) h += '<path d="M0 0L-7 -330L7 -330z" transform="rotate(' + (i * 10) + ')"/>'; rays.innerHTML = h; }
+      if (!ALL.length) return;
+      var bySqm = ALL.slice().sort(function (a, b) { return a.pricePerSqmPerNightUsd - b.pricePerSqmPerNightUsd; })[0];
+      var bigSuite = ALL.slice().sort(function (a, b) { return b.suiteSqm - a.suiteSqm; })[0];
+      var bestCrew = ALL.filter(function (c) { return num(c._crew); }).sort(function (a, b) { return a._crew - b._crew; })[0];
+      var smallest = ALL.slice().sort(function (a, b) { return a.pax - b.pax; })[0];
+      var items = [
+        ["" + ALL.length, "艘", "海洋 · 船中船 · 内河 · 远征四大舰队"],
+        [usd1(bySqm.pricePerSqmPerNightUsd), "/㎡", bySqm._short + " · 全场空间单价最低"],
+        [Math.round(bigSuite.suiteSqm) + "", "㎡", bigSuite._short + " · 最大标杆套房"],
+        ["1:" + bestCrew._crew, "", bestCrew._short + " · 船员乘客比最奢"],
+        [smallest.pax + "", "人", smallest._short + " · 最私密满载"]
+      ];
+      document.getElementById("hero-stats").innerHTML = items.map(function (s) { return "<div><b>" + esc(s[0]) + "<small>" + esc(s[1]) + "</small></b><span>" + esc(s[2]) + "</span></div>"; }).join("");
+    })();
+
+    /* ---------- Space ledger ---------- */
+    var ledgerDomain = "ALL";
+    function segButtons(el, items, active, onPick) {
+      el.innerHTML = items.map(function (it) { return '<button type="button" data-k="' + esc(it.k) + '" aria-pressed="' + (it.k === active) + '">' + esc(it.label) + "</button>"; }).join("");
+      el.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        el.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        onPick(b.getAttribute("data-k"));
+      });
+    }
+    function domainItems(withCount) {
+      return [{ k: "ALL", label: "全部" + (withCount ? " " + ALL.length : "") }].concat(DOMAINS.map(function (d) {
+        var n = ALL.filter(function (c) { return c.domain === d.key; }).length;
+        return { k: d.key, label: d.short + (withCount ? " " + n : "") };
+      }));
+    }
+    function renderLedger() {
+      var list = ALL.filter(function (c) { return ledgerDomain === "ALL" || c.domain === ledgerDomain; })
+        .slice().sort(function (a, b) { return a.pricePerSqmPerNightUsd - b.pricePerSqmPerNightUsd; });
+      var max = Math.max.apply(null, list.map(function (c) { return c.pricePerSqmPerNightUsd; }));
+      var el = document.getElementById("ledger");
+      el.innerHTML = list.map(function (c) {
+        var d = DOM[c.domain] || DOMAINS[0];
+        var w = Math.max(0.02, c.pricePerSqmPerNightUsd / max);
+        return '<div class="lrow" data-go="' + esc(c.id) + '" title="' + esc(c.name + " · " + c.suiteSqm + "㎡ · $" + c.perNightUsd + "/晚") + '">' +
+          '<span class="r">#' + c.rank + '</span><span class="n">' + esc(c._short) + '</span>' +
+          '<span class="track"><span class="bar" style="width:100%;background:' + d.color + ';transform:scaleX(' + w.toFixed(3) + ')"></span></span>' +
+          '<span class="v">' + usd1(c.pricePerSqmPerNightUsd) + "</span></div>";
+      }).join("");
+      var vals = list.map(function (c) { return c.pricePerSqmPerNightUsd; }).sort(function (a, b) { return a - b; });
+      var med = vals.length ? vals[Math.floor((vals.length - 1) / 2)] : 0;
+      document.getElementById("ledger-note").innerHTML = list.length ?
+        "共 " + list.length + " 艘 · 中位数 <b>" + usd1(med) + "/㎡/晚</b> · 最超值 <b>" + esc(list[0]._short) + "</b>（" + usd1(list[0].pricePerSqmPerNightUsd) + "）· 最昂贵 <b>" + esc(list[list.length - 1]._short) + "</b>（" + usd1(list[list.length - 1].pricePerSqmPerNightUsd) + "）" : "";
+    }
+    segButtons(document.getElementById("ledger-seg"), domainItems(false), "ALL", function (k) { ledgerDomain = k; renderLedger(); });
+    document.getElementById("ledger").addEventListener("click", function (e) {
+      var r = e.target.closest("[data-go]"); if (!r) return;
+      goToCard(r.getAttribute("data-go"));
+    });
+
+    /* ---------- Scatter: pax vs guests-per-crew ---------- */
+    function renderScatter() {
+      var pts = ALL.filter(function (c) { return num(c._crew) && c.pax > 0; });
+      var W = 720, H = 450, L = 58, R = 22, T = 44, B = 56;
+      var x0 = Math.log10(5), x1 = Math.log10(8000), y0 = 0.4, y1 = 3.8;
+      function X(p) { return L + (Math.log10(p) - x0) / (x1 - x0) * (W - L - R); }
+      function Y(v) { return T + (v - y0) / (y1 - y0) * (H - T - B); }
+      var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="载客量与船员服务比散点图">';
+      s += '<rect x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="#f4ecd8" stroke="#13233f"/>';
+      [10, 30, 100, 300, 1000, 3000].forEach(function (p) {
+        s += '<line x1="' + X(p) + '" x2="' + X(p) + '" y1="' + T + '" y2="' + (H - B) + '" stroke="rgba(19,35,63,.12)" stroke-dasharray="3 4"/>';
+        s += '<text x="' + X(p) + '" y="' + (H - B + 18) + '" text-anchor="middle" font-size="11" fill="#4a5268" font-family="Marcellus,serif">' + p.toLocaleString("en-US") + "</text>";
+      });
+      [0.5, 1, 1.5, 2, 2.5, 3, 3.5].forEach(function (v) {
+        s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="rgba(19,35,63,.1)"/>';
+        s += '<text x="' + (L - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="11" fill="#4a5268" font-family="Marcellus,serif">' + v + "</text>";
+      });
+      s += '<text x="' + ((W + L - R) / 2) + '" y="' + (H - 14) + '" text-anchor="middle" font-size="12" fill="#13233f" font-family="Noto Serif SC,serif">满载乘客数（对数刻度）→ 越大越像海上乐园</text>';
+      s += '<text transform="translate(16 ' + ((H - B + T) / 2) + ') rotate(-90)" text-anchor="middle" font-size="12" fill="#13233f" font-family="Noto Serif SC,serif">每名船员服务乘客数 ↓ 越低越尊贵</text>';
+      s += '<text x="' + L + '" y="' + (T - 12) + '" font-size="11" fill="#a8322a" font-family="Marcellus SC,serif" letter-spacing="2">↖ PRIVATE · BUTLER CLASS</text>';
+      s += '<text x="' + (W - R) + '" y="' + (T - 12) + '" text-anchor="end" font-size="11" fill="#a8322a" font-family="Marcellus SC,serif" letter-spacing="2">GRAND RESORT AT SEA ↘</text>';
+      pts.slice().sort(function (a, b) { return b.suiteSqm - a.suiteSqm; }).forEach(function (c) {
+        var d = DOM[c.domain] || DOMAINS[0];
+        var r = Math.max(4, Math.min(16, Math.sqrt(c.suiteSqm) * 1.3));
+        s += '<circle cx="' + X(c.pax).toFixed(1) + '" cy="' + Y(c._crew).toFixed(1) + '" r="' + r.toFixed(1) + '" fill="' + d.hex + '" opacity=".78" stroke="#fbf6ea" stroke-width="1.2" data-go="' + esc(c.id) + '"><title>#' + c.rank + " " + esc(c._short) + " · " + c.pax + "人 · 船员比 " + esc(c.crewRatio) + " · 套房 " + c.suiteSqm + "㎡</title></circle>";
+      });
+      var labelled = {};
+      [pts.slice().sort(function (a, b) { return a._crew - b._crew; })[0], pts.slice().sort(function (a, b) { return b.pax - a.pax; })[0], pts.slice().sort(function (a, b) { return a.pax - b.pax; })[0], pts.slice().sort(function (a, b) { return b._crew - a._crew; })[0]]
+        .forEach(function (c) {
+          if (!c || labelled[c.id]) return; labelled[c.id] = 1;
+          var x = X(c.pax), y = Y(c._crew), anchor = x > W * 0.7 ? "end" : "start", dx = anchor === "end" ? -14 : 14;
+          s += '<text x="' + (x + dx) + '" y="' + (y + 4) + '" text-anchor="' + anchor + '" font-size="11.5" fill="#13233f" font-family="Noto Serif SC,serif" font-weight="700" stroke="#f4ecd8" stroke-width="3.5" paint-order="stroke">' + esc(c._short.split("·").pop().split("(")[0].trim()) + "</text>";
+        });
+      s += "</svg>";
+      var el = document.getElementById("scatter");
+      el.innerHTML = s;
+      el.addEventListener("click", function (e) { var t = e.target.closest("[data-go]"); if (t) goToCard(t.getAttribute("data-go")); });
+      document.getElementById("scatter-legend").innerHTML = DOMAINS.map(function (d) { return '<span><i style="background:' + d.hex + '"></i>' + esc(d.short) + "</span>"; }).join("") +
+        '<span class="muted">· 圆点大小 = 套房面积 · 共 ' + pts.length + " 艘可量化</span>";
     }
 
-    function setDomain(dom, btn) {
-      activeDomain = dom;
-      document.querySelectorAll('#domain-chips .chip').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      renderCruises();
+    function renderPodium() {
+      if (!ALL.length) return;
+      var used = {};
+      function top(f, asc) { var r = ALL.filter(function (c) { return num(f(c)) && !used[c.id]; }).sort(function (a, b) { return asc ? f(a) - f(b) : f(b) - f(a); })[0]; if (r) used[r.id] = 1; return r; }
+      var rows = [
+        [top(function (c) { return c.pricePerSqmPerNightUsd; }, true), "最超值", function (c) { return usd1(c.pricePerSqmPerNightUsd) + "/㎡/晚 · " + c.suiteSqm + "㎡ 套房 · " + usd(c.perNightUsd) + "/晚"; }],
+        [top(function (c) { return c.suiteSqm; }, false), "最大套房", function (c) { return c.suiteSqm + "㎡ · " + c.entrySuiteName; }],
+        [top(function (c) { return c._crew; }, true), "最尊贵", function (c) { return "船员比 " + c.crewRatio + " · " + c.pax + " 位乘客"; }],
+        [top(function (c) { return c.perNightUsd; }, true), "最低门槛", function (c) { return usd(c.perNightUsd) + "/人/晚 · " + c.sampleTotalUsd; }],
+        [top(function (c) { return c.perNightUsd; }, false), "最奢一晚", function (c) { return usd(c.perNightUsd) + "/人/晚 · " + c.allInclusiveLevel; }]
+      ];
+      document.getElementById("podium").innerHTML = rows.map(function (r) {
+        var c = r[0]; if (!c) return "";
+        return '<div class="pod" data-go="' + esc(c.id) + '" style="cursor:pointer"><div class="k">' + String(c.rank).padStart(2, "0") + "<small>" + esc(r[1]) + "</small></div><div><b>" + esc(c._short) + "</b><span>" + esc(r[2](c)) + "</span></div></div>";
+      }).join("");
+      document.getElementById("podium").addEventListener("click", function (e) { var t = e.target.closest("[data-go]"); if (t) goToCard(t.getAttribute("data-go")); });
     }
+
+    /* ---------- Salons ---------- */
+    document.getElementById("salon-tabs").addEventListener("click", function (e) {
+      var b = e.target.closest(".salon-tab"); if (!b) return;
+      document.querySelectorAll(".salon-tab").forEach(function (t) { t.setAttribute("aria-selected", t === b ? "true" : "false"); });
+      document.querySelectorAll(".salon").forEach(function (p) { p.classList.toggle("active", p.id === b.getAttribute("data-pane")); });
+    });
+    function lnk(url, label) { return url ? '<a class="lnk" href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(label || "航次 ↗") + "</a>" : ""; }
 
     function renderLabs() {
-      // Lab 1: Combine CHEAPEST_DUPLEX_SUITES + ULTRA_LUXURY_CRUISES_7N
-      const duplex = (window.CHEAPEST_DUPLEX_SUITES || []).map(d => `
-        <tr>
-          <td><span style="color:var(--cyan);font-family:var(--mono);">巨轮双层复式</span></td>
-          <td><strong>${d.line}</strong><br><small style="color:var(--muted);">${d.ship}</small></td>
-          <td>${d.suiteName} (${d.sizeSqm}㎡)</td>
-          <td style="color:var(--gold);font-family:var(--mono);font-weight:600;">$${d.price7N}/人</td>
-          <td style="font-family:var(--mono);">$${d.perNight}/晚 · <strong style="color:var(--emerald);">$${d.pricePerSqmPerNight}/㎡/晚</strong></td>
-          <td>${d.perks}</td>
-        </tr>
-      `);
-      const ultra = (window.ULTRA_LUXURY_CRUISES_7N || []).map(u => `
-        <tr>
-          <td><span style="color:var(--gold);font-family:var(--mono);">真·六星奢华船</span></td>
-          <td><strong>${u.brand}</strong><br><small style="color:var(--muted);">${u.ship} (${u.tonnage} / ${u.pax}人)</small></td>
-          <td>${u.entrySuite} (${u.suiteSqm}㎡)</td>
-          <td style="color:var(--gold);font-family:var(--mono);font-weight:600;">$${u.cheapest7N_USD}/人</td>
-          <td style="font-family:var(--mono);">$${u.perNightUSD}/晚 · <strong style="color:var(--cyan);">$${u.pricePerSqmPerNight}/㎡/晚</strong></td>
-          <td>${u.allInclusive} (${u.sampleSailing})</td>
-        </tr>
-      `);
-      document.getElementById('lab1-tbody').innerHTML = [...duplex, ...ultra].join('');
+      var duplex = window.CHEAPEST_DUPLEX_SUITES || [];
+      var ultra = window.ULTRA_LUXURY_CRUISES_7N || [];
 
-      // Lab 2: MAINSTREAM_AND_SPECIALTY_7N_CHEAPEST
-      const mList = window.MAINSTREAM_AND_SPECIALTY_7N_CHEAPEST || [];
-      document.getElementById('lab2-tbody').innerHTML = mList.map(m => `
-        <tr>
-          <td><strong>${m.brand}</strong></td>
-          <td style="color:var(--cyan);font-size:12px;">${m.tier}</td>
-          <td style="font-family:var(--mono);">${m.inside7N ? '$' + m.inside7N + ' ($' + m.insidePerNight + '/晚)' : '全套房无内舱'}</td>
-          <td style="font-family:var(--mono);">$${m.oceanview7N} ($${m.oceanviewPerNight}/晚)</td>
-          <td style="font-family:var(--mono);color:var(--gold);">$${m.balcony7N} ($${m.balconyPerNight}/晚)</td>
-          <td style="font-family:var(--mono);color:var(--emerald);">$${m.suite7N} ($${m.suitePerNight}/晚)</td>
-          <td><small style="color:var(--muted);display:block;">${m.sampleSailing}</small>${m.highlight}</td>
-        </tr>
-      `).join('');
+      // $500 divide chart
+      var rows = duplex.map(function (d) { return { name: d.brand.split(" (")[0] + " · " + d.suiteCode, v: d.lowestPerNightUSD, kind: "duplex", tip: d.suiteName }; })
+        .concat(ultra.map(function (u) { return { name: u.brand.split(" (")[0], v: u.perNightPerPersonUSD, kind: "ultra", tip: u.ship }; }))
+        .filter(function (r) { return num(r.v); }).sort(function (a, b) { return a.v - b.v; });
+      var cap = 2000;
+      var dv = document.getElementById("divide");
+      dv.innerHTML = '<div class="legend" style="margin-bottom:10px"><span><i style="background:var(--c-mega)"></i>巨轮双层复式（最低每晚）</span><span><i style="background:var(--c-ocean)"></i>真·六星 / 超级游艇（7晚阳台套房每晚）</span><span class="muted">标尺上限 $2,000，超出以 ▸▸ 标示</span></div>' +
+        '<div style="position:relative;margin-top:26px" id="divide-rows">' + rows.map(function (r) {
+          var w = Math.min(1, r.v / cap) * 100;
+          return '<div class="drow" title="' + esc(r.tip) + '"><span class="nm">' + esc(r.name) + '</span><span class="tr"><span class="bb' + (r.v > cap ? " over" : "") + '" style="width:' + w.toFixed(1) + "%;background:" + (r.kind === "duplex" ? "var(--c-mega)" : "var(--c-ocean)") + '"></span></span><span class="vv">' + usd(r.v) + "</span></div>";
+        }).join("") + "</div>";
+      // position the $500 line over the track column
+      requestAnimationFrame(function () {
+        var tr = dv.querySelector(".drow .tr"); if (!tr) return;
+        var host = document.getElementById("divide-rows"), box = host.getBoundingClientRect(), t = tr.getBoundingClientRect();
+        var line = document.createElement("div"); line.className = "line500";
+        line.style.left = (t.left - box.left + t.width * (500 / cap)) + "px";
+        line.innerHTML = "<span>$500 分水岭</span>";
+        host.appendChild(line);
+      });
 
-      // Lab 3: NILE_5_TIERS & GALAPAGOS_4_TIERS
-      document.getElementById('nile-tbody').innerHTML = (window.NILE_5_TIERS || []).map(n => `
-        <tr>
-          <td style="color:var(--gold);font-weight:600;">${n.tier}</td>
-          <td><strong>${n.ships}</strong></td>
-          <td style="font-family:var(--mono);">${n.price4N_USD}</td>
-          <td style="font-family:var(--mono);color:var(--cyan);">${n.perNightUSD}</td>
-          <td>${n.features}</td>
-        </tr>
-      `).join('');
+      document.getElementById("duplex-tbody").innerHTML = duplex.map(function (d) {
+        return "<tr><td class='money'>" + d.rank + "</td><td><strong>" + esc(d.brand) + "</strong><div class='muted'>" + esc(d.shipClass) + "</div></td>" +
+          "<td>" + esc(d.suiteName) + " <span class='pill'>" + esc(d.suiteCode) + "</span><div class='muted'>" + esc(d.sizeSqm) + "</div></td>" +
+          "<td><span class='pill " + (/Star/.test(d.tier) ? "star" : /Sky/.test(d.tier) ? "sky" : "") + "'>" + esc(d.tier) + "</span></td>" +
+          "<td class='money'>" + usd(d.lowestTotalPerPersonUSD) + "<small>" + esc(d.lowestTotalSailing) + "</small>" + lnk(d.lowestTotalUrl) + "</td>" +
+          "<td class='money'>" + usd(d.lowestPerNightUSD) + "/晚<small>" + esc(d.lowestPerNightSailing) + "</small>" + lnk(d.lowestPerNightUrl) + "</td></tr>";
+      }).join("");
 
-      document.getElementById('gala-tbody').innerHTML = (window.GALAPAGOS_4_TIERS || []).map(g => `
-        <tr>
-          <td style="color:var(--cyan);font-weight:600;">${g.tier}</td>
-          <td><strong>${g.bestValueShip}</strong><br><small style="color:var(--muted);">${g.type} · ${g.suiteSize}</small></td>
-          <td style="font-family:var(--mono);color:var(--gold);">${g.promoPrice}</td>
-          <td style="font-family:var(--mono);">${g.perNightUSD}</td>
-          <td>${g.whyBestValue}</td>
-        </tr>
-      `).join('');
+      document.getElementById("ultra-tbody").innerHTML = ultra.map(function (u) {
+        var alt = u.altVoyage ? esc((u.altVoyage.ship ? u.altVoyage.ship + " · " : "") + u.altVoyage.sailDate + " " + u.altVoyage.route) + "<br><span class='money'>" + usd(u.altVoyage.verandaPricePerPersonUSD) + "</span> " + lnk(u.altVoyage.url) : "<span class='muted'>—</span>";
+        var extra = [];
+        if (num(u.oceanviewNoBalconyUSD)) extra.push("无阳台海景 " + usd(u.oceanviewNoBalconyUSD));
+        if (num(u.leadInWaitlistUSD)) extra.push("候补价 " + usd(u.leadInWaitlistUSD));
+        if (num(u.perSuiteTotalUSD)) extra.push("整间 " + usd(u.perSuiteTotalUSD));
+        if (num(u.perSuiteTotalEUR)) extra.push("整间 €" + u.perSuiteTotalEUR.toLocaleString("en-US"));
+        return "<tr><td class='money'>" + u.rank + "</td><td><strong>" + esc(u.brand) + "</strong><div class='muted'>" + esc(u.ship) + "</div><span class='camp' style='color:var(--gold)'>" + esc(u.category) + "</span></td>" +
+          "<td>" + esc(u.sailDate) + " → " + esc(u.returnDate) + " · " + esc(u.nights) + "晚<div><strong>" + esc(u.route) + "</strong></div>" + ((u.ports || []).length ? "<details><summary>停靠 " + u.ports.length + " 港 · " + esc(u.voyageCode) + "</summary><div>" + esc(u.ports.join(" → ")) + "</div></details>" : "") + "</td>" +
+          "<td>" + esc(u.suiteName) + "</td>" +
+          "<td class='money'>" + usd(u.verandaPricePerPersonUSD) + (extra.length ? "<small>" + esc(extra.join(" · ")) + "</small>" : "") + "</td>" +
+          "<td class='money'>" + usd(u.perNightPerPersonUSD) + "/晚</td>" +
+          "<td style='min-width:200px'>" + esc(u.inclusions) + "<div>" + lnk(u.url, "官方航次 ↗") + "</div></td>" +
+          "<td style='min-width:180px'>" + alt + "</td></tr>";
+      }).join("");
+
+      // RCI tiers
+      document.getElementById("rci-tiers").innerHTML = (window.RCI_SUITE_TIERS || []).map(function (t) {
+        return '<div class="tcard"><h5>' + esc(t.tier) + "</h5><div>" + (t.codes || []).map(function (c) { return '<span class="pill">' + esc(c) + "</span>"; }).join("") + "</div><p>" + esc(t.summary) + "</p></div>";
+      }).join("");
+      document.getElementById("rci-tbody").innerHTML = (window.RCI_500_PER_NIGHT_SUITES || []).map(function (r) {
+        return "<tr><td><strong>" + esc(r.ship) + "</strong><div class='muted'>" + esc(r.shipClass) + "</div></td><td>" + esc(r.sailDate) + " · " + esc(r.nights) + "晚<div class='muted'>" + esc(r.route) + "</div></td><td style='min-width:360px'>" +
+          (r.suitesAtOrUnder500PerNight || []).map(function (s) {
+            var cls = /Star/.test(s.tier) ? "star" : /Sky|Retreat/.test(s.tier) ? "sky" : "";
+            return "<div style='display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px dotted var(--line)'><span><span class='pill " + cls + "'>" + esc(s.code) + "</span>" + esc(s.name) + " <span class='muted'>· " + esc(s.tier) + "</span></span><span class='money' style='text-align:right'>" + usd(s.totalPerPersonUSD) + " <span class='muted'>(" + usd(s.perNightUSD) + "/晚)</span></span></div>";
+          }).join("") + "</td><td>" + lnk(r.url) + "</td></tr>";
+      }).join("");
+
+      // Mainstream matrix
+      var ml = window.MAINSTREAM_AND_SPECIALTY_7N_CHEAPEST || [];
+      var cols = ["insideUSD", "oceanviewUSD", "balconyUSD", "suiteUSD"];
+      var mx = {}; cols.forEach(function (k) { mx[k] = Math.max.apply(null, ml.map(function (m) { return num(m[k]) ? m[k] : 0; })) || 1; });
+      document.getElementById("lab2-tbody").innerHTML = ml.map(function (m) {
+        return "<tr><td class='money'>" + m.rank + "</td><td><strong>" + esc(m.brand) + "</strong><div class='muted'>" + esc(m.ship) + "</div></td><td class='muted' style='min-width:130px'>" + esc(m.tier) + "</td>" +
+          cols.map(function (k) {
+            if (!num(m[k])) return "<td class='muted'>" + (k === "insideUSD" ? "全套房无内舱" : "—") + "</td>";
+            return "<td class='money'><span class='heat'>" + usd(m[k]) + "<i style='width:" + (m[k] / mx[k] * 100).toFixed(0) + "%'></i></span><small>≈ " + usd(m[k] / 7) + "/晚</small></td>";
+          }).join("") +
+          "<td class='money' style='color:var(--red)'>" + usd(m.perNightLowestUSD) + "</td>" +
+          "<td style='min-width:240px'>" + esc(m.sailDate) + " · " + esc(m.route) + (m.altBalconyNote ? "<div class='muted'>" + esc(m.altBalconyNote) + "</div>" : "") + "<div>" + lnk(m.url) + (m.altUrl ? " " + lnk(m.altUrl, "备选 ↗") : "") + "</div></td></tr>";
+      }).join("");
+
+      // Nile / Galápagos tiers derived from the Top 50
+      function tierLabel(p) { return p >= 1400 ? "Ⅰ 殿堂档" : p >= 900 ? "Ⅱ 头等档" : p >= 650 ? "Ⅲ 精品档" : "Ⅳ 性价比档"; }
+      function tierRows(list) {
+        return list.sort(function (a, b) { return b.perNightUsd - a.perNightUsd; }).map(function (c) {
+          return "<tr><td style='white-space:nowrap;color:var(--red);font-weight:700'>" + tierLabel(c.perNightUsd) + "</td><td><strong>" + esc(c._short) + "</strong><div class='muted'>#" + c.rank + " · " + esc(c.brand) + "</div></td>" +
+            "<td>" + esc(c.entrySuiteName) + "<div class='muted'>" + c.suiteSqm + "㎡</div></td><td class='money'>" + usd(c.perNightUsd) + "<small>" + esc(c.sampleTotalUsd) + "</small></td>" +
+            "<td class='money'>" + usd1(c.pricePerSqmPerNightUsd) + "</td><td>" + c.pax + " 人<div class='muted'>" + esc(c.crewRatio) + "</div></td><td style='min-width:260px'>" + esc(c.tip) + "</td></tr>";
+        }).join("");
+      }
+      var nile = ALL.filter(function (c) { return /尼罗河/.test(c.region); });
+      var gala = ALL.filter(function (c) { return /加拉帕戈斯/.test(c.region); });
+      document.getElementById("nile-h").firstChild.nodeValue = "🇪🇬 埃及尼罗河 · " + nile.length + " 艘分档 ";
+      document.getElementById("gala-h").firstChild.nodeValue = "🐢 加拉帕戈斯群岛 · " + gala.length + " 艘分档 ";
+      document.getElementById("nile-tbody").innerHTML = tierRows(nile);
+      document.getElementById("gala-tbody").innerHTML = tierRows(gala);
+      document.getElementById("phinisi-tbody").innerHTML = (window.INDONESIA_PHINISI_YACHTS || []).map(function (y) {
+        var price = [];
+        if (y.ratePerNightUSD) price.push("包船 $" + y.ratePerNightUSD + "/晚");
+        if (y.sevenNightCharterUSD) price.push("7晚包船 $" + y.sevenNightCharterUSD);
+        if (y.perPersonFullOccupancyUSD) price.push("满员人均 $" + y.perPersonFullOccupancyUSD);
+        if (num(y.byTheCabin7NKomodoMasterUSD)) price.push("科莫多 7晚 主套 " + usd(y.byTheCabin7NKomodoMasterUSD) + " / 标套 " + usd(y.byTheCabin7NKomodoStandardUSD));
+        if (num(y.byTheCabin7NRajaAmpatMasterUSD)) price.push("四王 7晚 主套 " + usd(y.byTheCabin7NRajaAmpatMasterUSD) + " / 标套 " + usd(y.byTheCabin7NRajaAmpatStandardUSD));
+        return "<tr><td><strong>" + esc(y.name) + "</strong><div class='muted'>" + esc(y.brand) + "</div>" + lnk(y.url, "官网 ↗") + (y.verifyUrl ? " " + lnk(y.verifyUrl, "核验 ↗") : "") + "</td><td style='min-width:200px'>" + esc(y.specs) + "</td><td>" + esc(y.bookingMode) + "</td><td style='min-width:200px'>" + esc(y.balconyConfig) + "</td>" +
+          "<td class='money' style='min-width:200px;white-space:normal'>" + price.map(esc).join("<br>") + "</td><td>" + (y.regions || []).map(function (r) { return "<span class='pill'>" + esc(r) + "</span>"; }).join("") + "</td></tr>";
+      }).join("");
+
+      // Brand comparisons
+      var cmp = window.CRUISE_BRAND_COMPARISONS || {};
+      document.getElementById("vs").innerHTML = Object.keys(cmp).map(function (key) {
+        var c = cmp[key], dims = c.dimensions || [];
+        var sides = dims.length ? Object.keys(dims[0]).filter(function (k) { return k !== "dimension"; }) : [];
+        var names = (c.title || "").split(/\s+vs\.?\s+/i);
+        return '<article class="vs-card"><header>' + esc(c.title) + '</header><p class="take">' + esc(c.keyTakeaway) + "</p><dl>" +
+          '<div class="dim head"><dt>维度</dt>' + sides.map(function (s, i) { return "<dd>" + esc((names[i] || s).split(" (")[0]) + "</dd>"; }).join("") + "</div>" +
+          dims.map(function (d) { return '<div class="dim"><dt>' + esc(d.dimension) + "</dt>" + sides.map(function (s) { return "<dd>" + esc(d[s]) + "</dd>"; }).join("") + "</div>"; }).join("") +
+          "</dl></article>";
+      }).join("");
+    }
+
+    /* ---------- Boarding passes ---------- */
+    var activeDomain = "ALL", activeTier = "ALL";
+    segButtons(document.getElementById("domain-seg"), domainItems(true), "ALL", function (k) { activeDomain = k; renderCruises(); });
+    var tiers = ["T0", "T1", "T1.5"].filter(function (t) { return ALL.some(function (c) { return c.tier === t; }); });
+    segButtons(document.getElementById("tier-seg"), [{ k: "ALL", label: "全部" }].concat(tiers.map(function (t) { return { k: t, label: t + " · " + ALL.filter(function (c) { return c.tier === t; }).length }; })), "ALL", function (k) { activeTier = k; renderCruises(); });
+    var TIER_WORD = { "T0": "PREMIÈRE", "T1": "FIRST", "T1.5": "CABIN" };
+
+    function card(c) {
+      var d = DOM[c.domain] || DOMAINS[0];
+      var nm = splitName(c.name);
+      var sv = num(c.pricePerSqmPerNightUsd) ? Math.max(4, c.pricePerSqmPerNightUsd / maxSqmVal * 100) : 0;
+      return '<article class="pass' + (c.tier === "T0" ? " t0" : "") + '" id="ship-' + esc(c.id) + '" data-dest-id="cruise-' + esc(c.id) + '" data-name="' + esc(c._short) + '" data-lat="' + esc(c.lat) + '" data-lon="' + esc(c.lon) + '">' +
+        '<div class="pass-media">' + img(c.image, c.name) +
+          '<div class="rank"><small>Nº</small><b>' + String(c.rank).padStart(2, "0") + "</b></div>" +
+          '<div class="stamp ' + esc(String(c.tier).replace(".", "")) + '"><span><b>' + esc(c.tier) + "</b><small>" + esc(TIER_WORD[c.tier] || "CLASS") + "</small></span></div>" +
+          '<div class="media-foot"><span class="dom" style="border-color:' + d.hex + '">' + esc(d.short) + " · " + d.en + '</span><span class="fare"><b>' + usd(c.perNightUsd) + "</b><small>/人/晚起</small></span></div>" +
+        "</div>" +
+        '<div class="pass-body">' +
+          '<div class="airline"><span>Boarding Pass · Carte d’Embarquement</span><span>' + esc(c.id.split("-")[0].toUpperCase()) + "</span></div>" +
+          "<div><h3>" + esc(nm.zh) + "</h3>" + (nm.en ? '<div class="en">' + esc(nm.en) + "</div>" : "") + '<div class="meta">' + esc(c.brand) + " ｜ " + esc(c.region) + "</div></div>" +
+          '<div class="fields">' +
+            '<div class="fld full"><span>Suite · 标杆套房</span><b class="s">' + esc(c.entrySuiteName) + "</b></div>" +
+            '<div class="fld"><span>Berth · 面积</span><b>' + esc(c.suiteSqm) + " ㎡</b></div>" +
+            '<div class="fld"><span>Pax · 乘客</span><b>' + esc(c.pax) + "</b></div>" +
+            '<div class="fld wide"><span>Crew · 船员乘客比</span><b class="s">' + esc(c.crewRatio) + "</b></div>" +
+            '<div class="fld"><span>Tonnage · 吨位</span><b class="s">' + esc(c.tonnage) + "</b></div>" +
+            '<div class="fld"><span>$/㎡/晚</span><b>' + usd1(c.pricePerSqmPerNightUsd) + '</b><span class="mbar"><i style="width:' + sv.toFixed(0) + '%"></i></span></div>' +
+            '<div class="fld wide"><span>Fare · 实测套餐</span><b class="s">' + esc(c.sampleTotalUsd) + "</b></div>" +
+          "</div>" +
+          '<p class="incl">✦ 全包礼遇：' + esc(c.allInclusiveLevel) + "</p>" +
+          '<p class="hl">' + esc(c.highlight) + "</p>" +
+          '<div class="tip"><b>Purser’s Note · </b>' + esc(c.tip) + "</div>" +
+        "</div>" +
+        '<div class="perf" aria-hidden="true"></div>' +
+        '<div class="stub"><div class="sail"><span>Verified Sailing · 核验航次</span>' + esc(c.verifiedSailing) + "</div>" +
+          (c.url ? '<a class="btn" href="' + esc(c.url) + '" target="_blank" rel="noopener">官方船队 ↗</a>' : "") +
+          '<div class="shared-slot"></div></div>' +
+        "</article>";
     }
 
     function renderCruises() {
-      const q = (document.getElementById('cruise-search').value || '').trim().toLowerCase();
-      const sortBy = document.getElementById('cruise-sort').value;
-
-      let list = (window.LUXURY_CRUISES_TOP50 || []).filter(c => {
-        if (activeDomain !== 'ALL' && c.domain !== activeDomain) return false;
+      var q = (document.getElementById("cruise-search").value || "").trim().toLowerCase();
+      var sortBy = document.getElementById("cruise-sort").value;
+      var list = ALL.filter(function (c) {
+        if (activeDomain !== "ALL" && c.domain !== activeDomain) return false;
+        if (activeTier !== "ALL" && c.tier !== activeTier) return false;
         if (!q) return true;
-        const hay = [c.name, c.brand, c.domain, c.region, c.entrySuiteName, c.highlight, c.tip].join(' ').toLowerCase();
-        return hay.includes(q);
+        return [c.name, c.brand, c.domain, c.region, c.entrySuiteName, c.highlight, c.tip].join(" ").toLowerCase().indexOf(q) > -1;
       });
+      var sorters = {
+        sqmValAsc: function (a, b) { return (a.pricePerSqmPerNightUsd || 999) - (b.pricePerSqmPerNightUsd || 999); },
+        priceAsc: function (a, b) { return (a.perNightUsd || 1e5) - (b.perNightUsd || 1e5); },
+        suiteSqmDesc: function (a, b) { return (b.suiteSqm || 0) - (a.suiteSqm || 0); },
+        paxAsc: function (a, b) { return (a.pax || 1e5) - (b.pax || 1e5); },
+        rank: function (a, b) { return a.rank - b.rank; }
+      };
+      list.sort(sorters[sortBy] || sorters.rank);
+      document.getElementById("cruises-container").innerHTML = list.length ? list.map(card).join("") : '<div class="empty">没有符合条件的船只 — 换个关键词或舰队试试。</div>';
+      document.getElementById("tally").innerHTML = "显示 <b>" + list.length + "</b> / " + ALL.length;
+      if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+    }
+    window.renderCruises = renderCruises;
 
-      if (sortBy === 'sqmValAsc') {
-        list.sort((a, b) => (a.pricePerSqmPerNightUsd || 999) - (b.pricePerSqmPerNightUsd || 999));
-      } else if (sortBy === 'priceAsc') {
-        list.sort((a, b) => (a.perNightUsd || 9999) - (b.perNightUsd || 9999));
-      } else if (sortBy === 'suiteSqmDesc') {
-        list.sort((a, b) => (b.suiteSqm || 0) - (a.suiteSqm || 0));
-      } else if (sortBy === 'paxAsc') {
-        list.sort((a, b) => (a.pax || 9999) - (b.pax || 9999));
-      } else {
-        list.sort((a, b) => a.rank - b.rank);
+    function goToCard(id) {
+      var el = document.getElementById("ship-" + id);
+      if (!el) {
+        activeDomain = "ALL"; activeTier = "ALL"; document.getElementById("cruise-search").value = "";
+        document.querySelectorAll("#domain-seg button, #tier-seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-k") === "ALL" ? "true" : "false"); });
+        renderCruises(); el = document.getElementById("ship-" + id);
       }
-
-      document.getElementById('cruises-container').innerHTML = list.map(c => `
-        <article class="cruise-card">
-          <div>
-            <div class="cc-media">
-              <img src="${c.image}" alt="${c.name}" loading="lazy" />
-              <span class="cc-rank">#${c.rank} · ${c.tier}</span>
-              <span class="cc-domain">${c.domain}</span>
-              <div class="cc-price-tag">
-                <b>$${c.perNightUsd}<small style="display:inline;color:var(--muted);">/人/晚起</small></b>
-                <small>空间值: $${c.pricePerSqmPerNightUsd}/㎡/晚</small>
-              </div>
-            </div>
-            <div class="cc-body">
-              <div>
-                <h2 class="cc-title">${c.name}</h2>
-                <div class="cc-brand">${c.brand} ｜ 🌍 ${c.region}</div>
-                <div class="cc-specs">
-                  <div class="cc-spec"><span>标杆套房面积</span><b>${c.suiteSqm} ㎡</b></div>
-                  <div class="cc-spec"><span>满载乘客数</span><b>${c.pax} 人 (${c.tonnage})</b></div>
-                  <div class="cc-spec"><span>船员乘客比</span><b>${c.crewRatio}</b></div>
-                  <div class="cc-spec"><span>实测套餐参考</span><b>${c.sampleTotalUsd}</b></div>
-                </div>
-                <p style="font-size:12px;color:var(--gold);margin-bottom:6px;font-family:var(--mono);">✨ 房型与全包礼遇：${c.entrySuiteName} · ${c.allInclusiveLevel}</p>
-                <p class="cc-highlight">${c.highlight}</p>
-                <div class="cc-tip">💡 <strong>选舱与避坑指南：</strong>${c.tip}</div>
-              </div>
-              <div class="cc-foot">
-                <span>📅 核验航次：${c.verifiedSailing}</span>
-                <a class="btn-link" href="${c.url}" target="_blank" rel="noopener">官方船队 ↗</a>
-              </div>
-            </div>
-          </div>
-        </article>
-      `).join('');
+      if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.animate && el.animate([{ boxShadow: "0 0 0 4px #d9bb6a" }, { boxShadow: "0 0 0 0 rgba(217,187,106,0)" }], { duration: 1600 }); }
     }
 
-    renderLabs();
-    renderCruises();
+    var st; document.getElementById("cruise-search").addEventListener("input", function () { clearTimeout(st); st = setTimeout(renderCruises, 120); });
+    document.getElementById("cruise-sort").addEventListener("change", renderCruises);
+    function setTopH() { var t = document.getElementById("topbar"); if (t) document.documentElement.style.setProperty("--topH", t.offsetHeight + "px"); }
+    window.addEventListener("resize", setTopH); setTopH();
+
+    renderLedger(); renderScatter(); renderPodium(); renderLabs(); renderCruises();
+    window.addEventListener("load", function () { if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance(); });
+  })();
   </script>
 </body>
 </html>

@@ -3,265 +3,466 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Waterway Lockkeeper's Log · 全球 20 大运河与内河自驾房船路线图鉴</title>
-  <meta name="description" content="全球20条殿堂级运河与内河房船(Canal Boat / Narrowboat / Houseboat)路线权威评测：免船牌自驾米迪运河、阿尔萨斯、英国天空之溪窄船、苏格兰尼斯湖与加拿大里多运河，含3卧/4卧精确报价与8天7晚逐日176张实景路书。" />
+  <title>Lockkeeper's Log · 全球 20 大运河与内河自驾房船路线图鉴</title>
+  <meta name="description" content="全球20条殿堂级运河与内河房船(Canal Boat / Narrowboat / Houseboat)路线权威评测：免船牌自驾米迪运河、阿尔萨斯、英国天空之溪窄船、苏格兰尼斯湖与加拿大里多运河，含3卧/4卧精确报价、水闸数与里程对照，以及8天7晚逐日实景路书。" />
+  <meta name="theme-color" content="#f4eedd" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lockkeeper's Log · 全球运河与内河房船路线 Top 20" />
+  <meta property="og:description" content="免船牌自驾运河房船：20 条航道的水闸数、里程、难度、3卧/4卧周租报价与 8 天 7 晚逐日停泊路书。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/canals.html" />
+  <meta property="og:image" content="rankings/images/canals/r1_d4_1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lockkeeper's Log · 全球运河与内河房船路线 Top 20" />
+  <meta name="twitter:description" content="免船牌自驾运河房船：20 条航道的水闸数、里程、难度、3卧/4卧周租报价与 8 天 7 晚逐日停泊路书。" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232e5b4c'/%3E%3Crect x='4' y='17' width='24' height='11' fill='%233f8a8c'/%3E%3Cpath d='M9 6v22M23 6v22' stroke='%23e2b33c' stroke-width='3'/%3E%3Cpath d='M3 8h10M19 8h10' stroke='%23f4eedd' stroke-width='2.4' stroke-linecap='round'/%3E%3Crect x='11' y='15' width='10' height='4' rx='1.5' fill='%23b3362b'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Caveat:wght@500;600;700&family=Allerta+Stencil&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
+    /* ==========================================================================
+       Lockkeeper's Log — slow-travel inland waterways
+       towpath cream · plane-tree green · still-water teal · lock-gate oak ·
+       narrowboat "Roses & Castles" red & gold
+       ========================================================================== */
     :root {
-      --bg: #0a1816;
-      --bg-elev: #0f2420;
-      --card: rgba(15, 36, 32, 0.88);
-      --edge: rgba(230, 184, 92, 0.24);
-      --edge-strong: rgba(217, 119, 66, 0.55);
-      --brass: #e6b85c;
-      --brass-soft: rgba(230, 184, 92, 0.15);
-      --terracotta: #d97742;
-      --terracotta-soft: rgba(217, 119, 66, 0.16);
-      --mint: #52d1b2;
-      --mint-soft: rgba(82, 209, 178, 0.14);
-      --text: #f4efe4;
-      --muted: #a7c2bb;
-      --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif SC', serif;
-      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-      --shadow: 0 22px 55px rgba(3, 10, 8, 0.7);
+      --paper: #f4eedd;
+      --paper-2: #ebe2c8;
+      --card: #fbf7ec;
+      --ink: #1f2b26;
+      --ink-2: #4a5750;
+      --ink-3: #868b7c;
+      --canal: #2e5b4c;
+      --canal-2: #1d3d33;
+      --leaf: #5f8a4f;
+      --water: #3f8a8c;
+      --water-2: #2c6a6d;
+      --water-soft: rgba(63, 138, 140, 0.13);
+      --oak: #6e4a2a;
+      --oak-2: #8f6a3f;
+      --rose: #b3362b;
+      --gold: #e2b33c;
+      --terra: #c4693f;
+      --line: rgba(31, 43, 38, 0.14);
+      --line-2: rgba(31, 43, 38, 0.28);
+      --display: "Playfair Display", "Noto Serif SC", Georgia, serif;
+      --latin: "Cormorant Garamond", Georgia, serif;
+      --hand: "Caveat", "Cormorant Garamond", cursive;
+      --stencil: "Allerta Stencil", "Playfair Display", sans-serif;
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --wrap: 1260px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 130px; }
     body {
-      font-family: var(--sans);
+      margin: 0; font-family: var(--sans); color: var(--ink); line-height: 1.7;
       background:
-        radial-gradient(circle at 15% 10%, rgba(82, 209, 178, 0.12), transparent 36%),
-        radial-gradient(circle at 85% 15%, rgba(217, 119, 66, 0.14), transparent 38%),
-        linear-gradient(180deg, #071210 0%, #0a1816 50%, #0c1d1a 100%);
-      color: var(--text);
-      line-height: 1.65;
-      min-height: 100vh;
+        radial-gradient(1200px 500px at 85% -5%, rgba(226, 179, 60, 0.16), transparent 60%),
+        radial-gradient(900px 600px at -10% 30%, rgba(63, 138, 140, 0.10), transparent 60%),
+        var(--paper);
+      overflow-x: hidden;
     }
+    body::before { /* paper grain */
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    main, header, footer, section { position: relative; z-index: 1; }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1380px, calc(100% - 40px)); margin: 0 auto; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(var(--wrap), calc(100% - 40px)); margin: 0 auto; }
+    strong { color: var(--canal-2); font-weight: 700; }
 
-    /* Topbar */
+    /* ---------- Topbar ---------- */
     .topbar {
       position: sticky; top: 0; z-index: 90;
-      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      background: rgba(7, 18, 16, 0.88);
-      border-bottom: 1px solid var(--edge);
+      background: rgba(244, 238, 221, 0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
     }
-    .topbar-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; padding: 12px 0;
+    .topbar::after { /* rope line */
+      content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 3px;
+      background: repeating-linear-gradient(90deg, var(--oak-2) 0 6px, transparent 6px 9px); opacity: .35;
     }
-    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 15px; color: var(--brass); white-space: nowrap; }
-    .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--terracotta); box-shadow: 0 0 12px var(--terracotta); }
-    .switch { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+    .topbar .wrap { width: min(1400px, calc(100% - 32px)); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 10px 0; }
+    .brand { display: flex; align-items: center; gap: 11px; white-space: nowrap; }
+    .brand svg { width: 38px; height: 38px; flex: none; }
+    .brand-t { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand-t b { font-family: var(--display); font-style: italic; font-weight: 700; font-size: 20px; color: var(--canal-2); letter-spacing: .01em; }
+    .brand-t small { font-family: var(--stencil); font-size: 10px; letter-spacing: .22em; color: var(--oak); text-transform: uppercase; margin-top: 3px; }
+    .switch { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding: 4px 0; }
+    .switch::-webkit-scrollbar { display: none; }
     .switch a {
-      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted);
-      border: 1px solid transparent; white-space: nowrap; transition: all 0.2s;
+      padding: 6px 8px; border-radius: 4px; font-size: 12.5px; color: var(--ink-2); white-space: nowrap;
+      border: 1px solid transparent; transition: all .2s var(--ease);
     }
-    .switch a:hover { color: var(--text); border-color: var(--edge); }
+    .switch a:hover { color: var(--canal-2); border-color: var(--line-2); background: rgba(255,255,255,.5); }
     .switch a[aria-current="page"] {
-      color: #091614; background: linear-gradient(135deg, var(--brass), #f3d285);
-      font-weight: 600; box-shadow: 0 4px 16px rgba(230, 184, 92, 0.35);
+      color: var(--gold); background: var(--canal-2); font-weight: 700;
+      box-shadow: inset 0 0 0 2px var(--canal-2), inset 0 0 0 3px var(--gold), inset 0 0 0 4px var(--rose);
+      text-shadow: 1px 1px 0 var(--rose);
     }
+    .waterline { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--water-2), var(--water), #8cc6c2); transition: width .1s linear; }
 
-    /* Hero */
-    .hero {
-      position: relative; overflow: hidden;
-      padding: 68px 0 48px;
-      border-bottom: 1px solid var(--edge);
-      background:
-        linear-gradient(180deg, rgba(10, 24, 22, 0.45) 0%, rgba(10, 24, 22, 0.96) 100%),
-        url('rankings/images/canals/r1_d4_1.jpg') center/cover no-repeat;
-    }
+    /* ---------- Hero ---------- */
+    .hero { padding: 56px 0 30px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: 44px; align-items: center; }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--brass); background: rgba(10, 24, 22, 0.85);
-      border: 1px solid var(--edge); padding: 6px 14px; border-radius: 999px;
-      margin-bottom: 18px;
+      display: inline-flex; align-items: center; gap: 10px; font-family: var(--stencil); font-size: 11.5px;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--oak); margin-bottom: 18px;
     }
-    .hero h1 {
-      font-family: var(--serif); font-size: clamp(32px, 4.8vw, 56px);
-      line-height: 1.14; font-weight: 700; margin-bottom: 18px;
+    .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--rose); box-shadow: 0 4px 0 var(--gold); }
+    .hero h1 { font-family: var(--serif); font-weight: 900; font-size: clamp(29px, 3.9vw, 54px); line-height: 1.12; margin: 0 0 6px; color: var(--canal-2); letter-spacing: -.01em; }
+    .hero h1 em { font-style: normal; color: var(--water-2); position: relative; white-space: nowrap; }
+    .hero h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: .06em; height: .18em; z-index: -1; background: rgba(226, 179, 60, .45); border-radius: 2px; }
+    .hero-numeral { display: flex; align-items: flex-end; gap: 16px; margin: 6px 0 18px; }
+    .hero-numeral .n {
+      font-family: var(--display); font-weight: 900; font-style: italic; font-size: clamp(92px, 11vw, 148px); line-height: .82;
+      color: var(--gold); -webkit-text-stroke: 2px var(--canal-2); text-shadow: 5px 5px 0 var(--rose), 6px 6px 0 var(--canal-2);
     }
-    .hero h1 em { font-style: normal; color: var(--brass); }
-    .hero h1 span.terra { color: var(--terracotta); }
-    .hero .lede { max-width: 940px; font-size: 16.5px; color: #e8e3d6; margin-bottom: 26px; }
+    .hero-numeral .cap { font-family: var(--latin); font-style: italic; font-size: 22px; color: var(--ink-2); line-height: 1.2; padding-bottom: 8px; }
+    .hero-numeral .cap b { display: block; font-family: var(--serif); font-style: normal; font-size: 18px; color: var(--canal-2); }
+    .lede { font-size: 15.5px; color: var(--ink-2); max-width: 640px; margin: 0 0 22px; }
+    .lede strong { background: linear-gradient(transparent 62%, rgba(63,138,140,.22) 0); }
 
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px;
+    .hero-art { position: relative; }
+    .hero-art .frame {
+      background: var(--card); padding: 12px; border: 1px solid var(--line-2); border-radius: 6px;
+      box-shadow: 0 30px 60px -30px rgba(29, 61, 51, .45), 0 2px 0 rgba(255,255,255,.7) inset; transform: rotate(.6deg);
     }
-    .stat-card {
-      background: rgba(11, 28, 25, 0.86); border: 1px solid var(--edge);
-      border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(10px);
-    }
-    .stat-card b { display: block; font-family: var(--mono); font-size: 24px; color: var(--brass); }
-    .stat-card span { font-size: 12.5px; color: var(--muted); }
+    .hero-art svg { width: 100%; height: auto; display: block; border-radius: 3px; }
+    .hero-art .caption { display: flex; justify-content: space-between; font-family: var(--hand); font-size: 18px; color: var(--oak); padding: 8px 4px 0; }
+    .lockwater, .lockboat { animation: lockfill 16s var(--ease) infinite; }
+    @keyframes lockfill { 0%, 12% { transform: translateY(52px); } 45%, 62% { transform: translateY(0); } 95%, 100% { transform: translateY(52px); } }
+    .ripple { animation: drift 7s linear infinite; }
+    @keyframes drift { to { stroke-dashoffset: -60; } }
+    .smoke circle { animation: puff 5s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+    .smoke circle:nth-child(2) { animation-delay: 1.6s; } .smoke circle:nth-child(3) { animation-delay: 3.2s; }
+    @keyframes puff { 0% { opacity: 0; transform: translate(0,0) scale(.5); } 20% { opacity: .55; } 100% { opacity: 0; transform: translate(-18px,-42px) scale(1.8); } }
+    .leafsway { animation: sway 9s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: 50% 100%; }
+    @keyframes sway { to { transform: rotate(1.4deg); } }
 
-    .pillars-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 12px;
+    .ledger {
+      display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 34px;
+      border-top: 2px solid var(--canal-2); border-bottom: 1px solid var(--canal-2); background: rgba(251,247,236,.6);
     }
-    .pillar {
-      background: var(--card); border: 1px solid var(--edge);
-      border-radius: 14px; padding: 18px;
-    }
-    .pillar h3 { font-size: 15px; color: var(--brass); margin-bottom: 6px; }
-    .pillar p { font-size: 13px; color: var(--muted); }
+    .ledger div { padding: 14px 16px 12px; border-right: 1px dashed var(--line-2); }
+    .ledger div:last-child { border-right: 0; }
+    .ledger b { display: block; font-family: var(--display); font-weight: 900; font-size: 26px; color: var(--canal-2); line-height: 1.1; }
+    .ledger b i { font-style: normal; color: var(--rose); font-size: 15px; margin-left: 2px; }
+    .ledger span { font-size: 12.5px; color: var(--ink-2); }
+    .ledger small { display: block; font-family: var(--stencil); font-size: 9.5px; letter-spacing: .18em; color: var(--oak-2); text-transform: uppercase; margin-bottom: 4px; }
 
-    /* Boat Tiers Section */
-    .tiers-section {
-      margin: 34px 0 28px; padding: 24px;
-      background: rgba(12, 29, 26, 0.92); border: 1px solid var(--edge);
-      border-radius: 18px;
-    }
-    .tiers-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px;
-    }
-    .tier-box {
-      background: rgba(7, 18, 16, 0.8); border: 1px solid rgba(230, 184, 92, 0.2);
-      border-radius: 14px; padding: 16px;
-    }
-    .tier-box h4 { color: var(--brass); font-size: 14.5px; margin-bottom: 4px; }
-    .tier-box .t-price { font-family: var(--mono); font-size: 15px; color: var(--mint); font-weight: 600; margin: 6px 0; }
-    .tier-box .t-models { font-family: var(--mono); font-size: 11.5px; color: var(--terracotta); margin-bottom: 8px; }
-    .tier-box p { font-size: 12.5px; color: var(--muted); }
+    /* ---------- Sections ---------- */
+    .sec { padding: 64px 0 10px; }
+    .sec-head { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: end; margin-bottom: 28px; border-bottom: 1px solid var(--line-2); padding-bottom: 16px; }
+    .sec-no { grid-row: span 2; font-family: var(--display); font-style: italic; font-weight: 900; font-size: 64px; line-height: .8; color: var(--water); -webkit-text-stroke: 1px var(--canal-2); }
+    .sec-kicker { font-family: var(--stencil); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--rose); }
+    .sec-head h2 { margin: 0; font-family: var(--serif); font-weight: 900; font-size: clamp(24px, 2.6vw, 34px); color: var(--canal-2); line-height: 1.2; }
+    .sec-head h2 em { font-family: var(--latin); font-style: italic; font-weight: 600; color: var(--oak); font-size: .8em; margin-left: 8px; }
+    .sec-note { font-size: 14px; color: var(--ink-2); max-width: 820px; margin: -10px 0 26px; }
 
-    /* Filter Bar */
+    /* Rules of the towpath (pillars) */
+    .rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .rule {
+      position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 22px 20px 20px;
+      box-shadow: 0 14px 30px -24px rgba(29,61,51,.6); transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .rule:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -24px rgba(29,61,51,.7); }
+    .rule::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: repeating-linear-gradient(90deg, var(--rose) 0 14px, var(--gold) 14px 18px, var(--canal) 18px 32px, var(--gold) 32px 36px); }
+    .rule .rn { font-family: var(--stencil); font-size: 34px; color: var(--water); line-height: 1; }
+    .rule svg { position: absolute; right: 16px; top: 20px; width: 44px; height: 44px; opacity: .9; }
+    .rule h3 { font-family: var(--serif); font-size: 17px; margin: 10px 0 8px; color: var(--canal-2); }
+    .rule p { font-size: 13.2px; color: var(--ink-2); margin: 0; }
+
+    /* Lock ladder viz */
+    .viz-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; }
+    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px 20px 16px; box-shadow: 0 18px 40px -30px rgba(29,61,51,.6); min-width: 0; }
+    .panel h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 17px; color: var(--canal-2); }
+    .panel .ph-sub { font-family: var(--hand); font-size: 18px; color: var(--oak); margin-bottom: 8px; }
+    #scatter svg { width: 100%; height: auto; display: block; }
+    #scatter .dot { cursor: pointer; transition: transform .2s var(--ease); transform-box: fill-box; transform-origin: center; }
+    #scatter .dot:hover { transform: scale(1.25); }
+    .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
+    .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+    .ladder { display: grid; gap: 3px; max-height: 520px; overflow-y: auto; padding-right: 4px; }
+    .lad-row { display: grid; grid-template-columns: 34px minmax(0, 1.1fr) minmax(0, 1.3fr) 64px; gap: 10px; align-items: center; padding: 5px 4px; border-bottom: 1px dashed var(--line); font-size: 12.5px; cursor: pointer; border-radius: 3px; transition: background .2s; }
+    .lad-row:hover { background: var(--water-soft); }
+    .lad-row .pl { font-family: var(--display); font-weight: 900; font-style: italic; font-size: 13px; color: var(--gold); background: var(--canal-2); text-align: center; border-radius: 3px; padding: 1px 0; box-shadow: inset 0 0 0 1px var(--gold); text-shadow: 1px 1px 0 var(--rose); }
+    .lad-row .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); font-family: var(--latin); font-size: 15px; font-weight: 600; }
+    .lad-row svg { width: 100%; height: 26px; display: block; }
+    .lad-row .v { text-align: right; font-family: var(--stencil); font-size: 13px; color: var(--canal-2); line-height: 1.1; }
+    .lad-row .v small { display: block; font-family: var(--sans); font-size: 10px; color: var(--ink-3); }
+
+    /* Boat tiers */
+    .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .tier {
+      position: relative; background: var(--card); border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden;
+      display: flex; flex-direction: column; transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .tier:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -28px rgba(29,61,51,.75); }
+    .tier-head { background: var(--canal-2); color: var(--paper); padding: 16px 18px 14px; position: relative; border-bottom: 3px solid var(--gold); box-shadow: 0 3px 0 var(--rose); }
+    .tier.lux .tier-head { background: linear-gradient(135deg, #5a1f1a, var(--rose)); }
+    .tier-letter { font-family: var(--display); font-weight: 900; font-style: italic; font-size: 44px; line-height: .9; color: var(--gold); text-shadow: 2px 2px 0 var(--rose); }
+    .tier.lux .tier-letter { text-shadow: 2px 2px 0 #2a0d0a; }
+    .tier-name { font-family: var(--serif); font-size: 14.5px; font-weight: 700; margin-top: 6px; }
+    .tier-stars { position: absolute; right: 16px; top: 16px; font-family: var(--stencil); font-size: 11px; letter-spacing: .14em; color: var(--gold); }
+    .tier-body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .tier-cfg { font-size: 12.5px; color: var(--ink-2); }
+    .tier-price { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--canal-2); line-height: 1.25; }
+    .tier-pp { display: inline-block; font-size: 12px; background: var(--water-soft); color: var(--water-2); padding: 2px 8px; border-radius: 3px; font-weight: 700; }
+    .tier-models { font-family: var(--latin); font-style: italic; font-size: 14.5px; color: var(--oak); border-left: 2px solid var(--gold); padding-left: 10px; line-height: 1.35; }
+    .tier p { font-size: 12.8px; color: var(--ink-2); margin: 0; }
+    .scale { margin-top: auto; }
+    .scale .track { position: relative; height: 10px; background: repeating-linear-gradient(90deg, var(--paper-2) 0 1px, transparent 1px 10%), var(--paper); border: 1px solid var(--line-2); border-radius: 6px; }
+    .scale .rng { position: absolute; top: 1px; bottom: 1px; border-radius: 5px; background: linear-gradient(90deg, var(--water), var(--canal)); }
+    .tier.lux .scale .rng { background: linear-gradient(90deg, var(--terra), var(--rose)); }
+    .scale .ax { display: flex; justify-content: space-between; font-size: 10px; color: var(--ink-3); margin-top: 3px; font-family: var(--stencil); }
+
+    /* ---------- Filter bar ---------- */
     .filter-bar {
-      position: sticky; top: 57px; z-index: 70;
-      background: rgba(10, 25, 22, 0.94); backdrop-filter: blur(14px);
-      border: 1px solid var(--edge); border-radius: 16px;
-      padding: 16px 18px; margin-bottom: 24px;
-      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+      position: sticky; top: 64px; z-index: 70; margin: 0 0 26px; padding: 12px 14px;
+      background: rgba(251, 247, 236, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--line-2); border-radius: 6px; box-shadow: 0 14px 30px -24px rgba(29,61,51,.6);
+      display: flex; flex-wrap: wrap; gap: 10px 10px; align-items: center;
     }
-    .search-box {
-      flex: 1 1 240px; background: rgba(5, 14, 12, 0.9);
-      border: 1px solid var(--edge); border-radius: 10px;
-      padding: 9px 14px; color: var(--text); font-size: 13.5px;
-    }
-    .chip-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-    .chip {
-      padding: 6px 12px; border-radius: 999px; font-size: 12px;
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--edge);
-      color: var(--muted); cursor: pointer; transition: all 0.18s;
-    }
-    .chip:hover { color: var(--text); border-color: var(--brass); }
-    .chip.active { background: var(--brass); color: #091614; font-weight: 600; border-color: var(--brass); }
-    .sort-select {
-      background: rgba(5, 14, 12, 0.95); color: var(--brass);
-      border: 1px solid var(--edge-strong); border-radius: 10px;
-      padding: 8px 12px; font-size: 12.5px; font-family: var(--sans);
-    }
+    .search { flex: 1 1 150px; position: relative; }
+    .search input { width: 100%; padding: 9px 12px 9px 34px; border: 1px solid var(--line-2); border-radius: 4px; background: #fff; font: inherit; font-size: 13.5px; color: var(--ink); }
+    .search input:focus { outline: 2px solid var(--water); outline-offset: 1px; }
+    .search svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; stroke: var(--oak); fill: none; stroke-width: 2; }
+    .seg { display: flex; flex-wrap: wrap; gap: 0; border: 1px solid var(--line-2); border-radius: 4px; overflow: hidden; background: #fff; }
+    .seg button { font: inherit; font-size: 12.5px; border: 0; border-right: 1px solid var(--line); background: transparent; padding: 7px 9px; color: var(--ink-2); cursor: pointer; transition: background .2s, color .2s; white-space: nowrap; }
+    .seg button:last-child { border-right: 0; }
+    .seg button:hover { background: var(--water-soft); color: var(--canal-2); }
+    .seg button[aria-pressed="true"] { background: var(--canal-2); color: var(--gold); font-weight: 700; }
+    .sort { font: inherit; font-size: 12.5px; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 4px; background: #fff; color: var(--canal-2); }
+    .tally { margin-left: auto; font-family: var(--hand); font-size: 18px; flex: none; color: var(--rose); white-space: nowrap; }
 
-    /* Route Cards */
-    .routes-grid { display: grid; grid-template-columns: 1fr; gap: 26px; margin-bottom: 60px; }
-    .route-card {
-      background: var(--card); border: 1px solid var(--edge);
-      border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
+    /* ---------- Route cards (logbook entries) ---------- */
+    .routes { display: grid; gap: 30px; margin-bottom: 70px; }
+    .route {
+      position: relative; background: var(--card); border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden;
+      box-shadow: 0 24px 50px -36px rgba(29,61,51,.7); transition: transform .35s var(--ease), box-shadow .35s var(--ease);
     }
-    .rc-top { display: grid; grid-template-columns: 380px 1fr; }
-    .rc-media { position: relative; min-height: 280px; background: #06100e; }
-    .rc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .rc-rank-badge {
-      position: absolute; top: 14px; left: 14px;
-      background: rgba(7, 18, 16, 0.9); border: 1px solid var(--brass);
-      color: var(--brass); font-family: var(--mono); font-weight: 700;
-      padding: 6px 12px; border-radius: 10px; font-size: 15px;
+    .route:hover { transform: translateY(-3px); box-shadow: 0 34px 60px -36px rgba(29,61,51,.8); }
+    .rt { display: grid; grid-template-columns: 420px 1fr; }
+    .rt-media { position: relative; overflow: hidden; background: var(--canal-2); min-height: 340px; }
+    .rt-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+    .route:hover .rt-media img { transform: scale(1.05); }
+    .rt-media::after { content: ""; position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(transparent, rgba(16, 32, 27, .78)); pointer-events: none; }
+    .plaque {
+      position: absolute; left: 16px; top: 16px; z-index: 2; padding: 6px 14px 5px; background: var(--canal-2); border-radius: 5px;
+      box-shadow: inset 0 0 0 2px var(--canal-2), inset 0 0 0 4px var(--gold), inset 0 0 0 6px var(--rose), 0 8px 20px rgba(0,0,0,.35);
+      display: flex; align-items: center; gap: 8px;
     }
-    .rc-region-badge {
-      position: absolute; bottom: 14px; left: 14px;
-      background: rgba(10, 24, 22, 0.92); border: 1px solid var(--mint);
-      color: var(--mint); font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    .plaque .dm { width: 8px; height: 8px; background: var(--rose); transform: rotate(45deg); box-shadow: 0 0 0 1.5px var(--gold); }
+    .plaque b { font-family: var(--display); font-weight: 900; font-style: italic; font-size: 30px; line-height: 1; color: var(--gold); text-shadow: 2px 2px 0 var(--rose), 3px 3px 0 #0f221c; }
+    .plaque b small { font-size: 15px; margin-right: 2px; }
+    .stamp {
+      position: absolute; right: 16px; top: 16px; z-index: 2; width: 74px; height: 74px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.9); outline: 1px dashed rgba(255,255,255,.7); outline-offset: -7px;
+      display: grid; place-items: center; text-align: center; color: #fff; transform: rotate(-12deg);
+      background: rgba(179, 54, 43, .82); font-family: var(--stencil); line-height: 1.05; box-shadow: 0 6px 16px rgba(0,0,0,.3);
     }
-    .rc-content { padding: 22px 26px; display: flex; flex-direction: column; justify-content: space-between; }
-    .rc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
-    .rc-title { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--text); }
-    .rc-sub { font-size: 12.5px; color: var(--muted); margin-top: 3px; font-family: var(--mono); }
-    .rc-price-orb {
-      text-align: right; background: var(--brass-soft); border: 1px solid var(--edge-strong);
-      padding: 8px 14px; border-radius: 12px; white-space: nowrap;
-    }
-    .rc-price-orb b { display: block; font-family: var(--mono); font-size: 18px; color: var(--brass); }
-    .rc-price-orb small { font-size: 11px; color: var(--muted); }
+    .stamp b { font-size: 20px; display: block; } .stamp span { font-size: 9px; letter-spacing: .12em; font-family: var(--sans); font-weight: 700; }
+    .stamp.t1 { background: rgba(46, 91, 76, .86); } .stamp.t15 { background: rgba(110, 74, 42, .86); }
+    .rt-place { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2; color: #fff; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
+    .rt-place .c { font-family: var(--hand); font-size: 24px; line-height: 1; }
+    .rt-place .d { font-size: 11.5px; background: rgba(244,238,221,.92); color: var(--canal-2); padding: 3px 9px; border-radius: 3px; font-weight: 700; white-space: nowrap; }
 
-    .rc-specs {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
-      margin: 12px 0; padding: 12px 14px;
-      background: rgba(6, 15, 13, 0.72); border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);
+    .rt-body { padding: 22px 26px 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+      background-image: repeating-linear-gradient(transparent 0 31px, rgba(63,138,140,.07) 31px 32px); }
+    .rt-kick { display: flex; justify-content: space-between; gap: 10px; font-family: var(--stencil); font-size: 10.5px; letter-spacing: .2em; color: var(--oak); text-transform: uppercase; }
+    .rt-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
+    .rt-head h3 { margin: 0; font-family: var(--serif); font-weight: 900; font-size: 22px; line-height: 1.3; color: var(--canal-2); }
+    .rt-en { font-family: var(--latin); font-style: italic; font-size: 16px; color: var(--ink-2); margin-top: 2px; line-height: 1.3; }
+    .rt-base { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
+    .fee {
+      flex: none; text-align: center; min-width: 150px; padding: 10px 14px 8px; background: #fffaf0; border: 1px solid var(--line-2);
+      border-radius: 4px; position: relative; box-shadow: 3px 3px 0 var(--paper-2);
     }
-    .rc-spec span { display: block; font-size: 11px; color: var(--muted); }
-    .rc-spec b { font-size: 13px; color: var(--mint); font-family: var(--mono); }
+    .fee::before, .fee::after { content: ""; position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--card); border: 1px solid var(--line-2); transform: translateY(-50%); }
+    .fee::before { left: -7px; clip-path: inset(0 0 0 50%); } .fee::after { right: -7px; clip-path: inset(0 50% 0 0); }
+    .fee small { display: block; font-family: var(--stencil); font-size: 9px; letter-spacing: .18em; color: var(--oak); }
+    .fee b { display: block; font-family: var(--display); font-weight: 900; font-size: 22px; color: var(--rose); line-height: 1.2; }
+    .fee span { font-size: 11px; color: var(--ink-3); }
 
-    .price-compare-bar {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-      background: rgba(7, 19, 17, 0.92); border: 1px solid rgba(230, 184, 92, 0.28);
-      border-radius: 12px; padding: 11px 14px; margin: 10px 0;
-    }
-    .pc-item small { display: block; font-size: 11px; color: var(--muted); }
-    .pc-item strong { font-family: var(--mono); font-size: 13px; color: var(--brass); }
+    .metrics { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line-2); border-radius: 4px; background: rgba(255,255,255,.6); }
+    .metrics > div { padding: 9px 12px; border-right: 1px solid var(--line); min-width: 0; }
+    .metrics > div:last-child { border-right: 0; }
+    .metrics span { display: block; font-size: 11px; color: var(--ink-3); }
+    .metrics b { font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--canal-2); line-height: 1.25; }
+    .metrics b small { font-family: var(--sans); font-size: 11px; color: var(--ink-2); font-weight: 500; margin-left: 2px; }
+    .metrics .lic b { font-family: var(--sans); font-size: 12.5px; font-weight: 700; display: block; line-height: 1.35; }
 
-    .rc-highlights { list-style: none; margin: 10px 0; display: grid; gap: 5px; }
-    .rc-highlights li { font-size: 13.5px; color: #ece6d8; padding-left: 18px; position: relative; }
-    .rc-highlights li::before { content: '⚜️'; position: absolute; left: 0; top: 0; font-size: 11px; }
+    .gauges { display: grid; grid-template-columns: 1fr 150px; gap: 14px; align-items: center; padding: 10px 12px; background: var(--water-soft); border-radius: 4px; }
+    .gauges .lbl { font-size: 11px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 8px; }
+    .gauges .lbl b { font-family: var(--hand); font-size: 17px; color: var(--water-2); font-weight: 600; }
+    .gauges svg { display: block; width: 100%; height: auto; }
+    .gauge-box { text-align: center; }
+    .gauge-box .gl { font-size: 11.5px; font-weight: 700; color: var(--canal-2); margin-top: -2px; }
 
-    .rc-tip {
-      font-size: 12.5px; color: #f5d8b8; background: var(--terracotta-soft);
-      border-left: 3px solid var(--terracotta); padding: 8px 12px; border-radius: 6px; margin-top: 8px;
-    }
+    .prices { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 10px; }
+    .prices > div { padding: 9px 12px; border: 1px dashed var(--line-2); border-radius: 4px; background: #fffdf6; min-width: 0; }
+    .prices small { display: block; font-size: 11px; color: var(--ink-3); }
+    .prices b { font-size: 13.5px; color: var(--canal-2); }
+    .prices .fleet b { font-family: var(--latin); font-style: italic; font-weight: 600; font-size: 14.5px; color: var(--oak); line-height: 1.3; display: block; }
 
-    .rc-actions {
-      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
-      margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);
+    .hl { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+    .hl li { position: relative; padding-left: 22px; font-size: 13.6px; color: var(--ink); }
+    .hl li::before { /* painted rose */
+      content: ""; position: absolute; left: 2px; top: .5em; width: 11px; height: 11px; border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, var(--gold) 0 18%, var(--rose) 20% 62%, transparent 64%), radial-gradient(circle, var(--leaf) 0 100%);
+      background-size: 100% 100%, 0 0; box-shadow: 4px 3px 0 -3px var(--leaf), -3px 4px 0 -3px var(--leaf);
     }
-    .btn-drawer {
-      padding: 9px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
-      background: linear-gradient(135deg, var(--brass), #f0cd7a); color: #091614;
-      border: none; cursor: pointer; transition: transform 0.18s, box-shadow 0.18s;
-    }
-    .btn-drawer:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(230, 184, 92, 0.4); }
+    .tip { position: relative; font-size: 13px; color: var(--ink-2); background: #fff6d6; padding: 10px 14px 10px 16px; border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; }
+    .tip b.h { font-family: var(--hand); font-size: 19px; color: var(--oak); font-weight: 700; margin-right: 6px; }
+    .locktype { font-size: 12px; color: var(--ink-2); display: flex; gap: 8px; align-items: baseline; }
+    .locktype i { font-style: normal; font-family: var(--stencil); font-size: 10px; letter-spacing: .16em; color: var(--rose); white-space: nowrap; }
 
-    /* 8-Day Dual-Photo Itinerary Drawer */
-    .itinerary-drawer {
-      display: none; padding: 24px 26px; background: rgba(5, 13, 11, 0.96);
-      border-top: 1px solid var(--edge);
+    .rt-foot { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--line); }
+    .btn-log {
+      font: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer; border: 0; border-radius: 4px; padding: 10px 18px;
+      background: var(--canal-2); color: var(--gold); box-shadow: inset 0 0 0 2px var(--canal-2), inset 0 0 0 3px var(--gold), 0 6px 14px -6px rgba(29,61,51,.7);
+      transition: transform .2s var(--ease), background .2s;
     }
-    .itinerary-drawer.open { display: block; }
-    .day-cards-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px;
-    }
-    .day-photo-card {
-      background: rgba(14, 33, 29, 0.85); border: 1px solid var(--edge);
-      border-radius: 14px; overflow: hidden;
-    }
-    .day-dual-imgs {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 185px; background: #040b09;
-    }
-    .day-dual-imgs figure { position: relative; height: 100%; overflow: hidden; }
-    .day-dual-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .day-dual-imgs figcaption {
-      position: absolute; inset: auto 0 0 0; background: rgba(4, 11, 9, 0.82);
-      font-size: 10.5px; color: #ddd5c4; padding: 4px 7px; line-height: 1.3;
-    }
-    .day-photo-body { padding: 14px 16px; }
-    .day-photo-body h5 { color: var(--brass); font-size: 14.5px; margin-bottom: 6px; }
-    .day-photo-body p { font-size: 12.5px; color: #d8e5e1; }
+    .btn-log:hover { transform: translateY(-2px); background: var(--canal); }
+    .btn-log[aria-expanded="true"] { background: var(--rose); color: #fff; box-shadow: inset 0 0 0 2px var(--rose), inset 0 0 0 3px var(--gold); }
+    .free-loop { font-family: var(--hand); font-size: 19px; color: var(--water-2); }
+    .maplink { font-size: 12px; color: var(--water-2); border-bottom: 1px solid currentColor; }
 
-    .foot { padding: 50px 0; border-top: 1px solid var(--edge); color: var(--muted); font-size: 13px; text-align: center; }
+    .shared-slot { margin-top: 2px; }
+    .shared-slot .sw-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .shared-slot .sw-btn { font-family: var(--sans) !important; border-radius: 4px !important; border: 1px solid var(--line-2) !important; background: #fff !important; color: var(--canal-2) !important; }
+    .shared-slot .sw-btn.is-wish { background: #fde8e4 !important; border-color: var(--rose) !important; }
+    .shared-slot .sw-btn.is-visit { background: #e3f1ee !important; border-color: var(--water) !important; }
+    .shared-slot .sw-dist { color: var(--oak) !important; font-family: var(--hand); font-size: 16px !important; }
+    .shared-slot .sw-near-pill { background: var(--water-soft) !important; color: var(--canal-2) !important; border-color: transparent !important; }
 
-    @media (max-width: 980px) {
-      .rc-top { grid-template-columns: 1fr; }
-      .hero-stats, .pillars-grid, .tiers-grid, .day-cards-grid { grid-template-columns: 1fr; }
-      .rc-specs, .price-compare-bar { grid-template-columns: repeat(2, 1fr); }
+    /* ---------- Itinerary: towpath timeline ---------- */
+    .itin { display: none; border-top: 2px solid var(--canal-2); background: linear-gradient(180deg, #efe7cf, #f6f0de 120px); padding: 26px 26px 30px; }
+    .itin.open { display: block; animation: unfurl .5s var(--ease); }
+    @keyframes unfurl { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+    .itin-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 18px; }
+    .itin-head h4 { margin: 0; font-family: var(--serif); font-size: 19px; color: var(--canal-2); }
+    .itin-head span { font-family: var(--hand); font-size: 19px; color: var(--oak); }
+    .towpath { position: relative; display: grid; gap: 18px; padding-left: 64px; }
+    .towpath::before { /* the canal */
+      content: ""; position: absolute; left: 22px; top: 6px; bottom: 6px; width: 10px; border-radius: 6px;
+      background: linear-gradient(180deg, var(--water), var(--water-2));
+      box-shadow: -5px 0 0 -1px #c9b98f, 5px 0 0 -1px #c9b98f;
+    }
+    .towpath::after { content: ""; position: absolute; left: 14px; top: 6px; bottom: 6px; border-left: 2px dotted rgba(110,74,42,.45); }
+    .day { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 0; background: var(--card); border: 1px solid var(--line-2); border-radius: 5px; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+    .day:hover { transform: translateX(3px); box-shadow: 0 16px 30px -22px rgba(29,61,51,.7); }
+    .bollard {
+      position: absolute; left: -64px; top: 16px; width: 54px; height: 54px; border-radius: 50%; z-index: 2;
+      background: var(--canal-2); color: var(--gold); display: grid; place-items: center; text-align: center; line-height: 1;
+      box-shadow: inset 0 0 0 3px var(--canal-2), inset 0 0 0 5px var(--gold), inset 0 0 0 7px var(--rose), 0 6px 12px -4px rgba(0,0,0,.4);
+    }
+    .bollard small { display: block; font-family: var(--stencil); font-size: 8.5px; letter-spacing: .14em; color: #f4eedd; }
+    .bollard b { font-family: var(--display); font-style: italic; font-weight: 900; font-size: 21px; text-shadow: 1px 1px 0 var(--rose); }
+    .day-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--canal-2); min-height: 200px; overflow: hidden; border-radius: 4px 0 0 4px; }
+    .day-imgs figure { margin: 0; position: relative; overflow: hidden; }
+    .day-imgs img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; transition: transform .9s var(--ease); }
+    .day-imgs figure:hover img { transform: scale(1.07); }
+    .day-imgs figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 6px; font-size: 10.5px; line-height: 1.35; color: #f6f1e2; background: linear-gradient(transparent, rgba(16,32,27,.88)); }
+    .day-txt { padding: 16px 18px; min-width: 0; }
+    .day-txt h5 { margin: 0 0 6px; font-family: var(--serif); font-size: 15.5px; line-height: 1.45; color: var(--canal-2); }
+    .day-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+    .day-meta span { font-size: 11px; padding: 2px 8px; border-radius: 3px; background: var(--water-soft); color: var(--water-2); font-weight: 700; }
+    .day-meta span.lk { background: #f3e2c4; color: var(--oak); }
+    .day-meta span.nt { background: #f6dcd6; color: var(--rose); }
+    .day-txt p { margin: 0; font-size: 13px; color: var(--ink-2); }
+
+    .empty { text-align: center; padding: 50px 20px; font-family: var(--hand); font-size: 24px; color: var(--oak); }
+
+    /* ---------- Footer ---------- */
+    .foot { margin-top: 30px; background: var(--canal-2); color: #d9e2d6; padding: 46px 0 34px; position: relative; }
+    .foot::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; background: radial-gradient(circle at 10px -4px, transparent 12px, var(--canal-2) 13px) 0 0 / 20px 14px repeat-x; }
+    .foot-grid { display: grid; grid-template-columns: 1.2fr 2fr; gap: 30px; align-items: start; }
+    .foot .sig { font-family: var(--display); font-style: italic; font-size: 30px; color: var(--gold); text-shadow: 2px 2px 0 var(--rose); line-height: 1.1; }
+    .foot .sig + p { font-size: 13px; color: #b9c8bd; margin: 10px 0 0; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+    .foot nav a { font-size: 12.5px; padding: 5px 10px; border: 1px solid rgba(226,179,60,.3); border-radius: 3px; color: #e9eee6; transition: background .2s; }
+    .foot nav a:hover { background: rgba(226,179,60,.15); }
+    .foot nav a[aria-current="page"] { background: var(--gold); color: var(--canal-2); font-weight: 700; }
+    .foot .hand { font-family: var(--hand); font-size: 20px; color: var(--gold); margin-top: 22px; }
+    .foot-small { margin-top: 26px; padding-top: 14px; border-top: 1px dashed rgba(226,179,60,.3); font-size: 12px; color: #9fb2a5; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .rules, .tiers { grid-template-columns: repeat(2, 1fr); }
+      .viz-grid { grid-template-columns: 1fr; }
+      .rt { grid-template-columns: 340px 1fr; }
+      .metrics { grid-template-columns: repeat(3, 1fr); }
+      .metrics > div:nth-child(3) { border-right: 0; }
+      .metrics > div:nth-child(n+4) { border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 820px) {
+      .rt { grid-template-columns: 1fr; }
+      .rt-media { min-height: 240px; }
+      .ledger { grid-template-columns: repeat(2, 1fr); }
+      .ledger div { border-bottom: 1px dashed var(--line-2); }
+      .day { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .prices { grid-template-columns: 1fr 1fr; }
+      .prices .fleet { grid-column: 1 / -1; }
+      .filter-bar { position: static; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand-t small { display: none; }
+      .brand-t b { font-size: 17px; }
+      .brand svg { width: 32px; height: 32px; }
+      .day-imgs { border-radius: 4px 4px 0 0; }
+      .topbar-inner { gap: 10px; }
+      .rules, .tiers { grid-template-columns: 1fr; }
+      .rt-body { padding: 18px 16px; }
+      .rt-head { flex-direction: column; }
+      .fee { align-self: stretch; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metrics > div { border-top: 1px solid var(--line); }
+      .metrics > div:nth-child(-n+2) { border-top: 0; }
+      .metrics > div:nth-child(odd) { border-right: 1px solid var(--line); }
+      .metrics > div:nth-child(even) { border-right: 0; }
+      .metrics .lic { grid-column: 1 / -1; }
+      .gauges { grid-template-columns: 1fr; }
+      .gauge-box { max-width: 170px; margin: 0 auto; }
+      .itin { padding: 20px 12px 24px; }
+      .towpath { padding-left: 0; }
+      .towpath::before, .towpath::after { display: none; }
+      .bollard { position: absolute; left: 10px; top: 10px; width: 46px; height: 46px; }
+      .bollard b { font-size: 17px; }
+      .sec-no { font-size: 46px; }
+      .lad-row { grid-template-columns: 30px minmax(0, 1fr) minmax(0, 1fr) 54px; gap: 6px; }
+      .tally { margin-left: 0; }
+      .seg button { padding: 7px 9px; font-size: 12px; }
+      .ledger b { font-size: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="index.html"><span class="dot"></span><span>Destination Atlas · 全球运河房船图鉴</span></a>
+      <a class="brand" href="index.html" aria-label="Destination Atlas 首页">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="#1d3d33" />
+          <rect x="3.5" y="3.5" width="33" height="33" rx="4" fill="none" stroke="#e2b33c" stroke-width="1.4" />
+          <rect x="6" y="22" width="28" height="11" fill="#3f8a8c" />
+          <path d="M6 26h28" stroke="#8cc6c2" stroke-width="1" stroke-dasharray="3 3" />
+          <path d="M12 9v24M28 9v24" stroke="#c49a5c" stroke-width="3.4" />
+          <path d="M4 10h12M24 10h12" stroke="#f4eedd" stroke-width="2.4" stroke-linecap="round" />
+          <rect x="14" y="19" width="12" height="4.5" rx="2" fill="#b3362b" />
+          <rect x="16" y="16.5" width="7" height="3" fill="#e2b33c" />
+        </svg>
+        <span class="brand-t"><b>Lockkeeper's Log</b><small>Destination Atlas · 运河房船</small></span>
+      </a>
       <nav class="switch" aria-label="榜单切换">
         <a href="index.html">图鉴总览</a>
         <a href="beaches.html">海岸度假 145</a>
@@ -277,236 +478,621 @@
         <a href="museums.html">重器博物馆 100</a>
       </nav>
     </div>
+    <div class="waterline" id="waterline" aria-hidden="true"></div>
   </header>
 
   <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Waterway Lockkeeper's Log · Self-Drive Canal & Inland Houseboat Atlas</span>
-      <h1>运河水闸日志与<em>法式水岸画报</em><br />全球运河与内河房船路线 <span class="terra">Top 20</span></h1>
-      <p class="lede">
-        无需任何游艇驾照（基地 30 分钟实操培训即拿钥匙），以 8 km/h 的慢节奏开着 3–4 卧室移动水上公寓，驶过 300 年法国梧桐拱廊、英国 38 米高空“天空之溪”水槽桥与苏格兰尼斯湖古堡。傍晚直接把船系在酒庄或中世纪城墙脚下，骑单车去镇上买法棍与勃艮第红酒。本页汇集全球 20 条殿堂级运河航线、<strong>2027 年 6 月初 3卧/4卧精确报价</strong> 及 <strong>176 张实景图片匹配的 8天7晚 逐日路书</strong>。
-      </p>
-      <div class="hero-stats">
-        <div class="stat-card"><b>20 条</b><span>全球顶级运河与内河房船航线</span></div>
-        <div class="stat-card"><b>免船牌</b><span>95% 航线 30 分钟培训即可自驾</span></div>
-        <div class="stat-card"><b>€290 起</b><span>6大3小（9人）整周分摊人均船租</span></div>
-        <div class="stat-card"><b>176 张</b><span>Day 1–Day 8 逐日地标实景配图</span></div>
-        <div class="stat-card"><b>4 大船队</b><span>Le Boat / Locaboat / Nicols / 窄船</span></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Waterway Lockkeeper's Log · 2027 Season · 8 km/h</div>
+        <h1>运河水闸日志与<em>法式水岸画报</em><br />全球运河与内河房船路线</h1>
+        <div class="hero-numeral">
+          <span class="n">20</span>
+          <span class="cap"><b>条航道 · 逐闸记录</b>Self-drive canal &amp;<br />inland houseboat atlas</span>
+        </div>
+        <p class="lede">
+          无需任何游艇驾照（基地 30 分钟实操培训即拿钥匙），以 8 km/h 的慢节奏开着 3–4 卧室移动水上公寓，驶过 300 年法国梧桐拱廊、英国 38 米高空“天空之溪”水槽桥与苏格兰尼斯湖古堡。傍晚直接把船系在酒庄或中世纪城墙脚下，骑单车去镇上买法棍与勃艮第红酒。本页汇集全球 20 条殿堂级运河航线、<strong>2027 年 6 月初 3卧/4卧精确报价</strong> 及 <strong>实景图片匹配的 8天7晚 逐日路书</strong>。
+        </p>
       </div>
-
-      <div class="pillars-grid">
-        <div class="pillar">
-          <h3>🏰 1. 水岸世遗与古堡密度</h3>
-          <p>顶级运河绝非枯燥水渠：卡尔卡松双层城墙、温莎城堡、布鲁日钟楼、厄克特城堡与庞特卡萨尔特高空水桥皆可直接从船头仰望。</p>
+      <figure class="hero-art" style="margin:0">
+        <div class="frame">
+          <svg viewBox="0 0 640 520" role="img" aria-label="手绘风船闸剖面：窄船在闸室中随水位上升，背景为石拱水槽桥、守闸人小屋与法国梧桐">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7efd9" /><stop offset="1" stop-color="#dfe8da" /></linearGradient>
+              <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6aa9a6" /><stop offset="1" stop-color="#2a6669" /></linearGradient>
+              <pattern id="stone" width="44" height="22" patternUnits="userSpaceOnUse">
+                <rect width="44" height="22" fill="#d8cba9" />
+                <path d="M0 .5H44M0 11.5H44M11 0V11M33 11V22" stroke="#b9a882" stroke-width="1.2" />
+                <circle cx="25" cy="6" r="1.4" fill="#c7b893" /><circle cx="7" cy="17" r="1.2" fill="#c7b893" />
+              </pattern>
+              <pattern id="stoneD" width="44" height="22" patternUnits="userSpaceOnUse">
+                <rect width="44" height="22" fill="#bcae8c" />
+                <path d="M0 .5H44M0 11.5H44M11 0V11M33 11V22" stroke="#a3946f" stroke-width="1.2" />
+              </pattern>
+              <clipPath id="chamber"><rect x="176" y="300" width="290" height="180" /></clipPath>
+            </defs>
+            <rect width="640" height="520" fill="url(#sky)" />
+            <circle cx="520" cy="92" r="48" fill="#f3d27a" opacity=".55" />
+            <circle cx="520" cy="92" r="30" fill="#f6dc8e" opacity=".7" />
+            <path d="M120 80l7 5 7-5M150 62l6 4 6-4" stroke="#4a5750" stroke-width="1.6" fill="none" stroke-linecap="round" />
+            <!-- far hills -->
+            <path d="M0 240 Q90 196 210 222 T430 206 T640 214 V330 H0Z" fill="#c3d0ad" />
+            <!-- aqueduct -->
+            <g opacity=".85">
+              <rect x="226" y="196" width="414" height="11" fill="#bba27c" />
+              <rect x="226" y="194" width="414" height="3" fill="#8f7a58" />
+              <g fill="#c6ae88">
+                <path d="M236 207h50v14q-25-18-50 0z" /><path d="M286 207h50v14q-25-18-50 0z" /><path d="M336 207h50v14q-25-18-50 0z" />
+                <path d="M386 207h50v14q-25-18-50 0z" /><path d="M436 207h50v14q-25-18-50 0z" /><path d="M486 207h50v14q-25-18-50 0z" />
+                <path d="M536 207h50v14q-25-18-50 0z" /><path d="M586 207h50v14q-25-18-50 0z" />
+                <rect x="231" y="207" width="9" height="70" /><rect x="281" y="207" width="9" height="70" /><rect x="331" y="207" width="9" height="70" />
+                <rect x="381" y="207" width="9" height="70" /><rect x="431" y="207" width="9" height="70" /><rect x="481" y="207" width="9" height="70" />
+                <rect x="531" y="207" width="9" height="70" /><rect x="581" y="207" width="9" height="70" /><rect x="631" y="207" width="9" height="70" />
+              </g>
+              <rect x="404" y="188" width="30" height="6" rx="1.5" fill="#2e5b4c" /><rect x="410" y="185" width="16" height="3" fill="#b3362b" />
+            </g>
+            <path d="M0 268 Q120 240 260 262 T520 252 T640 258 V330 H0Z" fill="#a9be8f" />
+            <!-- lockkeeper cottage -->
+            <g>
+              <rect x="44" y="262" width="96" height="58" fill="#efe4cb" stroke="#a89470" />
+              <path d="M36 264 L92 226 L148 264Z" fill="#a8442f" />
+              <path d="M36 264 L92 226 L148 264" fill="none" stroke="#7d2f21" stroke-width="2" />
+              <rect x="116" y="232" width="9" height="20" fill="#8a6a4a" />
+              <rect x="82" y="288" width="18" height="32" fill="#6e4a2a" />
+              <rect x="52" y="276" width="20" height="16" fill="#3f8a8c" stroke="#fff" stroke-width="2" />
+              <rect x="110" y="276" width="20" height="16" fill="#3f8a8c" stroke="#fff" stroke-width="2" />
+              <rect x="58" y="248" width="66" height="11" fill="#1d3d33" />
+              <text x="91" y="256.5" text-anchor="middle" font-family="Allerta Stencil, sans-serif" font-size="7.5" fill="#e2b33c" letter-spacing="1">ÉCLUSE Nº 7</text>
+              <circle cx="56" cy="322" r="4" fill="#b3362b" /><circle cx="64" cy="320" r="3.5" fill="#e2b33c" /><circle cx="130" cy="321" r="4" fill="#b3362b" />
+            </g>
+            <!-- plane trees -->
+            <g class="leafsway">
+              <path d="M214 322 C212 280 216 240 210 200" stroke="#cdbf98" stroke-width="16" fill="none" stroke-linecap="round" />
+              <ellipse cx="211" cy="290" rx="5" ry="8" fill="#98a07a" /><ellipse cx="215" cy="255" rx="4" ry="6" fill="#e9dfc2" /><ellipse cx="209" cy="226" rx="4" ry="7" fill="#98a07a" />
+              <circle cx="180" cy="168" r="42" fill="#5f8a4f" /><circle cx="236" cy="150" r="48" fill="#4f7a44" /><circle cx="206" cy="122" r="40" fill="#6f9a58" />
+              <circle cx="262" cy="190" r="30" fill="#5f8a4f" /><circle cx="160" cy="200" r="26" fill="#6f9a58" />
+              <circle cx="224" cy="118" r="18" fill="#86ad68" opacity=".8" /><circle cx="186" cy="150" r="14" fill="#86ad68" opacity=".7" />
+            </g>
+            <g class="leafsway" style="animation-delay:-3s">
+              <path d="M604 324 C606 280 600 250 606 214" stroke="#cdbf98" stroke-width="15" fill="none" stroke-linecap="round" />
+              <ellipse cx="604" cy="282" rx="4" ry="7" fill="#98a07a" /><ellipse cx="606" cy="246" rx="4" ry="6" fill="#e9dfc2" />
+              <circle cx="580" cy="178" r="40" fill="#4f7a44" /><circle cx="628" cy="160" r="44" fill="#5f8a4f" /><circle cx="600" cy="132" r="34" fill="#6f9a58" />
+              <circle cx="560" cy="210" r="24" fill="#6f9a58" /><circle cx="612" cy="128" r="16" fill="#86ad68" opacity=".8" />
+            </g>
+            <!-- grass + towpath -->
+            <rect x="0" y="314" width="640" height="14" fill="#8fae6e" />
+            <rect x="0" y="324" width="640" height="8" fill="#cbbb90" />
+            <!-- masonry -->
+            <rect x="0" y="330" width="640" height="190" fill="url(#stone)" />
+            <!-- far walls (above water) -->
+            <rect x="0" y="330" width="176" height="150" fill="url(#stoneD)" />
+            <rect x="176" y="330" width="290" height="150" fill="url(#stoneD)" />
+            <rect x="466" y="330" width="174" height="115" fill="url(#stoneD)" />
+            <!-- water: lower & upper pounds -->
+            <rect x="0" y="404" width="176" height="76" fill="url(#wat)" />
+            <rect x="466" y="352" width="174" height="93" fill="url(#wat)" />
+            <path class="ripple" d="M8 414H170M20 428H160" stroke="#a6d2cd" stroke-width="1.5" stroke-dasharray="14 16" opacity=".8" />
+            <path class="ripple" d="M474 362H632M490 378H620" stroke="#a6d2cd" stroke-width="1.5" stroke-dasharray="14 16" opacity=".8" />
+            <!-- staff gauge -->
+            <g>
+              <rect x="446" y="340" width="12" height="78" fill="#fbf7ec" stroke="#4a5750" stroke-width=".8" />
+              <path d="M446 346h7M446 352h10M446 358h7M446 364h10M446 370h7M446 376h10M446 382h7M446 388h10M446 394h7M446 400h10M446 406h7M446 412h10" stroke="#1f2b26" stroke-width="2" />
+            </g>
+            <!-- narrowboat (rises with the water) -->
+            <g class="lockboat">
+              <g class="smoke" fill="#e7e1d2"><circle cx="392" cy="282" r="5" /><circle cx="392" cy="282" r="5" /><circle cx="392" cy="282" r="5" /></g>
+              <rect x="389" y="288" width="7" height="20" fill="#1f2b26" /><rect x="388" y="292" width="9" height="2.5" fill="#e2b33c" /><rect x="388" y="300" width="9" height="2.5" fill="#e2b33c" />
+              <path d="M206 338 H432 Q446 340 442 352 L436 368 H214 Q204 362 206 352Z" fill="#1d3d33" />
+              <rect x="206" y="336" width="232" height="4" fill="#b3362b" />
+              <rect x="206" y="340" width="234" height="1.4" fill="#e2b33c" />
+              <rect x="244" y="308" width="166" height="29" fill="#2e5b4c" />
+              <rect x="240" y="304" width="174" height="5" rx="1.5" fill="#7a2a22" />
+              <rect x="300" y="313" width="70" height="18" fill="#b3362b" stroke="#e2b33c" stroke-width="1.6" />
+              <text x="335" y="325.5" text-anchor="middle" font-family="Playfair Display, serif" font-style="italic" font-weight="900" font-size="9.5" fill="#e2b33c">Rose &amp; Castle</text>
+              <circle cx="262" cy="322" r="5" fill="#cfe3df" stroke="#e2b33c" stroke-width="2" />
+              <circle cx="282" cy="322" r="5" fill="#cfe3df" stroke="#e2b33c" stroke-width="2" />
+              <circle cx="388" cy="322" r="5" fill="#cfe3df" stroke="#e2b33c" stroke-width="2" />
+              <path d="M228 314 l6 -6 6 6 -6 6z" fill="#e2b33c" />
+              <rect x="226" y="320" width="18" height="17" fill="#2e5b4c" /><rect x="229" y="323" width="12" height="9" fill="#b3362b" />
+              <path d="M210 330 Q196 318 186 324" stroke="#6e4a2a" stroke-width="3" fill="none" stroke-linecap="round" />
+              <circle cx="442" cy="350" r="5" fill="#8f6a3f" stroke="#6e4a2a" />
+              <circle cx="320" cy="301" r="3.5" fill="#b3362b" /><circle cx="327" cy="300" r="3" fill="#e2b33c" /><circle cx="334" cy="301" r="3.5" fill="#b3362b" />
+              <path d="M316 303h22" stroke="#5f8a4f" stroke-width="2" />
+            </g>
+            <!-- chamber water -->
+            <g clip-path="url(#chamber)">
+              <g class="lockwater">
+                <rect x="176" y="352" width="290" height="200" fill="url(#wat)" opacity=".86" />
+                <path class="ripple" d="M184 360H458M200 374H440" stroke="#a6d2cd" stroke-width="1.5" stroke-dasharray="14 16" opacity=".8" />
+              </g>
+            </g>
+            <!-- beds -->
+            <rect x="0" y="480" width="466" height="6" fill="#8a7a5a" />
+            <rect x="466" y="445" width="174" height="6" fill="#8a7a5a" />
+            <!-- lower mitre gate + balance beam -->
+            <g>
+              <rect x="170" y="318" width="11" height="164" fill="#6e4a2a" />
+              <path d="M170 340h11M170 370h11M170 400h11M170 430h11M170 460h11" stroke="#4d321b" stroke-width="1.4" />
+              <rect x="74" y="311" width="108" height="9" rx="2" fill="#8f6a3f" />
+              <rect x="74" y="311" width="16" height="9" rx="2" fill="#fbf7ec" /><rect x="74" y="311" width="5" height="9" rx="1" fill="#1f2b26" />
+              <rect x="176" y="296" width="5" height="16" fill="#1f2b26" /><circle cx="178.5" cy="296" r="4" fill="#1f2b26" />
+            </g>
+            <!-- upper mitre gate + balance beam -->
+            <g>
+              <rect x="462" y="318" width="11" height="129" fill="#6e4a2a" />
+              <path d="M462 345h11M462 375h11M462 405h11M462 432h11" stroke="#4d321b" stroke-width="1.4" />
+              <rect x="462" y="311" width="106" height="9" rx="2" fill="#8f6a3f" />
+              <rect x="552" y="311" width="16" height="9" rx="2" fill="#fbf7ec" /><rect x="563" y="311" width="5" height="9" rx="1" fill="#1f2b26" />
+              <rect x="463" y="296" width="5" height="16" fill="#1f2b26" /><circle cx="465.5" cy="296" r="4" fill="#1f2b26" />
+            </g>
+            <!-- copings & bollards -->
+            <rect x="150" y="326" width="22" height="4" fill="#fbf7ec" /><rect x="473" y="326" width="22" height="4" fill="#fbf7ec" />
+            <rect x="300" y="318" width="7" height="10" rx="2" fill="#1f2b26" /><rect x="380" y="318" width="7" height="10" rx="2" fill="#1f2b26" />
+            <!-- annotations -->
+            <g font-family="Caveat, cursive" font-size="17" fill="#5a3b20">
+              <text x="22" y="508">↑ lower pound · 下游</text>
+              <text x="236" y="508">↑ lock chamber · rise 2.4 m</text>
+              <text x="486" y="474">↑ upper pound · 上游</text>
+              <text x="40" y="458" font-size="16" fill="#f4eedd">mitre gates →</text>
+            </g>
+          </svg>
+          <div class="caption"><span>Fig. 1 — Écluse Nº 7, filling</span><span>waterline ↥ 2.4 m</span></div>
         </div>
-        <div class="pillar">
-          <h3>⚙️ 2. 船闸体验：全自动 vs 传统手摇</h3>
-          <p>带老人首选苏格兰、泰晤士河、比利时或加拿大里多运河（专职闸夫操作）；想带孩子体验机械乐趣首选英国窄船或米迪运河。</p>
-        </div>
-        <div class="pillar">
-          <h3>🛏️ 3. 6大3小（9人）选船黄金法则</h3>
-          <p>英国 70 尺 3 卧窄船、Le Boat 5星 Vision 3、Locaboat 1180FB、Les Canalous Tarpon 37 均可合法住 9–10 人；追求宽裕则选 4卧 Magnifique / Horizon 4。</p>
-        </div>
-        <div class="pillar">
-          <h3>🚲 4. 纤道骑行与免费停泊特权</h3>
-          <p>英国全线纤道、法国乡村水岸及美国伊利运河市政码头几乎全部免费停泊！甲板带上 3–4 辆自行车，随时骑去村庄买刚出炉的牛角包。</p>
-        </div>
+      </figure>
+    </div>
+    <div class="wrap">
+      <div class="ledger">
+        <div><small>Routes</small><b>20<i>条</i></b><span>全球顶级运河与内河房船航线</span></div>
+        <div><small>Licence</small><b>免船牌</b><span>95% 航线 30 分钟培训即可自驾</span></div>
+        <div><small>From</small><b>€290<i>起</i></b><span>6大3小（9人）整周分摊人均船租</span></div>
+        <div><small>Photos</small><b id="photoCount">—</b><span>Day 1–Day 8 逐日地标实景配图</span></div>
+        <div><small>Fleets</small><b>4<i>大船队</i></b><span>Le Boat / Locaboat / Nicols / 窄船</span></div>
       </div>
     </div>
   </section>
 
   <main class="wrap">
-    <!-- Boat Tiers Comparator -->
-    <section class="tiers-section">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;">
-        <h2 style="font-family:var(--serif);font-size:22px;color:var(--brass);">🛥️ 运河房船 4 大档次与代表船型横评（3卧 vs 4卧4卫 vs 顶奢全包酒店驳船）</h2>
-        <span style="font-size:12.5px;color:var(--muted);font-family:var(--mono);">基准：2027年6月初 · 8天7晚整船价格</span>
+    <!-- i. Rules -->
+    <section class="sec" id="rules">
+      <div class="sec-head">
+        <div class="sec-no">i.</div>
+        <div class="sec-kicker">Lock i · The Rules of the Towpath</div>
+        <h2>选线四律 <em>four things a lockkeeper checks</em></h2>
       </div>
-      <div id="tiers-container" class="tiers-grid"></div>
+      <div class="rules">
+        <article class="rule">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V18l6-6 6 6v22M28 40V14l6-6 6 6v26" fill="none" stroke="#6e4a2a" stroke-width="2.4"/><path d="M4 40h40" stroke="#3f8a8c" stroke-width="3"/><path d="M12 24h4M32 20h4" stroke="#b3362b" stroke-width="2"/></svg>
+          <div class="rn">01</div>
+          <h3>水岸世遗与古堡密度</h3>
+          <p>顶级运河绝非枯燥水渠：卡尔卡松双层城墙、温莎城堡、布鲁日钟楼、厄克特城堡与庞特卡萨尔特高空水桥皆可直接从船头仰望。</p>
+        </article>
+        <article class="rule">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="26" width="36" height="14" fill="#3f8a8c" opacity=".5"/><path d="M14 8v32M34 8v32" stroke="#6e4a2a" stroke-width="3.4"/><path d="M4 10h12M32 10h12" stroke="#1f2b26" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div class="rn">02</div>
+          <h3>船闸体验：全自动 vs 传统手摇</h3>
+          <p>带老人首选苏格兰、泰晤士河、比利时或加拿大里多运河（专职闸夫操作）；想带孩子体验机械乐趣首选英国窄船或米迪运河。</p>
+        </article>
+        <article class="rule">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30h40l-4 8H8z" fill="#1d3d33"/><rect x="10" y="20" width="28" height="10" fill="#2e5b4c"/><rect x="18" y="22" width="12" height="6" fill="#b3362b"/><circle cx="14" cy="25" r="2" fill="#e2b33c"/><circle cx="34" cy="25" r="2" fill="#e2b33c"/></svg>
+          <div class="rn">03</div>
+          <h3>6大3小（9人）选船黄金法则</h3>
+          <p>英国 70 尺 3 卧窄船、Le Boat 5星 Vision 3、Locaboat 1180FB、Les Canalous Tarpon 37 均可合法住 9–10 人；追求宽裕则选 4卧 Magnifique / Horizon 4。</p>
+        </article>
+        <article class="rule">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="13" cy="32" r="8" fill="none" stroke="#1f2b26" stroke-width="2.4"/><circle cx="35" cy="32" r="8" fill="none" stroke="#1f2b26" stroke-width="2.4"/><path d="M13 32l8-12h10l4 12M21 20l6 12" fill="none" stroke="#b3362b" stroke-width="2.4"/><path d="M4 44h40" stroke="#cbbb90" stroke-width="3" stroke-dasharray="4 3"/></svg>
+          <div class="rn">04</div>
+          <h3>纤道骑行与免费停泊特权</h3>
+          <p>英国全线纤道、法国乡村水岸及美国伊利运河市政码头几乎全部免费停泊！甲板带上 3–4 辆自行车，随时骑去村庄买刚出炉的牛角包。</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-      <input type="search" id="canal-search" class="search-box" placeholder="搜索运河、国家、古堡、船闸（如：米迪、卡尔卡松、尼斯湖、温莎、里多、窄船）..." oninput="renderCanals()" />
-      <div class="chip-group" id="region-chips">
-        <button class="chip active" onclick="setRegion('ALL', this)">全部 20</button>
-        <button class="chip" onclick="setRegion('法国四大王牌', this)">🇫🇷 法国王牌水道 (7)</button>
-        <button class="chip" onclick="setRegion('英伦与苏格兰', this)">🇬🇧 英伦与爱尔兰 (5)</button>
-        <button class="chip" onclick="setRegion('荷比意德欧陆', this)">🇪🇺 荷比意德欧陆 (4)</button>
-        <button class="chip" onclick="setRegion('北美与南半球/亚洲', this)">🌎 北美/澳洲/亚洲 (4)</button>
+    <!-- ii. Lock ladder -->
+    <section class="sec" id="ladder">
+      <div class="sec-head">
+        <div class="sec-no">ii.</div>
+        <div class="sec-kicker">Lock ii · The Lock Ladder</div>
+        <h2>水闸阶梯 <em>locks vs. distance, one week afloat</em></h2>
       </div>
-      <div class="chip-group" id="diff-chips">
-        <button class="chip active" onclick="setDiff('ALL', this)">全部难度</button>
-        <button class="chip" onclick="setDiff('新手零门槛', this)">新手零门槛 (专人开闸/少闸)</button>
-        <button class="chip" onclick="setDiff('初级休闲', this)">初级休闲</button>
+      <p class="sec-note" id="ladderNote">每过一座船闸，就是一次系缆、开闸、等水位的 15–30 分钟“团队体力活”。下图把 20 条航线 8 天往返的 <b>水闸数</b> 与 <b>里程</b> 放在同一张图上——越靠左上越“闸密”，越靠右下越适合躺平巡航。点击任一航线可直达对应日志条目。</p>
+      <div class="viz-grid">
+        <div class="panel">
+          <h3>水闸数 × 里程 散点图</h3>
+          <div class="ph-sub">each dot = one route · dashed lines = locks per 10 km</div>
+          <div id="scatter"></div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="panel">
+          <h3>Lock Ladder · 闸梯排行</h3>
+          <div class="ph-sub">every step is a lock — taller staircase, busier crew</div>
+          <div class="ladder" id="ladderList"></div>
+        </div>
       </div>
-      <select id="canal-sort" class="sort-select" onchange="renderCanals()">
-        <option value="rank">按综合排名 (Top 1 → 20)</option>
-        <option value="priceAsc">按 9人分摊人均从低到高</option>
-        <option value="locksAsc">按水闸数量从少到多 (最省力)</option>
-      </select>
-    </div>
+    </section>
 
-    <div id="canals-container" class="routes-grid"></div>
+    <!-- iii. Boat tiers -->
+    <section class="sec" id="boats">
+      <div class="sec-head">
+        <div class="sec-no">iii.</div>
+        <div class="sec-kicker">Lock iii · The Hire Fleet</div>
+        <h2>运河房船 4 大档次与代表船型横评 <em>3 cabins vs 4 cabins vs hotel barge</em></h2>
+      </div>
+      <p class="sec-note">基准：2027 年 6 月初 · 8 天 7 晚整船价格。色条为 9 人分摊人均周租在对数刻度（€150 → €20,000）上的区间位置。</p>
+      <div class="tiers" id="tiers"></div>
+    </section>
+
+    <!-- iv. Routes -->
+    <section class="sec" id="routes">
+      <div class="sec-head">
+        <div class="sec-no">iv.</div>
+        <div class="sec-kicker">Lock iv · The Log Entries</div>
+        <h2>二十条航道日志 <em>ranked, measured, moored</em></h2>
+      </div>
+      <div class="filter-bar" role="search">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="q" placeholder="搜索运河、国家、古堡、船闸（如：米迪、卡尔卡松、尼斯湖、温莎、里多、窄船）" aria-label="搜索航线" />
+        </label>
+        <div class="seg" id="regionSeg" aria-label="地区"></div>
+        <div class="seg" id="diffSeg" aria-label="难度"></div>
+        <select id="sort" class="sort" aria-label="排序">
+          <option value="rank">排序：综合排名</option>
+          <option value="priceAsc">排序：9人人均最低</option>
+          <option value="locksAsc">排序：水闸最少 (最省力)</option>
+          <option value="kmDesc">排序：里程最长</option>
+        </select>
+        <span class="tally" id="tally"></span>
+      </div>
+      <div class="routes" id="routesList"></div>
+    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      <p>Waterway Lockkeeper's Log · Global Top 20 Canal & Inland Waterway Atlas · 包含 2027 年 6 月初实测船队报价与 176 张实景地标路书</p>
+      <div class="foot-grid">
+        <div>
+          <div class="sig">Lockkeeper's Log</div>
+          <p>Global Top 20 Canal &amp; Inland Waterway Atlas · 2027 年 6 月初实测船队报价、水闸与里程对照，以及逐日实景停泊路书。慢于步行，快于想象。</p>
+        </div>
+        <nav aria-label="页脚榜单切换">
+          <a href="index.html">图鉴总览</a>
+          <a href="beaches.html">海岸度假 145</a>
+          <a href="cruises.html">奢华邮轮 50</a>
+          <a href="canals.html" aria-current="page">运河房船 20</a>
+          <a href="sailing.html">帆船航线 20</a>
+          <a href="rv.html">房车自驾 20</a>
+          <a href="shows.html">驻场大秀 100</a>
+          <a href="themeparks.html">主题乐园 100</a>
+          <a href="ski.html">全球雪场 100</a>
+          <a href="aquariums.html">水族馆 35</a>
+          <a href="zoos.html">动物园 40</a>
+          <a href="museums.html">重器博物馆 100</a>
+        </nav>
+      </div>
+      <div class="hand">— signed at the lock-side, gates closed, kettle on.</div>
+      <div class="foot-small"><span>Destination Atlas · Canals &amp; Houseboats</span><span>照片：本地实景图库与 Wikimedia Commons</span></div>
     </div>
   </footer>
 
   <script src="data_canals_top20.js"></script>
+  <script src="shared_widgets.js" defer></script>
   <script>
-    let activeRegion = 'ALL';
-    let activeDiff = 'ALL';
+    (function () {
+      var ROUTES = (window.CANAL_ROUTES_TOP20 || []).slice();
+      var TIERS = window.CANAL_BOAT_TIERS_DB || [];
 
-    function renderTiers() {
-      const tiers = window.CANAL_BOAT_TIERS_DB || [];
-      document.getElementById('tiers-container').innerHTML = tiers.map(t => `
-        <div class="tier-box">
-          <h4>${t.tierCode}</h4>
-          <div style="font-size:12px;color:var(--text);">${t.config}</div>
-          <div class="t-price">${t.weeklyPriceRange} <small style="color:var(--muted);">(${t.perPerson9Pax})</small></div>
-          <div class="t-models">${t.models}</div>
-          <p>${t.features}</p>
-        </div>
-      `).join('');
-    }
+      var REGIONS = [
+        { k: "ALL", label: "全部" },
+        { k: "法国四大王牌", label: "🇫🇷 法国" },
+        { k: "英伦与苏格兰", label: "🇬🇧 英伦·爱尔兰" },
+        { k: "荷比意德欧陆", label: "🇪🇺 欧陆" },
+        { k: "北美与南半球/亚洲", label: "🌏 北美·澳·亚" }
+      ];
+      var REGION_COLOR = { "法国四大王牌": "#2e5b4c", "英伦与苏格兰": "#b3362b", "荷比意德欧陆": "#c4693f", "北美与南半球/亚洲": "#3f8a8c" };
+      var DIFFS = [
+        { k: "ALL", label: "全部难度" },
+        { k: "新手", label: "新手零门槛" },
+        { k: "初级", label: "初级休闲" },
+        { k: "中级", label: "中级进阶" }
+      ];
+      var state = { region: "ALL", diff: "ALL", q: "", sort: "rank" };
 
-    function setRegion(r, btn) {
-      activeRegion = r;
-      document.querySelectorAll('#region-chips .chip').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      renderCanals();
-    }
+      var PH = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">' +
+        '<rect width="400" height="260" fill="#e8dfc4"/><circle cx="300" cy="70" r="30" fill="#f3d27a" opacity=".6"/>' +
+        '<path d="M0 150 Q100 120 200 140 T400 132 V260 H0Z" fill="#a9be8f"/>' +
+        '<path d="M120 180 Q200 90 280 180Z" fill="#c6ae88"/><path d="M146 180 Q200 120 254 180Z" fill="#2c6a6d"/>' +
+        '<rect y="178" width="400" height="82" fill="#3f8a8c"/><path d="M20 200H180M220 214H380" stroke="#a6d2cd" stroke-width="3" stroke-dasharray="18 14"/>' +
+        '<rect x="150" y="168" width="100" height="14" rx="3" fill="#1d3d33"/><rect x="166" y="158" width="64" height="11" fill="#b3362b"/>' +
+        '<text x="200" y="244" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="16" fill="#f4eedd">Lockkeeper\u2019s Log</text></svg>');
+      window.__canalImgFail = function (el) { el.onerror = null; el.src = PH; };
+      var ONERR = ' onerror="__canalImgFail(this)"';
 
-    function setDiff(d, btn) {
-      activeDiff = d;
-      document.querySelectorAll('#diff-chips .chip').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      renderCanals();
-    }
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; });
+      }
+      function md(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); }
+      function firstInt(str) {
+        if (!str) return 99999;
+        var m = String(str).replace(/,/g, "").match(/(\d+)/);
+        return m ? parseInt(m[1], 10) : 99999;
+      }
+      function num(v) { var n = Number(v); return isFinite(n) ? n : null; }
+      function diffLevel(d) { d = d || ""; return d.indexOf("新手") > -1 ? 1 : d.indexOf("初级") > -1 ? 2 : 3; }
+      function diffShort(d) { return (d || "").replace(/[（(].*$/, ""); }
+      function shortEn(r) { return (r.nameEn || r.name || "").split(" (")[0]; }
+      function tierInfo(t) {
+        if (t === "T0") return { cls: "", word: "殿堂" };
+        if (t === "T1") return { cls: "t1", word: "王牌" };
+        return { cls: "t15", word: "精品" };
+      }
+      function density(r) { var l = num(r.lockCount), k = num(r.distanceKm); return l != null && k ? (l / k * 10) : null; }
 
-    function parseFirstInt(str) {
-      if (!str) return 99999;
-      const m = String(str).replace(/,/g, '').match(/(\d+)/);
-      return m ? parseInt(m[1], 10) : 99999;
-    }
+      /* ---- photo count ---- */
+      var photos = 0;
+      ROUTES.forEach(function (r) { (r.itinerary8Days || []).forEach(function (d) { photos += (d.photos || []).length; }); });
+      document.getElementById("photoCount").innerHTML = photos + "<i>张</i>";
 
-    function toggleItinerary(id) {
-      const el = document.getElementById('itin-' + id);
-      if (el) el.classList.toggle('open');
-    }
+      /* ---- stairs svg ---- */
+      function stairs(n, w, h, max) {
+        n = Math.max(0, n | 0); max = max || 28;
+        if (!n) return '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" aria-hidden="true"><rect x="0" y="' + (h - 5) + '" width="' + w + '" height="5" fill="#3f8a8c" opacity=".7"/></svg>';
+        var sw = w / max, sh = (h - 4) / max, d = "M0 " + h, x = 0, y = h;
+        for (var i = 0; i < n; i++) { y = h - 3 - (i + 1) * sh; d += " V" + y.toFixed(2) + " H" + (x + sw).toFixed(2); x += sw; }
+        d += " V" + h + " Z";
+        var gates = "";
+        for (var j = 0; j < n; j++) { var gx = (j + 1) * sw; gates += '<rect x="' + (gx - 0.6).toFixed(2) + '" y="' + (h - 3 - (j + 1) * sh - 2).toFixed(2) + '" width="1.2" height="' + ((j + 1) * sh + 2).toFixed(2) + '" fill="#6e4a2a" opacity=".55"/>'; }
+        return '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" aria-hidden="true"><path d="' + d + '" fill="url(#ladderGrad)"/>' + gates + '</svg>';
+      }
+      var gradDefs = document.createElement("div");
+      gradDefs.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";
+      gradDefs.innerHTML = '<svg width="0" height="0" aria-hidden="true"><defs><linearGradient id="ladderGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6aa9a6"/><stop offset="1" stop-color="#2a6669"/></linearGradient></defs></svg>';
+      document.body.appendChild(gradDefs);
 
-    function renderCanals() {
-      const q = (document.getElementById('canal-search').value || '').trim().toLowerCase();
-      const sortBy = document.getElementById('canal-sort').value;
-
-      let list = (window.CANAL_ROUTES_TOP20 || []).filter(r => {
-        if (activeRegion !== 'ALL' && r.regionTag !== activeRegion) return false;
-        if (activeDiff !== 'ALL' && r.difficulty !== activeDiff) return false;
-        if (!q) return true;
-        const hay = [r.name, r.nameEn, r.country, r.basePort, r.bestFleetModels, ...(r.highlights || [])].join(' ').toLowerCase();
-        return hay.includes(q);
-      });
-
-      if (sortBy === 'priceAsc') {
-        list.sort((a, b) => parseFirstInt(a.perPerson9PaxEUR) - parseFirstInt(b.perPerson9PaxEUR));
-      } else if (sortBy === 'locksAsc') {
-        list.sort((a, b) => (a.lockCount ?? 99) - (b.lockCount ?? 99));
-      } else {
-        list.sort((a, b) => a.rank - b.rank);
+      /* ---- gauge svg ---- */
+      function gauge(level) {
+        var cx = 60, cy = 60, r = 44;
+        function pt(a, rr) { var rad = a * Math.PI / 180; return [(cx + rr * Math.cos(rad)).toFixed(1), (cy - rr * Math.sin(rad)).toFixed(1)]; }
+        function arc(a0, a1, col) { var p0 = pt(a0, r), p1 = pt(a1, r); return '<path d="M' + p0[0] + ' ' + p0[1] + ' A' + r + ' ' + r + ' 0 0 1 ' + p1[0] + ' ' + p1[1] + '" stroke="' + col + '" stroke-width="10" fill="none"/>'; }
+        var ang = level === 1 ? 150 : level === 2 ? 90 : 30, tip = pt(ang, r - 8);
+        var ticks = "";
+        for (var a = 0; a <= 180; a += 15) { var t0 = pt(a, r + 7), t1 = pt(a, r + (a % 60 === 0 ? 12 : 10)); ticks += '<line x1="' + t0[0] + '" y1="' + t0[1] + '" x2="' + t1[0] + '" y2="' + t1[1] + '" stroke="#6e4a2a" stroke-width="1.2"/>'; }
+        return '<svg viewBox="0 0 120 72" role="img" aria-label="难度刻度 ' + level + ' / 3">' +
+          '<path d="M6 62 A54 54 0 0 1 114 62" fill="#fbf7ec" stroke="#8f6a3f" stroke-width="2"/>' +
+          arc(180, 121, "#5f8a4f") + arc(119, 61, "#e2b33c") + arc(59, 0, "#b3362b") + ticks +
+          '<line x1="60" y1="60" x2="' + tip[0] + '" y2="' + tip[1] + '" stroke="#1f2b26" stroke-width="3" stroke-linecap="round"/>' +
+          '<circle cx="60" cy="60" r="6" fill="#1d3d33" stroke="#e2b33c" stroke-width="2"/>' +
+          '<text x="14" y="71" font-size="8" fill="#4a5750" font-family="sans-serif">静水</text><text x="94" y="71" font-size="8" fill="#4a5750" font-family="sans-serif">进阶</text></svg>';
       }
 
-      document.getElementById('canals-container').innerHTML = list.map(r => {
-        const hasItin = r.itinerary8Days && r.itinerary8Days.length > 0;
-        const itinHtml = hasItin ? `
-          <div id="itin-${r.id}" class="itinerary-drawer">
-            <h4 style="color:var(--brass);font-family:var(--serif);font-size:18px;">📖 ${r.name} · 8天7晚 [Day 1 – Day 8] 逐日停泊与双图精确路书</h4>
-            <div class="day-cards-grid">
-              ${r.itinerary8Days.map(d => {
-                const p1 = d.photos && d.photos[0] ? d.photos[0] : null;
-                const p2 = d.photos && d.photos[1] ? d.photos[1] : p1;
-                return `
-                  <div class="day-photo-card">
-                    ${p1 ? `
-                    <div class="day-dual-imgs">
-                      <figure>
-                        <img src="${p1.src}" alt="${p1.caption}" loading="lazy" />
-                        <figcaption>${p1.caption}</figcaption>
-                      </figure>
-                      ${p2 ? `
-                      <figure>
-                        <img src="${p2.src}" alt="${p2.caption}" loading="lazy" />
-                        <figcaption>${p2.caption}</figcaption>
-                      </figure>` : ''}
-                    </div>` : ''}
-                    <div class="day-photo-body">
-                      <h5>Day ${d.day} · ${d.title}</h5>
-                      <p>${d.desc}</p>
-                    </div>
-                  </div>
-                `;
-              }).join('')}
-            </div>
-          </div>
-        ` : '';
+      /* ---- ii. scatter + ladder ---- */
+      function renderScatter() {
+        var W = 640, H = 420, L = 52, R = 18, T = 18, B = 46;
+        var kms = ROUTES.map(function (r) { return num(r.distanceKm); }).filter(function (v) { return v != null; });
+        var kMin = Math.floor((Math.min.apply(null, kms) - 10) / 10) * 10, kMax = Math.ceil((Math.max.apply(null, kms) + 8) / 10) * 10;
+        var lMax = 30;
+        function X(k) { return L + (k - kMin) / (kMax - kMin) * (W - L - R); }
+        function Y(l) { return H - B - l / lMax * (H - T - B); }
+        var g = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="20 条航线水闸数与里程散点图">';
+        g += '<rect x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="#f4eedd"/>';
+        g += '<rect x="' + L + '" y="' + Y(30) + '" width="' + (X(kMin + (kMax - kMin) / 2) - L) + '" height="' + (Y(15) - Y(30)) + '" fill="rgba(179,54,43,.06)"/>';
+        g += '<rect x="' + X(kMin + (kMax - kMin) / 2) + '" y="' + Y(15) + '" width="' + (W - R - X(kMin + (kMax - kMin) / 2)) + '" height="' + (Y(0) - Y(15)) + '" fill="rgba(63,138,140,.08)"/>';
+        for (var l = 0; l <= 30; l += 5) g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(l) + '" y2="' + Y(l) + '" stroke="rgba(31,43,38,.1)"/><text x="' + (L - 8) + '" y="' + (Y(l) + 4) + '" text-anchor="end" font-size="11" fill="#4a5750" font-family="Allerta Stencil, sans-serif">' + l + '</text>';
+        for (var k = kMin; k <= kMax; k += 10) g += '<line y1="' + T + '" y2="' + (H - B) + '" x1="' + X(k) + '" x2="' + X(k) + '" stroke="rgba(31,43,38,.07)"/><text x="' + X(k) + '" y="' + (H - B + 17) + '" text-anchor="middle" font-size="11" fill="#4a5750" font-family="Allerta Stencil, sans-serif">' + k + '</text>';
+        [1, 2].forEach(function (dpk) {
+          var x2 = Math.min(kMax, lMax / dpk * 10), y2 = x2 * dpk / 10;
+          var x1 = kMin, y1 = kMin * dpk / 10;
+          g += '<line x1="' + X(x1) + '" y1="' + Y(y1) + '" x2="' + X(x2) + '" y2="' + Y(y2) + '" stroke="#8f6a3f" stroke-dasharray="5 5" stroke-width="1.2"/>';
+          g += '<text x="' + (X(x2) - 4) + '" y="' + (Y(y2) - 6) + '" text-anchor="end" font-family="Caveat, cursive" font-size="16" fill="#6e4a2a">' + dpk + ' 闸 / 10 km</text>';
+        });
+        g += '<text x="' + (L + 10) + '" y="' + (T + 22) + '" font-family="Caveat, cursive" font-size="19" fill="#b3362b">闸密 · 团队体力活</text>';
+        g += '<text x="' + (W - R - 10) + '" y="' + (H - B - 12) + '" text-anchor="end" font-family="Caveat, cursive" font-size="19" fill="#2c6a6d">长航 · 躺平巡航</text>';
+        g += '<text x="' + ((L + W - R) / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="12" fill="#1f2b26">8 天往返里程 (km) →</text>';
+        g += '<text transform="translate(14 ' + ((T + H - B) / 2) + ') rotate(-90)" text-anchor="middle" font-size="12" fill="#1f2b26">途经水闸数 (座) →</text>';
+        var seen = {};
+        ROUTES.slice().sort(function (a, b) { return b.rank - a.rank; }).forEach(function (r) {
+          var k = num(r.distanceKm), lc = num(r.lockCount); if (k == null || lc == null) return;
+          var key = k + "_" + lc, off = (seen[key] = (seen[key] || 0) + 1) - 1;
+          var cx = X(k) + off * 9, cy = Y(lc) - off * 9, col = REGION_COLOR[r.regionTag] || "#4a5750";
+          g += '<g class="dot" data-goto="' + esc(r.id) + '"><title>#' + r.rank + ' ' + esc(r.name) + ' — ' + lc + ' 闸 / ' + k + ' km</title>' +
+            '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="12" fill="' + col + '" stroke="#fbf7ec" stroke-width="2"/>' +
+            '<text x="' + cx.toFixed(1) + '" y="' + (cy + 4).toFixed(1) + '" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Playfair Display, serif">' + r.rank + '</text></g>';
+        });
+        g += '</svg>';
+        document.getElementById("scatter").innerHTML = g;
+        document.getElementById("legend").innerHTML = REGIONS.slice(1).map(function (x) { return '<span><i style="background:' + REGION_COLOR[x.k] + '"></i>' + esc(x.label) + '</span>'; }).join("");
+      }
+      function renderLadder() {
+        var list = ROUTES.slice().sort(function (a, b) { return (b.lockCount || 0) - (a.lockCount || 0) || a.rank - b.rank; });
+        var max = Math.max.apply(null, ROUTES.map(function (r) { return r.lockCount || 0; })) || 28;
+        document.getElementById("ladderList").innerHTML = list.map(function (r) {
+          var dn = density(r);
+          return '<div class="lad-row" data-goto="' + esc(r.id) + '" title="' + esc(r.name) + '">' +
+            '<span class="pl">' + r.rank + '</span>' +
+            '<span class="nm">' + esc(shortEn(r)) + '</span>' +
+            stairs(r.lockCount || 0, 280, 26, max) +
+            '<span class="v">' + (r.lockCount || 0) + ' 闸<small>' + (dn != null ? dn.toFixed(1) + ' /10km' : '') + '</small></span></div>';
+        }).join("");
+        var total = ROUTES.reduce(function (s, r) { return s + (r.lockCount || 0); }, 0);
+        var km = ROUTES.reduce(function (s, r) { return s + (r.distanceKm || 0); }, 0);
+        document.getElementById("ladderNote").insertAdjacentHTML("beforeend", ' 全部 20 条航线合计 <b>' + total + ' 座船闸 · ' + km.toLocaleString("en-US") + ' km</b>。');
+      }
+      document.addEventListener("click", function (e) {
+        var t = e.target.closest("[data-goto]"); if (!t) return;
+        var id = t.getAttribute("data-goto");
+        var el = document.getElementById("route-" + id);
+        if (!el) { state.region = "ALL"; state.diff = "ALL"; state.q = ""; document.getElementById("q").value = ""; syncSeg(); renderRoutes(); el = document.getElementById("route-" + id); }
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-        return `
-        <article class="route-card">
-          <div class="rc-top">
-            <div class="rc-media">
-              <img src="${r.coverImage}" alt="${r.name}" loading="lazy" />
-              <span class="rc-rank-badge">#${r.rank} · ${r.tier}</span>
-              <span class="rc-region-badge">${r.country} · ${r.difficulty}</span>
-            </div>
-            <div class="rc-content">
-              <div>
-                <div class="rc-header">
-                  <div>
-                    <h2 class="rc-title">${r.name}</h2>
-                    <div class="rc-sub">${r.nameEn} ｜ 📍 基地：${r.basePort}</div>
-                  </div>
-                  <div class="rc-price-orb">
-                    <b>${r.perPerson9PaxEUR}</b>
-                    <small>9人合租整周船租人均</small>
-                  </div>
-                </div>
+      /* ---- iii. tiers ---- */
+      function renderTiers() {
+        var lo = Math.log(150), hi = Math.log(20000);
+        document.getElementById("tiers").innerHTML = TIERS.map(function (t, i) {
+          var code = String(t.tierCode || ""), parts = code.split(" · ");
+          var letter = (parts[0] || "").replace("档", ""), name = parts.slice(1).join(" · ");
+          var stars = (name.match(/\(([^)]*★[^)]*)\)/) || [])[1] || (i === 3 ? "Hotel Barge" : "");
+          name = name.replace(/\s*\([^)]*\)\s*$/, "");
+          var nums = String(t.perPerson9Pax || "").replace(/,/g, "").match(/\d+/g) || [];
+          var a = nums[0] ? +nums[0] : null, b = nums[1] ? +nums[1] : a;
+          var bar = "";
+          if (a) {
+            var l = (Math.log(a) - lo) / (hi - lo) * 100, rr = (Math.log(b) - lo) / (hi - lo) * 100;
+            bar = '<div class="scale"><div class="track"><div class="rng" style="left:' + l.toFixed(1) + '%;width:' + Math.max(2, rr - l).toFixed(1) + '%"></div></div><div class="ax"><span>€150</span><span>€1k</span><span>€5k</span><span>€20k</span></div></div>';
+          }
+          return '<article class="tier' + (i === 3 ? ' lux' : '') + '">' +
+            '<div class="tier-head"><div class="tier-letter">' + esc(letter) + '</div><div class="tier-name">' + esc(name) + '</div>' + (stars ? '<span class="tier-stars">' + esc(stars) + '</span>' : '') + '</div>' +
+            '<div class="tier-body">' +
+              '<div class="tier-cfg">🛏️ ' + esc(t.config) + '</div>' +
+              '<div class="tier-price">' + esc(t.weeklyPriceRange) + '</div>' +
+              (t.perPerson9Pax ? '<div><span class="tier-pp">9 人分摊 ' + esc(t.perPerson9Pax) + '</span></div>' : '') +
+              '<div class="tier-models">' + esc(t.models) + '</div>' +
+              '<p>' + esc(t.features) + '</p>' + bar +
+            '</div></article>';
+        }).join("");
+      }
 
-                <div class="rc-specs">
-                  <div class="rc-spec"><span>驾照门槛</span><b>${r.licenseRequired}</b></div>
-                  <div class="rc-spec"><span>8天往返里程</span><b>${r.distanceKm} km</b></div>
-                  <div class="rc-spec"><span>途经水闸数</span><b>${r.lockCount} 座 (${r.lockType.split(' ')[0]})</b></div>
-                  <div class="rc-spec"><span>日均开船时长</span><b>${r.dailyCruiseHours}</b></div>
-                </div>
+      /* ---- iv. filters ---- */
+      function count(fn) { return ROUTES.filter(fn).length; }
+      function buildSeg() {
+        document.getElementById("regionSeg").innerHTML = REGIONS.map(function (x) {
+          var n = x.k === "ALL" ? ROUTES.length : count(function (r) { return r.regionTag === x.k; });
+          return '<button type="button" data-k="' + esc(x.k) + '" aria-pressed="false">' + esc(x.label) + ' ' + n + '</button>';
+        }).join("");
+        document.getElementById("diffSeg").innerHTML = DIFFS.map(function (x) {
+          return '<button type="button" data-k="' + esc(x.k) + '" aria-pressed="false">' + esc(x.label) + '</button>';
+        }).join("");
+        syncSeg();
+        document.getElementById("regionSeg").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; state.region = b.getAttribute("data-k"); syncSeg(); renderRoutes(); });
+        document.getElementById("diffSeg").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; state.diff = b.getAttribute("data-k"); syncSeg(); renderRoutes(); });
+        document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); renderRoutes(); });
+        document.getElementById("sort").addEventListener("change", function (e) { state.sort = e.target.value; renderRoutes(); });
+      }
+      function syncSeg() {
+        document.querySelectorAll("#regionSeg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-k") === state.region)); });
+        document.querySelectorAll("#diffSeg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-k") === state.diff)); });
+      }
 
-                <div class="price-compare-bar">
-                  <div class="pc-item"><small>🛏️ 3卧室船型周租 (2027年6月初)</small><strong>${r.price3CabinsEUR}</strong></div>
-                  <div class="pc-item"><small>🛏️ 4卧室船型周租 (8-10人宽裕)</small><strong>${r.price4CabinsEUR}</strong></div>
-                  <div class="pc-item"><small>🛥️ 首选船队与主力船型</small><strong style="color:var(--mint);font-size:12px;">${r.bestFleetModels}</strong></div>
-                </div>
+      function splitTitle(t) {
+        t = String(t || "");
+        var m = t.match(/^(.*?)[（(]([^（）()]*)[）)]\s*$/);
+        if (!m) return { main: t, meta: [] };
+        return { main: m[1].trim(), meta: m[2].split(/[，,、]/).map(function (s) { return s.trim(); }).filter(Boolean) };
+      }
+      function metaChip(s) {
+        var cls = /闸/.test(s) ? "lk" : /夜宿|过夜/.test(s) ? "nt" : "";
+        return '<span' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(s) + '</span>';
+      }
 
-                <ul class="rc-highlights">
-                  ${(r.highlights || []).map(h => `<li>${h}</li>`).join('')}
-                </ul>
+      function itinerary(r) {
+        var days = r.itinerary8Days || [];
+        if (!days.length) return "";
+        return '<div class="itin" id="itin-' + esc(r.id) + '">' +
+          '<div class="itin-head"><h4>📖 ' + esc(r.name) + ' · 8天7晚逐日停泊路书</h4><span>along the towpath, Day 1 → Day ' + days.length + '</span></div>' +
+          '<div class="towpath">' + days.map(function (d) {
+            var ps = (d.photos || []).filter(function (p) { return p && p.src; });
+            var p1 = ps[0], p2 = ps[1] || null;
+            var t = splitTitle(d.title);
+            return '<article class="day">' +
+              '<div class="bollard"><span><small>DAY</small><b>' + esc(d.day) + '</b></span></div>' +
+              (p1 ? '<div class="day-imgs">' +
+                '<figure><img src="' + esc(p1.src) + '" alt="' + esc(p1.caption) + '" loading="lazy" decoding="async"' + ONERR + ' /><figcaption>' + esc(p1.caption) + '</figcaption></figure>' +
+                (p2 ? '<figure><img src="' + esc(p2.src) + '" alt="' + esc(p2.caption) + '" loading="lazy" decoding="async"' + ONERR + ' /><figcaption>' + esc(p2.caption) + '</figcaption></figure>' : '') +
+              '</div>' : '') +
+              '<div class="day-txt"><h5>' + esc(t.main) + '</h5>' +
+                (t.meta.length ? '<div class="day-meta">' + t.meta.map(metaChip).join("") + '</div>' : '') +
+                '<p>' + md(d.desc) + '</p></div>' +
+            '</article>';
+          }).join("") + '</div></div>';
+      }
 
-                <div class="rc-tip">💡 <strong>水闸与停泊锦囊：</strong>${r.mooringTip}</div>
-              </div>
+      function card(r) {
+        var ti = tierInfo(r.tier), lvl = diffLevel(r.difficulty), dn = density(r);
+        var hasItin = (r.itinerary8Days || []).length > 0;
+        var nPhotos = 0; (r.itinerary8Days || []).forEach(function (d) { nPhotos += (d.photos || []).length; });
+        var map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(shortEn(r) + " " + (r.basePort || "").split("/")[0]);
+        var hasCoords = num(r.lat) != null && num(r.lon) != null;
+        return '<article class="route" id="route-' + esc(r.id) + '" data-dest-id="canal-' + esc(r.id) + '" data-name="' + esc(r.name) + '"' +
+          (hasCoords ? ' data-lat="' + r.lat + '" data-lon="' + r.lon + '"' : '') + '>' +
+          '<div class="rt">' +
+            '<div class="rt-media">' +
+              '<img src="' + esc(r.coverImage) + '" alt="' + esc(r.name) + '" loading="lazy" decoding="async"' + ONERR + ' />' +
+              '<div class="plaque"><span class="dm"></span><b><small>Nº</small>' + r.rank + '</b><span class="dm"></span></div>' +
+              '<div class="stamp ' + ti.cls + '"><span><b>' + esc(r.tier) + '</b><span>' + ti.word + '</span></span></div>' +
+              '<div class="rt-place"><span class="c">' + esc(r.country) + ' · ' + esc(shortEn(r)) + '</span><span class="d">' + esc(diffShort(r.difficulty)) + '</span></div>' +
+            '</div>' +
+            '<div class="rt-body">' +
+              '<div class="rt-kick"><span>Log entry Nº ' + String(r.rank).padStart(2, "0") + '</span><span>' + esc((REGIONS.filter(function (x) { return x.k === r.regionTag; })[0] || {}).label || r.regionTag) + '</span></div>' +
+              '<div class="rt-head"><div><h3>' + esc(r.name) + '</h3><div class="rt-en">' + esc(r.nameEn) + '</div><div class="rt-base">📍 基地：' + esc(r.basePort) + '</div></div>' +
+                '<div class="fee"><small>MOORING TICKET</small><b>' + esc(String(r.perPerson9PaxEUR || "").split("/")[0].trim()) + '</b><span>9 人合租整周 · 人均</span></div></div>' +
+              '<div class="metrics">' +
+                '<div><span>8天往返里程</span><b>' + (num(r.distanceKm) != null ? r.distanceKm : "—") + '<small>km</small></b></div>' +
+                '<div><span>途经水闸</span><b>' + (num(r.lockCount) != null ? r.lockCount : "—") + '<small>座</small></b></div>' +
+                '<div><span>闸密度</span><b>' + (dn != null ? dn.toFixed(1) : "—") + '<small>闸/10km</small></b></div>' +
+                '<div><span>日均开船</span><b>' + esc(String(r.dailyCruiseHours || "—").split(" ")[0]) + '<small>h/天</small></b></div>' +
+                '<div class="lic"><span>驾照门槛</span><b>' + esc(r.licenseRequired) + '</b></div>' +
+              '</div>' +
+              '<div class="gauges"><div><div class="lbl"><span>Lock ladder · 本线 ' + (r.lockCount || 0) + ' 级闸梯</span><b>' + (r.lockCount ? 'rise &amp; fall ×' + r.lockCount : '零水闸 · 一马平川') + '</b></div>' + stairs(r.lockCount || 0, 560, 40, 28) + '</div>' +
+                '<div class="gauge-box">' + gauge(lvl) + '<div class="gl">' + esc(diffShort(r.difficulty)) + '</div></div></div>' +
+              '<div class="locktype"><i>LOCK TYPE</i><span>' + esc(r.lockType) + '</span></div>' +
+              '<div class="prices">' +
+                '<div><small>🛏️ 3卧室船型周租 (2027年6月初)</small><b>' + esc(r.price3CabinsEUR) + '</b></div>' +
+                '<div><small>🛏️ 4卧室船型周租 (8-10人宽裕)</small><b>' + esc(r.price4CabinsEUR) + '</b></div>' +
+                '<div class="fleet"><small>🛥️ 首选船队与主力船型</small><b>' + esc(r.bestFleetModels) + '</b></div>' +
+              '</div>' +
+              '<ul class="hl">' + (r.highlights || []).map(function (h) { return '<li>' + md(h) + '</li>'; }).join("") + '</ul>' +
+              (r.mooringTip ? '<div class="tip"><b class="h">Lockkeeper\u2019s tip ·</b>' + md(r.mooringTip) + '</div>' : '') +
+              '<div class="shared-slot"></div>' +
+              '<div class="rt-foot">' +
+                (hasItin ? '<button type="button" class="btn-log" data-itin="' + esc(r.id) + '" aria-expanded="false">📖 展开 8天7晚 逐日停泊与实景双图路书 (' + nPhotos + ' 张实景图)</button>' : '<span class="free-loop">✨ 经典 7 晚自由停泊环线 — 随心系缆</span>') +
+                '<a class="maplink" href="' + map + '" target="_blank" rel="noopener">在 Google 地图上查看基地 ↗</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>' + itinerary(r) +
+        '</article>';
+      }
 
-              <div class="rc-actions">
-                <span style="font-size:12px;color:var(--muted);font-family:var(--mono);">⚙️ 水闸类型：${r.lockType}</span>
-                ${hasItin ? `<button class="btn-drawer" onclick="toggleItinerary('${r.id}')">📖 展开 8天7晚 逐日停泊与实景双图路书 (${r.itinerary8Days.length * 2}张实景图)</button>` : `<span style="font-size:12px;color:var(--brass);">✨ 经典 7 晚自由停泊环线</span>`}
-              </div>
-            </div>
-          </div>
-          ${itinHtml}
-        </article>`;
-      }).join('');
-    }
+      function renderRoutes() {
+        var q = state.q;
+        var list = ROUTES.filter(function (r) {
+          if (state.region !== "ALL" && r.regionTag !== state.region) return false;
+          if (state.diff !== "ALL" && (r.difficulty || "").indexOf(state.diff) !== 0) return false;
+          if (!q) return true;
+          var hay = [r.name, r.nameEn, r.country, r.basePort, r.bestFleetModels, r.lockType, r.mooringTip].concat(r.highlights || []).join(" ").toLowerCase();
+          return hay.indexOf(q) > -1;
+        });
+        list.sort(function (a, b) {
+          if (state.sort === "priceAsc") return firstInt(a.perPerson9PaxEUR) - firstInt(b.perPerson9PaxEUR) || a.rank - b.rank;
+          if (state.sort === "locksAsc") return (a.lockCount == null ? 99 : a.lockCount) - (b.lockCount == null ? 99 : b.lockCount) || a.rank - b.rank;
+          if (state.sort === "kmDesc") return (b.distanceKm || 0) - (a.distanceKm || 0) || a.rank - b.rank;
+          return a.rank - b.rank;
+        });
+        document.getElementById("tally").textContent = "显示 " + list.length + " / " + ROUTES.length + " 条";
+        document.getElementById("routesList").innerHTML = list.length ? list.map(card).join("") : '<p class="empty">这段水道上没有符合条件的航线——试试放宽筛选。</p>';
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+      document.getElementById("routesList").addEventListener("click", function (e) {
+        var b = e.target.closest(".btn-log"); if (!b) return;
+        var id = b.getAttribute("data-itin"), el = document.getElementById("itin-" + id); if (!el) return;
+        var open = el.classList.toggle("open");
+        b.setAttribute("aria-expanded", String(open));
+        if (!b.dataset.label) b.dataset.label = b.textContent;
+        b.textContent = open ? "⤴ 收起逐日路书" : b.dataset.label;
+        if (!open) document.getElementById("route-" + id).scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-    renderTiers();
-    renderCanals();
+      /* ---- waterline scroll ---- */
+      var wl = document.getElementById("waterline");
+      function onScroll() { var h = document.documentElement.scrollHeight - innerHeight; wl.style.width = (h > 0 ? scrollY / h * 100 : 0) + "%"; }
+      addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+      renderScatter();
+      renderLadder();
+      renderTiers();
+      buildSeg();
+      renderRoutes();
+      window.addEventListener("load", function () { if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance(); });
+    })();
   </script>
 </body>
 </html>

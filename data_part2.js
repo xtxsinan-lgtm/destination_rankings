@@ -865,6 +865,7 @@ window.DESTINATIONS_DATA.push(
 // Eliminated Gatekeepers Reference (Below 76.5 Cutoff — Why They Didn't Make the List)
 window.ELIMINATED_DESTINATIONS = [
   {
+    id: "key-west",
     name: "🇺🇸 美国·佛罗里达基韦斯特 (Key West)",
     coldestNight: 18.8, coldestWater: 22.8, total: 73.5,
     scores: { seaSand: 14.0, scenery: 11.0, waterPlay: 11.5, calmness: 8.5, hotel: 8.0, dining: 8.5, land: 7.5, safety: 4.5 },
@@ -872,6 +873,7 @@ window.ELIMINATED_DESTINATIONS = [
     reason: "全岛为珊瑚礁岩岸，天然沙滩极少且水浅多海草（海沙仅14/25，比芭堤雅+格兰岛低4.5分），但4★海景房价高达 $2,571/5晚。"
   },
   {
+    id: "sentosa",
     name: "🇸🇬 新加坡·圣淘沙岛 (Sentosa Island)",
     coldestNight: 24.5, coldestWater: 27.5, total: 72.0,
     scores: { seaSand: 11.0, scenery: 10.0, waterPlay: 9.0, calmness: 8.5, hotel: 9.5, dining: 10.0, land: 9.0, safety: 5.0 },
@@ -879,6 +881,7 @@ window.ELIMINATED_DESTINATIONS = [
     reason: "人造填海沙滩，窗外锚泊大量远洋货轮，水体浑浊（海沙仅11/25）；强在环球影城、米其林餐饮与满分治安。"
   },
   {
+    id: "cape-verde",
     name: "🇨🇻 佛得角·萨尔岛与博阿维斯塔岛 (Sal & Boa Vista)",
     coldestNight: 19.0, coldestWater: 21.8, total: 71.5,
     scores: { seaSand: 20.5, scenery: 10.5, waterPlay: 10.5, calmness: 4.5, hotel: 7.5, dining: 6.5, land: 6.0, safety: 4.5 },
@@ -886,6 +889,7 @@ window.ELIMINATED_DESTINATIONS = [
     reason: "冬春大西洋东北信风猛烈（5–6级大风浪常挂红旗禁泳，风浪仅4.5/10），全岛荒漠无绿植、陆地无聊；同为冬季避寒，红海或桑给巴尔的风浪与水温都更好。"
   },
   {
+    id: "penang",
     name: "🇲🇾 马来西亚·槟城巴都丁宜 (Penang — Batu Ferringhi)",
     coldestNight: 23.5, coldestWater: 28.0, total: 69.5,
     scores: { seaSand: 11.0, scenery: 11.0, waterPlay: 8.5, calmness: 7.5, hotel: 8.0, dining: 10.0, land: 9.0, safety: 4.5 },

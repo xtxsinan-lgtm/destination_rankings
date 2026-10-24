@@ -21,7 +21,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "冲浪里随时召唤鱼子酱 (Caviar in the Surf) + Thomas Keller 餐厅与全套房大阳台 + 空间单价仅 $15.6/㎡/晚，是进入真·六星奢华邮轮的全场性价比冠军",
     "tip": "在 $500–$550/晚价位段，世邦的鱼子酱自由、私密性与船员1:1配比远超主流大船同价位普通小套房。",
     "url": "https://www.seabourn.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Seabourn_Ovation_in_Kotor.jpg/1280px-Seabourn_Ovation_in_Kotor.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/MV_Seabourn_Ovation_in_Portofino%2C_Italy.jpg/1280px-MV_Seabourn_Ovation_in_Portofino%2C_Italy.jpg",
+    "lat": 41.9,
+    "lon": 12.5,
+    "imageCredit": "MV Seabourn Ovation in Portofino, Italy.jpg"
   },
   {
     "rank": 2,
@@ -44,7 +47,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "革命性非对称悬挑泳池甲板与全玻璃中庭 + 全船100%套房均配白金级英式私人管家 + S.A.L.T. 目的地深度风味美食实验室",
     "tip": "若选 Door-to-Door 票价甚至包家门口豪车接送机；Port-to-Port 票价性价比更高，每晚约 $650–$750。",
     "url": "https://www.silversea.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Silver_Nova_in_Geirangerfjord.jpg/1280px-Silver_Nova_in_Geirangerfjord.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Silver_nova.jpg/1280px-Silver_nova.jpg",
+    "lat": 37.94,
+    "lon": 23.64,
+    "imageCredit": "Silver nova.jpg"
   },
   {
     "rank": 3,
@@ -67,7 +73,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "被公认为“海洋上最彻底的一价全包皇宫” + 1,600件博物馆级艺术真迹（含法贝热彩蛋） + 无限次免费岸上观光团与全部特色餐厅零加价",
     "tip": "丽晶连每站价值 $150–$250 的岸上观光与专业洗衣费都全包，上船后真正实现信用卡封存。",
     "url": "https://www.rssc.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Seven_Seas_Splendor_in_Valletta.jpg/1280px-Seven_Seas_Splendor_in_Valletta.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Regent_Seven_Seas_Grandeur_%2853824101578%29.jpg/1280px-Regent_Seven_Seas_Grandeur_%2853824101578%29.jpg",
+    "lat": 41.38,
+    "lon": 2.18,
+    "imageCredit": "Regent Seven Seas Grandeur (53824101578).jpg"
   },
   {
     "rank": 4,
@@ -90,7 +99,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "MSC家族斥巨资打造的“海上安缦式”现代欧陆私人游艇美学 + 入门即35㎡起跳（配Dyson吹风机与Frette床品） + 4座恒温泳池与免费水疗热疗区",
     "tip": "彻底打破传统老钱邮轮的沉闷礼服拘束，空间单价仅 $17.1/㎡/晚，硬件新锐度碾压十年老船。",
     "url": "https://explorajourneys.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Explora_I_in_Copenhagen.jpg/1280px-Explora_I_in_Copenhagen.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Explora_I.jpg/1280px-Explora_I.jpg",
+    "lat": 43.7,
+    "lon": 7.27,
+    "imageCredit": "Explora I.jpg"
   },
   {
     "rank": 5,
@@ -113,7 +125,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "全球唯一PC2级LNG液化天然气重型破冰奢华邮轮（可直插北纬90度正北极点！） + 船上设阿兰·杜卡斯（Alain Ducasse）海上米其林餐厅与户外极地蓝湖温泉池",
     "tip": "把重型科学破冰船与巴黎左岸香槟沙龙合二为一的人类造船工业巅峰，北极点航次需提前12-18个月锁定。",
     "url": "https://us.ponant.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Le_Commandant_Charcot_in_Havre.jpg/1280px-Le_Commandant_Charcot_in_Havre.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Le_Commandant_Charcot_Stockholm.jpg/1280px-Le_Commandant_Charcot_Stockholm.jpg",
+    "lat": 78.22,
+    "lon": 15.65,
+    "imageCredit": "Le Commandant Charcot Stockholm.jpg"
   },
   {
     "rank": 6,
@@ -136,7 +151,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "万豪白金/钛金拥趸终极梦想 + 船尾直接打开下水平台（Marina Terrace）在摩纳哥与波托菲诺外海玩电动水翼板 + 米其林三星主厨定制菜单",
     "tip": "支持使用万豪旅享家积分抵扣部分房费或累积房晚，Ilma 与 Luminara 比首艘 Evrima 空间感大幅升级。",
     "url": "https://www.ritzcarltonyachtcollection.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Evrima_in_Malaga.jpg/1280px-Evrima_in_Malaga.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Evrima_at_Katajanokka_Terminal%2C_Helsinki%2C_2026-07-20.jpg/1280px-Evrima_at_Katajanokka_Terminal%2C_Helsinki%2C_2026-07-20.jpg",
+    "lat": 43.55,
+    "lon": 7.02,
+    "imageCredit": "Evrima at Katajanokka Terminal, Helsinki, 2026-07-20.jpg"
   },
   {
     "rank": 7,
@@ -159,7 +177,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "比传统奢华邮轮多出 50% 的人均居住空间（起步即 50㎡！） + 船尾横向贯通式海水泳池与双层玻璃天幕 Funnel Suite（892㎡）",
     "tip": "注意其采用奢华酒店计费模式（船票含早餐，晚餐与名酒单点），目标客群是习惯包私人游艇的亿万富豪。",
     "url": "https://www.fourseasonsyachts.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Porto_Katsiki_Lefkada_Greece.jpg/1280px-Porto_Katsiki_Lefkada_Greece.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Four_Seasons_I_Yacht.jpg/1280px-Four_Seasons_I_Yacht.jpg",
+    "lat": 18.03,
+    "lon": -63.05,
+    "imageCredit": "Four Seasons I Yacht.jpg"
   },
   {
     "rank": 8,
@@ -182,7 +203,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "船长220米的全球最大三桅SolidSail硬翼风帆超级游艇 + 全船仅54间45–230㎡装饰艺术（Art Deco）宫殿级套房 + 船内自带私人录音棚与1920年代复古电影院",
     "tip": "雅高与LVMH联手复兴东方快车航海传奇，载客仅108人，私密性堪比皇室专船。",
     "url": "https://www.orient-express.com/sailing-yachts/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Portofino_harbour.jpg/1280px-Portofino_harbour.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/OE_Corinthian.jpg/1280px-OE_Corinthian.jpg",
+    "lat": 43.12,
+    "lon": 6.36,
+    "imageCredit": "OE Corinthian.jpg"
   },
   {
     "rank": 9,
@@ -205,7 +229,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "全船仅47间68㎡起的极简禅意套房 + 占据两层甲板的海上安缦水疗中心（含日式庭院） + 船尾巨型海滩俱乐部与双直升机停机坪",
     "tip": "全球“安缦痴（Amanjunkies）”的终极朝圣图腾，将陆地安缦的侘寂静谧搬上海洋。",
     "url": "https://www.aman.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Bonifacio_harbour_view.jpg/1280px-Bonifacio_harbour_view.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bonifacio.jpg/1280px-Bonifacio.jpg",
+    "lat": 41.39,
+    "lon": 9.16,
+    "imageCredit": "Bonifacio.jpg"
   },
   {
     "rank": 10,
@@ -228,7 +255,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "船上直接搭载 2 架空客 H130 观光直升机 + 1 艘可下潜 200 米的定制深海观光潜艇 Scenic Neptune II + 吧台免费畅饮百款顶级威士忌",
     "tip": "想在南极冰盖上空坐直升机俯瞰帝企鹅群、或下潜海底看冰山根部，Scenic Eclipse II 是全球独一份。",
     "url": "https://www.scenicusa.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Scenic_Eclipse_in_Rijeka.jpg/1280px-Scenic_Eclipse_in_Rijeka.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Scenic_Eclipse_II_at_Fort_William_-_geograph.org.uk_-_7611925.jpg/1280px-Scenic_Eclipse_II_at_Fort_William_-_geograph.org.uk_-_7611925.jpg",
+    "lat": -54.8,
+    "lon": -68.3,
+    "imageCredit": "Scenic Eclipse II at Fort William - geograph.org.uk - 7611925.jpg"
   },
   {
     "rank": 11,
@@ -251,7 +281,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "被顶奢猎游巨头 A&K 收购后斥资1.5亿美元将载客量砍半扩建大套房 + 拥有海上唯一正宗松久信幸（Nobu）亲创的 Umi Uma 日料餐厅",
     "tip": "6.8万吨船体仅载740人，人均公区比高达93，既完全不晃又有世界第一梯队的餐饮服务。",
     "url": "https://www.crystalcruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Crystal_Serenity_in_Venice.jpg/1280px-Crystal_Serenity_in_Venice.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Crystal_Serenity_Under_Way.jpg/1280px-Crystal_Serenity_Under_Way.jpg",
+    "lat": 25.77,
+    "lon": -80.17,
+    "imageCredit": "Crystal Serenity Under Way.jpg"
   },
   {
     "rank": 12,
@@ -274,7 +307,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "建筑师堀部安嗣操刀的切妻造银色钛锌屋顶漂浮日式旅馆 + 每天收购濑户内渔船活鱼由寿司吧主厨按你的胃口一贯一贯现握 + 桧木大浴场看群岛落日",
     "tip": "全船仅19间50–90㎡纯木香套房，从来不走大船航道，专钻直岛、丰岛、严岛神社旁无人小海湾。",
     "url": "https://guntu.jp/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Guntu_at_Bella_Vista_Marina.jpg/1280px-Guntu_at_Bella_Vista_Marina.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/%E3%82%AC%E3%83%B3%E3%83%84%E3%82%A6006.jpg",
+    "lat": 34.4,
+    "lon": 133.2,
+    "imageCredit": "ガンツウ006.jpg"
   },
   {
     "rank": 13,
@@ -297,7 +333,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "专为波利尼西亚浅水珊瑚环礁设计的浅吃水奢华邮轮 + 独享 Taha'a 私人小岛 Motu Mahana 椰林漂浮酒吧与波拉波拉专属白沙滩",
     "tip": "游览大溪地波拉波拉、胡阿希内、莫雷阿最省钱省心的方式（陆地四季水屋单晚即需 $2,500+，坐高更号全包跳5岛！）。",
     "url": "https://www.pgcruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bora_Bora_Lagoon.jpg/1280px-Bora_Bora_Lagoon.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cruise_Ship_Paul_Gauguin_01.jpg/1280px-Cruise_Ship_Paul_Gauguin_01.jpg",
+    "lat": -17.54,
+    "lon": -149.57,
+    "imageCredit": "Cruise Ship Paul Gauguin 01.jpg"
   },
   {
     "rank": 14,
@@ -320,7 +359,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "公认“海上第一美食学府（The Finest Cuisine at Sea）” + 厨师与宾客比高达 1:10 + Polo Grill牛排馆、Toscana意餐、Red Ginger亚洲料理全部免费无限吃",
     "tip": "如果你是纯粹的美食老饕，Oceania Vista/Allura 的餐饮水准甚至超越比它贵一倍的船队。",
     "url": "https://www.oceaniacruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Oceania_Vista_in_Valletta.jpg/1280px-Oceania_Vista_in_Valletta.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Oceania_Vista_in_port_at_Istanbul_%281%29.png/1280px-Oceania_Vista_in_port_at_Istanbul_%281%29.png",
+    "lat": 41.38,
+    "lon": 2.18,
+    "imageCredit": "Oceania Vista in port at Istanbul (1).png"
   },
   {
     "rank": 15,
@@ -343,7 +385,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "3万吨玲珑船体可直接开进塞维利亚市中心瓜达尔基维尔河、波尔多市中心与威尼斯泻湖 + 独家 AzAmazing Evenings（包下古罗马剧场或城堡请全船看交响乐）",
     "tip": "与大洋邮轮 R-Class 是同门亲姊妹船！大洋主打极致美食，精钻主打“港口待到半夜不走+送整航次酒水小费”。",
     "url": "https://www.azamara.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Azamara_Onward_in_Venice.jpg/1280px-Azamara_Onward_in_Venice.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Azamara_Onward_IMO_9187887_P_Hamburg_29-08-2024_%281%29.jpg/1280px-Azamara_Onward_IMO_9187887_P_Hamburg_29-08-2024_%281%29.jpg",
+    "lat": 45.44,
+    "lon": 12.32,
+    "imageCredit": "Azamara Onward IMO 9187887 P Hamburg 29-08-2024 (1).jpg"
   },
   {
     "rank": 16,
@@ -366,7 +411,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "Star级三艘船原本就是世邦（Seabourn）的六星全套房游艇，被风星收购后斥资1.25亿美元拉长翻新 + 仅 $271/晚即可住进 25.7㎡ 步入式衣帽间大套房！",
     "tip": "空间单价低至 $10.5/㎡/晚，是全球用四星价格买六星血统全套房小游艇的头号捡漏王。",
     "url": "https://www.windstarcruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Star_Pride_in_Lisbon.jpg/1280px-Star_Pride_in_Lisbon.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Star_Pride_in_Helsinki.jpg/1280px-Star_Pride_in_Helsinki.jpg",
+    "lat": 18.47,
+    "lon": -66.11,
+    "imageCredit": "Star Pride in Helsinki.jpg"
   },
   {
     "rank": 17,
@@ -389,7 +437,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "人类历史上现存唯一真正的远洋班轮（Ocean Liner，抗10米巨浪） + 穿燕尾服晚礼服跳华尔兹的黄金时代皇家舞厅 + 唯一可带宠物猫狗跨大西洋的船",
     "tip": "普通舱房仅 $968/7晚即可体验跨大西洋传奇；若升级至 Princess/Queens Grill 套房则直接解锁大英帝国贵族阶层私密餐厅。",
     "url": "https://www.cunard.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Queen_Mary_2_Boston_July_2016_01.jpg/1280px-Queen_Mary_2_Boston_July_2016_01.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Hamburg%2C_Hafen%2C_Kreuzfahrtschiff_-Queen_Mary_2-_--_2016_--_3050.jpg/1280px-Hamburg%2C_Hafen%2C_Kreuzfahrtschiff_-Queen_Mary_2-_--_2016_--_3050.jpg",
+    "lat": 50.9,
+    "lon": -1.4,
+    "imageCredit": "Hamburg, Hafen, Kreuzfahrtschiff -Queen Mary 2- -- 2016 -- 3050.jpg"
   },
   {
     "rank": 18,
@@ -412,7 +463,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "日本国宝级邮轮飞鸟时隔34年打造的全新旗舰 + 顶层 Grand Spa 露天大浴场边泡温泉边看富士山与濑户内大桥 + 日本人间国宝级艺术家真迹装饰",
     "tip": "专为日本财阀与高净值长者打造，全船0赌场、极致安静礼貌，怀石料理与法餐水准极高。",
     "url": "https://www.asukacruise.co.jp/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Asuka_II_at_Yokohama_Osanbashi_200903.jpg/1280px-Asuka_II_at_Yokohama_Osanbashi_200903.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/ASUKA_III_6223.jpg/1280px-ASUKA_III_6223.jpg",
+    "lat": 35.45,
+    "lon": 139.65,
+    "imageCredit": "ASUKA III 6223.jpg"
   },
   {
     "rank": 19,
@@ -435,7 +489,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "直接买下世邦六星邮轮 Seabourn Odyssey 全面改造为和风全套房奢华船 + 传承“美食的日本丸”百年法餐与纯正京都怀石血统",
     "tip": "比飞鸟三号价格更亲民，且100%全套房带浴缸，非常适合想深度玩日本小众港口又吃惯亚洲胃的家庭。",
     "url": "https://www.mitsuioceancruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Seabourn_Odyssey_in_Venice.jpg/1280px-Seabourn_Odyssey_in_Venice.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mitsui_Ocean_Fuji_20241223_084153.jpg/1280px-Mitsui_Ocean_Fuji_20241223_084153.jpg",
+    "lat": 35.45,
+    "lon": 139.65,
+    "imageCredit": "Mitsui Ocean Fuji 20241223 084153.jpg"
   },
   {
     "rank": 20,
@@ -458,7 +515,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "人类造船史上最强的水上乐园巨兽（6条高空滑道+悬空无边泳池+苍穹玻璃水秀） + 顶层两层楼高 Suite Neighborhood 私密阳光甲板与The Grove海岸餐厅",
     "tip": "带娃家庭的终极核武器：住进 Star Class 套房不仅房间是61㎡两层挑空LOFT，更由皇家精灵（Royal Genie）带你全船插队坐第一排！",
     "url": "https://www.royalcaribbean.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Icon_of_the_Seas_in_Miami.jpg/1280px-Icon_of_the_Seas_in_Miami.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Icon_and_Mariner_Cozumel_Mexico_2024.jpg/1280px-Icon_and_Mariner_Cozumel_Mexico_2024.jpg",
+    "lat": 25.78,
+    "lon": -80.17,
+    "imageCredit": "Icon and Mariner Cozumel Mexico 2024.jpg"
   },
   {
     "rank": 21,
@@ -481,7 +541,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "Edge Villa 拥有两层楼高落地窗、露台私人跳水池（Plunge Pool）且推门直通 Kelly Hoppen 设计的两层The Retreat私密阳光甲板 + 米其林三星主厨 Daniel Boulud 坐镇",
     "tip": "$450–$500/晚买 Sky Suite 即可解锁整个 The Retreat 船中船；若预算够上 Edge Villa ($1,114/晚)，审美与体验直接吊打同价位老牌小船！",
     "url": "https://www.celebritycruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Celebrity_Beyond_in_Marseille.jpg/1280px-Celebrity_Beyond_in_Marseille.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Celebrity_BEYOND_La_Rochelle.jpg/1280px-Celebrity_BEYOND_La_Rochelle.jpg",
+    "lat": 43.3,
+    "lon": 5.37,
+    "imageCredit": "Celebrity BEYOND La Rochelle.jpg"
   },
   {
     "rank": 22,
@@ -504,7 +567,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "用 $332–$511/人/晚的价格住进 51–67㎡ 挑高两层海景复式 LOFT + 在甲板玩甲板冲浪、北极星观景舱、高空跳水秀的同时享受私密 Coastal Kitchen",
     "tip": "性价比爆棚秘密：量子系（Odyssey/Ovation/Anthem）的 Grand Loft 每晚仅 $511–$650，就能直接拿到价值连城的 Star Class 紫卡皇家精灵特权！",
     "url": "https://www.royalcaribbean.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Symphony_of_the_Seas_in_Malaga.jpg/1280px-Symphony_of_the_Seas_in_Malaga.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Symphony_of_the_Seas_Nassau.jpg/1280px-Symphony_of_the_Seas_Nassau.jpg",
+    "lat": 26.09,
+    "lon": -80.12,
+    "imageCredit": "Symphony of the Seas Nassau.jpg"
   },
   {
     "rank": 23,
@@ -527,7 +593,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "全球价格最震撼的“真·双层复式套房”（每晚不到 $400，空间单价仅 $7.3/㎡/晚！） + 私人大阳台自带恒温按摩浴缸 + 刷手环独享船头三层施华洛世奇水晶楼梯私密俱乐部",
     "tip": "MSC 普通舱虽喧闹，但船头刷卡隔离的 Yacht Club 是公认的“船中船性价比天花板”，管家甚至会护送你越过几千人长队直接下船。",
     "url": "https://www.msccruisesusa.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MSC_World_Europa_in_Doha.jpg/1280px-MSC_World_Europa_in_Doha.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/MSC_World_Europa_La_Rochelle.jpg/1280px-MSC_World_Europa_La_Rochelle.jpg",
+    "lat": 25.29,
+    "lon": 51.53,
+    "imageCredit": "MSC World Europa La Rochelle.jpg"
   },
   {
     "rank": 24,
@@ -550,7 +619,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "Prima/Aqua 级将整个船尾8层甲板划为 The Haven 专属领地，配船尾悬挑玻璃无边泳池 + 全球最新水上过山车滑道 Aqua Slidecoaster",
     "tip": "若有 6–8 人大家庭同行，合租一套 The Haven 双层三卧花园别墅，人均价格甚至比单订3间普通套房更划算。",
     "url": "https://www.ncl.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Norwegian_Prima_in_Reykjavik.jpg/1280px-Norwegian_Prima_in_Reykjavik.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Norwegian_Prima_in_Amsterdam_%28cropped%29.jpg/1280px-Norwegian_Prima_in_Amsterdam_%28cropped%29.jpg",
+    "lat": 25.78,
+    "lon": -80.17,
+    "imageCredit": "Norwegian Prima in Amsterdam (cropped).jpg"
   },
   {
     "rank": 25,
@@ -573,7 +645,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "直接把整座巨型假烟囱（Funnel）内部改造成 182㎡ 双层莫阿娜/阿拉丁主题皇家复式套房（配私人电梯！） + 全球唯一海上盛大音乐烟花秀与鬼屋酒吧",
     "tip": "即使不住烟囱套房，只要带5-12岁孩子，迪士尼宝藏号的三家沉浸式剧场餐厅与海上百老汇音乐剧也是全球亲子无敌手。",
     "url": "https://disneycruise.disney.go.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Disney_Wish_Port_Canaveral.jpg/1280px-Disney_Wish_Port_Canaveral.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Disney_wish_nassau_08202022.jpg/1280px-Disney_wish_nassau_08202022.jpg",
+    "lat": 28.41,
+    "lon": -80.62,
+    "imageCredit": "Disney wish nassau 08202022.jpg"
   },
   {
     "rank": 26,
@@ -596,7 +671,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "100% 满18岁成人限定（0熊孩子！） + 全船消灭大锅菜自助餐厅，20多家米其林星厨/韩式烤肉/分子料理全部免费 + Richard's Rooftop 香槟日落派对",
     "tip": "年轻夫妻、蜜月与潮流玩家的海上乌托邦，Mega RockStar 套房每天包全船所有酒吧任意点单。",
     "url": "https://www.virginvoyages.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Scarlet_Lady_in_PortMiami.jpg/1280px-Scarlet_Lady_in_PortMiami.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/IMO_9804801_-_Scarlet_Lady_alongside_in_Cozumel.jpg/1280px-IMO_9804801_-_Scarlet_Lady_alongside_in_Cozumel.jpg",
+    "lat": 25.78,
+    "lon": -80.17,
+    "imageCredit": "IMO 9804801 - Scarlet Lady alongside in Cozumel.jpg"
   },
   {
     "rank": 27,
@@ -619,7 +697,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "全球豪华内河游轮空间性价比之王（仅 $10.4/㎡/晚，还不到多瑙河同级船的1/4！） + 1.7万吨船体仅设74间套房，人均吨位超越海洋六星船 + 岸上15人内专车小团不走散客通道",
     "tip": "带父母游三峡的绝对天花板，2025年5月全新下水硬件，上水（宜昌→重庆4晚）比下水只贵￥500，折合每晚仅￥1,875。",
     "url": "https://www.centurycruise.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Qutang_Gorge_Kuimen.jpg/1280px-Qutang_Gorge_Kuimen.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/20260518-panoramafoto_van_uitzicht_vanaf_de_Yangzi_Explorer_%2855309823074%29.jpg/1280px-20260518-panoramafoto_van_uitzicht_vanaf_de_Yangzi_Explorer_%2855309823074%29.jpg",
+    "lat": 29.56,
+    "lon": 106.58,
+    "imageCredit": "20260518-panoramafoto van uitzicht vanaf de Yangzi Explorer (55309823074).jpg"
   },
   {
     "rank": 28,
@@ -642,7 +723,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "多瑙河上公认的“皇太后”：船宽22.8米（普通欧洲河轮的整整两倍宽！） + 船内自带真室内恒温游泳池、4家独立高级餐厅与顶层全景苗圃酒吧",
     "tip": "接盘自破产前造价不计成本的水晶河轮（Crystal Mozart），硬件奢华度在欧洲内河无人能及。",
     "url": "https://riverside-cruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Budapest_Parliament_at_night.jpg/1280px-Budapest_Parliament_at_night.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Viva_Two_and_Riverside_Mozart_in_Esztergom_3.jpg/1280px-Viva_Two_and_Riverside_Mozart_in_Esztergom_3.jpg",
+    "lat": 48.21,
+    "lon": 16.37,
+    "imageCredit": "Viva Two and Riverside Mozart in Esztergom 3.jpg"
   },
   {
     "rank": 29,
@@ -665,7 +749,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "彻底解决传统欧洲河轮“房间像火柴盒”痛点：主力套房直接做到 33㎡ 真步出式大阳台 + 船尾自带水上运动平台与4家风味餐厅",
     "tip": "如果嫌传统欧洲河轮15㎡法式阳台太憋屈，AmaMagna 与 Riverside Mozart 是多瑙河上唯二的双倍宽巨舰。",
     "url": "https://www.amawaterways.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Durnstein_Wachau_Danube.jpg/1280px-Durnstein_Wachau_Danube.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/AmaMagna_-_AMA_Waterways_-_ENI_07002100.jpg/1280px-AmaMagna_-_AMA_Waterways_-_ENI_07002100.jpg",
+    "lat": 48.62,
+    "lon": 12.97,
+    "imageCredit": "AmaMagna - AMA Waterways - ENI 07002100.jpg"
   },
   {
     "rank": 30,
@@ -688,7 +775,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "大型海洋邮轮被禁入威尼斯中心后，S.S. La Venezia 是极少数能直接停靠威尼斯本岛核心水道的奢华浮宫 + 全船用威尼斯穆拉诺水晶吊灯与Fortuny丝绸定制",
     "tip": "附赠“夜幕降临后私人包场进入圣马可大教堂亮灯仪式”，光这一项特权就值回票价。",
     "url": "https://www.uniworld.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/San_Giorgio_Maggiore_at_sunrise.jpg/1280px-San_Giorgio_Maggiore_at_sunrise.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/River_Countess_in_Venice.JPG/1280px-River_Countess_in_Venice.JPG",
+    "lat": 45.43,
+    "lon": 12.33,
+    "imageCredit": "River Countess in Venice.JPG (Uniworld)"
   },
   {
     "rank": 31,
@@ -711,7 +801,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "尼罗河上毫无争议的卫生、安静与服务天花板 + 拥有尼罗河全流域唯一的私人游艇专用码头（无需像普通河轮那样5艘船并排停靠踩着别人大厅上岸、零柴油尾气噪音！）",
     "tip": "去埃及最怕拉肚子和码头嘈杂，Oberoi Zahra/Philae 由印度传奇顶奢酒店集团直营，连冰块与生菜都用纯净水三重过滤。",
     "url": "https://www.oberoihotels.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Nile_River_at_Aswan.jpg/1280px-Nile_River_at_Aswan.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/The_Oberoi_Philae_R01.jpg/1280px-The_Oberoi_Philae_R01.jpg",
+    "lat": 25.69,
+    "lon": 32.64,
+    "imageCredit": "The Oberoi Philae R01.jpg"
   },
   {
     "rank": 32,
@@ -734,7 +827,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "2026全新下水的 Sanctuary Nile Seray 仅设32间33㎡起全阳台套房 + 沿袭《尼罗河上的惨案》黄金年代殖民复古美学与A&K深耕埃及40年的特权通道",
     "tip": "如果你想要比 Oberoi 更有考古探险俱乐部氛围、且想要2026最新下水的大阳台套房，选 A&K Nile Seray。",
     "url": "https://www.abercrombiekent.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Philae_Temple_Aswan.jpg/1280px-Philae_Temple_Aswan.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sanctuary_Sun_Boat_IV_P_Esna_26-01-2024_%281%29.jpg/1280px-Sanctuary_Sun_Boat_IV_P_Esna_26-01-2024_%281%29.jpg",
+    "lat": 25.69,
+    "lon": 32.64,
+    "imageCredit": "Sanctuary Sun Boat IV P Esna 26-01-2024 (1).jpg"
   },
   {
     "rank": 33,
@@ -757,7 +853,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "尼罗河高奢档（Tier 2）颜值与性价比之王 + 告别老旧土味金碧辉煌，全船采用极简亚麻拱门、努比亚手工艺与超大楼顶无边泳池",
     "tip": "价格仅为 Oberoi 的一半出头（约 $525/晚），却拥有全尼罗河最出片的现代精品酒店硬件。",
     "url": "https://historianilecruise.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kom_Ombo_Temple_at_dusk.jpg/1280px-Kom_Ombo_Temple_at_dusk.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kom_Ombo_03.jpg/1280px-Kom_Ombo_03.jpg",
+    "lat": 25.69,
+    "lon": 32.64,
+    "imageCredit": "Kom Ombo 03.jpg"
   },
   {
     "rank": 34,
@@ -780,7 +879,9 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "LVMH 集团打造的“水移动私人古堡”：全船仅接待 6–8 位客人 + Coquelicot 号与世界上最古老的香槟酒庄 Ruinart 联名，在未对外开放的白垩酒窖办私人烛光宴",
     "tip": "这不是公共交通河轮，而是带私人法餐主厨与侍酒师的水上亿万富豪庄园。",
     "url": "https://www.belmond.com/",
-    "image": "rankings/images/canals/r10_d2_1.jpg"
+    "image": "rankings/images/canals/r10_d2_1.jpg",
+    "lat": 47.02,
+    "lon": 4.84
   },
   {
     "rank": 35,
@@ -803,7 +904,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "躺着吹冷气、透过整面墙落地玻璃窗看粉红河豚跃出亚马逊黑水河！ + Delfin I 仅设4间巨型套房（其中2间在亚马逊河上自带私人冷泡泳池）",
     "tip": "想深入地球之肺看树懒、金刚鹦鹉、粉红海豚和凯门鳄，但绝不想忍受蚊虫与潮湿木屋，这是唯一完美解法。",
     "url": "https://www.aquaexpeditions.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Amazon_River_in_Peru.jpg/1280px-Amazon_River_in_Peru.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Peruvian_Amazon_river_scene.jpg/1280px-Peruvian_Amazon_river_scene.jpg",
+    "lat": -3.75,
+    "lon": -73.25,
+    "imageCredit": "Peruvian Amazon river scene.jpg"
   },
   {
     "rank": 36,
@@ -826,7 +930,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "躺在床上就能平视岸边几百头非洲象排队下水游泳过河！ + 摄影玩家强烈推荐同河段的 Pangolin Voyager（5卧包船配专属带360度云台座位的专业野生动物摄影快艇）",
     "tip": "乔贝河旱季（6–10月）拥有全非洲密度最高的象群（超5万头），水上视角完全没有陆地吉普车的尘土颠簸。",
     "url": "https://zqcollection.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Elephants_in_Chobe_River.jpg/1280px-Elephants_in_Chobe_River.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/The_African_Queen_on_the_Zambezi_02.jpg/1280px-The_African_Queen_on_the_Zambezi_02.jpg",
+    "lat": -17.8,
+    "lon": 25.15,
+    "imageCredit": "The African Queen on the Zambezi 02.jpg"
   },
   {
     "rank": 37,
@@ -849,7 +956,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "制霸欧洲内河半壁江山的北欧极简木质美学标杆 + 船头 Aquavit Terrace 户外露台边吃早餐边穿过莱茵河中游40座千年古堡 + 针对华人长辈设有全中文红船专线",
     "tip": "父母不懂英文无脑选“维京中文船”（有现煮牛肉面、全中文礼宾）；若自己英语流利想省钱，盯紧维京美国官网淡季早鸟特惠。",
     "url": "https://www.vikingrivercruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Viking_Longship_on_the_Rhine.jpg/1280px-Viking_Longship_on_the_Rhine.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flusskreuzfahrtschiff_Viking_Sigyn_-_ENI_07002115_-_am_Steiger_in_K%C3%B6ln-40111.jpg/1280px-Flusskreuzfahrtschiff_Viking_Sigyn_-_ENI_07002115_-_am_Steiger_in_K%C3%B6ln-40111.jpg",
+    "lat": 47.56,
+    "lon": 7.59,
+    "imageCredit": "Flusskreuzfahrtschiff Viking Sigyn - ENI 07002115 - am Steiger in Köln-40111.jpg"
   },
   {
     "rank": 38,
@@ -872,7 +982,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "最新一代电力推进静音技术（彻底告别老式三峡船的柴油机震动与油烟味） + 仅需￥3,000+即可住进26㎡带私人阳台的准五星江景房，坐着看夔门与巫峡云雨",
     "tip": "强烈建议加￥800–￥1,200升级“行政楼层/VIP餐厅”，用餐瞬间从几百人大堂分流到顶层清静景观餐厅。",
     "url": "https://www.centurycruise.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Three_Gorges_Dam_from_air.jpg/1280px-Three_Gorges_Dam_from_air.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/MV_Selina_Yangtze_River_Cruise_%2812280525406%29.jpg/1280px-MV_Selina_Yangtze_River_Cruise_%2812280525406%29.jpg",
+    "lat": 29.56,
+    "lon": 106.58,
+    "imageCredit": "MV Selina Yangtze River Cruise (12280525406).jpg"
   },
   {
     "rank": 39,
@@ -895,7 +1008,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "湄公河上唯一拥有现代建筑大师 Noor Design 极简黒木外观与船头无边际戏水池的顶奢河轮 + 配备4艘私人高速快艇深入偏远水上浮村与高棉古寺",
     "tip": "将吴哥窟陆地奢华酒店（Amansara / Raffles）与 Aqua Mekong 4晚航程组合，是中南半岛最顶级的旅行方式。",
     "url": "https://www.aquaexpeditions.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mekong_River_sunset.jpg/1280px-Mekong_River_sunset.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mekong_Sun_river_cruise_ship_in_Luang_Prabang.jpg/1280px-Mekong_Sun_river_cruise_ship_in_Luang_Prabang.jpg",
+    "lat": 11.56,
+    "lon": 104.93,
+    "imageCredit": "Mekong Sun river cruise ship in Luang Prabang.jpg"
   },
   {
     "rank": 40,
@@ -918,7 +1034,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "一扫美国内河传统蒸汽明轮船的老旧沉闷，把北欧落地玻璃极简设计、船尾无边玻璃泳池与马克·吐温笔下的密西西比大河完美融合",
     "tip": "一路串联新奥尔良爵士乐、巴吞鲁日庄园与孟菲斯猫王故居雅园（Graceland）。",
     "url": "https://www.vikingrivercruises.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/New_Orleans_skyline_from_Mississippi_River.jpg/1280px-New_Orleans_skyline_from_Mississippi_River.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/New_Orleans_Feb_2017_-_American_Queen_at_the_Mississippi_River_front.jpg/1280px-New_Orleans_Feb_2017_-_American_Queen_at_the_Mississippi_River_front.jpg",
+    "lat": 29.95,
+    "lon": -90.06,
+    "imageCredit": "American Queen at the Mississippi River front, New Orleans.jpg"
   },
   {
     "rank": 41,
@@ -941,7 +1060,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "由苏拉威西孔乔部落造船世家纯手工打造的 52 米古法双桅帆船（Phinisi） + 14 名船员（含私人PADI潜水教练、按摩师与西式/泰式双主厨）全天候伺候10位客人",
     "tip": "全球珊瑚大三角（四王群岛拥有地球75%的珊瑚物种）最私密的终极船宿，还可与莫忧岛帐篷营地 Amanwana 水陆联动。",
     "url": "https://www.aman.com/resorts/amandira",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Padar_Island_Komodo.jpg/1280px-Padar_Island_Komodo.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Pinisi%2C_Komodo%2C_2016_%2801%29.jpg/1280px-Pinisi%2C_Komodo%2C_2016_%2801%29.jpg",
+    "lat": -8.5,
+    "lon": 119.88,
+    "imageCredit": "Pinisi, Komodo, 2016 (01).jpg"
   },
   {
     "rank": 42,
@@ -964,7 +1086,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "既可整船包船，也是极少数开放“单间散卖（By the Cabin）”的顶奢 Phinisi 帆船 + 船上自带 PADI 五星潜水中心与免费水疗师 + 可用凯悦天地（World of Hyatt）积分兑换或累积！",
     "tip": "相比只能整船包的安缦迪拉，阿丽拉满月号允许2人单订一间房，是潜水情侣进入印尼顶奢帆船的最佳入口。",
     "url": "https://www.alilahotels.com/purnama",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Raja_Ampat_Islands.jpg/1280px-Raja_Ampat_Islands.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Phinisi%2C_Penjelajah_Pulau_di_Labuan_Bajo.jpg/1280px-Phinisi%2C_Penjelajah_Pulau_di_Labuan_Bajo.jpg",
+    "lat": -0.88,
+    "lon": 131.25,
+    "imageCredit": "Phinisi, Penjelajah Pulau di Labuan Bajo.jpg"
   },
   {
     "rank": 43,
@@ -987,7 +1112,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "2025年震撼加拉帕戈斯的六星怪兽：每间 35㎡ 套房均自带私人海景阳台 + 房内独立面海按摩浴缸（Jacuzzi） + 步入式衣帽间与24小时英式管家 + 双体船体稳如平地",
     "tip": "加拉帕戈斯传统百人船（如Silver Origin）常不准停靠核心小登陆点；Hermes 仅载20人（合法登陆全部A级核心保护点），且早鸟直接白送价值 $800 的机票与门票！",
     "url": "https://www.royalgalapagos.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kicker_Rock_Galapagos.jpg/1280px-Kicker_Rock_Galapagos.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Catamaran_docked_in_Puerto_Ayora_Galapagos.JPG/1280px-Catamaran_docked_in_Puerto_Ayora_Galapagos.JPG",
+    "lat": -0.9,
+    "lon": -89.61,
+    "imageCredit": "Catamaran docked in Puerto Ayora Galapagos.JPG"
   },
   {
     "rank": 44,
@@ -1010,7 +1138,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "这艘船正是 1956 年摩纳哥亲王兰尼埃三世与格蕾丝·凯莉王妃（Grace Kelly）度蜜月的皇家结婚礼物！曾接待温斯顿·丘吉尔爵士，你可以直接住进当年的王妃蜜月主套房",
     "tip": "全加拉帕戈斯最有历史故事与老钱贵族气场的单体游艇，仅载16人，配2名顶级博物学家。",
     "url": "https://www.quasarex.com/galapagos/grace-yacht",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Galapagos_sea_lion_at_Gardner_Bay.jpg/1280px-Galapagos_sea_lion_at_Gardner_Bay.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Galapagos_Islands_-_Ecuador_%284870398009%29.jpg/1280px-Galapagos_Islands_-_Ecuador_%284870398009%29.jpg",
+    "lat": -0.74,
+    "lon": -90.31,
+    "imageCredit": "Galapagos Islands - Ecuador (4870398009).jpg"
   },
   {
     "rank": 45,
@@ -1033,7 +1164,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "专为加拉帕戈斯量身建造的 5,800 吨无抛锚动态定位环保大船（完全不揺晃！） + 全船8艘Zodiac冲锋艇与厄瓜多尔最高规格自然学家团队 + Basecamp互动科考大厅",
     "tip": "如果你极度怕晕船，不敢坐16人小游艇，Silver Origin 是百人级大船里唯一达到六星顶奢水准的选择。",
     "url": "https://www.silversea.com/ships/silver-origin.html",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bartolome_Island_Galapagos.jpg/1280px-Bartolome_Island_Galapagos.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Silver_Origin.jpg/1280px-Silver_Origin.jpg",
+    "lat": -0.9,
+    "lon": -89.61,
+    "imageCredit": "Silver Origin.jpg"
   },
   {
     "rank": 46,
@@ -1056,7 +1190,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "加拉帕戈斯16人豪华双体船领域的“黄金铁三角” + 每间套房均配落地玻璃推拉门与私人海景阳台 + 顶层飞桥阳光甲板设露天热水按摩池与烧烤吧",
     "tip": "16人船只需1名向导即可全船同步出发，每天比100人船多出整整1.5小时在水下与海狮、海鬣蜥同游！",
     "url": "https://www.goldengalapagos.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marine_Iguana_Galapagos.jpg/1280px-Marine_Iguana_Galapagos.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Iguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg/1280px-Iguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg",
+    "lat": -0.9,
+    "lon": -89.61,
+    "imageCredit": "Iguana marina (Amblyrhynchus cristatus), Las Bachas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-23, DD 23.jpg"
   },
   {
     "rank": 47,
@@ -1079,7 +1216,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "用不到 $4,000 的价格住进每间房都带私人阳台的 20 人顶奢现代游艇 + 配备 2 名国家公园认证自然学家（平均1名向导仅带10位客人，讲解细致入微）",
     "tip": "Luxury 豪华档（Tier 2）里的全能模范生，常有早鸟 8 折特惠，性价比极高。",
     "url": "https://www.galapagoscruiselinks.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Blue-footed_Booby_Galapagos.jpg/1280px-Blue-footed_Booby_Galapagos.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Piquero_patiazul_%28Sula_nebouxii%29%2C_isla_Lobos%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-25%2C_DD_35.JPG/1280px-Piquero_patiazul_%28Sula_nebouxii%29%2C_isla_Lobos%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-25%2C_DD_35.JPG",
+    "lat": -0.74,
+    "lon": -90.31,
+    "imageCredit": "Piquero patiazul (Sula nebouxii), isla Lobos, islas Galápagos, Ecuador, 2015-07-25, DD 35.JPG"
   },
   {
     "rank": 48,
@@ -1102,7 +1242,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "加拉帕戈斯“一等船（First Class Tier 3）”全场性价比之王！船龄新、双体船稳不晕船，且促销期直接赠送价值 $550 的厄瓜多尔大陆往返加拉帕戈斯机票",
     "tip": "扣除赠送的 $550 机票后，纯船宿仅合 $550/晚，和豪华顶奢船去的是完全相同的核心岛屿登陆点！",
     "url": "https://www.galapagoscruiselinks.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Giant_Tortoise_Santa_Cruz_Galapagos.jpg/1280px-Giant_Tortoise_Santa_Cruz_Galapagos.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Sail_boat_Puerto_Ayora_Galapagos_Santa_Cruz_Island.JPG/1280px-Sail_boat_Puerto_Ayora_Galapagos_Santa_Cruz_Island.JPG",
+    "lat": -0.74,
+    "lon": -90.31,
+    "imageCredit": "Sail boat Puerto Ayora Galapagos Santa Cruz Island.JPG"
   },
   {
     "rank": 49,
@@ -1125,7 +1268,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "加拉帕戈斯硬核野生动物玩家的首选高口碑科考船：把每一分预算都花在黄金航线审批（直插最偏远的费尔南迪纳岛看不会飞的弱翅鸬鹚与企鹅）和顶级向导上",
     "tip": "虽然没有大阳台和按摩浴缸，但干净整洁、餐食地道，能省下一半预算多玩两三天西线秘境。",
     "url": "https://www.galapagoscruiselinks.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Galapagos_Penguin_on_Isabela.jpg/1280px-Galapagos_Penguin_on_Isabela.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Gal%C3%A1pagos_penguin_%28Spheniscus_mendiculus%29_male.jpg/1280px-Gal%C3%A1pagos_penguin_%28Spheniscus_mendiculus%29_male.jpg",
+    "lat": -0.95,
+    "lon": -90.97,
+    "imageCredit": "Galápagos penguin (Spheniscus mendiculus) male.jpg"
   },
   {
     "rank": 50,
@@ -1148,7 +1294,10 @@ window.LUXURY_CRUISES_TOP50 = [
     "highlight": "前身为英国皇家海军远洋测量船 HMS Beagle，配备远洋级零航速陀螺减摇鳍（在跨越班达海大风浪时稳如泰山） + 全年常驻东印尼珊瑚大三角",
     "tip": "如果你既想去四王群岛/科莫多，又担心传统木质帆船过海峡摇晃，60米钢壳带减摇鳍的 Aqua Blu 是唯一解。",
     "url": "https://www.aquaexpeditions.com/",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Banda_Neira_Volcano_Indonesia.jpg/1280px-Banda_Neira_Volcano_Indonesia.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Banda_Neira_Banner.jpg/1280px-Banda_Neira_Banner.jpg",
+    "lat": -4.52,
+    "lon": 129.9,
+    "imageCredit": "Banda Neira Banner.jpg"
   }
 ];
 

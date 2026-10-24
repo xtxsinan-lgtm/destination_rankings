@@ -52,6 +52,10 @@ const WEIGHT_PRESETS = {
 
 const SORT_LABELS = {
   "score-desc": "加权总分 ↓",
+  "weather-comfort-desc": "出行周天气舒适度 ↓",
+  "water7d-desc": "出行周水温 ↓",
+  "clear7d-desc": "出行周晴天比例 ↓",
+  "rain7d-asc": "出行周降雨最少 ↑",
   "price-asc": "5晚房价 ↑",
   "cp-desc": "性价比指数 ↓",
   "beach-desc": "纯海滩硬实力 ↓",
@@ -231,14 +235,68 @@ function cleanTags(tags) {
   return (tags || []).filter(t => !FLIGHT_TAG_RE.test(t));
 }
 
+// ---------------------------------------------------------------------------
+// 365-Day Weather Spark Calendar & 7-Day Window Engine
+// ---------------------------------------------------------------------------
+
+const MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const MONTH_OFFSETS = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+const MONTH_NAMES_ZH = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
+
+function dateToDoy(month, day) {
+  const m = Math.max(1, Math.min(12, Number(month) || 1));
+  const maxD = MONTH_DAYS[m - 1];
+  const d = Math.max(1, Math.min(maxD, Number(day) || 1));
+  return MONTH_OFFSETS[m - 1] + (d - 1);
+}
+
+function doyToDate(doy) {
+  const idx = ((Math.round(doy) % 365) + 365) % 365;
+  let m = 12;
+  for (let i = 0; i < 12; i++) {
+    if (idx < MONTH_OFFSETS[i] + MONTH_DAYS[i]) {
+      m = i + 1;
+      break;
+    }
+  }
+  const d = idx - MONTH_OFFSETS[m - 1] + 1;
+  return { month: m, day: d, label: `${m}月${d}日` };
+}
+
+function getDefaultTravelDate() {
+  const now = new Date();
+  const m = now.getMonth() + 1;
+  const d = Math.min(now.getDate(), MONTH_DAYS[m - 1]);
+  return { month: m, day: d };
+}
+
+const DEFAULT_WEATHER_RULES = {
+  filterCold: true,
+  minWater: 22,
+  minLow: 18,
+  minHigh: 24,
+  filterHot: true,
+  maxHigh: 34.5, // Beach-specific high threshold (significantly higher than land sightseeing)
+  maxWater: 31.5,
+  filterRain: true,
+  maxRain: 45,
+  minClear: 0
+};
+
+const initDate = getDefaultTravelDate();
+
 // Application State
 const state = {
   weights: { ...WEIGHT_PRESETS.default.weights },
   activePreset: "default",
+  travelMonth: initDate.month,
+  travelDay: initDate.day,
+  weatherFilterEnabled: true,
+  weatherRules: { ...DEFAULT_WEATHER_RULES },
   categoryFilter: "all", // 'all' | 'tropical' | 'seasonal'
   maxHours: 0,           // 0 = any; otherwise max estimated flight hours from origin
   origin: loadOrigin(),  // { name, en, code, lat, lon } | null
-  originMode: "all",     // 'all' | 'tropical' | 'budget'
+  originMode: "weather", // 'weather' | 'all' | 'budget'
   regionFilter: "all",
   maxPrice: 7000,
   minWaterTemp: 0,
@@ -249,6 +307,141 @@ const state = {
   factIndex: 0,
   compareIds: ["bora-bora", "seychelles-praslin-ladigue", "kota-kinabalu"]
 };
+
+function getTravelWindowMeta() {
+  const startDoy = dateToDoy(state.travelMonth, state.travelDay);
+  const endDoy = (startDoy + 6) % 365;
+  const s = doyToDate(startDoy);
+  const e = doyToDate(endDoy);
+  return {
+    startDoy,
+    endDoy,
+    startLabel: s.label,
+    endLabel: e.label,
+    rangeLabel: `${s.label}–${e.label}`,
+    fullLabel: `${s.label} – ${e.label}（出发后7天日均）`
+  };
+}
+
+function compute7DayWeather(destId, startDoy, fallbackNight = 20, fallbackWater = 24) {
+  const ws = (window.WEATHER_SPARK_365 || {})[destId];
+  let high = 0, low = 0, water = 0, waterLow = 0, waterHigh = 0, clear = 0, rain = 0;
+  let minLow = 99, maxHigh = -99, minWaterLow = 99, maxWaterHigh = -99;
+
+  if (ws && ws.high && ws.high.length === 365) {
+    for (let i = 0; i < 7; i++) {
+      const idx = (startDoy + i) % 365;
+      const h = ws.high[idx];
+      const l = ws.low[idx];
+      const w = ws.water[idx];
+      const wl = ws.waterLow ? ws.waterLow[idx] : w - 0.7;
+      const wh = ws.waterHigh ? ws.waterHigh[idx] : w + 0.7;
+      const c = ws.clear[idx];
+      const r = ws.rain[idx];
+      high += h;
+      low += l;
+      water += w;
+      waterLow += wl;
+      waterHigh += wh;
+      clear += c;
+      rain += r;
+      if (l < minLow) minLow = l;
+      if (h > maxHigh) maxHigh = h;
+      if (wl < minWaterLow) minWaterLow = wl;
+      if (wh > maxWaterHigh) maxWaterHigh = wh;
+    }
+    high = Math.round((high / 7) * 10) / 10;
+    low = Math.round((low / 7) * 10) / 10;
+    water = Math.round((water / 7) * 10) / 10;
+    waterLow = Math.round((waterLow / 7) * 10) / 10;
+    waterHigh = Math.round((waterHigh / 7) * 10) / 10;
+    clear = Math.round((clear / 7) * 10) / 10;
+    rain = Math.round((rain / 7) * 10) / 10;
+  } else {
+    low = fallbackNight;
+    high = fallbackNight + 6.5;
+    water = fallbackWater;
+    waterLow = Math.round((fallbackWater - 0.8) * 10) / 10;
+    waterHigh = Math.round((fallbackWater + 0.8) * 10) / 10;
+    clear = 55;
+    rain = 25;
+  }
+
+  const r = state.weatherRules;
+  const rawCold = low < r.minLow || high < r.minHigh || water < r.minWater;
+  const rawHot = high > r.maxHigh || water > r.maxWater;
+  const rawRain = rain > r.maxRain || clear < r.minClear;
+
+  const isTooCold = r.filterCold && rawCold;
+  const isTooHot = r.filterHot && rawHot;
+  const isTooRainy = r.filterRain && rawRain;
+  const passes = !state.weatherFilterEnabled || (!isTooCold && !isTooHot && !isTooRainy);
+
+  const failReasons = [];
+  if (rawCold) {
+    if (water < r.minWater) failReasons.push(`水温偏凉 ${water.toFixed(1)}°C`);
+    else if (low < r.minLow) failReasons.push(`夜温偏凉 ${low.toFixed(1)}°C`);
+    else failReasons.push(`白天气温 ${high.toFixed(1)}°C`);
+  }
+  if (rawHot) {
+    if (high > r.maxHigh) failReasons.push(`酷热高温 ${high.toFixed(1)}°C`);
+    if (water > r.maxWater) failReasons.push(`海水过烫 ${water.toFixed(1)}°C`);
+  }
+  if (rawRain) {
+    if (rain > r.maxRain) failReasons.push(`降雨率高 ${Math.round(rain)}%`);
+    if (clear < r.minClear) failReasons.push(`晴天偏少 ${Math.round(clear)}%`);
+  }
+
+  // Beach weather comfort score (0 - 100) for sorting & badges
+  // Optimal water: 26.5 - 29.5°C; Optimal high: 27.5 - 32.5°C; Optimal low: 21 - 25.5°C; plus clear sky & low rain
+  const waterPenalty = water < 25 ? (25 - water) * 5.5 : (water > 30 ? (water - 30) * 6 : 0);
+  const highPenalty = high < 26.5 ? (26.5 - high) * 3.5 : (high > 33 ? (high - 33) * 6.5 : 0);
+  const lowPenalty = low < 20 ? (20 - low) * 3 : (low > 26.5 ? (low - 26.5) * 3 : 0);
+  const skyBonus = (clear * 0.25) - (rain * 0.45);
+  const comfortScore = Math.max(0, Math.min(100, Math.round((82 - waterPenalty - highPenalty - lowPenalty + skyBonus) * 10) / 10));
+
+  let badgeText = "温暖适游";
+  let badgeClass = "";
+  if (isTooHot || (!state.weatherFilterEnabled && rawHot)) {
+    badgeText = `🔥 过于炎热 (${high.toFixed(1)}°C)`;
+    badgeClass = "is-warn";
+  } else if (isTooCold || (!state.weatherFilterEnabled && rawCold)) {
+    badgeText = `❄️ 不够暖和 (水${water.toFixed(1)}°C)`;
+    badgeClass = "is-cold";
+  } else if (isTooRainy || (!state.weatherFilterEnabled && rawRain)) {
+    badgeText = `🌧️ 雨水过多 (雨${Math.round(rain)}%)`;
+    badgeClass = "is-rain";
+  } else if (water >= 25.5 && high <= 33.0 && rain <= 25 && clear >= 45) {
+    badgeText = "☀️ 黄金适泳期";
+    badgeClass = "is-gold";
+  } else if (rain <= 35 && water >= 24.0) {
+    badgeText = "✅ 气候舒适";
+    badgeClass = "is-gold";
+  }
+
+  return {
+    high,
+    low,
+    water,
+    waterLow,
+    waterHigh,
+    clear,
+    rain,
+    rawCold,
+    rawHot,
+    rawRain,
+    isTooCold,
+    isTooHot,
+    isTooRainy,
+    passes,
+    failReasons,
+    comfortScore,
+    badgeText,
+    badgeClass,
+    wsUrl: ws ? ws.wsUrl : "",
+    wsName: ws ? ws.wsName : ""
+  };
+}
 
 function esc(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -312,6 +505,7 @@ function computeDefaultScore(dest) {
 
 function getEnrichedAll() {
   const raw = window.DESTINATIONS_DATA || [];
+  const startDoy = dateToDoy(state.travelMonth, state.travelDay);
   return raw.map(d => {
     const parsed = parseDestName(d);
     const defaultTotal = Math.round(computeDefaultScore(d) * 10) / 10;
@@ -321,6 +515,7 @@ function getEnrichedAll() {
     const geo = (window.DEST_GEO || {})[d.id];
     const o = state.origin;
     const km = (geo && o) ? haversineKm(o.lat, o.lon, geo[0], geo[1]) : null;
+    const w7 = compute7DayWeather(d.id, startDoy, d.coldestNight, d.coldestWater);
     return {
       ...d,
       _img: (window.DEST_IMAGES || {})[d.id] || null,
@@ -329,6 +524,7 @@ function getEnrichedAll() {
       _zh: parsed.zh,
       _en: parsed.en,
       _iso: parsed.iso,
+      _w7: w7,
       defaultTotal,
       weightedTotal,
       pureBeachScore,
@@ -337,13 +533,16 @@ function getEnrichedAll() {
   });
 }
 
-function matchesFilter(d, skipCatRegion = false) {
+function matchesFilter(d, skipCatRegion = false, skipWeather = false) {
+  if (!skipWeather && state.weatherFilterEnabled && d._w7 && !d._w7.passes) {
+    return false;
+  }
   if (!skipCatRegion) {
     if (state.categoryFilter !== "all" && d.category !== state.categoryFilter) return false;
     if (state.regionFilter !== "all" && d.region !== state.regionFilter) return false;
   }
   if (d.priceMin > state.maxPrice) return false;
-  if (d.coldestWater < state.minWaterTemp) return false;
+  if (state.minWaterTemp > 0 && d._w7 && d._w7.water < state.minWaterTemp) return false;
   if (state.verifiedOnly && !d.verified) return false;
 
   if (state.maxHours > 0 && d._hours != null && d._hours > state.maxHours) return false;
@@ -359,12 +558,20 @@ function matchesFilter(d, skipCatRegion = false) {
 
 function getProcessedData() {
   const enriched = getEnrichedAll();
-  const filtered = enriched.filter(d => matchesFilter(d, false));
+  const filtered = enriched.filter(d => matchesFilter(d, false, false));
 
   filtered.sort((a, b) => {
     switch (state.sortBy) {
       case "score-desc":
         return b.weightedTotal - a.weightedTotal || a.priceMin - b.priceMin;
+      case "weather-comfort-desc":
+        return (b._w7?.comfortScore || 0) - (a._w7?.comfortScore || 0) || b.weightedTotal - a.weightedTotal;
+      case "water7d-desc":
+        return (b._w7?.water || 0) - (a._w7?.water || 0) || b.weightedTotal - a.weightedTotal;
+      case "clear7d-desc":
+        return (b._w7?.clear || 0) - (a._w7?.clear || 0) || b.weightedTotal - a.weightedTotal;
+      case "rain7d-asc":
+        return (a._w7?.rain || 0) - (b._w7?.rain || 0) || b.weightedTotal - a.weightedTotal;
       case "price-asc":
         return a.priceMin - b.priceMin || b.weightedTotal - a.weightedTotal;
       case "price-desc":
@@ -498,26 +705,28 @@ function photoCredit(d) {
 
 function postcardHTML(d, rank, opts = {}) {
   const isCompared = state.compareIds.includes(d.id);
-  const isTrop = d.category === "tropical";
   const compact = opts.compact;
   const g = (window.DEST_GEO && window.DEST_GEO[d.id]) || [];
+  const w7 = d._w7 || compute7DayWeather(d.id, dateToDoy(state.travelMonth, state.travelDay), d.coldestNight, d.coldestWater);
+  const isWarn = w7.rawCold || w7.rawHot || w7.rawRain;
   return `
     <article class="postcard" data-dest-id="${esc(d.id)}" data-lat="${g[0] != null ? g[0] : ""}" data-lon="${g[1] != null ? g[1] : ""}" data-name="${esc(d._zh)}">
       <div class="pc-scene" onclick="openDestModal('${d.id}')">
         ${buildPostcardSVG(d, { prefix: opts.prefix || "pc" })}
         ${photoTag(d)}
         ${rank ? `<span class="pc-rank">No. ${rank}</span>` : ""}
-        <span class="pc-badge${isTrop ? "" : " is-seasonal"}">${isTrop ? "全年可游" : "季节性"}</span>
+        <span class="pc-badge${isWarn ? " is-seasonal" : ""}">${esc(w7.badgeText)}</span>
         <span class="pc-score"><b>${d.weightedTotal.toFixed(1)}</b><small>/100</small></span>
       </div>
       <div class="pc-body">
         <p class="pc-meta">${esc(d.region)}</p>
         <h3 class="pc-title" onclick="openDestModal('${d.id}')">${esc(d._zh)}</h3>
         ${d._en ? `<p class="pc-en">${esc(d._en)}</p>` : ""}
-        <div class="pc-facts">
-          <span>夜 <b>${d.coldestNight.toFixed(1)}°</b></span>
-          <span>水 <b>${d.coldestWater.toFixed(1)}°</b></span>
-          ${d._hours != null ? `<span>飞行约 <b>${fmtHours(d._hours)}h</b></span>` : `<span>$<b>${d.priceMin.toLocaleString()}</b></span>`}
+        <div class="pc-facts" style="flex-wrap:wrap;gap:6px 12px">
+          <span title="出行后7天日均最低~最高气温">🌡️ <b>${w7.low.toFixed(1)}°~${w7.high.toFixed(1)}°C</b></span>
+          <span title="出行后7天日均水温 (10%~90%区间: ${w7.waterLow.toFixed(1)}°~${w7.waterHigh.toFixed(1)}°C)">🌊 水 <b>${w7.water.toFixed(1)}°C</b> <small>(${w7.waterLow.toFixed(1)}°~${w7.waterHigh.toFixed(1)}°)</small></span>
+          <span title="出行后7天日均晴天比例与下雨概率">☀️ 晴 <b>${Math.round(w7.clear)}%</b> · 🌧️ 雨 <b>${Math.round(w7.rain)}%</b></span>
+          ${d._hours != null ? `<span>✈️ 约 <b>${fmtHours(d._hours)}h</b></span>` : ""}
         </div>
         ${compact ? "" : `
           <p class="pc-summary">${esc(d.note || "")}</p>
@@ -580,29 +789,218 @@ window.comparePair = function(idA, idB) {
 };
 
 // ---------------------------------------------------------------------------
+// Weather Spark 7-Day Travel Date Planner UI & Controls
+// ---------------------------------------------------------------------------
+
+function getQuickDatesList() {
+  const td = getDefaultTravelDate();
+  return [
+    { label: `今日 (${td.month}/${td.day})`, m: td.month, d: td.day },
+    { label: "元旦 1/1", m: 1, d: 1 },
+    { label: "春节 2/15", m: 2, d: 15 },
+    { label: "清明 4/5", m: 4, d: 5 },
+    { label: "五一 5/1", m: 5, d: 1 },
+    { label: "端午 6/10", m: 6, d: 10 },
+    { label: "暑假 7/15", m: 7, d: 15 },
+    { label: "八月 8/10", m: 8, d: 10 },
+    { label: "国庆 10/1", m: 10, d: 1 },
+    { label: "深秋 11/15", m: 11, d: 15 },
+    { label: "圣诞 12/25", m: 12, d: 25 }
+  ];
+}
+
+function populateTravelDateSelects() {
+  const mSel = document.getElementById("travel-month");
+  const dSel = document.getElementById("travel-day");
+  if (!mSel || !dSel) return;
+
+  if (!mSel.options.length) {
+    mSel.innerHTML = MONTH_NAMES_ZH.map((name, idx) =>
+      `<option value="${idx + 1}">${name}</option>`
+    ).join("");
+  }
+  mSel.value = String(state.travelMonth);
+
+  const maxDay = MONTH_DAYS[state.travelMonth - 1] || 31;
+  if (state.travelDay > maxDay) state.travelDay = maxDay;
+
+  dSel.innerHTML = Array.from({ length: maxDay }, (_, i) => i + 1).map(day =>
+    `<option value="${day}">${day}日</option>`
+  ).join("");
+  dSel.value = String(state.travelDay);
+}
+
+window.onTravelDateChange = function() {
+  const mSel = document.getElementById("travel-month");
+  const dSel = document.getElementById("travel-day");
+  if (!mSel || !dSel) return;
+  const newM = Number(mSel.value) || 1;
+  const maxD = MONTH_DAYS[newM - 1] || 31;
+  const newD = Math.min(Number(dSel.value) || 1, maxD);
+  state.travelMonth = newM;
+  state.travelDay = newD;
+  populateTravelDateSelects();
+  renderApp();
+  renderEliminatedSection();
+};
+
+window.pickQuickTravelDate = function(m, d) {
+  state.travelMonth = Number(m);
+  state.travelDay = Number(d);
+  populateTravelDateSelects();
+  renderApp();
+  renderEliminatedSection();
+};
+
+window.toggleWeatherFilterMaster = function(checked) {
+  state.weatherFilterEnabled = !!checked;
+  const el = document.getElementById("wp-enable-filter");
+  if (el) el.checked = state.weatherFilterEnabled;
+  renderApp();
+};
+
+window.onWeatherRuleChange = function() {
+  const r = state.weatherRules;
+  const fc = document.getElementById("wp-filter-cold");
+  const fh = document.getElementById("wp-filter-hot");
+  const fr = document.getElementById("wp-filter-rain");
+  if (fc) r.filterCold = fc.checked;
+  if (fh) r.filterHot = fh.checked;
+  if (fr) r.filterRain = fr.checked;
+
+  const mw = document.getElementById("wp-min-water");
+  const ml = document.getElementById("wp-min-low");
+  const mh = document.getElementById("wp-min-high");
+  const xh = document.getElementById("wp-max-high");
+  const xw = document.getElementById("wp-max-water");
+  const xr = document.getElementById("wp-max-rain");
+  const mc = document.getElementById("wp-min-clear");
+
+  if (mw) r.minWater = Number(mw.value);
+  if (ml) r.minLow = Number(ml.value);
+  if (mh) r.minHigh = Number(mh.value);
+  if (xh) r.maxHigh = Number(xh.value);
+  if (xw) r.maxWater = Number(xw.value);
+  if (xr) r.maxRain = Number(xr.value);
+  if (mc) r.minClear = Number(mc.value);
+
+  renderApp();
+};
+
+window.resetWeatherThresholds = function() {
+  state.weatherFilterEnabled = true;
+  state.weatherRules = { ...DEFAULT_WEATHER_RULES };
+  syncWeatherRuleInputs();
+  renderApp();
+};
+
+function syncWeatherRuleInputs() {
+  const r = state.weatherRules;
+  const master = document.getElementById("wp-enable-filter");
+  if (master) master.checked = state.weatherFilterEnabled;
+
+  const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = String(val); };
+  const setChk = (id, val) => { const el = document.getElementById(id); if (el) el.checked = !!val; };
+
+  setChk("wp-filter-cold", r.filterCold);
+  setChk("wp-filter-hot", r.filterHot);
+  setChk("wp-filter-rain", r.filterRain);
+  setVal("wp-min-water", r.minWater);
+  setVal("wp-min-low", r.minLow);
+  setVal("wp-min-high", r.minHigh);
+  setVal("wp-max-high", r.maxHigh);
+  setVal("wp-max-water", r.maxWater);
+  setVal("wp-max-rain", r.maxRain);
+  setVal("wp-min-clear", r.minClear);
+}
+
+function renderWeatherPlanner(allEnriched) {
+  populateTravelDateSelects();
+  const win = getTravelWindowMeta();
+
+  const badgeEl = document.getElementById("wp-window-badge");
+  if (badgeEl) {
+    badgeEl.textContent = `📅 ${win.fullLabel}`;
+  }
+
+  const thCol = document.getElementById("th-weather-col");
+  if (thCol) {
+    thCol.innerHTML = `${esc(win.rangeLabel)} (7天均值)<small>最高最低气温 / 水温 / 晴天 / 降雨</small>`;
+  }
+
+  const quickRow = document.getElementById("wp-quick-dates");
+  if (quickRow) {
+    const qList = getQuickDatesList();
+    quickRow.innerHTML = `<span class="wp-quick-lbl">热门出行档期：</span>` + qList.map(q => {
+      const active = state.travelMonth === q.m && state.travelDay === q.d;
+      return `<button type="button" class="wp-quick-btn" aria-pressed="${active}" onclick="pickQuickTravelDate(${q.m}, ${q.d})">${esc(q.label)}</button>`;
+    }).join("");
+  }
+
+  const r = state.weatherRules;
+  document.getElementById("wp-card-cold")?.classList.toggle("is-off", !state.weatherFilterEnabled || !r.filterCold);
+  document.getElementById("wp-card-hot")?.classList.toggle("is-off", !state.weatherFilterEnabled || !r.filterHot);
+  document.getElementById("wp-card-rain")?.classList.toggle("is-off", !state.weatherFilterEnabled || !r.filterRain);
+
+  const coldList = allEnriched.filter(d => d._w7.rawCold);
+  const hotList = allEnriched.filter(d => d._w7.rawHot);
+  const rainList = allEnriched.filter(d => d._w7.rawRain);
+  const passList = allEnriched.filter(d => d._w7.passes);
+
+  const coldBadge = document.getElementById("wp-cold-count");
+  const hotBadge = document.getElementById("wp-hot-count");
+  const rainBadge = document.getElementById("wp-rain-count");
+
+  if (coldBadge) coldBadge.textContent = `${r.filterCold && state.weatherFilterEnabled ? "已筛除" : "不达标"} ${coldList.length} 处`;
+  if (hotBadge) hotBadge.textContent = `${r.filterHot && state.weatherFilterEnabled ? "已筛除" : "超上限"} ${hotList.length} 处`;
+  if (rainBadge) rainBadge.textContent = `${r.filterRain && state.weatherFilterEnabled ? "已筛除" : "多雨"} ${rainList.length} 处`;
+
+  const sumEl = document.getElementById("wp-filtered-summary");
+  if (sumEl) {
+    const sampleCold = coldList.slice(0, 3).map(d => `${d._zh}(水${d._w7.water.toFixed(1)}°/低${d._w7.low.toFixed(1)}°)`).join("、");
+    const sampleHot = hotList.slice(0, 3).map(d => `${d._zh}(高${d._w7.high.toFixed(1)}°/水${d._w7.water.toFixed(1)}°)`).join("、");
+    const sampleRain = rainList.slice(0, 3).map(d => `${d._zh}(雨${Math.round(d._w7.rain)}%)`).join("、");
+
+    const parts = [];
+    if (coldList.length) parts.push(`❄️ <strong>不够暖和 ${coldList.length} 处</strong>：${esc(sampleCold)}${coldList.length > 3 ? " 等" : ""}`);
+    if (hotList.length) parts.push(`🔥 <strong>过于炎热 ${hotList.length} 处</strong>：${esc(sampleHot)}${hotList.length > 3 ? " 等" : ""}`);
+    if (rainList.length) parts.push(`🌧️ <strong>雨水过多 ${rainList.length} 处</strong>：${esc(sampleRain)}${rainList.length > 3 ? " 等" : ""}`);
+
+    const toggleBtn = state.weatherFilterEnabled
+      ? `<button type="button" class="text-link" onclick="toggleWeatherFilterMaster(false)">临时查看全部 145 处 (含天气劝退项)</button>`
+      : `<button type="button" class="text-link" style="color:var(--coral)" onclick="toggleWeatherFilterMaster(true)">重新开启 7 天天气自动过滤 (当前显示全部 145 处)</button>`;
+
+    sumEl.innerHTML = `
+      <div>
+        <span><strong>${esc(win.rangeLabel)} 统计：</strong>共 <strong>${passList.length} / 145</strong> 处通过当前天气筛选。</span>
+        ${parts.length ? `<span style="margin-left:6px">${parts.join(" ； ")}</span>` : ""}
+      </div>
+      <div>${toggleBtn}</div>
+    `;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Category & Region Chips
 // ---------------------------------------------------------------------------
 
 function renderChipBar() {
   const bar = document.getElementById("chip-bar");
   if (!bar) return;
-  const all = getEnrichedAll().filter(d => matchesFilter(d, true));
+  const allUnfilteredWeather = getEnrichedAll().filter(d => matchesFilter(d, true, true));
+  const allWeatherFiltered = allUnfilteredWeather.filter(d => !state.weatherFilterEnabled || d._w7.passes);
 
-  const totalCount = all.length;
-  const tropCount = all.filter(d => d.category === "tropical").length;
-  const seasCount = all.filter(d => d.category === "seasonal").length;
+  const win = getTravelWindowMeta();
+  const passCount = allUnfilteredWeather.filter(d => d._w7 && !d._w7.rawCold && !d._w7.rawHot && !d._w7.rawRain).length;
 
-  const catChips = [
-    { key: "all", label: "全部榜单", count: totalCount },
-    { key: "tropical", label: "全年真热带", count: tropCount },
-    { key: "seasonal", label: "季节性海岸", count: seasCount }
-  ].map(c =>
-    `<button type="button" class="chip" aria-pressed="${state.categoryFilter === c.key}" onclick="setCategoryChip('${c.key}')">${esc(c.label)}<span class="count">${c.count}</span></button>`
-  ).join("");
+  const modeChips = [
+    `<button type="button" class="chip" aria-pressed="${state.weatherFilterEnabled && state.categoryFilter === 'all'}" onclick="state.categoryFilter='all';toggleWeatherFilterMaster(true)">✨ ${esc(win.startLabel)}后7天适游<span class="count">${passCount}</span></button>`,
+    `<button type="button" class="chip" aria-pressed="${!state.weatherFilterEnabled && state.categoryFilter === 'all'}" onclick="state.categoryFilter='all';toggleWeatherFilterMaster(false)">全部 145 处 (不限天气)<span class="count">${allUnfilteredWeather.length}</span></button>`
+  ].join("");
 
-  const poolForRegion = all.filter(d => state.categoryFilter === "all" || d.category === state.categoryFilter);
+  const poolForRegion = allWeatherFiltered.filter(d => state.categoryFilter === "all" || d.category === state.categoryFilter);
   const regChips = [
-    `<button type="button" class="chip" aria-pressed="${state.regionFilter === 'all'}" onclick="setRegionChip('all')">全部海域</button>`
+    `<button type="button" class="chip" aria-pressed="${state.regionFilter === 'all'}" onclick="setRegionChip('all')">全部海域<span class="count">${poolForRegion.length}</span></button>`
   ].concat(
     REGIONS.map(r => {
       const cnt = poolForRegion.filter(d => d.region === r).length;
@@ -610,7 +1008,7 @@ function renderChipBar() {
     })
   ).join("");
 
-  bar.innerHTML = `${catChips}<span class="chip-sep" aria-hidden="true"></span>${regChips}`;
+  bar.innerHTML = `${modeChips}<span class="chip-sep" aria-hidden="true"></span>${regChips}`;
 }
 
 window.setCategoryChip = function(cat) {
@@ -660,6 +1058,9 @@ function renderDimCell(val, max) {
 // ---------------------------------------------------------------------------
 
 function renderApp() {
+  const allEnriched = getEnrichedAll();
+  renderWeatherPlanner(allEnriched);
+
   const data = getProcessedData();
 
   renderChipBar();
@@ -671,8 +1072,24 @@ function renderApp() {
   const topDestEl = document.getElementById("kpi-top-dest");
 
   if (totalCountEl) totalCountEl.textContent = data.length;
-  if (tropicalCountEl) tropicalCountEl.textContent = data.filter(d => d.category === "tropical").length;
-  if (seasonalCountEl) seasonalCountEl.textContent = data.filter(d => d.category === "seasonal").length;
+  if (tropicalCountEl) {
+    if (data.length) {
+      const avgL = (data.reduce((s, d) => s + d._w7.low, 0) / data.length).toFixed(1);
+      const avgH = (data.reduce((s, d) => s + d._w7.high, 0) / data.length).toFixed(1);
+      tropicalCountEl.innerHTML = `<span class="mono" style="font-size:24px">${avgL}° ~ ${avgH}°C</span>`;
+    } else {
+      tropicalCountEl.textContent = "—";
+    }
+  }
+  if (seasonalCountEl) {
+    if (data.length) {
+      const avgW = (data.reduce((s, d) => s + d._w7.water, 0) / data.length).toFixed(1);
+      const avgC = Math.round(data.reduce((s, d) => s + d._w7.clear, 0) / data.length);
+      seasonalCountEl.innerHTML = `<span class="mono" style="font-size:24px">${avgW}°C</span> <small>· 晴 ${avgC}%</small>`;
+    } else {
+      seasonalCountEl.textContent = "—";
+    }
+  }
 
   if (avgPriceEl) {
     const cheapest = data.length ? [...data].sort((a, b) => a.priceMin - b.priceMin)[0] : null;
@@ -684,8 +1101,10 @@ function renderApp() {
 
   const summaryEl = document.getElementById("results-summary");
   if (summaryEl) {
+    const win = getTravelWindowMeta();
     const presetName = state.activePreset === "custom" ? "自定义权重" : (WEIGHT_PRESETS[state.activePreset]?.label || "");
-    summaryEl.textContent = `共 ${data.length} 处 · ${SORT_LABELS[state.sortBy] || ""} · 权重：${presetName}${state.origin ? ` · 出发地：${state.origin.name}` : ""}`;
+    const wMode = state.weatherFilterEnabled ? `已按 ${win.rangeLabel} 自动过滤不适游天气` : `显示全部（未过滤 ${win.rangeLabel} 天气）`;
+    summaryEl.textContent = `共 ${data.length} 处 · ${wMode} · ${SORT_LABELS[state.sortBy] || ""} · 权重：${presetName}${state.origin ? ` · 出发地：${state.origin.name}` : ""}`;
   }
 
   const tableContainer = document.getElementById("table-view-container");
@@ -710,8 +1129,8 @@ function renderApp() {
 function emptyStateHTML() {
   return `
     <div class="empty-state">
-      <h3>没有匹配当前筛选条件的海滨目的地</h3>
-      <p>请尝试放宽水温、预算或直飞限制，或清空搜索关键词。</p>
+      <h3>没有匹配当前出行日期与筛选条件的海滨目的地</h3>
+      <p>可尝试调整出行日期、放宽未来7天水温/降雨阈值、或点击下方重置。</p>
       <button type="button" class="btn" onclick="resetFilters()">重置全部筛选</button>
     </div>
   `;
@@ -729,16 +1148,13 @@ function renderTable(data) {
   tbody.innerHTML = data.map((d, idx) => {
     const rank = idx + 1;
     const isCompared = state.compareIds.includes(d.id);
-    const catMark = d.category === "tropical"
-      ? `<span class="t-cat-mark" title="全年最冷月夜温≥18°C 且 水温≥21°C">真热带 No.${d.origRank}</span>`
-      : `<span class="t-cat-mark is-seasonal" title="季节性/亚热带/地中海">季节性 No.${d.origRank}</span>`;
+    const w7 = d._w7;
 
     const diff = Math.round((d.weightedTotal - d.defaultTotal) * 10) / 10;
     const diffHtml = diff !== 0
       ? `<span class="t-delta ${diff > 0 ? "up" : ""}">${diff > 0 ? "+" : ""}${diff.toFixed(1)}</span>`
       : "";
 
-    const isSeasonal = d.coldestNight < 18 || d.coldestWater < 21;
     const dimCells = Object.entries(DIM_LABELS).map(([k, meta]) =>
       `<td class="num">${renderDimCell(d.scores[k], meta.max)}</td>`
     ).join("");
@@ -750,7 +1166,7 @@ function renderTable(data) {
         </td>
         <td style="min-width:340px;max-width:440px">
           <div class="t-dest-cell">
-            <div class="t-thumb" onclick="openDestModal('${d.id}')" title="查看 ${esc(d._zh)} 完整档案">
+            <div class="t-thumb" onclick="openDestModal('${d.id}')" title="查看 ${esc(d._zh)} 完整档案与 365 天气候图">
               ${buildPostcardSVG(d, { prefix: "tb" })}
               ${photoTag(d, 330, "t-photo")}
             </div>
@@ -760,11 +1176,9 @@ function renderTable(data) {
                 ${d._en ? `<span class="t-en">${esc(d._en)}</span>` : ""}
               </div>
               <div class="t-meta">
-                ${catMark}
-                <span>·</span>
                 <span>${esc(d.region)}</span>
                 <span>·</span>
-                <span>最佳 ${esc(d.bestSeason)}</span>
+                <span>最佳窗口：${esc(d.bestSeason)}</span>
               </div>
               ${renderTravelBadge(d)}
               ${renderTags(d.tags)}
@@ -773,13 +1187,11 @@ function renderTable(data) {
           </div>
         </td>
         <td class="num">
-          <div class="t-climate">
-            <div>夜 ${d.coldestNight.toFixed(1)}°C</div>
-            <div>水 ${d.coldestWater.toFixed(1)}°C</div>
-          </div>
-          <div class="t-climate-sub ${isSeasonal ? "is-seasonal" : ""}">
-            <span class="dot"></span>
-            <span>${isSeasonal ? "分季节" : "365天适泳"}</span>
+          <div class="t-weather-box">
+            <span class="t-w-line" title="出发后7天日均最低气温 ~ 日均最高气温">🌡️ 气温 <b>${w7.low.toFixed(1)}° ~ ${w7.high.toFixed(1)}°C</b></span>
+            <span class="t-w-line" title="出发后7天日均水温（括弧内为10%~90%最低~最高水温区间）">🌊 水温 <b>${w7.water.toFixed(1)}°C</b> <small>(${w7.waterLow.toFixed(1)}°~${w7.waterHigh.toFixed(1)}°C)</small></span>
+            <span class="t-w-line" title="出发后7天日均晴天比例与下雨概率">☀️ 晴 <b>${Math.round(w7.clear)}%</b> · 🌧️ 雨 <b>${Math.round(w7.rain)}%</b></span>
+            <span class="t-w-pill ${w7.badgeClass}">${esc(w7.badgeText)}</span>
           </div>
         </td>
         <td class="num">
@@ -793,7 +1205,7 @@ function renderTable(data) {
             ${d.verified ? '<span class="v-dot" title="已实测核验"></span>' : ""}${esc(cleanPriceDisplay(d.priceDisplay))}
           </div>
           <div class="t-actions">
-            <button type="button" class="text-link" style="font-size:12px" onclick="openDestModal('${d.id}')">详单</button>
+            <button type="button" class="text-link" style="font-size:12px" onclick="openDestModal('${d.id}')">365天气候与详单</button>
             <a class="text-link" style="font-size:12px" href="${d.hotelUrl}" target="_blank" rel="noopener noreferrer">核验房价 ${icon("external")}</a>
             <button type="button" class="compare-toggle" aria-pressed="${isCompared}" onclick="toggleCompare('${d.id}')">
               ${icon(isCompared ? "check" : "plus")}<span>${isCompared ? "已选" : "对比"}</span>
@@ -824,9 +1236,11 @@ function renderCards(data) {
 function renderEliminatedSection() {
   const tbody = document.getElementById("eliminated-tbody");
   if (!tbody || !window.ELIMINATED_DESTINATIONS) return;
+  const startDoy = dateToDoy(state.travelMonth, state.travelDay);
 
   tbody.innerHTML = window.ELIMINATED_DESTINATIONS.map(d => {
     const parsed = parseDestName(d);
+    const w7 = compute7DayWeather(d.id, startDoy, d.coldestNight, d.coldestWater);
     const dimText = Object.entries(DIM_LABELS).map(([k, meta]) => {
       const weak = d.scores[k] / meta.max < 0.6;
       return `<span class="mono" style="${weak ? 'color:var(--coral);font-weight:600' : 'color:var(--ink-2)'}">${meta.short} ${d.scores[k]}</span>`;
@@ -838,7 +1252,12 @@ function renderEliminatedSection() {
           <span class="t-title" style="cursor:default;font-size:15px">${esc(parsed.zh)}</span>
           ${parsed.en ? `<span class="t-en" style="display:block">${esc(parsed.en)}</span>` : ""}
         </td>
-        <td class="num mono" style="white-space:nowrap">夜 ${d.coldestNight}°C / 水 ${d.coldestWater}°C</td>
+        <td class="num" style="white-space:nowrap">
+          <div class="t-weather-box">
+            <span class="t-w-line">🌡️ <b>${w7.low.toFixed(1)}°~${w7.high.toFixed(1)}°C</b> · 🌊 <b>${w7.water.toFixed(1)}°C</b> <small>(${w7.waterLow.toFixed(1)}°~${w7.waterHigh.toFixed(1)}°)</small></span>
+            <span class="t-w-line">☀️ 晴 <b>${Math.round(w7.clear)}%</b> · 🌧️ 雨 <b>${Math.round(w7.rain)}%</b></span>
+          </div>
+        </td>
         <td class="num"><span class="t-total" style="font-size:24px;color:var(--ink-3)">${d.total.toFixed(1)}</span></td>
         <td style="font-size:12px;min-width:260px">${dimText}</td>
         <td class="mono" style="font-size:12.5px;white-space:nowrap">${esc(cleanPriceDisplay(d.priceDisplay))}</td>
@@ -1014,11 +1433,15 @@ window.openCompareModal = function() {
   const tdCell = (html, isBest) =>
     `<td>${html}${isBest ? '<span class="best-mark">★</span>' : ""}</td>`;
 
+  const win = getTravelWindowMeta();
   const weighted = items.map(d => d.weightedTotal);
   const pureBeach = items.map(d => d.pureBeachScore);
   const cpVals = items.map(d => d.cpIndex);
   const prices = items.map(d => d.priceMin);
-  const waters = items.map(d => d.coldestWater);
+  const w7Comfort = items.map(d => d._w7.comfortScore);
+  const w7Water = items.map(d => d._w7.water);
+  const w7Clear = items.map(d => d._w7.clear);
+  const w7Rain = items.map(d => d._w7.rain);
   const hasHours = state.origin && items.every(d => d._hours != null);
   const hours = hasHours ? items.map(d => Math.round(d._hours * 10) / 10) : [];
 
@@ -1057,12 +1480,24 @@ window.openCompareModal = function() {
               ${bestMark(weighted).map((b, i) => tdCell(`<span class="t-total" style="font-size:24px">${weighted[i].toFixed(1)}</span>`, b)).join("")}
             </tr>
             <tr>
-              <td>纯海滩硬实力 <span style="color:var(--ink-3);font-size:11.5px">/ 50</span></td>
-              ${bestMark(pureBeach).map((b, i) => tdCell(`<strong>${pureBeach[i].toFixed(1)}</strong> <span style="font-size:11.5px;color:var(--ink-3)">(海沙+玩水+风浪)</span>`, b)).join("")}
+              <td>${esc(win.rangeLabel)} 日均气温</td>
+              ${bestMark(w7Comfort).map((b, i) => tdCell(`<strong>${items[i]._w7.low.toFixed(1)}° ~ ${items[i]._w7.high.toFixed(1)}°C</strong> <span class="t-w-pill ${items[i]._w7.badgeClass}" style="margin-left:4px">${esc(items[i]._w7.badgeText)}</span>`, b)).join("")}
             </tr>
             <tr>
-              <td>最冷月夜温 / 水温</td>
-              ${bestMark(waters).map((b, i) => tdCell(`${items[i].coldestNight}° / ${items[i].coldestWater}°C <span style="font-size:11.5px;color:var(--ink-3)">(${items[i].category === "tropical" ? "全年适泳" : "季节性"})</span>`, b)).join("")}
+              <td>${esc(win.rangeLabel)} 日均水温</td>
+              ${bestMark(w7Water).map((b, i) => tdCell(`<strong>${items[i]._w7.water.toFixed(1)}°C</strong> <span style="font-size:11.5px;color:var(--ink-3)">(${items[i]._w7.waterLow.toFixed(1)}°~${items[i]._w7.waterHigh.toFixed(1)}°C)</span>`, b)).join("")}
+            </tr>
+            <tr>
+              <td>${esc(win.rangeLabel)} 晴天比例</td>
+              ${bestMark(w7Clear).map((b, i) => tdCell(`☀️ <strong>${Math.round(items[i]._w7.clear)}%</strong>`, b)).join("")}
+            </tr>
+            <tr>
+              <td>${esc(win.rangeLabel)} 下雨概率</td>
+              ${bestMark(w7Rain, false).map((b, i) => tdCell(`🌧️ <strong>${Math.round(items[i]._w7.rain)}%</strong>`, b)).join("")}
+            </tr>
+            <tr>
+              <td>纯海滩硬实力 <span style="color:var(--ink-3);font-size:11.5px">/ 50</span></td>
+              ${bestMark(pureBeach).map((b, i) => tdCell(`<strong>${pureBeach[i].toFixed(1)}</strong> <span style="font-size:11.5px;color:var(--ink-3)">(海沙+玩水+风浪)</span>`, b)).join("")}
             </tr>
             <tr>
               <td>5 晚参考价</td>
@@ -1152,8 +1587,119 @@ function buildMultiRadarSVG(items, strokes, fills) {
 }
 
 // ---------------------------------------------------------------------------
-// Destination dossier dialog (#dest-modal)
+// 365-Day Weather Spark Interactive Chart & Destination Dossier (#dest-modal)
 // ---------------------------------------------------------------------------
+
+function buildWeatherSpark365SVG(destId, startDoy) {
+  const ws = (window.WEATHER_SPARK_365 || {})[destId];
+  if (!ws || !ws.high || ws.high.length !== 365) return "";
+
+  const W = 760, H = 264;
+  const padL = 38, padR = 16;
+  const plotW = W - padL - padR;
+
+  // Top panel: Temperatures (Air High/Low + Water High/Low/Avg)
+  const tTop = 18, tBot = 148, tH = tBot - tTop;
+  const allTemps = [...ws.high, ...ws.low, ...ws.waterLow, ...ws.waterHigh];
+  const minT = Math.floor(Math.min(...allTemps, 12) / 5) * 5;
+  const maxT = Math.ceil(Math.max(...allTemps, 36) / 5) * 5;
+  const yTemp = v => Math.round((tBot - ((v - minT) / (maxT - minT)) * tH) * 10) / 10;
+  const xDay = i => Math.round((padL + (i / 364) * plotW) * 10) / 10;
+
+  // Bottom panel: Sky Clear % & Rain Probability %
+  const pTop = 172, pBot = 236, pH = pBot - pTop;
+  const yPct = v => Math.round((pBot - (Math.max(0, Math.min(100, v)) / 100) * pH) * 10) / 10;
+
+  const linePath = (arr, yFn) =>
+    arr.map((v, i) => `${i === 0 ? "M" : "L"}${xDay(i)},${yFn(v)}`).join(" ");
+
+  const bandPath = (lowArr, highArr, yFn) => {
+    const fwd = lowArr.map((v, i) => `${i === 0 ? "M" : "L"}${xDay(i)},${yFn(v)}`).join(" ");
+    const rev = [];
+    for (let i = highArr.length - 1; i >= 0; i--) {
+      rev.push(`L${xDay(i)},${yFn(highArr[i])}`);
+    }
+    return `${fwd} ${rev.join(" ")} Z`;
+  };
+
+  const areaPath = (arr, yFn, baseY) => {
+    const fwd = arr.map((v, i) => `${i === 0 ? "M" : "L"}${xDay(i)},${yFn(v)}`).join(" ");
+    return `${fwd} L${xDay(364)},${baseY} L${xDay(0)},${baseY} Z`;
+  };
+
+  const tempTicks = [];
+  for (let t = minT; t <= maxT; t += 5) {
+    const y = yTemp(t);
+    tempTicks.push(`
+      <line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#e6decb" stroke-width="0.8" ${t === 22 || t === 35 ? 'stroke-dasharray="3 3"' : ""}/>
+      <text x="${padL - 5}" y="${y + 3.5}" text-anchor="end" font-size="10" fill="#87918f">${t}°</text>
+    `);
+  }
+
+  const pctTicks = [0, 50, 100].map(p => {
+    const y = yPct(p);
+    return `
+      <line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#e6decb" stroke-width="0.8" ${p === 50 ? 'stroke-dasharray="2 3"' : ""}/>
+      <text x="${padL - 5}" y="${y + 3.5}" text-anchor="end" font-size="10" fill="#87918f">${p}%</text>
+    `;
+  }).join("");
+
+  const monthLines = MONTH_OFFSETS.map((off, idx) => {
+    const x = xDay(off);
+    const midX = xDay(off + Math.floor(MONTH_DAYS[idx] / 2));
+    return `
+      <line x1="${x}" y1="${tTop}" x2="${x}" y2="${pBot}" stroke="#ece4d5" stroke-width="0.8"/>
+      <text x="${midX}" y="${H - 6}" text-anchor="middle" font-size="10.5" fill="#4b5a63">${idx + 1}月</text>
+    `;
+  }).join("");
+
+  // Selected 7-day travel window highlight
+  const winX1 = xDay(startDoy);
+  const winW = Math.max(8, (7 / 365) * plotW);
+  const winMeta = getTravelWindowMeta();
+
+  return `
+    <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weather Spark 365天逐日气温、水温、晴天与降雨率曲线" onclick="clickModalWeatherChart(event, '${esc(destId)}', ${padL}, ${plotW}, ${W})">
+      <rect x="${padL}" y="${tTop}" width="${plotW}" height="${tH}" fill="#fbf8f2" rx="2"/>
+      <rect x="${padL}" y="${pTop}" width="${plotW}" height="${pH}" fill="#fbf8f2" rx="2"/>
+      ${monthLines}
+      ${tempTicks.join("")}
+      ${pctTicks}
+      <!-- Water 10th-90th percentile band & daily average water temp -->
+      <path d="${bandPath(ws.waterLow, ws.waterHigh, yTemp)}" fill="rgba(43, 139, 146, 0.22)"/>
+      <path d="${linePath(ws.water, yTemp)}" fill="none" stroke="#2b8b92" stroke-width="2.2"/>
+      <!-- Air High & Low daily averages -->
+      <path d="${linePath(ws.high, yTemp)}" fill="none" stroke="#e0674a" stroke-width="2.0"/>
+      <path d="${linePath(ws.low, yTemp)}" fill="none" stroke="#14425f" stroke-width="1.7" stroke-dasharray="3 2"/>
+      <!-- Clear sky % and Rain probability % -->
+      <path d="${areaPath(ws.clear, yPct, pBot)}" fill="rgba(235, 168, 52, 0.16)"/>
+      <path d="${linePath(ws.clear, yPct)}" fill="none" stroke="#d9921e" stroke-width="1.8"/>
+      <path d="${areaPath(ws.rain, yPct, pBot)}" fill="rgba(52, 112, 168, 0.18)"/>
+      <path d="${linePath(ws.rain, yPct)}" fill="none" stroke="#3470a8" stroke-width="1.8"/>
+      <!-- 7-day travel window highlight -->
+      <rect x="${winX1}" y="${tTop}" width="${winW}" height="${pBot - tTop}" fill="rgba(224, 103, 74, 0.18)" stroke="#e0674a" stroke-width="1.2"/>
+      <text x="${Math.min(W - padR - 55, Math.max(padL + 4, winX1))}" y="${tTop - 4}" font-size="10.5" font-weight="600" fill="#e0674a">▼ ${esc(winMeta.rangeLabel)}</text>
+      <text x="${padL + 6}" y="${tTop + 13}" font-size="10.5" font-weight="600" fill="#4b5a63">气温与海水温度 (365天逐日曲线 · 点击图表任意位置可切换出行日期)</text>
+      <text x="${padL + 6}" y="${pTop + 13}" font-size="10.5" font-weight="600" fill="#4b5a63">晴天比例 vs 下雨概率 (%)</text>
+    </svg>
+  `;
+}
+
+window.clickModalWeatherChart = function(evt, destId, padL, plotW, viewW) {
+  const svg = evt.currentTarget;
+  if (!svg) return;
+  const rect = svg.getBoundingClientRect();
+  const relX = ((evt.clientX - rect.left) / rect.width) * viewW;
+  const ratio = Math.max(0, Math.min(1, (relX - padL) / plotW));
+  const doy = Math.round(ratio * 364);
+  const dt = doyToDate(doy);
+  state.travelMonth = dt.month;
+  state.travelDay = dt.day;
+  populateTravelDateSelects();
+  renderApp();
+  renderEliminatedSection();
+  openDestModal(destId);
+};
 
 window.openDestModal = function(id) {
   const modal = document.getElementById("dest-modal");
@@ -1167,11 +1713,14 @@ window.openDestModal = function(id) {
 
   const rank = all.findIndex(x => x.id === id) + 1;
   const isCompared = state.compareIds.includes(d.id);
-  const isTrop = d.category === "tropical";
+  const win = getTravelWindowMeta();
+  const w7 = d._w7;
 
   const travelBlock = state.origin && d._hours != null
     ? `<div class="flight-row"><span>从${esc(state.origin.name)}出发</span><span class="ok">约 ${fmtHours(d._hours)} 小时<br><small style="font-weight:400;color:var(--ink-3)">直线 ${Math.round(d._km).toLocaleString()} km · 不含转机</small></span></div>`
     : `<p style="font-size:13px;color:var(--ink-3)">在「从你的城市出发」里设置出发地后，这里会显示估算飞行时间。</p>`;
+
+  const chartSvg = buildWeatherSpark365SVG(d.id, win.startDoy);
 
   body.innerHTML = `
     <div class="dossier-hero">
@@ -1181,16 +1730,57 @@ window.openDestModal = function(id) {
       <button type="button" class="dialog-close" onclick="closeDestModal()" aria-label="关闭">${icon("close")}</button>
     </div>
     <div class="dossier-head">
-      <span class="eyebrow">${esc(d.region)} · ${isTrop ? "全年真热带" : "季节性海岸"} 原榜第 ${d.origRank} 名</span>
+      <span class="eyebrow">${esc(d.region)} · ${esc(win.rangeLabel)} <span class="t-w-pill ${w7.badgeClass}" style="margin-left:6px">${esc(w7.badgeText)}</span></span>
       <h2 id="dest-modal-title">${esc(d._zh)}${d._en ? `<span>${esc(d._en)}</span>` : ""}</h2>
       <dl class="dossier-stats">
-        <div><dt>当前排名</dt><dd>${rank > 0 ? `No. ${rank}` : "—"}</dd></div>
+        <div><dt>当前排名</dt><dd>${rank > 0 ? `No. ${rank}` : "天气已筛除"}</dd></div>
         <div><dt>综合得分</dt><dd>${d.weightedTotal.toFixed(1)}</dd></div>
-        <div><dt>最冷月夜温 / 水温</dt><dd>${d.coldestNight}° / ${d.coldestWater}°</dd></div>
+        <div><dt>${esc(win.rangeLabel)} 水温</dt><dd>${w7.water.toFixed(1)}°C</dd></div>
         <div><dt>5 晚参考价</dt><dd>$${d.priceMin.toLocaleString()}</dd></div>
       </dl>
     </div>
     <div class="dialog-body">
+      <div class="ws-dossier-section">
+        <div class="ws-dossier-head">
+          <div>
+            <p class="block-h" style="margin-bottom:2px">Weather Spark · 365天逐日气候与出行周天气报告</p>
+            <p style="font-size:13px;color:var(--ink-2)">所选出行窗口：<strong>${esc(win.fullLabel)}</strong> ${w7.failReasons.length ? `<span style="color:var(--coral);margin-left:8px">⚠️ 留意：${esc(w7.failReasons.join("、"))}</span>` : `<span style="color:var(--lagoon);margin-left:8px">✓ 符合海滨温暖适泳、防暑与少雨标准</span>`}</p>
+          </div>
+          ${w7.wsUrl ? `<a class="text-link" style="font-size:12px" href="${esc(w7.wsUrl)}" target="_blank" rel="noopener noreferrer">数据源：Weather Spark (${esc(w7.wsName.split(",")[0])}) ${icon("external")}</a>` : ""}
+        </div>
+        <dl class="ws-dossier-cards">
+          <div class="ws-d-card">
+            <dt>日均最低 ~ 最高气温</dt>
+            <dd>${w7.low.toFixed(1)}° ~ ${w7.high.toFixed(1)}°C<small>海滨上限阈值 ≤${state.weatherRules.maxHigh}°C · 夜温底线 ≥${state.weatherRules.minLow}°C</small></dd>
+          </div>
+          <div class="ws-d-card">
+            <dt>日均水温 (最低~最高水温)</dt>
+            <dd>${w7.water.toFixed(1)}°C<small>10%–90% 区间：${w7.waterLow.toFixed(1)}° ~ ${w7.waterHigh.toFixed(1)}°C</small></dd>
+          </div>
+          <div class="ws-d-card">
+            <dt>7天日均晴天比例</dt>
+            <dd>☀️ ${w7.clear.toFixed(1)}%<small>碧空 / 少云晴好天气占比</small></dd>
+          </div>
+          <div class="ws-d-card">
+            <dt>7天日均下雨概率</dt>
+            <dd>🌧️ ${w7.rain.toFixed(1)}%<small>有效降水日概率（过滤上限 ≤${state.weatherRules.maxRain}%）</small></dd>
+          </div>
+        </dl>
+        ${chartSvg ? `
+          <div class="ws-chart-wrap">${chartSvg}</div>
+          <div class="ws-chart-legend">
+            <div class="ws-legend-items">
+              <span><i style="background:#e0674a"></i>日均最高气温</span>
+              <span><i style="background:#14425f"></i>日均最低气温</span>
+              <span><i style="background:#2b8b92"></i>日均水温 (含最低~最高水温带)</span>
+              <span><i style="background:#d9921e"></i>晴天比例 (%)</span>
+              <span><i style="background:#3470a8"></i>下雨概率 (%)</span>
+            </div>
+            <span>💡 点击上方全年曲线任意月份/日期，可即时切换出行日期</span>
+          </div>
+        ` : ""}
+      </div>
+
       <div class="dossier-grid">
         <div>
           <p class="block-h">八项得分</p>
@@ -1205,8 +1795,8 @@ window.openDestModal = function(id) {
           }).join("")}
         </div>
         <div>
-          <p class="block-h">最佳季节</p>
-          <p style="font-size:14px;color:var(--ink)">${esc(d.bestSeason)}</p>
+          <p class="block-h">最佳季节参考</p>
+          <p style="font-size:14px;color:var(--ink)">${esc(d.bestSeason)} <span style="color:var(--ink-3);font-size:12.5px">（全年最冷月夜温 ${d.coldestNight}°C / 水温 ${d.coldestWater}°C）</span></p>
           <p class="block-h" style="margin-top:24px">路程</p>
           ${travelBlock}
           <p class="dossier-note">${esc(d.note || "")}</p>
@@ -1258,7 +1848,7 @@ function renderPaletteResults(q) {
   const box = document.getElementById("palette-results");
   if (!box) return;
   const query = (q || "").trim().toLowerCase();
-  const all = getProcessedData();
+  const all = getEnrichedAll();
   const matches = query
     ? all.filter(d => `${d.name} ${d._zh} ${d._en} ${d.region} ${(d.tags || []).join(" ")} ${d.note || ""}`.toLowerCase().includes(query)).slice(0, 20)
     : all.slice(0, 12);
@@ -1273,7 +1863,7 @@ function renderPaletteResults(q) {
       <span class="palette-thumb">${buildPostcardSVG(d, { prefix: "pl" })}${photoTag(d, 250, "palette-photo")}</span>
       <span class="code" style="min-width:34px">${d.weightedTotal.toFixed(1)}</span>
       <span><strong style="font-family:var(--serif);font-weight:500;color:var(--ocean-deep)">${esc(d._zh)}</strong> <span style="font-family:var(--display);font-style:italic;color:var(--ink-3)">${esc(d._en)}</span></span>
-      <span class="sub">$${d.priceMin.toLocaleString()}</span>
+      <span class="sub">🌡️${d._w7.low.toFixed(0)}°~${d._w7.high.toFixed(0)}° · 🌊${d._w7.water.toFixed(1)}° · $${d.priceMin.toLocaleString()}</span>
     </button>
   `).join("");
 }
@@ -1310,10 +1900,13 @@ window.toggleTheme = function() {
 
 window.exportCSV = function() {
   const data = getProcessedData();
+  const win = getTravelWindowMeta();
   const headers = [
-    "当前排名", "原榜分类", "原榜排名", "目的地名称", "英文名", "所属区域",
-    "最冷月夜温(°C)", "最冷月水温(°C)", "最佳季节",
-    "加权总分", "默认总分",
+    "当前排名", "目的地名称", "英文名", "所属区域",
+    `${win.rangeLabel}日均最低温(°C)`, `${win.rangeLabel}日均最高温(°C)`,
+    `${win.rangeLabel}日均水温(°C)`, `${win.rangeLabel}最低水温(°C)`, `${win.rangeLabel}最高水温(°C)`,
+    `${win.rangeLabel}晴天比例(%)`, `${win.rangeLabel}下雨概率(%)`,
+    "最佳季节", "加权总分", "默认总分",
     "海沙(25)", "风景(15)", "玩水(15)", "风浪(10)", "酒店(10)", "餐饮(10)", "陆地(10)", "省心(5)",
     "5晚4★海景最低价(USD)", "房价说明", "亮点与避坑备注",
     state.origin ? `从${state.origin.name}估算飞行(小时)` : "估算飞行(小时)"
@@ -1321,13 +1914,16 @@ window.exportCSV = function() {
 
   const rows = data.map((d, idx) => [
     idx + 1,
-    d.category === "tropical" ? "365天真热带Top100" : "季节性/亚热带Top45",
-    d.origRank,
     `"${d._zh.replace(/"/g, '""')}"`,
     `"${d._en.replace(/"/g, '""')}"`,
     `"${d.region}"`,
-    d.coldestNight,
-    d.coldestWater,
+    d._w7.low.toFixed(1),
+    d._w7.high.toFixed(1),
+    d._w7.water.toFixed(1),
+    d._w7.waterLow.toFixed(1),
+    d._w7.waterHigh.toFixed(1),
+    d._w7.clear.toFixed(1),
+    d._w7.rain.toFixed(1),
     `"${d.bestSeason.replace(/"/g, '""')}"`,
     d.weightedTotal.toFixed(1),
     d.defaultTotal.toFixed(1),
@@ -1350,7 +1946,7 @@ window.exportCSV = function() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `oceanic_atlas_145_${state.categoryFilter}.csv`;
+  a.download = `oceanic_atlas_145_${state.travelMonth}_${state.travelDay}.csv`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -1366,6 +1962,9 @@ window.resetFilters = function() {
   state.verifiedOnly = false;
   state.searchQuery = "";
   state.sortBy = "score-desc";
+  state.weatherFilterEnabled = true;
+  state.weatherRules = { ...DEFAULT_WEATHER_RULES };
+  syncWeatherRuleInputs();
 
   document.getElementById("filter-category").value = "all";
   const hrs = document.getElementById("filter-hours");
@@ -1373,7 +1972,8 @@ window.resetFilters = function() {
   document.getElementById("filter-region").value = "all";
   document.getElementById("filter-price").value = 7000;
   updatePriceSliderUI();
-  document.getElementById("filter-water-temp").value = "0";
+  const wt = document.getElementById("filter-water-temp");
+  if (wt) wt.value = "0";
   document.getElementById("filter-verified").checked = false;
   document.getElementById("filter-search").value = "";
   updateSearchClearBtn();
@@ -1518,11 +2118,12 @@ function renderOriginFinder() {
   const out = document.getElementById("origin-results");
   if (!quick || !out) return;
 
+  const win = getTravelWindowMeta();
   const cities = window.ORIGIN_CITIES || [];
   const modeChips = [
-    { k: "all", label: "全部气候" },
-    { k: "tropical", label: "只看冬季适泳 (真热带)" },
-    { k: "budget", label: "5晚房价 ≤ $1,200" }
+    { k: "weather", label: `只看 ${win.rangeLabel} 天气适游` },
+    { k: "all", label: "全部 145 处 (不限天气)" },
+    { k: "budget", label: "适游且 5晚房价 ≤ $1,200" }
   ].map(m =>
     `<button type="button" class="chip" aria-pressed="${state.originMode === m.k}" onclick="setOriginMode('${m.k}')">${esc(m.label)}</button>`
   ).join("");
@@ -1541,14 +2142,14 @@ function renderOriginFinder() {
   if (input && document.activeElement !== input) input.value = state.origin ? state.origin.name : "";
 
   if (!state.origin) {
-    out.innerHTML = `<div class="origin-empty">选择或输入你的出发城市，我们会按估算飞行时间，把近处与远方最值得去的海岸分组列出来。</div>`;
+    out.innerHTML = `<div class="origin-empty">选择或输入你的出发城市，我们会按估算飞行时间与所选出行日期的未来7天天气，把近处与远方最值得去的海岸分组列出来。</div>`;
     return;
   }
 
   const all = getEnrichedAll().filter(d => {
     if (d._hours == null) return false;
-    if (state.originMode === "tropical" && d.category !== "tropical") return false;
-    if (state.originMode === "budget" && d.priceMin > 1200) return false;
+    if (state.originMode === "weather" && (d._w7.rawCold || d._w7.rawHot || d._w7.rawRain)) return false;
+    if (state.originMode === "budget" && ((d._w7.rawCold || d._w7.rawHot || d._w7.rawRain) || d.priceMin > 1200)) return false;
     return true;
   });
   out.innerHTML = DISTANCE_BANDS.map(b => {
@@ -1560,7 +2161,7 @@ function renderOriginFinder() {
       <div class="band">
         <div class="band-head"><h3>${b.title}</h3><span>${b.sub}</span></div>
         ${picks.length ? picks.map((d, i) => {
-          const topTag = cleanTags(d.tags)[0] || (d.category === "tropical" ? "全年适泳" : `最佳 ${d.bestSeason}`);
+          const w7 = d._w7;
           return `
           <button type="button" class="band-item" onclick="openDestModal('${d.id}')">
             <span class="band-thumb">
@@ -1570,11 +2171,11 @@ function renderOriginFinder() {
             <span class="band-text">
               <strong>${esc(d._zh)}</strong>
               <small>${esc(d.region)} · <b>${d.weightedTotal.toFixed(1)}分</b> · $${d.priceMin.toLocaleString()} 起</small>
-              <em class="band-reason">${esc(topTag)} · 夜 ${d.coldestNight}° / 水 ${d.coldestWater}°C</em>
+              <em class="band-reason">🌡️ ${w7.low.toFixed(0)}°~${w7.high.toFixed(0)}°C · 🌊 水${w7.water.toFixed(1)}°C · ☀️晴${Math.round(w7.clear)}% · 🌧️雨${Math.round(w7.rain)}%</em>
             </span>
             <span class="band-hours">${fmtHours(d._hours)}<small>h</small></span>
           </button>
-        `;}).join("") : `<p class="band-none">这个距离内暂无收录的海岸。</p>`}
+        `;}).join("") : `<p class="band-none">该航程内暂无符合当前出行周天气标准的海岸。</p>`}
       </div>
     `;
   }).join("");
@@ -1591,7 +2192,7 @@ window.sortByNearest = function() {
 
 // ---------------------------------------------------------------------------
 // Compare: rule-based + profile-enriched synthesis — computed live from each
-// destination's 8-dim scores, climate, price, origin distance & detailed note.
+// destination's 8-dim scores, 7-day travel weather, price, origin distance & note.
 // ---------------------------------------------------------------------------
 
 const DIM_KEYWORDS = {
@@ -1631,6 +2232,7 @@ function extractCaveatsFromNote(d) {
 }
 
 function buildAdvantages(items) {
+  const win = getTravelWindowMeta();
   return items.map(a => {
     const others = items.filter(x => x !== a);
     const pros = [];
@@ -1671,19 +2273,20 @@ function buildAdvantages(items) {
       }
     });
 
-    const waterGap = a.coldestWater - Math.max(...others.map(o => o.coldestWater));
-    if (waterGap >= 1.5) {
-      pros.push({ w: 14, title: "冬季海水更暖", detail: `最冷月水温 ${a.coldestWater}°C，比${nameOf(others)}高 ${waterGap.toFixed(1)}°C` });
+    const clearGap = a._w7.clear - Math.max(...others.map(o => o._w7.clear));
+    if (clearGap >= 10) {
+      pros.push({ w: 14.5, title: `${win.rangeLabel} 阳光最充足`, detail: `7天日均晴天比例 ${Math.round(a._w7.clear)}%，比对手高 ${Math.round(clearGap)}%` });
     }
-    const nightGap = a.coldestNight - Math.max(...others.map(o => o.coldestNight));
-    if (nightGap >= 2) {
-      pros.push({ w: 9, title: "冬夜体感更暖", detail: `最冷月夜温 ${a.coldestNight}°C，夜间海风无需厚外套` });
+    const rainGap = Math.min(...others.map(o => o._w7.rain)) - a._w7.rain;
+    if (rainGap >= 10) {
+      pros.push({ w: 14, title: `${win.rangeLabel} 降雨最少`, detail: `7天日均下雨概率仅 ${Math.round(a._w7.rain)}%，比对手低 ${Math.round(rainGap)}%` });
     }
-    if (a.category === "tropical" && others.some(o => o.category !== "tropical")) {
-      pros.push({ w: 12, title: "365 天全年适泳", detail: `全年夜温 ≥ 18°C、水温 ≥ 21°C；对比的${nameOf(others.filter(o => o.category !== "tropical"))}受季节限制` });
+    const waterGap = a._w7.water - Math.max(...others.map(o => o._w7.water));
+    if (waterGap >= 1.2 && a._w7.water <= 31.0) {
+      pros.push({ w: 13.5, title: `${win.rangeLabel} 海水更温暖`, detail: `7天日均水温 ${a._w7.water.toFixed(1)}°C (${a._w7.waterLow.toFixed(1)}°~${a._w7.waterHigh.toFixed(1)}°C)` });
     }
-    if (a.category !== "tropical" && others.some(o => o.category === "tropical")) {
-      cons.push({ w: 0.55, text: `季节性目的地（最佳窗口：${a.bestSeason}）` });
+    if (a._w7.failReasons.length) {
+      cons.push({ w: 0.9, text: `${win.rangeLabel} 天气留意：${a._w7.failReasons.join("、")}` });
     }
 
     const cheapestOther = Math.min(...others.map(o => o.priceMin));
@@ -1730,17 +2333,18 @@ function buildAdvantages(items) {
 
 function compareSummaryBannerHTML(items) {
   if (items.length < 2) return "";
+  const win = getTravelWindowMeta();
   const byScore = [...items].sort((a, b) => b.weightedTotal - a.weightedTotal);
-  const byBeach = [...items].sort((a, b) => b.pureBeachScore - a.pureBeachScore);
+  const byWeather = [...items].sort((a, b) => b._w7.comfortScore - a._w7.comfortScore);
   const byPrice = [...items].sort((a, b) => a.priceMin - b.priceMin);
-  const byWater = [...items].sort((a, b) => b.coldestWater - a.coldestWater);
+  const byWater = [...items].sort((a, b) => b._w7.water - a._w7.water);
   const hasOrigin = state.origin && items.every(d => d._hours != null);
   const byNear = hasOrigin ? [...items].sort((a, b) => a._hours - b._hours) : null;
 
   const pills = [
     `<span>🏆 <strong>当前偏好最高分：</strong>${esc(byScore[0]._zh)}（${byScore[0].weightedTotal.toFixed(1)}分）</span>`,
-    `<span>🌊 <strong>纯海水沙滩最强：</strong>${esc(byBeach[0]._zh)}（${byBeach[0].pureBeachScore.toFixed(1)}/50）</span>`,
-    `<span>🌡️ <strong>冬季水温最高：</strong>${esc(byWater[0]._zh)}（${byWater[0].coldestWater}°C）</span>`,
+    `<span>☀️ <strong>${esc(win.rangeLabel)}天气最佳：</strong>${esc(byWeather[0]._zh)}（晴 ${Math.round(byWeather[0]._w7.clear)}% · 雨 ${Math.round(byWeather[0]._w7.rain)}%）</span>`,
+    `<span>🌊 <strong>${esc(win.rangeLabel)}水温最高：</strong>${esc(byWater[0]._zh)}（${byWater[0]._w7.water.toFixed(1)}°C）</span>`,
     `<span>💰 <strong>5晚房价最省：</strong>${esc(byPrice[0]._zh)}（$${byPrice[0].priceMin.toLocaleString()}）</span>`
   ];
   if (byNear) {
@@ -1800,6 +2404,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (qView === "cards" || qView === "table") {
     state.viewMode = qView;
   }
+  const qDate = params.get("date");
+  if (qDate && /^\d{1,2}-\d{1,2}$/.test(qDate)) {
+    const [qm, qd] = qDate.split("-").map(Number);
+    if (qm >= 1 && qm <= 12 && qd >= 1 && qd <= 31) {
+      state.travelMonth = qm;
+      state.travelDay = Math.min(qd, MONTH_DAYS[qm - 1]);
+    }
+  }
+  syncWeatherRuleInputs();
 
   const qFrom = params.get("from");
   if (qFrom) {

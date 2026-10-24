@@ -343,7 +343,151 @@
     input[type="range"]::-moz-range-progress { height: 3px; border-radius: 3px; background: var(--lagoon); }
     input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ocean); }
 
-    /* Index: KPI + toolbar ------------------------------------------------- */
+    /* Index: KPI + toolbar + Weather Spark 7-day planner -------------------- */
+    .weather-planner {
+      margin-bottom: 32px;
+      padding: 24px 26px 22px;
+      background: var(--sand);
+      border: 1.5px solid var(--line-2);
+      border-radius: 8px;
+      box-shadow: 0 12px 32px -20px rgba(20, 66, 95, 0.25);
+    }
+    .wp-top {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line-2);
+    }
+    .wp-title-group { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .wp-kicker {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 3px 10px; border-radius: 999px;
+      background: var(--ocean); color: var(--paper);
+      font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em;
+    }
+    .wp-date-pick { display: inline-flex; align-items: center; gap: 8px; font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ocean-deep); }
+    .wp-date-pick select {
+      height: 36px; padding: 0 28px 0 12px; border: 1.5px solid var(--ocean); border-radius: 999px;
+      background-color: var(--paper); font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--ocean-deep);
+      -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2314425f' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M4.5 6.5L8 10l3.5-3.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 9px center; background-size: 13px;
+      cursor: pointer;
+    }
+    .wp-window-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 999px;
+      background: var(--lagoon-soft); color: var(--ocean-deep);
+      font-size: 12.5px; font-weight: 600;
+    }
+    .wp-master-toggle { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .wp-quick-row {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+      margin-top: 14px;
+    }
+    .wp-quick-lbl { font-size: 12px; font-weight: 600; color: var(--ink-3); margin-right: 4px; }
+    .wp-quick-btn {
+      height: 28px; padding: 0 11px; border-radius: 999px;
+      border: 1px solid var(--line-2); background: var(--paper);
+      font-size: 12px; color: var(--ink-2); transition: all 0.18s;
+    }
+    .wp-quick-btn:hover { border-color: var(--ocean); color: var(--ocean); }
+    .wp-quick-btn[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); color: var(--paper); font-weight: 500; }
+
+    .wp-rules-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px; margin-top: 16px;
+    }
+    .wp-rule-card {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 14px 16px; border-radius: 6px;
+      background: var(--paper); border: 1px solid var(--line-2);
+      transition: opacity 0.2s, border-color 0.2s;
+    }
+    .wp-rule-card.is-off { opacity: 0.58; }
+    .wp-rule-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .wp-rule-title { display: inline-flex; align-items: center; gap: 7px; font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--ocean-deep); cursor: pointer; }
+    .wp-rule-title input { width: 15px; height: 15px; accent-color: var(--ocean); cursor: pointer; }
+    .wp-cut-badge {
+      padding: 2px 9px; border-radius: 999px;
+      font-size: 11.5px; font-weight: 600;
+      background: var(--shell); color: var(--ink-2);
+    }
+    .wp-cut-badge.is-cold { background: #dceef2; color: #145369; }
+    .wp-cut-badge.is-hot { background: var(--coral-soft); color: #9c341c; }
+    .wp-cut-badge.is-rain { background: #e3e7ee; color: #34495e; }
+    .wp-rule-controls {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+      font-size: 12.5px; color: var(--ink-2);
+    }
+    .wp-rule-controls label { display: inline-flex; align-items: center; gap: 4px; }
+    .wp-rule-controls select {
+      height: 26px; padding: 0 20px 0 8px; border-radius: 4px;
+      border: 1px solid var(--line-2); background-color: var(--sand);
+      font-size: 12px; font-weight: 600; color: var(--ocean-deep);
+      -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%234b5a63' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='M4.5 6.5L8 10l3.5-3.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 5px center; background-size: 11px;
+      cursor: pointer;
+    }
+    .wp-rule-note { font-size: 11.5px; line-height: 1.55; color: var(--ink-3); }
+    .wp-filtered-bar {
+      margin-top: 14px; padding: 10px 14px; border-radius: 6px;
+      background: rgba(251, 248, 242, 0.78); border: 1px dashed var(--line-2);
+      font-size: 12.5px; line-height: 1.65; color: var(--ink-2);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
+    }
+    .wp-filtered-bar strong { color: var(--ocean-deep); font-weight: 600; }
+
+    /* Table & Card 7-day weather cell -------------------------------------- */
+    .t-weather-box {
+      display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px;
+      text-align: left; font-size: 12.5px; line-height: 1.45; white-space: nowrap;
+    }
+    .t-w-line { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-2); }
+    .t-w-line b { color: var(--ocean-deep); font-weight: 600; }
+    .t-w-line small { font-size: 11px; color: var(--ink-3); }
+    .t-w-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-top: 3px; padding: 1px 8px; border-radius: 999px;
+      font-size: 11px; font-weight: 600;
+      background: var(--lagoon-soft); color: var(--ocean-deep);
+    }
+    .t-w-pill.is-gold { background: #d5ecea; color: #0f5257; }
+    .t-w-pill.is-warn { background: var(--coral-soft); color: #9c341c; }
+    .t-w-pill.is-cold { background: #dceef2; color: #145369; }
+    .t-w-pill.is-rain { background: #e3e7ee; color: #34495e; }
+
+    /* Dossier 365-day Weather Spark section -------------------------------- */
+    .ws-dossier-section {
+      margin-bottom: 28px; padding: 20px 22px;
+      background: var(--sand); border: 1px solid var(--line-2); border-radius: 6px;
+    }
+    .ws-dossier-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 8px 16px; margin-bottom: 14px;
+    }
+    .ws-dossier-cards {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px; margin-bottom: 16px;
+    }
+    .ws-d-card {
+      padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 5px;
+    }
+    .ws-d-card dt { font-size: 11.5px; color: var(--ink-3); }
+    .ws-d-card dd { margin-top: 4px; font-family: var(--display); font-size: 22px; font-weight: 600; line-height: 1.15; color: var(--ocean-deep); }
+    .ws-d-card dd small { display: block; margin-top: 2px; font-family: var(--sans); font-size: 11.5px; font-weight: 400; color: var(--ink-2); }
+    .ws-chart-wrap {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 5px;
+      padding: 12px 14px 8px; overflow-x: auto;
+    }
+    .ws-chart-wrap svg { width: 100%; min-width: 600px; height: auto; cursor: pointer; }
+    .ws-chart-legend {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 8px 16px; margin-top: 8px; font-size: 11.5px; color: var(--ink-3);
+    }
+    .ws-legend-items { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .ws-legend-items span { display: inline-flex; align-items: center; gap: 5px; }
+    .ws-legend-items i { display: inline-block; width: 10px; height: 3px; border-radius: 2px; }
+
     .kpi-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-bottom: 40px; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); }
     .kpi-cell { padding: 20px 0 20px 24px; }
     .kpi-cell:first-child { padding-left: 0; }
@@ -795,7 +939,8 @@
       .brand-name { display: none; }
     }
     @media (max-width: 960px) {
-      .feature, .compare-layout, .dossier-grid { grid-template-columns: 1fr; }
+      .feature, .compare-layout, .dossier-grid, .wp-rules-grid { grid-template-columns: 1fr; }
+      .ws-dossier-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .adv-grid { grid-template-columns: 1fr !important; }
       .method-grid { grid-template-columns: 1fr; }
       .weight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -808,7 +953,7 @@
       .wrap { width: calc(100% - 36px); }
       .header-tools .label, .tool-btn kbd { display: none; }
       .hero { min-height: 820px; }
-      .ride-grid, .feature-pair, .origin-results { grid-template-columns: 1fr; }
+      .ride-grid, .feature-pair, .origin-results, .ws-dossier-cards { grid-template-columns: 1fr; }
       .feature-pair .postcard:nth-child(2) { margin-top: 0; }
       .weight-grid { grid-template-columns: 1fr; }
       .kpi-strip { grid-template-columns: 1fr 1fr; }
@@ -819,6 +964,7 @@
       .dossier-stats { grid-template-columns: 1fr 1fr; }
       .dossier-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
       .dialog-head, .dialog-body, .dossier-head { padding-left: 20px; padding-right: 20px; }
+      .weather-planner { padding: 18px 16px; }
     }
   </style>
 
@@ -1167,13 +1313,13 @@
       </svg>
 
       <div class="wrap hero-inner">
-        <span class="eyebrow">The Shoreline Edit · 2026 全球海岸度假图鉴</span>
-        <h1>寻一片冬天也能<br />下水的海，共 <em>145</em> 处</h1>
+        <span class="eyebrow">The Shoreline Edit · 2026 全球海岸度假图鉴 · Weather Spark 365天逐日气候驱动</span>
+        <h1>按你的<em>出行日期</em>，<br />锁定未来一周好天气的海，共 <em>145</em> 处</h1>
         <p class="hero-lede">
-          我们只问两件事：最冷的那个月，夜里吹海风要不要穿外套（夜温 ≥ 18°C）；海水能不能随时下去游（水温 ≥ 21°C）。按这把尺子，加上海水、风景、酒店、吃住等八项打分，整理出这份可以按你的偏好重新排序的海岸清单。
+          告别笼统的「真热带 / 季节性」二分法——我们接入全部 145 处海岸的 <strong>Weather Spark 365 天逐日历史气候与海洋水温数据</strong>。输入你的出行日期，系统会自动计算出发后<strong>一周内（7天）的日均最高/最低气温、最高/最低水温、晴天比例与下雨概率</strong>，并自动筛除不够暖和、过于炎热（采用海滨专属高耐受阈值）或雨水过多的海岛。
         </p>
         <div class="hero-actions">
-          <a class="btn btn-solid" href="#index"><span>浏览全部 145 处</span><span data-icon="arrowDown"></span></a>
+          <a class="btn btn-solid" href="#weather-planner"><span>选出行日期·智能筛海岛</span><span data-icon="arrowDown"></span></a>
           <a class="text-link" href="#weights"><span>按我的旅行方式重排</span><span data-icon="arrowRight"></span></a>
         </div>
       </div>
@@ -1181,9 +1327,9 @@
       <div class="hero-stats">
         <div class="wrap">
           <div class="hero-stat"><b>145</b><span>处海滨与海岛目的地</span></div>
-          <div class="hero-stat"><b>100</b><span>处全年真热带，四季可游</span></div>
-          <div class="hero-stat"><b>45</b><span>处季节性海岸，旺季巅峰</span></div>
-          <div class="hero-stat"><b>18° / 21°</b><span>最冷月夜温 / 水温底线</span></div>
+          <div class="hero-stat"><b>365 天</b><span>Weather Spark 逐日气温/水温/晴雨曲线</span></div>
+          <div class="hero-stat"><b>7 日窗口</b><span>按出行日期自动过滤未来一周天气</span></div>
+          <div class="hero-stat"><b>≤ 34.5°C</b><span>海滨专属防酷暑上限（显著高于陆地旅行）</span></div>
         </div>
       </div>
     </section>
@@ -1221,21 +1367,160 @@
     <section class="section is-paper" id="index">
       <div class="wrap">
         <header class="section-head">
-          <span class="eyebrow">The List</span>
-          <h2 class="section-title">全部 145 处海岸</h2>
-          <p class="section-note">点击名称查看完整档案，勾选「对比」可将最多三处放在一起比较。</p>
+          <span class="eyebrow">365-Day Weather Spark Filter &amp; Ranking</span>
+          <h2 class="section-title">按<em>出行日期</em>筛选全部 145 处海岸</h2>
+          <p class="section-note">选定出发日期，系统自动计算该日起未来 7 天的日均最高/最低气温、最高/最低水温、晴天比例与下雨概率，自动筛除太冷、太热或雨季海岛。</p>
         </header>
 
+        <!-- Weather Spark 7-Day Travel Date Filter Planner -->
+        <div class="weather-planner" id="weather-planner" role="region" aria-label="出行日期与未来一周天气过滤">
+          <div class="wp-top">
+            <div class="wp-title-group">
+              <span class="wp-kicker">Weather Spark · 365天气候库</span>
+              <div class="wp-date-pick">
+                <span>出行日期：</span>
+                <select id="travel-month" aria-label="出行月份" onchange="onTravelDateChange()"></select>
+                <select id="travel-day" aria-label="出行日期" onchange="onTravelDateChange()"></select>
+              </div>
+              <span class="wp-window-badge" id="wp-window-badge">计算未来 7 天平均天气…</span>
+            </div>
+            <div class="wp-master-toggle">
+              <label class="switch">
+                <input id="wp-enable-filter" type="checkbox" checked onchange="toggleWeatherFilterMaster(this.checked)" />
+                <span><strong>自动过滤出行周不适游天气</strong></span>
+              </label>
+              <button type="button" class="reset-btn" onclick="resetWeatherThresholds()">恢复默认天气标准</button>
+            </div>
+          </div>
+
+          <div class="wp-quick-row" id="wp-quick-dates" role="group" aria-label="热门出行日期快捷选择"></div>
+
+          <div class="wp-rules-grid">
+            <!-- Rule 1: Not Warm Enough -->
+            <div class="wp-rule-card" id="wp-card-cold">
+              <div class="wp-rule-head">
+                <label class="wp-rule-title">
+                  <input type="checkbox" id="wp-filter-cold" checked onchange="onWeatherRuleChange()" />
+                  <span>❄️ 筛选掉不够暖和</span>
+                </label>
+                <span class="wp-cut-badge is-cold" id="wp-cold-count">筛除 0 处</span>
+              </div>
+              <div class="wp-rule-controls">
+                <label>日均水温 ≥
+                  <select id="wp-min-water" onchange="onWeatherRuleChange()">
+                    <option value="18">18°C</option>
+                    <option value="20">20°C</option>
+                    <option value="21">21°C</option>
+                    <option value="22" selected>22°C</option>
+                    <option value="23">23°C</option>
+                    <option value="24">24°C</option>
+                    <option value="25">25°C</option>
+                    <option value="26">26°C</option>
+                  </select>
+                </label>
+                <label>最低气温 ≥
+                  <select id="wp-min-low" onchange="onWeatherRuleChange()">
+                    <option value="14">14°C</option>
+                    <option value="16">16°C</option>
+                    <option value="18" selected>18°C</option>
+                    <option value="20">20°C</option>
+                    <option value="22">22°C</option>
+                  </select>
+                </label>
+                <label>最高气温 ≥
+                  <select id="wp-min-high" onchange="onWeatherRuleChange()">
+                    <option value="20">20°C</option>
+                    <option value="22">22°C</option>
+                    <option value="24" selected>24°C</option>
+                    <option value="26">26°C</option>
+                  </select>
+                </label>
+              </div>
+              <p class="wp-rule-note">保障出行后 7 天内夜间吹海风不冷（低温 ≥18°C）、白天温暖且海水随时可下水游泳（水温 ≥22°C）。</p>
+            </div>
+
+            <!-- Rule 2: Too Hot (Beach-Specific Higher Threshold) -->
+            <div class="wp-rule-card" id="wp-card-hot">
+              <div class="wp-rule-head">
+                <label class="wp-rule-title">
+                  <input type="checkbox" id="wp-filter-hot" checked onchange="onWeatherRuleChange()" />
+                  <span>🔥 筛选掉过于炎热 <small style="font-weight:400;color:var(--coral)">(海滨高阈值)</small></span>
+                </label>
+                <span class="wp-cut-badge is-hot" id="wp-hot-count">筛除 0 处</span>
+              </div>
+              <div class="wp-rule-controls">
+                <label>日均最高温 ≤
+                  <select id="wp-max-high" onchange="onWeatherRuleChange()">
+                    <option value="32">32.0°C</option>
+                    <option value="33">33.0°C</option>
+                    <option value="34">34.0°C</option>
+                    <option value="34.5" selected>34.5°C</option>
+                    <option value="35.5">35.5°C</option>
+                    <option value="37">37.0°C</option>
+                    <option value="40">40.0°C</option>
+                  </select>
+                </label>
+                <label>日均水温 ≤
+                  <select id="wp-max-water" onchange="onWeatherRuleChange()">
+                    <option value="30.5">30.5°C</option>
+                    <option value="31">31.0°C</option>
+                    <option value="31.5" selected>31.5°C</option>
+                    <option value="32.5">32.5°C</option>
+                    <option value="34">34.0°C</option>
+                  </select>
+                </label>
+              </div>
+              <p class="wp-rule-note">海滨有海风与泡水降温，过热阈值显著高于陆地普通旅行（陆地 &gt;30°C 即闷热，海滨放宽至日均最高温 ≤34.5°C、水温 ≤31.5°C，仅筛除波斯湾/红海/沙漠海岸盛夏酷暑）。</p>
+            </div>
+
+            <!-- Rule 3: Too Much Rain -->
+            <div class="wp-rule-card" id="wp-card-rain">
+              <div class="wp-rule-head">
+                <label class="wp-rule-title">
+                  <input type="checkbox" id="wp-filter-rain" checked onchange="onWeatherRuleChange()" />
+                  <span>🌧️ 筛选掉雨水过多</span>
+                </label>
+                <span class="wp-cut-badge is-rain" id="wp-rain-count">筛除 0 处</span>
+              </div>
+              <div class="wp-rule-controls">
+                <label>日均下雨概率 ≤
+                  <select id="wp-max-rain" onchange="onWeatherRuleChange()">
+                    <option value="25">25%</option>
+                    <option value="35">35%</option>
+                    <option value="40">40%</option>
+                    <option value="45" selected>45%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="75">75%</option>
+                  </select>
+                </label>
+                <label>晴天比例 ≥
+                  <select id="wp-min-clear" onchange="onWeatherRuleChange()">
+                    <option value="0" selected>不限 (0%)</option>
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="40">40%</option>
+                    <option value="55">55%</option>
+                  </select>
+                </label>
+              </div>
+              <p class="wp-rule-note">基于 Weather Spark 逐日降水概率与晴空比例，自动避开目的地台风季、季风连阴雨与高频降水周。</p>
+            </div>
+          </div>
+
+          <div class="wp-filtered-bar" id="wp-filtered-summary"></div>
+        </div>
+
         <dl class="kpi-strip">
-          <div class="kpi-cell"><dt>当前符合条件</dt><dd><span id="kpi-total-count">145</span> <small>/ 145</small></dd></div>
-          <div class="kpi-cell"><dt>全年真热带</dt><dd id="kpi-tropical-count">100</dd></div>
-          <div class="kpi-cell"><dt>季节性海岸</dt><dd id="kpi-seasonal-count">45</dd></div>
+          <div class="kpi-cell"><dt id="kpi-col1-title">出行周天气适游</dt><dd><span id="kpi-total-count">145</span> <small>/ 145</small></dd></div>
+          <div class="kpi-cell"><dt id="kpi-col2-title">适游地7天日均气温</dt><dd id="kpi-tropical-count">—</dd></div>
+          <div class="kpi-cell"><dt id="kpi-col3-title">适游地7天水温 / 晴雨</dt><dd id="kpi-seasonal-count">—</dd></div>
           <div class="kpi-cell"><dt>最低 5 晚房价</dt><dd class="is-text" id="kpi-avg-price">—</dd></div>
-          <div class="kpi-cell"><dt>当前排名第一</dt><dd class="is-text" id="kpi-top-dest">—</dd></div>
+          <div class="kpi-cell"><dt>当前日期推荐第一</dt><dd class="is-text" id="kpi-top-dest">—</dd></div>
         </dl>
 
         <div class="toolbar">
-          <div class="chips" id="chip-bar" role="group" aria-label="按分类与海域筛选"></div>
+          <div class="chips" id="chip-bar" role="group" aria-label="按天气状态与海域筛选"></div>
 
           <select id="filter-category" hidden>
             <option value="all">all</option><option value="tropical">tropical</option><option value="seasonal">seasonal</option>
@@ -1263,19 +1548,18 @@
               <option value="9">飞行 9 小时内</option>
               <option value="14">飞行 14 小时内</option>
             </select>
-            <select id="filter-water-temp" class="select" aria-label="最冷月水温">
+            <select id="filter-water-temp" class="select" aria-label="出行周水温下限" hidden>
               <option value="0">水温不限</option>
-              <option value="21">最冷月水温 ≥ 21°C</option>
-              <option value="24">最冷月水温 ≥ 24°C</option>
-              <option value="26">最冷月水温 ≥ 26°C</option>
             </select>
             <select id="filter-sort" class="select" aria-label="排序">
               <option value="score-desc">按综合得分</option>
+              <option value="weather-comfort-desc">按出行周天气舒适度 ↓</option>
+              <option value="water7d-desc">按出行周水温从高到低 ↓</option>
+              <option value="clear7d-desc">按出行周晴天比例 ↓</option>
+              <option value="rain7d-asc">按出行周降雨最少 ↑</option>
               <option value="price-asc">房价从低到高</option>
               <option value="cp-desc">按性价比</option>
               <option value="beach-desc">按海滩本身</option>
-              <option value="water-desc">按冬季水温</option>
-              <option value="night-desc">按冬季夜温</option>
               <option value="near-asc">离出发地最近</option>
               <option value="price-desc">房价从高到低</option>
             </select>
@@ -1302,7 +1586,7 @@
               <tr>
                 <th class="num" style="width:52px">#</th>
                 <th>目的地</th>
-                <th class="num">最冷月<small>夜温 / 水温</small></th>
+                <th class="num" id="th-weather-col">出行后 7 天平均天气<small id="th-weather-sub">最高最低气温 / 水温 / 晴天 / 降雨</small></th>
                 <th class="num">综合<small>满分 100</small></th>
                 <th class="num">海水沙滩<small>25</small></th>
                 <th class="num">风景<small>15</small></th>
@@ -1329,7 +1613,7 @@
         <header class="section-head">
           <span class="eyebrow">From Your City</span>
           <h2 class="section-title">从你的城市出发，<em>多远</em>能看到好海</h2>
-          <p class="section-note">输入出发城市，按估算飞行时间把短途、中程与远行最值得去的海岸各挑四处。排名跟随上方你设置的权重。</p>
+          <p class="section-note">输入出发城市，结合上方所选出行日期的未来一周天气，按估算飞行时间把短途、中程与远行最值得去的海岸各挑四处。</p>
         </header>
         <div class="origin-bar">
           <span class="origin-label">我从</span>
@@ -1354,13 +1638,13 @@
       <div class="wrap">
         <header class="section-head">
           <span class="eyebrow">How We Rate</span>
-          <h2 class="section-title">三条规则，决定谁能上榜</h2>
+          <h2 class="section-title">三条规则，决定谁能上榜与何时适游</h2>
         </header>
         <div class="method-grid">
           <div>
-            <div class="method-figure">18°<small>/ 21°C</small></div>
-            <h3 class="method-title">用身体感受划线，而不是纬度</h3>
-            <p class="method-text">依据 WMO / NOAA 30 年气候统计，只有最冷月<strong>夜温 ≥ 18°C</strong>（晚上不用加外套）且<strong>水温 ≥ 21°C</strong>（随时能下水）的地方，才算「全年真热带」。圣灵群岛 7 月夜温 17.1°C，只差 0.9°C，也只能归入季节性海岸。</p>
+            <div class="method-figure">365<small>天 / 7日窗</small></div>
+            <h3 class="method-title">按出行日期算未来一周真天气</h3>
+            <p class="method-text">基于 Weather Spark 全年 365 天逐日历史气候与水温数据，选定出发日后自动计算未来 7 天均值：自动筛除<strong>不够暖和</strong>（水温 &lt;22°C 或夜温 &lt;18°C）、<strong>过于炎热</strong>（海滨专属上限：日均最高温 &gt;34.5°C 或水温 &gt;31.5°C，显著高于陆地观光）及<strong>雨水过多</strong>（日降水概率 &gt;45%）的目的地。</p>
           </div>
           <div>
             <div class="method-figure">45<small>分钟</small></div>
@@ -1370,7 +1654,7 @@
           <div>
             <div class="method-figure">76.5<small>分</small></div>
             <h3 class="method-title">统一的上榜分数线</h3>
-            <p class="method-text">百分制分配为：海水沙滩 25、风景 15、玩水 15、风浪 10、酒店 10、美食 10、陆地 10、安全省心 5。真热带第 100 名芭堤雅与季节性第 45 名涠洲岛同为<strong>76.5 分</strong>，低于此线的列入下方「遗珠」。</p>
+            <p class="method-text">百分制分配为：海水沙滩 25、风景 15、玩水 15、风浪 10、酒店 10、美食 10、陆地 10、安全省心 5。第 100 名芭堤雅与第 145 名涠洲岛同为<strong>76.5 分</strong>，低于此线的列入下方「遗珠」。</p>
           </div>
         </div>
       </div>
@@ -1382,14 +1666,14 @@
         <header class="section-head">
           <span class="eyebrow">Near Misses</span>
           <h2 class="section-title">气候达标，却差一点上榜</h2>
-          <p class="section-note">这些地方全年温暖，但因为某一项明显短板，综合分没能达到 76.5。</p>
+          <p class="section-note">这些地方在适宜季节同样温暖，但因为某一项明显短板，综合分没能达到 76.5。</p>
         </header>
         <div class="table-wrap">
           <table class="data-table">
             <thead>
               <tr>
                 <th>目的地</th>
-                <th class="num">最冷月夜温 / 水温</th>
+                <th class="num">出行后 7 天平均天气</th>
                 <th class="num">综合分</th>
                 <th>八项得分（珊瑚色为短板）</th>
                 <th>5 晚参考价</th>
@@ -1442,7 +1726,7 @@
       <div class="footer-top">
         <div>
           <a class="footer-brand" href="#top"><span data-brand></span><span class="brand-name">Oceanic Atlas</span></a>
-          <p class="footer-note">按体感气候底线与八项指标整理的全球海滨与海岛度假清单。气候数据来自 WMO / NOAA / JMA / BOM 30 年统计，房价核验自 Booking.com。封面照片来自 Wikimedia Commons，作者与许可见各目的地档案。飞行时间按直线距离估算，仅供参考。</p>
+          <p class="footer-note">按出行日期未来一周体感气候与八项硬核指标整理的全球海滨与海岛度假清单。365 天逐日最高/最低气温、海洋水温（含 10%–90% 历史波动区间）、晴天比例与降雨概率数据抓取自 Weather Spark (weatherspark.com) 历史统计基准，房价核验自 Booking.com。封面照片来自 Wikimedia Commons，作者与许可见各目的地档案。</p>
         </div>
         <div>
           <p class="footer-h">浏览</p>
@@ -1522,6 +1806,7 @@
 
   <script src="data.js"></script>
   <script src="data_part2.js"></script>
+  <script src="weather365.js"></script>
   <script src="images.js"></script>
   <script src="geo.js"></script>
   <script src="cities.js"></script>
