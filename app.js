@@ -57,6 +57,7 @@ const SORT_LABELS = {
   "beach-desc": "纯海滩硬实力 ↓",
   "water-desc": "最冷月水温 ↓",
   "night-desc": "最冷月夜温 ↓",
+  "near-asc": "飞行时间 ↑",
   "price-desc": "顶奢房价 ↓"
 };
 
@@ -87,6 +88,7 @@ const ICON_PATHS = {
   check: '<path d="M3.5 8.5l3 3 6-7"/>',
   refresh: '<path d="M13.25 8a5.25 5.25 0 1 1-1.54-3.71"/><path d="M13.25 2.5v3.25H10"/>',
   columns: '<rect x="2.5" y="3" width="4.5" height="10" rx=".6"/><rect x="9" y="3" width="4.5" height="10" rx=".6"/>',
+  pin: '<path d="M8 14.5s4.5-4.2 4.5-8a4.5 4.5 0 0 0-9 0c0 3.8 4.5 8 4.5 8z"/><circle cx="8" cy="6.5" r="1.6"/>',
   download: '<path d="M8 2.5v8M5 7.5l3 3 3-3"/><path d="M3 12.5h10"/>'
 };
 
@@ -112,12 +114,12 @@ const COVER_FACTS = [
     linkLabel: "对比圣灵群岛与毛里求斯"
   },
   {
-    idA: "oman-salalah",
+    idA: "salalah",
     idB: "seychelles-praslin-ladigue",
-    fig: "WINTER FLIGHT · FRA 6H30M NONSTOP",
-    caption: "法兰克福冬春避寒航线 · 阿曼 vs 塞舌尔",
-    kicker: "你可能不知道 · 欧洲冬春直飞",
-    text: "从法兰克福直飞避寒，与其去冬春东北信风狂浪禁泳、满目荒漠的佛得角（71.5分），不如直飞 6.5 小时抵达阿曼萨拉拉或马斯喀特：最冷月夜温 18.8°C、水温 23.5°C，治安与海岸风景全面胜出。",
+    fig: "",
+    caption: "欧洲冬季避寒 · 阿曼萨拉拉 vs 塞舌尔",
+    kicker: "你可能不知道 · 欧洲冬季避寒",
+    text: "冬天想找温暖的海，与其去东北信风狂浪禁泳、满目荒漠的佛得角（71.5分），不如看看阿曼萨拉拉与马斯喀特：最冷月夜温 18.8°C、水温 23.5°C，治安与海岸风景全面胜出，价格也只有塞舌尔的一半左右。",
     linkLabel: "对比阿曼与塞舌尔"
   },
   {
@@ -131,12 +133,12 @@ const COVER_FACTS = [
   },
   {
     idA: "kota-kinabalu",
-    idB: "okinawa-naha-kerama",
-    fig: "EAST ASIA HUB · SUB-5H NONSTOP",
-    caption: "沙巴亚庇 ($976) vs 冲绳那霸与庆良间 ($1,053)",
-    kicker: "你可能不知道 · 东亚短途直飞",
-    text: "从上海或香港出发 5 小时航程内，沙巴亚庇双人机票加 5 晚 4★ 海景含早实测仅 $976（全年 27.5°C 暖水）；而 2 小时直达的冲绳那霸乘快船 35 分钟即可进入庆良间群岛的世界级果冻海。",
-    linkLabel: "对比沙巴亚庇与冲绳庆良间"
+    idB: "okinawa-main",
+    fig: "",
+    caption: "沙巴亚庇 vs 冲绳本岛",
+    kicker: "你可能不知道 · 全年可去 vs 夏季封神",
+    text: "沙巴亚庇最冷月水温也有 27.5°C，5 晚 4★ 海景含早只要约 $577，15 分钟船程就能到离岛浮潜；冲绳本岛 12–3 月水温仅约 21°C、夜温 14.6°C，但到了 5–10 月，乘快船即可进入庆良间群岛的世界级果冻海。",
+    linkLabel: "对比沙巴亚庇与冲绳"
   },
   {
     idA: "pattaya-koh-larn",
@@ -158,13 +160,85 @@ const COVER_FACTS = [
   }
 ];
 
+// ---------------------------------------------------------------------------
+// Origin & distance (no live flight data — straight-line estimates only)
+// ---------------------------------------------------------------------------
+
+function loadOrigin() {
+  try {
+    const o = JSON.parse(localStorage.getItem("oa-origin") || "null");
+    if (o && typeof o.lat === "number") return o;
+  } catch (e) {}
+  return null;
+}
+
+function saveOrigin(o) {
+  try { localStorage.setItem("oa-origin", JSON.stringify(o)); } catch (e) {}
+}
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371, toRad = x => (x * Math.PI) / 180;
+  const dLat = toRad(lat2 - lat1), dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+
+// Rough block time: cruise ~800 km/h on a slightly longer-than-great-circle route, plus ~40 min taxi/climb.
+function estimateHours(km) {
+  return Math.max(1, (km * 1.08) / 800 + 0.65);
+}
+
+function fmtHours(h) {
+  const r = Math.round(h * 2) / 2;
+  return r % 1 === 0 ? `${r}` : r.toFixed(1);
+}
+
+function findCities(q) {
+  const list = window.ORIGIN_CITIES || [];
+  const s = (q || "").trim().toLowerCase();
+  if (!s) return [];
+  return list.filter(c => c[0].includes(q.trim()) || c[1].toLowerCase().startsWith(s) || c[2].toLowerCase() === s || c[1].toLowerCase().includes(s)).slice(0, 8);
+}
+
+function cityToOrigin(c) {
+  return { name: c[0], en: c[1], code: c[2], lat: c[3], lon: c[4] };
+}
+
+// Guess a sensible default origin from the browser time zone (purely local, no network).
+function guessOriginFromTimeZone() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const map = {
+      "Asia/Shanghai": "PVG", "Asia/Chongqing": "CKG", "Asia/Urumqi": "URC", "Asia/Hong_Kong": "HKG", "Asia/Macau": "MFM",
+      "Asia/Taipei": "TPE", "Asia/Tokyo": "NRT", "Asia/Seoul": "ICN", "Asia/Singapore": "SIN", "Asia/Kuala_Lumpur": "KUL",
+      "Asia/Bangkok": "BKK", "Asia/Ho_Chi_Minh": "SGN", "Asia/Manila": "MNL", "Asia/Jakarta": "CGK", "Asia/Kolkata": "DEL",
+      "Asia/Dubai": "DXB", "Europe/London": "LHR", "Europe/Paris": "CDG", "Europe/Berlin": "FRA", "Europe/Amsterdam": "AMS",
+      "Europe/Zurich": "ZRH", "Europe/Madrid": "MAD", "Europe/Rome": "FCO", "Europe/Vienna": "VIE", "Europe/Moscow": "SVO",
+      "America/New_York": "JFK", "America/Chicago": "ORD", "America/Denver": "DEN", "America/Los_Angeles": "LAX",
+      "America/Toronto": "YYZ", "America/Vancouver": "YVR", "America/Mexico_City": "MEX", "America/Sao_Paulo": "GRU",
+      "Australia/Sydney": "SYD", "Australia/Melbourne": "MEL", "Australia/Brisbane": "BNE", "Australia/Perth": "PER",
+      "Pacific/Auckland": "AKL", "Pacific/Honolulu": "HNL"
+    };
+    const code = map[tz];
+    const c = (window.ORIGIN_CITIES || []).find(x => x[2] === code);
+    return c ? cityToOrigin(c) : null;
+  } catch (e) { return null; }
+}
+
+// Tags that only made sense for a fixed set of departure hubs are hidden on the public site.
+const FLIGHT_TAG_RE = /直飞|机\+酒|快运|往返|转机/;
+function cleanTags(tags) {
+  return (tags || []).filter(t => !FLIGHT_TAG_RE.test(t));
+}
+
 // Application State
 const state = {
   weights: { ...WEIGHT_PRESETS.default.weights },
   activePreset: "default",
   categoryFilter: "all", // 'all' | 'tropical' | 'seasonal'
-  hubFilter: "all",      // 'all' | 'SHA' | 'HKG' | 'FRA'
-  nonstopOnly: false,
+  maxHours: 0,           // 0 = any; otherwise max estimated flight hours from origin
+  origin: loadOrigin(),  // { name, en, code, lat, lon } | null
+  originMode: "all",     // 'all' | 'tropical' | 'budget'
   regionFilter: "all",
   maxPrice: 7000,
   minWaterTemp: 0,
@@ -244,8 +318,14 @@ function getEnrichedAll() {
     const weightedTotal = computeWeightedScore(d, state.weights);
     const pureBeachScore = Math.round((d.scores.seaSand + d.scores.calmness + d.scores.waterPlay) * 10) / 10;
     const cpIndex = Math.round((weightedTotal / Math.log10(Math.max(d.priceMin, 250))) * 10) / 10;
+    const geo = (window.DEST_GEO || {})[d.id];
+    const o = state.origin;
+    const km = (geo && o) ? haversineKm(o.lat, o.lon, geo[0], geo[1]) : null;
     return {
       ...d,
+      _img: (window.DEST_IMAGES || {})[d.id] || null,
+      _km: km,
+      _hours: km == null ? null : estimateHours(km),
       _zh: parsed.zh,
       _en: parsed.en,
       _iso: parsed.iso,
@@ -266,17 +346,7 @@ function matchesFilter(d, skipCatRegion = false) {
   if (d.coldestWater < state.minWaterTemp) return false;
   if (state.verifiedOnly && !d.verified) return false;
 
-  if (state.hubFilter !== "all") {
-    const f = d.flights && d.flights[state.hubFilter];
-    if (state.nonstopOnly && (!f || !f.nonstop)) return false;
-  } else if (state.nonstopOnly) {
-    const hasAnyNonstop = d.flights && (
-      (d.flights.SHA && d.flights.SHA.nonstop) ||
-      (d.flights.HKG && d.flights.HKG.nonstop) ||
-      (d.flights.FRA && d.flights.FRA.nonstop)
-    );
-    if (!hasAnyNonstop) return false;
-  }
+  if (state.maxHours > 0 && d._hours != null && d._hours > state.maxHours) return false;
 
   if (state.searchQuery.trim() !== "") {
     const q = state.searchQuery.trim().toLowerCase();
@@ -305,6 +375,8 @@ function getProcessedData() {
         return b.pureBeachScore - a.pureBeachScore || b.weightedTotal - a.weightedTotal;
       case "water-desc":
         return b.coldestWater - a.coldestWater || b.weightedTotal - a.weightedTotal;
+      case "near-asc":
+        return (a._hours ?? 99) - (b._hours ?? 99) || b.weightedTotal - a.weightedTotal;
       case "night-desc":
         return b.coldestNight - a.coldestNight || b.weightedTotal - a.weightedTotal;
       default:
@@ -400,14 +472,40 @@ function buildPostcardSVG(dest, opts = {}) {
   `;
 }
 
+function snapWikiSize(size) {
+  if (size <= 250) return 250;
+  if (size <= 330) return 330;
+  if (size <= 500) return 500;
+  if (size <= 960) return 960;
+  return 1280;
+}
+
+function photoTag(d, size = 960, cls = "pc-photo") {
+  const im = d._img;
+  if (!im || !im.src) return "";
+  const step = snapWikiSize(size);
+  const src = im.src.replace(/\/\d+px-/, `/${step}px-`);
+  const fallback = im.src !== src ? `if(!this.dataset.fb){this.dataset.fb='1';this.src='${esc(im.src)}';}else{this.remove();}` : "this.remove()";
+  return `<img class="${cls}" src="${esc(src)}" alt="${esc(d._zh)}" loading="lazy" decoding="async" onerror="${fallback}">`;
+}
+
+function photoCredit(d) {
+  const im = d._img;
+  if (!im) return "";
+  const who = im.artist ? esc(im.artist) : "Wikimedia Commons";
+  return `<a class="photo-credit" href="${esc(im.page)}" target="_blank" rel="noopener noreferrer">图片：${who}${im.license ? " · " + esc(im.license) : ""}</a>`;
+}
+
 function postcardHTML(d, rank, opts = {}) {
   const isCompared = state.compareIds.includes(d.id);
   const isTrop = d.category === "tropical";
   const compact = opts.compact;
+  const g = (window.DEST_GEO && window.DEST_GEO[d.id]) || [];
   return `
-    <article class="postcard">
+    <article class="postcard" data-dest-id="${esc(d.id)}" data-lat="${g[0] != null ? g[0] : ""}" data-lon="${g[1] != null ? g[1] : ""}" data-name="${esc(d._zh)}">
       <div class="pc-scene" onclick="openDestModal('${d.id}')">
         ${buildPostcardSVG(d, { prefix: opts.prefix || "pc" })}
+        ${photoTag(d)}
         ${rank ? `<span class="pc-rank">No. ${rank}</span>` : ""}
         <span class="pc-badge${isTrop ? "" : " is-seasonal"}">${isTrop ? "全年可游" : "季节性"}</span>
         <span class="pc-score"><b>${d.weightedTotal.toFixed(1)}</b><small>/100</small></span>
@@ -419,7 +517,7 @@ function postcardHTML(d, rank, opts = {}) {
         <div class="pc-facts">
           <span>夜 <b>${d.coldestNight.toFixed(1)}°</b></span>
           <span>水 <b>${d.coldestWater.toFixed(1)}°</b></span>
-          <span>$<b>${d.priceMin.toLocaleString()}</b></span>
+          ${d._hours != null ? `<span>飞行约 <b>${fmtHours(d._hours)}h</b></span>` : `<span>$<b>${d.priceMin.toLocaleString()}</b></span>`}
         </div>
         ${compact ? "" : `
           <p class="pc-summary">${esc(d.note || "")}</p>
@@ -533,37 +631,14 @@ window.setRegionChip = function(reg) {
 // Flight Badges & Tag Buttons
 // ---------------------------------------------------------------------------
 
-function renderFlightBadge(dest) {
-  const f = dest.flights || {};
-  const badges = [];
-
-  if (state.hubFilter !== "all") {
-    const hubData = f[state.hubFilter];
-    const hubName = state.hubFilter === "SHA" ? "上海" : state.hubFilter === "HKG" ? "香港" : "法兰克福";
-    if (hubData && hubData.nonstop) {
-      const pkgText = hubData.total2p ? ` · 双人机酒 $${hubData.total2p.toLocaleString()}` : "";
-      return `<div class="t-flights"><span class="flight-code" style="border-color:var(--lagoon);color:var(--lagoon)">${hubName}直飞 ${esc(hubData.duration)}${pkgText}</span></div>`;
-    }
-    return `<div class="t-flights"><span style="font-size:11.5px;color:var(--ink-3)">该城市需转机</span></div>`;
-  }
-
-  const pushHub = (code, label) => {
-    const fd = f[code];
-    if (!fd || !fd.nonstop) return;
-    const dur = fd.duration.split(" ")[0];
-    const tip = `${fd.airline || label} (${fd.duration}) · 点击筛选该枢纽直飞`;
-    badges.push(`<button type="button" class="flight-code" onclick="filterByHub('${code}')" title="${esc(tip)}">${label} ${esc(dur)}</button>`);
-  };
-
-  pushHub("SHA", "沪直飞");
-  pushHub("HKG", "港直飞");
-  pushHub("FRA", "德直飞");
-
-  return badges.length ? `<div class="t-flights">${badges.join("")}</div>` : "";
+function renderTravelBadge(dest) {
+  if (!state.origin || dest._hours == null) return "";
+  return `<div class="t-flights"><span class="flight-code" title="按直线距离 ${Math.round(dest._km).toLocaleString()} km 估算，不含转机">从${esc(state.origin.name)} 约 ${fmtHours(dest._hours)} 小时</span></div>`;
 }
 
-function renderTags(tags) {
-  if (!tags || !tags.length) return "";
+function renderTags(rawTags) {
+  const tags = cleanTags(rawTags);
+  if (!tags.length) return "";
   return `<div class="t-tags">${tags.map(t =>
     `<button type="button" class="tag-btn" data-tag="${esc(t)}" onclick="searchTag(this.dataset.tag)">${esc(t)}</button>`
   ).join("")}</div>`;
@@ -610,7 +685,7 @@ function renderApp() {
   const summaryEl = document.getElementById("results-summary");
   if (summaryEl) {
     const presetName = state.activePreset === "custom" ? "自定义权重" : (WEIGHT_PRESETS[state.activePreset]?.label || "");
-    summaryEl.textContent = `共 ${data.length} 处 · ${SORT_LABELS[state.sortBy] || ""} · 权重：${presetName}`;
+    summaryEl.textContent = `共 ${data.length} 处 · ${SORT_LABELS[state.sortBy] || ""} · 权重：${presetName}${state.origin ? ` · 出发地：${state.origin.name}` : ""}`;
   }
 
   const tableContainer = document.getElementById("table-view-container");
@@ -628,6 +703,8 @@ function renderApp() {
 
   renderCompareBar();
   renderCoverFeature();
+  renderOriginFinder();
+  if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
 }
 
 function emptyStateHTML() {
@@ -671,21 +748,29 @@ function renderTable(data) {
         <td class="num">
           <span class="t-rank ${rank <= 3 ? "is-top" : ""}">${rank}</span>
         </td>
-        <td style="min-width:280px;max-width:390px">
-          <div class="t-dest-head">
-            <a class="t-title" href="#dest-${d.id}" onclick="event.preventDefault();openDestModal('${d.id}')">${esc(d._zh)}</a>
-            ${d._en ? `<span class="t-en">${esc(d._en)}</span>` : ""}
+        <td style="min-width:340px;max-width:440px">
+          <div class="t-dest-cell">
+            <div class="t-thumb" onclick="openDestModal('${d.id}')" title="查看 ${esc(d._zh)} 完整档案">
+              ${buildPostcardSVG(d, { prefix: "tb" })}
+              ${photoTag(d, 330, "t-photo")}
+            </div>
+            <div class="t-dest-info">
+              <div class="t-dest-head">
+                <a class="t-title" href="#dest-${d.id}" onclick="event.preventDefault();openDestModal('${d.id}')">${esc(d._zh)}</a>
+                ${d._en ? `<span class="t-en">${esc(d._en)}</span>` : ""}
+              </div>
+              <div class="t-meta">
+                ${catMark}
+                <span>·</span>
+                <span>${esc(d.region)}</span>
+                <span>·</span>
+                <span>最佳 ${esc(d.bestSeason)}</span>
+              </div>
+              ${renderTravelBadge(d)}
+              ${renderTags(d.tags)}
+              <p class="t-note">${esc(d.note || "")}</p>
+            </div>
           </div>
-          <div class="t-meta">
-            ${catMark}
-            <span>·</span>
-            <span>${esc(d.region)}</span>
-            <span>·</span>
-            <span>最佳 ${esc(d.bestSeason)}</span>
-          </div>
-          ${renderFlightBadge(d)}
-          ${renderTags(d.tags)}
-          <p class="t-note">${esc(d.note || "")}</p>
         </td>
         <td class="num">
           <div class="t-climate">
@@ -930,10 +1015,26 @@ window.openCompareModal = function() {
     `<td>${html}${isBest ? '<span class="best-mark">★</span>' : ""}</td>`;
 
   const weighted = items.map(d => d.weightedTotal);
+  const pureBeach = items.map(d => d.pureBeachScore);
+  const cpVals = items.map(d => d.cpIndex);
   const prices = items.map(d => d.priceMin);
   const waters = items.map(d => d.coldestWater);
+  const hasHours = state.origin && items.every(d => d._hours != null);
+  const hours = hasHours ? items.map(d => Math.round(d._hours * 10) / 10) : [];
+
+  const presetBar = `
+    <div class="compare-preset-bar">
+      <span class="compare-preset-lbl">按偏好重算对比：</span>
+      ${Object.entries(WEIGHT_PRESETS).map(([k, p]) =>
+        `<button type="button" class="chip" aria-pressed="${state.activePreset === k}" onclick="applyPreset('${k}');openCompareModal()">${esc(p.label)}</button>`
+      ).join("")}
+    </div>
+  `;
 
   content.innerHTML = `
+    ${presetBar}
+    ${compareSummaryBannerHTML(items)}
+    ${advantagesHTML(items, strokes)}
     <div class="compare-layout">
       <div>
         <div class="radar-wrap">${buildMultiRadarSVG(items, strokes, fills)}</div>
@@ -956,13 +1057,27 @@ window.openCompareModal = function() {
               ${bestMark(weighted).map((b, i) => tdCell(`<span class="t-total" style="font-size:24px">${weighted[i].toFixed(1)}</span>`, b)).join("")}
             </tr>
             <tr>
+              <td>纯海滩硬实力 <span style="color:var(--ink-3);font-size:11.5px">/ 50</span></td>
+              ${bestMark(pureBeach).map((b, i) => tdCell(`<strong>${pureBeach[i].toFixed(1)}</strong> <span style="font-size:11.5px;color:var(--ink-3)">(海沙+玩水+风浪)</span>`, b)).join("")}
+            </tr>
+            <tr>
               <td>最冷月夜温 / 水温</td>
-              ${bestMark(waters).map((b, i) => tdCell(`${items[i].coldestNight}° / ${items[i].coldestWater}°C`, b)).join("")}
+              ${bestMark(waters).map((b, i) => tdCell(`${items[i].coldestNight}° / ${items[i].coldestWater}°C <span style="font-size:11.5px;color:var(--ink-3)">(${items[i].category === "tropical" ? "全年适泳" : "季节性"})</span>`, b)).join("")}
             </tr>
             <tr>
               <td>5 晚参考价</td>
               ${bestMark(prices, false).map((b, i) => tdCell(`<strong style="color:var(--ocean-deep)">$${items[i].priceMin.toLocaleString()}</strong><div style="font-size:11.5px;color:var(--ink-3);margin-top:2px">${esc(cleanPriceDisplay(items[i].priceDisplay))}</div>`, b)).join("")}
             </tr>
+            <tr>
+              <td>性价比指数</td>
+              ${bestMark(cpVals).map((b, i) => tdCell(`${cpVals[i].toFixed(1)}`, b)).join("")}
+            </tr>
+            ${hasHours ? `
+              <tr>
+                <td>从${esc(state.origin.name)}出发航时</td>
+                ${bestMark(hours, false).map((b, i) => tdCell(`约 <strong>${fmtHours(items[i]._hours)} 小时</strong> <span style="font-size:11.5px;color:var(--ink-3)">(${Math.round(items[i]._km).toLocaleString()} km)</span>`, b)).join("")}
+              </tr>
+            ` : ""}
             ${Object.entries(DIM_LABELS).map(([k, meta]) => {
               const vals = items.map(d => d.scores[k]);
               return `
@@ -1054,22 +1169,15 @@ window.openDestModal = function(id) {
   const isCompared = state.compareIds.includes(d.id);
   const isTrop = d.category === "tropical";
 
-  const f = d.flights || {};
-  const flightRows = [
-    ["上海", f.SHA],
-    ["香港", f.HKG],
-    ["法兰克福", f.FRA]
-  ].map(([hub, info]) => {
-    if (info && info.nonstop) {
-      const extra = [info.airline, info.total2p ? `双人机酒 $${info.total2p.toLocaleString()}` : ""].filter(Boolean).join(" · ");
-      return `<div class="flight-row"><span>从${hub}</span><span class="ok">直飞 ${esc(info.duration)}${extra ? `<br><small style="font-weight:400;color:var(--ink-3)">${esc(extra)}</small>` : ""}</span></div>`;
-    }
-    return `<div class="flight-row"><span>从${hub}</span><span class="no">需转机</span></div>`;
-  }).join("");
+  const travelBlock = state.origin && d._hours != null
+    ? `<div class="flight-row"><span>从${esc(state.origin.name)}出发</span><span class="ok">约 ${fmtHours(d._hours)} 小时<br><small style="font-weight:400;color:var(--ink-3)">直线 ${Math.round(d._km).toLocaleString()} km · 不含转机</small></span></div>`
+    : `<p style="font-size:13px;color:var(--ink-3)">在「从你的城市出发」里设置出发地后，这里会显示估算飞行时间。</p>`;
 
   body.innerHTML = `
     <div class="dossier-hero">
       ${buildPostcardSVG(d, { wide: true, prefix: "dm" })}
+      ${photoTag(d, 1280, "dossier-photo")}
+      ${photoCredit(d)}
       <button type="button" class="dialog-close" onclick="closeDestModal()" aria-label="关闭">${icon("close")}</button>
     </div>
     <div class="dossier-head">
@@ -1099,8 +1207,8 @@ window.openDestModal = function(id) {
         <div>
           <p class="block-h">最佳季节</p>
           <p style="font-size:14px;color:var(--ink)">${esc(d.bestSeason)}</p>
-          <p class="block-h" style="margin-top:24px">直飞航线</p>
-          ${flightRows}
+          <p class="block-h" style="margin-top:24px">路程</p>
+          ${travelBlock}
           <p class="dossier-note">${esc(d.note || "")}</p>
           ${renderTags(d.tags)}
           <p style="margin-top:14px;font-size:12.5px;color:var(--ink-3)">房价说明：${esc(cleanPriceDisplay(d.priceDisplay))}</p>
@@ -1162,6 +1270,7 @@ function renderPaletteResults(q) {
 
   box.innerHTML = matches.map(d => `
     <button type="button" class="palette-item" onclick="closePalette();openDestModal('${d.id}')">
+      <span class="palette-thumb">${buildPostcardSVG(d, { prefix: "pl" })}${photoTag(d, 250, "palette-photo")}</span>
       <span class="code" style="min-width:34px">${d.weightedTotal.toFixed(1)}</span>
       <span><strong style="font-family:var(--serif);font-weight:500;color:var(--ocean-deep)">${esc(d._zh)}</strong> <span style="font-family:var(--display);font-style:italic;color:var(--ink-3)">${esc(d._en)}</span></span>
       <span class="sub">$${d.priceMin.toLocaleString()}</span>
@@ -1206,7 +1315,8 @@ window.exportCSV = function() {
     "最冷月夜温(°C)", "最冷月水温(°C)", "最佳季节",
     "加权总分", "默认总分",
     "海沙(25)", "风景(15)", "玩水(15)", "风浪(10)", "酒店(10)", "餐饮(10)", "陆地(10)", "省心(5)",
-    "5晚4★海景最低价(USD)", "房价说明", "亮点与避坑备注"
+    "5晚4★海景最低价(USD)", "房价说明", "亮点与避坑备注",
+    state.origin ? `从${state.origin.name}估算飞行(小时)` : "估算飞行(小时)"
   ];
 
   const rows = data.map((d, idx) => [
@@ -1231,7 +1341,8 @@ window.exportCSV = function() {
     d.scores.safety,
     d.priceMin,
     `"${cleanPriceDisplay(d.priceDisplay).replace(/"/g, '""')}"`,
-    `"${(d.note || "").replace(/"/g, '""')}"`
+    `"${(d.note || "").replace(/"/g, '""')}"`,
+    d._hours != null ? fmtHours(d._hours) : ""
   ]);
 
   const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
@@ -1248,8 +1359,7 @@ window.exportCSV = function() {
 
 window.resetFilters = function() {
   state.categoryFilter = "all";
-  state.hubFilter = "all";
-  state.nonstopOnly = false;
+  state.maxHours = 0;
   state.regionFilter = "all";
   state.maxPrice = 7000;
   state.minWaterTemp = 0;
@@ -1258,8 +1368,8 @@ window.resetFilters = function() {
   state.sortBy = "score-desc";
 
   document.getElementById("filter-category").value = "all";
-  document.getElementById("filter-hub").value = "all";
-  document.getElementById("filter-nonstop").checked = false;
+  const hrs = document.getElementById("filter-hours");
+  if (hrs) hrs.value = "0";
   document.getElementById("filter-region").value = "all";
   document.getElementById("filter-price").value = 7000;
   updatePriceSliderUI();
@@ -1304,20 +1414,369 @@ window.clearSearch = function() {
   renderApp();
 };
 
-window.filterByHub = function(hub) {
-  state.hubFilter = hub;
-  state.nonstopOnly = true;
-  document.getElementById("filter-hub").value = hub;
-  document.getElementById("filter-nonstop").checked = true;
-  renderApp();
-  document.getElementById("index")?.scrollIntoView({ behavior: "smooth" });
-};
 
 function setViewMode(mode) {
   state.viewMode = mode;
   document.getElementById("btn-view-table")?.setAttribute("aria-pressed", String(mode === "table"));
   document.getElementById("btn-view-cards")?.setAttribute("aria-pressed", String(mode === "cards"));
   renderApp();
+}
+
+// ---------------------------------------------------------------------------
+// "从你的城市出发" — origin finder (pure client-side, no AI / no live flight API)
+// ---------------------------------------------------------------------------
+
+const DISTANCE_BANDS = [
+  { min: 0, max: 5, title: "短途周游", sub: "5 小时以内 · 周末/小长假" },
+  { min: 5, max: 9, title: "中程度假", sub: "5 – 9 小时 · 一周舒适圈" },
+  { min: 9, max: 14, title: "远行大洋", sub: "9 – 14 小时 · 跨洲海岛" },
+  { min: 14, max: 99, title: "跨洋朝圣", sub: "14 小时以上 · 终极泻湖" }
+];
+
+const QUICK_ORIGINS = ["PVG", "PEK", "CAN", "TFU", "HKG", "SIN", "NRT", "LHR", "FRA", "JFK", "LAX", "SYD"];
+
+window.setOriginMode = function(mode) {
+  state.originMode = mode;
+  renderOriginFinder();
+};
+
+function setOrigin(o) {
+  state.origin = o;
+  saveOrigin(o);
+  const input = document.getElementById("origin-input");
+  if (input) input.value = o ? o.name : "";
+  hideOriginSuggest();
+  const hrs = document.getElementById("filter-hours");
+  if (hrs) hrs.disabled = !o;
+  const nearOpt = document.querySelector('#filter-sort option[value="near-asc"]');
+  if (nearOpt) nearOpt.disabled = !o;
+  renderApp();
+}
+
+window.pickOrigin = function(code) {
+  const c = (window.ORIGIN_CITIES || []).find(x => x[2] === code);
+  if (c) setOrigin(cityToOrigin(c));
+};
+
+window.clearOrigin = function() {
+  try { localStorage.removeItem("oa-origin"); } catch (e) {}
+  state.origin = null;
+  if (state.sortBy === "near-asc") {
+    state.sortBy = "score-desc";
+    const sel = document.getElementById("filter-sort");
+    if (sel) sel.value = "score-desc";
+  }
+  state.maxHours = 0;
+  const hrs = document.getElementById("filter-hours");
+  if (hrs) { hrs.value = "0"; hrs.disabled = true; }
+  const input = document.getElementById("origin-input");
+  if (input) input.value = "";
+  renderApp();
+};
+
+window.locateMe = function() {
+  const btn = document.getElementById("origin-locate");
+  if (!navigator.geolocation) return;
+  if (btn) btn.textContent = "定位中…";
+  navigator.geolocation.getCurrentPosition(pos => {
+    const { latitude: lat, longitude: lon } = pos.coords;
+    let nearest = null, best = Infinity;
+    (window.ORIGIN_CITIES || []).forEach(c => {
+      const km = haversineKm(lat, lon, c[3], c[4]);
+      if (km < best) { best = km; nearest = c; }
+    });
+    const name = nearest && best < 150 ? nearest[0] : "我的位置";
+    setOrigin({ name, en: nearest ? nearest[1] : "", code: best < 150 && nearest ? nearest[2] : "", lat, lon });
+    if (btn) btn.innerHTML = `${icon("pin")}<span>使用我的位置</span>`;
+  }, () => {
+    if (btn) btn.innerHTML = `${icon("pin")}<span>无法获取位置</span>`;
+  }, { timeout: 8000, maximumAge: 600000 });
+};
+
+function hideOriginSuggest() {
+  const box = document.getElementById("origin-suggest");
+  if (box) box.hidden = true;
+}
+
+function renderOriginSuggest(q) {
+  const box = document.getElementById("origin-suggest");
+  if (!box) return;
+  const list = findCities(q);
+  if (!list.length) {
+    box.hidden = !q.trim();
+    box.innerHTML = q.trim() ? `<div class="origin-suggest-empty">暂未收录这座城市，试试附近的大城市或机场代码</div>` : "";
+    return;
+  }
+  box.hidden = false;
+  box.innerHTML = list.map(c =>
+    `<button type="button" onmousedown="event.preventDefault()" onclick="pickOrigin('${c[2]}')"><strong>${esc(c[0])}</strong><span>${esc(c[1])}</span><em>${c[2]}</em></button>`
+  ).join("");
+}
+
+function renderOriginFinder() {
+  const quick = document.getElementById("origin-quick");
+  const out = document.getElementById("origin-results");
+  if (!quick || !out) return;
+
+  const cities = window.ORIGIN_CITIES || [];
+  const modeChips = [
+    { k: "all", label: "全部气候" },
+    { k: "tropical", label: "只看冬季适泳 (真热带)" },
+    { k: "budget", label: "5晚房价 ≤ $1,200" }
+  ].map(m =>
+    `<button type="button" class="chip" aria-pressed="${state.originMode === m.k}" onclick="setOriginMode('${m.k}')">${esc(m.label)}</button>`
+  ).join("");
+
+  quick.innerHTML = QUICK_ORIGINS.map(code => {
+    const c = cities.find(x => x[2] === code);
+    if (!c) return "";
+    const on = state.origin && state.origin.code === code;
+    return `<button type="button" class="chip" aria-pressed="${!!on}" onclick="pickOrigin('${code}')">${esc(c[0])}</button>`;
+  }).join("")
+    + `<span class="chip-sep" aria-hidden="true"></span>`
+    + modeChips
+    + (state.origin ? `<button type="button" class="reset-btn" onclick="clearOrigin()">清除出发地</button>` : "");
+
+  const input = document.getElementById("origin-input");
+  if (input && document.activeElement !== input) input.value = state.origin ? state.origin.name : "";
+
+  if (!state.origin) {
+    out.innerHTML = `<div class="origin-empty">选择或输入你的出发城市，我们会按估算飞行时间，把近处与远方最值得去的海岸分组列出来。</div>`;
+    return;
+  }
+
+  const all = getEnrichedAll().filter(d => {
+    if (d._hours == null) return false;
+    if (state.originMode === "tropical" && d.category !== "tropical") return false;
+    if (state.originMode === "budget" && d.priceMin > 1200) return false;
+    return true;
+  });
+  out.innerHTML = DISTANCE_BANDS.map(b => {
+    const picks = all
+      .filter(d => d._hours >= b.min && d._hours < b.max)
+      .sort((x, y) => y.weightedTotal - x.weightedTotal)
+      .slice(0, 4);
+    return `
+      <div class="band">
+        <div class="band-head"><h3>${b.title}</h3><span>${b.sub}</span></div>
+        ${picks.length ? picks.map((d, i) => {
+          const topTag = cleanTags(d.tags)[0] || (d.category === "tropical" ? "全年适泳" : `最佳 ${d.bestSeason}`);
+          return `
+          <button type="button" class="band-item" onclick="openDestModal('${d.id}')">
+            <span class="band-thumb">
+              ${buildPostcardSVG(d, { prefix: "bd" })}
+              ${photoTag(d, 330, "band-photo")}
+            </span>
+            <span class="band-text">
+              <strong>${esc(d._zh)}</strong>
+              <small>${esc(d.region)} · <b>${d.weightedTotal.toFixed(1)}分</b> · $${d.priceMin.toLocaleString()} 起</small>
+              <em class="band-reason">${esc(topTag)} · 夜 ${d.coldestNight}° / 水 ${d.coldestWater}°C</em>
+            </span>
+            <span class="band-hours">${fmtHours(d._hours)}<small>h</small></span>
+          </button>
+        `;}).join("") : `<p class="band-none">这个距离内暂无收录的海岸。</p>`}
+      </div>
+    `;
+  }).join("");
+}
+
+window.sortByNearest = function() {
+  if (!state.origin) return;
+  state.sortBy = "near-asc";
+  const sel = document.getElementById("filter-sort");
+  if (sel) sel.value = "near-asc";
+  renderApp();
+  document.getElementById("index")?.scrollIntoView({ behavior: "smooth" });
+};
+
+// ---------------------------------------------------------------------------
+// Compare: rule-based + profile-enriched synthesis — computed live from each
+// destination's 8-dim scores, climate, price, origin distance & detailed note.
+// ---------------------------------------------------------------------------
+
+const DIM_KEYWORDS = {
+  seaSand:  /白沙|果冻|松石|潟湖|泻湖|能见度|水清|硅沙|粉红沙|蓝洞|玻璃海/,
+  scenery:  /火山|花岗岩|悬崖|海蚀|航拍|瀑布|山海|日落|奇观|沙丘/,
+  waterPlay:/浮潜|深潜|珊瑚|鲸鲨|魔鬼鱼|海龟|儒艮|跳岛|冲浪|海豚|蓝鲸|沙丁鱼/,
+  calmness: /外堡礁|平浪|浅滩|泻湖|平静|内海|亲子|泳池/,
+  hotel:    /水屋|顶奢|一岛一酒店|全包|别墅|度假村|高星|五星|六星/,
+  dining:   /美食|米其林|海鲜|夜市|法餐|餐厅|酒吧|料理/,
+  land:     /古镇|古堡|古城|雨林|金字塔|遗迹|动物|国家公园|博物馆|火山徒步/,
+  safety:   /免签|治安|省心|零时差|直达|成熟/
+};
+
+function extractDimSnippet(d, dimKey) {
+  const re = DIM_KEYWORDS[dimKey];
+  if (!re) return "";
+  const clauses = `${(cleanTags(d.tags)).join("，")}，${d.note || ""}`
+    .split(/[，。；！!]+/)
+    .map(s => s.trim())
+    .filter(Boolean);
+  const hit = clauses.find(c => re.test(c) && !/⚠️|偏弱|普通|一般|禁泳/.test(c));
+  return hit ? `（${hit}）` : "";
+}
+
+function extractCaveatsFromNote(d) {
+  const out = [];
+  (d.tags || []).forEach(t => {
+    if (t.includes("⚠️")) out.push(t.replace(/^⚠️\s*/, "").trim());
+  });
+  const clauses = String(d.note || "").split(/[，。；！!]+/).map(s => s.trim()).filter(Boolean);
+  clauses.forEach(c => {
+    if (/^(唯|但|不过|缺点|注意|仅因)|禁泳|浪大|水体普通|水质中等/.test(c)) {
+      out.push(c.replace(/^(唯|但|不过)\s*/, ""));
+    }
+  });
+  return [...new Set(out)].slice(0, 2);
+}
+
+function buildAdvantages(items) {
+  return items.map(a => {
+    const others = items.filter(x => x !== a);
+    const pros = [];
+    const cons = [];
+    const nameOf = list => list.map(x => x._zh).join("、");
+
+    Object.entries(DIM_LABELS).forEach(([k, meta]) => {
+      const otherBest = Math.max(...others.map(o => o.scores[k]));
+      const otherWorst = Math.min(...others.map(o => o.scores[k]));
+      const diff = a.scores[k] - otherBest;
+      const snippet = extractDimSnippet(a, k);
+      if (diff >= Math.max(0.5, meta.max * 0.06)) {
+        pros.push({
+          w: (diff / meta.max) * (state.weights[k] || 0.1) * 4 + 2,
+          dim: meta.name,
+          title: `${meta.name}全场最佳 (+${diff.toFixed(1)})`,
+          detail: `${a.scores[k]} vs ${otherBest} / ${meta.max}${snippet || ` · ${meta.desc}`}`
+        });
+      } else if (diff === 0 && a.scores[k] > otherWorst && a.scores[k] >= meta.max * 0.85) {
+        pros.push({
+          w: ((a.scores[k] - otherWorst) / meta.max) * (state.weights[k] || 0.1) * 2.5,
+          dim: meta.name,
+          title: `${meta.name}并列第一 (${a.scores[k]}/${meta.max})`,
+          detail: `与榜首同分，领先${nameOf(others.filter(o => o.scores[k] < a.scores[k]))}${snippet || ` · ${meta.desc}`}`
+        });
+      } else if (others.length >= 2 && a.scores[k] - otherWorst >= meta.max * 0.16 && a.scores[k] >= meta.max * 0.85) {
+        const weaker = others.filter(o => a.scores[k] - o.scores[k] >= meta.max * 0.12);
+        pros.push({
+          w: ((a.scores[k] - otherWorst) / meta.max) * (state.weights[k] || 0.1) * 1.8,
+          dim: meta.name,
+          title: `${meta.name}高分梯队 (${a.scores[k]}/${meta.max})`,
+          detail: `明显优于${nameOf(weaker)}${snippet || ` · ${meta.desc}`}`
+        });
+      }
+      const lag = otherWorst - a.scores[k];
+      if (lag >= Math.max(1, meta.max * 0.1)) {
+        cons.push({ w: lag / meta.max, text: `${meta.name}相对偏弱（${a.scores[k]}/${meta.max}）` });
+      }
+    });
+
+    const waterGap = a.coldestWater - Math.max(...others.map(o => o.coldestWater));
+    if (waterGap >= 1.5) {
+      pros.push({ w: 14, title: "冬季海水更暖", detail: `最冷月水温 ${a.coldestWater}°C，比${nameOf(others)}高 ${waterGap.toFixed(1)}°C` });
+    }
+    const nightGap = a.coldestNight - Math.max(...others.map(o => o.coldestNight));
+    if (nightGap >= 2) {
+      pros.push({ w: 9, title: "冬夜体感更暖", detail: `最冷月夜温 ${a.coldestNight}°C，夜间海风无需厚外套` });
+    }
+    if (a.category === "tropical" && others.some(o => o.category !== "tropical")) {
+      pros.push({ w: 12, title: "365 天全年适泳", detail: `全年夜温 ≥ 18°C、水温 ≥ 21°C；对比的${nameOf(others.filter(o => o.category !== "tropical"))}受季节限制` });
+    }
+    if (a.category !== "tropical" && others.some(o => o.category === "tropical")) {
+      cons.push({ w: 0.55, text: `季节性目的地（最佳窗口：${a.bestSeason}）` });
+    }
+
+    const cheapestOther = Math.min(...others.map(o => o.priceMin));
+    const priciestOther = Math.max(...others.map(o => o.priceMin));
+    const priciestObj = others.find(o => o.priceMin === priciestOther);
+    if (a.priceMin <= cheapestOther * 0.8) {
+      const save = cheapestOther - a.priceMin;
+      pros.push({ w: 13, title: "酒店预算更友好", detail: `5 晚 4★ 海景约 $${a.priceMin.toLocaleString()}，比次低价再省 $${save.toLocaleString()}（-${Math.round((save / cheapestOther) * 100)}%）` });
+    } else if (priciestObj && a.priceMin <= priciestOther * 0.45 && a.weightedTotal >= priciestObj.weightedTotal - 3.5) {
+      const save = priciestOther - a.priceMin;
+      pros.push({ w: 13.5, title: "顶配体验甜点价", detail: `总分迫近${priciestObj._zh}（${a.weightedTotal.toFixed(1)} vs ${priciestObj.weightedTotal.toFixed(1)}），5 晚房价却立省 $${save.toLocaleString()}` });
+    }
+    if (a.priceMin >= priciestOther * 1.5) {
+      cons.push({ w: 0.6, text: `住宿成本显著更高（5 晚 $${a.priceMin.toLocaleString()} 起）` });
+    }
+
+    if (state.origin && a._hours != null && others.every(o => o._hours != null)) {
+      const nearestOther = Math.min(...others.map(o => o._hours));
+      if (a._hours <= nearestOther - 1.5) {
+        pros.push({ w: 12, title: "飞行路程更近", detail: `从${state.origin.name}出发约 ${fmtHours(a._hours)}h，少飞约 ${fmtHours(nearestOther - a._hours)} 小时` });
+      }
+    }
+
+    extractCaveatsFromNote(a).forEach(cv => {
+      if (!cons.some(c => c.text.includes(cv))) {
+        cons.push({ w: 0.5, text: cv });
+      }
+    });
+
+    pros.sort((x, y) => y.w - x.w);
+    cons.sort((x, y) => y.w - x.w);
+    const dimWins = pros.filter(p => p.dim).slice(0, 2).map(p => p.dim);
+    return {
+      d: a,
+      pros: pros.slice(0, 4),
+      cons: cons.slice(0, 3).map(c => c.text),
+      tags: cleanTags(a.tags).filter(t => !t.includes("⚠️")).slice(0, 4),
+      verdict: dimWins.length
+        ? `更看重${dimWins.join("与")}，选它`
+        : (pros[0] ? `主打「${pros[0].title}」，选它` : "各项指标均衡，按海域与眼缘决定")
+    };
+  });
+}
+
+function compareSummaryBannerHTML(items) {
+  if (items.length < 2) return "";
+  const byScore = [...items].sort((a, b) => b.weightedTotal - a.weightedTotal);
+  const byBeach = [...items].sort((a, b) => b.pureBeachScore - a.pureBeachScore);
+  const byPrice = [...items].sort((a, b) => a.priceMin - b.priceMin);
+  const byWater = [...items].sort((a, b) => b.coldestWater - a.coldestWater);
+  const hasOrigin = state.origin && items.every(d => d._hours != null);
+  const byNear = hasOrigin ? [...items].sort((a, b) => a._hours - b._hours) : null;
+
+  const pills = [
+    `<span>🏆 <strong>当前偏好最高分：</strong>${esc(byScore[0]._zh)}（${byScore[0].weightedTotal.toFixed(1)}分）</span>`,
+    `<span>🌊 <strong>纯海水沙滩最强：</strong>${esc(byBeach[0]._zh)}（${byBeach[0].pureBeachScore.toFixed(1)}/50）</span>`,
+    `<span>🌡️ <strong>冬季水温最高：</strong>${esc(byWater[0]._zh)}（${byWater[0].coldestWater}°C）</span>`,
+    `<span>💰 <strong>5晚房价最省：</strong>${esc(byPrice[0]._zh)}（$${byPrice[0].priceMin.toLocaleString()}）</span>`
+  ];
+  if (byNear) {
+    pills.push(`<span>✈️ <strong>离${esc(state.origin.name)}最近：</strong>${esc(byNear[0]._zh)}（约 ${fmtHours(byNear[0]._hours)}h）</span>`);
+  }
+  return `<div class="compare-summary-banner">${pills.join("")}</div>`;
+}
+
+function advantagesHTML(items, strokes) {
+  if (items.length < 2) return "";
+  const adv = buildAdvantages(items);
+  return `
+    <div class="adv-grid" style="grid-template-columns:repeat(${items.length}, minmax(0, 1fr))">
+      ${adv.map((x, i) => `
+        <section class="adv-col" style="--c:${strokes[i]}">
+          <div class="adv-hero" onclick="closeCompareModal();openDestModal('${x.d.id}')">
+            ${buildPostcardSVG(x.d, { prefix: "av" })}
+            ${photoTag(x.d, 500, "adv-photo")}
+            <span class="adv-score">${x.d.weightedTotal.toFixed(1)}<small>分</small></span>
+          </div>
+          <div class="adv-body">
+            <p class="adv-verdict">${esc(x.verdict)}</p>
+            <h3>${esc(x.d._zh)} <small>${esc(x.d.region)}</small></h3>
+            ${x.pros.length ? `<ul class="adv-pros">${x.pros.map(p => `<li><strong>${esc(p.title)}</strong><span>${esc(p.detail)}</span></li>`).join("")}</ul>`
+              : `<p class="adv-none">单项得分与对手接近，胜在综合均衡度。</p>`}
+            <div class="adv-detail">
+              <span class="adv-detail-label">海岛详单介绍</span>
+              <p>${esc(x.d.note || "")}</p>
+            </div>
+            ${x.tags.length ? `<p class="adv-tags">${x.tags.map(t => `<span>${esc(t)}</span>`).join("")}</p>` : ""}
+            ${x.cons.length ? `<p class="adv-cons"><strong>行前留意：</strong>${x.cons.map(esc).join("；")}</p>` : ""}
+          </div>
+        </section>
+      `).join("")}
+    </div>
+  `;
 }
 
 // ---------------------------------------------------------------------------
@@ -1341,6 +1800,35 @@ document.addEventListener("DOMContentLoaded", () => {
   if (qView === "cards" || qView === "table") {
     state.viewMode = qView;
   }
+
+  const qFrom = params.get("from");
+  if (qFrom) {
+    const c = (window.ORIGIN_CITIES || []).find(x => x[2] === qFrom.toUpperCase() || x[0] === qFrom || x[1].toLowerCase() === qFrom.toLowerCase());
+    if (c) state.origin = cityToOrigin(c);
+  }
+  if (!state.origin) {
+    const g = guessOriginFromTimeZone();
+    if (g) state.origin = g;
+  }
+  const hrsSel = document.getElementById("filter-hours");
+  if (hrsSel) hrsSel.disabled = !state.origin;
+  const nearOpt = document.querySelector('#filter-sort option[value="near-asc"]');
+  if (nearOpt) nearOpt.disabled = !state.origin;
+
+  const originInput = document.getElementById("origin-input");
+  if (originInput) {
+    originInput.addEventListener("input", e => renderOriginSuggest(e.target.value));
+    originInput.addEventListener("focus", e => { e.target.select(); renderOriginSuggest(e.target.value); });
+    originInput.addEventListener("blur", () => setTimeout(hideOriginSuggest, 120));
+    originInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        const first = findCities(e.target.value)[0];
+        if (first) { pickOrigin(first[2]); e.target.blur(); }
+      }
+    });
+  }
+  const loc = document.getElementById("origin-locate");
+  if (loc) loc.innerHTML = `${icon("pin")}<span>使用我的位置</span>`;
 
   syncThemeBtn();
   renderWeightSliders();
@@ -1366,13 +1854,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.getElementById("filter-hub")?.addEventListener("change", e => {
-    state.hubFilter = e.target.value;
-    renderApp();
-  });
-
-  document.getElementById("filter-nonstop")?.addEventListener("change", e => {
-    state.nonstopOnly = e.target.checked;
+  document.getElementById("filter-hours")?.addEventListener("change", e => {
+    state.maxHours = Number(e.target.value);
     renderApp();
   });
 

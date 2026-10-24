@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Thrill &amp; Magic Index · 全球主题游乐园 Top 100 ＆ 水上乐园 Top 15</title>
+  <meta name="description" content="兼顾硬核过山车统治力、殿堂级暗黑骑乘造景与真实排队运营体验：全球 100 座顶级主题游乐园与 15 座传奇水上乐园权威图鉴。" />
+  <meta name="theme-color" content="#0b0818" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0818'/%3E%3Cpath d='M3 24 C10 24, 10 8, 16 8 C22 8, 22 24, 29 24' fill='none' stroke='%23ffb830' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='8' r='3' fill='%23ff4d79'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" />
+  <style>
+    /* ==========================================================================
+       The Thrill & Magic Index — Twilight Starlight & Coaster Track Stylesheet
+       Deep twilight indigo · electric coaster gold · magic rose · aqua splash
+       ========================================================================== */
+    :root {
+      --bg: #080612;
+      --bg-2: #100c24;
+      --card: rgba(22, 18, 46, 0.72);
+      --card-hover: rgba(30, 24, 62, 0.88);
+      --glass: rgba(255, 255, 255, 0.04);
+      --edge: rgba(255, 200, 120, 0.15);
+      --edge-2: rgba(255, 200, 120, 0.34);
+      --text: #f7f4ff;
+      --muted: rgba(228, 220, 250, 0.68);
+      --faint: rgba(228, 220, 250, 0.42);
+      --gold: #ffb830;
+      --rose: #ff4d79;
+      --violet: #a77bff;
+      --aqua: #2be4dc;
+      --lime: #5ce69b;
+      --display: "Sora", "Noto Sans SC", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --wrap: 1240px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: var(--bg); color: var(--text);
+      font-family: var(--sans); font-size: 15px; line-height: 1.72;
+      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, p, ul, ol { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(255, 184, 48, 0.32); color: #fff; }
+    .wrap { width: min(var(--wrap), 100% - 44px); margin-inline: auto; }
+
+    /* Twilight sky & subtle coaster grid ------------------------------------ */
+    .sky-bg {
+      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+      background:
+        radial-gradient(85% 55% at 18% 0%, rgba(167, 123, 255, 0.22), transparent 65%),
+        radial-gradient(75% 50% at 85% 10%, rgba(255, 77, 121, 0.18), transparent 60%),
+        radial-gradient(90% 60% at 50% 100%, rgba(43, 228, 220, 0.10), transparent 70%),
+        linear-gradient(180deg, #120d2b 0%, #090716 55%, #06040f 100%);
+    }
+    .track-grid {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.28;
+      background-image:
+        linear-gradient(rgba(255, 184, 48, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 184, 48, 0.05) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: radial-gradient(circle at 50% 25%, #000 0%, transparent 80%);
+      mask-image: radial-gradient(circle at 50% 25%, #000 0%, transparent 80%);
+    }
+
+    /* Top Nav --------------------------------------------------------------- */
+    .top {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(8, 6, 18, 0.78);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--edge);
+    }
+    .top-inner { display: flex; align-items: center; gap: 18px; min-height: 68px; padding: 8px 0; }
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--display); font-weight: 600; font-size: 13px;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
+      white-space: nowrap;
+    }
+    .logo svg { width: 26px; height: 26px; flex: none; }
+    .switch {
+      display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto; padding: 4px;
+      border: 1px solid var(--edge); border-radius: 999px;
+      background: rgba(16, 12, 36, 0.65);
+    }
+    .switch a {
+      padding: 6px 13px; border-radius: 999px; font-size: 13px;
+      color: var(--muted); transition: all 0.2s; white-space: nowrap;
+    }
+    .switch a:hover { color: var(--text); }
+    .switch a[aria-current="page"] {
+      background: linear-gradient(135deg, rgba(255, 184, 48, 0.24), rgba(255, 77, 121, 0.24));
+      color: var(--gold); border: 1px solid rgba(255, 184, 48, 0.45);
+      box-shadow: 0 0 18px rgba(255, 184, 48, 0.2);
+    }
+
+    /* Hero ------------------------------------------------------------------ */
+    .hero {
+      position: relative; padding: 68px 0 84px; overflow: hidden;
+      border-bottom: 1px solid var(--edge);
+    }
+    .hero-coaster-svg {
+      position: absolute; inset: auto 0 0 0; width: 100%; height: 320px;
+      pointer-events: none; z-index: -1; opacity: 0.32;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--display); font-size: 11.5px; font-weight: 600;
+      letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold);
+    }
+    .eyebrow::before {
+      content: ""; width: 28px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--rose));
+    }
+    .hero h1 {
+      margin-top: 22px; font-family: var(--sans); font-weight: 300;
+      font-size: clamp(38px, 5.6vw, 76px); line-height: 1.15; letter-spacing: 0.01em;
+    }
+    .hero h1 em {
+      font-style: normal; font-family: var(--display); font-weight: 600;
+      background: linear-gradient(120deg, var(--gold) 0%, #ff7a59 50%, var(--rose) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p.lede {
+      max-width: 44em; margin-top: 24px; font-size: 16px; line-height: 1.95;
+      color: var(--muted); font-weight: 300;
+    }
+    .hero-jump { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn-jump {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 500;
+      border: 1px solid var(--edge-2); background: rgba(255, 184, 48, 0.1); color: var(--gold);
+      transition: all 0.2s;
+    }
+    .btn-jump:hover { background: var(--gold); color: #120b00; box-shadow: 0 0 24px rgba(255, 184, 48, 0.4); }
+    .btn-jump.is-aqua { border-color: rgba(43, 228, 220, 0.4); background: rgba(43, 228, 220, 0.1); color: var(--aqua); }
+    .btn-jump.is-aqua:hover { background: var(--aqua); color: #012022; box-shadow: 0 0 24px rgba(43, 228, 220, 0.4); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin-top: 52px; padding-top: 24px; border-top: 1px solid var(--edge); gap: 18px;
+    }
+    .hero-stats div + div { padding-left: 18px; border-left: 1px solid var(--edge); }
+    .hero-stats b {
+      display: block; font-family: var(--display); font-weight: 300;
+      font-size: clamp(26px, 3vw, 42px); line-height: 1.05; color: var(--text);
+    }
+    .hero-stats b small { font-size: 0.45em; color: var(--gold); margin-left: 4px; font-weight: 400; }
+    .hero-stats span { display: block; margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+
+    /* Sections & Weight Tuner ----------------------------------------------- */
+    .section { padding: 84px 0; }
+    .sec-head { max-width: 780px; margin-bottom: 40px; }
+    .sec-head h2 { margin-top: 12px; font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; }
+    .sec-head h2 em { font-style: normal; color: var(--gold); }
+    .sec-head p { margin-top: 12px; color: var(--muted); font-weight: 300; line-height: 1.9; }
+
+    .tuner {
+      padding: 28px 30px; border: 1px solid var(--edge-2); border-radius: 24px;
+      background: linear-gradient(145deg, rgba(28, 22, 58, 0.85), rgba(14, 11, 32, 0.92));
+      box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.7);
+      margin-bottom: 32px;
+    }
+    .tuner-top {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px; padding-bottom: 20px; border-bottom: 1px solid var(--edge);
+    }
+    .tuner-title { font-size: 16px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+    .tuner-title span.badge {
+      padding: 3px 10px; border-radius: 999px; font-family: var(--mono); font-size: 11px;
+      background: rgba(255, 184, 48, 0.16); color: var(--gold); border: 1px solid rgba(255, 184, 48, 0.35);
+    }
+    .presets { display: flex; flex-wrap: wrap; gap: 8px; }
+    .preset-btn {
+      padding: 6px 14px; border-radius: 999px; font-size: 12.5px;
+      border: 1px solid var(--edge); color: var(--muted); background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s;
+    }
+    .preset-btn:hover { color: var(--text); border-color: var(--edge-2); }
+    .preset-btn[aria-pressed="true"] {
+      background: var(--gold); color: #160f00; border-color: var(--gold); font-weight: 600;
+      box-shadow: 0 0 16px rgba(255, 184, 48, 0.35);
+    }
+    .sliders-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px 26px; margin-top: 22px;
+    }
+    .s-item { display: flex; flex-direction: column; gap: 6px; }
+    .s-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--text); }
+    .s-label b { font-family: var(--mono); color: var(--gold); font-weight: 500; }
+    .s-sub { font-size: 11.5px; color: var(--faint); margin-top: -2px; }
+    .s-item input[type="range"] {
+      -webkit-appearance: none; appearance: none; width: 100%; height: 6px;
+      border-radius: 999px; background: rgba(255, 255, 255, 0.12); outline: none;
+    }
+    .s-item input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none; width: 16px; height: 16px;
+      border-radius: 50%; background: var(--gold); cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 184, 48, 0.7);
+    }
+
+    /* Filter & Sort Controls ------------------------------------------------ */
+    .controls {
+      position: sticky; top: 69px; z-index: 35;
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 16px 20px; margin-bottom: 36px;
+      border: 1px solid var(--edge); border-radius: 20px;
+      background: rgba(12, 9, 28, 0.88);
+      -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+      box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.75);
+    }
+    .ctrl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .search { position: relative; flex: 1 1 260px; }
+    .search svg {
+      position: absolute; left: 14px; top: 50%; width: 16px; height: 16px;
+      transform: translateY(-50%); stroke: var(--muted); fill: none; stroke-width: 1.8;
+    }
+    .search input {
+      width: 100%; height: 40px; padding: 0 14px 0 40px;
+      border: 1px solid var(--edge); border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04); outline: none; font-size: 13.5px;
+    }
+    .search input::placeholder { color: var(--faint); }
+    .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255, 184, 48, 0.15); }
+
+    .chip-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .chip-group-label { font-size: 12px; color: var(--faint); margin-right: 4px; font-family: var(--mono); }
+    .chip {
+      height: 32px; padding: 0 13px; border: 1px solid var(--edge); border-radius: 999px;
+      font-size: 12.5px; color: var(--muted); background: rgba(255, 255, 255, 0.02);
+      transition: all 0.18s; white-space: nowrap;
+    }
+    .chip:hover { color: var(--text); border-color: var(--edge-2); }
+    .chip[aria-pressed="true"] {
+      color: #140d00; background: var(--gold); border-color: var(--gold); font-weight: 600;
+      box-shadow: 0 0 14px rgba(255, 184, 48, 0.35);
+    }
+    .chip.is-tag[aria-pressed="true"] {
+      color: #fff; background: var(--rose); border-color: var(--rose);
+      box-shadow: 0 0 14px rgba(255, 77, 121, 0.4);
+    }
+    .sort-bar { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(0, 0, 0, 0.25); }
+    .sort-btn { height: 28px; padding: 0 12px; border-radius: 999px; font-size: 12px; color: var(--muted); transition: all 0.18s; }
+    .sort-btn[aria-pressed="true"] { background: rgba(167, 123, 255, 0.28); color: #fff; font-weight: 500; }
+    .count { margin-left: auto; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+    .count b { color: var(--gold); }
+
+    /* Cards & Tier Zones ---------------------------------------------------- */
+    .zone { margin-top: 64px; }
+    .zone:first-child { margin-top: 0; }
+    .zone-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 12px; padding-bottom: 16px; margin-bottom: 22px;
+      border-bottom: 1px solid var(--edge-2);
+    }
+    .zone-title { display: flex; align-items: baseline; gap: 14px; }
+    .zone-tier {
+      font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3.5vw, 44px);
+      color: var(--zone-c, var(--gold)); letter-spacing: -0.02em;
+    }
+    .zone-name { font-size: 20px; font-weight: 500; }
+    .zone-note { font-size: 13.5px; color: var(--muted); font-weight: 300; }
+
+    .list { display: grid; gap: 18px; }
+    .card {
+      position: relative; overflow: hidden;
+      border: 1px solid var(--edge); border-radius: 22px;
+      background: var(--card);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      transition: transform 0.28s var(--ease), border-color 0.25s, background 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--zone-c, var(--gold));
+      background: var(--card-hover);
+      box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.85);
+    }
+    .card.is-t0 { border-color: rgba(255, 184, 48, 0.36); }
+
+    /* Optional Cover Banner / Stylized Fallback */
+    .c-banner {
+      position: relative; height: 148px; overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      background: var(--banner-grad, linear-gradient(125deg, #1d133b, #36194b 55%, #162347));
+    }
+    .c-banner img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: saturate(1.08) contrast(1.04);
+      transition: transform 0.6s var(--ease);
+    }
+    .card:hover .c-banner img { transform: scale(1.03); }
+    .c-banner-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(8, 6, 18, 0.15) 0%, rgba(8, 6, 18, 0.86) 100%);
+    }
+    .c-banner-art {
+      position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.26; pointer-events: none;
+    }
+    .c-banner-meta {
+      position: absolute; left: 24px; right: 24px; bottom: 14px;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;
+    }
+    .c-rank-box { display: flex; align-items: baseline; gap: 10px; }
+    .c-rank {
+      font-family: var(--display); font-weight: 700; font-size: 38px; line-height: 1;
+      color: var(--zone-c, var(--gold)); text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    }
+    .c-tier-pill {
+      padding: 2px 9px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 600;
+      background: rgba(0, 0, 0, 0.55); color: var(--zone-c, var(--gold));
+      border: 1px solid var(--zone-c, var(--gold));
+    }
+    .c-score-box {
+      text-align: right; background: rgba(8, 6, 18, 0.72);
+      padding: 6px 14px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.14);
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .c-score-val {
+      font-family: var(--display); font-size: 26px; font-weight: 600; line-height: 1;
+      color: var(--gold);
+    }
+    .c-score-val small { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 3px; }
+    .c-score-bars {
+      display: flex; gap: 3px; margin-top: 5px; justify-content: flex-end;
+    }
+    .c-score-bars i {
+      display: block; height: 4px; border-radius: 2px; background: var(--gold);
+    }
+
+    .c-body { padding: 20px 24px 24px; }
+    .c-head-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .c-name { font-size: 20px; font-weight: 600; line-height: 1.35; color: var(--text); }
+    .c-en { font-family: var(--display); font-size: 13px; font-weight: 300; color: var(--muted); margin-left: 8px; }
+    .c-loc {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted);
+    }
+    .c-loc a {
+      color: var(--aqua); border-bottom: 1px dotted rgba(43, 228, 220, 0.5); margin-left: 4px;
+    }
+
+    /* Key Data Badges Row */
+    .c-metrics {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+      padding-bottom: 14px; border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .m-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 11px; border-radius: 8px; font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.09);
+      color: var(--text);
+    }
+    .m-badge b { font-family: var(--mono); color: var(--gold); font-weight: 600; }
+    .m-badge.is-coaster b { color: var(--rose); }
+    .m-badge.is-crowd {
+      background: rgba(255, 77, 121, 0.12); border-color: rgba(255, 77, 121, 0.3);
+      color: #ff9eb5; font-size: 12px;
+    }
+
+    /* Highlights & Tip */
+    .c-feats { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .c-feats li {
+      padding: 5px 12px; border-radius: 999px; font-size: 13px; line-height: 1.5;
+      background: rgba(167, 123, 255, 0.08); border: 1px solid rgba(167, 123, 255, 0.2);
+      color: rgba(247, 244, 255, 0.92);
+    }
+    .c-feats li:first-child {
+      background: rgba(255, 184, 48, 0.11); border-color: rgba(255, 184, 48, 0.38);
+      color: #fff; font-weight: 500;
+    }
+    .c-tip {
+      margin-top: 14px; padding: 10px 14px; border-radius: 12px;
+      background: rgba(43, 228, 220, 0.06); border-left: 3px solid var(--aqua);
+      font-size: 13px; line-height: 1.65; color: var(--muted);
+    }
+    .c-tip strong { color: var(--aqua); font-weight: 500; margin-right: 6px; }
+
+    /* Water Parks Top 15 Section -------------------------------------------- */
+    .water-sec {
+      background: linear-gradient(180deg, rgba(10, 36, 48, 0.35), rgba(6, 18, 28, 0.55));
+      border-top: 1px solid rgba(43, 228, 220, 0.25);
+      border-bottom: 1px solid rgba(43, 228, 220, 0.25);
+    }
+    .water-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 18px; }
+    .w-card {
+      border: 1px solid rgba(43, 228, 220, 0.24); border-radius: 20px;
+      background: rgba(8, 26, 38, 0.72); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform 0.25s var(--ease), border-color 0.25s;
+    }
+    .w-card:hover { transform: translateY(-3px); border-color: var(--aqua); }
+    .w-banner {
+      position: relative; height: 120px; overflow: hidden;
+      background: linear-gradient(135deg, #064e63 0%, #0b8793 60%, #16bffd 100%);
+    }
+    .w-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .w-banner-meta {
+      position: absolute; inset: auto 18px 10px 18px;
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .w-rank { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--aqua); text-shadow: 0 2px 12px rgba(0,0,0,0.65); }
+    .w-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+
+    /* Pitfalls Section ------------------------------------------------------ */
+    .pitfalls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .pitfall {
+      padding: 24px 26px; border: 1px dashed rgba(255, 77, 121, 0.35);
+      border-radius: 18px; background: rgba(255, 77, 121, 0.04);
+    }
+    .pitfall h3 { font-size: 16.5px; font-weight: 600; color: var(--text); }
+    .pitfall h3 span {
+      margin-right: 10px; padding: 2px 8px; border-radius: 6px;
+      font-family: var(--mono); font-size: 11px; background: rgba(255, 77, 121, 0.2); color: var(--rose);
+    }
+    .pitfall p { margin-top: 10px; font-size: 13.8px; line-height: 1.85; color: var(--muted); }
+
+    /* Footer ---------------------------------------------------------------- */
+    .foot { padding: 72px 0 56px; border-top: 1px solid var(--edge); }
+    .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
+    .foot p { max-width: 36em; font-size: 13.5px; color: var(--muted); font-weight: 300; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    .foot nav a {
+      padding: 9px 16px; border: 1px solid var(--edge); border-radius: 999px;
+      font-size: 13px; color: var(--muted); transition: all 0.2s;
+    }
+    .foot nav a:hover { color: var(--gold); border-color: var(--gold); }
+    .foot .mark {
+      margin-top: 48px; font-family: var(--display); font-weight: 700;
+      font-size: clamp(42px, 9.5vw, 132px); line-height: 1; letter-spacing: -0.03em;
+      color: transparent; -webkit-text-stroke: 1px rgba(255, 184, 48, 0.16);
+      white-space: nowrap; overflow: hidden;
+    }
+
+    @media (max-width: 960px) {
+      .sliders-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .pitfalls { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 28px); }
+      .sliders-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-stats div + div { padding-left: 0; border-left: 0; }
+      .controls { position: static; }
+      .switch { overflow-x: auto; max-width: 100%; flex-wrap: nowrap; }
+    }
+  </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="涵盖全球100座顶级主题乐园与过山车圣地、15座殿堂级水上乐园，支持6维权重实时重算、过山车数量与客流排序及快通攻略。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15" />
+  <meta property="og:description" content="涵盖全球100座顶级主题乐园与过山车圣地、15座殿堂级水上乐园，支持6维权重实时重算、过山车数量与客流排序及快通攻略。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/themeparks.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15" />
+  <meta name="twitter:description" content="涵盖全球100座顶级主题乐园与过山车圣地、15座殿堂级水上乐园，支持6维权重实时重算、过山车数量与客流排序及快通攻略。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15",
+  "description": "涵盖全球100座顶级主题乐园与过山车圣地、15座殿堂级水上乐园，支持6维权重实时重算、过山车数量与客流排序及快通攻略。",
+  "numberOfItems": 25,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "东京迪士尼海洋 (Tokyo DisneySea)",
+        "description": "日本 浦安（东京圈） · 20亿美金扩建「梦幻泉乡 Fantasy Springs」（冰雪奇缘+长发公主+彼得潘） + 神秘岛普罗米修斯火山地心探险 + 惊魂古塔 + 坚信！～梦想之海夜间水上大秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.6267,
+          "longitude": 139.8851
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多环球影城史诗宇宙 (Universal Epic Universe)",
+        "description": "美国 奥兰多 · 魔法部巨型实景暗黑骑乘 (Battle at the Ministry) + 星尘竞速双轨发射过山车 (Stardust Racers) + 暗黑宇宙科学怪人古堡 (Monsters Unchained) + 超级任天堂世界（含大金刚矿车） + 驯龙高手博克岛",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.4408,
+          "longitude": -81.4479
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多环球冒险岛 (Universal Islands of Adventure)",
+        "description": "美国 奥兰多 · 海格神奇生物摩托过山车 (7次弹射+自由落体轨道) + 侏罗纪极速猛禽过山车 (VelociCoaster) + 哈利波特禁忌之旅霍格沃茨城堡 + 蜘蛛侠3D暗黑骑乘",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.4722,
+          "longitude": -81.4702
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "德国欧洲公园 (Europa-Park)",
+        "description": "德国 鲁斯特 · Voltron Nevera 多段弹射斯特里科过山车 + 木质神车 Wodan + 蓝火弹射 (Blue Fire) + 银星高空过山车 (Silver Star) + 巴达维亚海盗暗黑船游 + 17个欧洲国家实景建筑区",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.266,
+          "longitude": 7.722
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "加州迪士尼乐园 (Disneyland Park Anaheim)",
+        "description": "美国 安纳海姆（洛杉矶圈） · 星球大战：抵抗组织崛起 (Rise of the Resistance) + 印第安纳琼斯冒险 (Indiana Jones Adventure) + 加勒比海盗元祖双跌落版 + 物质山雪橇 (Matterhorn) + 幻奇梦境 Fantasmic! 原版水幕大秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.8121,
+          "longitude": -117.919
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "德国幻想曲乐园 (Phantasialand)",
+        "description": "德国 布吕尔（科隆近郊） · Taron 多重电磁弹射过山车（穿越克鲁格海姆玄武岩峡谷） + F.L.Y. 全球首座弹射飞行过山车（穿透 Rookburgh 蒸汽朋克街区） + Black Mamba 非洲雨林悬挂过山车 + Chiapas 激流勇进",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.7989,
+          "longitude": 6.8794
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼奇幻王国 (Magic Kingdom)",
+        "description": "美国 奥兰多 · Happily Ever After 灰姑娘城堡烟花投影巅峰大秀 + 创极速光轮 (TRON Lightcycle / Run) + 七个小矮人矿山车 + 蒂安娜河湾大冒险 + 幽灵公馆与丛林巡航",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.4177,
+          "longitude": -81.5812
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "荷兰艾夫特琳童话乐园 (Efteling)",
+        "description": "荷兰 卡茨赫佛尔 · Symbolica 无轨幻想宫殿暗黑骑乘 + Danse Macabre 骷髅交响乐动感剧场 + Baron 1898 蒸汽朋克矿井垂直跌落过山车 + 飞翔的荷兰人水上过山车 + 梦幻森林元祖暗黑骑乘 Droomvlucht",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.65,
+          "longitude": 5.0497
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "美国杉点乐园 (Cedar Point)",
+        "description": "美国 桑达斯基（俄亥俄州） · Steel Vengeance 混合木铁天花板神车 + Maverick 多重弹射急转过山车 + Millennium Force 千禧年300英尺巨型过山车 + Top Thrill 2 摩天三段式冲顶过山车 + Siren's Curse 断轨倾斜过山车",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.4822,
+          "longitude": -82.6835
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼好莱坞影城 (Disney's Hollywood Studios)",
+        "description": "美国 奥兰多 · 星球大战：银河边缘（抵抗组织崛起 + 千年隼号走私者逃亡） + 暮光之城惊魂古塔（随机跌落母本） + 玩具总动员园区弹簧狗过山车 + 米奇与米妮飞速铁路 + Fantasmic! 夜间湖面大秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.3575,
+          "longitude": -81.5583
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "日本环球影城 (Universal Studios Japan)",
+        "description": "日本 大阪 · 超级任天堂世界（马里奥赛车 + 大金刚疯狂矿车） + 飞天翼龙 (The Flying Dinosaur) 俯卧过山车 + 好莱坞美梦·乘车游（含逆行 Backdrop 版） + 哈利波特禁忌之旅 + 鬼灭之刃/柯南期间限定XR乘车游",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.6654,
+          "longitude": 135.4323
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "上海迪士尼乐园 (Shanghai Disneyland)",
+        "description": "中国 上海 · 加勒比海盗：沉落宝藏之战（全球公认最强的海盗船游版本） + 疯狂动物城：热力追踪（全球独一区） + 创极速光轮首发母本 + 翱翔·飞越地平线 + 奇梦之光幻影秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 31.1434,
+          "longitude": 121.6579
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼动物王国 (Disney's Animal Kingdom)",
+        "description": "美国 奥兰多 · 阿凡达潘多拉星球：翱翔 Flight of Passage + 珠穆朗玛峰探险断轨倒滑过山车 (Expedition Everest) + 乞力马扎罗非洲草原真动物游猎车 + 狮子王庆典百老汇级音乐剧",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.3553,
+          "longitude": -81.5901
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼艾波卡特 (EPCOT)",
+        "description": "美国 奥兰多 · 银河护卫队：宇宙倒带旋转发射过山车 (Cosmic Rewind) + 料理鼠王3D无轨骑乘 + 冰雪奇缘永恒之旅 + 环礁湖 11 国世界之窗美食美酒节 + Luminous 夜间湖心烟花秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.3747,
+          "longitude": -81.5494
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "加州迪士尼冒险乐园 (Disney California Adventure)",
+        "description": "美国 安纳海姆（洛杉矶圈） · 汽车总动员水箱温泉镇赛车 (Radiator Springs Racers) + 银河护卫队：使命突围跳楼机 + 超人总动员弹射过山车 (Incredicoaster) + 彩色世界 World of Color 超巨型水幕激光音乐喷泉秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.8061,
+          "longitude": -117.9215
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "东京迪士尼乐园 (Tokyo Disneyland)",
+        "description": "日本 浦安（东京圈） · 美女与野兽「魔法奇缘」无轨音乐茶杯骑乘 + 小熊维尼猎蜜记元祖无轨版 + 怪兽电力公司捉迷藏 + 飞溅山（全球仅存原版） + 电子大游行·梦之光夜间花车巡游",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.6329,
+          "longitude": 139.8804
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "六旗魔术山乐园 (Six Flags Magic Mountain)",
+        "description": "美国 瓦伦西亚（洛杉矶北郊） · X2 四维旋转座椅过山车 + Twisted Colossus 双轨竞速混合木铁过山车 + Tatsu 山顶俯瞰飞行过山车 + Wonder Woman 单轨猛禽过山车 + West Coast Racers 四弹射对决过山车",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.4253,
+          "longitude": -118.5972
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "法国狂人国历史主题公园 (Puy du Fou)",
+        "description": "法国 莱塞佩斯（南特近郊） · La Cinéscénie 全球最大夜间实景演出（2550名演员+28公顷舞台） + 维京人水底升起真长船大秀 + 古罗马竞技场真马战车赛 + 最后一个潘什角 360 度旋转观众席剧场",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.8906,
+          "longitude": -0.9292
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "美国多莉山主题公园 (Dollywood)",
+        "description": "美国 鸽子谷（大烟山国家公园旁） · Lightning Rod 顺山势地形俯冲木质过山车 + Wild Eagle 山脊翼式过山车 + Big Bear Mountain 超长家庭地形弹射过山车 + 110吨真煤蒸汽火车环山游 + 传奇肉桂面包坊 (Grist Mill Cinnamon Bread)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.7953,
+          "longitude": -83.5308
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "坦帕布希花园 (Busch Gardens Tampa Bay)",
+        "description": "美国 坦帕（佛罗里达） · Iron Gwazi 北美最高最快混合木铁过山车（91度近垂直跌落） + Cheetah Hunt 跨越草原三段弹射过山车 + Montu 顶级悬挂过山车 + SheiKra 无底板垂直过山车 + 26公顷塞伦盖蒂真长颈鹿犀牛大草原",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.0372,
+          "longitude": -82.4194
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "北京环球影城 (Universal Studios Beijing)",
+        "description": "中国 北京 · 侏罗纪世界努布拉岛大冒险（全球唯一全尺寸暴虐霸王龙追逐暗黑骑乘） + 功夫熊猫盖世之地全室内梦幻景区 + 霸天虎过山车 + 哈利波特与禁忌之旅 + 未来水世界特技大秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.8519,
+          "longitude": 116.6814
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "波兰能量乐园 (Energylandia)",
+        "description": "波兰 扎托尔（克拉科夫近郊） · Zadra 63.8米高混合木铁狂暴神车 + Hyperion 77米高巨型过山车 + Abyssus 多段弹射深海过山车 + 门票免费附赠的巨型户外水上乐园 Water Park",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 49.9992,
+          "longitude": 19.4086
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "美国银元城主题公园 (Silver Dollar City)",
+        "description": "美国 布兰森（密苏里州） · Time Traveler 全球首座极限旋转弹射过山车（山崖90度垂直跌落） + Outlaw Run 翻转木质过山车 + 新版浸没式火烧城室内过山车 (Fire in the Hole) + 园区正下方 100 米深天然钟乳石溶洞 Marvel Cave",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.6681,
+          "longitude": -93.3386
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "美国国王岛乐园 (Kings Island)",
+        "description": "美国 梅森（辛辛那提北郊） · The Beast 全球最长木质过山车（2250米深入原始黑森林） + Orion 91米高巨型过山车 + Diamondback 超强抛射感B&M过山车 + Mystic Timbers 木质神作 + 史努比星球儿童区",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.3447,
+          "longitude": -84.2686
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "日本富士急高原乐园 (Fuji-Q Highland)",
+        "description": "日本 富士吉田（山梨县） · Eejanaika 四维翻转过山车（总翻转次数吉尼斯纪录） + 高飞车 Takabisha 121度内折极限跌落 + 过山车之王 FUJIYAMA（直面富士山雪顶） + ZOKKON 摩托弹射过山车 + 战栗迷宫（全球最长真废弃医院鬼屋）",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.4869,
+          "longitude": 138.7806
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END AUTO-SEO -->
+</head>
+<body>
+  <div class="sky-bg" aria-hidden="true"></div>
+  <div class="track-grid" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M2 25 C9 25, 9 7, 16 7 C23 7, 23 25, 30 25" fill="none" stroke="#ffb830" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="16" cy="7" r="3" fill="#ff4d79"/>
+          <circle cx="8" cy="19" r="2" fill="#2be4dc"/>
+          <circle cx="24" cy="19" r="2" fill="#2be4dc"/>
+        </svg>
+        <span>Thrill &amp; Magic</span>
+      </a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假</a>
+        <a href="aquariums.html">水族馆</a>
+        <a href="zoos.html">动物园</a>
+        <a href="museums.html">重器博物馆</a>
+        <a href="themeparks.html" aria-current="page">主题游乐园</a>
+        <a href="ski.html">滑雪场</a>
+        <a href="shows.html">必看大秀</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <svg class="hero-coaster-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,280 C240,280 280,40 460,40 C640,40 660,260 840,260 C1020,260 1080,80 1240,80 C1360,80 1400,220 1440,240" fill="none" stroke="rgba(255,184,48,0.45)" stroke-width="3"/>
+        <path d="M0,300 C320,300 400,120 620,120 C840,120 900,290 1120,290 C1280,290 1360,150 1440,150" fill="none" stroke="rgba(255,77,121,0.35)" stroke-width="2" stroke-dasharray="6 6"/>
+      </svg>
+      <div class="wrap">
+        <span class="eyebrow">The Thrill &amp; Magic Index · 2026 全球主题乐园与水乐园权威榜</span>
+        <h1>失重抛射与<em>造梦奇境</em><br />全球主题游乐园 Top <em>100</em></h1>
+        <p class="lede">
+          有的乐园用百米高空的 4.5G 俯冲让你肾上腺素狂飙，有的乐园用百亿美金的实景魔法街区让你忘却现实世界。本榜单拒绝单纯按客流量排座次，从「镇园大项目与过山车」「造景沉浸与IP」「运营吞吐与排队体验」「全龄亲子」「餐饮夜间大秀」「门票快通性价比」六大维度，对全球 100 座顶级主题游乐园及 15 座传奇水上乐园进行量化拆解。
+        </p>
+        <div class="hero-jump">
+          <a class="btn-jump" href="#ranking">🎢 浏览主题乐园 Top 100</a>
+          <a class="btn-jump is-aqua" href="#waterparks">🌊 直达全球水上乐园 Top 15</a>
+          <a class="btn-jump" href="#pitfalls" style="border-color:rgba(255,77,121,0.4);color:#ff9eb5;background:rgba(255,77,121,0.1)">⚠️ 全球游乐园排雷与快通避坑</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>100<small>座</small></b><span>全球标杆主题游乐园</span></div>
+          <div><b>682<small>座</small></b><span>榜单收录过山车总数</span></div>
+          <div><b>$62<small>起</small></b><span>榜首东京迪士尼海洋门票</span></div>
+          <div><b>20<small>座</small></b><span>单园最多过山车 · 六旗魔术山</span></div>
+          <div><b>15<small>座</small></b><span>全球殿堂级水上乐园附榜</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ranking" style="padding-top: 56px;">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">Interactive Rubric · 动态权重实验室</span>
+          <h2>定制你的<em>专属百分制</em>游乐园榜单</h2>
+          <p>每个人的完美乐园截然不同：硬核玩家只看 RMC 与 Intamin 神车数量，情侣与亲子更看重免排队、城堡烟花与沉浸造景。点击预设或拖动下方 6 个滑块，100 座乐园的综合得分与排名将实时重算。</p>
+        </header>
+
+        <div class="tuner" aria-label="评分权重调节器">
+          <div class="tuner-top">
+            <div class="tuner-title">
+              <span>🎛️ 实时六维权重引擎</span>
+              <span class="badge" id="weight-summary">均衡模式 · 100% 归一化</span>
+            </div>
+            <div class="presets" id="presets">
+              <button type="button" class="preset-btn" data-preset="default" aria-pressed="true">⚖️ 默认综合均衡</button>
+              <button type="button" class="preset-btn" data-preset="coaster" aria-pressed="false">🎢 过山车狂热模式</button>
+              <button type="button" class="preset-btn" data-preset="immersion" aria-pressed="false">🏰 IP造景与大秀控</button>
+              <button type="button" class="preset-btn" data-preset="family" aria-pressed="false">👨‍👩‍👧 遛娃全龄省心游</button>
+              <button type="button" class="preset-btn" data-preset="value" aria-pressed="false">💎 穷游高性价比党</button>
+            </div>
+          </div>
+          <div class="sliders-grid">
+            <label class="s-item">
+              <span class="s-label"><span>1. 镇园项目与过山车</span><b id="val-thrill">25%</b></span>
+              <span class="s-sub">钢铁/木质神车阵容、E-Ticket 顶级暗黑骑乘</span>
+              <input type="range" id="sl-thrill" min="0" max="60" value="25" />
+            </label>
+            <label class="s-item">
+              <span class="s-label"><span>2. 造景沉浸与IP还原</span><b id="val-immersion">25%</b></span>
+              <span class="s-sub">建筑美学细节、视线遮蔽、世界观包裹感</span>
+              <input type="range" id="sl-immersion" min="0" max="60" value="25" />
+            </label>
+            <label class="s-item">
+              <span class="s-label"><span>3. 运营与排队友好度</span><b id="val-ops">15%</b></span>
+              <span class="s-sub">发车吞吐效率、单人通道、虚拟排队与遮阳</span>
+              <input type="range" id="sl-ops" min="0" max="40" value="15" />
+            </label>
+            <label class="s-item">
+              <span class="s-label"><span>4. 全龄与亲子友好度</span><b id="val-family">15%</b></span>
+              <span class="s-sub">身高限制宽容度、家庭骑乘占比、无障碍动线</span>
+              <input type="range" id="sl-family" min="0" max="40" value="15" />
+            </label>
+            <label class="s-item">
+              <span class="s-label"><span>5. 餐饮与夜间大秀</span><b id="val-diningShow">10%</b></span>
+              <span class="s-sub">特色主题餐饮、花车巡游、烟花水幕大秀</span>
+              <input type="range" id="sl-diningShow" min="0" max="40" value="10" />
+            </label>
+            <label class="s-item">
+              <span class="s-label"><span>6. 门票快通性价比</span><b id="val-value">10%</b></span>
+              <span class="s-sub">门票与 Express 快通溢价合理度、免费福利</span>
+              <input type="range" id="sl-value" min="0" max="40" value="10" />
+            </label>
+          </div>
+        </div>
+
+        <div class="controls" role="search">
+          <div class="ctrl-row">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <input id="q" type="search" placeholder="搜索乐园名称、国家、城市或镇园项目（如：任天堂、哈利波特、木质过山车、鲸鲨）" autocomplete="off" />
+            </label>
+            <div class="sort-bar" role="group" aria-label="排序方式">
+              <button type="button" class="sort-btn" data-sort="score" aria-pressed="true">按综合得分</button>
+              <button type="button" class="sort-btn" data-sort="coasters" aria-pressed="false">按过山车数量</button>
+              <button type="button" class="sort-btn" data-sort="attendance" aria-pressed="false">按年客流量</button>
+              <button type="button" class="sort-btn" data-sort="area" aria-pressed="false">按占地面积</button>
+              <button type="button" class="sort-btn" data-sort="ticket" aria-pressed="false">按门票价格</button>
+            </div>
+            <span class="count" id="count"></span>
+          </div>
+          <div class="ctrl-row">
+            <div class="chip-group" id="region-chips">
+              <span class="chip-group-label">REGION</span>
+            </div>
+            <div class="chip-group" id="tier-chips">
+              <span class="chip-group-label">TIER</span>
+            </div>
+          </div>
+          <div class="ctrl-row">
+            <div class="chip-group" id="crowd-chips">
+              <span class="chip-group-label">BEST FOR</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="zones"></div>
+      </div>
+    </section>
+
+    <section class="section water-sec" id="waterparks">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow" style="color:var(--aqua)">Splash &amp; Thermal · 全球水上乐园 Top 15</span>
+          <h2>从火山激流到<em>热带巨型穹顶</em></h2>
+          <p>按水上过山车科技含量、造浪池体量、全天候恒温能力与造景沉浸感选出的全球 15 座殿堂级水上乐园。无论是穿过真鲨鱼池的垂直滑道，还是建在飞艇机库里的室内热带雨林，都值得专程湿身。</p>
+        </header>
+        <div class="water-grid" id="water-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="pitfalls">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow" style="color:var(--rose)">Pitfalls &amp; Field Notes · 避坑对标说明</span>
+          <h2>买票前必读的<em>六条铁律与排雷指南</em></h2>
+          <p>主题游乐园是全球信息差最大的旅游消费场景之一：选错入园日期或快通策略，150 美金门票可能换来全天晒太阳排 3 个项目的惨痛体验。</p>
+        </header>
+        <div class="pitfalls">
+          <article class="pitfall">
+            <h3><span>TRAP 01</span>大阪 USJ / 奥兰多热门园「裸票盲冲」陷阱</h3>
+            <p>日本环球影城（USJ）年客流高达 1600 万但占地仅 54 公顷，若既不买 Express 快通、又不在早上 7:15 前抵达大门排队，上午 9 点后连「超级任天堂世界」的区域入场整理券都会被抢光。热门园要么花钱买时间（Express / 早享卡），要么花早起买时间。</p>
+          </article>
+          <article class="pitfall">
+            <h3><span>TRAP 02</span>隐藏福利：全球各大乐园「免费黄金通道」</h3>
+            <p>别急着买高价黄牛快通！德国欧洲公园（VirtualLine）、荷兰艾夫特琳、韩国爱宝乐园（Smart Queue）均提供官方 App 免费虚拟预约；此外，奥兰多动物王国（珠峰过山车）、加州冒险乐园（汽车总动员赛车）、北京/奥兰多环球影城（禁忌之旅/木乃伊）的 <b>Single Rider（单人补位通道）</b> 常年可省下 70% 排队时间。</p>
+          </article>
+          <article class="pitfall">
+            <h3><span>TRAP 03</span>欧洲与美国硬核过山车园的「季节性停运」</h3>
+            <p>美国杉点乐园（Cedar Point）、国王岛、加拿大奇幻乐园、瑞典里瑟本等高纬度乐园，每年 11 月至次年 4 月中旬大多处于冬季闭园或仅开放圣诞灯会（大型过山车在低温下无法运行）。规划行程前务必核对官网运营日历。</p>
+          </article>
+          <article class="pitfall">
+            <h3><span>TRAP 04</span>名气大但单买性价比偏低的「附属迷你园」</h3>
+            <p>西班牙巴塞罗那南郊的 <b>Ferrari Land（法拉利乐园）</b> 虽拥有 112 米高的欧洲最高过山车 Red Force，但全园仅 7 公顷、1 小时即逛完，切忌单买全价票，只建议买冒险港（PortAventura）双园联票顺路打卡；同理，巴黎迪士尼影城在 2026 冰雪奇缘新园区全面开放前体量偏小，务必买双园票。</p>
+          </article>
+          <article class="pitfall">
+            <h3><span>TRAP 05</span>中东与佛罗里达盛夏的「高温与雷暴停机」</h3>
+            <p>6–9 月前往迪拜/阿布扎比，白天室外高达 45°C，请优先选择全室内的 <b>华纳兄弟世界、法拉利世界、海洋世界、IMG 冒险世界</b>；而奥兰多夏季每天下午 3–5 点几乎必下热带雷阵雨，所有户外过山车会因防雷强制停运，务必要在上午 12 点前刷完户外过山车！</p>
+          </article>
+          <article class="pitfall">
+            <h3><span>TRAP 06</span>警惕纯靠「网红拍照打卡」但无核心骑乘的假乐园</h3>
+            <p>部分城乡结合部新建的所谓「欧式童话小镇 / 粉红沙滩乐园」完全没有国际一线厂商（B&amp;M、Intamin、Mack、Vekoma、RMC）制造的骑乘设备，仅靠几座廉价石膏城堡收百元门票。认准本榜单收录的 100 座真材实料乐园，绝不踩雷。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p>The Thrill &amp; Magic Index 是 Destination Atlas 专题图鉴之一。客流数据参考 TEA/AECOM 全球主题公园报告，过山车数据参考 RCDB，票价为成人单日基准价折算美元。</p>
+        <nav aria-label="其他榜单">
+          <a href="index.html">图鉴总览</a>
+          <a href="beaches.html">海岸度假</a>
+          <a href="aquariums.html">水族馆 Top 35</a>
+          <a href="zoos.html">动物园 Top 30</a>
+          <a href="museums.html">重器博物馆 Top 100</a>
+          <a href="ski.html">滑雪场</a>
+          <a href="shows.html">必看大秀</a>
+        </nav>
+      </div>
+      <p class="mark" aria-hidden="true">THRILL &amp; MAGIC</p>
+    </div>
+  </footer>
+
+  <script src="images_themed.js" onerror=""></script>
+  <script src="data_themeparks.js"></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      "use strict";
+      var PARKS = (window.THEMEPARKS_TOP100 || []).slice();
+      var WATERS = (window.WATERPARKS_TOP15 || []).slice();
+
+      var MAX_SCORES = {
+        thrill: 25,
+        immersion: 25,
+        ops: 15,
+        family: 15,
+        diningShow: 10,
+        value: 10
+      };
+
+      var PRESETS = {
+        default:   { label: "均衡模式",       w: { thrill: 25, immersion: 25, ops: 15, family: 15, diningShow: 10, value: 10 } },
+        coaster:   { label: "过山车狂热模式", w: { thrill: 55, immersion: 10, ops: 15, family: 5,  diningShow: 5,  value: 10 } },
+        immersion: { label: "IP造景与大秀控", w: { thrill: 15, immersion: 45, ops: 10, family: 10, diningShow: 15, value: 5  } },
+        family:    { label: "遛娃全龄省心游", w: { thrill: 10, immersion: 20, ops: 25, family: 30, diningShow: 10, value: 5  } },
+        value:     { label: "穷游高性价比党", w: { thrill: 20, immersion: 20, ops: 20, family: 10, diningShow: 5,  value: 25 } }
+      };
+
+      var ZONES = [
+        { tier: "T0",   name: "殿堂神作 · 全球朝圣地",   c: "#ffb830", grad: "linear-gradient(125deg, #2d1638 0%, #4a1c40 50%, #1f294f 100%)", note: "Ranks 1–10：人类造梦工业与极限工程的最高结晶，值得专门为其跨洋飞一趟。" },
+        { tier: "T1",   name: "全球专程 · 区域绝对统治", c: "#ff4d79", grad: "linear-gradient(125deg, #1b1438 0%, #3b173c 55%, #14223d 100%)", note: "Ranks 11–30：拥有世界级镇园之宝或现象级过山车矩阵，撑起整座城市的旅游目的。" },
+        { tier: "T1.5", name: "区域王牌 · 独门绝活标杆", c: "#a77bff", grad: "linear-gradient(125deg, #151230 0%, #261b47 55%, #102038 100%)", note: "Ranks 31–60：在特定领域（如悬崖神车、全室内恒温、百年童话或天然暗河）无可替代。" },
+        { tier: "T2",   name: "顺路必刷 · 洲际高分强园", c: "#2be4dc", grad: "linear-gradient(125deg, #0f1b2e 0%, #152b3d 55%, #111930 100%)", note: "Ranks 61–100：本国或本大洲的国民级游乐重镇，顺路行程必排一天。" }
+      ];
+
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      function splitName(n) {
+        var m = String(n).match(/\s*\(([^()]*[A-Za-z][^()]*)\)/);
+        return m ? { zh: n.replace(m[0], "").trim(), en: m[1] } : { zh: n, en: "" };
+      }
+
+      PARKS.forEach(function (p) {
+        var nm = splitName(p.name);
+        p._zh = nm.zh;
+        p._en = nm.en;
+        p._feats = String(p.highlight || "").split(/\s+\+\s+/);
+      });
+
+      WATERS.forEach(function (w) {
+        var nm = splitName(w.name);
+        w._zh = nm.zh;
+        w._en = nm.en;
+        w._feats = String(w.highlight || "").split(/\s+\+\s+/);
+      });
+
+      var state = {
+        q: "",
+        region: "全部",
+        tier: "全部",
+        crowd: "全部人群",
+        sort: "score",
+        weights: { thrill: 25, immersion: 25, ops: 15, family: 15, diningShow: 10, value: 10 }
+      };
+
+      function computeScores() {
+        var w = state.weights;
+        var sumW = w.thrill + w.immersion + w.ops + w.family + w.diningShow + w.value;
+        if (sumW <= 0) sumW = 1;
+        PARKS.forEach(function (p) {
+          var s = p.scores;
+          var weighted =
+            (s.thrill / MAX_SCORES.thrill) * (w.thrill / sumW) * 100 +
+            (s.immersion / MAX_SCORES.immersion) * (w.immersion / sumW) * 100 +
+            (s.ops / MAX_SCORES.ops) * (w.ops / sumW) * 100 +
+            (s.family / MAX_SCORES.family) * (w.family / sumW) * 100 +
+            (s.diningShow / MAX_SCORES.diningShow) * (w.diningShow / sumW) * 100 +
+            (s.value / MAX_SCORES.value) * (w.value / sumW) * 100;
+          p._dynScore = weighted;
+        });
+      }
+
+      // Initialize Filter Chips
+      var REGIONS = ["全部", "北美", "亚洲", "欧洲", "中东 · 拉美 · 大洋洲"];
+      var TIERS = ["全部", "T0", "T1", "T1.5", "T2"];
+      var CROWDS = ["全部人群", "过山车狂热", "IP沉浸造景", "低龄亲子", "情侣出片", "夜景大秀", "全天候室内"];
+
+      var regEl = document.getElementById("region-chips");
+      regEl.insertAdjacentHTML("beforeend", REGIONS.map(function (r) {
+        return '<button type="button" class="chip" data-r="' + esc(r) + '" aria-pressed="' + (r === "全部") + '">' + esc(r) + "</button>";
+      }).join(""));
+
+      var tierEl = document.getElementById("tier-chips");
+      tierEl.insertAdjacentHTML("beforeend", TIERS.map(function (t) {
+        return '<button type="button" class="chip" data-t="' + esc(t) + '" aria-pressed="' + (t === "全部") + '">' + (t === "全部" ? "全部梯队" : esc(t)) + "</button>";
+      }).join(""));
+
+      var crowdEl = document.getElementById("crowd-chips");
+      crowdEl.insertAdjacentHTML("beforeend", CROWDS.map(function (c) {
+        return '<button type="button" class="chip is-tag" data-c="' + esc(c) + '" aria-pressed="' + (c === "全部人群") + '">' + esc(c) + "</button>";
+      }).join(""));
+
+      regEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".chip"); if (!b) return;
+        state.region = b.getAttribute("data-r");
+        regEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        render();
+      });
+
+      tierEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".chip"); if (!b) return;
+        state.tier = b.getAttribute("data-t");
+        tierEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        render();
+      });
+
+      crowdEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".chip"); if (!b) return;
+        state.crowd = b.getAttribute("data-c");
+        crowdEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        render();
+      });
+
+      document.querySelectorAll(".sort-btn").forEach(function (b) {
+        b.addEventListener("click", function () {
+          state.sort = b.getAttribute("data-sort");
+          document.querySelectorAll(".sort-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+          render();
+        });
+      });
+
+      var qEl = document.getElementById("q");
+      qEl.addEventListener("input", function () {
+        state.q = qEl.value.trim().toLowerCase();
+        render();
+      });
+
+      // Sliders & Presets
+      var KEYS = ["thrill", "immersion", "ops", "family", "diningShow", "value"];
+      function syncSlidersUI(labelOverride) {
+        var sum = 0;
+        KEYS.forEach(function (k) { sum += state.weights[k]; });
+        if (sum <= 0) sum = 1;
+        KEYS.forEach(function (k) {
+          var sl = document.getElementById("sl-" + k);
+          var vl = document.getElementById("val-" + k);
+          if (sl) sl.value = state.weights[k];
+          var normPct = Math.round((state.weights[k] / sum) * 100);
+          if (vl) vl.textContent = normPct + "%";
+        });
+        document.getElementById("weight-summary").textContent =
+          (labelOverride || "自定义权重") + " · 已实时重算 100 园得分";
+      }
+
+      KEYS.forEach(function (k) {
+        var sl = document.getElementById("sl-" + k);
+        sl.addEventListener("input", function () {
+          state.weights[k] = parseFloat(sl.value) || 0;
+          document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+          syncSlidersUI("自定义滑块模式");
+          computeScores();
+          render();
+        });
+      });
+
+      document.getElementById("presets").addEventListener("click", function (e) {
+        var b = e.target.closest(".preset-btn"); if (!b) return;
+        var pk = b.getAttribute("data-preset");
+        var pr = PRESETS[pk]; if (!pr) return;
+        KEYS.forEach(function (k) { state.weights[k] = pr.w[k]; });
+        document.querySelectorAll(".preset-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        syncSlidersUI(pr.label);
+        computeScores();
+        render();
+      });
+
+      function zoneOf(t) {
+        return ZONES.filter(function (z) { return z.tier === t; })[0] || ZONES[3];
+      }
+
+      function getImg(id) {
+        var v = (window.THEMED_IMAGES && window.THEMED_IMAGES[id]) ? window.THEMED_IMAGES[id] : null;
+        return v ? (typeof v === "string" ? v : v.src) : null;
+      }
+
+      function renderParkCard(p, idx) {
+        var z = zoneOf(p.tier);
+        var imgUrl = getImg(p.id);
+        var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((p._en || p._zh) + " " + p.city);
+        var expressLabel = p.expressUsd > 0 ? ("+$" + p.expressUsd + " 快通") : "免快通 / 免费预约";
+        var ticketLabel = p.ticketUsd > 0 ? ("$" + p.ticketUsd) : "免门票入园";
+
+        var bannerArt = '<svg class="c-banner-art" viewBox="0 0 600 150" preserveAspectRatio="none" aria-hidden="true">' +
+          '<path d="M0,130 Q140,20 280,100 T560,40 L600,80 L600,150 L0,150 Z" fill="rgba(255,255,255,0.05)"/>' +
+          '<path d="M0,120 C120,120 160,25 260,25 C360,25 390,125 500,125 C560,125 580,60 600,50" fill="none" stroke="' + z.c + '" stroke-width="2" stroke-dasharray="5 5"/>' +
+          '</svg>';
+
+        return '<article class="card' + (p.tier === "T0" ? " is-t0" : "") + '" data-dest-id="' + esc(p.id) + '" data-lat="' + (p.lat || "") + '" data-lon="' + (p.lon || "") + '" data-name="' + esc(p._zh) + '" style="--zone-c:' + z.c + ';--banner-grad:' + z.grad + '">' +
+          '<div class="c-banner">' +
+            (imgUrl ? '<img src="' + esc(imgUrl) + '" alt="' + esc(p._zh) + '" loading="lazy" onerror="this.style.display=\'none\'" />' : "") +
+            bannerArt +
+            '<div class="c-banner-overlay"></div>' +
+            '<div class="c-banner-meta">' +
+              '<div class="c-rank-box">' +
+                '<span class="c-rank">#' + String(p.rank).padStart(2, "0") + '</span>' +
+                '<span class="c-tier-pill">' + esc(p.tier) + ' · ' + esc(p.region) + '</span>' +
+              '</div>' +
+              '<div class="c-score-box" title="六维加权综合得分">' +
+                '<div class="c-score-val">' + p._dynScore.toFixed(1) + '<small>PTS</small></div>' +
+                '<div class="c-score-bars">' +
+                  '<i style="width:' + Math.round(p.scores.thrill) + 'px;background:#ff4d79"></i>' +
+                  '<i style="width:' + Math.round(p.scores.immersion) + 'px;background:#ffb830"></i>' +
+                  '<i style="width:' + Math.round(p.scores.ops) + 'px;background:#2be4dc"></i>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="c-body">' +
+            '<div class="c-head-row">' +
+              '<h3 class="c-name">' + esc(p._zh) + (p._en ? '<span class="c-en">' + esc(p._en) + '</span>' : '') + '</h3>' +
+              '<div class="c-loc">📍 ' + esc(p.country + " · " + p.city) +
+                ' <a href="' + mapUrl + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
+            '</div>' +
+            '<div class="c-metrics">' +
+              '<span class="m-badge is-coaster">🎢 <b>' + p.coasterCount + '</b> 座过山车</span>' +
+              '<span class="m-badge">👥 <b>' + p.attendanceM.toFixed(1) + 'M</b> 百万客流/年</span>' +
+              '<span class="m-badge">📐 <b>' + p.areaHa + '</b> 公顷</span>' +
+              '<span class="m-badge">🎟️ <b>' + ticketLabel + '</b> 门票 <small style="color:var(--muted)">(' + expressLabel + ')</small></span>' +
+              '<span class="m-badge">⏱️ 建议 <b>' + esc(p.durationDays) + '</b></span>' +
+              (p.bestFor || []).map(function (bf) {
+                return '<span class="m-badge is-crowd">' + esc(bf) + '</span>';
+              }).join("") +
+            '</div>' +
+            '<ul class="c-feats">' +
+              p._feats.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join("") +
+            '</ul>' +
+            '<div class="c-tip"><strong>💡 玩家省时锦囊：</strong>' + esc(p.tip) + '</div>' +
+            '<div class="shared-slot"></div>' +
+          '</div>' +
+        '</article>';
+      }
+
+      function matches(p) {
+        if (state.region !== "全部" && p.region !== state.region) return false;
+        if (state.tier !== "全部" && p.tier !== state.tier) return false;
+        if (state.crowd !== "全部人群" && (!p.bestFor || p.bestFor.indexOf(state.crowd) === -1)) return false;
+        if (!state.q) return true;
+        var hay = (p.name + " " + p.country + " " + p.region + " " + p.city + " " + p.highlight + " " + p.tip + " " + (p.bestFor || []).join(" ")).toLowerCase();
+        return hay.indexOf(state.q) > -1;
+      }
+
+      var zonesEl = document.getElementById("zones");
+
+      function render() {
+        var filtered = PARKS.filter(matches);
+        document.getElementById("count").innerHTML = "显示 <b>" + filtered.length + "</b> / " + PARKS.length + " 座乐园";
+
+        if (!filtered.length) {
+          zonesEl.innerHTML = '<p style="padding:60px 0;text-align:center;color:var(--muted)">没有找到符合当前筛选条件的主题乐园，请尝试切换地区或清空搜索词。</p>';
+          return;
+        }
+
+        // Check if custom sort or custom weights are active
+        var isDefaultWeights =
+          state.weights.thrill === 25 && state.weights.immersion === 25 &&
+          state.weights.ops === 15 && state.weights.family === 15 &&
+          state.weights.diningShow === 10 && state.weights.value === 10;
+
+        if (state.sort === "score" && isDefaultWeights) {
+          // Group by Tier (T0, T1, T1.5, T2)
+          var html = "";
+          ZONES.forEach(function (z) {
+            var items = filtered.filter(function (p) { return p.tier === z.tier; });
+            if (!items.length) return;
+            items.sort(function (a, b) { return b._dynScore - a._dynScore || a.rank - b.rank; });
+            html += '<section class="zone" style="--zone-c:' + z.c + '">' +
+              '<header class="zone-head">' +
+                '<div class="zone-title"><span class="zone-tier">' + esc(z.tier) + '</span><h3 class="zone-name">' + esc(z.name) + '</h3></div>' +
+                '<p class="zone-note">' + esc(z.note) + '</p>' +
+              '</header>' +
+              '<div class="list">' + items.map(renderParkCard).join("") + '</div>' +
+            '</section>';
+          });
+          zonesEl.innerHTML = html;
+        } else {
+          var list = filtered.slice();
+          var title = "按自定义加权得分排序";
+          if (state.sort === "score") {
+            list.sort(function (a, b) { return b._dynScore - a._dynScore || a.rank - b.rank; });
+          } else if (state.sort === "coasters") {
+            title = "按过山车数量从多到少排序";
+            list.sort(function (a, b) { return b.coasterCount - a.coasterCount || b._dynScore - a._dynScore; });
+          } else if (state.sort === "attendance") {
+            title = "按年客流量从高到低排序";
+            list.sort(function (a, b) { return b.attendanceM - a.attendanceM || b._dynScore - a._dynScore; });
+          } else if (state.sort === "area") {
+            title = "按占地面积从大到小排序";
+            list.sort(function (a, b) { return b.areaHa - a.areaHa || b._dynScore - a._dynScore; });
+          } else if (state.sort === "ticket") {
+            title = "按单日门票价格从低到高排序";
+            list.sort(function (a, b) { return a.ticketUsd - b.ticketUsd || b._dynScore - a._dynScore; });
+          }
+          zonesEl.innerHTML = '<section class="zone" style="--zone-c:#ffb830">' +
+            '<header class="zone-head">' +
+              '<div class="zone-title"><span class="zone-tier">RANK</span><h3 class="zone-name">' + esc(title) + '</h3></div>' +
+              '<p class="zone-note">点击上方「默认综合均衡」与「按综合得分」可恢复按 T0–T2 四大梯队分组视图。</p>' +
+            '</header>' +
+            '<div class="list">' + list.map(renderParkCard).join("") + '</div>' +
+          '</section>';
+        }
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      function renderWaterParks() {
+        var el = document.getElementById("water-list");
+        el.innerHTML = WATERS.map(function (w) {
+          var imgUrl = getImg(w.id);
+          var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((w._en || w._zh) + " " + w.city);
+          return '<article class="w-card" data-dest-id="' + esc(w.id) + '" data-lat="' + (w.lat || "") + '" data-lon="' + (w.lon || "") + '" data-name="' + esc(w._zh) + '">' +
+            '<div class="w-banner">' +
+              (imgUrl ? '<img src="' + esc(imgUrl) + '" alt="' + esc(w._zh) + '" loading="lazy" onerror="this.style.display=\'none\'" />' : '') +
+              '<div class="c-banner-overlay"></div>' +
+              '<div class="w-banner-meta">' +
+                '<span class="w-rank">WATER #' + String(w.rank).padStart(2, "0") + '</span>' +
+                '<span class="c-tier-pill" style="color:var(--aqua);border-color:var(--aqua)">🌊 ' + w.areaHa + ' 公顷 · $' + w.ticketUsd + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="w-body">' +
+              '<h3 class="c-name" style="font-size:18px">' + esc(w._zh) + (w._en ? '<span class="c-en" style="display:block;margin:2px 0 0 0">' + esc(w._en) + '</span>' : '') + '</h3>' +
+              '<div class="c-loc" style="margin-top:8px">📍 ' + esc(w.country + " · " + w.city) + ' <a href="' + mapUrl + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
+              '<ul class="c-feats" style="margin-top:12px">' +
+                w._feats.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join("") +
+              '</ul>' +
+              '<div class="c-tip" style="margin-top:auto;padding-top:10px"><strong>💧 玩水贴士：</strong>' + esc(w.tip) + '</div>' +
+              '<div class="shared-slot"></div>' +
+            '</div>' +
+          '</article>';
+        }).join("");
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      computeScores();
+      render();
+      renderWaterParks();
+    })();
+  </script>
+</body>
+</html>

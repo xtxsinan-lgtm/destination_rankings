@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes · 全球动物园 Top 30 与美国游猎园 Top 10（全参数图鉴版）</title>
+  <meta name="description" content="按栖息地尺度、物种阵容与无笼舍沉浸感排序的全球 30 座动物园与美国 10 座自驾游猎园。全量收录总面积、物种数、动物总数、步行强度与亲子路线攻略。" />
+  <meta name="theme-color" content="#f1ead9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4a33'/%3E%3Ccircle cx='21' cy='11' r='4' fill='%23c9852c'/%3E%3Cpath d='M5 25c4-6 8-8 11-8s7 2 11 8z' fill='%23f1ead9'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,50;1,9..144,300..700,50&family=Caveat:wght@500;600&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+  <style>
+    /* ==========================================================================
+       Field Notes — naturalist's field-journal stylesheet
+       Kraft paper · forest ink · ochre & rust stamps · topographic contours
+       ========================================================================== */
+    :root {
+      --paper: #f1ead9;
+      --paper-2: #e8dfc8;
+      --card: #f8f3e6;
+      --ink: #22301f;
+      --ink-2: #4f5a46;
+      --ink-3: #8a8a72;
+      --forest: #2f4a33;
+      --forest-2: #1f3324;
+      --moss: #6b7f3e;
+      --ochre: #c9852c;
+      --rust: #a8482a;
+      --line: rgba(34, 48, 31, 0.16);
+      --line-2: rgba(34, 48, 31, 0.3);
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --latin: "Fraunces", Georgia, serif;
+      --hand: "Caveat", "Fraunces", cursive;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --wrap: 1240px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; color: var(--ink); background-color: var(--paper);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.2 0 0 0 0 0.1 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      font-family: var(--sans); font-size: 15px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, p, ul, ol { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(201, 133, 44, 0.3); }
+    .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
+    .hand { font-family: var(--hand); font-weight: 600; color: var(--rust); }
+
+    /* Header ---------------------------------------------------------------- */
+    .top { position: sticky; top: 0; z-index: 40; background: rgba(241, 234, 217, 0.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .top-inner { display: flex; align-items: center; gap: 18px; height: 66px; }
+    .logo { display: inline-flex; align-items: baseline; gap: 8px; font-family: var(--latin); font-size: 22px; font-weight: 600; font-style: italic; color: var(--forest); flex-shrink: 0; }
+    .logo small { font-family: var(--sans); font-style: normal; font-size: 12px; font-weight: 400; letter-spacing: 0.2em; color: var(--ink-3); }
+    .switch { display: flex; gap: 16px; margin-left: auto; font-size: 13px; color: var(--ink-2); overflow-x: auto; max-width: 100%; }
+    .switch a { position: relative; padding: 4px 2px; white-space: nowrap; }
+    .switch a:hover { color: var(--forest); }
+    .switch a[aria-current="page"] { color: var(--forest); font-weight: 600; }
+    .switch a[aria-current="page"]::after {
+      content: ""; position: absolute; left: -2px; right: -2px; bottom: -2px; height: 7px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C 20 2, 40 7, 60 4 S 90 3, 99 5' fill='none' stroke='%23c9852c' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+    }
+
+    /* Hero ------------------------------------------------------------------ */
+    .hero { position: relative; padding: 64px 0 80px; overflow: hidden; }
+    .contours { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; opacity: 0.55; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 12px; font-family: var(--latin); font-size: 13px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--moss); }
+    .kicker::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+    .hero h1 { margin-top: 20px; font-family: var(--serif); font-weight: 700; font-size: clamp(38px, 5vw, 70px); line-height: 1.2; letter-spacing: 0.01em; color: var(--forest-2); }
+    .hero h1 .num { font-family: var(--latin); font-style: italic; font-weight: 400; color: var(--ochre); font-variation-settings: "SOFT" 100; }
+    .hero .lede { max-width: 35em; margin-top: 22px; font-family: var(--serif); font-size: 16.5px; line-height: 1.95; color: var(--ink-2); }
+    .hero .note { display: block; margin-top: 16px; font-size: 24px; transform: rotate(-1.5deg); transform-origin: left; }
+    .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 36px; border-top: 1.5px solid var(--ink); }
+    .stats div { padding: 16px 14px 0 0; }
+    .stats div + div { padding-left: 14px; border-left: 1px dashed var(--line-2); }
+    .stats b { display: block; font-family: var(--latin); font-size: clamp(24px, 2.6vw, 36px); font-weight: 500; line-height: 1; color: var(--forest); }
+    .stats span { display: block; margin-top: 8px; font-size: 12px; color: var(--ink-2); }
+
+    .plate { position: relative; justify-self: center; width: min(440px, 100%); }
+    .plate-frame { position: relative; aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1.5px solid var(--ink); box-shadow: 0 0 0 10px var(--paper), 0 0 0 11px var(--line-2); }
+    .plate-frame svg { width: 100%; height: 100%; display: block; }
+    .plate-cap { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%) rotate(-2deg); padding: 6px 18px; background: var(--card); border: 1px solid var(--line-2); font-family: var(--latin); font-style: italic; font-size: 14px; color: var(--ink-2); white-space: nowrap; box-shadow: 0 6px 14px -8px rgba(34, 48, 31, 0.4); }
+    .plate-note { position: absolute; right: -6px; top: 6%; font-size: 22px; transform: rotate(8deg); }
+
+    /* Sections -------------------------------------------------------------- */
+    .section { padding: 84px 0; }
+    .sec-head { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 24px; margin-bottom: 40px; }
+    .sec-no { font-family: var(--latin); font-style: italic; font-size: 60px; font-weight: 300; line-height: 0.9; color: var(--ochre); }
+    .sec-head h2 { font-family: var(--serif); font-size: clamp(26px, 3vw, 38px); font-weight: 700; line-height: 1.3; color: var(--forest-2); }
+    .sec-head p { max-width: 44em; margin-top: 10px; color: var(--ink-2); line-height: 1.9; }
+
+    /* Index cards (method) */
+    .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+    .icard { position: relative; padding: 30px 26px 28px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 14px 30px -20px rgba(34, 48, 31, 0.35);
+      background-image: repeating-linear-gradient(180deg, transparent 0 27px, rgba(80, 120, 160, 0.12) 27px 28px); background-position: 0 68px; }
+    .icard:nth-child(1) { transform: rotate(-1deg); }
+    .icard:nth-child(2) { transform: rotate(0.6deg); margin-top: 10px; }
+    .icard:nth-child(3) { transform: rotate(-0.4deg); }
+    .icard::before { content: ""; position: absolute; top: -11px; left: 50%; width: 92px; height: 22px; transform: translateX(-50%) rotate(-2deg); background: rgba(201, 133, 44, 0.32); }
+    .icard .pct { font-family: var(--latin); font-size: 44px; font-weight: 400; line-height: 1; color: var(--rust); }
+    .icard h3 { margin-top: 10px; font-family: var(--serif); font-size: 18px; font-weight: 700; }
+    .icard p { margin-top: 10px; font-size: 14px; line-height: 28px; color: var(--ink-2); }
+
+    /* Filters --------------------------------------------------------------- */
+    .filters {
+      position: sticky; top: 66px; z-index: 20;
+      display: flex; flex-direction: column; gap: 10px;
+      padding: 14px 18px; margin-bottom: 32px;
+      background: rgba(248, 243, 230, 0.96); border: 1px solid var(--line-2); border-radius: 10px;
+      box-shadow: 0 14px 28px -18px rgba(34, 48, 31, 0.25);
+    }
+    .f-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+    .f-label { font-size: 12px; font-weight: 600; color: var(--ink-3); letter-spacing: 0.06em; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tab { height: 31px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: 4px; font-size: 12.5px; color: var(--ink-2); background: var(--card); transition: all 0.2s; }
+    .tab:hover { border-color: var(--forest); color: var(--forest); }
+    .tab[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: var(--paper); font-weight: 500; }
+    .search { flex: 1 1 240px; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--paper); }
+    .search svg { width: 15px; height: 15px; stroke: var(--ink-2); fill: none; stroke-width: 1.6; flex: none; }
+    .search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font-family: var(--serif); font-size: 13.5px; }
+    .search input::placeholder { color: var(--ink-3); }
+    .tally { margin-left: auto; font-size: 22px; line-height: 1; }
+
+    /* Specimen grid (2 columns for richer content) */
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .spec {
+      position: relative; display: flex; flex-direction: column;
+      background: var(--card); border: 1px solid var(--line-2); border-radius: 8px; overflow: hidden;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+    .spec:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -22px rgba(34, 48, 31, 0.42); }
+    .spec.is-t0 { background: var(--forest); color: var(--paper); border-color: var(--forest-2); }
+
+    /* Specimen Photo Header */
+    .spec-photo {
+      position: relative; height: 215px; overflow: hidden;
+      background: linear-gradient(135deg, #354f39 0%, #6b7f3e 55%, #c9852c 100%);
+      border-bottom: 1px solid var(--line-2);
+    }
+    .spec-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+    .spec:hover .spec-photo img { transform: scale(1.05); }
+    .spec-photo::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(20, 30, 18, 0.45) 0%, transparent 45%, rgba(20, 30, 18, 0.72) 100%);
+      pointer-events: none;
+    }
+    .spec-photo-top {
+      position: absolute; top: 12px; left: 14px; right: 14px; z-index: 2;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .spec-no {
+      padding: 4px 12px; border-radius: 6px;
+      background: rgba(248, 243, 230, 0.92); color: var(--ink);
+      font-family: var(--latin); font-size: 13px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .spec-no b { font-size: 24px; font-weight: 600; margin-left: 3px; color: var(--forest); }
+    .spec.is-t0 .spec-no { background: var(--ochre); color: #1b2418; }
+    .spec.is-t0 .spec-no b { color: #1b2418; }
+    .stamp {
+      padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600;
+      background: rgba(31, 51, 36, 0.88); color: #f6e3b8; border: 1px solid rgba(231, 178, 92, 0.6);
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    }
+    .spec-credit {
+      position: absolute; bottom: 8px; left: 14px; right: 14px; z-index: 2;
+      display: flex; justify-content: space-between; font-size: 11px; color: rgba(248, 243, 230, 0.85);
+    }
+    .spec-credit a { color: #f6e3b8; text-decoration: underline; }
+
+    .spec-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .spec h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; line-height: 1.35; }
+    .spec .en { display: block; margin-top: 3px; font-family: var(--latin); font-style: italic; font-size: 13.5px; font-weight: 400; color: var(--ink-3); }
+    .spec.is-t0 .en { color: rgba(241, 234, 217, 0.68); }
+    .loc { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--ink-2); }
+    .spec.is-t0 .loc { color: rgba(241, 234, 217, 0.8); }
+    .loc svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.6; vertical-align: -2px; margin-right: 4px; }
+
+    /* Zoo Hardcore Metrics Box */
+    .z-metrics {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;
+      padding: 10px 12px; border-radius: 8px;
+      background: rgba(34, 48, 31, 0.06); border: 1px dashed var(--line-2);
+    }
+    .spec.is-t0 .z-metrics { background: rgba(0, 0, 0, 0.22); border-color: rgba(241, 234, 217, 0.24); }
+    .zm-item { display: flex; flex-direction: column; }
+    .zm-item + .zm-item { padding-left: 8px; border-left: 1px solid var(--line); }
+    .spec.is-t0 .zm-item + .zm-item { border-left-color: rgba(241, 234, 217, 0.16); }
+    .zm-k { font-size: 11px; color: var(--ink-3); }
+    .spec.is-t0 .zm-k { color: rgba(241, 234, 217, 0.62); }
+    .zm-v { font-family: var(--latin); font-size: 16px; font-weight: 600; color: var(--forest); }
+    .spec.is-t0 .zm-v { color: #e7b25c; }
+    .zm-v small { font-family: var(--sans); font-size: 11px; font-weight: 400; margin-left: 2px; opacity: 0.8; }
+
+    .z-meta-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; }
+    .z-badge {
+      padding: 2px 9px; border-radius: 5px;
+      background: rgba(107, 127, 62, 0.12); border: 1px solid rgba(107, 127, 62, 0.3); color: var(--forest-2);
+    }
+    .spec.is-t0 .z-badge { background: rgba(241, 234, 217, 0.1); border-color: rgba(241, 234, 217, 0.25); color: var(--paper); }
+    .z-crowd {
+      padding: 2px 9px; border-radius: 999px; font-size: 11.5px;
+      background: rgba(201, 133, 44, 0.15); border: 1px solid rgba(201, 133, 44, 0.35); color: var(--rust);
+    }
+    .spec.is-t0 .z-crowd { background: rgba(231, 178, 92, 0.18); border-color: rgba(231, 178, 92, 0.45); color: #f6e3b8; }
+
+    .obs { display: grid; gap: 6px; flex: 1; }
+    .obs li { position: relative; padding-left: 20px; font-size: 13.5px; line-height: 1.65; }
+    .obs li::before { content: ""; position: absolute; left: 2px; top: 7px; width: 10px; height: 10px; border-radius: 0 70% 0 70%; background: var(--moss); transform: rotate(-10deg); }
+    .spec.is-t0 .obs li::before { background: var(--ochre); }
+
+    .z-tip {
+      padding: 9px 12px; border-radius: 6px; font-size: 12.5px; line-height: 1.6;
+      background: rgba(201, 133, 44, 0.1); border-left: 3px solid var(--ochre); color: var(--ink-2);
+    }
+    .spec.is-t0 .z-tip { background: rgba(0, 0, 0, 0.2); color: rgba(241, 234, 217, 0.86); }
+    .z-tip b { color: var(--ink); font-weight: 600; }
+    .spec.is-t0 .z-tip b { color: #f6e3b8; }
+
+    .spec-foot { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; padding-top: 6px; border-top: 1px dashed var(--line); }
+    .spec.is-t0 .spec-foot { border-top-color: rgba(241, 234, 217, 0.2); }
+    .spec-foot a { color: var(--forest); font-weight: 500; border-bottom: 1px solid currentColor; }
+    .spec.is-t0 .spec-foot a { color: #e7b25c; }
+    .empty { grid-column: 1 / -1; padding: 60px 0; text-align: center; font-family: var(--serif); color: var(--ink-2); }
+
+    /* Safari band ----------------------------------------------------------- */
+    .safari { position: relative; background: var(--forest-2); color: var(--paper); overflow: hidden; }
+    .safari .sec-head h2 { color: var(--paper); }
+    .safari .sec-head p { color: rgba(241, 234, 217, 0.75); }
+    .safari .sec-no { color: #e7b25c; }
+    .safari .contours { opacity: 0.12; }
+    .territory { margin-bottom: 36px; padding: 24px 24px 14px; border: 1px solid rgba(241, 234, 217, 0.16); background: rgba(241, 234, 217, 0.03); border-radius: 8px; }
+    .territory h3 { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+    .territory h3 .hand { color: #e7b25c; font-size: 20px; }
+    .territory svg { width: 100%; height: auto; margin-top: 8px; overflow: visible; }
+    .territory text { font-family: var(--sans); fill: rgba(241, 234, 217, 0.8); }
+    .territory .blob { fill: rgba(231, 178, 92, 0.16); stroke: #e7b25c; stroke-width: 1.2; transition: fill 0.2s; cursor: default; }
+    .territory .blob.drive { fill: rgba(140, 170, 90, 0.22); stroke: #a8c070; }
+    .territory g:hover .blob { fill: rgba(231, 178, 92, 0.4); }
+    .legend { display: flex; gap: 18px; font-size: 12.5px; color: rgba(241, 234, 217, 0.7); margin-top: 6px; }
+    .legend i { display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 50%; vertical-align: -1px; border: 1.2px solid #e7b25c; background: rgba(231, 178, 92, 0.16); }
+    .legend i.drive { border-color: #a8c070; background: rgba(140, 170, 90, 0.22); }
+
+    .safari-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .toggle { display: inline-flex; align-items: center; gap: 10px; font-size: 13.5px; cursor: pointer; }
+    .toggle input { appearance: none; width: 36px; height: 20px; border-radius: 999px; background: rgba(241, 234, 217, 0.2); position: relative; cursor: pointer; transition: background 0.2s; }
+    .toggle input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); transition: transform 0.2s var(--ease); }
+    .toggle input:checked { background: #8aa35a; }
+    .toggle input:checked::after { transform: translateX(16px); }
+    .routes { display: grid; gap: 14px; }
+    .route {
+      display: grid; grid-template-columns: 180px minmax(0, 1.2fr) minmax(0, 0.9fr) minmax(0, 1.5fr); gap: 20px; align-items: center;
+      padding: 16px; border: 1px solid rgba(241, 234, 217, 0.15); border-radius: 10px; background: rgba(241, 234, 217, 0.04);
+    }
+    .r-thumb { position: relative; height: 118px; border-radius: 7px; overflow: hidden; background: #2c4430; border: 1px solid rgba(241, 234, 217, 0.2); }
+    .r-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .r-no { position: absolute; top: 6px; left: 8px; padding: 2px 8px; border-radius: 4px; background: rgba(20, 32, 22, 0.85); font-family: var(--latin); font-style: italic; font-size: 18px; color: #e7b25c; }
+    .route h3 { font-family: var(--latin); font-size: 18px; font-weight: 500; line-height: 1.3; }
+    .route .state { display: block; margin-top: 4px; font-size: 12.5px; color: rgba(241, 234, 217, 0.68); }
+    .area { font-size: 12px; color: rgba(241, 234, 217, 0.78); }
+    .area b { font-family: var(--latin); font-size: 20px; font-weight: 500; color: var(--paper); margin-right: 4px; }
+    .area-bar { height: 6px; margin: 6px 0; border-radius: 3px; background: rgba(241, 234, 217, 0.1); overflow: hidden; }
+    .area-bar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #8aa35a, #e7b25c); }
+    .modes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+    .mode { display: inline-flex; align-items: center; gap: 5px; padding: 2px 10px; border-radius: 999px; font-size: 12px; border: 1px solid rgba(241, 234, 217, 0.28); color: rgba(241, 234, 217, 0.85); }
+    .mode.drive { border-color: #a8c070; color: #cfe0a4; }
+    .route p { font-size: 13px; line-height: 1.65; color: rgba(241, 234, 217, 0.85); }
+    .r-tip { margin-top: 6px; font-size: 12px; color: #e7b25c; }
+
+    /* Pitfalls section */
+    .pitfalls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .pit { padding: 22px 24px; background: var(--card); border: 1px dashed var(--rust); border-radius: 8px; }
+    .pit h3 { font-family: var(--serif); font-size: 16.5px; color: var(--rust); }
+    .pit p { margin-top: 8px; font-size: 13.5px; color: var(--ink-2); line-height: 1.8; }
+
+    /* Footer ---------------------------------------------------------------- */
+    .foot { padding: 70px 0 50px; }
+    .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; padding-top: 30px; border-top: 1.5px solid var(--ink); }
+    .foot p { max-width: 36em; font-size: 13.5px; color: var(--ink-2); font-family: var(--serif); }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13.5px; }
+    .foot nav a { border-bottom: 1px solid var(--line-2); padding-bottom: 2px; }
+    .foot nav a:hover { color: var(--rust); border-color: var(--rust); }
+    .foot .sig { margin-top: 36px; font-size: 30px; text-align: right; }
+
+    @media (max-width: 1000px) {
+      .hero-grid, .grid, .pitfalls { grid-template-columns: 1fr; }
+      .plate { width: min(360px, 86%); margin-top: 20px; }
+      .route { grid-template-columns: 140px minmax(0, 1fr); }
+      .route > :nth-child(n + 3) { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .switch { gap: 12px; font-size: 12px; }
+      .logo small { display: none; }
+      .cards3 { grid-template-columns: 1fr; }
+      .icard:nth-child(n) { transform: none; margin-top: 0; }
+      .sec-head { grid-template-columns: 1fr; gap: 6px; }
+      .sec-no { font-size: 44px; }
+      .stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .stats div + div { padding-left: 0; border-left: 0; }
+      .z-metrics { grid-template-columns: 1fr 1fr; }
+      .zm-item:nth-child(3) { padding-left: 0; border-left: 0; }
+      .filters { position: static; }
+      .route { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="破除百年历史与免费滤镜，按栖息地空间尺度、巨型生态温室、总面积、物种数、生物总数与无笼舍沉浸感硬核排名。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10" />
+  <meta property="og:description" content="破除百年历史与免费滤镜，按栖息地空间尺度、巨型生态温室、总面积、物种数、生物总数与无笼舍沉浸感硬核排名。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/zoos.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10" />
+  <meta name="twitter:description" content="破除百年历史与免费滤镜，按栖息地空间尺度、巨型生态温室、总面积、物种数、生物总数与无笼舍沉浸感硬核排名。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10",
+  "description": "破除百年历史与免费滤镜，按栖息地空间尺度、巨型生态温室、总面积、物种数、生物总数与无笼舍沉浸感硬核排名。",
+  "numberOfItems": 25,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "圣地亚哥动物园＋野生动物园 (San Diego Zoo & Safari Park)",
+        "description": "美国 加州圣地亚哥 · 40公顷立体峡谷植物园本部 + 730公顷大草原游猎 + 鸭嘴兽/鲸头鹳/极乐鸟全齐",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 32.735,
+          "longitude": -117.149
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "比利时天堂动物园 (Pairi Daiza)",
+        "description": "比利时 布鲁日利特 · 巴厘岛真火山石神庙象群 + 极地水下北极熊海象 + 4公顷最大室内温室 + 鲸头鹳",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.585,
+          "longitude": 3.887
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥马哈亨利·多利动物园 (Henry Doorly Zoo)",
+        "description": "美国 内布拉斯加州 · 全球最大室内沙漠穹顶 + 地下夜行沼泽暗河馆 + 全美最大室内雨林(瀑布吊桥)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.225,
+          "longitude": -95.928
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "新加坡万态野生动物世界（四园）",
+        "description": "新加坡 新加坡 · 原始雨林无笼舍标杆 + 夜间游猎 + 亚马逊水下巨骨舌鱼森林 + 八大山谷步入式鸟舍",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 1.404,
+          "longitude": 103.793
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼动物王国 (Disney's Animal Kingdom)",
+        "description": "美国 佛罗里达 · 44公顷东非大裂谷真动物吉普车游猎 + 古印度神庙废墟老虎区(好莱坞造景零围栏感)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.358,
+          "longitude": -81.59
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "广州长隆野生动物世界（＋清远长隆森林王国）",
+        "description": "中国 广东广州/清远 · 百头长颈鹿斑马自驾与蒸汽火车旷野 + 三角形高空缆车 + 60+考拉与珍稀猿猴群落",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.005,
+          "longitude": 113.321
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "莱比锡动物园 (Zoo Leipzig)",
+        "description": "德国 莱比锡 · 2.7公顷《冈瓦纳大陆》巨型室内热带雨林温室(可在室内乘船漂流) + 类人猿馆",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.349,
+          "longitude": 12.369
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "博瓦勒野生动物园 (ZooParc de Beauval)",
+        "description": "法国 圣艾尼昂 · 38米高巨型《赤道玻璃穹顶》(海牛/科莫多巨蜥/倭河马) + 高空透明底板缆车",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.248,
+          "longitude": 1.353
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "杜埃拉方丹生物公园 (Bioparc de Doué-la-Fontaine)",
+        "description": "法国 卢瓦尔河谷 · 全球唯一地下千万年采石场大峡谷与穿山石洞隧道 + 1公顷封顶大峡谷600只鹦鹉企鹅",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.19,
+          "longitude": -0.301
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "汉斯动物园 (Burgers' Zoo)",
+        "description": "荷兰 阿纳姆 · 四大巨型室内外生态系统无缝串联(1.5公顷雨林+北美沙漠+红树林海牛+800万升珊瑚礁)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.001,
+          "longitude": 5.899
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "特内里费鹦鹉公园 (Loro Parque)",
+        "description": "西班牙 加那利群岛 · 全天降真雪真冰山企鹅馆 + 树冠步入式鹦鹉雨林 + 欧洲唯一虎鲸群 + 光影水母神殿",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.408,
+          "longitude": -16.564
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "悉尼塔龙加动物园 (Taronga Zoo)",
+        "description": "澳大利亚 悉尼 · 渡轮抵岸缆车上山 + 悉尼歌剧院与海港大桥绝美海景背景下的长颈鹿 + 鸭嘴兽全神兽",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.843,
+          "longitude": 151.241
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "布拉格动物园 (Prague Zoo)",
+        "description": "捷克 布拉格 · 伏尔塔瓦河谷与陡峭岩石悬崖立体地形 + 缆车 + 印尼丛林馆、大猩猩保护区与大象谷",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.117,
+          "longitude": 14.406
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "纽约布朗克斯动物园 (Bronx Zoo)",
+        "description": "美国 纽约 · 107公顷都市原始森林 + 2.6公顷刚果大猩猩森林 + 喜马拉雅雪豹区 + 亚洲单轨列车",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.85,
+          "longitude": -73.877
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "苏黎世动物园 (Zoo Zürich)",
+        "description": "瑞士 苏黎世 · 1.1万㎡马达加斯加无笼舍真雨林温室(Masoala) + 水下大象潜泳馆 + Lewa非洲草原",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.385,
+          "longitude": 8.574
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "切斯特动物园 (Chester Zoo)",
+        "description": "英国 切斯特 · 6公顷《东南亚群岛》乘船穿越苏门答腊虎与马来貘岛屿 + 巨型室内热带季风雨林穹顶",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.226,
+          "longitude": -2.884
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "瓦伦西亚生物公园 (Bioparc Valencia)",
+        "description": "西班牙 瓦伦西亚 · 极致“无围栏视觉欺骗(Zoo-immersion)”造景，狮子与长颈鹿斑马同框 + 狐猴脚边散步",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.478,
+          "longitude": -0.408
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "哥伦布动物园 ＋ The Wilds 野生动物园",
+        "description": "美国 俄亥俄州 · 本部北极熊水下深潜馆 + 4000公顷(圣地亚哥5.5倍大)超巨型旷野敞篷车游猎",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.155,
+          "longitude": -83.118
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "比尔斯贝克游猎园 (Safaripark Beekse Bergen)",
+        "description": "荷兰 蒂尔堡旁 · 欧洲最强 120公顷“私家车自驾 + 游船 + 步行”三栖非洲大草原动物园",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.524,
+          "longitude": 5.115
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "汉诺威体验动物园 (Erlebnis-Zoo Hannover)",
+        "description": "德国 汉诺威 · 赞比西河游船贴脸看河马长颈鹿 + 育空湾沉船船舱看水下北极熊 + 印度王宫大象废墟",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.382,
+          "longitude": 9.769
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "横滨动物园 Zoorasia",
+        "description": "日本 横滨 · 八大气候带茂密森林无笼舍设计 + 罕见神兽霍加狓(Okapi)、长鼻猴与树袋鼠",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.495,
+          "longitude": 139.526
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "西雅图林地公园动物园 (Woodland Park Zoo)",
+        "description": "美国 西雅图 · 全球“森林景观沉浸式展区”鼻祖，太平洋西北温带雨林古木间的灰熊、雪鸮与大猩猩",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.668,
+          "longitude": -122.354
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "墨尔本韦里比开放式野生动物园 (Werribee)",
+        "description": "澳大利亚 墨尔本 · 225公顷南半球最强河谷非洲大草原敞篷车游猎 + 巨型河马湿地与大猩猩岛",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -37.923,
+          "longitude": 144.668
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "台北市立动物园（木栅动物园）",
+        "description": "中国 台湾台北 · 165公顷山林 + 24米高《穿山甲热带雨林馆》(从巨骨舌鱼水底隧道盘旋直通雨林树冠)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.998,
+          "longitude": 121.581
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "南京红山森林动物园",
+        "description": "中国 江苏南京 · 三座天然森林山头 + 冈瓦纳南半球雨林馆 + 中国猫科馆 + 跨越山头的高空动物通道",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 32.094,
+          "longitude": 118.803
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END AUTO-SEO -->
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="index.html">Field Notes <small>野径手记</small></a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">🧭 图鉴总览</a>
+        <a href="beaches.html">🏖️ 海岸 145</a>
+        <a href="cruises.html">🛳️ 奢华邮轮 50</a>
+        <a href="canals.html">🚤 运河房船 20</a>
+        <a href="sailing.html">⛵ 帆船航线 20</a>
+        <a href="rv.html">🚐 房车自驾 20</a>
+        <a href="shows.html">🎭 驻场大秀 100</a>
+        <a href="aquariums.html">🐋 水族馆 35</a>
+        <a href="zoos.html" aria-current="page">🦁 动物园 40</a>
+        <a href="museums.html">⚙️ 重器馆 100</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <svg class="contours" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#6b7f3e" stroke-width="1">
+          <path d="M-50 520 C 150 470 260 560 420 520 S 700 420 860 470 S 1120 560 1260 500" />
+          <path d="M-50 560 C 160 510 280 600 440 560 S 720 460 880 510 S 1130 600 1260 540" />
+          <path d="M-50 600 C 170 550 300 640 460 600 S 740 500 900 550 S 1140 640 1260 580" />
+          <path d="M760 140 C 820 80 960 70 1030 120 S 1110 250 1040 300 S 860 330 800 280 S 700 200 760 140 Z" />
+          <path d="M790 160 C 840 110 950 105 1005 145 S 1070 245 1015 282 S 875 305 828 268 S 742 210 790 160 Z" />
+        </g>
+      </svg>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="kicker">Field Notes · Vol. 2026 全参数版</span>
+          <h1><span class="num">30</span> 座动物园<br />与 <span class="num">10</span> 座旷野游猎园</h1>
+          <p class="lede">不看百年历史光环，也不看免费门票滤镜。我们只记录站在栖息地前的那一刻：空间够不够辽阔，兽群够不够壮观，视线里还有没有铁笼。现已全量补齐<b>实景照片、总占地面积、物种数、动物总数、步行强度与省腿路线攻略</b>。</p>
+          <span class="note hand">— 探寻全球最具野性的自然生境</span>
+          <div class="stats">
+            <div><b>30</b><span>座全球综合动物园</span></div>
+            <div><b>10</b><span>座全美自驾/敞篷游猎园</span></div>
+            <div><b>4,000</b><span>公顷 · 最大游猎园 The Wilds</span></div>
+            <div><b>1,200</b><span>物种 · 物种之冠柏林动物园</span></div>
+            <div><b>50,000</b><span>只动物 · 广州+清远长隆集群</span></div>
+          </div>
+        </div>
+        <figure class="plate" style="margin:0">
+          <div class="plate-frame">
+            <svg viewBox="0 0 400 400" aria-hidden="true">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d9a6" /><stop offset="0.7" stop-color="#eab774" /><stop offset="1" stop-color="#d9935a" /></linearGradient>
+              </defs>
+              <rect width="400" height="400" fill="url(#sky)" />
+              <circle cx="262" cy="196" r="56" fill="#f6e3b8" opacity="0.9" />
+              <circle cx="262" cy="196" r="40" fill="#e9a24a" />
+              <path d="M0 262 C 60 236 120 248 170 238 S 280 214 330 230 S 380 240 400 236 V400 H0Z" fill="#b9874f" opacity="0.65" />
+              <path d="M0 292 C 70 270 140 284 210 274 S 330 262 400 276 V400 H0Z" fill="#8a6a3c" />
+              <g fill="#2f3a24">
+                <rect x="78" y="236" width="5" height="52" />
+                <path d="M80 248 l-18 -14 M81 244 l16 -12" stroke="#2f3a24" stroke-width="3" />
+                <ellipse cx="80" cy="230" rx="48" ry="11" />
+                <ellipse cx="66" cy="222" rx="22" ry="7" />
+                <ellipse cx="98" cy="223" rx="24" ry="7" />
+              </g>
+              <g fill="#2a2418">
+                <path d="M190 268 C 188 255 196 246 214 246 L 236 246 C 248 246 252 254 250 266 C 248 272 240 274 236 272 L 200 272 C 196 274 191 273 190 268 Z" />
+                <path d="M236 250 L 246 252 L 266 186 L 258 182 Z" />
+                <path d="M256 186 C 256 178 264 175 274 178 L 282 182 C 284 186 280 188 276 187 L 266 188 Z" />
+                <path d="M196 270 l-3 40 h4 l4 -38 Z M206 271 l1 40 h4 l-1 -40 Z M236 271 l1 40 h4 l-1 -40 Z M244 269 l5 40 h4 l-5 -41 Z" />
+              </g>
+              <path d="M0 318 C 90 304 180 316 260 308 S 360 302 400 310 V400 H0Z" fill="#5f4a2a" />
+            </svg>
+          </div>
+          <figcaption class="plate-cap">Plate I. — Savanna at dusk</figcaption>
+          <span class="plate-note hand">长颈鹿贴窗！</span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="method" style="padding-top:32px">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-no">i.</div>
+          <div>
+            <h2>三条观察准则与参数说明</h2>
+            <p>注意区分「城市步行园（通常 15–100 公顷，看重温室造景与物种密度）」与「郊野游猎园（通常 100–4000 公顷，需乘车或自驾穿越旷野兽群）」。</p>
+          </div>
+        </header>
+        <div class="cards3">
+          <article class="icard"><div class="pct">40%</div><h3>栖息地尺度与地形工程</h3><p>工程奇迹级的巨型室内生态温室（奥马哈沙漠巨蛋、莱比锡可划船雨林、博瓦勒 38 米赤道穹顶）、地下采石场大峡谷或重资产主题造景。</p></article>
+          <article class="icard"><div class="pct">35%</div><h3>物种阵容与群落暴击</h3><p>百头长颈鹿、斑马、白犀牛在旷野奔跑的群落冲击力，以及鸭嘴兽、鲸头鹳、霍加狓、极乐鸟、北极熊与太平洋海象水下深潜等旗舰神兽。</p></article>
+          <article class="icard"><div class="pct">25%</div><h3>无笼舍沉浸与省腿动线</h3><p>利用壕沟、水体与高低差实现「狮群与长颈鹿同框零铁网」，并配备高空缆车、河道游船或观光列车降低步行疲劳。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zoos" style="padding-top:32px">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-no">ii.</div>
+          <div>
+            <h2>全球动物园 Top 30 · 实景标本卡</h2>
+            <p>支持按综合排名、总占地面积、物种数、动物总数、门票价格一键重排，并附每座园区的省腿路线与神兽看点。</p>
+          </div>
+        </header>
+
+        <div class="filters">
+          <div class="f-row">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+              <input id="q" type="search" placeholder="搜索园区、城市、神兽或设施（如：鸭嘴兽、鲸头鹳、考拉、缆车、游船）…" autocomplete="off" />
+            </label>
+            <span class="f-label">排序：</span>
+            <div class="tabs" id="sorts" role="group" aria-label="排序维度">
+              <button type="button" class="tab" data-sort="rank" aria-pressed="true">🏆 综合排名</button>
+              <button type="button" class="tab" data-sort="area" aria-pressed="false">🌿 总面积</button>
+              <button type="button" class="tab" data-sort="species" aria-pressed="false">🧬 物种数</button>
+              <button type="button" class="tab" data-sort="animals" aria-pressed="false">🐾 动物总数</button>
+              <button type="button" class="tab" data-sort="price" aria-pressed="false">🎫 票价(低→高)</button>
+            </div>
+            <span class="tally hand" id="tally"></span>
+          </div>
+          <div class="f-row">
+            <span class="f-label">梯队：</span>
+            <div class="tabs" id="tiers" role="group" aria-label="梯队"></div>
+            <span class="f-label" style="margin-left:8px">地区：</span>
+            <div class="tabs" id="regions" role="group" aria-label="地区"></div>
+            <span class="f-label" style="margin-left:8px">适合人群：</span>
+            <div class="tabs" id="crowds" role="group" aria-label="适合人群"></div>
+          </div>
+        </div>
+
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="section safari" id="safari">
+      <svg class="contours" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#f1ead9" stroke-width="1">
+          <path d="M-50 120 C 200 60 400 180 600 120 S 1000 40 1260 110" /><path d="M-50 160 C 210 100 410 220 610 160 S 1010 80 1260 150" />
+          <path d="M-50 600 C 200 560 380 660 600 610 S 1000 540 1260 600" />
+        </g>
+      </svg>
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-no">iii.</div>
+          <div>
+            <h2>美国野生动物园 Top 10 · 旷野游猎专榜</h2>
+            <p>区别于城市步行动物园，这 10 座要坐敞篷卡车深入数百公顷草原，或者直接开自己的私家车进去，让长颈鹿把头伸进车窗、让上百头北美黑熊贴着车门散步。</p>
+          </div>
+        </header>
+
+        <div class="territory">
+          <h3><span>领地大小对比（圆面积 ∝ 园区公顷数）</span><span class="hand">The Wilds (4,000 ha) 足有圣地亚哥游猎园的 5.5 倍</span></h3>
+          <svg id="territory" viewBox="0 0 1000 260" role="img" aria-label="十座游猎园面积对比"></svg>
+          <div class="legend"><span><i></i>乘敞篷车/观光列车游猎</span><span><i class="drive"></i>可开自己私家车自驾进入</span></div>
+        </div>
+
+        <div class="safari-bar">
+          <label class="toggle"><input type="checkbox" id="drive-only" /> 只看可以开自己私家车进去的 (Drive-Through)</label>
+          <span class="hand" style="color:#e7b25c;font-size:22px" id="safari-tally"></span>
+        </div>
+        <div class="routes" id="routes"></div>
+      </div>
+    </section>
+
+    <section class="section" id="pitfalls">
+      <div class="wrap">
+        <header class="sec-head">
+          <div class="sec-no">iv.</div>
+          <div>
+            <h2>盛名之下 · 传统老动物园排雷备忘</h2>
+            <p>以下几座动物园因历史悠久或免费开放而在常规点评网站评分很高，但若以「栖息地开阔度与无笼舍视觉震撼」衡量，普通游客需降低预期：</p>
+          </div>
+        </header>
+        <div class="pitfalls">
+          <article class="pit">
+            <h3>🇦🇹 维也纳美泉宫动物园 (Tiergarten Schönbrunn)</h3>
+            <p>1752 年建成的世界最古老动物园，巴洛克皇家亭阁建筑很有历史韵味，但受限于皇宫园林仅 <b>17 公顷</b>的局促面积，多数猛兽与草食动物展区偏小，缺乏现代大尺度荒野感。</p>
+          </article>
+          <article class="pit">
+            <h3>🇺🇸 圣路易斯动物园 / 旧金山动物园</h3>
+            <p>圣路易斯动物园因<b>免费入园</b>在全美口碑极好，但占地仅 36 公顷且保留大量 1920–1960 年代老式水泥假山；旧金山动物园海风阴冷、展区老旧，远不如海湾对岸有登山缆车与大草甸的<b>奥克兰动物园</b>。</p>
+          </article>
+          <article class="pit">
+            <h3>🇯🇵 东京上野动物园 (Ueno Zoo)</h3>
+            <p>位于东京市中心仅 <b>14.3 公顷</b>，游客密度极高而展区极其逼仄，水泥笼舍痕迹明显。去大东京地区看动物，强烈建议改去横滨的 <b>Zoorasia（53 公顷森林无笼舍）</b>。</p>
+          </article>
+          <article class="pit">
+            <h3>🇬🇧 伦敦动物园 (ZSL London Zoo)</h3>
+            <p>摄政公园内的百年科研名园（仅 <b>14.5 公顷</b>），不能养大象与犀牛等巨型食草动物；想看大群落与乘船穿越雨林，应去同属英国的<b>切斯特动物园 (Chester Zoo)</b> 或惠普斯奈德野生动物园。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p>Field Notes 是 Destination Atlas 专题榜单之一。园区总面积、物种数与动物数量综合自 AZA / EAZA / WAZA 及各园官方公开资料，数据核验于 2026.10。</p>
+        <nav aria-label="其他榜单">
+          <a href="index.html">🧭 图鉴总览</a>
+          <a href="beaches.html">🏖️ 海岸度假 145</a>
+          <a href="aquariums.html">🐋 水族馆 Top 35</a>
+          <a href="museums.html">⚙️ 重器博物馆 Top 100</a>
+          <a href="themeparks.html">🎢 游乐园 Top 100</a>
+          <a href="ski.html">🎿 全球雪场 Top 100</a>
+          <a href="shows.html">🎭 驻场秀 Top 50</a>
+        </nav>
+      </div>
+      <p class="sig hand">— end of field notes</p>
+    </div>
+  </footer>
+
+  <script src="images_themed.js" onerror=""></script>
+  <script src="data_aquariums_zoos_museums.js"></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      "use strict";
+      var ZOOS = (window.ZOOS_TOP30 || []).slice();
+      var SAFARI = (window.US_SAFARI_PARKS_TOP10 || []).slice();
+      var IMAGES = window.THEMED_IMAGES || {};
+      var REGION = { "中国": "亚洲", "日本": "亚洲", "新加坡": "亚洲", "美国": "北美", "澳大利亚": "大洋洲" };
+      var TIERS = [
+        { k: "all", label: "全部" },
+        { k: "T0", label: "👑 T0 殿堂", word: "全球必去殿堂", c: "#a8482a" },
+        { k: "T1", label: "🌟 T1 一流", word: "世界一流名园", c: "#2f4a33" },
+        { k: "T1.5", label: "✨ T1.5 优秀", word: "区域王牌必逛", c: "#6b7f3e" },
+        { k: "T2", label: "👍 T2 特色", word: "特色口碑名园", c: "#b07a2a" }
+      ];
+      function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+      function splitName(n) {
+        var m = n.match(/\s*\(([^()]*[A-Za-z][^()]*)\)/);
+        if (m) return { zh: n.replace(m[0], "").trim(), en: m[1] };
+        var m2 = n.match(/^(.*?[\u4e00-\u9fff）])\s+([A-Za-z][\w\s&'.-]+)$/);
+        return m2 ? { zh: m2[1], en: m2[2] } : { zh: n, en: "" };
+      }
+      ZOOS.forEach(function (z) {
+        var nm = splitName(z.name); z._zh = nm.zh; z._en = nm.en;
+        z._region = REGION[z.country] || "欧洲";
+        z._obs = z.highlight.split(/\s+\+\s+/);
+      });
+
+      var state = { tier: "all", region: "全部", crowd: "全部", sort: "rank", q: "" };
+      var tierEl = document.getElementById("tiers"), regEl = document.getElementById("regions"), crowdEl = document.getElementById("crowds"), sortEl = document.getElementById("sorts");
+      tierEl.innerHTML = TIERS.map(function (t) { return '<button type="button" class="tab" data-k="' + t.k + '" aria-pressed="' + (t.k === "all") + '">' + t.label + "</button>"; }).join("");
+      var regions = ["全部", "亚洲", "欧洲", "北美", "大洋洲"];
+      regEl.innerHTML = regions.map(function (r) { return '<button type="button" class="tab" data-r="' + r + '" aria-pressed="' + (r === "全部") + '">' + r + "</button>"; }).join("");
+      var crowds = ["全部", "神兽收集控", "亲子遛娃", "温室建筑迷", "轻松少走路", "自驾游猎", "摄影出片"];
+      crowdEl.innerHTML = crowds.map(function (c) { return '<button type="button" class="tab" data-c="' + c + '" aria-pressed="' + (c === "全部") + '">' + c + "</button>"; }).join("");
+
+      tierEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".tab"); if (!b) return;
+        state.tier = b.getAttribute("data-k");
+        tierEl.querySelectorAll(".tab").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        renderZoos();
+      });
+      regEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".tab"); if (!b) return;
+        state.region = b.getAttribute("data-r");
+        regEl.querySelectorAll(".tab").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        renderZoos();
+      });
+      crowdEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".tab"); if (!b) return;
+        state.crowd = b.getAttribute("data-c");
+        crowdEl.querySelectorAll(".tab").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        renderZoos();
+      });
+      sortEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".tab"); if (!b) return;
+        state.sort = b.getAttribute("data-sort");
+        sortEl.querySelectorAll(".tab").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        renderZoos();
+      });
+      var qEl = document.getElementById("q");
+      qEl.addEventListener("input", function () { state.q = qEl.value.trim().toLowerCase(); renderZoos(); });
+
+      function fmtNum(n) { return n >= 10000 ? (n / 10000).toFixed(n % 10000 === 0 ? 0 : 1) + "万" : n.toLocaleString("en-US"); }
+
+      function spec(z) {
+        var t = TIERS.filter(function (x) { return x.k === z.tier; })[0] || TIERS[4];
+        var map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((z._en || z._zh) + " " + z.city);
+        var img = IMAGES[z.id];
+        return '<article class="spec' + (z.tier === "T0" ? " is-t0" : "") + '" data-dest-id="' + esc(z.id) + '" data-lat="' + z.lat + '" data-lon="' + z.lon + '" data-name="' + esc(z._zh) + '">' +
+          '<div class="spec-photo">' +
+            (img ? '<img src="' + esc(img.src) + '" alt="' + esc(z._zh) + '" loading="lazy" decoding="async" />' : '') +
+            '<div class="spec-photo-top">' +
+              '<div class="spec-no">No.<b>' + String(z.rank).padStart(2, "0") + '</b></div>' +
+              '<div class="stamp">' + esc(z.tier) + ' · ' + esc(t.word) + '</div>' +
+            '</div>' +
+            '<div class="spec-credit">' +
+              (img ? '<span>📷 ' + esc(img.artist) + '</span><a href="' + esc(img.page) + '" target="_blank" rel="noopener">' + esc(img.license) + ' ↗</a>' : '<span>🦁 自然生境实景记录</span>') +
+            '</div>' +
+          '</div>' +
+          '<div class="spec-body">' +
+            '<div>' +
+              '<h3>' + esc(z._zh) + (z._en ? '<span class="en">' + esc(z._en) + '</span>' : '') + '</h3>' +
+              '<div class="loc"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>' + esc(z.country + " · " + z.city) + '</span><span>📐 ' + esc(z.areaNote || (z.areaHa + " 公顷")) + '</span></div>' +
+            '</div>' +
+            '<div class="z-metrics">' +
+              '<div class="zm-item"><span class="zm-k">🌿 总占地面积</span><span class="zm-v">' + z.areaHa.toLocaleString("en-US") + '<small>公顷</small></span></div>' +
+              '<div class="zm-item"><span class="zm-k">🧬 物种数量</span><span class="zm-v">~' + z.speciesCount.toLocaleString("en-US") + '<small>种</small></span></div>' +
+              '<div class="zm-item"><span class="zm-k">🐾 动物总数</span><span class="zm-v">~' + fmtNum(z.animalCount) + '<small>只</small></span></div>' +
+              '<div class="zm-item"><span class="zm-k">🎫 成人票价</span><span class="zm-v">$' + z.ticketUsd + '<small>约</small></span></div>' +
+            '</div>' +
+            '<div class="z-meta-row">' +
+              '<span class="z-badge">⏱️ 建议 ' + esc(z.durationHours) + '</span>' +
+              '<span class="z-badge">🥾 步行：' + esc(z.walkingIntensity) + '</span>' +
+              (z.bestFor || []).map(function (c) { return '<span class="z-crowd">' + esc(c) + '</span>'; }).join("") +
+            '</div>' +
+            '<ul class="obs">' + z._obs.map(function (o) { return "<li>" + esc(o) + "</li>"; }).join("") + '</ul>' +
+            (z.tip ? '<div class="z-tip"><b>🧭 游园攻略：</b>' + esc(z.tip) + '</div>' : '') +
+            '<div class="shared-slot"></div>' +
+            '<div class="spec-foot"><a href="' + map + '" target="_blank" rel="noopener">在 Google 地图上查看位置 ↗</a><span class="hand">Field Specimen #' + z.rank + '</span></div>' +
+          '</div>' +
+        '</article>';
+      }
+
+      function renderZoos() {
+        var list = ZOOS.filter(function (z) {
+          if (state.tier !== "all" && z.tier !== state.tier) return false;
+          if (state.region !== "全部" && z._region !== state.region) return false;
+          if (state.crowd !== "全部" && (z.bestFor || []).indexOf(state.crowd) === -1) return false;
+          return !state.q || (z.name + z.country + z.city + z.highlight + (z.tip || "") + (z.walkingIntensity || "") + (z.bestFor || []).join(" ")).toLowerCase().indexOf(state.q) > -1;
+        });
+        list.sort(function (a, b) {
+          if (state.sort === "area") return (b.areaHa || 0) - (a.areaHa || 0) || a.rank - b.rank;
+          if (state.sort === "species") return (b.speciesCount || 0) - (a.speciesCount || 0) || a.rank - b.rank;
+          if (state.sort === "animals") return (b.animalCount || 0) - (a.animalCount || 0) || a.rank - b.rank;
+          if (state.sort === "price") return (a.ticketUsd || 999) - (b.ticketUsd || 999) || a.rank - b.rank;
+          return a.rank - b.rank;
+        });
+        document.getElementById("tally").textContent = "记录了 " + list.length + " / " + ZOOS.length + " 座";
+        document.getElementById("grid").innerHTML = list.length ? list.map(spec).join("") : '<p class="empty">这片区域没有符合筛选条件的观察记录，试试重置筛选。</p>';
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      // Safari parks
+      function isDrive(s) { return /私家车/.test(s.mode); }
+      function modeChips(s) {
+        return s.mode.split(/\s*[\/+＋]\s*/).filter(Boolean).map(function (m) {
+          var d = /私家车/.test(m);
+          var ico = d ? "🚙 " : /游船/.test(m) ? "🛶 " : /步行/.test(m) ? "🥾 " : "🚌 ";
+          return '<span class="mode' + (d ? " drive" : "") + '">' + ico + esc(m.replace(/[（(].*?[）)]/g, "").trim()) + "</span>";
+        }).join("");
+      }
+      var MAXA = Math.max.apply(null, SAFARI.map(function (s) { return s.areaHa; }));
+      function renderTerritory() {
+        var svg = document.getElementById("territory");
+        var maxR = 108, x = 0, gap = 14, parts = [];
+        var rs = SAFARI.map(function (s) { return Math.max(9, Math.sqrt(s.areaHa / MAXA) * maxR); });
+        var total = rs.reduce(function (a, r) { return a + r * 2; }, 0) + gap * (rs.length - 1);
+        var scale = Math.min(1, 1000 / total);
+        x = (1000 - total * scale) / 2;
+        SAFARI.forEach(function (s, i) {
+          var r = rs[i] * scale, cx = x + r, cy = 130;
+          var short = s.name.replace(/ Wildlife (Center|Park)| Safari Park| USA/g, "").replace("San Diego Zoo", "San Diego").replace("Disney's Kilimanjaro Safaris", "Disney Kilimanjaro");
+          parts.push('<g><title>' + esc(s.name + " · " + s.areaHa + " 公顷") + "</title>" +
+            '<circle class="blob' + (isDrive(s) ? " drive" : "") + '" cx="' + cx.toFixed(1) + '" cy="' + cy + '" r="' + r.toFixed(1) + '"/>' +
+            '<text x="' + cx.toFixed(1) + '" y="' + (cy + 4) + '" text-anchor="middle" font-size="' + (r > 30 ? 15 : 11) + '" style="font-family:Fraunces,serif;font-style:italic">' + s.rank + "</text>" +
+            '<text x="' + cx.toFixed(1) + '" y="' + (i % 2 ? cy + r + 22 : cy - r - 12) + '" text-anchor="middle" font-size="11.5">' + esc(short) + "</text>" +
+            '<text x="' + cx.toFixed(1) + '" y="' + (i % 2 ? cy + r + 37 : cy - r - 27) + '" text-anchor="middle" font-size="10.5" opacity="0.6">' + s.areaHa.toLocaleString("en-US") + " ha</text></g>");
+          x += r * 2 + gap * scale;
+        });
+        svg.innerHTML = parts.join("");
+      }
+      var driveEl = document.getElementById("drive-only");
+      function renderRoutes() {
+        var list = SAFARI.filter(function (s) { return !driveEl.checked || isDrive(s); });
+        document.getElementById("safari-tally").textContent = list.length + " 条狂野游猎路线";
+        document.getElementById("routes").innerHTML = list.map(function (s) {
+          var w = Math.max(4, Math.sqrt(s.areaHa / MAXA) * 100);
+          var img = IMAGES[s.id];
+          return '<article class="route" data-dest-id="' + esc(s.id) + '" data-lat="' + s.lat + '" data-lon="' + s.lon + '" data-name="' + esc(s.name) + '">' +
+            '<div class="r-thumb">' +
+              (img ? '<img src="' + esc(img.src) + '" alt="' + esc(s.name) + '" loading="lazy" decoding="async" />' : '') +
+              '<span class="r-no">#' + String(s.rank).padStart(2, "0") + '</span>' +
+            '</div>' +
+            '<div><h3>' + esc(s.name) + '</h3><span class="state">📍 ' + esc(s.state) + ' · 🎫 约 $' + s.ticketUsd + ' · ⏱️ ' + esc(s.durationHours) + '</span></div>' +
+            '<div class="area"><b>' + s.areaHa.toLocaleString("en-US") + '</b>公顷' +
+              '<div class="area-bar"><i style="width:' + w.toFixed(1) + '%"></i></div>' +
+              '<span>~' + s.speciesCount + ' 物种 · ~' + s.animalCount.toLocaleString("en-US") + ' 只动物</span>' +
+            '</div>' +
+            '<div class="modes-wrap"><div class="modes">' + modeChips(s) + '</div><p>' + esc(s.highlight) + '</p>' +
+              (s.tip ? '<div class="r-tip">💡 ' + esc(s.tip) + '</div>' : '') +
+            '</div></article>';
+        }).join("");
+      }
+      driveEl.addEventListener("change", renderRoutes);
+
+      renderZoos();
+      renderTerritory();
+      renderRoutes();
+    })();
+  </script>
+</body>
+</html>

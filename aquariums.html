@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Abyss Index · 全球水族馆 Top 35（含总水体/单池/物种/生物数全参数）</title>
+  <meta name="description" content="剥离过山车与鲸豚表演，只按水下巨幕的视觉统治力排序的全球 35 座顶级水族馆。全量收录总水体、最大单池水体、主巨幕尺寸、物种数、生物总数及门票避坑攻略。" />
+  <meta name="theme-color" content="#03101c" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2303101c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%235ef2e6' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%235ef2e6'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" />
+  <style>
+    /* ==========================================================================
+       The Abyss Index — immersive deep-sea stylesheet
+       Surface teal fades to abyssal black as you scroll · bioluminescent cyan
+       ========================================================================== */
+    :root {
+      --surface: #0d6d8a;
+      --abyss: #01050b;
+      --glow: #5ef2e6;
+      --glow-2: #8fb3ff;
+      --glow-3: #c58bff;
+      --text: #e4f4fb;
+      --muted: rgba(196, 226, 240, 0.68);
+      --faint: rgba(196, 226, 240, 0.42);
+      --glass: rgba(140, 210, 255, 0.05);
+      --glass-2: rgba(140, 210, 255, 0.09);
+      --edge: rgba(140, 220, 255, 0.14);
+      --edge-2: rgba(140, 220, 255, 0.28);
+      --display: "Sora", "Noto Sans SC", system-ui, sans-serif;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --wrap: 1220px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --d: 0;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: var(--abyss); color: var(--text);
+      font-family: var(--sans); font-size: 15px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, p, ul, ol { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(94, 242, 230, 0.3); }
+    .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
+
+    /* Ocean layers ---------------------------------------------------------- */
+    .ocean { position: fixed; inset: 0; z-index: -3; pointer-events: none; }
+    .ocean-abyss { background: radial-gradient(120% 70% at 50% 120%, #06142a 0%, var(--abyss) 60%); }
+    .ocean-surface {
+      background:
+        radial-gradient(90% 60% at 50% -10%, rgba(130, 230, 240, 0.55), transparent 60%),
+        linear-gradient(180deg, #1b8fa8 0%, var(--surface) 30%, #08324a 75%, #04182a 100%);
+      opacity: calc(1 - var(--d) * 1.15);
+    }
+    .ocean-mid {
+      background: linear-gradient(180deg, #0a2a48 0%, #04122a 100%);
+      opacity: calc(min(var(--d) * 2, 1) * (1 - var(--d)));
+    }
+    .rays {
+      position: fixed; inset: -10% -20% auto; height: 90vh; z-index: -2; pointer-events: none;
+      opacity: calc(0.75 - var(--d) * 1.6);
+      background:
+        linear-gradient(100deg, transparent 20%, rgba(200, 250, 255, 0.10) 24%, transparent 30%),
+        linear-gradient(80deg, transparent 38%, rgba(200, 250, 255, 0.08) 42%, transparent 48%),
+        linear-gradient(95deg, transparent 55%, rgba(200, 250, 255, 0.09) 58%, transparent 64%),
+        linear-gradient(84deg, transparent 70%, rgba(200, 250, 255, 0.06) 73%, transparent 79%);
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+      mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+      animation: sway 11s ease-in-out infinite alternate;
+      transform-origin: 50% 0;
+    }
+    @keyframes sway { from { transform: skewX(-4deg); } to { transform: skewX(4deg); } }
+    .snow { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+    .snow i {
+      position: absolute; bottom: -10px; border-radius: 50%;
+      background: rgba(210, 245, 255, 0.55);
+      box-shadow: 0 0 6px rgba(140, 240, 255, 0.6);
+      animation: rise linear infinite;
+    }
+    @keyframes rise {
+      0% { transform: translate3d(0, 0, 0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 0.8; }
+      100% { transform: translate3d(var(--dx, 20px), -110vh, 0); opacity: 0; }
+    }
+
+    /* Header ---------------------------------------------------------------- */
+    .top {
+      position: sticky; top: 0; z-index: 40;
+      background: linear-gradient(180deg, rgba(2, 10, 20, 0.78), rgba(2, 10, 20, 0.35));
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(140, 220, 255, 0.08);
+    }
+    .top-inner { display: flex; align-items: center; gap: 18px; height: 68px; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 300; letter-spacing: 0.28em; font-size: 13px; text-transform: uppercase; flex-shrink: 0; }
+    .logo svg { width: 26px; height: 26px; }
+    .switch { display: flex; gap: 4px; margin-left: auto; padding: 4px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(2, 12, 24, 0.5); overflow-x: auto; max-width: 100%; }
+    .switch a { padding: 6px 13px; border-radius: 999px; font-size: 12.5px; color: var(--muted); transition: color 0.2s, background 0.2s; white-space: nowrap; }
+    .switch a:hover { color: var(--text); }
+    .switch a[aria-current="page"] { background: rgba(94, 242, 230, 0.16); color: var(--glow); font-weight: 500; }
+
+    /* Depth gauge ----------------------------------------------------------- */
+    .gauge {
+      position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 30;
+      display: flex; align-items: center; gap: 12px; pointer-events: none;
+      font-family: var(--display); font-weight: 300; font-size: 11px; letter-spacing: 0.12em; color: var(--muted);
+    }
+    .gauge-track { position: relative; width: 1px; height: 44vh; background: linear-gradient(180deg, var(--edge-2), transparent); }
+    .gauge-track::before {
+      content: ""; position: absolute; inset: 0 -4px;
+      background: repeating-linear-gradient(180deg, var(--edge-2) 0 1px, transparent 1px 10%);
+      -webkit-mask-image: linear-gradient(90deg, #000 0 3px, transparent 3px calc(100% - 3px), #000 calc(100% - 3px));
+      mask-image: linear-gradient(90deg, #000 0 3px, transparent 3px calc(100% - 3px), #000 calc(100% - 3px));
+    }
+    .gauge-dot { position: absolute; left: -4px; width: 9px; height: 9px; border-radius: 50%; background: var(--glow); box-shadow: 0 0 12px var(--glow); top: calc(var(--d) * 100%); transform: translateY(-50%); }
+    .gauge-read { order: -1; text-align: right; }
+    .gauge-read b { display: block; font-size: 20px; font-weight: 200; color: var(--text); letter-spacing: 0.02em; }
+
+    /* Hero ------------------------------------------------------------------ */
+    .hero { position: relative; min-height: min(calc(100vh - 68px), 900px); display: flex; flex-direction: column; justify-content: center; padding: 40px 0 110px; }
+    .eyebrow { font-family: var(--display); font-size: 11.5px; font-weight: 400; letter-spacing: 0.38em; text-transform: uppercase; color: var(--glow); }
+    .hero h1 { margin-top: 24px; font-family: var(--sans); font-weight: 300; font-size: clamp(40px, 6vw, 84px); line-height: 1.15; letter-spacing: 0.02em; text-shadow: 0 10px 60px rgba(0, 30, 60, 0.4); }
+    .hero h1 em { font-style: normal; font-family: var(--display); font-weight: 200; color: var(--glow); text-shadow: 0 0 40px rgba(94, 242, 230, 0.45); }
+    .hero p.lede { max-width: 40em; margin-top: 24px; font-size: 16.5px; line-height: 1.95; color: var(--muted); font-weight: 300; }
+    .hero-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 56px; border-top: 1px solid var(--edge); }
+    .hero-stats div { padding: 22px 20px 0 0; }
+    .hero-stats div + div { padding-left: 20px; border-left: 1px solid var(--edge); }
+    .hero-stats b { display: block; font-family: var(--display); font-weight: 200; font-size: clamp(26px, 3vw, 42px); line-height: 1; }
+    .hero-stats b small { font-size: 0.42em; font-weight: 300; margin-left: 4px; color: var(--muted); }
+    .hero-stats span { display: block; margin-top: 10px; font-size: 12.5px; color: var(--muted); }
+    .dive {
+      position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      font-family: var(--display); font-size: 11px; letter-spacing: 0.4em; color: var(--muted);
+    }
+    .dive::after { content: ""; width: 1px; height: 42px; background: linear-gradient(180deg, var(--glow), transparent); animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 0.25; transform: scaleY(0.6); transform-origin: top; } 50% { opacity: 1; transform: scaleY(1); } }
+
+    /* Sections -------------------------------------------------------------- */
+    .section { padding: 96px 0; }
+    .sec-head { max-width: 760px; margin-bottom: 44px; }
+    .sec-head h2 { margin-top: 14px; font-weight: 300; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.35; letter-spacing: 0.02em; }
+    .sec-head h2 em { font-style: normal; color: var(--glow); }
+    .sec-head p { margin-top: 14px; color: var(--muted); font-weight: 300; line-height: 1.9; }
+
+    /* Method rings */
+    .method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .m-card { position: relative; padding: 28px 26px 30px; border: 1px solid var(--edge); border-radius: 22px; background: var(--glass); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); overflow: hidden; }
+    .m-card::before { content: ""; position: absolute; inset: -40% -40% auto auto; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(94, 242, 230, 0.14), transparent 70%); }
+    .ring { position: relative; width: 88px; height: 88px; }
+    .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring circle { fill: none; stroke-width: 3; }
+    .ring .bg { stroke: var(--edge); }
+    .ring .fg { stroke: var(--glow); stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(94, 242, 230, 0.7)); transition: stroke-dashoffset 1.6s var(--ease); }
+    .ring span { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--display); font-weight: 200; font-size: 24px; }
+    .m-card h3 { margin-top: 20px; font-size: 18px; font-weight: 500; }
+    .m-card p { margin-top: 10px; font-size: 14px; line-height: 1.85; color: var(--muted); font-weight: 300; }
+
+    /* Controls -------------------------------------------------------------- */
+    .controls {
+      position: sticky; top: 72px; z-index: 20;
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 16px 18px; margin-bottom: 40px;
+      border: 1px solid var(--edge); border-radius: 20px;
+      background: rgba(3, 16, 30, 0.82); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+    }
+    .ctrl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .ctrl-label { font-size: 12px; color: var(--faint); letter-spacing: 0.08em; margin-right: 4px; }
+    .search { position: relative; flex: 1 1 260px; }
+    .search svg { position: absolute; left: 14px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); stroke: var(--muted); fill: none; stroke-width: 1.6; }
+    .search input { width: 100%; height: 40px; padding: 0 14px 0 40px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(140, 210, 255, 0.05); outline: none; transition: border-color 0.2s, box-shadow 0.2s; font-size: 13.5px; }
+    .search input::placeholder { color: var(--faint); }
+    .search input:focus { border-color: rgba(94, 242, 230, 0.6); box-shadow: 0 0 0 4px rgba(94, 242, 230, 0.1); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { height: 32px; padding: 0 13px; border: 1px solid var(--edge); border-radius: 999px; font-size: 12.5px; color: var(--muted); transition: all 0.2s; }
+    .chip:hover { color: var(--text); border-color: var(--edge-2); }
+    .chip[aria-pressed="true"] { color: #022; background: var(--glow); border-color: var(--glow); font-weight: 500; box-shadow: 0 0 18px rgba(94, 242, 230, 0.35); }
+    .seg { display: flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(2, 10, 22, 0.45); }
+    .seg button { height: 30px; padding: 0 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted); transition: all 0.2s; }
+    .seg button:hover { color: var(--text); }
+    .seg button[aria-pressed="true"] { background: rgba(94, 242, 230, 0.2); color: var(--glow); font-weight: 500; }
+    .count { margin-left: auto; font-family: var(--display); font-size: 12px; letter-spacing: 0.08em; color: var(--muted); }
+    .count b { color: var(--glow); font-weight: 500; }
+
+    /* Zones & Cards --------------------------------------------------------- */
+    .zone { margin-top: 72px; }
+    .zone:first-child { margin-top: 0; }
+    .zone-head { display: grid; grid-template-columns: auto 1fr; gap: 6px 28px; align-items: end; padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid var(--edge); }
+    .zone-depth { grid-row: span 2; font-family: var(--display); font-weight: 200; font-size: clamp(38px, 4.8vw, 60px); line-height: 0.9; color: transparent; -webkit-text-stroke: 1px var(--zone-c, var(--glow)); letter-spacing: -0.02em; }
+    .zone-name { font-size: 20px; font-weight: 500; }
+    .zone-name small { margin-left: 10px; font-family: var(--display); font-size: 11px; letter-spacing: 0.25em; color: var(--zone-c, var(--glow)); text-transform: uppercase; }
+    .zone-note { font-size: 13.5px; color: var(--muted); font-weight: 300; }
+
+    .list { display: grid; gap: 18px; }
+    .card {
+      position: relative; display: grid; grid-template-columns: 260px minmax(0, 1fr) 128px; gap: 24px; align-items: stretch;
+      padding: 22px; border: 1px solid var(--edge); border-radius: 22px;
+      background: linear-gradient(120deg, var(--glass-2), var(--glass) 65%);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      transition: transform 0.35s var(--ease), border-color 0.3s, box-shadow 0.3s;
+      opacity: 0; transform: translateY(16px);
+    }
+    .card.in { opacity: 1; transform: none; }
+    .card:hover { border-color: rgba(94, 242, 230, 0.42); box-shadow: 0 0 0 1px rgba(94, 242, 230, 0.12), 0 28px 56px -28px rgba(94, 242, 230, 0.35); }
+    .card.is-t0 { border-color: rgba(94, 242, 230, 0.32); background: linear-gradient(125deg, rgba(94, 242, 230, 0.11), rgba(140, 210, 255, 0.04) 65%); }
+
+    /* Media Cover Column */
+    .c-media {
+      position: relative; border-radius: 15px; overflow: hidden; min-height: 210px;
+      background: radial-gradient(120% 90% at 30% 20%, #146a88 0%, #06253b 55%, #020c18 100%);
+      border: 1px solid rgba(140, 220, 255, 0.18);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .c-media img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--ease), filter 0.4s;
+    }
+    .card:hover .c-media img { transform: scale(1.05); }
+    .c-media::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(1, 8, 18, 0.55) 0%, transparent 40%, rgba(1, 8, 18, 0.78) 100%);
+      pointer-events: none;
+    }
+    .c-rank-badge {
+      position: relative; z-index: 2; padding: 12px 14px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .rank-num {
+      font-family: var(--display); font-weight: 300; font-size: 36px; line-height: 1;
+      color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,0.75);
+    }
+    .card.is-t0 .rank-num { color: var(--glow); font-weight: 400; text-shadow: 0 0 24px rgba(94, 242, 230, 0.75); }
+    .tier-pill {
+      padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+      background: rgba(2, 14, 28, 0.78); border: 1px solid var(--zone-c, var(--glow)); color: var(--zone-c, var(--glow));
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .c-credit {
+      position: relative; z-index: 2; padding: 6px 10px; font-size: 10.5px; color: rgba(228, 244, 251, 0.72);
+      display: flex; justify-content: space-between; align-items: center; gap: 6px;
+    }
+    .c-credit a { color: var(--glow); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Content Column */
+    .c-body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .c-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+    .c-name { font-size: 20px; font-weight: 600; line-height: 1.35; color: #fff; }
+    .c-en { display: block; margin-top: 2px; font-family: var(--display); font-size: 12.5px; font-weight: 300; letter-spacing: 0.04em; color: var(--muted); }
+    .c-loc { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+    .c-loc svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+    .c-loc a { color: var(--glow-2); border-bottom: 1px dotted rgba(143, 179, 255, 0.5); margin-left: 4px; }
+
+    /* Hardcore Scale Metrics Grid */
+    .metrics-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px;
+      padding: 10px 12px; border-radius: 14px;
+      background: rgba(2, 12, 24, 0.55); border: 1px solid rgba(140, 220, 255, 0.14);
+    }
+    .m-item { display: flex; flex-direction: column; gap: 2px; }
+    .m-item + .m-item { padding-left: 10px; border-left: 1px solid rgba(140, 220, 255, 0.1); }
+    .m-k { font-size: 11px; color: var(--faint); letter-spacing: 0.04em; }
+    .m-v { font-family: var(--display); font-size: 15.5px; font-weight: 500; color: var(--glow); }
+    .m-v small { font-family: var(--sans); font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 2px; }
+
+    /* Window & Practical Strip */
+    .meta-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12.5px; }
+    .meta-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 8px;
+      background: rgba(143, 179, 255, 0.1); border: 1px solid rgba(143, 179, 255, 0.22); color: #dce8ff;
+    }
+    .meta-badge.win { background: rgba(94, 242, 230, 0.09); border-color: rgba(94, 242, 230, 0.25); color: var(--glow); }
+    .crowd-tag {
+      padding: 2px 9px; border-radius: 999px; font-size: 11.5px;
+      background: rgba(197, 139, 255, 0.12); border: 1px solid rgba(197, 139, 255, 0.28); color: #ebd6ff;
+    }
+
+    .feats { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+    .feats li { padding: 4px 11px; font-size: 12.5px; line-height: 1.5; border-radius: 999px; background: rgba(140, 210, 255, 0.06); border: 1px solid rgba(140, 220, 255, 0.12); color: rgba(228, 244, 251, 0.9); }
+    .feats li:first-child { border-color: rgba(94, 242, 230, 0.34); color: #fff; }
+
+    .aq-tip {
+      padding: 9px 13px; border-radius: 11px; font-size: 12.5px; line-height: 1.65;
+      background: rgba(94, 242, 230, 0.05); border-left: 3px solid var(--glow); color: var(--muted);
+    }
+    .aq-tip b { color: var(--text); font-weight: 500; }
+
+    /* Tank Visual Column */
+    .tank {
+      justify-self: end; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px;
+      padding-left: 14px; border-left: 1px solid rgba(140, 220, 255, 0.1); width: 100%;
+    }
+    .tank-box { position: relative; width: 60px; height: 90px; border: 1px solid var(--edge-2); border-top: 0; border-radius: 0 0 12px 12px; overflow: hidden; background: rgba(2, 10, 20, 0.45); }
+    .tank-water { position: absolute; left: 0; right: 0; bottom: 0; height: 0; background: linear-gradient(180deg, rgba(94, 242, 230, 0.65), rgba(40, 110, 220, 0.65)); transition: height 1.4s var(--ease); }
+    .tank-water::before {
+      content: ""; position: absolute; left: -50%; top: -6px; width: 200%; height: 12px;
+      background: radial-gradient(10px 6px at 10px 6px, rgba(94, 242, 230, 0.65) 98%, transparent) 0 0 / 20px 12px repeat-x;
+      animation: wave 3s linear infinite;
+    }
+    @keyframes wave { to { transform: translateX(20px); } }
+    .tank b { font-family: var(--display); font-weight: 400; font-size: 15px; line-height: 1.1; color: var(--glow); text-align: center; }
+    .tank span { font-size: 11px; color: var(--muted); text-align: center; line-height: 1.3; }
+    .tank small { font-size: 10.5px; color: var(--faint); text-align: center; }
+
+    .empty { padding: 60px 0; text-align: center; color: var(--muted); }
+
+    /* Near misses ----------------------------------------------------------- */
+    .misses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .miss { padding: 26px 26px 28px; border: 1px dashed rgba(197, 139, 255, 0.28); border-radius: 18px; background: rgba(197, 139, 255, 0.03); }
+    .miss h3 { font-size: 16.5px; font-weight: 500; }
+    .miss h3 span { margin-right: 10px; font-family: var(--display); font-size: 11px; letter-spacing: 0.24em; color: var(--glow-3); }
+    .miss p { margin-top: 10px; font-size: 14px; line-height: 1.9; color: var(--muted); font-weight: 300; }
+    .miss b { color: var(--text); font-weight: 500; }
+
+    /* Footer ---------------------------------------------------------------- */
+    .foot { padding: 80px 0 60px; border-top: 1px solid var(--edge); }
+    .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; }
+    .foot p { max-width: 36em; font-size: 13.5px; color: var(--muted); font-weight: 300; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    .foot nav a { padding: 10px 18px; border: 1px solid var(--edge); border-radius: 999px; font-size: 13px; color: var(--muted); transition: all 0.2s; }
+    .foot nav a:hover { color: var(--glow); border-color: rgba(94, 242, 230, 0.5); }
+    .foot .mark { margin-top: 60px; font-family: var(--display); font-weight: 200; font-size: clamp(48px, 11vw, 150px); line-height: 1; letter-spacing: -0.03em; color: transparent; -webkit-text-stroke: 1px rgba(94, 242, 230, 0.18); white-space: nowrap; overflow: hidden; }
+
+    @media (max-width: 1100px) {
+      .gauge { display: none; }
+      .card { grid-template-columns: 220px minmax(0, 1fr); }
+      .tank { grid-column: 1 / -1; flex-direction: row; justify-content: flex-start; border-left: 0; border-top: 1px solid rgba(140, 220, 255, 0.1); padding-left: 0; padding-top: 12px; }
+      .tank-box { width: 36px; height: 48px; }
+    }
+    @media (max-width: 860px) {
+      .method, .misses { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .hero-stats div + div { padding-left: 0; border-left: 0; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .m-item:nth-child(3) { padding-left: 0; border-left: 0; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 28px); }
+      .logo span { display: none; }
+      .card { grid-template-columns: 1fr; padding: 16px; }
+      .c-media { min-height: 185px; }
+      .controls { position: static; }
+      .count { margin-left: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rays, .snow i, .dive::after, .tank-water::before { animation: none; }
+      .card { opacity: 1; transform: none; transition: none; }
+      .snow { display: none; }
+    }
+  </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="剥离过山车与杂技表演，纯按水下展陈统治力排名。完整收录全馆总水体、最大单池水体、主视窗尺寸、物种数、生物总数与避坑贴士。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Abyss Index · 全球顶级水族馆 Top 35 硬核榜 (水体/视窗/物种全参数)" />
+  <meta property="og:description" content="剥离过山车与杂技表演，纯按水下展陈统治力排名。完整收录全馆总水体、最大单池水体、主视窗尺寸、物种数、生物总数与避坑贴士。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/aquariums.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Abyss Index · 全球顶级水族馆 Top 35 硬核榜 (水体/视窗/物种全参数)" />
+  <meta name="twitter:description" content="剥离过山车与杂技表演，纯按水下展陈统治力排名。完整收录全馆总水体、最大单池水体、主视窗尺寸、物种数、生物总数与避坑贴士。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Abyss Index · 全球顶级水族馆 Top 35 硬核榜 (水体/视窗/物种全参数)",
+  "description": "剥离过山车与杂技表演，纯按水下展陈统治力排名。完整收录全馆总水体、最大单池水体、主视窗尺寸、物种数、生物总数与避坑贴士。",
+  "numberOfItems": 25,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "珠海长隆（海洋王国＋宇宙飞船）",
+        "description": "中国 珠海 · 3100万升鲸鲨巨幕 + 320万升全球最大活体真珊瑚池 + 虎鲸深水巨幕 + 西非海牛群",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.098,
+          "longitude": 113.536
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "阿布扎比海洋世界 (SeaWorld Abu Dhabi)",
+        "description": "阿联酋 阿布扎比 · 2500万升《无尽海洋》20米高三维深海巨球 SeaSphere + 全透明跨层海底扶梯",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 24.491,
+          "longitude": 54.613
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "乔治亚水族馆 (Georgia Aquarium)",
+        "description": "美国 亚特兰大 · 2400万升鲸鲨&鬼蝠魟群巨幕与穿心隧道 + 1亿美金新建虎鲨深海池 + 白鲸海獭馆",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.763,
+          "longitude": -84.395
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "冲绳美丽海水族馆 (Okinawa Churaumi)",
+        "description": "日本 冲绳 · 750万升《黑潮之海》鲸鲨&鬼蝠魟深蓝巨幕 + 敞开屋顶引入真阳光的活体珊瑚海",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 26.694,
+          "longitude": 127.878
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "新加坡圣淘沙海洋馆 (Singapore Oceanarium)",
+        "description": "新加坡 圣淘沙 · 1800万升单池、36米超宽巨幕看鬼蝠魟群 + 梦幻水母厅 + 扩建远古海洋新馆",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 1.258,
+          "longitude": 103.819
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "里斯本海洋馆 (Oceanário de Lisboa)",
+        "description": "葡萄牙 里斯本 · 500万升双层360度无边界中央大池(翻车鱼/鬼蝠魟) + 天野尚40米长《水下森林》绝唱",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.763,
+          "longitude": -9.094
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "瓦伦西亚海洋馆 (L'Oceanogràfic)",
+        "description": "西班牙 瓦伦西亚 · 700万升大洋池、70米沙虎鲨/锯鳐长隧道 + 欧洲唯一白鲸冰川馆 + 水下穹顶餐厅",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.453,
+          "longitude": -0.348
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "布洛涅海之城 (Nausicaá)",
+        "description": "法国 布洛涅 · 1000万升欧洲最大公海单体池 + 20米深海无框巨幕 + 18米全透明水底隧道",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.731,
+          "longitude": 1.594
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "屏东国立海洋生物博物馆 (垦丁海生馆)",
+        "description": "中国 台湾屏东 · 84米三段式真阳光珊瑚沉船隧道 + 10米高活体巨藻森林 + 台湾高山溪流至深海剖面",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.046,
+          "longitude": 120.699
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "迪拜购物中心水族馆 (Dubai Mall Aquarium)",
+        "description": "阿联酋 迪拜 · 1000万升单池、51米宽巨幕 + 48米隧道，高密度塞满 300+条沙虎鲨的视觉暴击",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.197,
+          "longitude": 55.279
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "迪拜棕榈岛亚特兰蒂斯《失落的空间》",
+        "description": "阿联酋 迪拜 · 1100万升沉没神庙遗迹巨幕，极致清透蓝水与数百条鲨鱼、魔鬼鱼、黄金鲹同框",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.131,
+          "longitude": 55.117
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "三亚·亚特兰蒂斯《失落的空间》水族馆",
+        "description": "中国 海南三亚 · 1350万升无接缝单片巨幕(水体比迪拜原版更大) + 两头白鲸与神庙造景，水质极清透",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.338,
+          "longitude": 109.744
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "名古屋港水族馆 (Port of Nagoya)",
+        "description": "日本 名古屋 · 2400万升总水体，水下IMAX级看台仰望虎鲸白鲸深潜 + 3.5万条沙丁鱼黑潮龙卷风",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.091,
+          "longitude": 136.878
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "蒙特雷湾水族馆 (Monterey Bay Aquarium)",
+        "description": "美国 加州蒙特雷 · 全球第一梦幻水母光影展区 + 8.5米真阳光巨藻森林 + 全球唯一常设深海生物特展",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.618,
+          "longitude": -121.901
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "大阪海游馆 (Osaka Kaiyukan)",
+        "description": "日本 大阪 · 540万升9米深太平洋鲸鲨主水槽 + 8层螺旋下降跨层立体生态缸动线",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.654,
+          "longitude": 135.429
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "特内里费鹦鹉公园水族区 (Loro Parque)",
+        "description": "西班牙 加那利群岛 · 全球第一室内下真雪真冰山企鹅馆 Planet Penguin + 《AquaViva》巨型光影水母神殿",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.408,
+          "longitude": -16.564
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "济州岛韩华水族馆 (Aqua Planet Jeju)",
+        "description": "韩国 济州岛 · 600万升主池、23米×8.5米双层魔鬼鱼深海巨幕 + 80米海底隧道 + 海女无氧深潜",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 33.424,
+          "longitude": 126.928
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "上海海昌海洋公园（水下展馆部分）",
+        "description": "中国 上海 · 双层水下半球形穹顶“南极企鹅超级碗” + 火山鲨鱼馆7度倾斜深海巨幕 + 虎鲸水下展窗",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.913,
+          "longitude": 121.908
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "日照海洋公园 (Rizhao Ocean Park)",
+        "description": "中国 山东日照 · 500万升+ 自然天光银色风暴巨幕 + 阳光珊瑚隧道 + 鲨鱼隧道 + 四季花鸟温室",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.424,
+          "longitude": 119.552
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "芝加哥谢德水族馆 (Shedd Aquarium)",
+        "description": "美国 芝加哥 · 亚马逊雨季泛滥森林水下剖面 + 菲律宾珊瑚鲨鱼深水馆 + 白鲸/海豚/海獭水下厅",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.867,
+          "longitude": -87.614
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "田纳西水族馆 (Tennessee Aquarium)",
+        "description": "美国 查塔努加 · 全球最强北美温带大河巨物深水缸(巨型湖鲟/美国匙吻鲟/长吻雀鳝) + 大烟山阳光溪流",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.056,
+          "longitude": -85.311
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "巴尔的摩美国国家水族馆 (National Aquarium)",
+        "description": "美国 巴尔的摩 · 360度多层环形鲨鱼回廊 (Shark Alley) + 俯瞰水下双视角活体黑鳍珊瑚池 + 澳洲峡谷",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.285,
+          "longitude": -76.608
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多海洋世界＋探索湾 (Discovery Cove)",
+        "description": "美国 奥兰多 · 肉身潜入百万升人工珊瑚礁魔鬼鱼大泻湖 + 鲨鱼长隧道 + Manta十大深海艺术精品缸",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.411,
+          "longitude": -81.461
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "圣地亚哥海洋世界 (SeaWorld San Diego)",
+        "description": "美国 圣地亚哥 · 北美唯一的零下真冰帝企鹅馆 (Penguin Encounter) + 鲨鱼隧道 + 白鲸与海象水下厅",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 32.764,
+          "longitude": -117.226
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "奥兰多迪士尼 EPCOT 水族馆 (SeaBase)",
+        "description": "美国 奥兰多 · 2160万升圆柱深海池 + 尼莫Dark Ride虚实进场 + 圆心双层空间站(受限于1986小窗分割)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.375,
+          "longitude": -81.551
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END AUTO-SEO -->
+</head>
+<body>
+  <div class="ocean ocean-abyss"></div>
+  <div class="ocean ocean-mid"></div>
+  <div class="ocean ocean-surface"></div>
+  <div class="rays" aria-hidden="true"></div>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#5ef2e6" stroke-width="1" opacity="0.4"/><circle cx="16" cy="16" r="8" fill="none" stroke="#5ef2e6" stroke-width="1.4"/><circle cx="16" cy="16" r="2.4" fill="#5ef2e6"/></svg>
+        <span>Abyss Index</span>
+      </a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">🧭 图鉴总览</a>
+        <a href="beaches.html">🏖️ 海岸 145</a>
+        <a href="cruises.html">🛳️ 奢华邮轮 50</a>
+        <a href="canals.html">🚤 运河房船 20</a>
+        <a href="sailing.html">⛵ 帆船航线 20</a>
+        <a href="rv.html">🚐 房车自驾 20</a>
+        <a href="shows.html">🎭 驻场大秀 100</a>
+        <a href="aquariums.html" aria-current="page">🐋 水族馆 35</a>
+        <a href="zoos.html">🦁 动物园 40</a>
+        <a href="museums.html">⚙️ 重器馆 100</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="gauge" aria-hidden="true">
+    <div class="gauge-read"><b id="depth-read">−0 m</b><span id="depth-zone">海面</span></div>
+    <div class="gauge-track"><div class="gauge-dot"></div></div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">The Abyss Index · 2026 全球水族馆 Top 35 全参数版</span>
+        <h1>下潜 <em>35</em> 层<br />看见玻璃背后的海</h1>
+        <p class="lede">不算过山车，不算露天鲸豚杂技，也不看百年名气。这份榜单只问一件事：站在那面亚克力巨幕前，你会不会忘了呼吸。现已全量补齐 35 座展馆的<b>实景封面图、最大单池水体、全馆总水体、物种数、生物总数</b>以及普通游客最关心的<b>门票、时长与机位攻略</b>。</p>
+        <div class="hero-stats">
+          <div><b>35</b><span>座全球标杆展馆</span></div>
+          <div><b>1.25<small>亿升</small></b><span>最大总水体 · 珠海长隆双馆</span></div>
+          <div><b>3100<small>万升</small></b><span>最大单池 · 长隆鲸鲨/虎鲸池</span></div>
+          <div><b>51<small>米</small></b><span>最宽单片巨幕 · 迪拜 Mall</span></div>
+          <div><b>155<small>米</small></b><span>最长海底隧道 · 上海陆家嘴</span></div>
+        </div>
+      </div>
+      <a class="dive" href="#method">DIVE</a>
+    </section>
+
+    <section class="section" id="method">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">Method · 评选与数据口径</span>
+          <h2>只看<em>水下</em>那一刻的视觉统治力</h2>
+          <p>我们严格区分「最大单池水体（决定单面巨幕的深海压迫感）」与「全馆总水体（决定整座场馆的游览体量）」，并结合物种丰富度、门票性价比给出客观参考。</p>
+        </header>
+        <div class="method">
+          <article class="m-card">
+            <div class="ring" data-pct="40"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="46"/><circle class="fg" cx="50" cy="50" r="46"/></svg><span>40%</span></div>
+            <h3>主缸通透度与单池体量</h3>
+            <p>20–51 米无接缝亚克力巨幕、深海纵深感、自然天光穿透，或 20 米深海巨球、水下穹顶、超长无框隧道带来的三维包围感。</p>
+          </article>
+          <article class="m-card">
+            <div class="ring" data-pct="30"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="46"/><circle class="fg" cx="50" cy="50" r="46"/></svg><span>30%</span></div>
+            <h3>缸内造景与生物密度</h3>
+            <p>活体珊瑚、天野尚水草森林、巨藻林的真实还原；鲸鲨、鬼蝠魟、翻车鱼、沙虎鲨群与数万条沙丁鱼风暴的视觉饱满度。</p>
+          </article>
+          <article class="m-card">
+            <div class="ring" data-pct="30"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="46"/><circle class="fg" cx="50" cy="50" r="46"/></svg><span>30%</span></div>
+            <h3>全馆总水体与展线续航</h3>
+            <p>梦幻水母光影、深海怪鱼、真冰极地企鹅、亚马逊大河巨物剖面是否同样精良，能否撑起 3–6 小时不掉线的游览体验。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="list" style="padding-top:32px">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">The Descent · 全部榜单与参数排序</span>
+          <h2>从<em>透光层</em>到深渊层</h2>
+          <p>支持按综合排名、最大单池水体、全馆总水体、物种数、生物总数或门票价格一键重排，也可按出行人群快速筛选。</p>
+        </header>
+
+        <div class="controls" role="search">
+          <div class="ctrl-row">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <input id="q" type="search" placeholder="搜索场馆、城市、物种或攻略（如：鲸鲨、水母、隧道、夜宿、免费）…" autocomplete="off" />
+            </label>
+            <div class="seg" role="group" aria-label="排序维度">
+              <button type="button" data-sort="rank" aria-pressed="true">🏆 综合排名</button>
+              <button type="button" data-sort="mainTank" aria-pressed="false">💧 最大单池</button>
+              <button type="button" data-sort="totalVol" aria-pressed="false">🌊 全馆总水体</button>
+              <button type="button" data-sort="species" aria-pressed="false">🧬 物种数</button>
+              <button type="button" data-sort="animals" aria-pressed="false">🐟 生物总数</button>
+              <button type="button" data-sort="price" aria-pressed="false">🎫 票价(低→高)</button>
+            </div>
+            <span class="count" id="count"></span>
+          </div>
+          <div class="ctrl-row">
+            <span class="ctrl-label">地区：</span>
+            <div class="chips" id="regions"></div>
+            <span class="ctrl-label" style="margin-left:10px">适合人群：</span>
+            <div class="chips" id="crowds"></div>
+          </div>
+        </div>
+
+        <div id="zones"></div>
+      </div>
+    </section>
+
+    <section class="section" id="misses">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">Field Observations · 知名场馆避坑排雷</span>
+          <h2>名气很大但<em>纯水下展陈</em>未进前 35 的场馆</h2>
+          <p>为了让普通游客不花冤枉钱，以下场馆虽经常出现在综合旅游攻略中，但单论水下巨幕体量与通透度存在明显短板：</p>
+        </header>
+        <div class="misses">
+          <article class="miss"><h3><span>USA</span>旧金山加州科学馆 · 斯坦哈特水族馆</h3><p>四合一自然博物馆整体极佳，但单看 B1 层水族馆，最大的菲律宾珊瑚礁池仅 <b>80 万升</b>，没有深海巨幕与长隧道，纯水下视觉体量远小于独立大型馆。</p></article>
+          <article class="miss"><h3><span>USA</span>波士顿新英格兰水族馆 (New England Aquarium)</h3><p>1969 年建成，核心圆柱主缸仅 <b>76 万升</b>，无海底隧道、无宽幅巨幕，展廊昏暗局促，票价却高达 $39。</p></article>
+          <article class="miss"><h3><span>DEU</span>施特拉尔松德海洋博物馆 (Ozeaneum)</h3><p>网红《1:1 巨鲸厅》实为悬吊玻璃钢模型，活体主缸仅 <b>260 万升</b>且以北海灰暗冷水鱼为主，本质更接近自然标本博物馆。</p></article>
+          <article class="miss"><h3><span>CHN</span>部分早期建成的传统商场/地下室极地馆</h3><p>2000–2014 年间建成的一、二代封闭式老馆，普遍存在塑料假珊瑚褪色、通风差、走廊逼仄、缺乏自然天光与高透水质的问题。</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p>The Abyss Index 是 Destination Atlas 专题图鉴之一。水体、物种与生物总数综合自各馆官方年报与吉尼斯纪录（部分近似值以官方口径为准），数据核验于 2026.10。</p>
+        <nav aria-label="其他榜单">
+          <a href="index.html">🧭 图鉴总览</a>
+          <a href="beaches.html">🏖️ 海岸度假 145</a>
+          <a href="zoos.html">🦁 动物园 Top 40</a>
+          <a href="museums.html">⚙️ 重器博物馆 Top 100</a>
+          <a href="themeparks.html">🎢 游乐园 Top 100</a>
+          <a href="ski.html">🎿 全球雪场 Top 100</a>
+          <a href="shows.html">🎭 驻场秀 Top 50</a>
+        </nav>
+      </div>
+      <p class="mark" aria-hidden="true">THE ABYSS</p>
+    </div>
+  </footer>
+
+  <script src="images_themed.js" onerror=""></script>
+  <script src="data_aquariums_zoos_museums.js"></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      "use strict";
+      var DATA = (window.AQUARIUMS_TOP35 || []).slice();
+      var IMAGES = window.THEMED_IMAGES || {};
+      var REGION = {
+        "中国": "亚洲", "日本": "亚洲", "韩国": "亚洲", "新加坡": "亚洲",
+        "阿联酋": "中东 · 非洲", "土耳其": "中东 · 非洲", "南非": "中东 · 非洲",
+        "美国": "北美", "加拿大": "北美", "澳大利亚": "大洋洲"
+      };
+      var TIER_DESC = {
+        "T0": "👑 全球必去殿堂级",
+        "T1": "🌟 世界一流专程级",
+        "T1.5": "✨ 区域王牌顺路必去",
+        "T2": "👍 特色鲜明值得一去"
+      };
+      var ZONES = [
+        { tier: "T0", depth: "0–200", name: "透光层 · 全球必去殿堂级", en: "Sunlight Zone", c: "#5ef2e6", note: "鲸鲨、虎鲸与鬼蝠魟在千万升巨幕里巡游，值得为此专程规划一趟旅行。" },
+        { tier: "T1", depth: "200–1k", name: "暮光层 · 世界一流展馆", en: "Twilight Zone", c: "#8fb3ff", note: "拥有独步全球的单项绝活（天野尚水草、真阳光巨藻林、300条沙虎鲨），展线成熟完整。" },
+        { tier: "T1.5", depth: "1k–4k", name: "午夜层 · 区域王牌场馆", en: "Midnight Zone", c: "#c58bff", note: "有一两处镇馆级巨幕或真冰企鹅/大河巨物展区，抵达该城市必逛。" },
+        { tier: "T2", depth: "4k+", name: "深渊层 · 特色口碑名馆", en: "Abyssal Zone", c: "#ff8fb8", note: "体量或建馆年代所限，但凭借超长隧道、金枪鱼环形缸或沉船造景独树一帜。" }
+      ];
+      var DEPTHS = [[0, "海面"], [0.12, "透光层"], [0.35, "暮光层"], [0.6, "午夜层"], [0.82, "深渊层"]];
+
+      function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+      function splitName(n) {
+        var m = n.match(/\s*\(([^()]*[A-Za-z][^()]*)\)/);
+        return m ? { zh: n.replace(m[0], "").trim(), en: m[1] } : { zh: n, en: "" };
+      }
+
+      DATA.forEach(function (a) {
+        a._region = REGION[a.country] || "欧洲";
+        a._feats = a.highlight.split(/\s+\+\s+/);
+        var nm = splitName(a.name); a._zh = nm.zh; a._en = nm.en;
+      });
+      var MAX_MAIN = Math.max.apply(null, DATA.map(function (a) { return a.mainTankML || 0; }));
+
+      var state = { q: "", region: "全部", crowd: "全部", sort: "rank" };
+
+      // Region chips
+      var regions = ["全部", "亚洲", "欧洲", "北美", "中东 · 非洲"];
+      var regEl = document.getElementById("regions");
+      regEl.innerHTML = regions.map(function (r) {
+        return '<button type="button" class="chip" data-r="' + esc(r) + '" aria-pressed="' + (r === "全部") + '">' + esc(r) + "</button>";
+      }).join("");
+      regEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".chip"); if (!b) return;
+        state.region = b.getAttribute("data-r");
+        regEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c === b); });
+        render();
+      });
+
+      // Crowd chips
+      var crowds = ["全部", "巨物深海控", "低龄亲子", "情侣出片", "全天候室内", "自然生态迷"];
+      var crowdEl = document.getElementById("crowds");
+      crowdEl.innerHTML = crowds.map(function (c) {
+        return '<button type="button" class="chip" data-c="' + esc(c) + '" aria-pressed="' + (c === "全部") + '">' + esc(c) + "</button>";
+      }).join("");
+      crowdEl.addEventListener("click", function (e) {
+        var b = e.target.closest(".chip"); if (!b) return;
+        state.crowd = b.getAttribute("data-c");
+        crowdEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c === b); });
+        render();
+      });
+
+      // Sort buttons
+      document.querySelectorAll("[data-sort]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          state.sort = b.getAttribute("data-sort");
+          document.querySelectorAll("[data-sort]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+          render();
+        });
+      });
+
+      var qEl = document.getElementById("q");
+      qEl.addEventListener("input", function () { state.q = qEl.value.trim().toLowerCase(); render(); });
+
+      function zoneOf(t) { return ZONES.filter(function (z) { return z.tier === t; })[0] || ZONES[3]; }
+      function fmtNum(n) { return n >= 10000 ? (n / 10000).toFixed(n % 10000 === 0 ? 0 : 1) + "万" : n.toLocaleString("en-US"); }
+
+      function card(a) {
+        var z = zoneOf(a.tier);
+        var pct = a.mainTankML ? Math.max(10, Math.sqrt(a.mainTankML / MAX_MAIN) * 100) : 12;
+        var map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((a._en || a._zh) + " " + a.city);
+        var img = IMAGES[a.id];
+        var mediaHtml = '<div class="c-media">' +
+          (img ? '<img src="' + esc(img.src) + '" alt="' + esc(a._zh) + '" loading="lazy" decoding="async" />' : '') +
+          '<div class="c-rank-badge">' +
+            '<span class="rank-num">#' + String(a.rank).padStart(2, "0") + '</span>' +
+            '<span class="tier-pill">' + esc(TIER_DESC[a.tier] || a.tier) + '</span>' +
+          '</div>' +
+          '<div class="c-credit">' +
+            (img ? '<span>📷 ' + esc(img.artist) + '</span><a href="' + esc(img.page) + '" target="_blank" rel="noopener">' + esc(img.license) + ' ↗</a>' : '<span>🌊 深海实景图鉴</span>') +
+          '</div>' +
+        '</div>';
+
+        return '<article class="card' + (a.tier === "T0" ? " is-t0" : "") + '" style="--zone-c:' + z.c + '" data-dest-id="' + esc(a.id) + '" data-lat="' + a.lat + '" data-lon="' + a.lon + '" data-name="' + esc(a._zh) + '">' +
+          mediaHtml +
+          '<div class="c-body">' +
+            '<div class="c-head">' +
+              '<div><h3 class="c-name">' + esc(a._zh) + (a._en ? '<span class="c-en">' + esc(a._en) + "</span>" : "") + '</h3></div>' +
+              '<div class="c-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>' +
+                esc(a.country + " · " + a.city) + '<a href="' + map + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
+            '</div>' +
+            '<div class="metrics-grid">' +
+              '<div class="m-item"><span class="m-k">💧 最大单池水体</span><span class="m-v">' + a.mainTankML.toLocaleString("en-US") + '<small>万升</small></span></div>' +
+              '<div class="m-item"><span class="m-k">🌊 全馆总水体</span><span class="m-v">' + a.totalVolumeML.toLocaleString("en-US") + '<small>万升</small></span></div>' +
+              '<div class="m-item"><span class="m-k">🧬 展示物种数</span><span class="m-v">~' + a.speciesCount.toLocaleString("en-US") + '<small>种</small></span></div>' +
+              '<div class="m-item"><span class="m-k">🐟 生物总数量</span><span class="m-v">~' + fmtNum(a.animalCount) + '<small>尾/只</small></span></div>' +
+            '</div>' +
+            '<div class="meta-strip">' +
+              '<span class="meta-badge win">🪟 ' + esc(a.windowSize) + '</span>' +
+              '<span class="meta-badge">🎫 门票约 $' + a.ticketUsd + '</span>' +
+              '<span class="meta-badge">⏱️ 建议 ' + esc(a.durationHours) + '</span>' +
+              (a.bestFor || []).map(function (t) { return '<span class="crowd-tag">' + esc(t) + '</span>'; }).join("") +
+            '</div>' +
+            '<ul class="feats">' + a._feats.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul>" +
+            (a.tip ? '<div class="aq-tip"><b>💡 实用攻略：</b>' + esc(a.tip) + '</div>' : '') +
+            '<div class="shared-slot"></div>' +
+          '</div>' +
+          '<div class="tank" title="最大单池 ' + a.mainTankML + ' 万升 / 全馆总计 ' + a.totalVolumeML + ' 万升">' +
+            '<div class="tank-box"><div class="tank-water" data-h="' + pct.toFixed(1) + '"></div></div>' +
+            '<b>' + a.mainTankML.toLocaleString("en-US") + '</b><span>万升单池</span>' +
+            '<small>总 ' + a.totalVolumeML.toLocaleString("en-US") + ' 万升</small>' +
+          '</div>' +
+        '</article>';
+      }
+
+      function matches(a) {
+        if (state.region !== "全部" && a._region !== state.region) return false;
+        if (state.crowd !== "全部" && (a.bestFor || []).indexOf(state.crowd) === -1) return false;
+        if (!state.q) return true;
+        return (a.name + a.country + a.city + a.highlight + a.windowSize + (a.tip || "") + (a.bestFor || []).join(" ")).toLowerCase().indexOf(state.q) > -1;
+      }
+
+      var SORT_META = {
+        mainTank: { code: "TANK", title: "按最大单池水体从大到小", en: "By Main Tank Volume", note: "最大单池直接决定站在主巨幕面前的深海空间压迫感。" },
+        totalVol: { code: "VOL", title: "按全馆总水体从大到小", en: "By Total Aquarium Volume", note: "全馆所有展池合计总水体，反映整座海洋馆的综合体量。" },
+        species: { code: "SPP", title: "按展示物种数从多到少", en: "By Species Diversity", note: "涵盖鱼类、珊瑚、无脊椎动物、极地企鹅与海兽的物种丰富度。" },
+        animals: { code: "BIO", title: "按生物总数量从多到少", en: "By Total Specimens", note: "包含群游沙丁鱼风暴、黄金鲹与珊瑚礁鱼群的生物总数。" },
+        price: { code: "USD", title: "按成人门票从低到高", en: "By Ticket Price (Low to High)", note: "成人单日标准门票美元折算参考价，帮助你找到高性价比神馆。" }
+      };
+
+      var zonesEl = document.getElementById("zones");
+      function render() {
+        var list = DATA.filter(matches);
+        document.getElementById("count").innerHTML = "显示 <b>" + list.length + "</b> / " + DATA.length + " 座";
+        if (!list.length) { zonesEl.innerHTML = '<p class="empty">这一片海域没有找到匹配的场馆，试试切换筛选条件。</p>'; return; }
+        var html = "";
+        if (state.sort !== "rank") {
+          var sm = SORT_META[state.sort];
+          list.sort(function (a, b) {
+            if (state.sort === "mainTank") return (b.mainTankML || 0) - (a.mainTankML || 0) || a.rank - b.rank;
+            if (state.sort === "totalVol") return (b.totalVolumeML || 0) - (a.totalVolumeML || 0) || a.rank - b.rank;
+            if (state.sort === "species") return (b.speciesCount || 0) - (a.speciesCount || 0) || a.rank - b.rank;
+            if (state.sort === "animals") return (b.animalCount || 0) - (a.animalCount || 0) || a.rank - b.rank;
+            if (state.sort === "price") return (a.ticketUsd || 999) - (b.ticketUsd || 999) || a.rank - b.rank;
+            return a.rank - b.rank;
+          });
+          html = '<section class="zone"><header class="zone-head" style="--zone-c:#5ef2e6"><div class="zone-depth">' + sm.code + '</div>' +
+            '<h3 class="zone-name">' + sm.title + '<small>' + sm.en + '</small></h3><p class="zone-note">' + sm.note + '</p></header>' +
+            '<div class="list">' + list.map(card).join("") + "</div></section>";
+        } else {
+          ZONES.forEach(function (z) {
+            var items = list.filter(function (a) { return a.tier === z.tier; });
+            if (!items.length) return;
+            html += '<section class="zone"><header class="zone-head" style="--zone-c:' + z.c + '">' +
+              '<div class="zone-depth">' + z.depth + '<span style="font-size:.35em;-webkit-text-stroke:0;color:' + z.c + '"> m</span></div>' +
+              '<h3 class="zone-name">' + z.name + '<small>' + z.en + '</small></h3>' +
+              '<p class="zone-note">' + z.note + '</p></header>' +
+              '<div class="list">' + items.map(card).join("") + '</div></section>';
+          });
+        }
+        zonesEl.innerHTML = html;
+        observe();
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      // Reveal on scroll
+      var io = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add("in");
+          var w = en.target.querySelector(".tank-water");
+          if (w) w.style.height = w.getAttribute("data-h") + "%";
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: "0px 0px -6% 0px" }) : null;
+      function observe() {
+        zonesEl.querySelectorAll(".card").forEach(function (c) {
+          if (io) io.observe(c);
+          else { c.classList.add("in"); var w = c.querySelector(".tank-water"); if (w) w.style.height = w.getAttribute("data-h") + "%"; }
+        });
+      }
+
+      // Method rings
+      var C = 2 * Math.PI * 46;
+      document.querySelectorAll(".ring").forEach(function (r) {
+        var fg = r.querySelector(".fg");
+        fg.style.strokeDasharray = C; fg.style.strokeDashoffset = C;
+        var go = function () { fg.style.strokeDashoffset = C * (1 - r.getAttribute("data-pct") / 100); };
+        if (io) {
+          new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { go(); o.disconnect(); } }, { threshold: 0.4 }).observe(r);
+        } else go();
+      });
+
+      // Depth from scroll
+      var root = document.documentElement, readEl = document.getElementById("depth-read"), zoneEl = document.getElementById("depth-zone");
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return; ticking = true;
+        requestAnimationFrame(function () {
+          var max = root.scrollHeight - innerHeight;
+          var d = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+          root.style.setProperty("--d", d.toFixed(4));
+          var meters = Math.round(Math.pow(d, 1.6) * 6000);
+          readEl.textContent = "−" + meters.toLocaleString("en-US") + " m";
+          var label = DEPTHS[0][1];
+          DEPTHS.forEach(function (p) { if (d >= p[0]) label = p[1]; });
+          zoneEl.textContent = label;
+          ticking = false;
+        });
+      }
+      addEventListener("scroll", onScroll, { passive: true });
+      addEventListener("resize", onScroll);
+
+      // Marine snow
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        var snow = document.getElementById("snow"), frag = document.createDocumentFragment();
+        for (var i = 0; i < 46; i++) {
+          var s = document.createElement("i"), size = Math.random() * 3 + 1;
+          s.style.cssText = "left:" + (Math.random() * 100) + "%;width:" + size + "px;height:" + size + "px;animation-duration:" +
+            (16 + Math.random() * 22) + "s;animation-delay:-" + (Math.random() * 30) + "s;--dx:" + (Math.random() * 80 - 40) + "px;opacity:.6";
+          frag.appendChild(s);
+        }
+        snow.appendChild(frag);
+      }
+
+      render();
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Alpine & Powder Index · 全球滑雪度假村 Top 100</title>
+  <meta name="description" content="以粉雪质量与降雪量、垂直落差与雪道规模、缆车运力与滑进滑出、全水平道型配比、温泉餐饮与Après-ski、雪票住宿性价比六大维度，严选全球 100 座顶级高山滑雪度假村。" />
+  <meta name="theme-color" content="#f3f7fb" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d2238'/%3E%3Cpath d='M3 26L13 8l5 9 4-6 7 15H3z' fill='%2338bdf8' opacity='0.85'/%3E%3Cpath d='M13 8l3.2 5.8-2.7 1.7-2-2.2L8.8 16 13 8z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" />
+  <style>
+    /* ==========================================================================
+       The Alpine & Powder Index — Glacier White · Ice Blue · Slate Peak
+       ========================================================================== */
+    :root {
+      --glacier: #f3f7fb;
+      --snow: #ffffff;
+      --frost: #e6eff8;
+      --ice-edge: #d0e1f2;
+      --ice-strong: #b4cde6;
+      --slate: #0c1f33;
+      --slate-2: #16324f;
+      --slate-3: #3b5875;
+      --muted: #5c7690;
+      --ice-blue: #0284c7;
+      --ice-cyan: #0ea5e9;
+      --ice-glow: #38bdf8;
+      --ice-soft: #e0f2fe;
+      --powder-violet: #4f46e5;
+      --alpine-gold: #d97706;
+      --safety-orange: #ea580c;
+      --emerald: #059669;
+
+      --serif: "Noto Serif SC", "Songti SC", serif;
+      --display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+      --sans: "DM Sans", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+      --wrap: 1280px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--glacier);
+      background-image:
+        radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.14), transparent 42%),
+        radial-gradient(circle at 85% 8%, rgba(14, 165, 233, 0.12), transparent 38%),
+        linear-gradient(180deg, #eef5fc 0%, #f5f9fd 42%, #edf4fb 100%);
+      color: var(--slate);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      font-variant-numeric: tabular-nums;
+    }
+    h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    [hidden] { display: none !important; }
+    ::selection { background: #bae6fd; color: var(--slate); }
+
+    .wrap { width: min(var(--wrap), 100% - 40px); margin-inline: auto; }
+
+    /* Top Navigation ------------------------------------------------------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 60;
+      background: rgba(243, 247, 251, 0.88);
+      -webkit-backdrop-filter: saturate(1.6) blur(16px);
+      backdrop-filter: saturate(1.6) blur(16px);
+      border-bottom: 1px solid var(--ice-edge);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; min-height: 66px; padding: 8px 0;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 11px;
+      color: var(--slate); flex: none;
+    }
+    .brand-mark {
+      width: 32px; height: 32px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--slate) 0%, var(--slate-2) 60%, var(--ice-blue) 100%);
+      display: grid; place-items: center; color: #fff;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.22);
+    }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-text b {
+      display: block; font-family: var(--display); font-size: 19px;
+      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.05;
+    }
+    .brand-text span {
+      display: block; font-size: 11px; color: var(--muted); letter-spacing: 0.06em;
+    }
+
+    nav.switch {
+      display: flex; align-items: center; gap: 4px; padding: 4px;
+      border: 1px solid var(--ice-edge); border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      max-width: 100%;
+    }
+    nav.switch a {
+      padding: 6px 13px; border-radius: 999px; font-size: 12.5px;
+      font-weight: 500; color: var(--slate-3);
+      transition: all 0.2s var(--ease); white-space: nowrap; flex: none;
+    }
+    nav.switch a:hover { color: var(--ice-blue); background: var(--glacier); }
+    nav.switch a[aria-current="page"] {
+      background: linear-gradient(135deg, var(--slate) 0%, var(--ice-blue) 100%);
+      color: #fff; font-weight: 600;
+      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.28);
+    }
+
+    /* Hero ----------------------------------------------------------------- */
+    .hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(165deg, #071525 0%, #0d253f 42%, #133b63 76%, #1d578a 100%);
+      color: #fff; padding: clamp(52px, 7vw, 88px) 0 0;
+      border-bottom: 1px solid var(--ice-edge);
+      isolation: isolate;
+    }
+    .hero-bg-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      z-index: -1; pointer-events: none; opacity: 0.85;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px;
+      align-items: end; padding-bottom: 48px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 13px; border-radius: 999px;
+      background: rgba(56, 189, 248, 0.16);
+      border: 1px solid rgba(56, 189, 248, 0.38);
+      font-family: var(--mono); font-size: 11.5px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #7dd3fc;
+    }
+    .hero h1 {
+      margin-top: 18px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.8vw, 62px);
+      font-weight: 700; line-height: 1.18; letter-spacing: 0.01em;
+    }
+    .hero h1 em {
+      font-family: var(--display); font-style: italic; font-weight: 600;
+      color: #7dd3fc; padding-right: 4px;
+    }
+    .hero-lede {
+      margin-top: 18px; max-width: 42em;
+      font-size: 15.5px; line-height: 1.85; color: rgba(226, 241, 255, 0.86);
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 12.5px; color: #e0f2fe;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge b { font-family: var(--mono); color: #38bdf8; }
+
+    .hero-telemetry {
+      background: rgba(8, 23, 40, 0.68);
+      border: 1px solid rgba(125, 211, 252, 0.28);
+      border-radius: 18px; padding: 22px 24px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    }
+    .telemetry-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 12px; margin-bottom: 14px;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.2);
+      font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+      color: #7dd3fc; text-transform: uppercase;
+    }
+    .telemetry-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .t-stat {
+      padding: 11px 13px; border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+    .t-stat b {
+      display: block; font-family: var(--mono);
+      font-size: 24px; font-weight: 700; color: #fff; line-height: 1.15;
+    }
+    .t-stat b small { font-size: 12px; font-weight: 500; color: #7dd3fc; margin-left: 3px; }
+    .t-stat span { display: block; margin-top: 4px; font-size: 12px; color: rgba(224, 242, 254, 0.72); }
+
+    /* Interactive Weight & Filter Console ---------------------------------- */
+    .console-section { padding: 36px 0 20px; }
+    .console-card {
+      background: var(--snow);
+      border: 1px solid var(--ice-edge);
+      border-radius: 20px;
+      padding: 24px 28px;
+      box-shadow: 0 12px 36px -12px rgba(12, 31, 51, 0.08);
+    }
+    .console-top {
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      align-items: center; gap: 14px;
+      padding-bottom: 18px; border-bottom: 1px solid var(--frost);
+    }
+    .console-title {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .console-title h2 {
+      font-size: 18px; font-weight: 700; color: var(--slate);
+    }
+    .console-title span {
+      font-family: var(--mono); font-size: 11.5px; color: var(--ice-blue);
+      background: var(--ice-soft); padding: 3px 9px; border-radius: 999px; font-weight: 600;
+    }
+    .preset-group {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+    }
+    .preset-label { font-size: 12.5px; color: var(--muted); margin-right: 4px; font-weight: 500; }
+    .preset-btn {
+      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+      border: 1px solid var(--ice-edge); background: var(--glacier); color: var(--slate-2);
+      transition: all 0.18s var(--ease);
+    }
+    .preset-btn:hover { border-color: var(--ice-cyan); color: var(--ice-blue); }
+    .preset-btn.is-active {
+      background: var(--slate); color: #fff; border-color: var(--slate);
+      box-shadow: 0 3px 10px rgba(12, 31, 51, 0.18);
+    }
+
+    .sliders-grid {
+      display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--frost);
+    }
+    .slider-box {
+      background: var(--glacier);
+      border: 1px solid var(--ice-edge);
+      border-radius: 13px; padding: 11px 13px;
+      transition: border-color 0.2s;
+    }
+    .slider-box:hover { border-color: var(--ice-cyan); }
+    .slider-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 6px; margin-bottom: 8px;
+    }
+    .slider-head label {
+      font-size: 12.5px; font-weight: 600; color: var(--slate-2);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .slider-head output {
+      font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ice-blue);
+    }
+    .slider-box input[type="range"] {
+      width: 100%; accent-color: var(--ice-blue); cursor: pointer; height: 5px;
+    }
+    .slider-sub {
+      display: block; margin-top: 4px; font-size: 11px; color: var(--muted);
+    }
+
+    /* Filter & Sort Rows --------------------------------------------------- */
+    .filter-rows {
+      display: flex; flex-direction: column; gap: 13px; padding-top: 18px;
+    }
+    .filter-row {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    }
+    .filter-label {
+      font-size: 12px; font-weight: 700; color: var(--muted);
+      letter-spacing: 0.05em; min-width: 66px; text-transform: uppercase;
+    }
+    .pill-group { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
+      border: 1px solid var(--ice-edge); background: #fff; color: var(--slate-3);
+      transition: all 0.16s var(--ease);
+    }
+    .pill:hover { border-color: var(--ice-cyan); color: var(--ice-blue); }
+    .pill[aria-pressed="true"] {
+      background: var(--ice-blue); border-color: var(--ice-blue); color: #fff; font-weight: 600;
+      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
+    }
+    .pill.tag-chip[aria-pressed="true"] {
+      background: var(--slate); border-color: var(--slate); color: #38bdf8;
+    }
+
+    .toolbar-bottom {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 14px; margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--ice-edge);
+    }
+    .search-box {
+      position: relative; flex: 1 1 280px; max-width: 440px;
+    }
+    .search-box svg {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 2;
+    }
+    .search-box input {
+      width: 100%; height: 40px; padding: 0 34px 0 40px;
+      border: 1px solid var(--ice-strong); border-radius: 999px;
+      background: var(--glacier); font-size: 13.5px; outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .search-box input:focus {
+      background: #fff; border-color: var(--ice-blue);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.14);
+    }
+
+    .sort-group {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    }
+    .sort-btn {
+      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
+      border: 1px solid var(--ice-edge); background: var(--glacier); color: var(--slate-3);
+      transition: all 0.16s;
+    }
+    .sort-btn:hover { color: var(--ice-blue); border-color: var(--ice-cyan); }
+    .sort-btn[aria-pressed="true"] {
+      background: var(--slate-2); color: #fff; border-color: var(--slate-2); font-weight: 600;
+    }
+
+    .result-meta {
+      font-family: var(--mono); font-size: 12.5px; color: var(--muted);
+    }
+    .result-meta b { color: var(--ice-blue); font-weight: 700; }
+
+    /* Resort Cards Grid ---------------------------------------------------- */
+    .cards-section { padding: 16px 0 80px; }
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px;
+    }
+    .ski-card {
+      display: flex; flex-direction: column;
+      background: var(--snow);
+      border: 1px solid var(--ice-edge);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.25s;
+      box-shadow: 0 6px 24px -10px rgba(12, 31, 51, 0.08);
+    }
+    .ski-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--ice-cyan);
+      box-shadow: 0 20px 42px -16px rgba(2, 132, 199, 0.2);
+    }
+    .ski-card.tier-T0 {
+      border-color: rgba(2, 132, 199, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.16);
+    }
+
+    /* Card Visual Cover */
+    .card-cover {
+      position: relative; height: 196px; overflow: hidden;
+      background: linear-gradient(135deg, #0b2239 0%, #164e78 55%, #0284c7 100%);
+      color: #fff;
+    }
+    .card-cover img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+    .ski-card:hover .card-cover img { transform: scale(1.04); }
+    .card-cover-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+    }
+    .card-cover-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(7, 19, 34, 0.25) 0%, rgba(7, 19, 34, 0.08) 40%, rgba(7, 19, 34, 0.86) 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 14px 18px;
+    }
+    .cover-top {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+    }
+    .rank-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 12px; border-radius: 999px;
+      background: rgba(8, 23, 40, 0.78);
+      border: 1px solid rgba(125, 211, 252, 0.4);
+      backdrop-filter: blur(8px);
+      font-family: var(--mono); font-size: 13px; font-weight: 700; color: #fff;
+    }
+    .rank-badge .tier-pill {
+      padding: 1px 7px; border-radius: 999px; font-size: 11px;
+      background: var(--ice-cyan); color: #fff;
+    }
+    .tier-T0 .rank-badge .tier-pill { background: linear-gradient(135deg, #38bdf8, #818cf8); color: #061322; font-weight: 800; }
+
+    .score-pill {
+      display: flex; flex-direction: column; align-items: flex-end;
+      padding: 5px 12px; border-radius: 12px;
+      background: rgba(8, 23, 40, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.42);
+      backdrop-filter: blur(8px);
+    }
+    .score-pill b {
+      font-family: var(--mono); font-size: 20px; font-weight: 700;
+      color: #38bdf8; line-height: 1;
+    }
+    .score-pill span {
+      font-size: 10px; color: rgba(224, 242, 254, 0.8); letter-spacing: 0.06em; margin-top: 2px;
+    }
+
+    .cover-bottom h3 {
+      font-size: 18.5px; font-weight: 700; line-height: 1.3;
+      color: #fff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+    .cover-loc {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+      margin-top: 5px; font-size: 12.5px; color: rgba(224, 242, 254, 0.92);
+    }
+    .cover-loc .season-chip {
+      padding: 1px 8px; border-radius: 999px;
+      background: rgba(56, 189, 248, 0.24); border: 1px solid rgba(125, 211, 252, 0.4);
+      font-family: var(--mono); font-size: 11px; color: #bae6fd;
+    }
+
+    /* Card Body & Telemetry Strip */
+    .card-body {
+      padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; flex: 1;
+    }
+    .metrics-strip {
+      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 7px; background: var(--glacier); padding: 9px;
+      border-radius: 13px; border: 1px solid var(--ice-edge);
+    }
+    .m-cell {
+      text-align: center; padding: 5px 3px; border-radius: 8px;
+      background: #fff; border: 1px solid rgba(208, 225, 242, 0.65);
+    }
+    .m-cell b {
+      display: block; font-family: var(--mono); font-size: 13.5px;
+      font-weight: 700; color: var(--slate); line-height: 1.2;
+    }
+    .m-cell b.is-snow { color: var(--ice-blue); }
+    .m-cell b.is-drop { color: var(--powder-violet); }
+    .m-cell span {
+      display: block; font-size: 10.5px; color: var(--muted); margin-top: 2px;
+    }
+
+    /* 6-Dim Score Mini Bar */
+    .dim-bars {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
+    }
+    .dim-item {
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .dim-item-top {
+      display: flex; justify-content: space-between; font-size: 10.5px; color: var(--muted);
+    }
+    .dim-item-top b { font-family: var(--mono); color: var(--slate-2); }
+    .dim-track {
+      height: 5px; border-radius: 999px; background: var(--frost); overflow: hidden;
+    }
+    .dim-fill {
+      height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, var(--ice-blue), var(--ice-glow));
+    }
+
+    /* Crowd Tags */
+    .crowd-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .crowd-tag {
+      padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
+      background: var(--ice-soft); color: var(--ice-blue);
+      border: 1px solid rgba(2, 132, 199, 0.22);
+    }
+    .crowd-tag[data-tag="粉雪朝圣"] { background: #e0e7ff; color: #3730a3; border-color: #c7d2fe; }
+    .crowd-tag[data-tag="千米落差大神"] { background: #fae8ff; color: #86198f; border-color: #f5d0fe; }
+    .crowd-tag[data-tag="温泉美食"] { background: #ffedd5; color: #c2410c; border-color: #fed7aa; }
+    .crowd-tag[data-tag="反季滑雪"] { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+
+    /* Highlights List */
+    .highlight-list {
+      display: flex; flex-direction: column; gap: 5px;
+      font-size: 13.2px; color: var(--slate-2); line-height: 1.58;
+    }
+    .highlight-list li {
+      position: relative; padding-left: 15px;
+    }
+    .highlight-list li::before {
+      content: "❄"; position: absolute; left: 0; top: 1px;
+      font-size: 10px; color: var(--ice-cyan);
+    }
+
+    /* Practical Tip Box */
+    .tip-box {
+      margin-top: auto;
+      padding: 10px 13px; border-radius: 11px;
+      background: linear-gradient(90deg, rgba(224, 242, 254, 0.65), rgba(243, 247, 251, 0.9));
+      border-left: 3px solid var(--ice-blue);
+      font-size: 12.3px; color: var(--slate-3); line-height: 1.55;
+    }
+    .tip-box b { color: var(--slate); font-weight: 700; }
+
+    /* Methodology Section -------------------------------------------------- */
+    .method-section {
+      padding: 64px 0; background: var(--snow); border-top: 1px solid var(--ice-edge);
+    }
+    .method-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px;
+    }
+    .method-card {
+      padding: 22px; border-radius: 16px; background: var(--glacier);
+      border: 1px solid var(--ice-edge);
+    }
+    .method-card .pct {
+      font-family: var(--mono); font-size: 24px; font-weight: 700; color: var(--ice-blue);
+    }
+    .method-card h3 { margin-top: 8px; font-size: 16px; font-weight: 700; color: var(--slate); }
+    .method-card p { margin-top: 8px; font-size: 13.2px; color: var(--slate-3); line-height: 1.7; }
+
+    /* Footer --------------------------------------------------------------- */
+    .site-footer {
+      padding: 48px 0; background: var(--slate); color: rgba(224, 242, 254, 0.76);
+      font-size: 13px;
+    }
+    .footer-inner {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .footer-links a {
+      padding: 6px 13px; border-radius: 999px;
+      border: 1px solid rgba(125, 211, 252, 0.25); color: #e0f2fe;
+      font-size: 12.5px; transition: background 0.2s;
+    }
+    .footer-links a:hover { background: rgba(56, 189, 248, 0.2); }
+
+    .empty-state {
+      grid-column: 1 / -1; text-align: center; padding: 64px 20px;
+      background: var(--snow); border: 1px dashed var(--ice-strong); border-radius: 20px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .sliders-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .cards-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 28px); }
+      .sliders-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-strip { grid-template-columns: repeat(3, 1fr); }
+      .dim-bars { grid-template-columns: repeat(3, 1fr); }
+      .method-grid { grid-template-columns: 1fr; }
+      .console-card { padding: 18px 16px; }
+    }
+  </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="横跨阿尔卑斯、北美落基山、日本粉雪与南半球反季的全球百大滑雪场排名，收录垂直落差、雪道总长、年降雪量、最高海拔与雪票比价。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Alpine & Powder Index · 全球滑雪度假村 Top 100 硬核榜" />
+  <meta property="og:description" content="横跨阿尔卑斯、北美落基山、日本粉雪与南半球反季的全球百大滑雪场排名，收录垂直落差、雪道总长、年降雪量、最高海拔与雪票比价。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/ski.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Alpine & Powder Index · 全球滑雪度假村 Top 100 硬核榜" />
+  <meta name="twitter:description" content="横跨阿尔卑斯、北美落基山、日本粉雪与南半球反季的全球百大滑雪场排名，收录垂直落差、雪道总长、年降雪量、最高海拔与雪票比价。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Alpine & Powder Index · 全球滑雪度假村 Top 100 硬核榜",
+  "description": "横跨阿尔卑斯、北美落基山、日本粉雪与南半球反季的全球百大滑雪场排名，收录垂直落差、雪道总长、年降雪量、最高海拔与雪票比价。",
+  "numberOfItems": 25,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "三峡谷 · 高雪维尔/美贝尔/葱仁谷 (Les 3 Vallées)",
+        "description": "法国 萨瓦省塔朗泰斯谷 · 全球最大全缆车无缝互联600km雪区 + 85%雪道位于海拔1800米以上 + 欧洲最高度假村葱仁谷(2300m)与奢华之巅高雪维尔1850 + 顶级压雪机队与零步行滑进滑出设计",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.331,
+          "longitude": 6.582
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "惠斯勒黑梳山 (Whistler Blackcomb)",
+        "description": "加拿大 不列颠哥伦比亚省惠斯勒 · 北美最大3307公顷可滑面积 + Peak 2 Peak横跨双峰4.4公里世界级悬空缆车 + 1609米垂直落差与16座高山碗状地形 + 无车步行度假村标杆",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.116,
+          "longitude": -122.957
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "采尔马特–切尔维尼亚 (Zermatt - Matterhorn Ski Paradise)",
+        "description": "瑞士 瓦莱州采尔马特 · 直面马特洪峰金字塔绝景 + 欧洲最高缆车站3883米与2279米世界级垂直落差 + 瑞意跨国联滑360km（早上瑞士高山巡航、中午滑去意大利吃松露意面） + 无机动车环保小镇",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.02,
+          "longitude": 7.749
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "二世古联合雪场 (Niseko United)",
+        "description": "日本 北海道虻田郡俱知安町 · 年均15米+西伯利亚寒流北海道香槟粉雪(Japow圣地) + 11个严格管理的野雪门(Backcountry Gates)树林粉雪 + 正对羊蹄山火山锥与全球最佳夜滑粉雪 + 火山露天温泉与海鲜居酒屋",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.862,
+          "longitude": 140.687
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "圣安东 · 阿尔贝格滑雪区 (St. Anton / Ski Arlberg)",
+        "description": "奥地利 蒂罗尔州圣安东 · 现代高山滑雪发源地与奥地利最大全缆车互联雪区(300km雪道+200km标记道外) + 串联St. Anton、Lech、Zürs、Stuben四大传奇小镇 + MooserWirt与Krazy Kanguruh世界级Après-ski狂欢",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.129,
+          "longitude": 10.268
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "蒂涅–瓦勒迪泽尔 (Tignes - Val d'Isère)",
+        "description": "法国 萨瓦省上塔朗泰斯 · 双冰川加持(Grande Motte 3456m & Pisaillas)雪季长达半年 + 冬奥男子速降传奇赛道La Face de Bellevarde + 欧洲最顶尖缆车可达道外野雪(Off-piste)天堂 + La Folie Douce高海拔电音派对鼻祖",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.448,
+          "longitude": 6.98
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "多洛米蒂超级滑雪区 · 塞尔瓦/科尔蒂纳 (Dolomiti Superski)",
+        "description": "意大利 南蒂罗尔/威尼托多洛米蒂山脉 · 世界自然遗产白云岩粉色日落峰林奇观 + 42公里Sellaronda四大山口顺/逆时针大环线 + 12座山谷1200公里雪道与地毯级意式压雪工艺 + 山上米其林级Rifugio山屋美食",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.554,
+          "longitude": 11.758
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "杰克逊霍尔 (Jackson Hole Mountain Resort)",
+        "description": "美国 怀俄明州提顿村 · 北美硬核陡坡朝圣地与标志性空中红缆车(Big Red Aerial Tram)1262m直达山顶 + 世界最著名陡槽Corbet's Couloir + 年均11.6米怀俄明冷干粉雪 + 毗邻大提顿与黄石国家公园",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.587,
+          "longitude": -110.828
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "韦尔比耶 · 四山谷 (Verbier / 4 Vallées)",
+        "description": "瑞士 瓦莱州韦尔比耶 · 世界野雪巡回赛(Freeride World Tour)终极决赛地Bec des Rosses + 瑞士最大全联通410km雪区 + Mont Fort(3330m)俯瞰勃朗峰与马特洪峰双神山 + 标志性标记但不压雪Itinerary野雪道",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.096,
+          "longitude": 7.228
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "阿尔塔–雪鸟联滑区 (Alta & Snowbird)",
+        "description": "美国 犹他州盐湖城小棉白杨峡谷 · 年均13.9米“地球上最伟大的雪”(大盐湖效应干粉雪含水量仅8%) + Alta纯双板殿堂与Snowbird百人Tram陡峭高山碗无缝互通 + 距离盐湖城国际机场仅45分钟车程",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.588,
+          "longitude": -111.638
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "范尔滑雪度假村 (Vail Ski Resort)",
+        "description": "美国 科罗拉多州鹰县范尔 · 传奇Seven Back Bowls(七大后山碗状地形，绵延11公里宽无树粉雪碗) + 蓝天盆地(Blue Sky Basin)林间冒险 + 科罗拉多州最大单体雪场2140公顷 + 巴伐利亚风情步行村",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.64,
+          "longitude": -106.374
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "霞慕尼–勃朗峰 (Chamonix-Mont-Blanc)",
+        "description": "法国 上萨瓦省霞慕尼 · 第一届冬奥会举办地与全球极限登山滑雪圣城 + 南针峰(3842m)长达20公里、落差2807米的白谷(Vallée Blanche)冰川野雪 + Grands Montets重度粉雪陡坡 + 距离日内瓦机场仅1小时",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.923,
+          "longitude": 6.869
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "白马山谷 · 八方尾根/五龙/栂池 (Hakuba Valley)",
+        "description": "日本 长野县北安昙郡白马村 · 1998长野冬奥会高山速降主场八方尾根(1071m落差) + 一张全山票畅滑北阿尔卑斯山麓10座雪场 + Cortina超陡树林深粉与栂池高原超宽新手道 + 强碱性美人汤温泉",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.702,
+          "longitude": 137.832
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "阿斯本雪堆山四山联滑 (Aspen Snowmass)",
+        "description": "美国 科罗拉多州阿斯本 · Snowmass北美最大1343米垂直落差 + Aspen Highlands传奇Highland Bowl徒步山脊粉雪 + X Games极限运动主场Buttermilk + 北美最具文化艺术与名人气息的维多利亚银矿小镇",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.208,
+          "longitude": -106.949
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "帕拉迪斯基 · 莱萨尔克–拉普拉涅 (Paradiski: Les Arcs - La Plagne)",
+        "description": "法国 萨瓦省布尔圣莫里斯 · 双层200人Vanoise Express跨谷空中巨无霸缆车串联425km雪道 + Aiguille Rouge山顶一口气狂降2026米直达Villaroger(全欧最长落差雪道之一) + 现代主义无车建筑先锋Arc 1950",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.572,
+          "longitude": 6.828
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "雷夫尔斯托克 (Revelstoke Mountain Resort)",
+        "description": "加拿大 不列颠哥伦比亚省雷夫尔斯托克 · 北美第一垂直落差1713米(5620英尺) + 全球唯二将缆车滑雪、履带雪猫滑雪(Cat-skiing)与直升机滑雪(Heli-skiing)合为一体的粉雪圣地 + 15.2公里超长雪道The Last Spike",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.958,
+          "longitude": -118.163
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "太阳门 · 阿沃里亚兹/莫尔济讷 (Portes du Soleil - Avoriaz)",
+        "description": "法国 上萨瓦省莫尔济讷/瑞士尚佩里 · 法瑞跨国12座度假村600km超大联滑网 + 全无车雪橇马车童话村Avoriaz 1800(100%纯正Ski-in/Ski-out) + 世界闻名雪包陡墙“瑞士墙”(The Swiss Wall / Pas de Chavanette)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.191,
+          "longitude": 6.774
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "圣莫里茨 · 恩嘎丁 (St. Moritz - Engadin)",
+        "description": "瑞士 格劳宾登州圣莫里茨 · 1864年冬季旅游诞生地与两届冬奥会东道主 + 年均322天阳光的“香槟气候” + Corviglia高速巡航与Corvatsch(3303m)冰川雪场 + 冰冻湖面赛马(White Turf)与百年宫殿酒店",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.498,
+          "longitude": 9.839
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "大天空度假村 (Big Sky Resort)",
+        "description": "美国 蒙大拿州加拉廷县 · 孤峰Lone Peak(3403m)全新75人高空Tram登顶 + 1326米垂直落差与5850英亩广袤雪域(人均占地面积全美最宽松) + 北美最先进加热气泡高速吊椅集群 + 毗邻冬季黄石公园",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.284,
+          "longitude": -111.401
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "班夫三大雪场 · 露易丝湖/阳光村 (SkiBig3: Lake Louise & Sunshine)",
+        "description": "加拿大 艾伯塔省班夫国家公园 · 班夫国家公园冰川群峰史诗级景观 + 露易丝湖后山碗状地形与Sunshine Village纯天然无造雪干粉雪 + 半年超长雪季(11月初滑到5月下旬) + 班夫镇天然硫磺温泉",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.443,
+          "longitude": -116.162
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "伊施格尔–萨姆瑙恩 (Ischgl - Silvretta Arena)",
+        "description": "奥地利 蒂罗尔州帕兹瑙恩谷 · 90%雪道位于海拔2000米以上保障极致雪况 + 奥瑞跨国“走私者环线”滑去瑞士免税村Samnaun购物 + 全球最壕现代化高速加热缆车网 + 传奇Top of the Mountain巨星雪山演唱会与欧洲第一Après-ski夜生活",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.012,
+          "longitude": 10.288
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "留寿都度假村 (Rusutsu Resort)",
+        "description": "日本 北海道虻田郡留寿都村 · 北海道单体规模最大雪场(横跨West、East、Mt. Isola三座山峰) + 全日本最梦幻的白桦林间粉雪(Tree Runs完全开放) + 羊蹄山遮挡西北狂风带来比二世古更少停运的防风贡多拉 + 酒店内旋转木马与Kotobuki山景温泉",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.748,
+          "longitude": 140.903
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "野泽温泉滑雪场 (Nozawa Onsen Snow Resort)",
+        "description": "日本 长野县下高井郡野泽温泉村 · 日本最具江户风情的千年温泉古村与13座免费公共外汤(Sotoyu) + 全新长坂10人高速贡多拉直达山顶Yamabiko粉雪林区 + 1085米落差与10公里超长林间绿道 + 每年1月15日道祖神火祭",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.921,
+          "longitude": 138.452
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "帕克城山地度假村 (Park City Mountain)",
+        "description": "美国 犹他州帕克城 · 美国最大单体滑雪场(7300英亩/2954公顷，吞并Canyons后由Quicksilver贡多拉连通) + 2002与2034两届冬奥会核心赛区 + 直接滑进历史银矿老街Main Street喝威士忌(High West Distillery全球唯一Ski-in酒厂)",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.651,
+          "longitude": -111.508
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "特柳赖德 (Telluride Ski Resort)",
+        "description": "美国 科罗拉多州圣米格尔县 · 北美最具阿尔卑斯既视感的圣胡安山脉箱型峡谷绝景 + 最高海拔4060米Palmyra Peak徒步陡槽与1349米巨幅落差 + 连接百年维多利亚古镇与半山Mountain Village的全美唯一免费公共交通贡多拉",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.936,
+          "longitude": -107.846
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END AUTO-SEO -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+            <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <b>Alpine &amp; Powder Index</b>
+          <span>Destination Atlas · 全球滑雪度假村 Top 100</span>
+        </div>
+      </a>
+      <nav class="switch" aria-label="专题榜单导航">
+        <a href="index.html">首页</a>
+        <a href="beaches.html">海滨度假</a>
+        <a href="aquariums.html">水族馆</a>
+        <a href="zoos.html">动物园</a>
+        <a href="museums.html">科技军工博物馆</a>
+        <a href="themeparks.html">主题乐园</a>
+        <a href="ski.html" aria-current="page">滑雪度假村</a>
+        <a href="shows.html">实景演艺</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <svg class="hero-bg-svg" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="peakGrad1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
+          <stop offset="100%" stop-color="#071525" stop-opacity="0.05"/>
+        </linearGradient>
+        <linearGradient id="peakGrad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="#0d253f" stop-opacity="0.0"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,420 L180,210 L340,340 L540,110 L760,310 L980,80 L1210,270 L1440,140 L1440,520 L0,520 Z" fill="url(#peakGrad1)"/>
+      <path d="M0,460 L240,260 L450,380 L710,150 L910,320 L1140,120 L1440,310 L1440,520 L0,520 Z" fill="url(#peakGrad2)"/>
+      <path d="M540,110 L615,178 L570,195 L540,155 L500,205 Z" fill="#ffffff" fill-opacity="0.18"/>
+      <path d="M980,80 L1065,156 L1010,175 L980,130 L930,185 Z" fill="#ffffff" fill-opacity="0.22"/>
+    </svg>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">ALPINE &amp; POWDER INDEX · 2026 EDITION</span>
+        <h1>全球滑雪度假村 <em>Top 100</em><br/>从千米冰川落差到齐腰深粉</h1>
+        <p class="hero-lede">
+          拒绝把近郊小雪坡与世界级高山度假村混为一谈。我们按<strong>粉雪质量与降雪量 (25%)</strong>、<strong>垂直落差与雪道规模 (25%)</strong>、<strong>缆车运力与滑进滑出 (15%)</strong>、<strong>全水平道型配比 (15%)</strong>、<strong>温泉餐饮与Après-ski (10%)</strong>及<strong>雪票住宿性价比 (10%)</strong>六大硬核指标，严选横跨阿尔卑斯、北美落基山、日本粉雪带与南半球安第斯的 100 座殿堂级雪山。
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge">🏔️ 最大互联雪道 <b>1,200 km</b> (多洛米蒂)</span>
+          <span class="hero-badge">📐 最大垂直落差 <b>2,807 m</b> (霞慕尼南针峰)</span>
+          <span class="hero-badge">❄️ 最高年均降雪 <b>16.0 m</b> (北海道喜乐乐/新井)</span>
+          <span class="hero-badge">🚡 最高缆车海拔 <b>3,962 m</b> (布雷肯里奇)</span>
+        </div>
+      </div>
+      <aside class="hero-telemetry" aria-label="全球百大雪场核心遥测数据">
+        <div class="telemetry-head">
+          <span>GLOBAL TELEMETRY · 100 RESORTS</span>
+          <span>4 REGIONS</span>
+        </div>
+        <div class="telemetry-grid">
+          <div class="t-stat">
+            <b>50<small>座</small></b>
+            <span>阿尔卑斯与欧洲 (法/瑞/奥/意/北欧)</span>
+          </div>
+          <div class="t-stat">
+            <b>28<small>座</small></b>
+            <span>北美落基山与西岸 (美/加 Epic &amp; Ikon)</span>
+          </div>
+          <div class="t-stat">
+            <b>16<small>座</small></b>
+            <span>日本粉雪与亚洲 (北海道/长野/阿勒泰)</span>
+          </div>
+          <div class="t-stat">
+            <b>6<small>座</small></b>
+            <span>南半球 6–10 月盛夏反季雪场</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Interactive Weight Sliders & Filters Console -->
+    <section class="console-section" aria-label="动态权重与多维筛选台">
+      <div class="console-card">
+        <div class="console-top">
+          <div class="console-title">
+            <h2>六维评分权重调音台</h2>
+            <span id="active-preset-tag">默认均衡权重</span>
+          </div>
+          <div class="preset-group" role="group" aria-label="权重预设">
+            <span class="preset-label">一键偏好预设：</span>
+            <button type="button" class="preset-btn is-active" data-preset="balanced">⚖️ 默认均衡</button>
+            <button type="button" class="preset-btn" data-preset="powder">❄️ 粉雪猎人 (Japow/野雪)</button>
+            <button type="button" class="preset-btn" data-preset="bigmountain">🏔️ 千米落差刷道狂魔</button>
+            <button type="button" class="preset-btn" data-preset="family">👨‍👩‍👧 亲子滑进滑出 &amp; 温泉</button>
+            <button type="button" class="preset-btn" data-preset="value">💰 极致性价比</button>
+          </div>
+        </div>
+
+        <div class="sliders-grid">
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-snow">❄️ 粉雪质量与降雪</label>
+              <output id="out-snow">25%</output>
+            </div>
+            <input type="range" id="w-snow" min="0" max="50" step="5" value="25" />
+            <span class="slider-sub">满分25 · 年降雪量/干粉含水量</span>
+          </div>
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-terrain">🏔️ 垂直落差与规模</label>
+              <output id="out-terrain">25%</output>
+            </div>
+            <input type="range" id="w-terrain" min="0" max="50" step="5" value="25" />
+            <span class="slider-sub">满分25 · 千米落差/雪道总长</span>
+          </div>
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-lifts">🚡 缆车与滑进滑出</label>
+              <output id="out-lifts">15%</output>
+            </div>
+            <input type="range" id="w-lifts" min="0" max="40" step="5" value="15" />
+            <span class="slider-sub">满分15 · 高速贡多拉/Ski-in</span>
+          </div>
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-variety">🎿 全水平道型配比</label>
+              <output id="out-variety">15%</output>
+            </div>
+            <input type="range" id="w-variety" min="0" max="40" step="5" value="15" />
+            <span class="slider-sub">满分15 · 绿蓝红黑道/公园/树林</span>
+          </div>
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-apres">♨️ 温泉餐饮Après</label>
+              <output id="out-apres">10%</output>
+            </div>
+            <input type="range" id="w-apres" min="0" max="40" step="5" value="10" />
+            <span class="slider-sub">满分10 · 露天温泉/山屋米其林</span>
+          </div>
+          <div class="slider-box">
+            <div class="slider-head">
+              <label for="w-value">💎 雪票住宿性价比</label>
+              <output id="out-value">10%</output>
+            </div>
+            <input type="range" id="w-value" min="0" max="40" step="5" value="10" />
+            <span class="slider-sub">满分10 · 日票价格/季卡覆盖</span>
+          </div>
+        </div>
+
+        <div class="filter-rows">
+          <div class="filter-row">
+            <span class="filter-label">地理大区</span>
+            <div class="pill-group" id="region-tabs" role="group" aria-label="按地理大区筛选">
+              <button type="button" class="pill" data-region="ALL" aria-pressed="true">全部大区 (100)</button>
+              <button type="button" class="pill" data-region="阿尔卑斯与欧洲" aria-pressed="false">🇪🇺 阿尔卑斯与欧洲 (50)</button>
+              <button type="button" class="pill" data-region="北美落基山与西岸" aria-pressed="false">🌎 北美落基山与西岸 (28)</button>
+              <button type="button" class="pill" data-region="日本粉雪与亚洲" aria-pressed="false">🇯🇵 日本粉雪与亚洲 (16)</button>
+              <button type="button" class="pill" data-region="南半球反季" aria-pressed="false">🇦🇷 南半球反季 (6)</button>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-label">等级梯队</span>
+            <div class="pill-group" id="tier-tabs" role="group" aria-label="按梯队筛选">
+              <button type="button" class="pill" data-tier="ALL" aria-pressed="true">全部梯队</button>
+              <button type="button" class="pill" data-tier="T0" aria-pressed="false">👑 T0 殿堂神山 (1–12)</button>
+              <button type="button" class="pill" data-tier="T1" aria-pressed="false">🏆 T1 世界旗舰 (13–35)</button>
+              <button type="button" class="pill" data-tier="T1.5" aria-pressed="false">⭐ T1.5 区域王牌 (36–65)</button>
+              <button type="button" class="pill" data-tier="T2" aria-pressed="false">🎿 T2 特色名山 (66–100)</button>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-label">人群标签</span>
+            <div class="pill-group" id="crowd-chips" role="group" aria-label="按适合人群标签筛选">
+              <button type="button" class="pill tag-chip" data-crowd="ALL" aria-pressed="true">全部人群</button>
+              <button type="button" class="pill tag-chip" data-crowd="粉雪朝圣" aria-pressed="false">❄️ 粉雪朝圣</button>
+              <button type="button" class="pill tag-chip" data-crowd="千米落差大神" aria-pressed="false">⚡ 千米落差大神</button>
+              <button type="button" class="pill tag-chip" data-crowd="新手家庭友好" aria-pressed="false">👨‍👩‍👧 新手家庭友好</button>
+              <button type="button" class="pill tag-chip" data-crowd="Ski-in/Ski-out" aria-pressed="false">🛷 Ski-in/Ski-out</button>
+              <button type="button" class="pill tag-chip" data-crowd="温泉美食" aria-pressed="false">♨️ 温泉美食</button>
+              <button type="button" class="pill tag-chip" data-crowd="反季滑雪" aria-pressed="false">☀️ 反季滑雪 (6–10月)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar-bottom">
+          <label class="search-box" aria-label="搜索雪场">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
+            <input type="search" id="search-input" placeholder="搜索雪场名、国家、Ikon/Epic、冰川、温泉、树冰..." autocomplete="off" />
+          </label>
+
+          <div class="sort-group" id="sort-buttons" role="group" aria-label="排序方式">
+            <button type="button" class="sort-btn" data-sort="score" aria-pressed="true">按综合得分</button>
+            <button type="button" class="sort-btn" data-sort="pisteKm" aria-pressed="false">按雪道总长(km)</button>
+            <button type="button" class="sort-btn" data-sort="verticalDropM" aria-pressed="false">按垂直落差(m)</button>
+            <button type="button" class="sort-btn" data-sort="snowfallM" aria-pressed="false">按年均降雪量(m)</button>
+            <button type="button" class="sort-btn" data-sort="dayPassUsd" aria-pressed="false">按雪票价格($)</button>
+          </div>
+
+          <div class="result-meta" id="result-count">正在加载 <b>100</b> 座雪场...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Container -->
+    <section class="cards-section" aria-label="滑雪度假村排行榜列表">
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+  </main>
+
+  <!-- Methodology Section -->
+  <section class="method-section" id="methodology">
+    <div class="wrap">
+      <span class="eyebrow" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">METHODOLOGY · 评分体系说明</span>
+      <h2 style="margin-top:12px;font-family:var(--serif);font-size:28px;">为什么这 100 座雪山代表地球滑雪体验的巅峰？</h2>
+      <div class="method-grid">
+        <article class="method-card">
+          <div class="pct">25% · 粉雪质量与降雪量</div>
+          <h3>年均降雪厚度 × 干粉含水量 × 保雪朝向</h3>
+          <p>综合考量年均天然降雪量（如北海道喜乐乐 16m、犹他阿尔塔 13.9m）、冷干程度（西伯利亚寒流或大盐湖效应带来的 7–9% 超低含水量香槟粉雪）以及海拔 2000m–3800m 冰川北坡对春雪的保存能力。</p>
+        </article>
+        <article class="method-card">
+          <div class="pct">25% · 垂直落差与雪道规模</div>
+          <h3>不间断有效落差 × 全缆车互联里程</h3>
+          <p>只统计无需脱板坐巴士的实测连续垂直落差（如霞慕尼 2807m、韦尔比耶 2509m、采尔马特 2279m、雷夫尔斯托克 1713m）与真实互联雪道面积，剔除注水虚标。</p>
+        </article>
+        <article class="method-card">
+          <div class="pct">15% · 缆车运力与滑进滑出</div>
+          <h3>3S跨谷巨缆 × 零步行 Ski-in/Ski-out</h3>
+          <p>评估多索道 3S 抗风贡多拉、加热气泡高速吊椅的排队效率，以及像法国葱仁谷、阿沃里亚兹、上陶恩那样推开酒店门即踩上雪道的无车村规划。</p>
+        </article>
+        <article class="method-card">
+          <div class="pct">15% · 全水平道型配比</div>
+          <h3>从地毯绿道到双黑钻陡槽 &amp; 树林野雪门</h3>
+          <p>兼顾新手家庭的宽阔压雪绿蓝道（如多洛米蒂、铜山天然分流）、自由式公园（LAAX 200米U池）与大神级陡槽（Jackson Hole Corbet's Couloir、二世古 11 大野雪门）。</p>
+        </article>
+        <article class="method-card">
+          <div class="pct">10% · 温泉餐饮与 Après-ski</div>
+          <h3>火山天然外汤 × 阿尔卑斯米其林山屋</h3>
+          <p>从日本野泽温泉 13 座江户古汤、藏王硫磺露天风吕，到意大利多洛米蒂 Rifugio 松露意面、奥地利圣安东 MooserWirt 与伊施格尔传奇电音派对。</p>
+        </article>
+        <article class="method-card">
+          <div class="pct">10% · 雪票与住宿性价比</div>
+          <h3>单日雪票亲民度 × Epic/Ikon 国际通票权益</h3>
+          <p>对比北美窗口票动辄 $230+ 与欧洲 300km 级大雪场仅 $70–$85、日本 $45–$65、格鲁吉亚古道里 $26 的真实花费，并提供季卡换乘省钱秘籍。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong style="color:#fff;">The Alpine &amp; Powder Index · 全球滑雪度假村 Top 100</strong>
+        <p style="margin-top:4px;">Destination Atlas 全球目的地严肃排名工程 · 数据涵盖海拔、落差、雪道里程、年降雪量与 Epic/Ikon 实用攻略。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">返回总览</a>
+        <a href="beaches.html">海滨度假</a>
+        <a href="aquariums.html">水族馆</a>
+        <a href="zoos.html">动物园</a>
+        <a href="museums.html">科技军工博物馆</a>
+        <a href="themeparks.html">主题乐园</a>
+        <a href="shows.html">实景演艺</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="images_themed.js" onerror=""></script>
+  <script src="data_ski.js"></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      const rawData = Array.isArray(window.SKI_RESORTS_TOP100) ? window.SKI_RESORTS_TOP100 : [];
+
+      const PRESETS = {
+        balanced: { label: "默认均衡权重", weights: { snow: 25, terrain: 25, lifts: 15, variety: 15, apres: 10, value: 10 } },
+        powder: { label: "粉雪猎人模式", weights: { snow: 50, terrain: 20, lifts: 10, variety: 10, apres: 5, value: 5 } },
+        bigmountain: { label: "千米落差刷道模式", weights: { snow: 20, terrain: 45, lifts: 20, variety: 10, apres: 0, value: 5 } },
+        family: { label: "亲子滑进滑出 & 温泉", weights: { snow: 15, terrain: 10, lifts: 25, variety: 25, apres: 20, value: 5 } },
+        value: { label: "极致性价比模式", weights: { snow: 20, terrain: 20, lifts: 10, variety: 10, apres: 5, value: 35 } }
+      };
+
+      const state = {
+        weights: { snow: 25, terrain: 25, lifts: 15, variety: 15, apres: 10, value: 10 },
+        region: "ALL",
+        tier: "ALL",
+        crowd: "ALL",
+        sortBy: "score",
+        query: ""
+      };
+
+      const sliders = {
+        snow: document.getElementById("w-snow"),
+        terrain: document.getElementById("w-terrain"),
+        lifts: document.getElementById("w-lifts"),
+        variety: document.getElementById("w-variety"),
+        apres: document.getElementById("w-apres"),
+        value: document.getElementById("w-value")
+      };
+
+      const outputs = {
+        snow: document.getElementById("out-snow"),
+        terrain: document.getElementById("out-terrain"),
+        lifts: document.getElementById("out-lifts"),
+        variety: document.getElementById("out-variety"),
+        apres: document.getElementById("out-apres"),
+        value: document.getElementById("out-value")
+      };
+
+      const gridEl = document.getElementById("cards-grid");
+      const countEl = document.getElementById("result-count");
+      const presetTagEl = document.getElementById("active-preset-tag");
+      const searchInput = document.getElementById("search-input");
+
+      function computeWeightedScore(item) {
+        const s = item.scores || { snow: 20, terrain: 20, lifts: 12, variety: 12, apres: 8, value: 8 };
+        const w = state.weights;
+        const totalW = (w.snow + w.terrain + w.lifts + w.variety + w.apres + w.value) || 100;
+
+        // Normalize each dimension to 0..1 ratio based on its max score (25, 25, 15, 15, 10, 10)
+        const normSnow = (s.snow / 25) * w.snow;
+        const normTerrain = (s.terrain / 25) * w.terrain;
+        const normLifts = (s.lifts / 15) * w.lifts;
+        const normVariety = (s.variety / 15) * w.variety;
+        const normApres = (s.apres / 10) * w.apres;
+        const normValue = (s.value / 10) * w.value;
+
+        const rawSum = normSnow + normTerrain + normLifts + normVariety + normApres + normValue;
+        return (rawSum / totalW) * 100;
+      }
+
+      function buildFallbackSvg(item) {
+        const palettes = {
+          "阿尔卑斯与欧洲": ["#091e36", "#134775", "#38bdf8"],
+          "北美落基山与西岸": ["#0f172a", "#1e3a8a", "#60a5fa"],
+          "日本粉雪与亚洲": ["#111827", "#312e81", "#818cf8"],
+          "南半球反季": ["#06283d", "#1363df", "#47b5ff"]
+        };
+        const [c1, c2, c3] = palettes[item.region] || palettes["阿尔卑斯与欧洲"];
+        const seed = (item.rank * 37) % 90;
+        const p1x = 95 + seed;
+        const p2x = 260 + (seed % 50);
+        return `
+          <svg class="card-cover-svg" viewBox="0 0 480 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="bg-${item.id}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="${c1}"/>
+                <stop offset="60%" stop-color="${c2}"/>
+                <stop offset="100%" stop-color="${c3}"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="200" fill="url(#bg-${item.id})"/>
+            <circle cx="${390 - (seed % 40)}" cy="42" r="18" fill="#ffffff" fill-opacity="0.14"/>
+            <path d="M-20,200 L${p1x},52 L${p1x + 115},165 L${p2x},38 L410,155 L500,85 L500,200 Z" fill="#ffffff" fill-opacity="0.13"/>
+            <path d="M${p2x},38 L${p2x + 38},92 L${p2x + 12},102 L${p2x - 4},74 L${p2x - 24},106 Z" fill="#ffffff" fill-opacity="0.32"/>
+            <path d="M40,200 L175,88 L295,180 L385,72 L500,200 Z" fill="#071526" fill-opacity="0.35"/>
+          </svg>
+        `;
+      }
+
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function renderCards() {
+        const q = state.query.trim().toLowerCase();
+
+        const enriched = rawData.map(item => ({
+          ...item,
+          computedScore: computeWeightedScore(item)
+        }));
+
+        const filtered = enriched.filter(item => {
+          if (state.region !== "ALL" && item.region !== state.region) return false;
+          if (state.tier !== "ALL" && item.tier !== state.tier) return false;
+          if (state.crowd !== "ALL" && !(item.bestFor || []).includes(state.crowd)) return false;
+          if (q) {
+            const hay = [
+              item.name,
+              item.country,
+              item.region,
+              item.city,
+              item.season,
+              item.highlight,
+              item.tip,
+              ...(item.bestFor || [])
+            ].join(" ").toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        filtered.sort((a, b) => {
+          if (state.sortBy === "pisteKm") return b.pisteKm - a.pisteKm || b.computedScore - a.computedScore;
+          if (state.sortBy === "verticalDropM") return b.verticalDropM - a.verticalDropM || b.computedScore - a.computedScore;
+          if (state.sortBy === "snowfallM") return b.snowfallM - a.snowfallM || b.computedScore - a.computedScore;
+          if (state.sortBy === "dayPassUsd") return a.dayPassUsd - b.dayPassUsd || b.computedScore - a.computedScore;
+          return b.computedScore - a.computedScore || a.rank - b.rank;
+        });
+
+        countEl.innerHTML = `当前筛选共 <b>${filtered.length}</b> / ${rawData.length} 座滑雪度假村`;
+
+        if (filtered.length === 0) {
+          gridEl.innerHTML = `
+            <div class="empty-state">
+              <h3 style="font-size:18px;color:var(--slate);">未找到匹配的滑雪度假村</h3>
+              <p style="margin-top:8px;">请尝试切换地理大区、人群标签或清空搜索关键词。</p>
+            </div>
+          `;
+          return;
+        }
+
+        const themedImages = window.THEMED_IMAGES || {};
+
+        gridEl.innerHTML = filtered.map((item, idx) => {
+          const imgEntry = themedImages[item.id];
+          const imgUrl = imgEntry ? (typeof imgEntry === "string" ? imgEntry : imgEntry.src) : "";
+          const coverVisual = imgUrl
+            ? `<img src="${escapeHtml(imgUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" onerror="this.remove()" />`
+            : buildFallbackSvg(item);
+
+          const highlights = String(item.highlight || "")
+            .split(/\s*\+\s*/)
+            .filter(Boolean)
+            .map(h => `<li>${escapeHtml(h)}</li>`)
+            .join("");
+
+          const crowdHtml = (item.bestFor || [])
+            .map(tag => `<span class="crowd-tag" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</span>`)
+            .join("");
+
+          const s = item.scores || {};
+
+          return `
+            <article class="ski-card tier-${escapeHtml(item.tier)}" data-id="${escapeHtml(item.id)}" data-dest-id="${escapeHtml(item.id)}" data-lat="${item.lat || ""}" data-lon="${item.lon || ""}" data-name="${escapeHtml(item.name)}">
+              <div class="card-cover">
+                ${coverVisual}
+                <div class="card-cover-overlay">
+                  <div class="cover-top">
+                    <div class="rank-badge">
+                      <span>#${item.rank}</span>
+                      <span class="tier-pill">${escapeHtml(item.tier)}</span>
+                      <span style="font-weight:500;font-size:11.5px;color:#bae6fd;">${escapeHtml(item.country)} · ${escapeHtml(item.region)}</span>
+                    </div>
+                    <div class="score-pill" title="当前权重综合得分">
+                      <b>${item.computedScore.toFixed(1)}</b>
+                      <span>INDEX SCORE</span>
+                    </div>
+                  </div>
+                  <div class="cover-bottom">
+                    <h3>${escapeHtml(item.name)}</h3>
+                    <div class="cover-loc">
+                      <span>📍 ${escapeHtml(item.city)}</span>
+                      <span>·</span>
+                      <span>🚡 ${item.liftsCount} 条缆车</span>
+                      <span class="season-chip">🗓️ 雪季 ${escapeHtml(item.season)}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="metrics-strip" aria-label="核心雪场指标">
+                  <div class="m-cell">
+                    <b class="is-drop">${item.verticalDropM.toLocaleString()}m</b>
+                    <span>垂直落差</span>
+                  </div>
+                  <div class="m-cell">
+                    <b>${item.pisteKm.toLocaleString()}km</b>
+                    <span>雪道总长</span>
+                  </div>
+                  <div class="m-cell">
+                    <b class="is-snow">${item.snowfallM}m</b>
+                    <span>年均降雪</span>
+                  </div>
+                  <div class="m-cell">
+                    <b>${item.peakElevM.toLocaleString()}m</b>
+                    <span>最高海拔</span>
+                  </div>
+                  <div class="m-cell">
+                    <b>$${item.dayPassUsd}/天</b>
+                    <span>成人雪票</span>
+                  </div>
+                </div>
+
+                <div class="dim-bars" aria-label="六维细分得分">
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>粉雪</span><b>${s.snow}/25</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.snow / 25) * 100}%"></div></div>
+                  </div>
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>落差</span><b>${s.terrain}/25</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.terrain / 25) * 100}%"></div></div>
+                  </div>
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>缆车</span><b>${s.lifts}/15</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.lifts / 15) * 100}%"></div></div>
+                  </div>
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>道型</span><b>${s.variety}/15</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.variety / 15) * 100}%"></div></div>
+                  </div>
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>温泉</span><b>${s.apres}/10</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.apres / 10) * 100}%"></div></div>
+                  </div>
+                  <div class="dim-item">
+                    <div class="dim-item-top"><span>性价</span><b>${s.value}/10</b></div>
+                    <div class="dim-track"><div class="dim-fill" style="width:${(s.value / 10) * 100}%"></div></div>
+                  </div>
+                </div>
+
+                <div class="crowd-tags">${crowdHtml}</div>
+
+                <ul class="highlight-list">${highlights}</ul>
+
+                <div class="tip-box">
+                  <b>💡 通票与实战贴士：</b>${escapeHtml(item.tip)}
+                </div>
+                <div class="shared-slot"></div>
+              </div>
+            </article>
+          `;
+        }).join("");
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      // Bind sliders
+      Object.keys(sliders).forEach(key => {
+        sliders[key].addEventListener("input", () => {
+          state.weights[key] = Number(sliders[key].value);
+          outputs[key].textContent = state.weights[key] + "%";
+          presetTagEl.textContent = "自定义权重";
+          document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("is-active"));
+          renderCards();
+        });
+      });
+
+      // Bind presets
+      document.querySelectorAll(".preset-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const pKey = btn.dataset.preset;
+          const preset = PRESETS[pKey];
+          if (!preset) return;
+          document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          presetTagEl.textContent = preset.label;
+          Object.keys(preset.weights).forEach(k => {
+            state.weights[k] = preset.weights[k];
+            sliders[k].value = preset.weights[k];
+            outputs[k].textContent = preset.weights[k] + "%";
+          });
+          renderCards();
+        });
+      });
+
+      // Bind region tabs
+      document.getElementById("region-tabs").addEventListener("click", e => {
+        const btn = e.target.closest("button[data-region]");
+        if (!btn) return;
+        state.region = btn.dataset.region;
+        document.querySelectorAll("#region-tabs .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+        renderCards();
+      });
+
+      // Bind tier tabs
+      document.getElementById("tier-tabs").addEventListener("click", e => {
+        const btn = e.target.closest("button[data-tier]");
+        if (!btn) return;
+        state.tier = btn.dataset.tier;
+        document.querySelectorAll("#tier-tabs .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+        renderCards();
+      });
+
+      // Bind crowd chips
+      document.getElementById("crowd-chips").addEventListener("click", e => {
+        const btn = e.target.closest("button[data-crowd]");
+        if (!btn) return;
+        state.crowd = btn.dataset.crowd;
+        document.querySelectorAll("#crowd-chips .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+        renderCards();
+      });
+
+      // Bind sort buttons
+      document.getElementById("sort-buttons").addEventListener("click", e => {
+        const btn = e.target.closest("button[data-sort]");
+        if (!btn) return;
+        state.sortBy = btn.dataset.sort;
+        document.querySelectorAll("#sort-buttons .sort-btn").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+        renderCards();
+      });
+
+      // Bind search
+      searchInput.addEventListener("input", () => {
+        state.query = searchInput.value;
+        renderCards();
+      });
+
+      // Initial render
+      renderCards();
+    })();
+  </script>
+</body>
+</html>

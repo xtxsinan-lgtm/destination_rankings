@@ -1,10 +1,34 @@
-# 🌊 全球 145 大海滨与海岛度假胜地硬核排行榜 (`destination_rankings`)
+# 🗺️ Destination Atlas · 全球硬核旅行目的地发现与决策平台 (`destination_rankings`)
 
-一个零构建依赖（Zero-Build）、可直接部署于 GitHub Pages / Vercel / Cloudflare Pages 的交互式海滨度假胜地多维排名与筛选系统。
+一个零构建依赖（Zero-Build）、兼顾**硬核量化参数**与**大众实用出行决策**、可直接部署于 GitHub Pages / Vercel / Cloudflare Pages 的全球 7 大垂直领域（共 **585 处**殿堂级目的地）交互式排名与筛选系统。
 
 ---
 
-## ✨ 核心方法论与三大铁律
+## 🌐 七大核心主题榜单矩阵（前端全交互接入）
+
+1. 🏖️ **[`beaches.html`](./beaches.html) — 全球海滨与海岛度假胜地 Top 145（真热带 Top 100 + 季节性 Top 45）**
+2. 🐋 **[`aquariums.html`](./aquariums.html) — The Abyss Index · 全球顶级水族馆 Top 35（含全馆总水体 / 最大单池水体 / 主视窗尺寸 / 物种数 / 生物总数）**
+3. 🦁 **[`zoos.html`](./zoos.html) — Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10（含总面积 / 物种数 / 生物总数 / 体力强度）**
+4. 🎢 **[`themeparks.html`](./themeparks.html) — The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15（含过山车数 / 年客流 / 面积 / 门票与快通）**
+5. ⛷️ **[`ski.html`](./ski.html) — The Alpine & Powder Index · 全球滑雪度假村 Top 100（含垂直落差 / 雪道总长 / 年降雪量 / 最高海拔 / 雪票价）**
+6. 🎭 **[`shows.html`](./shows.html) — The Grand Stage Index · 全球商业驻场秀 Top 50（含舞台规格 / 剧场座位数 / 语言门槛 / 黄金选座避坑）**
+7. 🚀 **[`museums.html`](./museums.html) — Heavy Metal Index · 全球科技、工业与军事重器博物馆 Top 100（含免费场馆筛选 / 镇馆真机巨物 / 门票与时长）**
+
+---
+
+## 🎯 面向普通大众的实用决策与留存功能
+
+- **🖼️ 全站 Wikimedia 实景封面图鉴 (`images.js` + `images_themed.js`)**：为海岛、水族馆、动物园、博物馆、游乐园、雪场与驻场秀配备实景高光图与 CC 授权署名。
+- **📅 1–12 月全球当季最佳旅行日历 (`index.html#seasonal-calendar`)**：点击任意月份，一键查看当月水温最暖海岛、粉雪巅峰雪场与室内全天候乐园/水秀推荐。
+- **🎒 8 大王牌城市「一程多刷」组合包 (`index.html#city-combos`)**：精选奥兰多、拉斯维加斯、阿布扎比&迪拜、新加坡、东京&关东、大湾区（广州/珠海/澳门）、南加州、瓦伦西亚&马德里 8 条跨榜单联游路线与人均预算参考。
+- **🧭 跨榜单「周边 100km 顺路玩」推荐 (`shared_widgets.js`)**：基于全站 585 个目的地的精确经纬度（Haversine），自动在卡片上提示 100km 半径内的其他上榜景点。
+- **✈️ 全站通用「从你的城市出发」飞行时长估算 (`shared_widgets.js`)**：在底部悬浮栏切换出发城市（北上广深、港澳台、东京、新加坡、伦敦、纽约、洛杉矶等），全站所有榜单卡片实时显示预计直飞/转机耗时。
+- **❤️ 「想去 / 去过」足迹打卡与一键生成分享海报 (`shared_widgets.js`)**：纯前端 `localStorage` 记录心愿单与足迹，一键渲染高颜值 Canvas PNG 旅行成就海报保存至手机相册。
+- **📱 PWA 离线访问与 SEO 结构化数据 (`manifest.json` + `sw.js` + `sitemap.xml` + `JSON-LD`)**：支持添加至手机主屏幕离线查阅，每页内置 `Schema.org ItemList` 结构化数据。
+
+---
+
+## ✨ 海滨与海岛榜核心方法论与三大铁律
 
 1. **🌡️ 生理体感温度硬指标（不按死板纬度线切分）**
    - **🔥 365天真热带榜 (Top 100)**：基于 WMO / NOAA / JMA / BOM 30年气候统计基准，必须同时满足：
@@ -52,28 +76,40 @@ python3 -m http.server 8080
 
 ---
 
-## 📚 专项主题目的地硬核榜单库（水族馆 / 动物园 / 科技工业博物馆）
+## 📚 六大专项主题目的地硬核榜单库（水族馆 / 动物园 / 游乐园 / 滑雪场 / 驻场秀 / 科技重器博物馆）
 
-除海滨度假胜地交互系统外，本仓库收录了三大按**纯粹展陈硬实力与巨物震撼度**严格校准的全球专项榜单文档与结构化数据集，并已作为同站独立页面接入前端（每页采用各自独立的视觉风格，顶部切换栏互通）：
+除海滨度假胜地交互系统外，本仓库收录了六大按**纯粹展陈硬实力、硬件震撼度与大众实用指标**严格校准的全球专项榜单文档与结构化数据集，并已全部作为同站独立页面接入前端（每页采用各自独立的视觉风格，8 页顶部切换栏互通）：
 
-- 🐋 [`aquariums.html`](./aquariums.html)：**The Abyss Index**，深海沉浸风（滚动下潜、深度计、水体水箱可视化、按水体排序）
-- 🦁 [`zoos.html`](./zoos.html)：**Field Notes**，博物学野外手记风（标本卡、梯队印章、游猎园领地面积对比、只看自驾筛选）
-- 🚀 [`museums.html`](./museums.html)：**Heavy Metal Index**，工业档案风（A-List 前十、门类/国别构成图、100 座总表搜索与筛选）
+- 🐋 [`aquariums.html`](./aquariums.html)：**The Abyss Index**，深海沉浸风（含全馆总水体、最大单池水体、主视窗尺寸、物种数、生物总数、门票与多维排序）
+- 🦁 [`zoos.html`](./zoos.html)：**Field Notes**，博物学野外手记风（含园区总面积、物种数、动物总数、步行强度与全美 10 大自驾游猎园）
+- 🎢 [`themeparks.html`](./themeparks.html)：**The Thrill & Magic Index**，全球主题游乐园 Top 100 ＆ 水上乐园 Top 15（6 维滑块重算、过山车数量、年客流、门票与快通比价）
+- ⛷️ [`ski.html`](./ski.html)：**The Alpine & Powder Index**，全球滑雪度假村 Top 100（6 维滑块重算、垂直落差、雪道总长、年均降雪量、雪票与粉雪季筛选）
+- 🎭 [`shows.html`](./shows.html)：**The Grand Stage Index**，全球商业驻场秀 Top 50（舞台重工硬件规格、剧场座位数、语言友好度筛选、黄金选座避坑与停演备忘）
+- 🚀 [`museums.html`](./museums.html)：**Heavy Metal Index**，工业档案风（A-List 前十、免费场馆一键筛选、门类/国别构成图、100 座总表搜索）
 
 1. 🐋 **[全球顶级水族馆 Top 35（纯水下展陈视觉统治力榜）](./rankings/aquariums_top35.md)**
-   - **核心标准**：剥离过山车与海豚剧场加分，100% 聚焦单缸水体体量（万立方米级巨缸）、亚克力主视窗无接缝通透度、自然采光/生态造景美学与镇馆巨物（鲸鲨、双髻鲨、翻车鱼、海牛、儒艮、巨藻林）。
-   - **附表**：明确列出为何剔除奥兰多/圣地亚哥/圣安东尼奥海洋世界（演艺过山车导向）及中国香港海洋公园等。
+   - **核心标准**：剥离过山车与海豚剧场加分，100% 聚焦单缸水体体量（万立方米级巨缸）、全馆总水体、亚克力主视窗无接缝通透度、物种数、生物总数与镇馆巨物（鲸鲨、双髻鲨、翻车鱼、海牛、儒艮、巨藻林）。
 
 2. 🦁 **[全球顶级动物园 Top 30 & 美国野生动物园 (Safari Parks) Top 10](./rankings/zoos_top30.md)**
-   - **核心标准**：破除“古老历史”与“免费情怀”滤镜，按单展区占地跨度、超级温室穹顶（热带雨林/沙漠/极地）、地形高差戏剧性与旗舰物种种群规模排名。
-   - **双轨收录**：含全球综合动物园 Top 30、美国自驾/敞篷卡车式野生动物园 Top 10，以及清远长隆森林王国 2025–2026 实测评估。
+   - **核心标准**：破除“古老历史”与“免费情怀”滤镜，按园区总面积（公顷）、超级温室穹顶、地形高差戏剧性、物种总数与动物群落规模排名。
 
-3. 🚀 **[全球科技、工业与军事重器博物馆 Top 100（100% 纯重器硬件版）](./rankings/industrial_tech_museums_top100.md)**
-   - **核心标准**：彻底清退以声光互动、光学错觉和儿童科普为主的科学中心（如旧金山 Exploratorium、东京未来馆、巴黎拉维莱特科学城、MIT 博物馆等），100% 聚焦**人类历史真机孤品、万吨级工业/军事巨物（航母、核潜艇、土星五号、航天飞机、高炉矿井、万吨巨轮）与特种空间压迫感**。
-   - **附表**：包含被清退的 8 家著名互动科学中心说明，以及全球航母博物馆横向对比（圣地亚哥中途岛号、纽约无畏号、阿拉米达大黄蜂号、天津基辅号等）。
+3. 🎢 **[全球主题游乐园 Top 100 & 水上乐园 Top 15](./rankings/themeparks_top100.md)**
+   - **核心标准**：按镇园大作与过山车水准 (25%)、造景沉浸感与 IP 还原度 (25%)、运营效率与排队友好度 (15%)、全龄亲子友好度 (15%)、餐饮周边与夜间大秀 (10%)、门票与快通性价比 (10%) 六维量化评分。
 
-4. 🗂️ **[结构化数据源 (`data_aquariums_zoos_museums.js`)](./data_aquariums_zoos_museums.js)**
-   - 导出 `window.AQUARIUMS_TOP35`、`window.ZOOS_TOP30`、`window.US_SAFARI_PARKS_TOP10` 与 `window.INDUSTRIAL_MUSEUMS_TOP100` 四个完整 JS 数组，由上述三个专题页面直接读取。
+4. ⛷️ **[全球滑雪度假村 Top 100](./rankings/ski_resorts_top100.md)**
+   - **核心标准**：按粉雪质量与年均降雪量 (25%)、垂直落差与可滑面积 (25%)、缆车系统与滑进滑出便利度 (15%)、全水平道型配比 (15%)、小镇氛围与温泉餐饮 (10%)、雪票住宿性价比 (10%) 六维量化评分。
+
+5. 🎭 **[全球商业驻场秀 Top 50](./rankings/shows_top50.md)**
+   - **核心标准**：仅收录专门定制剧场/实景舞台、每周固定排期、普通游客随时可买票入场的常驻大秀（剔除短期演唱会巡演），标注语言门槛、最佳选座区域与已停演传奇名单。
+
+6. 🚀 **[全球科技、工业与军事重器博物馆 Top 100（100% 纯重器硬件版）](./rankings/industrial_tech_museums_top100.md)**
+   - **核心标准**：彻底清退以声光互动、光学错觉和儿童科普为主的科学中心，100% 聚焦**人类历史真机孤品、万吨级工业/军事巨物（航母、核潜艇、土星五号、航天飞机、高炉矿井、万吨巨轮）与特种空间压迫感**。
+
+7. 🗂️ **结构化数据源**
+   - [`data_aquariums_zoos_museums.js`](./data_aquariums_zoos_museums.js)：导出 `window.AQUARIUMS_TOP35`、`window.ZOOS_TOP30`、`window.US_SAFARI_PARKS_TOP10` 与 `window.INDUSTRIAL_MUSEUMS_TOP100`。
+   - [`data_themeparks.js`](./data_themeparks.js)：导出 `window.THEMEPARKS_TOP100` 与 `window.WATERPARKS_TOP15`。
+   - [`data_ski.js`](./data_ski.js)：导出 `window.SKI_RESORTS_TOP100`。
+   - [`data_shows.js`](./data_shows.js)：导出 `window.SHOWS_TOP50`。
 
 ---
 
@@ -207,25 +243,3 @@ python3 -m http.server 8080
 
 2. 🗂️ **[房车线路与 16 城跨季比价结构化数据源 (`data_rv_routes.js`)](./data_rv_routes.js)**
    - 导出 `window.RV_ROUTES_TOP10`、`window.RV_ELIMINATED_ROUTES` 与 `window.RV_CITY_CHECKOUT_DB` 三大结构化数据集。
-
----
-
-## ⛵ 全球与欧洲双体帆船（4卧 Catamaran + 船长）航线规划与实时报价库（纯文档与数据版，暂未建网页）
-
-本仓库新增针对 **4 卧双体帆船（40–45 英尺，如 Lagoon 42 / Bali 4.2 / FP Astrea 42 / Bali Catspace）+ 雇佣专业船长（Skipper）+ 必选基地杂费 + 港口/浮球费 + 燃油费** 的 **7 天全包实时报价拆解与全球航线库**：
-
-1. 🏆 **[全球 5 大最值得体验的双体帆船航线规划书 (`rankings/sailing_top5_routes.md`)](./rankings/sailing_top5_routes.md)**
-   - **核心内容**：针对已体验过克罗地亚航线的进阶玩家，精选全球 **5 条殿堂级双体帆船航线**——**1. 希腊·爱奥尼亚群岛南线 (Lefkada)**、**2. 意大利撒丁岛北 + 法国科西嘉 (La Maddalena & Bonifacio)**、**3. 意大利西西里·伊奥利亚七大火山群岛 (Aeolian Islands)**、**4. 加勒比海英属维尔京群岛 (BVI)**、**5. 法属波利尼西亚·大溪地顺风群岛 (Raiatea $\rightarrow$ Taha'a $\rightarrow$ Bora Bora)**，包含 **7 天全包落地总价六维拆解总表**、实时可验证船源链接及 **Day 1 至 Day 7 每日航程、锚地玩水与岸上餐饮停泊攻略**。
-
-2. 🌍 **[全球与欧洲双体帆船硬核指南与航线百科全书 (`rankings/sailing_routes_global_guide.md`)](./rankings/sailing_routes_global_guide.md)**
-   - **完整收录 7 大板块**：
-     - **全球 Top 5 航线规划与全包报价拆解**；
-     - **欧洲媲美/超越克罗地亚的 4 大神仙替代航线深度对比**（及为何排除基克拉泽斯 Meltemi 强北风区的排雷说明）；
-     - **希腊莱夫卡达（Lefkada）南爱奥尼亚海 7 天环线沿途 8 大古镇/海湾详解**（每站配 2 张 Wikimedia 实景图）；
-     - **撒丁岛北+科西嘉（Bonifacio）、土耳其戈杰克（Göcek & Fethiye）、西西里火山群岛（Aeolian Islands）三条 7 天航线共 18 个核心停靠站点详解**（每站配 2 张实景图）；
-     - **加勒比海 BVI vs. 欧洲地中海航线六大维度正面 PK** 与三大标志性站点实景；
-     - **除欧洲与 BVI 外的全球 6 大世界级帆船圣地全览**（大溪地 Bora Bora、塞舌尔群岛、巴哈马 Exumas 猪岛与护士鲨、格林纳丁斯 Tobago Cays、泰国普吉攀牙湾喀斯特峰林+随船泰厨、澳洲大堡礁圣灵群岛白天堂流沙海滩与观鲸）；
-     - **欧洲夏季（6–9月）7 大热门海区全包价格横向对比、主流比价平台（Boataround / SamBoat / Click&Boat / GlobeSailor）与直营船队名录，以及 26 艘代表性 4 卧双体帆船 2027 年 6/7/8/9 月实时价格核验总表**。
-
-3. 🗂️ **[双体帆船航线与实时报价结构化数据源 (`data_sailing_routes.js`)](./data_sailing_routes.js)**
-   - 导出 `window.SAILING_TOP5_ROUTES`、`window.SAILING_GLOBAL_DESTINATIONS`、`window.SAILING_BVI_VS_EUROPE`、`window.SAILING_EUROPEAN_PRICE_BENCHMARKS`、`window.SAILING_PLATFORMS_AND_FLEETS`、`window.SAILING_VERIFIED_BOATS_2027` 与 `window.SAILING_ROUTE_STOPS_GALLERY` 七大结构化数据集。

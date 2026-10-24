@@ -1,0 +1,16 @@
+{
+  "name": "Destination Atlas · 全球目的地硬核图鉴",
+  "short_name": "DestAtlas",
+  "description": "涵盖全球 585 处海岸海岛、水族馆、动物园、重器博物馆、主题乐园、滑雪场与商业驻场秀的量化决策平台。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#090d12",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%230d1117'/%3E%3Ccircle cx='64' cy='64' r='40' fill='none' stroke='%23e6edf3' stroke-width='6' stroke-dasharray='12 8'/%3E%3Ccircle cx='64' cy='64' r='14' fill='%23f5b301'/%3E%3C/svg%3E",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    }
+  ]
+}

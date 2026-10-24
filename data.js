@@ -19,8 +19,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["全球颜值天花板", "外堡礁360°平静泻湖", "水屋鼻祖"],
     note: "外堡礁围出平静如镜的蒂芙尼蓝泻湖，正对奥特马努死火山神山；5★威斯汀山景水屋 $8,499。",
-    hotelUrl: "https://www.booking.com/hotel/pf/intercontinental-bora-bora-le-moana-resort.en-us.html?checkin=2027-09-12&checkout=2027-09-17&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/pf/intercontinental-bora-bora-le-moana-resort.en-us.html?checkin=2027-09-12&checkout=2027-09-17&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "moorea",
@@ -37,8 +36,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["魔戒之岛", "可与座头鲸/魔鬼鱼同游", "主岛船程30m"],
     note: "八大苍翠火山尖峰直插泻湖，陆地ATV与徒步比波拉波拉更丰富；5★索菲特海景别墅含早 $5,864。",
-    hotelUrl: "https://www.booking.com/hotel/pf/sofitel-moorea-beach-resort.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/pf/sofitel-moorea-beach-resort.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "seychelles-praslin-ladigue",
@@ -53,10 +51,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 1600,
     priceDisplay: "≈ $1,600 – $2,400",
     verified: false,
-    tags: ["法兰克福直飞圈TOP1", "史前花岗岩粉白滩", "零时差(+2h)"],
+    tags: ["印度洋颜值天花板", "史前花岗岩粉白滩"],
     note: "德阿让海滩巨型花岗岩配粉白面粉沙全球最上镜，还有五月谷海椰子雨林与陆地象龟。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Praslin+Island+Seychelles&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "9h35m (飞马埃转船/小飞机)", airline: "Condor / Discover", jetlag: "+2h" } }
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Praslin+Island+Seychelles&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "maui",
@@ -73,8 +70,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["水陆结合最完美", "哈纳雨林公路", "火山日出+观鲸"],
     note: "卡阿纳帕利金沙滩+哈雷阿卡拉火山云海+冬季岸边肉眼看座头鲸；喜来登/凯悦 $2,685+。",
-    hotelUrl: "https://www.booking.com/hotel/us/royal-lahaina-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/us/royal-lahaina-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "mauritius",
@@ -89,10 +85,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 1150,
     priceDisplay: "≈ $1,150 – $1,700 (含早/半餐)",
     verified: false,
-    tags: ["印度洋全能六边形战士", "法兰克福11h直飞", "水下瀑布奇观"],
+    tags: ["印度洋全能六边形战士", "水下瀑布奇观"],
     note: "全岛外堡礁环绕风平浪静，莫纳山水下瀑布、鹿岛、追野生海豚与七色土自驾，90分以上性价比最高。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mauritius&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "11h05m", airline: "Discover / Condor", jetlag: "+2h" } }
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mauritius&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "usvi",
@@ -109,8 +104,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["国家公园果冻海", "Trunk Bay水下浮潜步道"],
     note: "St. John 全岛60%为美国国家公园，海湾水清沙白毫无风浪；St. Thomas 万豪 $4,507。",
-    hotelUrl: "https://www.booking.com/hotel/vi/divi-carina-bay-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/vi/divi-carina-bay-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "bvi",
@@ -127,8 +121,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["世界帆船跳岛之都", "The Baths花岗岩巨石迷宫"],
     note: "Virgin Gorda 的海滨花岗岩巨石洞穴独步加勒比；Long Bay $3,760 / 瑰丽 $9,488。",
-    hotelUrl: "https://www.booking.com/hotel/vg/lambert-beach-resort-road-town.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/vg/lambert-beach-resort-road-town.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "kauai",
@@ -145,8 +138,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["纳帕利海岸绝壁", "侏罗纪公园取景地", "陆地风光第1"],
     note: "纳帕利海岸千仞翠绿火山绝壁直插太平洋，加上威美亚大峡谷，自然视觉震撼度满分。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Kauai+Hawaii&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Kauai+Hawaii&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "cancun",
@@ -161,10 +153,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 806,
     priceDisplay: "✅ $806 (4★仅房) / $1,096 (5★全包)",
     verified: true,
-    tags: ["前10名性价比之王", "牛奶蓝海水+玛雅金字塔", "法兰克福11h直飞"],
+    tags: ["前10名性价比之王", "牛奶蓝海水+玛雅金字塔"],
     note: "7字区北侧与女人岛风平浪静、东侧蒂芙尼蓝极美，陆地有奇琴伊察金字塔与天然溶洞 Cenotes。",
-    hotelUrl: "https://www.booking.com/hotel/mx/emporio-cancun.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "11h15m", airline: "Discover / Condor", jetlag: "-6h" } }
+    hotelUrl: "https://www.booking.com/hotel/mx/emporio-cancun.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "tahaa-huahine",
@@ -181,8 +172,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["大溪地香草岛", "天然珊瑚花园漂流浮潜"],
     note: "与雷亚提亚共享巨大外堡礁泻湖，拥有世界著名的天然顺流珊瑚花园（Coral Garden）与罗莱夏朵水屋。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Tahaa+French+Polynesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Tahaa+French+Polynesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "st-barts",
@@ -199,8 +189,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["全球亿万富豪后花园", "米其林法餐", "治安满分"],
     note: "14个绝美白沙滩配南法蔚蓝海岸风情，餐饮与奢华度冠绝加勒比，无平价连锁酒店。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Saint+Barthelemy&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Saint+Barthelemy&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "st-lucia",
@@ -217,8 +206,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["加勒比山海颜值冠军", "双子火山锥Pitons", "活火山泥浆温泉"],
     note: "两座尖锥火山从深蓝海湾拔地而起，可开车进入活火山口泡温泉；5★ Royalton 全包 $2,693(含税)。",
-    hotelUrl: "https://www.booking.com/hotel/lc/windjammer-landing-villa-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/lc/windjammer-landing-villa-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "turks-caicos",
@@ -235,8 +223,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["纯海滩与水质全球第1", "19公里外堡礁保护面粉滩"],
     note: "Grace Bay 拥有如蓝宝石果冻般的平静海水与极白面粉沙，唯全岛平坦无山且房价昂贵（5★丽思 $5,138）。",
-    hotelUrl: "https://www.booking.com/hotel/tc/royal-west-indies-providenciales.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/tc/royal-west-indies-providenciales.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "seychelles-mahe",
@@ -251,10 +238,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 1300,
     priceDisplay: "≈ $1,300 – $1,900",
     verified: false,
-    tags: ["法兰克福9.5h直飞落地即达", "花岗岩山海森林"],
+    tags: ["马埃主岛落地即达", "花岗岩山海森林"],
     note: "塞舌尔主岛，下飞机25分钟直达四季/悦榕庄私人花岗岩海湾，省去转船折腾，零时差痛苦。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mahe+Seychelles&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "9h35m", airline: "Condor / Discover", jetlag: "+2h" } }
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mahe+Seychelles&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "maldives-resorts",
@@ -269,10 +255,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 1665,
     priceDisplay: "✅ $1,665 (4★ Centara水屋含早，含税快艇≈$2,430)",
     verified: true,
-    tags: ["全球水屋性价比之王", "浮潜珊瑚天花板", "法兰克福9.5h直飞"],
+    tags: ["全球水屋性价比之王", "浮潜珊瑚天花板"],
     note: "5★ Grand Park 水屋含早 $1,876（含税快艇≈$2,600），水清沙白无敌，唯海拔1.5米无陆地观光。",
-    hotelUrl: "https://www.booking.com/hotel/mv/centara-ras-fushi-resort-amp-spa-maldives.en-us.html?checkin=2027-04-18&checkout=2027-04-23&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "9h45m", airline: "Discover / Condor", jetlag: "+3h" } }
+    hotelUrl: "https://www.booking.com/hotel/mv/centara-ras-fushi-resort-amp-spa-maldives.en-us.html?checkin=2027-04-18&checkout=2027-04-23&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "krabi-phiphi",
@@ -289,8 +274,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["前20名最低价!", "海上喀斯特峰林满分", "玛雅湾/洪岛果冻海"],
     note: "与普吉岛拆开！莱利海滩、皮皮岛、洪岛的海上桂林石灰岩绝壁风景满分（15/15）。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Krabi+Thailand&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Krabi+Thailand&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "aitutaki",
@@ -307,8 +291,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["波拉波拉最佳平替", "大脚丫岛白沙洲泻湖"],
     note: "南太平洋唯一能在纯泻湖与白沙洲颜值上追平波拉波拉的三角形环礁，价格仅大溪地一半。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Aitutaki+Cook+Islands&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Aitutaki+Cook+Islands&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "oahu-waikiki",
@@ -325,8 +308,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["都会海滩之王", "美食日料购物满分", "恐龙湾/古兰尼牧场"],
     note: "钻石山下的威基基防波堤内风浪平缓，兰尼凯海滩果冻水极美；一线4★ Outrigger $1,521。",
-    hotelUrl: "https://www.booking.com/hotel/us/the-ambassador-of-waikiki-tapestry-collection-by-hilton.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/us/the-ambassador-of-waikiki-tapestry-collection-by-hilton.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "seychelles-outer",
@@ -343,8 +325,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["一岛一酒店", "云雾高山直插泻湖"],
     note: "塞舌尔第三大花岗岩岛（93%为国家公园，仅一家希尔顿Labriz）及珊瑚外环礁，私密原生态。",
-    hotelUrl: "https://www.booking.com/hotel/sc/hilton-seychelles-labriz-resort-spa.en-us.html",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/sc/hilton-seychelles-labriz-resort-spa.en-us.html"
   },
   {
     id: "guadeloupe",
@@ -359,10 +340,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 950,
     priceDisplay: "≈ $950 – $1,350",
     verified: false,
-    tags: ["法国海外省(欧盟欧元区)", "巴黎8h15m直飞", "活火山+白沙泻湖"],
+    tags: ["法国海外省(欧盟欧元区)", "活火山+白沙泻湖"],
     note: "蝴蝶形双翼岛：东翼是白沙滩珊瑚泻湖，西翼是苏弗里耶尔活火山与国家公园雨林瀑布。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Guadeloupe&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Guadeloupe&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
 
   // ==================== TIER 2: TROPICAL TOP 21-50 ====================
@@ -381,8 +361,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["法国海外省(欧元区)", "培雷火山+法餐朗姆酒"],
     note: "南部Les Salines椰林白沙滩平静柔美，北部培雷火山与法式克里奥尔美食文化浓郁。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Martinique&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Martinique&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "anguilla",
@@ -399,8 +378,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["33个无瑕面粉白沙滩", "加勒比美食之都"],
     note: "Shoal Bay 与 Meads Bay 沙质细白如雪，云集四季与Belmond Cap Juluca，距圣马丁船程20分钟。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Anguilla&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Anguilla&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "grand-cayman",
@@ -417,8 +395,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["七英里海滩朝西无风浪", "魔鬼鱼城互动", "治安满分"],
     note: "Seven Mile Beach 朝西背风面海水极其清澈平静，Stingray City 浅滩亲手摸野生魔鬼鱼；3★ $1,619。",
-    hotelUrl: "https://www.booking.com/hotel/ky/regal-beach-club-george-town.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/ky/regal-beach-club-george-town.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "fiji-yasawa",
@@ -435,8 +412,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["斐济水质最纯净外岛", "蓝色珊瑚礁取景地", "魔鬼鱼同游"],
     note: "与主岛天壤之别！真正的果冻海与面粉白沙滩（注意外岛多收强制每日餐包）。",
-    hotelUrl: "https://www.booking.com/hotel/fj/coralview-island-resort.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { HKG: { nonstop: true, duration: "10h10m (飞楠迪转船)", flight2p: 1884, total2p: 3084, airline: "Fiji Airways FJ392" } }
+    hotelUrl: "https://www.booking.com/hotel/fj/coralview-island-resort.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "fiji-mamanuca",
@@ -453,8 +429,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["荒岛余生取景地", "Cloud 9海上漂浮酒吧", "楠迪船程1h"],
     note: "离楠迪主岛更近的外岛群，度假村硬件比亚萨瓦更成熟（Six Senses / Tokoriki / Castaway）。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mamanuca+Islands+Fiji&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { HKG: { nonstop: true, duration: "10h10m (飞楠迪转船)", flight2p: 1884, total2p: 3384, airline: "Fiji Airways FJ392" } }
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Mamanuca+Islands+Fiji&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "big-island",
@@ -471,8 +446,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["夜间魔鬼鱼浮潜全球独一", "活火山国家公园", "4200米雪山观星"],
     note: "天然白沙滩较少（仅Hapuna等），但黑沙滩、绿沙滩、活火山口与夜潜看巨型魔鬼鱼无可替代。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Kailua-Kona+Hawaii&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Kailua-Kona+Hawaii&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "tulum-cozumel",
@@ -489,8 +463,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["海崖玛雅神庙", "科苏梅尔珊瑚大断层", "天然溶洞群"],
     note: "与坎昆拆开！图卢姆悬崖玛雅遗迹直面碧海，对面科苏梅尔岛无马尾藻且是世界级深潜圣地。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Tulum+Mexico&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Tulum+Mexico&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "aruba",
@@ -507,8 +480,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["365天无飓风无雨季", "Eagle Beach宽阔面粉滩", "火烈鸟私岛"],
     note: "哪怕8–10月飓风季去也天天晴朗！西岸风平浪静、治安极佳；4★ Barceló 全包 $2,729。",
-    hotelUrl: "https://www.booking.com/hotel/aw/holiday-inn-sunspree-resort-aruba.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/aw/holiday-inn-sunspree-resort-aruba.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "fernando-de-noronha",
@@ -525,8 +497,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["每日限流世界自然遗产", "Baía do Sancho全球第1海滩"],
     note: "南大西洋火山群岛，穿过岩石裂缝下到翡翠色的 Sancho 海湾，海豚与海龟密度惊人。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Fernando+de+Noronha&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Fernando+de+Noronha&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "el-nido",
@@ -543,8 +514,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["海上喀斯特大小泻湖", "秘密海滩/蛇岛沙洲"],
     note: "与科隆拆开！爱妮岛拥有比科隆多得多的天然白沙滩与翡翠泻湖，但小镇市政基建较简陋。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=El+Nido+Palawan&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=El+Nido+Palawan&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "phuket",
@@ -559,14 +529,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 475,
     priceDisplay: "✅ $475 (4★诺富特) / 非连锁4★ The Yama $176!",
     verified: true,
-    tags: ["85分档全球性价比总冠军", "上海/香港/法兰克福全直飞"],
+    tags: ["85分档全球性价比总冠军", "安达曼海成熟度假圈"],
     note: "4★ Centara 海景 $503，5★ Amari 海景含早 $700；餐饮夜市、酒店密度与出海配套亚洲无敌。",
-    hotelUrl: "https://www.booking.com/hotel/th/novotelphuketresort.en-us.html?checkin=2027-04-18&checkout=2027-04-23&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {
-      SHA: { nonstop: true, duration: "5h10m", flight2p: 556, total2p: 1031, airline: "春秋/吉祥/东航直飞" },
-      HKG: { nonstop: true, duration: "3h35m", flight2p: 508, total2p: 983, airline: "HK Express / 国泰直飞" },
-      FRA: { nonstop: true, duration: "11h00m", airline: "Condor DE2368 直飞", jetlag: "+5h" }
-    }
+    hotelUrl: "https://www.booking.com/hotel/th/novotelphuketresort.en-us.html?checkin=2027-04-18&checkout=2027-04-23&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "curacao",
@@ -583,8 +548,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["飓风带外365天晴", "30个断崖果冻海湾", "彩色荷兰世界遗产城"],
     note: "Grote Knip 等断崖海湾从沙滩游出10米即珊瑚海龟，比邻岛阿鲁巴便宜近 $800；全包4★ $2,055。",
-    hotelUrl: "https://www.booking.com/hotel/cw/the-royal-sea-aquarium.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/cw/the-royal-sea-aquarium.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "antigua",
@@ -599,10 +563,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 1400,
     priceDisplay: "≈ $1,400 – $2,100",
     verified: false,
-    tags: ["法兰克福9h15m直飞", "365个白沙滩", "英国港古帆船海湾"],
+    tags: ["365个白沙滩", "英国港古帆船海湾"],
     note: "雪莉高地俯瞰纳尔逊船坞海湾极美，巴布达岛还有20公里无人粉红沙滩。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Antigua&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "9h15m", airline: "Condor 直飞", jetlag: "-5h" } }
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Antigua&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "boracay",
@@ -619,8 +582,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["亚洲第1面粉白沙滩", "4公里平缓浅滩", "落日风帆"],
     note: "与宿务拆开！White Beach S1区的奶粉级细沙在亚洲无敌，非常适合纯躺平玩水与看日落。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Boracay+Philippines&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Boracay+Philippines&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "fiji-taveuni-savusavu",
@@ -637,8 +599,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["世界软珊瑚之都彩虹礁", "斐济花园之岛", "Koro Sun水屋"],
     note: "萨武萨武还有4★ Sigasiga Sands 海景房仅 $462；塔韦乌尼拥有世界顶级的彩虹礁与海岸瀑布。",
-    hotelUrl: "https://www.booking.com/hotel/fj/koro-sun-resort.en-us.html?checkin=2026-11-08&checkout=2026-11-13&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/fj/koro-sun-resort.en-us.html?checkin=2026-11-08&checkout=2026-11-13&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "komodo",
@@ -655,8 +616,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["真粉红沙滩Pink Beach", "帕达尔三色海湾", "科莫多巨蜥+魔鬼鱼"],
     note: "地球罕见的天然粉红沙滩+史前巨蜥+世界级魔鬼鱼群潜点，可住阿雅娜或包Phinisi帆船跳岛。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Labuan+Bajo+Indonesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Labuan+Bajo+Indonesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "tobago-cays",
@@ -673,8 +633,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["加勒比海盗取景地", "马蹄礁野生海龟保护区"],
     note: "无人小岛与马蹄形珊瑚礁围出的浅水绿松石泻湖，水下到处是吃海草的绿海龟。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Bequia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Bequia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "st-maarten",
@@ -691,8 +650,7 @@ window.DESTINATIONS_DATA = [
     verified: true,
     tags: ["Maho海滩头顶看大飞机", "一岛两国(荷属+法属美食)"],
     note: "37个白沙滩，法属Grand Case美食一条街+荷属免税购物与夜生活，可坐船20分钟去安圭拉。",
-    hotelUrl: "https://www.booking.com/hotel/sx/divi-little-bay-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/hotel/sx/divi-little-bay-beach-resort.en-us.html?checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "barbados",
@@ -707,10 +665,9 @@ window.DESTINATIONS_DATA = [
     priceMin: 997,
     priceDisplay: "✅ $997 (4★丽笙海景) / $1,402 (4★希尔顿)",
     verified: true,
-    tags: ["东加勒比千元内4★海景!", "法兰克福9h直飞", "沉船海龟浮潜"],
+    tags: ["东加勒比千元内4★海景!", "沉船海龟浮潜"],
     note: "西岸Carlisle Bay水清沙白且风平浪静，5★温德姆全包 $3,046。",
-    hotelUrl: "https://www.booking.com/hotel/bb/radisson-aquatica-resort-barbados.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: { FRA: { nonstop: true, duration: "9h15m", airline: "Condor / Discover", jetlag: "-5h" } }
+    hotelUrl: "https://www.booking.com/hotel/bb/radisson-aquatica-resort-barbados.en-us.html?checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "bohol",
@@ -727,8 +684,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["巴里卡萨大断层海龟", "处女岛月牙沙洲", "巧克力山眼镜猴"],
     note: "与宿务拆开！邦劳岛有阿罗娜白沙滩（比宿务麦克坦好得多），水陆玩法非常均衡且便宜。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Panglao+Bohol&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Panglao+Bohol&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "sanya",
@@ -744,12 +700,8 @@ window.DESTINATIONS_DATA = [
     priceDisplay: "✅ $293 (5钻君澜含税) / $355 (4钻美居) / $386 (5★皇冠)",
     verified: true,
     tags: ["全球Top 100绝对底价王!", "五指山南真热带", "高星酒店集群"],
-    note: "中国唯一最冷月夜温>18°C的海滨城市！太阳湾与蜈支洲岛水清，上海/香港直飞机+酒仅 $557–$653。",
-    hotelUrl: "https://us.trip.com/hotels/detail/?hotelId=29597294&checkIn=2026-11-15&checkOut=2026-11-20&adult=2&children=0&crn=1&curr=USD&locale=en-US",
-    flights: {
-      SHA: { nonstop: true, duration: "3h15m", flight2p: 264, total2p: 557, airline: "春秋 9C8801 / 东航 MU5397" },
-      HKG: { nonstop: true, duration: "1h45m", flight2p: 360, total2p: 653, airline: "HK Express UO 直飞" }
-    }
+    note: "中国唯一最冷月夜温>18°C的海滨城市！太阳湾与蜈支洲岛水清，海景酒店选择极多。",
+    hotelUrl: "https://us.trip.com/hotels/detail/?hotelId=29597294&checkIn=2026-11-15&checkOut=2026-11-20&adult=2&children=0&crn=1&curr=USD&locale=en-US"
   },
   {
     id: "samana",
@@ -766,8 +718,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["漫山遍野椰林海湾", "冬季数千头座头鲸", "Playa Rincón"],
     note: "多米尼加山海自然风光最美的地方，有柠檬瀑布、国家公园红树林与百事可乐岛（Cayo Levantado）。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Samana+Dominican+Republic&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Samana+Dominican+Republic&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "raja-ampat",
@@ -784,8 +735,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["地球海洋生物多样性第1", "Piaynemo海上蘑菇群岛"],
     note: "拥有全球75%的珊瑚物种，水下景观与喀斯特群岛满分，但路途极远且全为原生态木屋。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Raja+Ampat&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Raja+Ampat&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "saipan",
@@ -802,8 +752,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["军舰岛七色玻璃海", "世界级蓝洞Groto", "对中国免签"],
     note: "与帕劳拆开！塞班拥有军舰岛（Managaha）极细白沙滩与平静泻湖，适合家庭玩水与自驾。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Saipan&checkin=2026-12-06&checkout=2026-12-11&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Saipan&checkin=2026-12-06&checkout=2026-12-11&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "lombok-gili",
@@ -820,8 +769,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["无机动车海龟三岛", "水质远胜巴厘岛", "林贾尼火山"],
     note: "吉利T岛/A岛岸边浮潜全是野生大海龟，南龙目Kuta拥有绝美胡椒粒白沙滩。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Lombok+Indonesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Lombok+Indonesia&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "manuel-antonio",
@@ -838,8 +786,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["白沙滩头顶看野生树懒与猴子", "国家公园雨林海湾"],
     note: "全球唯一热带雨林野生动物直接栖息在马蹄形白沙滩树冠上的国家公园，陆地生态满分。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Manuel+Antonio+Costa+Rica&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Manuel+Antonio+Costa+Rica&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "negril",
@@ -856,8 +803,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["牙买加最美七英里白沙滩", "朝西风平浪静", "Rick's Cafe悬崖跳水"],
     note: "与蒙特哥贝拆开！尼格瑞尔的海滩和风浪平缓度远胜蒙特哥贝，日落悬崖酒吧氛围极佳。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Negril+Jamaica&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Negril+Jamaica&checkin=2026-11-15&checkout=2026-11-20&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "vanuatu",
@@ -874,8 +820,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["Champagne Beach面粉白沙", "翡翠天然蓝洞群", "伊苏尔活火山"],
     note: "南太平洋隐藏秘境：森林深处的天然蓝宝石淡水蓝洞直通大海，还可连线塔纳岛看活火山岩浆。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Espiritu+Santo+Vanuatu&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Espiritu+Santo+Vanuatu&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "koh-kood",
@@ -892,8 +837,7 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["泰国东部玻璃海天花板", "原生态椰林白沙", "Soneva Kiri所在岛"],
     note: "泰国第四大岛却几乎无商业开发，海水清澈度堪比马尔代夫，风平浪静。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Koh+Kood+Thailand&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=Koh+Kood+Thailand&checkin=2027-03-07&checkout=2027-03-12&group_adults=2&no_rooms=1&selected_currency=USD"
   },
   {
     id: "st-kitts-nevis",
@@ -910,7 +854,6 @@ window.DESTINATIONS_DATA = [
     verified: false,
     tags: ["尼维斯火山云雾峰", "世界遗产硫磺石山要塞"],
     note: "双子火山岛，Pinney's Beach 金沙滩椰林摇曳，游客稀少、宁静优雅。",
-    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=St+Kitts+and+Nevis&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD",
-    flights: {}
+    hotelUrl: "https://www.booking.com/searchresults.en-us.html?ss=St+Kitts+and+Nevis&checkin=2027-05-09&checkout=2027-05-14&group_adults=2&no_rooms=1&selected_currency=USD"
   }
 ];

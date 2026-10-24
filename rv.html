@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Overland Odyssey · 全球 20 大殿堂级房车自驾路线 & 五大洲 16 城比价中心</title>
+  <meta name="description" content="专为 2大3小（6–7铺位 C型/鹅头房车）打造的全球 20 大殿堂级房车自驾路线图鉴，附五大洲 16 城 Camper Champ Step 1 Checkout 实时全包结账比价实验室、跨国提车立省 $1,500+ 秘籍与 30 尺大车窄路黑名单。" />
+  <meta name="theme-color" content="#0c1612" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c1612'/%3E%3Cpath d='M5 20V11a3 3 0 0 1 3-3h11l5 5v7H5z' fill='none' stroke='%23f0a830' stroke-width='1.8'/%3E%3Ccircle cx='10' cy='21' r='2.5' fill='%2352b788'/%3E%3Ccircle cx='20' cy='21' r='2.5' fill='%2352b788'/%3E%3Cpath d='M3 25h26' stroke='%23d95f3b' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" />
+  <style>
+    /* ==========================================================================
+       The Overland Odyssey · 国家公园拓印、松林篝火与公路路书
+       Deep Alpine Forest (#0c1612) · Campfire Amber (#f0a830) ·
+       Canyon Terracotta (#d95f3b) · Meadow Sage (#52b788)
+       ========================================================================== */
+    :root {
+      --forest-deep: #0c1612;
+      --forest-panel: #111f19;
+      --forest-card: #152720;
+      --forest-elevated: #1b3128;
+      --forest-hover: #213b30;
+
+      --amber: #f0a830;
+      --amber-bright: #ffc45c;
+      --amber-soft: rgba(240, 168, 48, 0.14);
+      --terracotta: #d95f3b;
+      --terracotta-soft: rgba(217, 95, 59, 0.16);
+      --sage: #52b788;
+      --sage-bright: #74c69d;
+      --sage-soft: rgba(82, 183, 136, 0.15);
+      --sky-glacier: #6ec6ff;
+
+      --parchment: #f4efe6;
+      --text: #eef3ef;
+      --text-muted: #9eb3a7;
+      --text-dim: #688073;
+
+      --border: rgba(82, 183, 136, 0.16);
+      --border-amber: rgba(240, 168, 48, 0.34);
+      --border-strong: rgba(240, 168, 48, 0.55);
+
+      --font-display: "Cinzel", "Noto Serif SC", serif;
+      --font-serif: "Noto Serif SC", "Songti SC", serif;
+      --font-sans: "DM Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+
+      --wrap: 1280px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      background-color: var(--forest-deep);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(240, 168, 48, 0.32); color: #fff; }
+
+    .wrap { width: min(var(--wrap), 100% - 40px); margin-inline: auto; }
+
+    /* Topographic Contour Background & Campfire Glow ------------------------ */
+    .topo-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(65% 45% at 50% 0%, rgba(240, 168, 48, 0.13) 0%, transparent 70%),
+        radial-gradient(45% 40% at 12% 30%, rgba(82, 183, 136, 0.10) 0%, transparent 65%),
+        radial-gradient(45% 40% at 88% 65%, rgba(217, 95, 59, 0.09) 0%, transparent 65%),
+        linear-gradient(180deg, #09110e 0%, #0c1612 45%, #0a130f 100%);
+    }
+    .topo-lines {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.065;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%2352b788' stroke-width='1'%3E%3Cpath d='M0 60 Q 100 20, 200 70 T 400 50'/%3E%3Cpath d='M0 130 Q 120 85, 220 140 T 400 120'/%3E%3Cpath d='M0 210 Q 90 175, 210 220 T 400 195'/%3E%3Cpath d='M0 290 Q 140 250, 250 300 T 400 280'/%3E%3Cpath d='M0 360 Q 110 330, 230 370 T 400 350'/%3E%3Cellipse cx='290' cy='140' rx='65' ry='28'/%3E%3Cellipse cx='290' cy='140' rx='32' ry='12'/%3E%3Cellipse cx='110' cy='295' rx='75' ry='30'/%3E%3Cellipse cx='110' cy='295' rx='38' ry='14'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Sticky Global Header & Navigation Bar (`switch`) ---------------------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 22, 18, 0.90);
+      -webkit-backdrop-filter: saturate(1.4) blur(16px);
+      backdrop-filter: saturate(1.4) blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 66px;
+      padding: 8px 0;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, rgba(240, 168, 48, 0.22), rgba(82, 183, 136, 0.16));
+      border: 1px solid var(--border-amber);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber);
+    }
+    .brand-badge svg { width: 20px; height: 20px; }
+    .brand-copy { display: flex; flex-direction: column; }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--parchment);
+      line-height: 1.15;
+    }
+    .brand-sub {
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      color: var(--amber);
+    }
+
+    nav.switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(17, 31, 25, 0.85);
+      overflow-x: auto;
+      max-width: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav.switch a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+      transition: all 0.2s var(--ease);
+    }
+    nav.switch a:hover {
+      color: var(--parchment);
+      background: rgba(82, 183, 136, 0.12);
+    }
+    nav.switch a[aria-current="page"] {
+      background: linear-gradient(135deg, var(--amber) 0%, #df8522 100%);
+      color: #0c1612;
+      font-weight: 700;
+      box-shadow: 0 2px 14px rgba(240, 168, 48, 0.35);
+    }
+
+    /* Sub-navigation Jump Bar ----------------------------------------------- */
+    .subnav-bar {
+      background: rgba(17, 31, 25, 0.78);
+      border-bottom: 1px solid var(--border);
+      padding: 7px 0;
+      overflow-x: auto;
+    }
+    .subnav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 12.5px;
+      white-space: nowrap;
+    }
+    .subnav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .subnav-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 9px;
+      border-radius: 4px;
+      background: var(--terracotta-soft);
+      border: 1px solid rgba(217, 95, 59, 0.4);
+      color: #ff9b7d;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+    .subnav-links a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .subnav-links a:hover { color: var(--amber-bright); }
+    .fx-ticker {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--sage-bright);
+    }
+
+    /* Hero Section ---------------------------------------------------------- */
+    .hero {
+      position: relative;
+      padding: clamp(44px, 6vw, 76px) 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-top-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .np-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--border-amber);
+      background: var(--amber-soft);
+      color: var(--amber-bright);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .highway-shield {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 13px;
+      border-radius: 8px;
+      background: rgba(82, 183, 136, 0.12);
+      border: 1px solid rgba(82, 183, 136, 0.35);
+      color: var(--sage-bright);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 4.4vw, 52px);
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--parchment);
+      max-width: 24em;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--amber-bright) 0%, var(--amber) 48%, var(--sage-bright) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-lede {
+      margin-top: 18px;
+      max-width: 62em;
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .hero-lede strong { color: var(--parchment); font-weight: 600; }
+
+    /* KPI Strip ------------------------------------------------------------- */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .kpi-card {
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: linear-gradient(160deg, rgba(21, 39, 32, 0.92), rgba(15, 29, 23, 0.92));
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--amber), var(--sage));
+    }
+    .kpi-num {
+      font-family: var(--font-mono);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--amber-bright);
+      line-height: 1.15;
+    }
+    .kpi-label {
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--parchment);
+    }
+    .kpi-sub {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 4 Iron Rules Methodology Grid ----------------------------------------- */
+    .rules-section {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+    .section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--parchment);
+    }
+    .section-desc {
+      max-width: 44em;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .rule-card {
+      padding: 22px;
+      border-radius: 16px;
+      background: var(--forest-card);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s var(--ease), border-color 0.25s;
+    }
+    .rule-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-amber);
+    }
+    .rule-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .rule-idx {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: var(--amber-soft);
+      color: var(--amber-bright);
+      border: 1px solid var(--border-amber);
+    }
+    .rule-weight {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--sage-bright);
+      font-weight: 600;
+    }
+    .rule-card h3 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: 8px;
+    }
+    .rule-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.68;
+    }
+    .rule-metric {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(82, 183, 136, 0.22);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--amber-bright);
+    }
+
+    /* Sticky Filter Bar for Top 20 Explorer --------------------------------- */
+    .explorer-section {
+      padding: 48px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-console {
+      position: sticky;
+      top: 67px;
+      z-index: 40;
+      padding: 16px 20px;
+      border-radius: 16px;
+      background: rgba(17, 31, 25, 0.95);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-amber);
+      box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.75);
+      margin-bottom: 28px;
+    }
+    .filter-row-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .search-input-wrap {
+      flex: 1 1 280px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: var(--forest-deep);
+      border: 1px solid var(--border);
+    }
+    .search-input-wrap:focus-within {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(240, 168, 48, 0.15);
+    }
+    .search-input-wrap svg {
+      width: 17px;
+      height: 17px;
+      color: var(--amber);
+      flex-shrink: 0;
+    }
+    .search-input-wrap input {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      font-size: 14px;
+      color: var(--parchment);
+    }
+    .search-input-wrap input::placeholder { color: var(--text-dim); }
+
+    .filter-selects {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .console-select {
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--forest-deep);
+      border: 1px solid var(--border);
+      color: var(--parchment);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .console-select:focus {
+      outline: none;
+      border-color: var(--amber);
+    }
+
+    .filter-row-chips {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(82, 183, 136, 0.14);
+    }
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+    .chip-group-label {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-right: 4px;
+      font-weight: 600;
+    }
+    .filter-chip {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      transition: all 0.18s;
+    }
+    .filter-chip:hover {
+      color: var(--parchment);
+      border-color: var(--border-amber);
+    }
+    .filter-chip.active {
+      background: var(--amber);
+      color: #0c1612;
+      border-color: var(--amber);
+      font-weight: 700;
+    }
+    .result-counter {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--sage-bright);
+    }
+
+    /* Top 20 Route Cards ---------------------------------------------------- */
+    .routes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .route-card {
+      border-radius: 20px;
+      background: linear-gradient(165deg, rgba(21, 39, 32, 0.96) 0%, rgba(14, 27, 22, 0.98) 100%);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+    }
+    .route-card:hover {
+      border-color: var(--border-amber);
+      box-shadow: 0 22px 48px -18px rgba(0, 0, 0, 0.85);
+    }
+    .route-card.is-top3 {
+      border-color: rgba(240, 168, 48, 0.42);
+    }
+
+    /* Left Visual Column */
+    .route-media {
+      position: relative;
+      min-height: 320px;
+      background: linear-gradient(145deg, #1b352b, #0d1b15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+    }
+    .route-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.78;
+      transition: transform 0.6s var(--ease), opacity 0.3s;
+    }
+    .route-card:hover .route-media img {
+      transform: scale(1.04);
+      opacity: 0.88;
+    }
+    .route-media-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(12, 22, 18, 0.65) 0%, rgba(12, 22, 18, 0.15) 45%, rgba(12, 22, 18, 0.92) 100%);
+      pointer-events: none;
+    }
+    .media-top-badges, .media-bottom-info {
+      position: relative;
+      z-index: 2;
+    }
+    .media-top-badges {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .rank-shield {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9px;
+      background: rgba(12, 22, 18, 0.88);
+      border: 1.5px solid var(--amber);
+      color: var(--amber-bright);
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    }
+    .continent-pill {
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: rgba(12, 22, 18, 0.84);
+      border: 1px solid rgba(82, 183, 136, 0.45);
+      color: var(--sage-bright);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .media-bottom-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pickup-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--parchment);
+      background: rgba(12, 22, 18, 0.85);
+      padding: 6px 11px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .dominance-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--amber-bright);
+      background: rgba(240, 168, 48, 0.18);
+      border: 1px solid rgba(240, 168, 48, 0.4);
+      padding: 5px 11px;
+      border-radius: 8px;
+    }
+
+    /* Right Content Column */
+    .route-body {
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .route-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .route-title-group h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(19px, 2.2vw, 23px);
+      font-weight: 700;
+      color: var(--parchment);
+      line-height: 1.32;
+    }
+    .route-name-en {
+      font-size: 12.5px;
+      color: var(--text-dim);
+      margin-top: 3px;
+      font-family: var(--font-sans);
+    }
+    .telemetry-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .tel-pill {
+      padding: 5px 11px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--forest-elevated);
+      border: 1px solid var(--border);
+      color: var(--parchment);
+    }
+    .tel-pill.rig-easy {
+      color: var(--sage-bright);
+      border-color: rgba(82, 183, 136, 0.4);
+      background: rgba(82, 183, 136, 0.10);
+    }
+    .tel-pill.rig-wind {
+      color: #ffab91;
+      border-color: rgba(217, 95, 59, 0.45);
+      background: rgba(217, 95, 59, 0.14);
+    }
+
+    /* Roadbook Loop Strip */
+    .roadbook-strip {
+      padding: 9px 14px;
+      border-radius: 10px;
+      background: rgba(12, 22, 18, 0.65);
+      border-left: 3px solid var(--amber);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .roadbook-strip strong {
+      color: var(--amber-bright);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    /* 2大3小 7晚全包落地账单条 (All-In Checkout Ledger Bar) */
+    .ledger-box {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(240, 168, 48, 0.10) 0%, rgba(82, 183, 136, 0.08) 100%);
+      border: 1px solid rgba(240, 168, 48, 0.28);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      align-items: center;
+    }
+    .ledger-cell {
+      display: flex;
+      flex-direction: column;
+    }
+    .ledger-cell + .ledger-cell {
+      border-left: 1px solid rgba(255, 255, 255, 0.09);
+      padding-left: 12px;
+    }
+    .ledger-label {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .ledger-val {
+      font-family: var(--font-mono);
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--parchment);
+      margin-top: 2px;
+    }
+    .ledger-val.highlight-rmb {
+      color: var(--amber-bright);
+      font-size: 15.5px;
+    }
+    .ledger-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 1px;
+    }
+
+    /* Highlight narrative */
+    .route-highlight {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.72;
+    }
+
+    /* 3 Signature Campsites & Vehicles Row */
+    .camps-and-meta {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 14px;
+    }
+    .meta-panel {
+      padding: 12px 14px;
+      border-radius: 11px;
+      background: rgba(12, 22, 18, 0.55);
+      border: 1px solid rgba(82, 183, 136, 0.15);
+    }
+    .meta-panel-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sage-bright);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .campsite-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .campsite-pill {
+      font-size: 12.5px;
+      color: var(--parchment);
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      line-height: 1.45;
+    }
+    .campsite-pill span.camp-num {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: var(--sage-soft);
+      color: var(--sage-bright);
+      flex-shrink: 0;
+    }
+    .vehicle-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .vehicle-tag {
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: rgba(240, 168, 48, 0.12);
+      border: 1px solid rgba(240, 168, 48, 0.28);
+      color: var(--amber-bright);
+      font-size: 12px;
+      font-family: var(--font-mono);
+    }
+    .best-months-line {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .best-months-line b { color: var(--parchment); }
+
+    /* Campsite Booking & Money-Saving Pro-Tip Box */
+    .protip-box {
+      padding: 11px 14px;
+      border-radius: 10px;
+      background: rgba(217, 95, 59, 0.11);
+      border: 1px solid rgba(217, 95, 59, 0.35);
+      font-size: 13px;
+      color: #ffd6c9;
+      line-height: 1.62;
+    }
+
+    /* ==========================================================================
+       MODULE 2: 五大洲 16 城 Step 1 Checkout 全包比价实验室
+       ========================================================================== */
+    .checkout-lab-section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* 3 Mega Cross-Border / Cross-Season Savings Hacks */
+    .hacks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+    .hack-card {
+      padding: 22px;
+      border-radius: 16px;
+      background: linear-gradient(155deg, rgba(27, 49, 40, 0.95), rgba(16, 30, 24, 0.98));
+      border: 1.5px solid var(--border-amber);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .hack-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .hack-badge {
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--amber);
+      color: #0c1612;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .hack-saving {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sage-bright);
+    }
+    .hack-card h3 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: 10px;
+      line-height: 1.38;
+    }
+    .hack-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.68;
+    }
+    .hack-metric-bar {
+      margin-top: 14px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      background: rgba(12, 22, 18, 0.75);
+      border: 1px solid rgba(82, 183, 136, 0.25);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--amber-bright);
+    }
+
+    /* Interactive Region Switcher & Table */
+    .lab-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .lab-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lab-tab {
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--forest-card);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .lab-tab:hover {
+      color: var(--parchment);
+      border-color: var(--border-amber);
+    }
+    .lab-tab.active {
+      background: linear-gradient(135deg, var(--sage) 0%, #3b946b 100%);
+      color: #09130f;
+      border-color: var(--sage-bright);
+      font-weight: 700;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--forest-panel);
+    }
+    table.checkout-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      text-align: left;
+      font-size: 13.5px;
+    }
+    table.checkout-table th {
+      padding: 14px 16px;
+      background: rgba(27, 49, 40, 0.85);
+      color: var(--amber-bright);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-amber);
+    }
+    table.checkout-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(82, 183, 136, 0.12);
+      vertical-align: top;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    table.checkout-table tr:hover td {
+      background: rgba(82, 183, 136, 0.05);
+    }
+    .td-city {
+      font-weight: 700;
+      color: var(--parchment);
+      font-size: 14px;
+    }
+    .td-season {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--amber-soft);
+      color: var(--amber-bright);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+    .td-allin {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--sage-bright);
+      white-space: nowrap;
+    }
+    .td-allin-rmb {
+      display: block;
+      font-size: 12px;
+      color: var(--amber-bright);
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       MODULE 3: 30尺大房车窄路与强风避坑黑名单 (Eliminated Routes Warning Box)
+       ========================================================================== */
+    .blacklist-section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .blacklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .elim-card {
+      padding: 22px 24px;
+      border-radius: 16px;
+      background: linear-gradient(160deg, rgba(42, 20, 18, 0.72), rgba(22, 18, 17, 0.92));
+      border: 1px solid rgba(217, 95, 59, 0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .elim-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .elim-danger-badge {
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(217, 95, 59, 0.25);
+      border: 1px solid rgba(217, 95, 59, 0.6);
+      color: #ff9e80;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .elim-limit {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--amber-bright);
+    }
+    .elim-card h3 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffe8e0;
+    }
+    .elim-card p {
+      font-size: 13.5px;
+      color: #dfc4bc;
+      line-height: 1.7;
+    }
+    .elim-alt {
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(82, 183, 136, 0.14);
+      border: 1px solid rgba(82, 183, 136, 0.38);
+      font-size: 12.5px;
+      color: var(--sage-bright);
+      font-weight: 600;
+    }
+
+    /* Golden Rules Footer Banner -------------------------------------------- */
+    .golden-rules-section {
+      padding: 48px 0 64px;
+    }
+    .golden-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .golden-card {
+      padding: 22px;
+      border-radius: 16px;
+      background: var(--forest-card);
+      border: 1px solid var(--border);
+    }
+    .golden-card h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      color: var(--amber-bright);
+      margin-bottom: 10px;
+    }
+    .golden-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .site-footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* Responsive adjustments ------------------------------------------------ */
+    @media (max-width: 1060px) {
+      .kpi-grid, .rules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .route-card { grid-template-columns: 1fr; }
+      .route-media { min-height: 230px; }
+      .hacks-grid, .golden-grid { grid-template-columns: 1fr; }
+      .blacklist-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .kpi-grid, .rules-grid { grid-template-columns: 1fr; }
+      .ledger-box { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ledger-cell:nth-child(3) { border-left: 0; padding-left: 0; }
+      .camps-and-meta { grid-template-columns: 1fr; }
+      .filter-console { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topo-backdrop" aria-hidden="true"></div>
+  <div class="topo-lines" aria-hidden="true"></div>
+
+  <!-- Global Top Header & Switch Navigation -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand" aria-label="Destination Atlas 首页">
+        <span class="brand-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 16V8a2 2 0 0 1 2-2h10l4 4v6H3z"/>
+            <circle cx="7.5" cy="16.5" r="2.5"/>
+            <circle cx="15.5" cy="16.5" r="2.5"/>
+            <path d="M14 6v4h5"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-title">The Overland Odyssey</span>
+          <span class="brand-sub">Global RV &amp; Motorhome Atlas</span>
+        </span>
+      </a>
+
+      <nav class="switch" aria-label="全站图鉴导航">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html">奢华邮轮 50</a>
+        <a href="canals.html">运河房船 20</a>
+        <a href="sailing.html">帆船航线 20</a>
+        <a href="rv.html" aria-current="page">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+    </div>
+
+    <div class="subnav-bar">
+      <div class="wrap subnav-inner">
+        <div class="subnav-links">
+          <span class="subnav-tag">2大3小 · 6–7铺C型/鹅头房车基准</span>
+          <a href="#methodology">四大评选铁律</a>
+          <a href="#top20-explorer">全球 Top 20 房车路线图鉴</a>
+          <a href="#checkout-lab">16 城 Step 1 实时结账比价中心</a>
+          <a href="#savings-hacks">跨国/跨季省 $1,500+ 秘籍</a>
+          <a href="#eliminated-blacklist">30尺大车窄路黑名单</a>
+        </div>
+        <div class="fx-ticker">基准汇率：1 USD ≈ 7.2 RMB | AUD 0.698 | NZD 0.567 | CAD 0.709 | EUR 1.121</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-top-row">
+          <span class="np-stamp">🏕️ National Park &amp; Overland Edition · 国家公园拓印、松林篝火与公路路书</span>
+          <span class="highway-shield">🛣️ 6–7 BERTH CLASS-C / ALCOVE · 7–10 DAY GOLDEN LOOPS</span>
+        </div>
+        <h1>全球 20 大殿堂级房车自驾路线 &amp;<br/><em>五大洲 16 城（2大3小）全包比价中心</em></h1>
+        <p class="hero-lede">
+          彻底跳出“普通小轿车自驾游”的惯性思维！针对 <strong>2大3小（五口之家，需 ≥3 张独立大床与独立卫浴的 6–7 铺位 C 型或鹅头大型房车）</strong>，我们以 <strong>“房车对 $800+/晚景区酒店的降维打击力（位置特权）”</strong>、<strong>“7.5–9 米大车道路几何友好度”</strong>、<strong>“单周 650–1,450 km 黄金里程”</strong> 与 <strong>“营地硬核配套”</strong> 四大铁律严选全球 Top 20 传奇环线，并直连 Camper Champ <strong>Step 1 Checkout 实时结账页</strong>，完整拆解五大洲 16 城从裸车、零起赔全险到床品里程包的真实落地总价。
+        </p>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-num">$35–$60 / 晚</div>
+            <div class="kpi-label">直接睡在核心景区正中央</div>
+            <div class="kpi-sub">对标园外 $800+/晚两间酒店且每天少堵车 3 小时</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num">680–1,450 km</div>
+            <div class="kpi-label">单周黄金闭环里程（日均 1.5–2.2h）</div>
+            <div class="kpi-sub">拒绝每天开 4 小时以上沦为长途货车司机</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num">¥1.22万–¥2.10万</div>
+            <div class="kpi-label">平季黄金月 2大3小 7晚住行全包</div>
+            <div class="kpi-sub">含6-7人房车+0起赔全险+床品厨具+7晚营地与油费</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num">立省 $1,500+</div>
+            <div class="kpi-label">跨国提车与极昼计价漏洞实测</div>
+            <div class="kpi-sub">汉堡/斯德哥尔摩提车去挪威、6月冰岛 Indie 淡季价</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY: 4 IRON RULES -->
+    <section class="rules-section" id="methodology">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">METHODOLOGY · 四大硬核评选铁律</span>
+            <h2 class="section-title">为什么有些名气极大的自驾公路，反而是 30 尺大房车的灾难？</h2>
+          </div>
+          <p class="section-desc">
+            6–7 铺位家庭房车普遍车长 7.0–9.2 米、宽 2.35–2.5 米、高 3.2 米以上（仅日本丰田 Camroad 为 5.2 米精巧型）。只有同时满足以下四大铁律，才能让全家拥有松弛感拉满的移动城堡假期。
+          </p>
+        </div>
+
+        <div class="rules-grid">
+          <article class="rule-card">
+            <div>
+              <div class="rule-top">
+                <span class="rule-idx">IRON RULE 01</span>
+                <span class="rule-weight">权重 35%</span>
+              </div>
+              <h3>位置特权与酒店降维打击力</h3>
+              <p>
+                当景区内酒店一房难求或 2大3小订两间房高达 $800–$1,200/晚时，房车能否花 <strong>$35–$60/晚</strong> 直接停在荷马角伸入太平洋 7 公里的海滩尖端、露易丝湖费尔蒙酒店旁、黄石园内 Fishing Bridge 或冰岛 60 米高斯科加瀑布正下方？
+              </p>
+            </div>
+            <div class="rule-metric">⚡ 清晨 7 点大巴团未进园时独占世界级奇观</div>
+          </article>
+
+          <article class="rule-card">
+            <div>
+              <div class="rule-top">
+                <span class="rule-idx">IRON RULE 02</span>
+                <span class="rule-weight">权重 30%</span>
+              </div>
+              <h3>营地硬核配套与三娃放电属性</h3>
+              <p>
+                顶级房车线的营地本身就是度假目的地：澳洲 <strong>BIG4 / NRMA 水上滑梯与充气跳跳枕营地</strong>、北海道步行即达的 <strong>森林野天温泉与湖滩挖沙温泉</strong>、多洛米蒂 <strong>Caravan Park Sexten 五星雪山无边恒温泳池</strong>、法国古堡草坪营地。
+              </p>
+            </div>
+            <div class="rule-metric">🏕️ 全水电排污桩 (Full Hookups) + 篝火烤棉花糖</div>
+          </article>
+
+          <article class="rule-card">
+            <div>
+              <div class="rule-top">
+                <span class="rule-idx">IRON RULE 03</span>
+                <span class="rule-weight">权重 20%</span>
+              </div>
+              <h3>7.5–9 米大车驾驶几何友好度</h3>
+              <p>
+                严苛评估车道宽度、对向大巴会车余量、悬崖急弯侧倾度、观景台大车专属泊位（RV Parking）以及营地进出转弯半径。凡是双向单车道紧贴 2 米石墙（如爱尔兰/康沃尔）或连续发卡弯悬崖（如加州大苏尔）一律清退。
+              </p>
+            </div>
+            <div class="rule-metric">🛡️ 拒绝窄巷刮后视镜与后排孩子晕车呕吐</div>
+          </article>
+
+          <article class="rule-card">
+            <div>
+              <div class="rule-top">
+                <span class="rule-idx">IRON RULE 04</span>
+                <span class="rule-weight">权重 15%</span>
+              </div>
+              <h3>单周黄金里程 (650–1,450 km)</h3>
+              <p>
+                7–9 天总里程严格控制在 <strong>650 至 1,450 公里</strong>，折合每天纯驾驶时间仅 <strong>1.2–2.4 小时</strong>。拒绝像“7天强跑1,700km冰岛大环岛”那样把 3 个孩子整天绑在安全座椅上赶路，留足下午在营地煮海鲜、看动物的慢时光。
+              </p>
+            </div>
+            <div class="rule-metric">⏱️ 每天下午 4 点前入驻营地升起松林篝火</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 1: TOP 20 GLOBAL RV ROUTES EXPLORER -->
+    <section class="explorer-section" id="top20-explorer">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">GLOBAL TOP 20 MOTORHOME ODYSSEYS · 全球 20 大殿堂级房车路线</span>
+            <h2 class="section-title">全球 20 大房车自驾环线硬核路书 &amp; 2大3小全包落地账单</h2>
+          </div>
+          <p class="section-desc">
+            每条路线均包含：① 车行提车全包价（7晚基础车租 + 当地税 + 清洁准备费 + 零起赔全险 + 5人份床品厨具 + 充足里程/柴油税）与 ② 7晚营地+燃油过路渡轮费实测，支持按大洲、气候月份、大车友好度与全包总价实时筛选排序。
+          </p>
+        </div>
+
+        <!-- Sticky Filter Console -->
+        <div class="filter-console" role="region" aria-label="房车路线筛选控制台">
+          <div class="filter-row-top">
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+              <input type="search" id="routeSearchInput" placeholder="搜索路线、国家、提车城市、传奇营地 (如：荷马角、班夫、多洛米蒂、袋熊、温泉)..." />
+            </div>
+
+            <div class="filter-selects">
+              <select id="seasonFilter" class="console-select" aria-label="按最佳出行季节筛选">
+                <option value="ALL">📅 全部出行月份窗口</option>
+                <option value="5-6月黄金平季">🌿 5-6月黄金平季 (极昼/融冰封神价)</option>
+                <option value="7-8月盛夏">☀️ 7-8月盛夏暑假季</option>
+                <option value="9-10月金秋">🍁 9-10月金秋彩林季 (车租暴跌)</option>
+                <option value="11-3月南半球暖季">🦘 11-3月南半球暖季 (澳新/南非)</option>
+              </select>
+
+              <select id="rigFilter" class="console-select" aria-label="按大车驾驶友好度筛选">
+                <option value="ALL">🚐 全部大车驾驶友好度</option>
+                <option value="★★★★★ 极宽阔好开">★★★★★ 极宽阔好开 (新手友好)</option>
+                <option value="★★★★☆ 标准友好">★★★★☆ 标准友好</option>
+                <option value="★★★☆☆ 需注意横风/山路">★★★☆☆ 需注意横风/山路</option>
+              </select>
+
+              <select id="sortSelect" class="console-select" aria-label="排序方式">
+                <option value="rank">🏆 按综合排名 (NO.1 → NO.20)</option>
+                <option value="priceAsc">💰 按平季全包总价 (从低到高)</option>
+                <option value="distanceAsc">📏 按单周总里程 (从短到长)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-row-chips">
+            <div class="chip-group" id="continentChips" role="tablist" aria-label="按大洲筛选">
+              <span class="chip-group-label">大洲版块：</span>
+              <button type="button" class="filter-chip active" data-continent="ALL">全部 20</button>
+              <button type="button" class="filter-chip" data-continent="北美">北美 (6)</button>
+              <button type="button" class="filter-chip" data-continent="欧洲">欧洲 (6)</button>
+              <button type="button" class="filter-chip" data-continent="大洋洲">大洋洲 (5)</button>
+              <button type="button" class="filter-chip" data-continent="亚洲与非洲">亚洲与非洲 (3)</button>
+            </div>
+            <div class="result-counter" id="routeResultCount">正在加载 20 条殿堂级房车路线...</div>
+          </div>
+        </div>
+
+        <!-- Routes Cards Container -->
+        <div class="routes-grid" id="routesGrid"></div>
+      </div>
+    </section>
+
+    <!-- MODULE 2: 16-CITY LIVE STEP 1 CHECKOUT PRICING LAB -->
+    <section class="checkout-lab-section" id="checkout-lab">
+      <div class="wrap">
+        <div class="section-head" id="savings-hacks">
+          <div>
+            <span class="section-eyebrow">STEP 1 CHECKOUT PRICING LAB · 五大洲 16 城实时结账比价实验室</span>
+            <h2 class="section-title">三大跨国/跨季立省 $1,500+ 神级彩蛋 &amp; 16 城全包价格拆解表</h2>
+          </div>
+          <p class="section-desc">
+            为什么只看租车首页的“每日裸车价”一定会踩坑？因为北美传统车行基础含 0 里程且强制收准备费，欧洲需算 19%–25% VAT 与清洁物流费，澳新按“8个自然日”计费且有新西兰 RUC 柴油税。以下为实测 Step 1 Checkout 真实全包账单。
+          </p>
+        </div>
+
+        <!-- 3 Mega Savings Hacks Cards -->
+        <div class="hacks-grid" id="hacksGrid"></div>
+
+        <!-- Interactive Region Tabs -->
+        <div class="lab-controls">
+          <div class="lab-tabs" id="labRegionTabs" role="tablist" aria-label="比价实验室区域切换">
+            <button type="button" class="lab-tab active" data-region="northAmerica">🇺🇸🇨🇦 北美 9 组核心数据 (含安克雷奇5季对比)</button>
+            <button type="button" class="lab-tab" data-region="europe">🇪🇺🇮🇸🇳🇴 欧洲与冰岛挪威 7 组数据 (含跨国提车)</button>
+            <button type="button" class="lab-tab" data-region="oceania">🇦🇺🇳🇿 澳新 5 组数据 (7晚=8自然日全含价)</button>
+            <button type="button" class="lab-tab" data-region="naAddons">🧾 美加传统车行附加费精确拆解表</button>
+          </div>
+        </div>
+
+        <!-- Checkout Comparison Table -->
+        <div class="table-scroll" id="checkoutTableContainer"></div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: ELIMINATED ROUTES WARNING BOX (30FT BIG-RIG BLACKLIST) -->
+    <section class="blacklist-section" id="eliminated-blacklist">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">30-FT BIG-RIG WARNING BLACKLIST · 30尺大房车窄路与强风避坑黑名单</span>
+            <h2 class="section-title">独立排雷：为什么这 4 条大名鼎鼎的自驾线被清退出大房车榜单？</h2>
+          </div>
+          <p class="section-desc">
+            开小轿车或敞篷跑车绝美的海岸公路，换成 9 米长、2.5 米宽、3.3 米高的 6–7 人家庭大房车后，往往意味着晕车呕吐、高额罚单或保险拒赔。出发前请务必核对以下物理与法规红线：
+          </p>
+        </div>
+
+        <div class="blacklist-grid" id="blacklistGrid"></div>
+      </div>
+    </section>
+
+    <!-- FAMILY RV GOLDEN RULES -->
+    <section class="golden-rules-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">2A3C OVERLAND PLAYBOOK · 五口之家海外房车三大实操铁律</span>
+            <h2 class="section-title">提车第一天就能立省 $300 與规避法规红线的行前清单</h2>
+          </div>
+        </div>
+
+        <div class="golden-grid">
+          <div class="golden-card">
+            <h4>🛒 铁律一：美加欧 Walmart / IKEA 自购床品立省 $280+</h4>
+            <p>
+              北美与欧洲车行的 5 人份官方床品包收费高达 <strong>$265–$375 USD</strong>（挪威 Touring Cars 甚至收 $818 USD 天价）。提车后第一站本来就要去大型超市采购一周食材，直接在当地 <strong>Walmart / Target（美加）或 IKEA / 迪卡侬（欧洲）</strong> 买全新羽绒被、枕头与床单，全家仅需 <strong>$80–$95 USD</strong>，全新拆封更干净卫生！（注：澳大利亚、新西兰与日本房车已免费包含全套被褥浴巾，无需自购）。
+            </p>
+          </div>
+          <div class="golden-card">
+            <h4>👶 铁律二：3 个孩子的儿童安全座椅合规红线</h4>
+            <p>
+              <strong>澳大利亚与新西兰法规最严</strong>：6 铺位房车后排通常仅配备 <strong>2 个 ISOFIX / 顶部锚点（Top Tether）</strong>，最多只能合法安装 <strong>2 个儿童安全座椅或增高垫</strong>，第 3 个大孩子必须年满 7 周岁（或身高满 145cm）使用成人三点式安全带！而 <strong>美国、加拿大与欧洲</strong>（如 McRent Sunlight A70）支持通过安全带或锚点安装 2 个安全座椅 + 2 个增高垫。
+            </p>
+          </div>
+          <div class="golden-card">
+            <h4>⏰ 铁律三：国家公园神仙营地抢位时间窗</h4>
+            <p>
+              <strong>加拿大国家公园（Parks Canada）</strong>：每年 <strong>1 月中下旬</strong> 开放全年预订，班夫 Tunnel Mountain 与贾斯珀 Whistlers 带电营位需提前 4–5 个月锁定。<br/>
+              <strong>美国国家公园（Recreation.gov / Xanterra）</strong>：黄石 Fishing Bridge 支持提前 <strong>12 个月</strong> 预订；优胜美地、锡安 Watchman、拱门、迪纳利严格提前 <strong>6 个月</strong> 放票。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Destination Atlas · Page 4 of 5 · 全球 20 大殿堂级房车自驾路线 &amp; 五大洲 16 城比价中心 (`rv.html` + `data_rv_top20.js`)</p>
+      <p style="margin-top:6px;">数据基准：2大3小（6–7铺位C型/鹅头房车 · 7晚闭环）| 实时核验自 Camper Champ Step 1 Checkout 结账页与各国国家公园官方营地系统</p>
+    </div>
+  </footer>
+
+  <!-- Load Verified Top 20 RV Routes & 16-City Checkout Database -->
+  <script src="data_rv_top20.js"></script>
+  <script>
+    (function () {
+      const routes = window.RV_ROUTES_TOP20 || [];
+      const eliminated = window.RV_ELIMINATED_ROUTES || [];
+      const checkoutDb = window.RV_CITY_CHECKOUT_DB || {};
+
+      const routesGrid = document.getElementById("routesGrid");
+      const routeResultCount = document.getElementById("routeResultCount");
+      const searchInput = document.getElementById("routeSearchInput");
+      const seasonFilter = document.getElementById("seasonFilter");
+      const rigFilter = document.getElementById("rigFilter");
+      const sortSelect = document.getElementById("sortSelect");
+      const continentChips = document.getElementById("continentChips");
+
+      let activeContinent = "ALL";
+
+      function parseMinUsd(rangeStr) {
+        if (!rangeStr) return 99999;
+        const m = String(rangeStr).replace(/,/g, "").match(/\d+/);
+        return m ? parseInt(m[0], 10) : 99999;
+      }
+
+      function renderRoutes() {
+        const q = (searchInput.value || "").trim().toLowerCase();
+        const seasonVal = seasonFilter.value;
+        const rigVal = rigFilter.value;
+        const sortVal = sortSelect.value;
+
+        let filtered = routes.filter((r) => {
+          if (activeContinent !== "ALL" && r.continent !== activeContinent) return false;
+          if (seasonVal !== "ALL" && !(r.seasonTags || []).includes(seasonVal)) return false;
+          if (rigVal !== "ALL" && r.bigRigFriendliness !== rigVal) return false;
+          if (q) {
+            const hay = [
+              r.name,
+              r.nameEn,
+              r.country,
+              r.continent,
+              r.pickupCity,
+              r.routeLoop,
+              r.highlight,
+              r.proTip,
+              ...(r.signatureCampsites || []),
+              ...(r.recommendedVehicles || [])
+            ]
+              .join(" ")
+              .toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        if (sortVal === "priceAsc") {
+          filtered.sort((a, b) => parseMinUsd(a.totalLandedUsd.shoulder) - parseMinUsd(b.totalLandedUsd.shoulder));
+        } else if (sortVal === "distanceAsc") {
+          filtered.sort((a, b) => a.distanceKm - b.distanceKm);
+        } else {
+          filtered.sort((a, b) => a.rank - b.rank);
+        }
+
+        routeResultCount.textContent = `当前显示 ${filtered.length} / ${routes.length} 条殿堂级房车环线`;
+
+        if (filtered.length === 0) {
+          routesGrid.innerHTML = `
+            <div style="padding:48px 24px;text-align:center;border-radius:16px;background:var(--forest-card);border:1px solid var(--border);">
+              <p style="font-size:16px;color:var(--parchment);font-weight:600;">未找到匹配的房车自驾路线</p>
+              <p style="font-size:13.5px;color:var(--text-muted);margin-top:6px;">请尝试切换大洲筛选或清空搜索关键词。</p>
+            </div>
+          `;
+          return;
+        }
+
+        routesGrid.innerHTML = filtered
+          .map((r) => {
+            const rankStr = String(r.rank).padStart(2, "0");
+            const rigClass = r.bigRigFriendliness.includes("★★★★★")
+              ? "rig-easy"
+              : r.bigRigFriendliness.includes("★★★")
+              ? "rig-wind"
+              : "";
+
+            const campsHtml = (r.signatureCampsites || [])
+              .map(
+                (c, i) => `
+                <li class="campsite-pill">
+                  <span class="camp-num">CAMP 0${i + 1}</span>
+                  <span>${c}</span>
+                </li>`
+              )
+              .join("");
+
+            const vehiclesHtml = (r.recommendedVehicles || [])
+              .map((v) => `<span class="vehicle-tag">🚐 ${v}</span>`)
+              .join("");
+
+            return `
+              <article class="route-card ${r.rank <= 3 ? "is-top3" : ""}" id="${r.id}">
+                <div class="route-media">
+                  <img src="${r.coverImage}" alt="${r.name}" loading="lazy" onerror="this.style.display='none'" />
+                  <div class="route-media-overlay"></div>
+                  <div class="media-top-badges">
+                    <span class="rank-shield">NO.${rankStr} ${r.rank <= 3 ? "· 殿堂三甲" : ""}</span>
+                    <span class="continent-pill">${r.continent} · ${r.country}</span>
+                  </div>
+                  <div class="media-bottom-info">
+                    <div class="pickup-badge">📍 提车枢纽：${r.pickupCity}</div>
+                    <div class="dominance-badge">
+                      <span>对标酒店位置特权</span>
+                      <span>${r.hotelDominanceScore}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="route-body">
+                  <div class="route-header-row">
+                    <div class="route-title-group">
+                      <h3>${r.name}</h3>
+                      <div class="route-name-en">${r.nameEn}</div>
+                    </div>
+                    <div class="telemetry-pills">
+                      <span class="tel-pill">🛣️ 环线 ${r.distanceKm} km</span>
+                      <span class="tel-pill">⏱️ 日均 ${r.dailyDriveHours}</span>
+                      <span class="tel-pill ${rigClass}">🛞 ${r.bigRigFriendliness}</span>
+                    </div>
+                  </div>
+
+                  <div class="roadbook-strip">
+                    <strong>ROADBOOK 路书走向</strong>
+                    <span>${r.routeLoop || ""}</span>
+                  </div>
+
+                  <div class="ledger-box" aria-label="2大3小 7晚全包落地账单">
+                    <div class="ledger-cell">
+                      <span class="ledger-label">① 7晚提车全包 (含全险床品里程)</span>
+                      <span class="ledger-val">平季 $${r.rentalAllInUsd.shoulder}</span>
+                      <span class="ledger-sub">旺季 $${r.rentalAllInUsd.peak} USD</span>
+                    </div>
+                    <div class="ledger-cell">
+                      <span class="ledger-label">② 7晚营地 + 燃油 + 渡轮过路</span>
+                      <span class="ledger-val">$${r.campAndFuelUsd} USD</span>
+                      <span class="ledger-sub">实测 ${r.distanceKm}km 油耗与全水电营位</span>
+                    </div>
+                    <div class="ledger-cell">
+                      <span class="ledger-label">③ 2大3小一周住行落地总价 (USD)</span>
+                      <span class="ledger-val">平季 $${r.totalLandedUsd.shoulder}</span>
+                      <span class="ledger-sub">旺季 $${r.totalLandedUsd.peak} USD</span>
+                    </div>
+                    <div class="ledger-cell">
+                      <span class="ledger-label">折合人民币总计 (住+行全包)</span>
+                      <span class="ledger-val highlight-rmb">¥${r.totalLandedRmb.shoulder}</span>
+                      <span class="ledger-sub">旺季约 ¥${r.totalLandedRmb.peak}</span>
+                    </div>
+                  </div>
+
+                  <p class="route-highlight">${r.highlight}</p>
+
+                  <div class="camps-and-meta">
+                    <div class="meta-panel">
+                      <div class="meta-panel-title">⛺ 三大必住传奇营地 (Signature Campsites)</div>
+                      <ul class="campsite-list">${campsHtml}</ul>
+                    </div>
+                    <div class="meta-panel">
+                      <div class="meta-panel-title">🚐 推荐 6–7 铺车型 &amp; 黄金气候月份</div>
+                      <div class="vehicle-tags">${vehiclesHtml}</div>
+                      <div class="best-months-line"><b>最佳月份：</b>${r.bestMonths}</div>
+                    </div>
+                  </div>
+
+                  <div class="protip-box">
+                    ${r.proTip}
+                  </div>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      // Filter listeners
+      searchInput.addEventListener("input", renderRoutes);
+      seasonFilter.addEventListener("change", renderRoutes);
+      rigFilter.addEventListener("change", renderRoutes);
+      sortSelect.addEventListener("change", renderRoutes);
+
+      continentChips.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-continent]");
+        if (!btn) return;
+        continentChips.querySelectorAll(".filter-chip").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeContinent = btn.getAttribute("data-continent");
+        renderRoutes();
+      });
+
+      // Render 3 Mega Savings Hacks
+      const hacksGrid = document.getElementById("hacksGrid");
+      if (hacksGrid && checkoutDb.megaSavingsHacks) {
+        hacksGrid.innerHTML = checkoutDb.megaSavingsHacks
+          .map(
+            (h) => `
+            <article class="hack-card">
+              <div>
+                <div class="hack-top">
+                  <span class="hack-badge">${h.badge}</span>
+                  <span class="hack-saving">${h.savingAmount}</span>
+                </div>
+                <h3>${h.title}</h3>
+                <p>${h.summary}</p>
+              </div>
+              <div class="hack-metric-bar">📊 ${h.detailMetrics}</div>
+            </article>
+          `
+          )
+          .join("");
+      }
+
+      // Render Interactive Checkout Table
+      const checkoutTableContainer = document.getElementById("checkoutTableContainer");
+      const labRegionTabs = document.getElementById("labRegionTabs");
+
+      function formatRmbFromUsdRange(usdStr) {
+        const nums = String(usdStr)
+          .replace(/,/g, "")
+          .match(/\d+/g);
+        if (!nums || nums.length === 0) return "";
+        const n1 = (parseInt(nums[0], 10) * 7.2 / 10000).toFixed(2);
+        if (nums.length >= 2 && parseInt(nums[1], 10) > 500) {
+          const n2 = (parseInt(nums[1], 10) * 7.2 / 10000).toFixed(2);
+          return `≈ ¥${n1}万–¥${n2}万`;
+        }
+        return `≈ ¥${n1}万 RMB`;
+      }
+
+      function renderCheckoutTable(regionKey) {
+        if (regionKey === "naAddons") {
+          const rows = checkoutDb.northAmericaAddonMatrix || [];
+          checkoutTableContainer.innerHTML = `
+            <table class="checkout-table">
+              <thead>
+                <tr>
+                  <th>附加费项目 (为什么不能只看裸车价)</th>
+                  <th>Cruise America / Canada (C25 / C30)</th>
+                  <th>Road Bear RV (26-28' / 29-31' 拓展)</th>
+                  <th>CanaDream / Fraserway (MH-A / MH-X / C-XLarge)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows
+                  .map(
+                    (r) => `
+                  <tr>
+                    <td class="td-city">${r.item}</td>
+                    <td>${r.cruiseAmerica}</td>
+                    <td>${r.roadBear}</td>
+                    <td>${r.canaDreamFraserway}</td>
+                  </tr>
+                `
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          `;
+          return;
+        }
+
+        const list = checkoutDb[regionKey] || [];
+        checkoutTableContainer.innerHTML = `
+          <table class="checkout-table">
+            <thead>
+              <tr>
+                <th style="width:19%">提车城市 &amp; 实测季节窗口</th>
+                <th style="width:19%">经济/实用型 5–7铺裸车价</th>
+                <th style="width:20%">中高端主力 / Indie 含里程裸车价</th>
+                <th style="width:19%">旗舰顶配 / 跨国对比裸车价</th>
+                <th style="width:13%">Step 1 提车全包价 (USD)</th>
+                <th style="width:10%">省钱批注与附加费拆解</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${list
+                .map(
+                  (item) => `
+                <tr>
+                  <td>
+                    <div class="td-city">${item.city}</div>
+                    <span class="td-season">${item.season}</span>
+                  </td>
+                  <td>${item.budgetVehicle || "—"}</td>
+                  <td>${item.midOrIndieVehicle || "—"}</td>
+                  <td>${item.premiumSlideOut || "—"}</td>
+                  <td>
+                    <span class="td-allin">$${item.allInUsd}</span>
+                    <span class="td-allin-rmb">${formatRmbFromUsdRange(item.allInUsd)}</span>
+                  </td>
+                  <td>
+                    <div style="font-size:12px;color:var(--amber-bright);margin-bottom:4px;">${item.addonsBreakdown || ""}</div>
+                    <div style="font-size:12px;color:var(--text-muted);">${item.note || ""}</div>
+                  </td>
+                </tr>
+              `
+                )
+                .join("")}
+            </tbody>
+          </table>
+        `;
+      }
+
+      labRegionTabs.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-region]");
+        if (!btn) return;
+        labRegionTabs.querySelectorAll(".lab-tab").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderCheckoutTable(btn.getAttribute("data-region"));
+      });
+
+      // Render Eliminated Blacklist
+      const blacklistGrid = document.getElementById("blacklistGrid");
+      if (blacklistGrid) {
+        blacklistGrid.innerHTML = eliminated
+          .map(
+            (el) => `
+            <article class="elim-card">
+              <div>
+                <div class="elim-top">
+                  <span class="elim-danger-badge">${el.vehicleDangerLevel || "🚨 30尺大房车高危清退"}</span>
+                  <span class="elim-limit">安全红线：${el.maxSafeLength || "仅限小车"}</span>
+                </div>
+                <h3 style="margin-top:10px;">${el.name}</h3>
+                <p style="margin-top:8px;">${el.reason}</p>
+              </div>
+              <div class="elim-alt">✅ ${el.betterAlternative || "建议改走榜单内宽阔主干道环线"}</div>
+            </article>
+          `
+          )
+          .join("");
+      }
+
+      // Initial render
+      renderRoutes();
+      renderCheckoutTable("northAmerica");
+    })();
+  </script>
+</body>
+</html>

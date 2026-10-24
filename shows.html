@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Grand Stage Index · 全球商业驻场秀 Top 50</title>
+  <meta name="description" content="剥离临时巡演与明星流量，纯粹以重工舞台机械、现场声光统治力与戏剧审美排序的全球 50 台商业驻场大秀与实景巨制。" />
+  <meta name="theme-color" content="#0b0306" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230b0306'/%3E%3Cpath d='M8 7h16v18l-8-5-8 5V7z' fill='none' stroke='%23f5c469' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='14' r='2.5' fill='%23e83858'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Sora:wght@200;300;400;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" />
+  <style>
+    /* ==========================================================================
+       The Grand Stage Index — Velvet Crimson, Stage Gold & Spotlight Noir
+       ========================================================================== */
+    :root {
+      --velvet: #2e0714;
+      --noir: #080306;
+      --gold: #f5c469;
+      --gold-bright: #ffe19c;
+      --crimson: #e83858;
+      --violet: #b68cff;
+      --emerald: #39d98a;
+      --text: #faf3eb;
+      --muted: rgba(244, 228, 212, 0.68);
+      --faint: rgba(244, 228, 212, 0.40);
+      --glass: rgba(245, 196, 105, 0.045);
+      --glass-2: rgba(232, 56, 88, 0.08);
+      --edge: rgba(245, 196, 105, 0.16);
+      --edge-2: rgba(245, 196, 105, 0.34);
+      --display: "Sora", "Noto Sans SC", system-ui, sans-serif;
+      --serif: "Cormorant Garamond", "Songti SC", "Noto Serif SC", serif;
+      --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      --wrap: 1220px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --d: 0;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: var(--noir); color: var(--text);
+      font-family: var(--sans); font-size: 15px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, p, ul, ol { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; color: inherit; }
+    button { background: none; border: 0; padding: 0; cursor: pointer; }
+    ::selection { background: rgba(232, 56, 88, 0.38); color: #fff; }
+    .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
+
+    /* Stage Backdrop & Velvet Drapes ---------------------------------------- */
+    .stage-bg { position: fixed; inset: 0; z-index: -3; pointer-events: none; }
+    .stage-noir {
+      background:
+        radial-gradient(110% 75% at 50% 115%, #1c0711 0%, var(--noir) 65%);
+    }
+    .stage-velvet {
+      background:
+        radial-gradient(85% 55% at 50% -8%, rgba(232, 56, 88, 0.36), transparent 62%),
+        radial-gradient(55% 40% at 80% 10%, rgba(245, 196, 105, 0.18), transparent 65%),
+        linear-gradient(180deg, #3c0919 0%, #1c050d 42%, #0c0307 82%, var(--noir) 100%);
+      opacity: calc(1 - var(--d) * 0.85);
+    }
+    .spotlights {
+      position: fixed; inset: -15% -20% auto; height: 95vh; z-index: -2; pointer-events: none;
+      opacity: calc(0.82 - var(--d) * 0.9);
+      background:
+        conic-gradient(from 162deg at 28% 0%, transparent 0deg, rgba(245, 196, 105, 0.11) 12deg, transparent 26deg),
+        conic-gradient(from 176deg at 50% 0%, transparent 0deg, rgba(232, 56, 88, 0.13) 10deg, transparent 22deg),
+        conic-gradient(from 188deg at 72% 0%, transparent 0deg, rgba(245, 196, 105, 0.10) 12deg, transparent 25deg);
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.6) 65%, transparent 100%);
+      mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.6) 65%, transparent 100%);
+      animation: panLights 13s ease-in-out infinite alternate;
+      transform-origin: 50% 0;
+    }
+    @keyframes panLights {
+      from { transform: rotate(-2.5deg) scaleX(0.98); }
+      to { transform: rotate(2.5deg) scaleX(1.03); }
+    }
+    .sparks { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+    .sparks i {
+      position: absolute; bottom: -12px; border-radius: 50%;
+      background: radial-gradient(circle, #ffe8a3 0%, #f5c469 60%, transparent 100%);
+      box-shadow: 0 0 8px rgba(245, 196, 105, 0.75);
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      0% { transform: translate3d(0, 0, 0) scale(0.7); opacity: 0; }
+      15% { opacity: 0.85; }
+      85% { opacity: 0.65; }
+      100% { transform: translate3d(var(--dx, 24px), -108vh, 0) scale(1.1); opacity: 0; }
+    }
+
+    /* Header & Global Navigation -------------------------------------------- */
+    .top {
+      position: sticky; top: 0; z-index: 50;
+      background: linear-gradient(180deg, rgba(10, 3, 7, 0.86), rgba(10, 3, 7, 0.45));
+      border-bottom: 1px solid rgba(245, 196, 105, 0.10);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    }
+    .top-inner { display: flex; align-items: center; gap: 18px; min-height: 68px; padding: 8px 0; }
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--display); font-weight: 400; letter-spacing: 0.26em;
+      font-size: 12.5px; text-transform: uppercase; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .logo svg { width: 26px; height: 26px; }
+    .switch {
+      display: flex; align-items: center; gap: 4px; margin-left: auto;
+      padding: 4px; border: 1px solid var(--edge); border-radius: 999px;
+      background: rgba(16, 4, 10, 0.65); overflow-x: auto; max-width: 100%;
+    }
+    .switch a {
+      padding: 6px 13px; border-radius: 999px; font-size: 12.5px;
+      color: var(--muted); transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .switch a:hover { color: var(--text); }
+    .switch a[aria-current="page"] {
+      background: linear-gradient(135deg, rgba(232, 56, 88, 0.28), rgba(245, 196, 105, 0.22));
+      color: var(--gold-bright);
+      border: 1px solid rgba(245, 196, 105, 0.4);
+      box-shadow: 0 0 18px rgba(232, 56, 88, 0.25);
+    }
+
+    /* Act Gauge (Right Fixed Indicator) ------------------------------------- */
+    .gauge {
+      position: fixed; right: 24px; top: 50%; transform: translateY(-50%); z-index: 30;
+      display: flex; align-items: center; gap: 12px; pointer-events: none;
+      font-family: var(--display); font-weight: 300; font-size: 11px; letter-spacing: 0.12em; color: var(--muted);
+    }
+    .gauge-track { position: relative; width: 1px; height: 42vh; background: linear-gradient(180deg, var(--edge-2), transparent); }
+    .gauge-track::before {
+      content: ""; position: absolute; inset: 0 -4px;
+      background: repeating-linear-gradient(180deg, var(--edge-2) 0 1px, transparent 1px 12.5%);
+      -webkit-mask-image: linear-gradient(90deg, #000 0 3px, transparent 3px calc(100% - 3px), #000 calc(100% - 3px));
+      mask-image: linear-gradient(90deg, #000 0 3px, transparent 3px calc(100% - 3px), #000 calc(100% - 3px));
+    }
+    .gauge-dot {
+      position: absolute; left: -4px; width: 9px; height: 9px; border-radius: 50%;
+      background: var(--gold); box-shadow: 0 0 14px var(--gold), 0 0 24px var(--crimson);
+      top: calc(var(--d) * 100%); transform: translateY(-50%);
+    }
+    .gauge-read { order: -1; text-align: right; }
+    .gauge-read b { display: block; font-size: 18px; font-weight: 300; color: var(--gold-bright); letter-spacing: 0.06em; }
+
+    /* Hero ------------------------------------------------------------------ */
+    .hero {
+      position: relative; min-height: min(calc(100vh - 68px), 920px);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 48px 0 110px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--display); font-size: 11.5px; font-weight: 400;
+      letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold);
+    }
+    .eyebrow::before {
+      content: ""; width: 28px; height: 1px;
+      background: linear-gradient(90deg, var(--crimson), var(--gold));
+    }
+    .hero h1 {
+      margin-top: 24px; font-family: var(--sans); font-weight: 300;
+      font-size: clamp(38px, 5.8vw, 82px); line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-shadow: 0 14px 60px rgba(0, 0, 0, 0.65);
+    }
+    .hero h1 em {
+      font-style: italic; font-family: var(--serif); font-weight: 600;
+      color: var(--gold-bright);
+      text-shadow: 0 0 42px rgba(245, 196, 105, 0.45);
+      padding-right: 6px;
+    }
+    .hero p.lede {
+      max-width: 42em; margin-top: 26px; font-size: 16px; line-height: 1.95;
+      color: var(--muted); font-weight: 300;
+    }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0; margin-top: 56px; border-top: 1px solid var(--edge);
+    }
+    .hero-stats div { padding: 22px 24px 0 0; }
+    .hero-stats div + div { padding-left: 24px; border-left: 1px solid var(--edge); }
+    .hero-stats b {
+      display: block; font-family: var(--display); font-weight: 200;
+      font-size: clamp(28px, 3.2vw, 44px); line-height: 1; color: var(--gold-bright);
+    }
+    .hero-stats b small { font-size: 0.42em; font-weight: 300; margin-left: 4px; color: var(--muted); }
+    .hero-stats span { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); }
+    .curtain-cue {
+      position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      font-family: var(--display); font-size: 10.5px; letter-spacing: 0.38em; color: var(--gold);
+    }
+    .curtain-cue::after {
+      content: ""; width: 1px; height: 42px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.28; transform: scaleY(0.6); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* Sections & Method Rings ----------------------------------------------- */
+    .section { padding: 96px 0; }
+    .sec-head { max-width: 760px; margin-bottom: 48px; }
+    .sec-head h2 {
+      margin-top: 14px; font-weight: 300;
+      font-size: clamp(26px, 3.1vw, 40px); line-height: 1.35; letter-spacing: 0.02em;
+    }
+    .sec-head h2 em { font-style: normal; color: var(--gold); }
+    .sec-head p { margin-top: 14px; color: var(--muted); font-weight: 300; line-height: 1.9; }
+
+    .method { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .m-card {
+      position: relative; padding: 26px 24px 28px;
+      border: 1px solid var(--edge); border-radius: 20px;
+      background: linear-gradient(155deg, rgba(232, 56, 88, 0.07), rgba(245, 196, 105, 0.03));
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      overflow: hidden;
+    }
+    .m-card::before {
+      content: ""; position: absolute; inset: -40% -40% auto auto;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 196, 105, 0.15), transparent 70%);
+    }
+    .ring { position: relative; width: 82px; height: 82px; }
+    .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .ring circle { fill: none; stroke-width: 3; }
+    .ring .bg { stroke: var(--edge); }
+    .ring .fg {
+      stroke: var(--gold); stroke-linecap: round;
+      filter: drop-shadow(0 0 6px rgba(245, 196, 105, 0.65));
+      transition: stroke-dashoffset 1.5s var(--ease);
+    }
+    .ring span {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      font-family: var(--display); font-weight: 300; font-size: 21px; color: var(--gold-bright);
+    }
+    .m-card h3 { margin-top: 18px; font-size: 16.5px; font-weight: 500; color: var(--text); }
+    .m-card p { margin-top: 9px; font-size: 13.5px; line-height: 1.85; color: var(--muted); font-weight: 300; }
+
+    /* Interactive Filter Console -------------------------------------------- */
+    .console {
+      position: sticky; top: 74px; z-index: 35;
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 16px 18px; margin-bottom: 42px;
+      border: 1px solid var(--edge-2); border-radius: 22px;
+      background: rgba(14, 4, 9, 0.84);
+      box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.85);
+      -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+    }
+    .console-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .search { position: relative; flex: 1 1 260px; }
+    .search svg {
+      position: absolute; left: 14px; top: 50%; width: 16px; height: 16px;
+      transform: translateY(-50%); stroke: var(--gold); fill: none; stroke-width: 1.7;
+    }
+    .search input {
+      width: 100%; height: 40px; padding: 0 14px 0 40px;
+      border: 1px solid var(--edge); border-radius: 999px;
+      background: rgba(245, 196, 105, 0.04); outline: none; font-size: 13.5px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search input::placeholder { color: var(--faint); }
+    .search input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245, 196, 105, 0.14);
+    }
+
+    .seg {
+      display: inline-flex; flex-wrap: wrap; padding: 3px;
+      border: 1px solid var(--edge); border-radius: 999px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .seg button {
+      height: 32px; padding: 0 13px; border-radius: 999px;
+      font-size: 12.5px; color: var(--muted); transition: all 0.2s; white-space: nowrap;
+    }
+    .seg button:hover { color: var(--text); }
+    .seg button[aria-pressed="true"] {
+      background: linear-gradient(135deg, var(--crimson), #b81d3d);
+      color: #fff; font-weight: 500;
+      box-shadow: 0 2px 12px rgba(232, 56, 88, 0.4);
+    }
+
+    .filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .filter-label {
+      font-size: 11.5px; font-family: var(--display); letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-right: 4px;
+    }
+    .chip {
+      height: 30px; padding: 0 12px; border: 1px solid var(--edge);
+      border-radius: 999px; font-size: 12.5px; color: var(--muted);
+      background: rgba(245, 196, 105, 0.03); transition: all 0.2s; white-space: nowrap;
+    }
+    .chip:hover { color: var(--text); border-color: var(--edge-2); }
+    .chip[aria-pressed="true"] {
+      color: #18060b; background: var(--gold); border-color: var(--gold);
+      font-weight: 500; box-shadow: 0 0 16px rgba(245, 196, 105, 0.38);
+    }
+    .chip.chip-crowd[aria-pressed="true"] {
+      color: #fff; background: rgba(232, 56, 88, 0.85); border-color: var(--crimson);
+      box-shadow: 0 0 14px rgba(232, 56, 88, 0.4);
+    }
+    .count {
+      margin-left: auto; font-family: var(--display); font-size: 12.5px;
+      letter-spacing: 0.08em; color: var(--muted); white-space: nowrap;
+    }
+    .count b { color: var(--gold-bright); font-weight: 600; font-size: 14px; }
+
+    /* Tier Acts & Show Cards ------------------------------------------------ */
+    .act { margin-top: 76px; }
+    .act:first-child { margin-top: 0; }
+    .act-head {
+      display: grid; grid-template-columns: auto 1fr; gap: 6px 26px;
+      align-items: end; padding-bottom: 20px; margin-bottom: 26px;
+      border-bottom: 1px solid var(--edge);
+    }
+    .act-num {
+      grid-row: span 2; font-family: var(--serif); font-style: italic; font-weight: 600;
+      font-size: clamp(44px, 5.2vw, 68px); line-height: 0.88;
+      color: transparent; -webkit-text-stroke: 1.2px var(--act-c, var(--gold));
+      letter-spacing: -0.02em;
+    }
+    .act-name { font-size: 21px; font-weight: 500; }
+    .act-name small {
+      margin-left: 10px; font-family: var(--display); font-size: 11px;
+      letter-spacing: 0.28em; color: var(--act-c, var(--gold)); text-transform: uppercase;
+    }
+    .act-note { font-size: 13.5px; color: var(--muted); font-weight: 300; }
+
+    .list { display: grid; gap: 18px; }
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 26px;
+      padding: 24px;
+      border: 1px solid var(--edge);
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(46, 7, 20, 0.52), rgba(14, 4, 9, 0.78) 65%);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      transition: transform 0.35s var(--ease), border-color 0.3s, box-shadow 0.3s;
+      opacity: 0; transform: translateY(16px);
+      overflow: hidden;
+    }
+    .card.in { opacity: 1; transform: none; }
+    .card:hover {
+      border-color: rgba(245, 196, 105, 0.48);
+      box-shadow: 0 0 0 1px rgba(245, 196, 105, 0.14), 0 28px 60px -28px rgba(232, 56, 88, 0.45);
+      transform: translateY(-2px);
+    }
+    .card.is-t0 {
+      border-color: rgba(245, 196, 105, 0.34);
+      background: linear-gradient(135deg, rgba(68, 10, 28, 0.62), rgba(18, 5, 11, 0.86) 68%);
+    }
+
+    /* Card Poster / Spotlight Visual Column */
+    .poster {
+      position: relative; min-height: 225px; border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(245, 196, 105, 0.22);
+      background:
+        radial-gradient(circle at 50% 18%, rgba(245, 196, 105, 0.34), transparent 58%),
+        radial-gradient(circle at 20% 85%, rgba(232, 56, 88, 0.42), transparent 65%),
+        linear-gradient(165deg, #2b0714 0%, #0f0308 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 16px;
+    }
+    .poster img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: 0; opacity: 0.82;
+      transition: transform 0.6s var(--ease), opacity 0.3s;
+    }
+    .card:hover .poster img { transform: scale(1.05); opacity: 0.94; }
+    .poster::after {
+      content: ""; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(180deg, rgba(8,3,6,0.35) 0%, rgba(8,3,6,0.15) 45%, rgba(8,3,6,0.88) 100%);
+      pointer-events: none;
+    }
+    .poster-top, .poster-bottom { position: relative; z-index: 2; }
+    .poster-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .rank-badge {
+      font-family: var(--display); font-weight: 200; font-size: 42px; line-height: 0.92;
+      letter-spacing: -0.04em; color: var(--gold-bright);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+    .card.is-t0 .rank-badge {
+      font-size: 52px; color: var(--gold-bright);
+      text-shadow: 0 0 28px rgba(245, 196, 105, 0.65);
+    }
+    .tier-pill {
+      padding: 3px 10px; border-radius: 999px;
+      font-family: var(--display); font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+      background: rgba(10, 3, 7, 0.72); border: 1px solid var(--act-c, var(--gold));
+      color: var(--act-c, var(--gold));
+    }
+    .cat-tag {
+      display: inline-block; padding: 4px 10px; border-radius: 8px;
+      font-size: 12px; font-weight: 500;
+      background: rgba(232, 56, 88, 0.26); border: 1px solid rgba(232, 56, 88, 0.48);
+      color: #ffd6de; backdrop-filter: blur(6px);
+    }
+    .status-dot {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;
+      font-size: 11.5px; color: #b8f5d4;
+    }
+    .status-dot::before {
+      content: ""; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--emerald); box-shadow: 0 0 8px var(--emerald);
+    }
+
+    /* Card Content Column */
+    .c-body { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; min-width: 0; }
+    .c-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .c-title-wrap { min-width: 220px; flex: 1; }
+    .c-name { font-size: 20px; font-weight: 500; line-height: 1.4; color: var(--text); }
+    .c-en {
+      display: block; margin-top: 2px; font-family: var(--display);
+      font-size: 12.5px; font-weight: 300; letter-spacing: 0.04em; color: var(--muted);
+    }
+    .c-loc {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+      margin-top: 8px; font-size: 13px; color: var(--muted);
+    }
+    .c-loc svg { width: 13px; height: 13px; fill: none; stroke: var(--gold); stroke-width: 1.7; flex-shrink: 0; }
+    .c-venue { color: var(--gold-bright); font-weight: 400; }
+    .c-loc a {
+      color: var(--gold); border-bottom: 1px dotted rgba(245, 196, 105, 0.5);
+      font-size: 12px;
+    }
+
+    /* Hardware & Ticket Spec Bar */
+    .spec-bar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 14px;
+      background: rgba(245, 196, 105, 0.055);
+      border: 1px solid rgba(245, 196, 105, 0.16);
+    }
+    .spec-main {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 500; color: var(--gold-bright);
+      margin-right: auto;
+    }
+    .spec-pill {
+      padding: 3px 10px; border-radius: 999px; font-size: 12px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text); white-space: nowrap;
+    }
+    .spec-pill.lang-zero {
+      background: rgba(57, 217, 138, 0.14); border-color: rgba(57, 217, 138, 0.4); color: #9ef5c7;
+    }
+    .spec-pill.lang-vis {
+      background: rgba(245, 196, 105, 0.14); border-color: rgba(245, 196, 105, 0.4); color: var(--gold-bright);
+    }
+    .spec-pill.lang-sub {
+      background: rgba(182, 140, 255, 0.14); border-color: rgba(182, 140, 255, 0.4); color: #decaff;
+    }
+
+    /* Highlights & Crowd Badges */
+    .feats { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+    .feats li {
+      padding: 4px 12px; font-size: 13px; line-height: 1.55; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(245, 196, 105, 0.14);
+      color: rgba(250, 243, 235, 0.9);
+    }
+    .feats li:first-child {
+      border-color: rgba(232, 56, 88, 0.45);
+      background: rgba(232, 56, 88, 0.11);
+      color: #fff;
+    }
+    .crowd-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .crowd-tag {
+      font-size: 11.5px; padding: 2px 9px; border-radius: 6px;
+      background: rgba(245, 196, 105, 0.08); color: var(--gold);
+      border: 1px solid rgba(245, 196, 105, 0.18);
+    }
+
+    /* Seat & Booking Tip Box */
+    .tip-box {
+      padding: 11px 15px; border-radius: 12px;
+      background: linear-gradient(90deg, rgba(232, 56, 88, 0.12), rgba(245, 196, 105, 0.05));
+      border-left: 3px solid var(--gold);
+      font-size: 13px; line-height: 1.7; color: rgba(250, 243, 235, 0.92);
+    }
+    .tip-box b { color: var(--gold-bright); font-weight: 500; margin-right: 4px; }
+
+    .empty { padding: 64px 20px; text-align: center; color: var(--muted); border: 1px dashed var(--edge); border-radius: 20px; }
+
+    /* Retired Legends Memorial Section -------------------------------------- */
+    .legends { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .legend-card {
+      padding: 24px 26px; border: 1px dashed rgba(232, 56, 88, 0.35);
+      border-radius: 18px; background: rgba(232, 56, 88, 0.04);
+    }
+    .legend-card h3 { font-size: 16.5px; font-weight: 500; color: var(--gold-bright); }
+    .legend-card h3 span {
+      display: inline-block; margin-right: 10px; padding: 2px 8px;
+      border-radius: 6px; font-family: var(--display); font-size: 11px;
+      letter-spacing: 0.14em; background: rgba(232, 56, 88, 0.24); color: #ff9eb0;
+    }
+    .legend-card p { margin-top: 10px; font-size: 13.5px; line-height: 1.85; color: var(--muted); font-weight: 300; }
+    .legend-card b { color: var(--text); font-weight: 500; }
+
+    /* Footer ---------------------------------------------------------------- */
+    .foot { padding: 76px 0 56px; border-top: 1px solid var(--edge); }
+    .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
+    .foot p { max-width: 36em; font-size: 13.5px; color: var(--muted); font-weight: 300; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    .foot nav a {
+      padding: 9px 16px; border: 1px solid var(--edge); border-radius: 999px;
+      font-size: 13px; color: var(--muted); transition: all 0.2s;
+    }
+    .foot nav a:hover { color: var(--gold-bright); border-color: var(--gold); }
+    .foot .mark {
+      margin-top: 52px; font-family: var(--serif); font-style: italic; font-weight: 600;
+      font-size: clamp(44px, 10vw, 138px); line-height: 1; letter-spacing: -0.02em;
+      color: transparent; -webkit-text-stroke: 1px rgba(245, 196, 105, 0.18);
+      white-space: nowrap; overflow: hidden;
+    }
+
+    @media (max-width: 1120px) {
+      .gauge { display: none; }
+      .method { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 860px) {
+      .card { grid-template-columns: 1fr; }
+      .poster { min-height: 180px; }
+      .legends { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
+      .hero-stats div:nth-child(n + 3) { margin-top: 18px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 28px); }
+      .logo span { display: none; }
+      .method { grid-template-columns: 1fr; }
+      .console { position: static; padding: 14px; }
+      .count { margin-left: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spotlights, .sparks i, .curtain-cue::after { animation: none; }
+      .card { opacity: 1; transform: none; transition: none; }
+      .sparks { display: none; }
+    }
+  </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="严选全球50部拥有定制剧场与顶级声光电重工舞台的常驻商业大秀，标注语言友好度、剧场座位数、最佳选座区域与停演避坑名单。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Grand Stage Index · 全球商业驻场秀 Top 50 观演指南" />
+  <meta property="og:description" content="严选全球50部拥有定制剧场与顶级声光电重工舞台的常驻商业大秀，标注语言友好度、剧场座位数、最佳选座区域与停演避坑名单。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/shows.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Grand Stage Index · 全球商业驻场秀 Top 50 观演指南" />
+  <meta name="twitter:description" content="严选全球50部拥有定制剧场与顶级声光电重工舞台的常驻商业大秀，标注语言友好度、剧场座位数、最佳选座区域与停演避坑名单。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Grand Stage Index · 全球商业驻场秀 Top 50 观演指南",
+  "description": "严选全球50部拥有定制剧场与顶级声光电重工舞台的常驻商业大秀，标注语言友好度、剧场座位数、最佳选座区域与停演避坑名单。",
+  "numberOfItems": 25,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "太阳马戏《“O”秀》 (Cirque du Soleil \"O\")",
+        "description": "美国 拉斯维加斯 · 几秒内从坚硬地面无缝切换为5.7米深巨型泳池 + 85名奥运级花样游泳/高空跳水/杂技演员 + 水面火焰与空中幽灵船超现实美学 + 驻场逾26年一票难求的人类舞台工业巅峰",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.1126,
+          "longitude": -115.1767
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "拉斯维加斯巨球驻场秀《来自地球的明信片/全息视界》 (The Sphere Experience)",
+        "description": "美国 拉斯维加斯 · 耗资23亿美元打造的人类史上最大球形剧场 + 16K巨幕吞没全部余光的物理级眩晕沉浸感 + 1万个4D触觉震动座椅伴随风暴/气流/气味同步反馈 + 序厅5座AI人形机器人Aura互动",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.1207,
+          "longitude": -115.162
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "法国狂人国《Cinéscénie 夜光史诗大秀》 (La Cinéscénie - Puy du Fou)",
+        "description": "法国 莱塞佩斯 · 吉尼斯认证全球最大规模夜间实景演出 + 2550名当地世代传承演员与2.8万套华服同台 + 水下升起中世纪船队、数百匹战马冲锋与3D建筑投影 + 汉斯·季默级交响配乐催人泪下",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.8906,
+          "longitude": -0.9288
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "澳门新濠天地《水舞间》焕新传奇版 (The House of Dancing Water)",
+        "description": "中国 中国澳门 · 耗资超20亿港元定制、亚洲最强重型水陆机械舞台 + 18米高空飞车跨水池飞跃与24米极限高台跳水 + 水下瞬间升起整座沉船与凉亭 + 2025–2026全面升级声光与高定服装回归",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.1489,
+          "longitude": 113.5665
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "太阳马戏《KÀ 秀》 (Cirque du Soleil KÀ)",
+        "description": "美国 拉斯维加斯 · 告别传统地板！22米深虚空上方悬浮360°旋转与90°垂直翻转的巨型机械甲板 + 垂直峭壁实景格斗与真箭齐发惊险场面 + 惊心动魄的双轮“死亡飞轮”无保护高空跳跃",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.1026,
+          "longitude": -115.1703
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "迪拜《La Perle 水舞秀》 (La Perle by Dragone)",
+        "description": "阿联酋 迪拜 · 已故水上剧场宗师 Franco Dragone 人生绝唱之作 + 剧院仅设14排270度陡峭环绕座位，最近处距水池不到2米 + 25米高空跳水入池与5辆摩托铁球极速交叉 + 整个剧场墙壁化作3D投影巨瀑",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.1843,
+          "longitude": 55.2544
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "《只有河南·戏剧幻城》21剧场矩阵 (Unique Henan: Land of Dramas)",
+        "description": "中国 郑州 · 中国沉浸式戏剧天花板：三大主剧《幻城剧场》《火车站剧场》《李家村剧场》总时长超700分钟 + 从地底升起十余座盛唐宋代亭台楼阁伴激光矩阵 + 1942饥荒粮仓真麦倾泻而下的催泪史诗 + 328米夯土高墙夜间《乾台》与巨幅画卷光影秀",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.7892,
+          "longitude": 114.0315
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "伦敦《ABBA Voyage 数字全息驻场演唱会》 (ABBA Voyage)",
+        "description": "英国 伦敦 · 由乔治·卢卡斯工业光魔1000名特效师耗时5年打造，肉眼完全无法分辨真假的巅峰期ABBA真人比例ABBAtars + 10人现场真乐队实时伴奏 + 整个场馆天花板变形为科幻光影宇宙",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5326,
+          "longitude": -0.0138
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "法国狂人国日间双绝《最后的羽饰 & 凯旋之兆》 (Le Dernier Panache & Le Signe du Triomphe)",
+        "description": "法国 莱塞佩斯 · 全球主题演艺界THEA终身成就奖得主 + 《最后的羽饰》整座2400人看台在6面巨型实景水陆布景间丝滑旋转 + 《凯旋之兆》在6000座斗兽场还原真实四马战车狂飙与海战船只从地底升起 + 同园《猛禽舞会》数百只雕鸮猎鹰贴头皮俯冲",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.892,
+          "longitude": -0.9275
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "百老汇/西区音乐剧《狮子王》 (The Lion King)",
+        "description": "美国 纽约 · 全球商业戏剧史上票房第一神作（累计破90亿美元） + 导演茱莉·泰默将人偶合一机械美学推向极致 + 开场《Circle of Life》大象、犀牛、长颈鹿从一楼观众席过道擦肩走向舞台的永恒泪目瞬间",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.758,
+          "longitude": -73.986
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "永利皇宫驻场大秀《Awakening 觉醒》 (Awakening at Wynn Las Vegas)",
+        "description": "美国 拉斯维加斯 · 接棒传奇《Le Rêve》、耗资1.2亿美元重金打造的科技神话秀 + 安东尼·霍普金斯深沉旁白 + 60名高空杂技与舞者穿梭于可自动裂变重组的LED棱镜金字塔 + 悬浮半空的发光深海巨兽与火焰高定华服",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.1265,
+          "longitude": -115.1657
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "广州长隆国际大马戏《魔幻传奇》 (Chimelong International Circus Guangzhou)",
+        "description": "中国 广州 · 全球已建成最大规模永久性马戏大棚 + 哥伦比亚狂飙死亡飞轮、俄罗斯高空飞人、马术飞驰与环球摩托铁笼无尿点连发 + 百鸟齐飞与花车大巡游直接穿过观众席环道",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.0045,
+          "longitude": 113.3292
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "伦敦西区音乐剧《歌剧魅影》常驻原版 (The Phantom of the Opera)",
+        "description": "英国 伦敦 · 百老汇版2023年谢幕后，伦敦国王陛下剧院自1986年起连续驻演40年的全球唯一英语原版圣地 + 第一幕尾声巨型水晶吊灯从观众头顶呼啸砸向舞台 + 干冰浓雾中魅影撑船穿过百支烛台地下湖的哥特美学巅峰",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5081,
+          "longitude": -0.132
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "柏林腓特烈皇宫剧院奢华大秀《FALLING IN LOVE / ARISE》 (Friedrichstadt-Palast Grand Show)",
+        "description": "德国 柏林 · 欧洲唯一的拉斯维加斯级巨型剧院驻场秀，每季制作费逾1400万欧元 + 高培尔(Jean Paul Gaultier)等高定大师操刀华服与1亿颗施华洛世奇水晶巨钻布景 + 标志性32人长腿排舞阵列(Kickline)与水幕/冰面/高空跳床机关切换",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.5238,
+          "longitude": 13.3887
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "西安华清宫实景历史舞剧《长恨歌》 (The Song of Everlasting Sorrow)",
+        "description": "中国 西安 · 中国山水实景演出标杆之作，直接发生在唐玄宗与杨贵妃爱情原址华清宫九龙湖 + 当整座骊山瞬间点亮化作漫天星河、嫦娥从半山腰腾空飞向月宫时全场惊呼 + 安史之乱湖面喷涌数十米真火热浪扑面而来 + 冬季限定《冰火长恨歌》真雪纷飞",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 34.3642,
+          "longitude": 109.2125
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "西班牙狂人国《托莱多之梦》夜间史诗秀 (El Sueño de Toledo - Puy du Fou España)",
+        "description": "西班牙 托莱多 · 法国Puy du Fou首个海外全资巨制，距马德里仅50分钟车程 + 70分钟浓缩西班牙1500年波澜历史（从西哥特王朝、摩尔宫殿、哥伦布帆船从湖底升起、堂吉诃德风车到蒸汽火车驶入舞台） + 弗拉门戈群舞与马术冲锋燃爆全场",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.835,
+          "longitude": -4.0933
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "百老汇/西区奇幻音乐剧《魔法坏女巫》 (Wicked)",
+        "description": "美国 纽约 · 百老汇最大体量格什温剧院20余年常青霸主 + 第一幕结尾曲《Defying Gravity》绿女巫Elphaba在万丈聚光灯与巨型斗篷中凌空飞起，高音掀翻屋顶的颅内高潮 + 翡翠城华丽复古蒸汽朋克舞美",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.7623,
+          "longitude": -73.985
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "百老汇/西区传奇音乐剧《汉密尔顿》 (Hamilton)",
+        "description": "美国 纽约 · 11项托尼奖与普利策戏剧奖得主，彻底改写当代音乐剧语法 + 舞台中央双层同心转盘隐喻历史洪流与命运飓风（《Hurricane》定格画面堪称舞台调度教科书） + 零冷场的顶级编舞与饶舌对决",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.759,
+          "longitude": -73.9866
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "上海浸入式戏剧《不眠之夜》 (Sleep No More Shanghai)",
+        "description": "中国 上海 · 随纽约原版谢幕后成为全球唯一常驻版《Sleep No More》 + 英国Punchdrunk剧团将莎翁《麦克白》与上海1930年代谍战美学融合 + 观众戴面具在竹林、疯人院、药铺、血腥宴会厅中贴身跟随演员狂奔，甚至被拉进密室触发隐藏“1对1”剧情",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 31.2315,
+          "longitude": 121.4602
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "东京迪士尼海洋夜间大秀《坚信！～梦想之海～》 (Believe! Sea of Dreams)",
+        "description": "日本 浦安(东京圈) · 投资95亿日元打造、全球主题乐园水岸夜秀的最高工业水准 + 首次将环绕港湾的三面海景酒店外墙与远方火山全部化作巨型投影幕布 + 彼得潘与温蒂在港湾中央20米高空真飞 + MISIA献唱主题曲配合漫天烟火与海面火炬",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.6267,
+          "longitude": 139.8851
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "百老汇/西区奢华点唱机音乐剧《红磨坊》 (Moulin Rouge! The Musical)",
+        "description": "美国 纽约 · 10项托尼奖满贯得主，把整座百年剧院从天花板到包厢全部包裹进波西米亚猩红灯海中 + 将Adele、Lady Gaga、Rihanna、Elton John等70余首耳熟能详金曲无缝串烧成戏剧高潮 + 极致火辣的高强度百老汇群舞",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.7592,
+          "longitude": -73.9891
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "伦敦西区全沉浸复排《歌厅 Cabaret at the Kit Kat Club》",
+        "description": "英国 伦敦 · 横扫7项奥利弗奖与4项托尼奖的当代戏剧神作 + 从踏入剧院后巷地下室喝琴酒、看乐手即兴演出那一刻起，你已身处1931年魏玛共和国崩塌前夜的柏林 + 前半场纸醉金迷的感官狂欢与后半场极权铁幕降临的刺骨震颤",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5069,
+          "longitude": -0.1238
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "德国波鸿《星光快车》36年定制轮滑音乐剧 (Starlight Express Bochum)",
+        "description": "德国 波鸿 · 吉尼斯认证全球单一驻场观演人数最多（超1900万人次）的传奇剧场，自1988年起在专门为其建造的混凝土赛道剧场连演38年 + 韦伯爵士作曲，全体演员脚踩旱冰鞋化身蒸汽火车、高铁与电力机车，在观众座位之间以60km/h风驰电掣",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.4886,
+          "longitude": 7.2435
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "拉斯维加斯凯撒皇宫成人先锋马戏《Absinthe 苦艾酒》 (Absinthe at Caesars Palace)",
+        "description": "美国 拉斯维加斯 · 被《拉斯维加斯周刊》评为拉斯维加斯史上第1名神秀！没有百米大舞台，而是把世界级双人轮滑甩人、高空走钢丝、浴缸绸吊塞进直径仅2.7米的圆台 + 最远一排距舞台也仅10米，演员旋转时的汗珠与风声近在咫尺 + 毒舌滑稽脱口秀串场",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.1157,
+          "longitude": -115.1742
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "伦敦西区史诗音乐剧《悲惨世界》 (Les Misérables)",
+        "description": "英国 伦敦 · 伦敦西区连续驻演超40年的最长寿音乐剧图腾 + 《One Day More》《I Dreamed a Dream》《Do You Hear the People Sing》前奏一响即全员起鸡皮疙瘩 + 巨型街垒合拢、战火硝烟与下水道光影纵深感极强",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.5117,
+          "longitude": -0.1325
+        }
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END AUTO-SEO -->
+</head>
+<body>
+  <div class="stage-bg stage-noir"></div>
+  <div class="stage-bg stage-velvet"></div>
+  <div class="spotlights" aria-hidden="true"></div>
+  <div class="sparks" id="sparks" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 6h20v20l-10-6-10 6V6z" fill="none" stroke="#f5c469" stroke-width="1.4"/>
+          <circle cx="16" cy="14" r="3" fill="#e83858"/>
+        </svg>
+        <span>Grand Stage Index</span>
+      </a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假</a>
+        <a href="aquariums.html">水族馆</a>
+        <a href="zoos.html">动物园</a>
+        <a href="museums.html">重器博物馆</a>
+        <a href="themeparks.html">主题乐园</a>
+        <a href="ski.html">滑雪度假村</a>
+        <a href="shows.html" aria-current="page">驻场大秀</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="gauge" aria-hidden="true">
+    <div class="gauge-read"><b id="act-read">ACT I</b><span id="act-zone">序幕 · 殿堂重器</span></div>
+    <div class="gauge-track"><div class="gauge-dot"></div></div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">The Grand Stage Index · 2026 全球商业驻场秀 Top 50</span>
+        <h1>大幕拉开 <em>50</em> 场<br />为一台戏奔赴一座城</h1>
+        <p class="lede">剥离临时巡回演唱会与流量噱头，只收录那些与耗资数亿美金的定制水舞台、16K巨球、百亩实景山水或百年古董剧院深度咬合的常驻商业演艺巨制。在这里，机械工程、人类极限肉身与戏剧热泪正面相撞。</p>
+        <div class="hero-stats">
+          <div><b>50</b><span>台全球在演商业驻场秀</span></div>
+          <div><b>23<small>亿美元</small></b><span>最贵单体演艺建筑 · 维加斯巨球</span></div>
+          <div><b>1700<small>万升</small></b><span>最大室内水舞台 · 澳门水舞间</span></div>
+          <div><b>2550<small>人</small></b><span>最多同台演员 · 法国狂人国</span></div>
+        </div>
+      </div>
+      <a class="curtain-cue" href="#method">RAISE THE CURTAIN</a>
+    </section>
+
+    <section class="section" id="method">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">Playbill Methodology · 评选法则</span>
+          <h2>为什么有些秀<em>无法巡演</em>，只能你飞过去看？</h2>
+          <p>巡演版剧目必须塞进集装箱卡车，而真正的殿堂级驻场秀（Resident Show）是把剧场本身变成一台精密巨兽——地下十米是液压泳池，头顶是百吨悬臂，窗外是整座骊山与漓江。</p>
+        </header>
+        <div class="method">
+          <article class="m-card">
+            <div class="ring" data-pct="35"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44"/><circle class="fg" cx="50" cy="50" r="44"/></svg><span>35%</span></div>
+            <h3>舞台重工硬件与视觉统治力</h3>
+            <p>考察千万升升降泳池、50吨悬空翻转甲板、16K环形LED巨球、360度旋转观众看台或百亩山水实景的不可复制性。</p>
+          </article>
+          <article class="m-card">
+            <div class="ring" data-pct="35"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44"/><circle class="fg" cx="50" cy="50" r="44"/></svg><span>35%</span></div>
+            <h3>现场表演张力与艺术编排</h3>
+            <p>奥运级25米高空跳水、零安全网极限杂技、百老汇/西区顶级唱跳声乐控制力，以及真马战车与千人调度的零失误精度。</p>
+          </article>
+          <article class="m-card">
+            <div class="ring" data-pct="20"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44"/><circle class="fg" cx="50" cy="50" r="44"/></svg><span>20%</span></div>
+            <h3>情绪共鸣与跨语言感染力</h3>
+            <p>评估普通旅行者在不懂外语或历史背景的前提下，能否被音乐、光影、肢体叙事与剧场气场直接击中甚至热泪盈眶。</p>
+          </article>
+          <article class="m-card">
+            <div class="ring" data-pct="10"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44"/><circle class="fg" cx="50" cy="50" r="44"/></svg><span>10%</span></div>
+            <h3>常驻生命力与选座友好度</h3>
+            <p>严格核验 2026 年在演状态，剔除已停演剧目；并为每台秀提供精确到排数/区域的防溅水、防遮挡选座指南。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="list" style="padding-top:32px">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">The Repertoire · 全球驻场大秀全榜单</span>
+          <h2>从<em>拉斯维加斯与狂人国</em>到西区、百老汇与东方幻城</h2>
+          <p>支持按语言门槛（对出国旅行者极其实用！）、剧目类型、适合人群与票价/规模自由筛选。</p>
+        </header>
+
+        <div class="console" role="region" aria-label="筛选与排序控制台">
+          <div class="console-row">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <input id="q" type="search" placeholder="搜索剧名、城市、剧院或看点，如：水舞间、太阳马戏、伦敦、长恨歌、全息…" autocomplete="off" />
+            </label>
+            <div class="seg" role="group" aria-label="排序方式">
+              <button type="button" data-sort="rank" aria-pressed="true">按综合排名</button>
+              <button type="button" data-sort="capacity" aria-pressed="false">按剧场规模(座位)</button>
+              <button type="button" data-sort="price" aria-pressed="false">按票价从低到高</button>
+              <button type="button" data-sort="duration" aria-pressed="false">按演出时长</button>
+            </div>
+            <span class="count" id="count"></span>
+          </div>
+
+          <div class="console-row">
+            <div class="filter-group" id="cat-chips">
+              <span class="filter-label">剧目类型</span>
+            </div>
+          </div>
+
+          <div class="console-row">
+            <div class="filter-group" id="lang-chips">
+              <span class="filter-label">语言门槛</span>
+            </div>
+            <div class="filter-group" id="crowd-chips" style="margin-left:auto">
+              <span class="filter-label">旅行偏好</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="acts"></div>
+      </div>
+    </section>
+
+    <section class="section" id="legends">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="eyebrow">Closed &amp; Retired Legends · 已停演传奇防扑空备忘</span>
+          <h2>这些名震天下的神秀<em>已经谢幕</em>，切勿按旧攻略跑空！</h2>
+          <p>演艺界更迭残酷，许多十年前游记里被奉为必看的驻场秀已永久停演或改版。我们将其列入纪念堂，并给出最佳现役替代方案：</p>
+        </header>
+        <div class="legends">
+          <article class="legend-card">
+            <h3><span>2020 永久停演</span>拉斯维加斯永利《Le Rêve 梦秀》</h3>
+            <p>曾与百乐宫《“O”秀》并称维加斯双璧的圆形水秀，于2020年疫情期间永久关闭，原剧院已改建为360度科技奇幻大秀 <b>《Awakening 觉醒》(#11)</b>。想看Franco Dragone正统水秀请看<b>澳门《水舞间》(#4)</b>或<b>迪拜《La Perle》(#6)</b>。</p>
+          </article>
+          <article class="legend-card">
+            <h3><span>2024.07 永久停演</span>太阳马戏《The Beatles LOVE 披头士爱秀》</h3>
+            <p>伴随拉斯维加斯幻景酒店（The Mirage）于2024年7月停业改造为硬石吉他酒店，驻演18年的《LOVE》正式谢幕。音乐致敬类太阳马戏请改看曼德勒海湾的 <b>《Michael Jackson ONE》(#26)</b>。</p>
+          </article>
+          <article class="legend-card">
+            <h3><span>2025 纽约谢幕</span>纽约切尔西原版《Sleep No More 不眠之夜》</h3>
+            <p>在纽约麦金特里克酒店驻演13年的浸入式戏剧鼻祖已正式谢幕。目前全球唯一常驻演出且制作规模更大的版本位于中国 <b>上海静安区麦金侬酒店《不眠之夜》(#19)</b>。</p>
+          </article>
+          <article class="legend-card">
+            <h3><span>2022–2023 停演/更替</span>巴黎丽都《Lido 羽毛歌舞秀》 &amp; 纽约百老汇版《歌剧魅影》</h3>
+            <p>香榭丽舍大街Lido被雅高收购后已取消传统羽毛晚宴秀转型音乐剧剧场，看正统法式大羽毛康康舞请认准 <b>巴黎红磨坊《Féerie》(#28)</b>；而《歌剧魅影》百老汇版已于2023年4月停演，英语原版朝圣请飞往 <b>伦敦西区国王陛下剧院 (#13)</b>。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p>The Grand Stage Index 是 Destination Atlas 专题图鉴之一。所有剧目均核验至 2026.10 常驻在演状态，票价与选座攻略基于各剧院官方座席图与实测视角整理。</p>
+        <nav aria-label="其他榜单">
+          <a href="index.html">图鉴总览</a>
+          <a href="beaches.html">海岸度假</a>
+          <a href="aquariums.html">水族馆 Top 35</a>
+          <a href="zoos.html">动物园 Top 30</a>
+          <a href="museums.html">重器博物馆 Top 100</a>
+          <a href="themeparks.html">主题乐园 Top 50</a>
+          <a href="ski.html">滑雪度假村 Top 40</a>
+        </nav>
+      </div>
+      <p class="mark" aria-hidden="true">THE GRAND STAGE</p>
+    </div>
+  </footer>
+
+  <script src="images_themed.js" onerror=""></script>
+  <script src="data_shows.js"></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      "use strict";
+      var DATA = (window.SHOWS_TOP50 || []).slice();
+
+      var ACTS = [
+        { tier: "T0", act: "ACT I", name: "殿堂级造梦重器", en: "Pantheon Spectacles", c: "#f5c469", note: "排名 1–8：耗资数亿至数十亿美元量身定制的水舞台、16K巨球与百亩实景幻城，人类演艺工业的最高奇观。" },
+        { tier: "T1", act: "ACT II", name: "世界级王牌驻场巨制", en: "Flagship Masterpieces", c: "#e83858", note: "排名 9–20：统治百老汇、伦敦西区、拉斯维加斯与中法古都的镇城之宝，单凭这一场秀就值得改签机票。" },
+        { tier: "T1.5", act: "ACT III", name: "现象级剧场奇观与沉浸神作", en: "Phenomenal Stage Icons", c: "#b68cff", note: "排名 21–35：60km/h轮滑过山车剧场、贴脸成人马戏、真车腾空飞越观众席与催泪行进式大剧。" },
+        { tier: "T2", act: "ACT IV", name: "城市夜生活名片与特色驻场", en: "Signature Nightlife & Cultural Gems", c: "#39d98a", note: "排名 36–50：从巴黎左岸百年歌舞厅、世遗沧浪亭昆曲夜游到百老汇高能演唱会音乐剧。" }
+      ];
+
+      var CATEGORIES = ["全部", "水秀与科技巨幕", "极限马戏与杂技", "百老汇/西区音乐剧", "实景史诗与幻城", "沉浸戏剧与歌舞秀"];
+      var LANGS = ["全部语言", "零语言门槛", "视觉为主(懂剧情更佳)", "需英语/中文字幕辅助"];
+      var CROWDS = ["全部人群", "视觉科技控", "零语言门槛", "合家欢必看", "情侣夜生活", "戏剧音乐迷", "拍照震撼"];
+
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      function splitName(n) {
+        var m = String(n).match(/\s*\(([^()]*[A-Za-z][^()]*)\)$/);
+        return m ? { zh: n.replace(m[0], "").trim(), en: m[1] } : { zh: n, en: "" };
+      }
+
+      DATA.forEach(function (item) {
+        var nm = splitName(item.name);
+        item._zh = nm.zh;
+        item._en = nm.en;
+        item._feats = String(item.highlight || "").split(/\s+\+\s+/);
+      });
+
+      var state = {
+        q: "",
+        cat: "全部",
+        lang: "全部语言",
+        crowd: "全部人群",
+        sort: "rank"
+      };
+
+      function buildChips(containerId, list, key, extraClass) {
+        var el = document.getElementById(containerId);
+        if (!el) return;
+        var labelHtml = el.querySelector(".filter-label") ? el.querySelector(".filter-label").outerHTML : "";
+        el.innerHTML = labelHtml + list.map(function (val) {
+          return '<button type="button" class="chip' + (extraClass ? " " + extraClass : "") + '" data-val="' + esc(val) + '" aria-pressed="' + (state[key] === val) + '">' + esc(val) + "</button>";
+        }).join("");
+        el.addEventListener("click", function (e) {
+          var b = e.target.closest(".chip");
+          if (!b) return;
+          state[key] = b.getAttribute("data-val");
+          el.querySelectorAll(".chip").forEach(function (c) {
+            c.setAttribute("aria-pressed", c === b);
+          });
+          render();
+        });
+      }
+
+      buildChips("cat-chips", CATEGORIES, "cat", "");
+      buildChips("lang-chips", LANGS, "lang", "");
+      buildChips("crowd-chips", CROWDS, "crowd", "chip-crowd");
+
+      document.querySelectorAll("[data-sort]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          state.sort = b.getAttribute("data-sort");
+          document.querySelectorAll("[data-sort]").forEach(function (x) {
+            x.setAttribute("aria-pressed", x === b);
+          });
+          render();
+        });
+      });
+
+      var qEl = document.getElementById("q");
+      qEl.addEventListener("input", function () {
+        state.q = qEl.value.trim().toLowerCase();
+        render();
+      });
+
+      function actOf(tier) {
+        return ACTS.filter(function (a) { return a.tier === tier; })[0] || ACTS[3];
+      }
+
+      function langClass(lf) {
+        if (lf === "零语言门槛") return "lang-zero";
+        if (lf === "视觉为主(懂剧情更佳)") return "lang-vis";
+        return "lang-sub";
+      }
+
+      function card(item) {
+        var act = actOf(item.tier);
+        var imgEntry = (window.THEMED_IMAGES && window.THEMED_IMAGES[item.id]) ? window.THEMED_IMAGES[item.id] : null;
+        var imgUrl = imgEntry ? (typeof imgEntry === "string" ? imgEntry : imgEntry.src) : "";
+        var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.venue + " " + item.city);
+        var priceText = item.ticketUsd === 0 ? "含在乐园门票内" : ("$" + item.ticketUsd + " 起");
+
+        return '<article class="card' + (item.tier === "T0" ? " is-t0" : "") + '" id="' + esc(item.id) + '" data-dest-id="' + esc(item.id) + '" data-lat="' + (item.lat || "") + '" data-lon="' + (item.lon || "") + '" data-name="' + esc(item._zh) + '" style="--act-c:' + act.c + '">' +
+          '<div class="poster">' +
+            (imgUrl ? '<img src="' + esc(imgUrl) + '" alt="' + esc(item._zh) + '" loading="lazy" onerror="this.remove()" />' : "") +
+            '<div class="poster-top">' +
+              '<div class="rank-badge">#' + String(item.rank).padStart(2, "0") + '</div>' +
+              '<span class="tier-pill">' + esc(item.tier) + '</span>' +
+            '</div>' +
+            '<div class="poster-bottom">' +
+              '<span class="cat-tag">' + esc(item.category) + '</span>' +
+              '<div class="status-dot">' + esc(item.lastVerified) + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="c-body">' +
+            '<div class="c-head">' +
+              '<div class="c-title-wrap">' +
+                '<h3 class="c-name">' + esc(item._zh) + (item._en ? '<span class="c-en">' + esc(item._en) + '</span>' : '') + '</h3>' +
+                '<div class="c-loc">' +
+                  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>' +
+                  '<span>' + esc(item.country + " · " + item.city) + '</span>' +
+                  '<span>|</span>' +
+                  '<span class="c-venue">' + esc(item.venue) + '</span>' +
+                  '<a href="' + mapUrl + '" target="_blank" rel="noopener">剧院地图 ↗</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="spec-bar">' +
+              '<div class="spec-main">⚙️ ' + esc(item.stageSpec) + '</div>' +
+              '<span class="spec-pill">🪑 ' + Number(item.capacity).toLocaleString("en-US") + ' 座</span>' +
+              '<span class="spec-pill">⏱️ ' + esc(item.durationMin) + ' 分钟</span>' +
+              '<span class="spec-pill">🎟️ ' + esc(priceText) + '</span>' +
+              '<span class="spec-pill ' + langClass(item.langFriendly) + '">🌐 ' + esc(item.langFriendly) + '</span>' +
+            '</div>' +
+            '<ul class="feats">' +
+              item._feats.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join("") +
+            '</ul>' +
+            '<div class="crowd-row">' +
+              (item.bestFor || []).map(function (tag) { return '<span class="crowd-tag">✦ ' + esc(tag) + '</span>'; }).join("") +
+            '</div>' +
+            '<div class="tip-box"><b>🎯 黄金选座与购票攻略：</b>' + esc(item.tip) + '</div>' +
+            '<div class="shared-slot"></div>' +
+          '</div>' +
+        '</article>';
+      }
+
+      function matches(item) {
+        if (state.cat !== "全部" && item.category !== state.cat) return false;
+        if (state.lang !== "全部语言" && item.langFriendly !== state.lang) return false;
+        if (state.crowd !== "全部人群" && (!item.bestFor || item.bestFor.indexOf(state.crowd) === -1)) return false;
+        if (!state.q) return true;
+        var hay = (item.name + " " + item.country + " " + item.city + " " + item.venue + " " + item.category + " " + item.stageSpec + " " + item.highlight + " " + item.tip + " " + (item.bestFor || []).join(" ")).toLowerCase();
+        return hay.indexOf(state.q) > -1;
+      }
+
+      var actsEl = document.getElementById("acts");
+
+      function render() {
+        var list = DATA.filter(matches);
+        document.getElementById("count").innerHTML = "<b>" + list.length + "</b> / " + DATA.length + " 台驻场秀";
+        if (!list.length) {
+          actsEl.innerHTML = '<div class="empty">当前筛选条件下没有找到匹配的驻场大秀，请尝试切换“全部语言”或清空搜索词。</div>';
+          return;
+        }
+
+        var html = "";
+        if (state.sort === "capacity") {
+          list.sort(function (a, b) { return (b.capacity || 0) - (a.capacity || 0) || a.rank - b.rank; });
+          html = '<section class="act"><header class="act-head" style="--act-c:#f5c469"><div class="act-num">SCALE</div>' +
+            '<h3 class="act-name">按剧场座席规模从大到小<small>By Venue Capacity</small></h3>' +
+            '<p class="act-note">从万人级实景湖畔与1.76万座维加斯巨球，到仅容80人提灯夜游的苏州古典园林。</p></header>' +
+            '<div class="list">' + list.map(card).join("") + '</div></section>';
+        } else if (state.sort === "price") {
+          list.sort(function (a, b) { return (a.ticketUsd || 0) - (b.ticketUsd || 0) || a.rank - b.rank; });
+          html = '<section class="act"><header class="act-head" style="--act-c:#39d98a"><div class="act-num">VALUE</div>' +
+            '<h3 class="act-name">按起步票价从低到高<small>By Starting Ticket Price (USD)</small></h3>' +
+            '<p class="act-note">含在主题乐园门票内的夜间大秀排在最前，随后是中国与欧洲高性价比实景巨制。</p></header>' +
+            '<div class="list">' + list.map(card).join("") + '</div></section>';
+        } else if (state.sort === "duration") {
+          list.sort(function (a, b) { return (b.durationMin || 0) - (a.durationMin || 0) || a.rank - b.rank; });
+          html = '<section class="act"><header class="act-head" style="--act-c:#b68cff"><div class="act-num">TIME</div>' +
+            '<h3 class="act-name">按演出时长从长到短<small>By Runtime Duration</small></h3>' +
+            '<p class="act-note">从需要连看两天的《只有河南·戏剧幻城》21剧场矩阵，到浓缩高能的80–90分钟拉斯维加斯水秀。</p></header>' +
+            '<div class="list">' + list.map(card).join("") + '</div></section>';
+        } else {
+          ACTS.forEach(function (act) {
+            var items = list.filter(function (x) { return x.tier === act.tier; });
+            if (!items.length) return;
+            html += '<section class="act"><header class="act-head" style="--act-c:' + act.c + '">' +
+              '<div class="act-num">' + act.act + '</div>' +
+              '<h3 class="act-name">' + act.name + ' · ' + act.tier + '<small>' + act.en + '</small></h3>' +
+              '<p class="act-note">' + act.note + '</p></header>' +
+              '<div class="list">' + items.map(card).join("") + '</div></section>';
+          });
+        }
+
+        actsEl.innerHTML = html;
+        observe();
+        if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
+      }
+
+      var io = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: "0px 0px -6% 0px" }) : null;
+
+      function observe() {
+        actsEl.querySelectorAll(".card").forEach(function (c) {
+          if (io) io.observe(c);
+          else c.classList.add("in");
+        });
+      }
+
+      // Animate method rings
+      var C = 2 * Math.PI * 44;
+      document.querySelectorAll(".ring").forEach(function (r) {
+        var fg = r.querySelector(".fg");
+        fg.style.strokeDasharray = C;
+        fg.style.strokeDashoffset = C;
+        var go = function () { fg.style.strokeDashoffset = C * (1 - r.getAttribute("data-pct") / 100); };
+        if (io) {
+          new IntersectionObserver(function (es, o) {
+            if (es[0].isIntersecting) { go(); o.disconnect(); }
+          }, { threshold: 0.35 }).observe(r);
+        } else go();
+      });
+
+      // Scroll progress & Act indicator
+      var root = document.documentElement;
+      var readEl = document.getElementById("act-read");
+      var zoneEl = document.getElementById("act-zone");
+      var ACT_STEPS = [
+        [0, "ACT I", "序幕 · 殿堂重器"],
+        [0.18, "ACT I", "T0 · 殿堂造梦重器"],
+        [0.36, "ACT II", "T1 · 世界级王牌驻场"],
+        [0.58, "ACT III", "T1.5 · 现象级剧场奇观"],
+        [0.78, "ACT IV", "T2 · 城市夜生活名片"],
+        [0.92, "FINALE", "谢幕 · 传奇纪念堂"]
+      ];
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+          var max = root.scrollHeight - innerHeight;
+          var d = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+          root.style.setProperty("--d", d.toFixed(4));
+          var actCode = ACT_STEPS[0][1], actLabel = ACT_STEPS[0][2];
+          ACT_STEPS.forEach(function (p) {
+            if (d >= p[0]) { actCode = p[1]; actLabel = p[2]; }
+          });
+          if (readEl) readEl.textContent = actCode;
+          if (zoneEl) zoneEl.textContent = actLabel;
+          ticking = false;
+        });
+      }
+      addEventListener("scroll", onScroll, { passive: true });
+      addEventListener("resize", onScroll);
+
+      // Golden stage sparks
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        var sparks = document.getElementById("sparks");
+        var frag = document.createDocumentFragment();
+        for (var i = 0; i < 38; i++) {
+          var s = document.createElement("i");
+          var size = Math.random() * 3 + 1.2;
+          s.style.cssText = "left:" + (Math.random() * 100) + "%;width:" + size + "px;height:" + size + "px;animation-duration:" +
+            (15 + Math.random() * 20) + "s;animation-delay:-" + (Math.random() * 28) + "s;--dx:" + (Math.random() * 70 - 35) + "px";
+          frag.appendChild(s);
+        }
+        sparks.appendChild(frag);
+      }
+
+      render();
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

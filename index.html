@@ -3,1004 +3,1260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oceanic Atlas · 全球 145 处海岸度假图鉴</title>
-  <meta name="description" content="以最冷月夜温 ≥18°C、水温 ≥21°C 为底线，按八项指标评出的全球 145 处海滨与海岛度假地。附上海、香港、法兰克福直飞航线与双人五晚实测房价。" />
-  <meta name="theme-color" content="#f5f0e7" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23f5f0e7'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23e0674a'/%3E%3Cpath d='M4 19h24v9H4z' fill='%2314425f'/%3E%3Cpath d='M4 19c4 2 8 2 12 0s8-2 12 0' fill='none' stroke='%237fd3cf' stroke-width='2'/%3E%3C/svg%3E" />
+  <title>Destination Atlas · 全球 585 处标杆目的地硬核图鉴与行前决策平台</title>
+  <meta name="description" content="拒绝滤镜与情怀：涵盖全球 145 处海滨度假地、35 座水族馆、40 座动物园与游猎园、100 座重器博物馆、115 座主题与水上乐园、100 座滑雪场、50 部商业驻场秀的量化决策平台。" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23e6edf3' stroke-width='1.5' stroke-dasharray='3 2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23f5b301'/%3E%3Cpath d='M16 3v4M16 25v4M3 16h4M25 16h4' stroke='%2358a6ff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" />
   <style>
     /* ==========================================================================
-       Oceanic Atlas — Resort travel-magazine stylesheet
-       Sand paper base · deep ocean ink · lagoon teal · coral accent
+       Destination Atlas — Master Portal & Decision Hub Stylesheet
+       Deep celestial slate · 7 discipline signature palettes · interactive tools
        ========================================================================== */
-
     :root {
-      --sand: #f5f0e7;
-      --paper: #fbf8f2;
-      --shell: #ece4d5;
-      --dune: #dccfb8;
-      --ocean: #14425f;
-      --ocean-deep: #0c2c42;
-      --lagoon: #2b8b92;
-      --lagoon-soft: #d5ecea;
-      --coral: #e0674a;
-      --coral-soft: #f8ddd3;
-      --ink: #1d2b34;
-      --ink-2: #4b5a63;
-      --ink-3: #87918f;
-      --line: #e3dacb;
-      --line-2: #cfc3ae;
+      --bg: #090d12;
+      --bg-panel: #11161d;
+      --bg-card: #161c24;
+      --bg-hover: #1c242f;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --text-dim: #545d68;
 
-      --serif: "Noto Serif SC", "Songti SC", serif;
-      --display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
-      --sans: "DM Sans", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+      /* 7 Discipline signatures */
+      --c-beach: #2b8b92;
+      --c-abyss: #5ef2e6;
+      --c-zoo: #e7b25c;
+      --c-metal: #f5b301;
+      --c-park: #ff6b9d;
+      --c-ski: #79c0ff;
+      --c-show: #ff7b72;
 
-      --wrap: 1240px;
+      --font-display: "Cinzel", "Noto Serif SC", serif;
+      --font-serif: "Noto Serif SC", "Songti SC", serif;
+      --font-sans: "DM Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --wrap: 1280px;
       --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
     body {
-      margin: 0;
-      background: var(--sand);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      font-feature-settings: "tnum" 1, "lnum" 1;
-      font-variant-numeric: lining-nums tabular-nums;
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: var(--font-sans); font-size: 15px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
     }
-    h1, h2, h3, h4, p, ol, ul, dl, dd, figure, blockquote { margin: 0; }
-    ol, ul { padding: 0; list-style: none; }
+    h1, h2, h3, h4, p, ul, ol, dl, dd { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
     a { color: inherit; text-decoration: none; }
-    button, input, select { font: inherit; color: inherit; }
+    button, input { font: inherit; color: inherit; }
     button { background: none; border: 0; padding: 0; cursor: pointer; }
-    svg { display: block; }
-    [hidden] { display: none !important; }
-    ::selection { background: var(--coral-soft); color: var(--ocean-deep); }
+    ::selection { background: rgba(245, 179, 1, 0.3); color: #fff; }
 
     .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
 
-    .icon { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
-    .icon-fill { fill: currentColor; stroke: none; }
-    [data-icon] { display: inline-flex; }
-
-    .eyebrow {
-      display: inline-block;
-      font-family: var(--sans);
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--lagoon);
-    }
-    .mono, .code { font-family: var(--sans); font-variant-numeric: tabular-nums; }
-    .code { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--lagoon); }
-
-    /* Buttons & links ------------------------------------------------------ */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      height: 46px; padding: 0 24px;
-      border: 1px solid var(--ocean); border-radius: 999px;
-      font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
-      color: var(--ocean);
-      transition: background 0.25s, color 0.25s, border-color 0.25s;
-    }
-    .btn:hover { background: var(--ocean); color: var(--paper); }
-    .btn-solid { background: var(--ocean); color: var(--paper); }
-    .btn-solid:hover { background: var(--ocean-deep); border-color: var(--ocean-deep); }
-    .btn-light { border-color: rgba(255,255,255,0.7); color: #fff; }
-    .btn-light:hover { background: #fff; color: var(--ocean); }
-
-    .text-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 13.5px; font-weight: 500; color: var(--ocean);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .text-link:hover { border-color: currentColor; }
-
-    /* Header ---------------------------------------------------------------- */
-    .site-header {
+    /* Top navigation -------------------------------------------------------- */
+    .portal-header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(245, 240, 231, 0.88);
-      -webkit-backdrop-filter: saturate(1.4) blur(14px);
-      backdrop-filter: saturate(1.4) blur(14px);
-      border-bottom: 1px solid var(--line);
+      background: rgba(9, 13, 18, 0.9);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
-    .header-inner { display: flex; align-items: center; gap: 32px; height: 68px; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ocean); }
-    .brand-mark { width: 26px; height: 26px; color: var(--coral); }
-    .brand-name { font-family: var(--display); font-size: 22px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1; }
-    .site-nav { display: flex; gap: 26px; margin-left: auto; font-size: 13.5px; color: var(--ink-2); }
-    .site-nav a { position: relative; padding: 4px 0; transition: color 0.2s; }
-    .site-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--coral); transform: scaleX(0); transition: transform 0.3s var(--ease); }
-    .site-nav a:hover { color: var(--ocean); }
-    .site-nav a:hover::after { transform: scaleX(1); }
-    .header-tools { display: flex; align-items: center; gap: 6px; }
-    .tool-btn {
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 68px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .brand-mark {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+      border: 1px solid var(--border-strong);
+    }
+    .brand-mark svg { width: 18px; height: 18px; }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #fff; }
+    .brand-subtitle { font-size: 10.5px; letter-spacing: 0.12em; color: var(--text-muted); }
+
+    .nav-pillars { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,0.02); overflow-x: auto; max-width: 100%; }
+    .nav-pillars a {
+      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 500; color: var(--text-muted);
+      transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    .nav-pillars a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .nav-pillars a.active { color: #fff; background: rgba(255,255,255,0.14); }
+
+    .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .btn-search-trigger {
       display: inline-flex; align-items: center; gap: 7px;
-      height: 36px; padding: 0 14px; border-radius: 999px;
-      font-size: 13px; color: var(--ink-2);
-      transition: background 0.2s, color 0.2s;
+      height: 36px; padding: 0 13px; border-radius: 999px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.04);
+      font-size: 12.5px; color: var(--text-muted); transition: border-color 0.2s, color 0.2s;
     }
-    .tool-btn:hover { background: var(--shell); color: var(--ocean); }
-    .tool-btn kbd { font-family: var(--sans); font-size: 11px; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 4px; padding: 0 5px; line-height: 17px; }
-    .tool-btn.is-primary { background: var(--ocean); color: var(--paper); }
-    .tool-btn.is-primary:hover { background: var(--ocean-deep); }
+    .btn-search-trigger:hover { border-color: var(--border-strong); color: #fff; }
+    .btn-search-trigger kbd { font-size: 11px; padding: 1px 5px; border-radius: 4px; border: 1px solid var(--border-strong); background: rgba(0,0,0,0.3); }
 
     /* Hero ------------------------------------------------------------------ */
-    .hero { position: relative; min-height: min(860px, 92vh); overflow: hidden; color: var(--ocean); isolation: isolate; }
-    .hero-scene { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
-    .hero-scene .wave { animation: drift 14s ease-in-out infinite alternate; }
-    .hero-scene .wave.w2 { animation-duration: 18s; animation-delay: -4s; }
-    .hero-scene .wave.w3 { animation-duration: 22s; animation-delay: -9s; }
-    .hero-scene .shimmer { animation: shimmer 6s ease-in-out infinite; }
-    @keyframes drift { from { transform: translateX(-30px); } to { transform: translateX(30px); } }
-    @keyframes shimmer { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.7; } }
-    @media (prefers-reduced-motion: reduce) { .hero-scene .wave, .hero-scene .shimmer { animation: none; } }
+    .portal-hero {
+      position: relative; padding: clamp(52px, 7vw, 88px) 0 56px;
+      text-align: center; overflow: hidden; isolation: isolate;
+    }
+    .portal-hero-bg {
+      position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(60% 45% at 50% 8%, rgba(43, 139, 146, 0.22) 0%, transparent 70%),
+        radial-gradient(40% 35% at 15% 45%, rgba(94, 242, 230, 0.09) 0%, transparent 60%),
+        radial-gradient(40% 35% at 85% 45%, rgba(255, 107, 157, 0.09) 0%, transparent 60%);
+    }
+    .portal-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 4px 14px; border-radius: 999px;
+      border: 1px solid rgba(245, 179, 1, 0.35); background: rgba(245, 179, 1, 0.09);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-metal);
+    }
+    .portal-hero h1 {
+      margin-top: 22px; font-family: var(--font-serif);
+      font-size: clamp(36px, 5.2vw, 64px); font-weight: 600; line-height: 1.24; color: #fff;
+    }
+    .portal-hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #fff 15%, #79c0ff 50%, var(--c-metal) 90%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .portal-hero-lede {
+      max-width: 46em; margin: 20px auto 0;
+      font-size: 16px; line-height: 1.95; color: var(--text-muted);
+    }
 
-    .hero-inner { position: relative; padding: clamp(56px, 8vh, 96px) 0 0; }
-    .hero h1 {
-      max-width: 13em;
-      margin-top: 22px;
-      font-family: var(--serif);
-      font-size: clamp(40px, 5.6vw, 76px);
-      font-weight: 300;
-      line-height: 1.22;
-      letter-spacing: 0.02em;
-      color: var(--ocean-deep);
+    /* Quick Decision Jump Bar */
+    .jump-bar {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px;
     }
-    .hero h1 em { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--coral); letter-spacing: 0; padding: 0 0.06em; }
-    .hero-lede { max-width: 34em; margin-top: 26px; font-size: 16.5px; line-height: 1.95; color: var(--ink-2); }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 36px; }
-
-    .hero-stats {
-      position: absolute; left: 0; right: 0; bottom: 0;
-      color: #fff;
-    }
-    .hero-stats .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,0.28); }
-    .hero-stat { padding: 22px 0 30px; }
-    .hero-stat + .hero-stat { padding-left: 28px; border-left: 1px solid rgba(255,255,255,0.18); }
-    .hero-stat b { display: block; font-family: var(--display); font-size: clamp(34px, 3.6vw, 48px); font-weight: 500; line-height: 1; letter-spacing: -0.01em; }
-    .hero-stat span { display: block; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.78); }
-
-    /* Sections -------------------------------------------------------------- */
-    .section { padding: clamp(80px, 10vw, 128px) 0; }
-    .section.is-paper { background: var(--paper); }
-    .section.is-shell { background: var(--shell); }
-    .section-head { max-width: 760px; margin: 0 auto 52px; text-align: center; }
-    .section-head.is-left { margin-left: 0; text-align: left; }
-    .section-title {
-      margin-top: 14px;
-      font-family: var(--serif);
-      font-size: clamp(30px, 3.4vw, 44px);
-      font-weight: 300;
-      line-height: 1.3;
-      letter-spacing: 0.03em;
-      color: var(--ocean-deep);
-    }
-    .section-title em { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--coral); }
-    .section-note { margin-top: 16px; font-size: 15px; line-height: 1.9; color: var(--ink-2); }
-
-    /* Editor's note (cover feature) ---------------------------------------- */
-    .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
-    .feature-copy .eyebrow { color: var(--coral); }
-    .feature-quote {
-      margin-top: 22px;
-      font-family: var(--serif);
-      font-size: clamp(19px, 1.7vw, 23px);
-      font-weight: 400;
-      line-height: 1.85;
-      color: var(--ocean-deep);
-    }
-    .feature-quote::before { content: "“"; display: block; height: 44px; font-family: var(--display); font-size: 88px; line-height: 1; color: var(--coral); }
-    .feature-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); }
-    .feature-count { margin-left: auto; font-family: var(--display); font-size: 18px; font-style: italic; color: var(--ink-3); }
-    .feature-next { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-2); }
-    .feature-next:hover { color: var(--coral); }
-    .feature-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .feature-pair .postcard:nth-child(2) { margin-top: 48px; }
-    .vs-caption { grid-column: 1 / -1; margin-top: 6px; font-size: 13px; color: var(--ink-3); text-align: center; }
-
-    /* Postcards (data-driven seascape cards) -------------------------------- */
-    .postcard {
-      position: relative;
-      display: flex; flex-direction: column;
-      background: var(--paper);
-      border-radius: 4px;
-      box-shadow: 0 1px 2px rgba(20, 66, 95, 0.06), 0 12px 32px -18px rgba(20, 66, 95, 0.35);
-      overflow: hidden;
-      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
-    }
-    .postcard:hover { transform: translateY(-4px); box-shadow: 0 1px 2px rgba(20, 66, 95, 0.06), 0 22px 44px -20px rgba(20, 66, 95, 0.45); }
-    .pc-scene { position: relative; aspect-ratio: 4 / 3; overflow: hidden; cursor: pointer; }
-    .pc-scene svg { width: 100%; height: 100%; }
-    .pc-rank {
-      position: absolute; top: 14px; left: 16px;
-      font-family: var(--display); font-size: 15px; font-style: italic; color: rgba(12, 44, 66, 0.75);
-    }
-    .pc-score {
-      position: absolute; right: 14px; bottom: 14px;
-      display: flex; align-items: baseline; gap: 3px;
-      padding: 6px 12px 5px; border-radius: 999px;
-      background: rgba(251, 248, 242, 0.92);
-      color: var(--ocean-deep);
-    }
-    .pc-score b { font-family: var(--display); font-size: 22px; font-weight: 600; line-height: 1; }
-    .pc-score small { font-size: 11px; color: var(--ink-3); }
-    .pc-badge {
-      position: absolute; top: 12px; right: 12px;
-      padding: 3px 10px; border-radius: 999px;
-      font-size: 11px; font-weight: 500; letter-spacing: 0.04em;
-      background: rgba(251, 248, 242, 0.9); color: var(--lagoon);
-    }
-    .pc-badge.is-seasonal { color: var(--coral); }
-    .pc-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 18px; }
-    .pc-meta { font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
-    .pc-title { margin-top: 6px; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.4; color: var(--ocean-deep); cursor: pointer; }
-    .pc-title:hover { color: var(--coral); }
-    .pc-en { font-family: var(--display); font-size: 16px; font-style: italic; color: var(--ink-3); line-height: 1.3; }
-    .pc-facts { display: flex; gap: 16px; margin-top: 12px; font-size: 12.5px; color: var(--ink-2); }
-    .pc-facts span b { font-weight: 600; color: var(--ocean); }
-    .pc-summary { margin-top: 12px; font-size: 13.5px; line-height: 1.8; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .pc-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
-    .pc-price b { font-family: var(--display); font-size: 21px; font-weight: 600; color: var(--ocean-deep); }
-    .pc-price small { font-size: 11.5px; color: var(--ink-3); margin-left: 4px; }
-    .pc-actions { display: flex; align-items: center; gap: 12px; }
-    .feature-pair .pc-body { padding: 14px 16px; }
-    .feature-pair .pc-title { font-size: 17px; }
-    .feature-pair .pc-facts { margin-top: 8px; }
-
-    .ride-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 8px; }
-
-    .compare-toggle {
-      display: inline-flex; align-items: center; gap: 5px;
-      height: 30px; padding: 0 12px; border-radius: 999px;
-      border: 1px solid var(--line-2);
-      font-size: 12.5px; color: var(--ink-2);
+    .jump-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 500;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border-strong); color: var(--text);
       transition: all 0.2s;
     }
-    .compare-toggle:hover { border-color: var(--ocean); color: var(--ocean); }
-    .compare-toggle[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); color: var(--paper); }
+    .jump-pill:hover { background: rgba(245, 179, 1, 0.15); border-color: var(--c-metal); transform: translateY(-2px); }
 
-    /* Weights -------------------------------------------------------------- */
-    .preset-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .chip {
-      display: inline-flex; align-items: center; gap: 7px;
-      height: 38px; padding: 0 18px; border-radius: 999px;
-      border: 1px solid var(--line-2);
-      background: transparent;
-      font-size: 13.5px; color: var(--ink-2);
-      transition: all 0.2s;
-      white-space: nowrap;
+    /* KPI strip */
+    .portal-stats {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      max-width: 1000px; margin: 40px auto 0;
+      border: 1px solid var(--border); border-radius: 16px;
+      background: var(--bg-panel); overflow: hidden;
     }
-    .chip:hover { border-color: var(--ocean); color: var(--ocean); }
-    .chip[aria-pressed="true"] { background: var(--ocean); border-color: var(--ocean); color: var(--paper); }
-    .chip .count { font-size: 11.5px; opacity: 0.6; }
+    .p-stat { padding: 20px 18px; text-align: center; }
+    .p-stat + .p-stat { border-left: 1px solid var(--border); }
+    .p-stat b { display: block; font-family: var(--font-display); font-size: 30px; font-weight: 700; color: #fff; line-height: 1; }
+    .p-stat span { display: block; margin-top: 8px; font-size: 12.5px; color: var(--text-muted); }
 
-    .weight-dist-strip { display: flex; height: 6px; margin: 40px 0 0; border-radius: 999px; overflow: hidden; background: var(--line); }
-    .weight-dist-seg { height: 100%; transition: width 0.35s var(--ease); }
-    .weight-dist-seg + .weight-dist-seg { box-shadow: inset 2px 0 0 var(--paper); }
-    .weight-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 12px; font-size: 12px; color: var(--ink-3); }
-    .weight-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
-
-    .weight-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
-    .weight-cell { padding: 20px 20px 18px; background: var(--sand); border-radius: 4px; }
-    .weight-cell-head { display: flex; align-items: baseline; justify-content: space-between; }
-    .weight-cell-name { font-family: var(--serif); font-size: 16px; font-weight: 500; color: var(--ocean-deep); }
-    .weight-cell-max { font-size: 11.5px; color: var(--ink-3); }
-    .weight-cell-val { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
-    .weight-cell-num { font-family: var(--display); font-size: 34px; font-weight: 500; line-height: 1; color: var(--ocean); }
-    .weight-cell-pct { font-size: 12px; font-weight: 600; color: var(--coral); }
-    .weight-cell-desc { margin-top: 10px; font-size: 12.5px; line-height: 1.7; color: var(--ink-3); }
-
-    input[type="range"] { width: 100%; height: 22px; margin: 10px 0 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer; }
-    input[type="range"]::-webkit-slider-runnable-track { height: 3px; border-radius: 3px; background: linear-gradient(to right, var(--lagoon) 0%, var(--lagoon) var(--pct, 50%), var(--line-2) var(--pct, 50%), var(--line-2) 100%); }
-    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7.5px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ocean); box-shadow: 0 2px 6px rgba(20,66,95,0.2); transition: transform 0.15s; }
-    input[type="range"]:hover::-webkit-slider-thumb { transform: scale(1.12); }
-    input[type="range"]::-moz-range-track { height: 3px; border-radius: 3px; background: var(--line-2); }
-    input[type="range"]::-moz-range-progress { height: 3px; border-radius: 3px; background: var(--lagoon); }
-    input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ocean); }
-
-    /* Index: KPI + toolbar ------------------------------------------------- */
-    .kpi-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-bottom: 40px; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); }
-    .kpi-cell { padding: 20px 0 20px 24px; }
-    .kpi-cell:first-child { padding-left: 0; }
-    .kpi-cell + .kpi-cell { border-left: 1px solid var(--line); }
-    .kpi-cell dt { font-size: 12px; color: var(--ink-3); }
-    .kpi-cell dd { margin-top: 6px; font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.1; color: var(--ocean-deep); }
-    .kpi-cell dd small { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); }
-    .kpi-cell dd.is-text { font-family: var(--serif); font-size: 18px; font-weight: 500; padding-top: 8px; }
-    .kpi-cell dd .mono { font-family: var(--display); font-size: 26px; font-weight: 600; }
-
-    .toolbar {
-      position: sticky; top: 68px; z-index: 20;
-      margin: 0 -24px 0; padding: 16px 24px;
-      background: rgba(245, 240, 231, 0.94);
-      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+    /* Cross-Index Global Search --------------------------------------------- */
+    .search-box-wrap { max-width: 860px; margin: 44px auto 0; position: relative; }
+    .search-bar {
+      display: flex; align-items: center; gap: 14px;
+      padding: 8px 10px 8px 20px;
+      border: 1.5px solid var(--border-strong); border-radius: 999px;
+      background: var(--bg-panel);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.6);
+      transition: border-color 0.25s, box-shadow 0.25s;
     }
-    .toolbar .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-    .toolbar .chips::-webkit-scrollbar { display: none; }
-    .toolbar .chip { height: 32px; padding: 0 14px; font-size: 13px; }
-    .chip-sep { flex: none; width: 1px; margin: 4px 6px; background: var(--line-2); }
-    .toolbar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 12px; }
-    .field { position: relative; display: inline-flex; align-items: center; }
-    .field > [data-icon] { position: absolute; left: 14px; color: var(--ink-3); pointer-events: none; }
-    .input, .select {
-      height: 38px; border: 1px solid var(--line-2); border-radius: 999px;
-      background: var(--paper);
-      font-size: 13px; color: var(--ink);
-      transition: border-color 0.2s;
+    .search-bar:focus-within {
+      border-color: var(--c-metal);
+      box-shadow: 0 0 0 4px rgba(245, 179, 1, 0.15), 0 20px 40px -15px rgba(0,0,0,0.8);
     }
-    .input { width: 240px; padding: 0 32px 0 38px; }
-    .input:focus, .select:focus { outline: none; border-color: var(--ocean); }
-    .input::-webkit-search-cancel-button { display: none; }
-    .input-clear { position: absolute; right: 10px; width: 20px; height: 20px; border-radius: 50%; font-size: 15px; line-height: 20px; color: var(--ink-3); }
-    .input-clear:hover { background: var(--shell); color: var(--ink); }
-    .select {
-      padding: 0 34px 0 16px;
-      -webkit-appearance: none; appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2387918f' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='M4.5 6.5L8 10l3.5-3.5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 12px center; background-size: 14px;
-      cursor: pointer;
+    .search-bar svg { width: 20px; height: 20px; fill: none; stroke: var(--text-muted); stroke-width: 1.8; flex: none; }
+    .search-bar input {
+      flex: 1; min-width: 0; height: 40px; border: 0; outline: 0;
+      background: transparent; font-size: 15px; color: #fff;
     }
-    .price-filter { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
-    .price-filter input { width: 120px; margin: 0; }
-    .price-filter output { min-width: 58px; font-weight: 600; color: var(--ocean); }
-    .switch { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; user-select: none; }
-    .switch input { -webkit-appearance: none; appearance: none; position: relative; width: 32px; height: 18px; margin: 0; border-radius: 999px; background: var(--line-2); cursor: pointer; transition: background 0.2s; }
-    .switch input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); transition: transform 0.2s var(--ease); }
-    .switch input:checked { background: var(--lagoon); }
-    .switch input:checked::after { transform: translateX(14px); }
-    .reset-btn { font-size: 13px; color: var(--ink-3); }
-    .reset-btn:hover { color: var(--coral); }
-    .spacer { flex: 1; }
-    .segmented { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--shell); }
-    .segmented button { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 14px; border-radius: 999px; font-size: 13px; color: var(--ink-2); transition: all 0.2s; }
-    .segmented button[aria-pressed="true"] { background: var(--paper); color: var(--ocean); box-shadow: 0 1px 3px rgba(20,66,95,0.12); }
-    .results-summary { margin: 22px 0 8px; font-size: 13px; color: var(--ink-3); }
-
-    /* Table ---------------------------------------------------------------- */
-    .table-wrap { overflow-x: auto; }
-    .data-table { width: 100%; min-width: 1120px; border-collapse: collapse; font-size: 13.5px; }
-    .data-table th {
-      padding: 14px 10px; border-bottom: 1px solid var(--line-2);
-      font-size: 12px; font-weight: 500; color: var(--ink-3); text-align: left; vertical-align: bottom; white-space: nowrap;
+    .search-bar input::placeholder { color: var(--text-dim); }
+    .search-clear {
+      padding: 6px 12px; border-radius: 999px; font-size: 12px; color: var(--text-muted);
+      border: 1px solid var(--border); transition: all 0.2s;
     }
-    .data-table th small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); opacity: 0.75; }
-    .data-table td { padding: 22px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
-    .data-table .num { text-align: center; }
-    .data-table .right { text-align: right; }
-    .data-table tbody tr { transition: background 0.2s; }
-    .data-table tbody tr:hover { background: rgba(255, 255, 255, 0.5); }
-    .data-table tbody tr.is-compared { background: rgba(213, 236, 234, 0.45); }
 
-    .t-rank { font-family: var(--display); font-size: 22px; font-style: italic; color: var(--ink-3); }
-    .t-rank.is-top { color: var(--coral); }
-    .t-dest-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
-    .t-title { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ocean-deep); cursor: pointer; transition: color 0.2s; }
-    .t-title:hover { color: var(--coral); }
-    .t-en { font-family: var(--display); font-size: 15px; font-style: italic; color: var(--ink-3); }
-    .t-meta { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 4px; font-size: 12px; color: var(--ink-3); }
-    .t-cat-mark { font-weight: 600; color: var(--lagoon); }
-    .t-cat-mark.is-seasonal { color: var(--coral); }
-    .t-flights { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .flight-code { display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 11.5px; color: var(--ink-2); transition: all 0.2s; }
-    button.flight-code:hover { border-color: var(--lagoon); color: var(--lagoon); }
-    .t-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .tag-btn { height: 22px; padding: 0 9px; border-radius: 3px; background: var(--shell); font-size: 11.5px; color: var(--ink-2); transition: all 0.2s; }
-    .tag-btn:hover { background: var(--lagoon-soft); color: var(--lagoon); }
-    .t-note { margin-top: 10px; font-size: 13px; line-height: 1.8; color: var(--ink-2); }
-    .t-climate { font-size: 13px; line-height: 1.7; color: var(--ink); white-space: nowrap; }
-    .t-climate-sub { white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; margin-top: 4px; font-size: 11.5px; color: var(--lagoon); }
-    .t-climate-sub .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-    .t-climate-sub.is-seasonal { color: var(--coral); }
-    .t-total { font-family: var(--display); font-size: 28px; font-weight: 600; line-height: 1; color: var(--ocean); }
-    .t-total.is-elite { color: var(--coral); }
-    .t-delta { display: block; margin-top: 4px; font-size: 11.5px; color: var(--ink-3); }
-    .t-delta.up { color: var(--lagoon); }
-    .dim-cell { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
-    .dim-val { font-size: 13px; color: var(--ink-2); }
-    .dim-val.is-high { font-weight: 600; color: var(--ocean); }
-    .dim-bar { position: relative; display: block; width: 30px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
-    .dim-bar i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--dune); }
-    .dim-bar.is-high i { background: var(--lagoon); }
-    .t-price { font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--ocean-deep); }
-    .t-price-note { max-width: 210px; margin-left: auto; font-size: 11.5px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .v-dot { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: var(--lagoon); vertical-align: 1px; }
-    .t-actions { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 12px; }
-
-    .empty-state { padding: 72px 20px; text-align: center; }
-    .empty-state h3 { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--ocean-deep); }
-    .empty-state p { margin: 10px 0 22px; font-size: 14px; color: var(--ink-3); }
-
-    /* Hubs ----------------------------------------------------------------- */
-    .hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-    .hub-card { display: flex; flex-direction: column; padding: 36px 32px 30px; border-radius: 4px; color: #fff; }
-    .hub-card.h1 { background: var(--ocean); }
-    .hub-card.h2 { background: var(--lagoon); }
-    .hub-card.h3 { background: #b9573f; }
-    .hub-code { font-family: var(--display); font-size: 64px; font-weight: 500; line-height: 0.9; letter-spacing: 0.02em; }
-    .hub-city { margin-top: 10px; font-family: var(--serif); font-size: 21px; font-weight: 400; }
-    .hub-lede { margin-top: 10px; font-size: 13.5px; line-height: 1.8; color: rgba(255,255,255,0.78); }
-    .hub-items { margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.22); }
-    .hub-item { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.14); }
-    .hub-item strong { font-family: var(--serif); font-size: 15px; font-weight: 500; }
-    .hub-item .t { font-family: var(--display); font-size: 19px; font-weight: 600; text-align: right; }
-    .hub-item p { grid-column: 1 / -1; font-size: 12.5px; line-height: 1.7; color: rgba(255,255,255,0.72); }
-    .hub-card .btn { margin-top: 26px; align-self: flex-start; height: 40px; font-size: 13px; }
-
-    /* Method --------------------------------------------------------------- */
-    .method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
-    .method-figure { font-family: var(--display); font-size: clamp(56px, 6vw, 80px); font-weight: 500; line-height: 1; color: var(--coral); letter-spacing: -0.01em; }
-    .method-figure small { font-size: 0.42em; color: var(--ink-3); margin-left: 4px; }
-    .method-title { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line-2); font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--ocean-deep); }
-    .method-text { margin-top: 12px; font-size: 14px; line-height: 1.95; color: var(--ink-2); }
-    .method-text strong { font-weight: 600; color: var(--ocean); }
-
-    /* Footer --------------------------------------------------------------- */
-    .site-footer { background: var(--ocean-deep); color: rgba(255,255,255,0.72); padding: 88px 0 32px; font-size: 13.5px; }
-    .footer-top { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 0.7fr)); gap: 48px; }
-    .footer-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; }
-    .footer-note { max-width: 30em; margin-top: 18px; line-height: 1.9; }
-    .footer-h { margin-bottom: 14px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #7fd3cf; }
-    .footer-links a { display: block; padding: 4px 0; transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
-    .footer-wordmark { margin-top: 72px; font-family: var(--display); font-size: clamp(56px, 11vw, 168px); font-weight: 500; font-style: italic; line-height: 0.9; letter-spacing: -0.01em; color: rgba(255,255,255,0.08); white-space: nowrap; user-select: none; }
-    .footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 12px; color: rgba(255,255,255,0.5); }
-    .footer-base kbd { font-family: var(--sans); border: 1px solid rgba(255,255,255,0.25); border-radius: 4px; padding: 0 5px; }
-
-    /* Compare tray --------------------------------------------------------- */
-    .compare-tray {
-      position: fixed; left: 50%; bottom: 22px; z-index: 60;
-      display: flex; align-items: center; gap: 12px;
-      max-width: calc(100% - 32px);
-      padding: 8px 8px 8px 20px; border-radius: 999px;
-      background: var(--ocean-deep); color: #fff;
-      box-shadow: 0 18px 40px -12px rgba(12,44,66,0.55);
-      font-size: 13px;
-      transform: translate(-50%, 140%); opacity: 0;
-      transition: transform 0.4s var(--ease), opacity 0.3s;
+    .quick-chips {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px;
+      margin-top: 16px; font-size: 12.5px; color: var(--text-dim);
     }
-    .compare-tray.is-visible { transform: translate(-50%, 0); opacity: 1; }
-    .tray-label { white-space: nowrap; color: rgba(255,255,255,0.6); }
-    .tray-items { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
-    .tray-item { display: inline-flex; align-items: center; gap: 4px; padding: 3px 4px 3px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); white-space: nowrap; }
-    .tray-item button { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: rgba(255,255,255,0.6); }
-    .tray-item button:hover { background: rgba(255,255,255,0.15); color: #fff; }
-    .tray-clear { padding: 0 6px; color: rgba(255,255,255,0.6); white-space: nowrap; }
-    .tray-clear:hover { color: #fff; }
-    .tray-go { height: 34px; padding: 0 18px; border-radius: 999px; background: var(--coral); color: #fff; font-weight: 500; white-space: nowrap; }
-    .tray-go:hover { background: #cf583c; }
-
-    /* Dialogs -------------------------------------------------------------- */
-    .backdrop {
-      position: fixed; inset: 0; z-index: 100;
-      display: flex; align-items: flex-start; justify-content: center;
-      overflow-y: auto; padding: 5vh 20px 40px;
-      background: rgba(12, 44, 66, 0.42);
-      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
+    .q-chip {
+      padding: 4px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+      color: var(--text-muted); transition: all 0.2s;
     }
-    .backdrop.is-open { opacity: 1; visibility: visible; }
-    .dialog {
-      position: relative; width: 100%; max-width: 1080px;
-      background: var(--paper); border-radius: 6px; overflow: hidden;
-      box-shadow: 0 40px 80px -30px rgba(12,44,66,0.5);
-      transform: translateY(16px); transition: transform 0.4s var(--ease);
-    }
-    .backdrop.is-open .dialog { transform: none; }
-    .dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 26px 32px 20px; border-bottom: 1px solid var(--line); }
-    .dialog-head h2 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: var(--ocean-deep); }
-    .dialog-head p { margin-top: 4px; font-size: 13px; color: var(--ink-3); }
-    .dialog-close { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--shell); color: var(--ink-2); transition: all 0.2s; }
-    .dialog-close:hover { background: var(--ocean); color: #fff; }
-    .dialog-body { padding: 28px 32px 32px; }
-    .compare-layout { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr); gap: 36px; align-items: start; }
-    .radar-wrap { padding: 12px; background: var(--sand); border-radius: 4px; }
-    .radar-wrap svg { width: 100%; height: auto; }
-    .radar-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 16px; font-size: 13px; color: var(--ink-2); }
-    .radar-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 7px; vertical-align: 0; }
-    .compare-table { min-width: 520px; }
-    .compare-table td { padding: 13px 10px; }
-    .compare-table td:first-child { min-width: 128px; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
-    .best-mark { color: var(--coral); margin-left: 4px; }
+    .q-chip:hover { border-color: var(--border-strong); color: #fff; background: rgba(255,255,255,0.08); }
 
-    .dossier-hero { position: relative; aspect-ratio: 21 / 8; overflow: hidden; }
-    .dossier-hero svg { width: 100%; height: 100%; }
-    .dossier-hero .dialog-close { position: absolute; top: 18px; right: 18px; background: rgba(251,248,242,0.9); }
-    .dossier-head { padding: 26px 32px 0; }
-    .dossier-head .eyebrow { color: var(--coral); }
-    .dossier-head h2 { margin-top: 8px; font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.3; color: var(--ocean-deep); }
-    .dossier-head h2 span { margin-left: 10px; font-family: var(--display); font-size: 22px; font-style: italic; color: var(--ink-3); }
-    .dossier-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .dossier-stats div { padding: 14px 0 14px 18px; }
-    .dossier-stats div:first-child { padding-left: 0; }
-    .dossier-stats div + div { border-left: 1px solid var(--line); }
-    .dossier-stats dt { font-size: 12px; color: var(--ink-3); }
-    .dossier-stats dd { margin-top: 2px; font-family: var(--display); font-size: 26px; font-weight: 600; color: var(--ocean-deep); }
-    .dossier-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
-    .block-h { margin-bottom: 8px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lagoon); }
-    .dim-row { padding: 10px 0; border-bottom: 1px solid var(--line); }
-    .dim-row-head { display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; }
-    .dim-row-head strong { font-weight: 500; color: var(--ocean-deep); }
-    .dim-row-head small { margin-left: 6px; font-size: 11.5px; color: var(--ink-3); }
-    .dim-row-bar { height: 4px; margin-top: 7px; border-radius: 4px; background: var(--line); overflow: hidden; }
-    .dim-row-bar i { display: block; height: 100%; border-radius: 4px; background: var(--lagoon); }
-    .flight-row { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
-    .flight-row .ok { font-weight: 500; color: var(--lagoon); text-align: right; }
-    .flight-row .no { color: var(--ink-3); }
-    .dossier-note { margin-top: 22px; font-family: var(--serif); font-size: 15.5px; line-height: 1.95; color: var(--ink); }
-    .dossier-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-
-    /* Palette -------------------------------------------------------------- */
-    .palette-backdrop { padding-top: 14vh; }
-    .palette { width: 100%; max-width: 620px; background: var(--paper); border-radius: 8px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(12,44,66,0.5); }
-    .palette-input { display: flex; align-items: center; gap: 12px; height: 58px; padding: 0 20px; border-bottom: 1px solid var(--line); color: var(--ink-3); }
-    .palette-input input { flex: 1; border: 0; background: transparent; font-size: 15.5px; color: var(--ink); outline: none; }
-    .palette-input kbd { font-family: var(--sans); font-size: 11px; border: 1px solid var(--line-2); border-radius: 4px; padding: 1px 6px; }
-    .palette-results { max-height: min(56vh, 460px); overflow-y: auto; padding: 8px; }
-    .palette-item { display: flex; align-items: center; gap: 14px; width: 100%; padding: 10px 12px; border-radius: 4px; font-size: 14px; text-align: left; }
-    .palette-item:hover { background: var(--sand); }
-    .palette-item .sub { margin-left: auto; font-size: 12.5px; color: var(--ink-3); }
-
-    /* Responsive ----------------------------------------------------------- */
-    @media (max-width: 1180px) {
-      .site-nav { display: none; }
-      .header-tools { margin-left: auto; }
-      .ride-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .kpi-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .kpi-cell:nth-child(4) { padding-left: 0; border-left: 0; }
-      .kpi-cell:nth-child(n + 4) { border-top: 1px solid var(--line); }
+    .search-results-panel {
+      position: absolute; top: calc(100% + 12px); left: 0; right: 0; z-index: 60;
+      max-height: 540px; overflow-y: auto;
+      border: 1px solid var(--border-strong); border-radius: 20px;
+      background: #0f141b; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.95);
+      padding: 20px; text-align: left;
     }
-    @media (max-width: 960px) {
-      .feature, .compare-layout, .dossier-grid { grid-template-columns: 1fr; }
-      .hub-grid, .method-grid { grid-template-columns: 1fr; }
-      .weight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .footer-top { grid-template-columns: 1fr 1fr; }
-      .footer-top > div:first-child { grid-column: 1 / -1; }
-      .hero-stats .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .hero-stat:nth-child(3) { padding-left: 0; border-left: 0; }
+    .res-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--text-muted); }
+    .res-group { margin-top: 16px; }
+    .res-group-title { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .res-items { display: grid; gap: 7px; }
+    .res-item {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 9px 14px; border-radius: 10px; background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border); transition: all 0.15s;
     }
-    @media (max-width: 680px) {
-      .wrap { width: calc(100% - 36px); }
-      .header-tools .label, .tool-btn kbd { display: none; }
-      .hero { min-height: 820px; }
-      .ride-grid, .feature-pair { grid-template-columns: 1fr; }
-      .feature-pair .postcard:nth-child(2) { margin-top: 0; }
-      .weight-grid { grid-template-columns: 1fr; }
-      .kpi-strip { grid-template-columns: 1fr 1fr; }
-      .kpi-cell, .kpi-cell:nth-child(4) { padding-left: 0; border-left: 0 !important; }
-      .kpi-cell:nth-child(n + 2) { border-top: 1px solid var(--line); }
-      .toolbar { position: static; margin: 0; padding: 12px 0; }
-      .input, .field { width: 100%; }
-      .dossier-stats { grid-template-columns: 1fr 1fr; }
-      .dossier-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
-      .dialog-head, .dialog-body, .dossier-head { padding-left: 20px; padding-right: 20px; }
+    .res-item:hover { background: rgba(255,255,255,0.07); border-color: var(--border-strong); transform: translateX(3px); }
+    .res-item-left { min-width: 0; }
+    .res-name { font-weight: 500; color: #fff; font-size: 14px; }
+    .res-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 520px; }
+    .res-meta { flex: none; font-size: 12px; color: var(--text-dim); text-align: right; }
+    .res-meta b { color: var(--text-muted); }
+    .res-empty { padding: 36px 0; text-align: center; color: var(--text-muted); }
+
+    /* The 7 Pillars Section ------------------------------------------------- */
+    .section-pillars { padding: clamp(50px, 6vw, 84px) 0; }
+    .sec-title-wrap { text-align: center; max-width: 740px; margin: 0 auto 40px; }
+    .sec-title-wrap .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-metal); }
+    .sec-title-wrap h2 { margin-top: 10px; font-family: var(--font-serif); font-size: clamp(26px, 3.2vw, 38px); color: #fff; }
+    .sec-title-wrap p { margin-top: 10px; color: var(--text-muted); font-size: 14.5px; }
+
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;
+    }
+    .pillar-card {
+      position: relative; display: flex; flex-direction: column;
+      border-radius: 22px; padding: clamp(26px, 3.2vw, 36px);
+      border: 1px solid var(--p-border, var(--border));
+      background: var(--p-bg, var(--bg-panel));
+      overflow: hidden; isolation: isolate;
+      transition: transform 0.32s var(--ease), border-color 0.3s, box-shadow 0.32s;
+    }
+    .pillar-card.span-full { grid-column: 1 / -1; }
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--p-accent, var(--border-strong));
+      box-shadow: 0 28px 56px -24px var(--p-glow, rgba(0,0,0,0.8));
+    }
+    .pillar-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .pillar-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 4px 12px; border-radius: 999px;
+      font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--p-accent); border: 1px solid var(--p-accent-faint); background: var(--p-accent-bg);
+    }
+    .pillar-num {
+      font-family: var(--font-display); font-size: clamp(42px, 4.8vw, 60px);
+      line-height: 0.9; font-weight: 700; color: var(--p-num, #fff);
+    }
+    .pillar-num small { font-size: 0.42em; font-weight: 400; opacity: 0.75; margin-left: 4px; }
+    .pillar-title {
+      margin-top: 18px; font-family: var(--font-serif);
+      font-size: clamp(22px, 2.3vw, 28px); font-weight: 600; line-height: 1.3; color: #fff;
+    }
+    .pillar-en { display: block; margin-top: 4px; font-family: var(--font-sans); font-size: 13px; font-weight: 400; color: var(--text-muted); }
+    .pillar-lede { margin-top: 14px; font-size: 14px; line-height: 1.85; color: var(--text-muted); }
+    .pillar-highlights { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .pillar-highlights li {
+      padding: 4px 11px; border-radius: 8px; font-size: 12px;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border); color: var(--text);
+    }
+    .pillar-foot {
+      margin-top: auto; padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .pillar-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      height: 44px; padding: 0 22px; border-radius: 999px;
+      font-size: 13.5px; font-weight: 600;
+      background: var(--p-btn-bg, #fff); color: var(--p-btn-text, #000);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pillar-card:hover .pillar-btn { transform: translateX(4px); box-shadow: 0 10px 25px -5px var(--p-glow); }
+    .pillar-btn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .pillar-hint { font-size: 12.5px; color: var(--text-dim); }
+
+    /* 7 Card Themes */
+    .card-beach { --p-accent: #58bfbf; --p-accent-bg: rgba(43, 139, 146, 0.14); --p-accent-faint: rgba(88, 191, 191, 0.32); --p-border: rgba(43, 139, 146, 0.3); --p-glow: rgba(43, 139, 146, 0.4); --p-num: #58bfbf; --p-btn-bg: #2b8b92; --p-btn-text: #fff; --p-bg: linear-gradient(145deg, #0e1e28 0%, #0c161d 100%); }
+    .card-abyss { --p-accent: #5ef2e6; --p-accent-bg: rgba(94, 242, 230, 0.12); --p-accent-faint: rgba(94, 242, 230, 0.32); --p-border: rgba(94, 242, 230, 0.3); --p-glow: rgba(94, 242, 230, 0.35); --p-num: #5ef2e6; --p-btn-bg: #5ef2e6; --p-btn-text: #021a24; --p-bg: linear-gradient(145deg, #071929 0%, #030d17 100%); }
+    .card-zoo { --p-accent: #e7b25c; --p-accent-bg: rgba(201, 133, 44, 0.12); --p-accent-faint: rgba(201, 133, 44, 0.32); --p-border: rgba(201, 133, 44, 0.3); --p-glow: rgba(201, 133, 44, 0.35); --p-num: #e7b25c; --p-btn-bg: #8aa35a; --p-btn-text: #14200e; --p-bg: linear-gradient(145deg, #1b2419 0%, #111810 100%); }
+    .card-metal { --p-accent: #f5b301; --p-accent-bg: rgba(245, 179, 1, 0.12); --p-accent-faint: rgba(245, 179, 1, 0.32); --p-border: rgba(245, 179, 1, 0.3); --p-glow: rgba(245, 179, 1, 0.4); --p-num: #f5b301; --p-btn-bg: #f5b301; --p-btn-text: #141202; --p-bg: linear-gradient(145deg, #1d1f24 0%, #131518 100%); }
+    .card-park { --p-accent: #ff6b9d; --p-accent-bg: rgba(255, 107, 157, 0.12); --p-accent-faint: rgba(255, 107, 157, 0.32); --p-border: rgba(255, 107, 157, 0.3); --p-glow: rgba(255, 107, 157, 0.38); --p-num: #ff85b1; --p-btn-bg: #ff6b9d; --p-btn-text: #1f0410; --p-bg: linear-gradient(145deg, #241122 0%, #140b16 100%); }
+    .card-ski { --p-accent: #79c0ff; --p-accent-bg: rgba(121, 192, 255, 0.12); --p-accent-faint: rgba(121, 192, 255, 0.32); --p-border: rgba(121, 192, 255, 0.3); --p-glow: rgba(121, 192, 255, 0.38); --p-num: #a5d6ff; --p-btn-bg: #79c0ff; --p-btn-text: #041628; --p-bg: linear-gradient(145deg, #0d1d31 0%, #09121e 100%); }
+    .card-show { --p-accent: #ff7b72; --p-accent-bg: rgba(255, 123, 114, 0.12); --p-accent-faint: rgba(255, 123, 114, 0.32); --p-border: rgba(255, 123, 114, 0.3); --p-glow: rgba(255, 123, 114, 0.38); --p-num: #ffa198; --p-btn-bg: #ff7b72; --p-btn-text: #220504; --p-bg: linear-gradient(145deg, #271115 0%, #160a0d 100%); }
+
+    /* Seasonal Calendar Section --------------------------------------------- */
+    .section-calendar { padding: clamp(50px, 6vw, 80px) 0; border-top: 1px solid var(--border); background: rgba(255,255,255,0.01); }
+    .month-bar { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; margin-bottom: 28px; }
+    .m-btn {
+      padding: 10px 4px; border-radius: 12px; border: 1px solid var(--border);
+      background: var(--bg-panel); color: var(--text-muted); font-size: 13px; font-weight: 600;
+      text-align: center; transition: all 0.2s;
+    }
+    .m-btn small { display: block; font-size: 10.5px; font-weight: 400; opacity: 0.7; margin-top: 2px; }
+    .m-btn:hover { border-color: var(--border-strong); color: #fff; }
+    .m-btn[aria-pressed="true"] { background: var(--c-metal); border-color: var(--c-metal); color: #111; box-shadow: 0 10px 24px -6px rgba(245, 179, 1, 0.45); }
+    .cal-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .cal-col { padding: 20px; border-radius: 16px; border: 1px solid var(--border); background: var(--bg-panel); display: flex; flex-direction: column; gap: 12px; }
+    .cal-col h3 { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .cal-col p.cal-why { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; }
+    .cal-picks { display: grid; gap: 8px; margin-top: 4px; }
+    .cal-pick {
+      padding: 9px 12px; border-radius: 10px; background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; transition: all 0.15s;
+    }
+    .cal-pick:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.07); }
+    .cal-pick small { color: var(--text-muted); font-size: 11.5px; }
+
+    /* City Combo Packages Section ------------------------------------------- */
+    .section-combos { padding: clamp(50px, 6vw, 80px) 0; border-top: 1px solid var(--border); }
+    .combos-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .combo-card {
+      padding: 24px 26px; border-radius: 18px; border: 1px solid var(--border-strong);
+      background: linear-gradient(145deg, #141b24 0%, #0e131a 100%);
+      display: flex; flex-direction: column; gap: 12px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .combo-card:hover { transform: translateY(-3px); border-color: rgba(245, 179, 1, 0.45); }
+    .combo-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .combo-head h3 { font-family: var(--font-serif); font-size: 19px; color: #fff; }
+    .combo-budget {
+      padding: 4px 11px; border-radius: 999px; font-size: 12px; font-weight: 600;
+      background: rgba(63, 185, 80, 0.14); border: 1px solid rgba(63, 185, 80, 0.4); color: #56d364; white-space: nowrap;
+    }
+    .combo-stops { display: flex; flex-wrap: wrap; gap: 7px; }
+    .combo-stop {
+      padding: 4px 10px; border-radius: 8px; font-size: 12.5px;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--text);
+      transition: border-color 0.15s;
+    }
+    .combo-stop:hover { border-color: var(--c-metal); color: var(--c-metal); }
+    .combo-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.75; }
+
+    /* Comparison matrix section --------------------------------------------- */
+    .section-matrix { padding: clamp(50px, 6vw, 80px) 0; border-top: 1px solid var(--border); }
+    .matrix-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-panel); }
+    .matrix-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px; }
+    .matrix-table th { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); background: rgba(255,255,255,0.02); }
+    .matrix-table td { padding: 16px 18px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .matrix-table tr:last-child td { border-bottom: 0; }
+    .matrix-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .matrix-pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+
+    /* Footer ---------------------------------------------------------------- */
+    .portal-footer { padding: 64px 0 50px; border-top: 1px solid var(--border); background: #070a0e; }
+    .footer-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr)); gap: 32px; }
+    .footer-brand-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: 0.14em; color: #fff; }
+    .footer-desc { margin-top: 12px; font-size: 13px; line-height: 1.85; color: var(--text-muted); max-width: 360px; }
+    .footer-col h4 { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); margin-bottom: 14px; }
+    .footer-col ul { display: grid; gap: 9px; font-size: 13px; color: var(--text-muted); }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--text-dim);
+    }
+
+    @media (max-width: 1080px) {
+      .cal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .month-bar { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 820px) {
+      .pillars-grid, .combos-grid, .cal-grid { grid-template-columns: 1fr; }
+      .portal-stats { grid-template-columns: 1fr 1fr; }
+      .p-stat:nth-child(3) { border-left: 0; }
+      .p-stat:nth-child(n + 3) { border-top: 1px solid var(--border); }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand-subtitle { display: none; }
+      .month-bar { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
   </style>
+
+  <!-- BEGIN AUTO-SEO -->
+  <meta name="description" content="涵盖全球145大海岛、35大水族馆、40大动物园与游猎园、115大主题与水上乐园、100大滑雪场、50大商业驻场秀、100大重器博物馆的零广告硬核量化决策平台。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Destination Atlas · 全球硬核旅行目的地总控台 (7大榜单·585处地标)" />
+  <meta property="og:description" content="涵盖全球145大海岛、35大水族馆、40大动物园与游猎园、115大主题与水上乐园、100大滑雪场、50大商业驻场秀、100大重器博物馆的零广告硬核量化决策平台。" />
+  <meta property="og:url" content="https://destination-atlas.example.com/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Destination Atlas · 全球硬核旅行目的地总控台 (7大榜单·585处地标)" />
+  <meta name="twitter:description" content="涵盖全球145大海岛、35大水族馆、40大动物园与游猎园、115大主题与水上乐园、100大滑雪场、50大商业驻场秀、100大重器博物馆的零广告硬核量化决策平台。" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0b132b" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Destination Atlas · 全球硬核旅行目的地总控台 (7大榜单·585处地标)",
+  "description": "涵盖全球145大海岛、35大水族馆、40大动物园与游猎园、115大主题与水上乐园、100大滑雪场、50大商业驻场秀、100大重器博物馆的零广告硬核量化决策平台。",
+  "url": "https://destination-atlas.example.com/index.html"
+}
+  </script>
+  <!-- END AUTO-SEO -->
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Top Global Header -->
+  <header class="portal-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Oceanic Atlas 首页">
-        <span data-brand></span>
-        <span class="brand-name">Oceanic Atlas</span>
+      <a class="brand" href="index.html" aria-label="Destination Atlas 首页">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-title">Destination Atlas</span>
+          <span class="brand-subtitle">全球目的地硬核图鉴</span>
+        </div>
       </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="#feature-section">编辑手记</a>
-        <a href="#weights">按偏好排序</a>
-        <a href="#index">全部榜单</a>
-        <a href="#hubs">直飞航线</a>
-        <a href="#rules">评分方法</a>
-        <a href="#eliminated-section">遗珠</a>
+
+      <!-- 7 Pillars Navigation Bar -->
+      <nav class="nav-pillars" aria-label="七大独立图鉴">
+        <a href="index.html" class="active">🧭 总览</a>
+        <a href="beaches.html">🏖️ 海岸 145</a>
+        <a href="aquariums.html">🐋 水族馆 35</a>
+        <a href="zoos.html">🦁 动物园 40</a>
+        <a href="museums.html">⚙️ 重器馆 100</a>
+        <a href="themeparks.html">🎢 游乐园 100</a>
+        <a href="ski.html">🎿 全球雪场 100</a>
+        <a href="shows.html">🎭 驻场秀 50</a>
       </nav>
-      <div class="header-tools">
-        <button class="tool-btn" type="button" onclick="openPalette()" aria-label="搜索目的地">
-          <span data-icon="search"></span><span class="label">搜索</span><kbd>⌘K</kbd>
-        </button>
-        <button class="tool-btn" type="button" onclick="exportCSV()" aria-label="导出 CSV">
-          <span data-icon="download"></span><span class="label">导出</span>
-        </button>
-        <button class="tool-btn is-primary" type="button" onclick="openCompareModal()">
-          <span data-icon="columns"></span><span class="label" id="header-compare-label">对比 (3)</span>
+
+      <div class="header-actions">
+        <button type="button" class="btn-search-trigger" onclick="focusSearch()" aria-label="快捷搜索">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>全站搜索</span>
+          <kbd>/</kbd>
         </button>
       </div>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero: illustrated seascape -->
-    <section class="hero" id="cover">
-      <svg class="hero-scene" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <linearGradient id="hs-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#f7f1e6" />
-            <stop offset="0.6" stop-color="#f6e6d4" />
-            <stop offset="1" stop-color="#f3d9c2" />
-          </linearGradient>
-          <linearGradient id="hs-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#2a6f8f" />
-            <stop offset="0.45" stop-color="#1d5a7a" />
-            <stop offset="1" stop-color="#123f5a" />
-          </linearGradient>
-          <linearGradient id="hs-lagoon" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#58bfbf" />
-            <stop offset="1" stop-color="#8fdcd3" />
-          </linearGradient>
-          <radialGradient id="hs-sun" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0" stop-color="#f08a63" />
-            <stop offset="1" stop-color="#e0674a" />
-          </radialGradient>
-          <radialGradient id="hs-glow" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0" stop-color="#f3b48f" stop-opacity="0.55" />
-            <stop offset="1" stop-color="#f3b48f" stop-opacity="0" />
-          </radialGradient>
-        </defs>
-        <rect width="1440" height="860" fill="url(#hs-sky)" />
-        <circle cx="1080" cy="540" r="260" fill="url(#hs-glow)" />
-        <circle cx="1080" cy="560" r="84" fill="url(#hs-sun)" />
-        <!-- distant island -->
-        <path d="M820 640 C 880 625 905 590 935 582 C 960 575 975 598 1000 610 C 1030 625 1080 632 1130 640 Z" fill="#7a9aa3" opacity="0.55" />
-        <path d="M1180 640 C 1220 632 1240 620 1265 618 C 1290 617 1320 632 1360 640 Z" fill="#7a9aa3" opacity="0.4" />
-        <!-- sea -->
-        <rect y="640" width="1440" height="220" fill="url(#hs-sea)" />
-        <g class="shimmer" stroke="#f6c4a6" stroke-width="2" stroke-linecap="round">
-          <path d="M1040 656h80M1020 670h120M1050 684h60M1010 699h140M1060 714h40" />
-        </g>
-        <g fill="none" stroke="#ffffff" stroke-linecap="round">
-          <path class="wave" d="M-60 690 C 120 682 260 698 420 690 S 760 680 920 690 S 1260 700 1500 688" stroke-opacity="0.18" stroke-width="1.5" />
-          <path class="wave w2" d="M-60 735 C 160 726 300 744 480 735 S 820 724 1000 735 S 1300 746 1500 733" stroke-opacity="0.14" stroke-width="1.5" />
-          <path class="wave w3" d="M-60 790 C 140 780 330 800 520 790 S 860 778 1040 790 S 1320 802 1500 788" stroke-opacity="0.12" stroke-width="1.5" />
-        </g>
-      </svg>
-
-      <div class="wrap hero-inner">
-        <span class="eyebrow">The Shoreline Edit · 2026 全球海岸度假图鉴</span>
-        <h1>寻一片冬天也能<br />下水的海，共 <em>145</em> 处</h1>
-        <p class="hero-lede">
-          我们只问两件事：最冷的那个月，夜里吹海风要不要穿外套（夜温 ≥ 18°C）；海水能不能随时下去游（水温 ≥ 21°C）。按这把尺子，加上海水、风景、酒店、吃住等八项打分，整理出这份可以按你的偏好重新排序的海岸清单。
+  <main>
+    <!-- Portal Hero -->
+    <section class="portal-hero">
+      <div class="portal-hero-bg"></div>
+      <div class="wrap">
+        <div class="portal-badge">Zero Marketing Fluff · 硬核参数 × 大众实用攻略</div>
+        <h1>拒绝情怀滤镜，只认硬核标准<br /><em>全球七大旅行目的地量化图鉴</em></h1>
+        <p class="portal-hero-lede">
+          不管是带娃亲子、蜜月看海、冬季滑雪还是寻找人生必看大秀，这里没有软文套路。我们用<b>真实水体/面积/物种数、最冷月水温、垂直落差、过山车配置与门票预算</b>，帮你一眼选出全球真正值得去的地方。
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#index"><span>浏览全部 145 处</span><span data-icon="arrowDown"></span></a>
-          <a class="text-link" href="#weights"><span>按我的旅行方式重排</span><span data-icon="arrowRight"></span></a>
+
+        <div class="jump-bar">
+          <a class="jump-pill" href="#pillars">🏛️ 浏览七大专题榜单</a>
+          <a class="jump-pill" href="#seasonal-calendar">🗓️ 查「1–12月当季去哪玩」</a>
+          <a class="jump-pill" href="#city-combos">🗺️ 抄作业「王牌城市组合行程」</a>
         </div>
-      </div>
 
-      <div class="hero-stats">
-        <div class="wrap">
-          <div class="hero-stat"><b>145</b><span>处海滨与海岛目的地</span></div>
-          <div class="hero-stat"><b>100</b><span>处全年真热带，四季可游</span></div>
-          <div class="hero-stat"><b>45</b><span>处季节性海岸，旺季巅峰</span></div>
-          <div class="hero-stat"><b>18° / 21°</b><span>最冷月夜温 / 水温底线</span></div>
+        <!-- KPI Strip -->
+        <div class="portal-stats">
+          <div class="p-stat"><b>585</b><span>严选全球标杆目的地</span></div>
+          <div class="p-stat"><b>7</b><span>大独立量化评估榜单</span></div>
+          <div class="p-stat"><b>50+</b><span>覆盖国家与地区</span></div>
+          <div class="p-stat"><b>100%</b><span>实景图鉴与避坑攻略</span></div>
         </div>
-      </div>
-    </section>
 
-    <!-- Editor's note -->
-    <section class="section is-paper" id="feature-section">
-      <div class="wrap">
-        <div class="feature" id="feature" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- Weights -->
-    <section class="section" id="weights">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="eyebrow">Your Way to Travel</span>
-          <h2 class="section-title">每个人心里的<em>好海岛</em>，都不一样</h2>
-          <p class="section-note">潜水客在意能见度，带娃的家庭在意风浪，蜜月旅行更看重水屋与风景。选一种旅行方式，或者自己拖动八项权重，下方榜单会立刻重新排序。</p>
-        </header>
-        <div class="preset-row" role="group" aria-label="旅行偏好预设">
-          <button class="chip" type="button" data-preset="default" onclick="applyPreset('default')">综合标准</button>
-          <button class="chip" type="button" data-preset="water" onclick="applyPreset('water')">潜水与清澈海水</button>
-          <button class="chip" type="button" data-preset="honeymoon" onclick="applyPreset('honeymoon')">蜜月与水屋</button>
-          <button class="chip" type="button" data-preset="family" onclick="applyPreset('family')">亲子与平静海面</button>
-          <button class="chip" type="button" data-preset="explorer" onclick="applyPreset('explorer')">美食与陆地探索</button>
-          <button class="chip" type="button" data-preset="pureBeach" onclick="applyPreset('pureBeach')">只看海滩本身</button>
-        </div>
-        <div id="weight-distribution-bar" class="weight-dist-strip" title="当前八项权重占比"></div>
-        <div id="weight-legend" class="weight-legend"></div>
-        <div id="weight-sliders-container" class="weight-grid"></div>
-      </div>
-    </section>
-
-    <!-- Index -->
-    <section class="section is-paper" id="index">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="eyebrow">The List</span>
-          <h2 class="section-title">全部 145 处海岸</h2>
-          <p class="section-note">点击名称查看完整档案，勾选「对比」可将最多三处放在一起比较。</p>
-        </header>
-
-        <dl class="kpi-strip">
-          <div class="kpi-cell"><dt>当前符合条件</dt><dd><span id="kpi-total-count">145</span> <small>/ 145</small></dd></div>
-          <div class="kpi-cell"><dt>全年真热带</dt><dd id="kpi-tropical-count">100</dd></div>
-          <div class="kpi-cell"><dt>季节性海岸</dt><dd id="kpi-seasonal-count">45</dd></div>
-          <div class="kpi-cell"><dt>最低 5 晚房价</dt><dd class="is-text" id="kpi-avg-price">—</dd></div>
-          <div class="kpi-cell"><dt>当前排名第一</dt><dd class="is-text" id="kpi-top-dest">—</dd></div>
-        </dl>
-
-        <div class="toolbar">
-          <div class="chips" id="chip-bar" role="group" aria-label="按分类与海域筛选"></div>
-
-          <select id="filter-category" hidden>
-            <option value="all">all</option><option value="tropical">tropical</option><option value="seasonal">seasonal</option>
-          </select>
-          <select id="filter-region" hidden>
-            <option value="all">all</option>
-            <option value="南太平洋">南太平洋</option>
-            <option value="印度洋与东非">印度洋与东非</option>
-            <option value="东南亚与东亚">东南亚与东亚</option>
-            <option value="中东与红海">中东与红海</option>
-            <option value="加勒比与大西洋">加勒比与大西洋</option>
-            <option value="美洲与夏威夷">美洲与夏威夷</option>
-            <option value="澳新与地中海/亚热带">澳新与地中海/亚热带</option>
-          </select>
-
-          <div class="toolbar-row">
-            <label class="field">
-              <span data-icon="search"></span>
-              <input id="filter-search" class="input" type="search" placeholder="搜索目的地、国家、鲸鲨、水屋…" autocomplete="off" />
-              <button id="filter-search-clear" type="button" class="input-clear" onclick="clearSearch()" hidden aria-label="清空">×</button>
-            </label>
-            <select id="filter-hub" class="select" aria-label="出发城市">
-              <option value="all">任意出发地</option>
-              <option value="SHA">从上海出发</option>
-              <option value="HKG">从香港出发</option>
-              <option value="FRA">从法兰克福出发</option>
-            </select>
-            <select id="filter-water-temp" class="select" aria-label="最冷月水温">
-              <option value="0">水温不限</option>
-              <option value="21">最冷月水温 ≥ 21°C</option>
-              <option value="24">最冷月水温 ≥ 24°C</option>
-              <option value="26">最冷月水温 ≥ 26°C</option>
-            </select>
-            <select id="filter-sort" class="select" aria-label="排序">
-              <option value="score-desc">按综合得分</option>
-              <option value="price-asc">房价从低到高</option>
-              <option value="cp-desc">按性价比</option>
-              <option value="beach-desc">按海滩本身</option>
-              <option value="water-desc">按冬季水温</option>
-              <option value="night-desc">按冬季夜温</option>
-              <option value="price-desc">房价从高到低</option>
-            </select>
-            <div class="price-filter" title="双人 5 晚 4★ 海景房预算上限">
-              <span>预算</span>
-              <input id="filter-price" type="range" min="400" max="7000" step="100" value="7000" style="--pct:100%" />
-              <output id="price-slider-label">不限</output>
-            </div>
-            <label class="switch"><input id="filter-nonstop" type="checkbox" /><span>仅直飞</span></label>
-            <label class="switch"><input id="filter-verified" type="checkbox" /><span>房价已核验</span></label>
-            <button type="button" class="reset-btn" onclick="resetFilters()">重置</button>
-            <span class="spacer"></span>
-            <div class="segmented" role="group" aria-label="视图">
-              <button type="button" id="btn-view-table" aria-pressed="true"><span data-icon="list"></span><span>列表</span></button>
-              <button type="button" id="btn-view-cards" aria-pressed="false"><span data-icon="grid"></span><span>明信片</span></button>
-            </div>
+        <!-- Cross-discipline instant search -->
+        <div class="search-box-wrap">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input id="global-search" type="search" placeholder="全站跨 7 大榜单搜索：输入城市、国家或玩法（如：日本、新加坡、奥兰多、长隆、鲸鲨、粉雪、太阳马戏）…" autocomplete="off" />
+            <button id="search-clear-btn" type="button" class="search-clear" style="display:none" onclick="clearSearch()">清除</button>
           </div>
+
+          <div class="quick-chips">
+            <span>🔥 热门一键联查：</span>
+            <button type="button" class="q-chip" onclick="setQuery('新加坡')">🇸🇬 新加坡</button>
+            <button type="button" class="q-chip" onclick="setQuery('奥兰多')">🎢 奥兰多</button>
+            <button type="button" class="q-chip" onclick="setQuery('东京')">🗼 东京</button>
+            <button type="button" class="q-chip" onclick="setQuery('冲绳')">🐋 冲绳</button>
+            <button type="button" class="q-chip" onclick="setQuery('长隆')">🐼 长隆</button>
+            <button type="button" class="q-chip" onclick="setQuery('拉斯维加斯')">🎭 拉斯维加斯</button>
+            <button type="button" class="q-chip" onclick="setQuery('二世古')">🎿 二世古粉雪</button>
+            <button type="button" class="q-chip" onclick="setQuery('圣地亚哥')">⚓ 圣地亚哥</button>
+          </div>
+
+          <div id="search-results-panel" class="search-results-panel" style="display:none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 7 Pillars Entry Cards -->
+    <section class="section-pillars" id="pillars">
+      <div class="wrap">
+        <div class="sec-title-wrap">
+          <span class="eyebrow">The Seven Pillars · 七大全球榜单</span>
+          <h2>你想去哪类目的地？</h2>
+          <p>每一份榜单均配有独立定制的视觉主题、Wikimedia 实景封面、硬核参数重排与大众避坑指南。</p>
         </div>
 
-        <p id="results-summary" class="results-summary"></p>
+        <div class="pillars-grid">
 
-        <div id="table-view-container" class="table-wrap">
-          <table class="data-table">
+          <!-- Pillar 1: Beaches -->
+          <article class="pillar-card card-beach">
+            <div class="pillar-top">
+              <span class="pillar-tag">🏖️ Oceanic Atlas</span>
+              <div class="pillar-num">145<small>处</small></div>
+            </div>
+            <h2 class="pillar-title">全球海滨与海岛度假胜地
+              <span class="pillar-en">365天真热带 (Top 100) ＋ 顶级季节性海岸 (Top 45)</span>
+            </h2>
+            <p class="pillar-lede">
+              以「最冷月夜温 ≥ 18°C、最冷月水温 ≥ 21°C」为硬底线，独创 8 维权重算分器。输入你的出发城市即可按直飞航程找海岛，并附双人 5 晚实测酒店房价与最多 3 岛雷达图 PK。
+            </p>
+            <ul class="pillar-highlights">
+              <li>🌡️ WMO/NOAA 30 年水温夜温基准</li>
+              <li>🎛️ 潜水/蜜月/亲子 6 大预设实时重排</li>
+              <li>✈️ 100+ 城市出发航程自动测算</li>
+              <li>🖼️ 145 处实景海滩封面与房价核验</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="beaches.html">
+                <span>进入海岸度假图鉴</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">砂纸海蓝 · 度假杂志风</span>
+            </div>
+          </article>
+
+          <!-- Pillar 2: Theme Parks -->
+          <article class="pillar-card card-park">
+            <div class="pillar-top">
+              <span class="pillar-tag">🎢 Thrill & Magic Index</span>
+              <div class="pillar-num">100<small>+15 园</small></div>
+            </div>
+            <h2 class="pillar-title">全球主题游乐园 ＆ 水上乐园
+              <span class="pillar-en">综合主题乐园 Top 100 ＋ 全球水上乐园 Top 15</span>
+            </h2>
+            <p class="pillar-lede">
+              从奥兰多史诗宇宙、东京迪士尼海洋、德国欧洲公园到六旗/雪松会过山车圣地。按镇园神作、IP 造景沉浸度、排队友好度等 6 维动态算分，全量标注过山车数、年客流与门票快通总预算。
+            </p>
+            <ul class="pillar-highlights">
+              <li>🎢 过山车数量与镇园神级 Dark Ride</li>
+              <li>📊 TEA/AECOM 年度百万客流基准</li>
+              <li>🎫 门票 + 快通 (Express/LL) 真实预算</li>
+              <li>💦 附全球 Top 15 顶级水上乐园子榜</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="themeparks.html">
+                <span>进入游乐园图鉴</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">暮光霓虹 · 六维调权</span>
+            </div>
+          </article>
+
+          <!-- Pillar 3: Ski Resorts -->
+          <article class="pillar-card card-ski">
+            <div class="pillar-top">
+              <span class="pillar-tag">🎿 Alpine & Powder Index</span>
+              <div class="pillar-num">100<small>座</small></div>
+            </div>
+            <h2 class="pillar-title">全球滑雪度假村硬核排行
+              <span class="pillar-en">阿尔卑斯巨型联滑 · 日本 JAPOW 粉雪 · 北美落基山 · 南半球反季</span>
+            </h2>
+            <p class="pillar-lede">
+              冬天去哪滑？按年均降雪量（米）、最大垂直落差（米）、连通雪道总长（km）、缆车运力与温泉 Après-ski 六维量化评分。支持一键筛选新手家庭友好、滑进滑出或 Epic/Ikon 通票雪场。
+            </p>
+            <ul class="pillar-highlights">
+              <li>❄️ 14–18 米年降雪量粉雪圣地实测</li>
+              <li>⛰️ 千米级垂直落差与 600km 连通雪道</li>
+              <li>♨️ 温泉美食、雪票价格与最佳雪季月份</li>
+              <li>🎚️ 粉雪控 / 大神 / 亲子滑块实时重算</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="ski.html">
+                <span>进入全球雪场图鉴</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">冰川雪峰 · 高海拔图谱</span>
+            </div>
+          </article>
+
+          <!-- Pillar 4: Aquariums -->
+          <article class="pillar-card card-abyss">
+            <div class="pillar-top">
+              <span class="pillar-tag">🐋 The Abyss Index</span>
+              <div class="pillar-num">35<small>馆</small></div>
+            </div>
+            <h2 class="pillar-title">全球顶级水族馆硬核排行
+              <span class="pillar-en">含全馆总水体 · 最大单池水体 · 物种数 · 生物总数全参数</span>
+            </h2>
+            <p class="pillar-lede">
+              剥离游乐设施与杂技表演，纯按站在水下巨幕前的视觉统治力排序。现已补齐 35 馆实景图、最大单池水体、全馆总水体、物种数、生物总数及最佳拍照机位攻略。
+            </p>
+            <ul class="pillar-highlights">
+              <li>💧 1.25 亿升总水体 & 3100 万升单池 (珠海长隆)</li>
+              <li>🪟 51 米最宽巨幕 & 155 米最长海底隧道</li>
+              <li>🧬 支持按单池/总水体/物种/生物数/票价重排</li>
+              <li>💡 含夜宿海生馆与免费看巨幕省钱秘籍</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="aquariums.html">
+                <span>下潜深海水族馆图鉴</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">深海幽蓝 · 水箱液位计</span>
+            </div>
+          </article>
+
+          <!-- Pillar 5: Zoos & Safaris -->
+          <article class="pillar-card card-zoo">
+            <div class="pillar-top">
+              <span class="pillar-tag">🦁 Field Notes</span>
+              <div class="pillar-num">30<small>+10 园</small></div>
+            </div>
+            <h2 class="pillar-title">全球动物园 ＆ 全美野生游猎园
+              <span class="pillar-en">含占地总面积 · 物种数 · 动物总数 · 省腿代步攻略</span>
+            </h2>
+            <p class="pillar-lede">
+              聚焦奥马哈沙漠巨蛋、莱比锡室内乘船雨林等工程奇迹与无笼舍荒野生境，附美国 10 座私家车自驾/敞篷卡车游猎园。支持按总面积、物种数、动物总数、票价一键排序。
+            </p>
+            <ul class="pillar-highlights">
+              <li>🌿 4,000 公顷最大旷野游猎园 (The Wilds)</li>
+              <li>🧬 1,200 物种全球物种之冠 (柏林动物园)</li>
+              <li>🚠 标注缆车/游船/小火车等省腿代步方式</li>
+              <li>🚙 一键筛选可开私家车喂长颈鹿的游猎园</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="zoos.html">
+                <span>翻开野外观察手记</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">牛皮纸手记 · 实景标本卡</span>
+            </div>
+          </article>
+
+          <!-- Pillar 6: Commercial Shows -->
+          <article class="pillar-card card-show">
+            <div class="pillar-top">
+              <span class="pillar-tag">🎭 Grand Stage Index</span>
+              <div class="pillar-num">50<small>部</small></div>
+            </div>
+            <h2 class="pillar-title">全球商业驻场大秀硬核排行
+              <span class="pillar-en">拉斯维加斯水秀/巨球 · 狂人国史诗 · 百老汇/西区 · 实景幻城</span>
+            </h2>
+            <p class="pillar-lede">
+              只收长期驻场演出：从 16K 环形巨球 Sphere、570 万升水舞台《O》秀与新《水舞间》、法国狂人国 2500 人实景史诗，到百老汇长青音乐剧与《只有河南》。特设「外语门槛筛选」与「黄金选座攻略」。
+            </p>
+            <ul class="pillar-highlights">
+              <li>🌐 标注「零语言门槛 / 视觉为主」出国看秀不懵</li>
+              <li>🎯 每部大秀附最佳排数/防溅水选座秘籍</li>
+              <li>🟢 2026.10 在演状态核验 + 已停演传奇防扑空表</li>
+              <li>🏟️ 按舞美科技规格、剧场座位数与票价对比</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="shows.html">
+                <span>揭幕全球驻场大秀</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">丝绒鎏金 · 剧场追光风</span>
+            </div>
+          </article>
+
+          <!-- Pillar 7: Heavy Metal Museums -->
+          <article class="pillar-card card-metal span-full">
+            <div class="pillar-top">
+              <span class="pillar-tag">⚙️ Heavy Metal Index</span>
+              <div class="pillar-num">100<small>座</small></div>
+            </div>
+            <h2 class="pillar-title">全球科技工业与军工重器博物馆 Top 100
+              <span class="pillar-en">100% 历史真机孤品 · 航母 / 核潜艇 / 航天飞机 / 蒸汽机车 / 地下矿井原址</span>
+            </h2>
+            <p class="pillar-lede">
+              拒绝低龄儿童互动板，只收改写人类工程史的真机孤品与万吨级巨物：7 万吨中途岛号航母、整艘步入式核潜艇、110 米土星五号登月火箭、瓦萨号 17 世纪真战舰与鲁尔区高炉群。支持一键筛选「免费入场名馆」。
+            </p>
+            <ul class="pillar-highlights">
+              <li>🚀 发现号/亚特兰蒂斯号/奋进号/暴风雪号航天飞机真机</li>
+              <li>⚓ 航母、战列舰、U-505 与核潜艇实舰步入矩阵</li>
+              <li>🆓 内置「仅看免费场馆」开关（史密森尼/伦敦科学馆等 14 座免费殿堂）</li>
+              <li>🖼️ Top 100 全表配实景缩略图、参观时长与国家/门类联动检索</li>
+            </ul>
+            <div class="pillar-foot">
+              <a class="pillar-btn" href="museums.html">
+                <span>调阅 100 座重器档案总表</span>
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span class="pillar-hint">枪铁钢板 · 工程蓝图风</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal Calendar Section -->
+    <section class="section-calendar" id="seasonal-calendar">
+      <div class="wrap">
+        <div class="sec-title-wrap">
+          <span class="eyebrow">When To Go · 全球当季日历</span>
+          <h2>🗓️ 1–12 月：这个月最适合去哪玩？</h2>
+          <p>点击你的计划出行月份，系统按水温旱季、粉雪期与舒适度自动匹配当月最佳海岛、雪场、乐园与全天候室内奇观。</p>
+        </div>
+
+        <div class="month-bar" id="month-bar" role="group" aria-label="月份选择"></div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </section>
+
+    <!-- City Combo Packages Section -->
+    <section class="section-combos" id="city-combos">
+      <div class="wrap">
+        <div class="sec-title-wrap">
+          <span class="eyebrow">Curated Itineraries · 跨榜单顺路组合包</span>
+          <h2>🗺️ 全球 8 大「王牌城市组合包」直接抄作业</h2>
+          <p>同一座城市同时拥有多处上榜水族馆、动物园、主题乐园、重器馆或驻场秀，一次飞行串联 3–5 个顶级标杆。</p>
+        </div>
+
+        <div class="combos-grid">
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇸🇬 新加坡 · 雨林深海亲子全能 4 日</h3><small style="color:var(--text-muted)">免签直飞 · 零语言障碍 · 全程地铁/打车极省心</small></div>
+              <span class="combo-budget">💰 人均约 $680 (含3晚4★+门票)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="aquariums.html">🐋 圣淘沙海洋馆 (No.5)</a>
+              <a class="combo-stop" href="zoos.html">🦁 万态野生动物世界四园 (No.4)</a>
+              <a class="combo-stop" href="themeparks.html">🎢 新加坡环球影城</a>
+              <a class="combo-stop" href="beaches.html">🏖️ 圣淘沙/民丹岛海岸</a>
+            </div>
+            <p class="combo-desc">Day 1 圣淘沙海洋馆 36米巨幕 + 巴拉湾海滩；Day 2 环球影城变形金刚与木乃伊；Day 3 河川生态园 + 日间动物园 + 夜间野生动物园导览车；Day 4 飞禽公园与星耀樟宜室内瀑布。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇺🇸 奥兰多 · 宇宙级乐园与航天狂欢 6 日</h3><small style="color:var(--text-muted)">全球主题娱乐首都 · 5 大榜单同时霸榜</small></div>
+              <span class="combo-budget">💰 人均约 $1,550 (含5晚+多园票)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="themeparks.html">🎢 环球史诗宇宙 / 冒险岛 (T0)</a>
+              <a class="combo-stop" href="zoos.html">🦁 迪士尼动物王国 (No.5)</a>
+              <a class="combo-stop" href="aquariums.html">🐋 海洋世界+探索湾 (No.23)</a>
+              <a class="combo-stop" href="museums.html">⚙️ 肯尼迪航天中心 (No.3)</a>
+            </div>
+            <p class="combo-desc">一次打卡全球最强的过山车与阿凡达/哈利波特沉浸区，顺路在 Discovery Cove 潜入魔鬼鱼珊瑚池，最后驱车 50 分钟去肯尼迪航天中心仰望 110 米真土星五号火箭与亚特兰蒂斯号航天飞机。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇺🇸 圣地亚哥 · 动物园之王与航母海岸 4 日</h3><small style="color:var(--text-muted)">南加州阳光海岸 · 亲子与军迷双重天堂</small></div>
+              <span class="combo-budget">💰 人均约 $720 (含3晚+三馆联票)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="zoos.html">🦁 圣地亚哥动物园+游猎园 (No.1)</a>
+              <a class="combo-stop" href="museums.html">⚙️ 中途岛号航空母舰 (No.14)</a>
+              <a class="combo-stop" href="aquariums.html">🐋 圣地亚哥海洋世界 (No.24)</a>
+            </div>
+            <p class="combo-desc">Day 1 巴尔博亚公园本部看考拉与立体峡谷；Day 2 北郊 730 公顷 Safari Park 看草原兽群与鸭嘴兽；Day 3 登上 7 万吨中途岛号航母甲板与机舱；Day 4 海洋世界看北美唯一真冰帝企鹅群。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇨🇳 广州 ＋ 珠海 · 长隆巨物霸权 4 日</h3><small style="color:var(--text-muted)">高铁 40 分钟串联 · 全球最大水族集群 + 顶级野生动物园</small></div>
+              <span class="combo-budget">💰 人均约 $460 (含3晚+四园大秀)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="aquariums.html">🐋 珠海长隆海洋王国+飞船 (No.1)</a>
+              <a class="combo-stop" href="zoos.html">🦁 广州长隆野生动物世界 (No.6)</a>
+              <a class="combo-stop" href="shows.html">🎭 长隆国际大马戏 (T1)</a>
+              <a class="combo-stop" href="themeparks.html">💦 长隆水上乐园 / 欢乐世界</a>
+            </div>
+            <p class="combo-desc">珠海端看 1.25 亿升总水体的鲸鲨巨幕、活体真珊瑚池与虎鲸科普秀；乘城轨至广州番禺坐小火车与三角缆车俯瞰百头长颈鹿考拉家族，晚间看实景森林大马戏。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇦🇪 迪拜 ＋ 阿布扎比 · 沙漠科幻奇迹 5 日</h3><small style="color:var(--text-muted)">对中国公民免签 · 夏季全室内冷气巨馆 · 冬季暖阳海滩</small></div>
+              <span class="combo-budget">💰 人均约 $1,180 (含4晚+四馆大秀)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="aquariums.html">🐋 阿布扎比海洋世界 (No.2)</a>
+              <a class="combo-stop" href="aquariums.html">🐋 迪拜Mall & 亚特兰蒂斯 (No.10/11)</a>
+              <a class="combo-stop" href="shows.html">🎭 La Perle 水舞秀 (No.6)</a>
+              <a class="combo-stop" href="themeparks.html">🎢 法拉利世界 / 华纳兄弟乐园</a>
+            </div>
+            <p class="combo-desc">亚斯岛一站刷齐 2500 万升深海巨球 SeaWorld 与 240km/h 法拉利过山车；回迪拜看 51 米宽沙虎鲨巨幕、棕榈岛水世界与 270 万升深水舞台跳水神作《La Perle》。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇯🇵 东京湾 ＆ 富士山 · 幻想海洋与重器粉雪 5 日</h3><small style="color:var(--text-muted)">3 小时航程圈 · 全球主题造景天花板 + 硬核铁道</small></div>
+              <span class="combo-budget">💰 人均约 $750 (含4晚+门票交通)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="themeparks.html">🎢 东京迪士尼海洋 DisneySea (T0)</a>
+              <a class="combo-stop" href="shows.html">🎭 Believe! Sea of Dreams 夜秀</a>
+              <a class="combo-stop" href="aquariums.html">🐋 葛西临海水族园 (No.31)</a>
+              <a class="combo-stop" href="museums.html">⚙️ 大宫铁道博物馆 (No.25)</a>
+            </div>
+            <p class="combo-desc">舞滨站刷全球唯一海洋主题迪士尼（含新园区梦幻泉乡），隔天去隔壁站看 220 万升蓝鳍金枪鱼环形缸，再赴大宫看 36 辆国铁功勋真车与横滨 Zoorasia 动物园。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇺🇸 拉斯维加斯 · 人类舞台工业巅峰 4 日</h3><small style="color:var(--text-muted)">全球商业驻场秀密度第一城 · 白天峡谷游猎晚上看大秀</small></div>
+              <span class="combo-budget">💰 人均约 $980 (含3晚五星+3场大秀)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="shows.html">🎭 Sphere 16K巨球秀 (No.2)</a>
+              <a class="combo-stop" href="shows.html">🎭 太阳马戏《O》水秀 (No.1)</a>
+              <a class="combo-stop" href="shows.html">🎭 美高梅《KÀ》机械舞台 (No.5)</a>
+              <a class="combo-stop" href="zoos.html#safari">🚙 大峡谷 Bearizona 游猎园 (No.9)</a>
+            </div>
+            <p class="combo-desc">连续三晚分别体验百乐宫 570 万升水舞台《O》、耗资 23 亿美金的 Sphere 球幕奇观与永利《Awakening》，白天自驾前往大峡谷南缘顺路穿越黄松林看黑熊与北极狼群。</p>
+          </article>
+
+          <article class="combo-card">
+            <div class="combo-head">
+              <div><h3>🇯🇵 冲绳琉球 · 果冻海与黑潮鲸鲨 4 日</h3><small style="color:var(--text-muted)">距上海仅 2 小时航程 · 亚洲高性价比海岛亲子首选</small></div>
+              <span class="combo-budget">💰 人均约 $590 (含4晚海景房+包车)</span>
+            </div>
+            <div class="combo-stops">
+              <a class="combo-stop" href="beaches.html">🏖️ 庆良间群岛 / 宫古岛果冻海</a>
+              <a class="combo-stop" href="aquariums.html">🐋 冲绳美丽海水族馆 (No.4)</a>
+            </div>
+            <p class="combo-desc">那霸泊港乘快船 35 分钟即达渡嘉敷岛阿波连海滩与海龟同游；北上本部半岛在《黑潮之海》巨幕旁喝咖啡看鲸鲨与鬼蝠魟群游，冬季（1–3月）还可出海看座头鲸跃水。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Criteria Matrix -->
+    <section class="section-matrix">
+      <div class="wrap">
+        <div class="sec-title-wrap">
+          <span class="eyebrow">Methodology Matrix · 七大榜单标尺</span>
+          <h2>七大图鉴量化评估标尺一览</h2>
+          <p>同一套硬核原则贯彻始终：只以实测物理数据、工程真实度与现场视觉冲击力排定座次。</p>
+        </div>
+
+        <div class="matrix-table-wrap">
+          <table class="matrix-table">
             <thead>
               <tr>
-                <th class="num" style="width:52px">#</th>
-                <th>目的地</th>
-                <th class="num">最冷月<small>夜温 / 水温</small></th>
-                <th class="num">综合<small>满分 100</small></th>
-                <th class="num">海水沙滩<small>25</small></th>
-                <th class="num">风景<small>15</small></th>
-                <th class="num">玩水<small>15</small></th>
-                <th class="num">风浪<small>10</small></th>
-                <th class="num">酒店<small>10</small></th>
-                <th class="num">美食<small>10</small></th>
-                <th class="num">陆地<small>10</small></th>
-                <th class="num">省心<small>5</small></th>
-                <th class="right">5 晚参考价<small>双人 · 4★ 海景</small></th>
+                <th>图鉴门类</th>
+                <th>收录体量</th>
+                <th>核心硬指标与新增参数</th>
+                <th>排雷底线 / 剔除类型</th>
+                <th>直达通道</th>
               </tr>
             </thead>
-            <tbody id="destinations-tbody"></tbody>
-          </table>
-        </div>
-
-        <div id="cards-view-container" class="ride-grid" hidden></div>
-      </div>
-    </section>
-
-    <!-- Hubs -->
-    <section class="section" id="hubs">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="eyebrow">Fly Direct</span>
-          <h2 class="section-title">从三座城市，直飞去海边</h2>
-          <p class="section-note">按航程、时差和双人机酒实测总价，为上海、香港、法兰克福各挑出五处直飞可达的海岛。</p>
-        </header>
-        <div class="hub-grid">
-          <article class="hub-card h1">
-            <div class="hub-code">PVG</div>
-            <h3 class="hub-city">从上海出发</h3>
-            <p class="hub-lede">亚洲最密集的海岛直飞网，2 到 8 小时之内，从高性价比到顶级水屋都有。</p>
-            <ol class="hub-items">
-              <li class="hub-item"><strong>沙巴亚庇</strong><span class="t">4h40</span><p>双人机酒含早实测仅 $976，免签、落日和外岛浮潜。</p></li>
-              <li class="hub-item"><strong>冲绳那霸与庆良间</strong><span class="t">2h15</span><p>机酒 $1,053，5–10 月渡嘉敷岛的果冻海。</p></li>
-              <li class="hub-item"><strong>普吉岛</strong><span class="t">5h10</span><p>机酒 $1,148，酒店与餐饮成熟度最高。</p></li>
-              <li class="hub-item"><strong>巴厘岛</strong><span class="t">6h15</span><p>机酒 $1,424，悬崖泳池别墅与雨林文化。</p></li>
-              <li class="hub-item"><strong>马尔代夫</strong><span class="t">8h05</span><p>居民岛机酒 $1,797；一价全包水屋含水飞 $5,088。</p></li>
-            </ol>
-            <button type="button" class="btn btn-light" onclick="filterByHub('SHA')">查看上海直飞 <span data-icon="arrowRight"></span></button>
-          </article>
-          <article class="hub-card h2">
-            <div class="hub-code">HKG</div>
-            <h3 class="hub-city">从香港出发</h3>
-            <p class="hub-lede">覆盖全部东南亚海岛，另有帕劳、苏梅、斐济等独家直飞。</p>
-            <ol class="hub-items">
-              <li class="hub-item"><strong>帕劳</strong><span class="t">4h00</span><p>洛克群岛原始珊瑚与牛奶湖，世界级。</p></li>
-              <li class="hub-item"><strong>苏梅岛</strong><span class="t">3h25</span><p>直降岛上花园机场，免去曼谷转机。</p></li>
-              <li class="hub-item"><strong>斐济外岛</strong><span class="t">10h10</span><p>直飞楠迪，转玛玛努卡与亚萨瓦蓝色泻湖。</p></li>
-              <li class="hub-item"><strong>富国岛 / 芽庄</strong><span class="t">2h15</span><p>双人机酒 $980–$1,191。</p></li>
-              <li class="hub-item"><strong>沙巴亚庇</strong><span class="t">3h05</span><p>双人机酒含早实测仅 $971。</p></li>
-            </ol>
-            <button type="button" class="btn btn-light" onclick="filterByHub('HKG')">查看香港直飞 <span data-icon="arrowRight"></span></button>
-          </article>
-          <article class="hub-card h3">
-            <div class="hub-code">FRA</div>
-            <h3 class="hub-city">从法兰克福出发</h3>
-            <p class="hub-lede">冬天避寒不必将就风大浪急的佛得角，这五处在水温与品质上全面胜出。</p>
-            <ol class="hub-items">
-              <li class="hub-item"><strong>塞舌尔</strong><span class="t">9h35</span><p>时差仅 +2h，花岗岩巨石与粉白沙滩。</p></li>
-              <li class="hub-item"><strong>马尔代夫</strong><span class="t">10h00</span><p>时差 +3h，一岛一酒店的水屋。</p></li>
-              <li class="hub-item"><strong>毛里求斯</strong><span class="t">11h05</span><p>外堡礁环抱的平静泻湖与"海底瀑布"。</p></li>
-              <li class="hub-item"><strong>阿曼 萨拉拉 / 马斯喀特</strong><span class="t">6h30</span><p>冬季夜温 18.8°C、水温 23.5°C，安全省心。</p></li>
-              <li class="hub-item"><strong>埃及红海</strong><span class="t">4h30</span><p>5–11 月的珊瑚礁浮潜，中东最佳。</p></li>
-            </ol>
-            <button type="button" class="btn btn-light" onclick="filterByHub('FRA')">查看法兰克福直飞 <span data-icon="arrowRight"></span></button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Method -->
-    <section class="section is-paper" id="rules">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="eyebrow">How We Rate</span>
-          <h2 class="section-title">三条规则，决定谁能上榜</h2>
-        </header>
-        <div class="method-grid">
-          <div>
-            <div class="method-figure">18°<small>/ 21°C</small></div>
-            <h3 class="method-title">用身体感受划线，而不是纬度</h3>
-            <p class="method-text">依据 WMO / NOAA 30 年气候统计，只有最冷月<strong>夜温 ≥ 18°C</strong>（晚上不用加外套）且<strong>水温 ≥ 21°C</strong>（随时能下水）的地方，才算「全年真热带」。圣灵群岛 7 月夜温 17.1°C，只差 0.9°C，也只能归入季节性海岸。</p>
-          </div>
-          <div>
-            <div class="method-figure">45<small>分钟</small></div>
-            <h3 class="method-title">不把几座岛打包成一个</h3>
-            <p class="method-text">相距几小时车程、或要再坐飞机的地方必须分开评。夏威夷拆为茂宜、可爱、欧胡、大岛四处；泰国拆为普吉、苏梅、甲米等六处。只有主岛与离岛在<strong>45 分钟船程</strong>以内（如那霸与渡嘉敷岛）才允许合并。</p>
-          </div>
-          <div>
-            <div class="method-figure">76.5<small>分</small></div>
-            <h3 class="method-title">统一的上榜分数线</h3>
-            <p class="method-text">百分制分配为：海水沙滩 25、风景 15、玩水 15、风浪 10、酒店 10、美食 10、陆地 10、安全省心 5。真热带第 100 名芭堤雅与季节性第 45 名涠洲岛同为<strong>76.5 分</strong>，低于此线的列入下方「遗珠」。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Eliminated -->
-    <section class="section" id="eliminated-section">
-      <div class="wrap">
-        <header class="section-head">
-          <span class="eyebrow">Near Misses</span>
-          <h2 class="section-title">气候达标，却差一点上榜</h2>
-          <p class="section-note">这些地方全年温暖，但因为某一项明显短板，综合分没能达到 76.5。</p>
-        </header>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
+            <tbody>
               <tr>
-                <th>目的地</th>
-                <th class="num">最冷月夜温 / 水温</th>
-                <th class="num">综合分</th>
-                <th>八项得分（珊瑚色为短板）</th>
-                <th>5 晚参考价</th>
-                <th>落选原因</th>
+                <td><span class="matrix-pill" style="color:var(--c-beach)">🏖️ 海岸与海岛度假</span></td>
+                <td>145 处</td>
+                <td>最冷月夜温 ≥ 18°C & 水温 ≥ 21°C，8 维滑块算分、5晚房价</td>
+                <td>低于 76.5 分、海水浑浊或无珊瑚白沙（如槟城、圣淘沙）</td>
+                <td><a href="beaches.html" style="color:var(--c-beach);font-weight:600">浏览海岸 →</a></td>
               </tr>
-            </thead>
-            <tbody id="eliminated-tbody"></tbody>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-abyss)">🐋 顶级水族馆</span></td>
+                <td>Top 35 馆</td>
+                <td>最大单池水体、全馆总水体、主巨幕尺寸、物种数、生物总数</td>
+                <td>无巨幕的老式小窗水池、靠机械游乐或露天杂技凑数的场馆</td>
+                <td><a href="aquariums.html" style="color:var(--c-abyss);font-weight:600">下潜深海 →</a></td>
+              </tr>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-zoo)">🦁 动物园 & 游猎园</span></td>
+                <td>30 + 10 园</td>
+                <td>占地总面积(公顷)、物种数、动物总数、超级温室与省腿交通</td>
+                <td>场地狭小逼仄、水泥铁笼密布的传统城市老动物园</td>
+                <td><a href="zoos.html" style="color:var(--c-zoo);font-weight:600">查阅手记 →</a></td>
+              </tr>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-metal)">⚙️ 重器博物馆</span></td>
+                <td>Top 100 馆</td>
+                <td>工程史真机孤品、航母/核潜艇/航天飞机、是否免费入场</td>
+                <td>儿童声光按钮科技馆、塑料假模型展馆</td>
+                <td><a href="museums.html" style="color:var(--c-metal);font-weight:600">调阅档案 →</a></td>
+              </tr>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-park)">🎢 主题与水上乐园</span></td>
+                <td>100 + 15 园</td>
+                <td>过山车数量、镇园 Dark Ride、TEA 年客流量、门票+快通预算</td>
+                <td>缺乏核心大项目、纯铁皮游乐场或维护老旧乐园</td>
+                <td><a href="themeparks.html" style="color:var(--c-park);font-weight:600">进入乐园 →</a></td>
+              </tr>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-ski)">🎿 全球滑雪度假村</span></td>
+                <td>Top 100 座</td>
+                <td>年均降雪量(m)、垂直落差(m)、雪道总长(km)、缆车数、日票价</td>
+                <td>造雪比例过高且落差不足的小型郊区滑雪场</td>
+                <td><a href="ski.html" style="color:var(--c-ski);font-weight:600">进入雪场 →</a></td>
+              </tr>
+              <tr>
+                <td><span class="matrix-pill" style="color:var(--c-show)">🎭 商业驻场大秀</span></td>
+                <td>Top 50 部</td>
+                <td>水舞台/巨幕规格、剧场座位数、外语友好度、黄金选座攻略</td>
+                <td>短期临时巡演、已停演剧目、纯旅游团拼盘晚会</td>
+                <td><a href="shows.html" style="color:var(--c-show);font-weight:600">揭幕大秀 →</a></td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="portal-footer">
     <div class="wrap">
-      <div class="footer-top">
+      <div class="footer-grid">
         <div>
-          <a class="footer-brand" href="#top"><span data-brand></span><span class="brand-name">Oceanic Atlas</span></a>
-          <p class="footer-note">按体感气候底线与八项指标整理的全球海滨与海岛度假清单。气候数据来自 WMO / NOAA / JMA / BOM 30 年统计，房价与航线核验自 Booking.com 与 Google Flights。</p>
+          <div class="footer-brand-title">DESTINATION ATLAS</div>
+          <p class="footer-desc">
+            全球 585 处海岸海岛、水族馆、动物园、重器博物馆、主题乐园、滑雪场与商业驻场秀的量化决策平台。数据最后核验于 2026.10，部分预订参考链接可能含联盟推广，绝不干预客观算分与梯队排名。
+          </p>
         </div>
-        <div>
-          <p class="footer-h">浏览</p>
-          <nav class="footer-links" aria-label="页脚导航">
-            <a href="#weights">按偏好排序</a>
-            <a href="#index">全部榜单</a>
-            <a href="#hubs">直飞航线</a>
-            <a href="#rules">评分方法</a>
-            <a href="#eliminated-section">遗珠</a>
-          </nav>
+        <div class="footer-col">
+          <h4>山海与自然</h4>
+          <ul>
+            <li><a href="beaches.html">🏖️ 全球海岸度假 Top 145</a></li>
+            <li><a href="ski.html">🎿 全球滑雪度假村 Top 100</a></li>
+            <li><a href="#seasonal-calendar">🗓️ 1–12月全球当季日历</a></li>
+          </ul>
         </div>
-        <div>
-          <p class="footer-h">快速筛选</p>
-          <nav class="footer-links" aria-label="快速筛选">
-            <a href="#index" onclick="setCategoryChip('tropical')">全年真热带 100 处</a>
-            <a href="#index" onclick="setCategoryChip('seasonal')">季节性海岸 45 处</a>
-            <a href="#index" onclick="filterByHub('SHA')">上海直飞</a>
-            <a href="#index" onclick="filterByHub('HKG')">香港直飞</a>
-            <a href="#index" onclick="filterByHub('FRA')">法兰克福直飞</a>
-          </nav>
+        <div class="footer-col">
+          <h4>生命与生态</h4>
+          <ul>
+            <li><a href="aquariums.html">🐋 全球水族馆 Top 35</a></li>
+            <li><a href="zoos.html">🦁 全球动物园 Top 30</a></li>
+            <li><a href="zoos.html#safari">🚙 全美自驾游猎园 Top 10</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>乐园与演艺</h4>
+          <ul>
+            <li><a href="themeparks.html">🎢 全球主题游乐园 Top 100</a></li>
+            <li><a href="themeparks.html#waterparks">💦 全球水上乐园 Top 15</a></li>
+            <li><a href="shows.html">🎭 全球商业驻场秀 Top 50</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>文明与工具</h4>
+          <ul>
+            <li><a href="museums.html">⚙️ 科技重器博物馆 Top 100</a></li>
+            <li><a href="#city-combos">🗺️ 王牌城市顺路组合包</a></li>
+            <li><a href="https://github.com/xtxsinan-lgtm/destination_rankings/issues" target="_blank" rel="noopener">🛠️ 数据纠错与共建反馈 ↗</a></li>
+          </ul>
         </div>
       </div>
-      <p class="footer-wordmark" aria-hidden="true">Oceanic Atlas</p>
-      <div class="footer-base">
-        <span>© 2026 Oceanic Atlas · 全球 145 处海岸度假图鉴</span>
-        <span>按 <kbd>/</kbd> 或 <kbd>⌘K</kbd> 快速搜索</span>
+
+      <div class="footer-bottom">
+        <span>© 2026 Destination Atlas · 全球目的地硬核图鉴（数据核验：2026年10月）</span>
+        <span>按 <kbd>/</kbd> 调出全站跨榜单搜索 · 右下角可打开「🎒 我的足迹与海报生成」</span>
       </div>
     </div>
   </footer>
 
-  <div id="compare-floating-bar" class="compare-tray" role="region" aria-label="对比栏">
-    <span class="tray-label">对比</span>
-    <div id="compare-selected-pills" class="tray-items"></div>
-    <button type="button" class="tray-clear" onclick="clearCompare()">清空</button>
-    <button type="button" class="tray-go" onclick="openCompareModal()">开始对比</button>
-  </div>
-
-  <div id="compare-modal" class="backdrop" onclick="if(event.target===this) closeCompareModal()">
-    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
-      <div class="dialog-head">
-        <div>
-          <h2 id="compare-modal-title">并排比较</h2>
-          <p>按当前权重计算，珊瑚色 ★ 标记每一项的最佳者。</p>
-        </div>
-        <button type="button" class="dialog-close" onclick="closeCompareModal()" aria-label="关闭"><span data-icon="close"></span></button>
-      </div>
-      <div id="compare-modal-body" class="dialog-body"></div>
-    </div>
-  </div>
-
-  <div id="dest-modal" class="backdrop" onclick="if(event.target===this) closeDestModal()">
-    <div class="dialog" style="max-width:920px" role="dialog" aria-modal="true" aria-labelledby="dest-modal-title">
-      <div id="dest-modal-body"></div>
-    </div>
-  </div>
-
-  <div id="palette-backdrop" class="backdrop palette-backdrop" onclick="if(event.target===this) closePalette()">
-    <div class="palette" role="dialog" aria-modal="true" aria-label="搜索目的地">
-      <div class="palette-input">
-        <span data-icon="search"></span>
-        <input id="palette-input" type="text" placeholder="海岛名、国家、海域或特色，如：鲸鲨、水屋、免签" autocomplete="off" spellcheck="false" />
-        <kbd>Esc</kbd>
-      </div>
-      <div id="palette-results" class="palette-results"></div>
-    </div>
-  </div>
-
+  <!-- Scripts -->
   <script src="data.js"></script>
   <script src="data_part2.js"></script>
-  <script src="app.js"></script>
+  <script src="data_aquariums_zoos_museums.js"></script>
+  <script src="data_themeparks.js" onerror=""></script>
+  <script src="data_ski.js" onerror=""></script>
+  <script src="data_shows.js" onerror=""></script>
+  <script src="geo.js" onerror=""></script>
+  <script src="shared_widgets.js" defer></script>
+  <script>
+    (function () {
+      "use strict";
+
+      function esc(s) {
+        return String(s || "").replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      // 1. Seasonal Calendar Data & Renderer (1-12 Months)
+      var CALENDAR_DATA = {
+        1: {
+          tag: "寒假春节 · 粉雪巅峰与南半球盛夏",
+          beachWhy: "东南亚与加勒比进入全年最干爽少雨的黄金旱季，大溪地/斐济/澳洲正值盛夏。",
+          beaches: [["🇵🇫 波拉波拉 Bora Bora", "27°C 水温 · 颜王"], ["🇹🇭 普吉岛 / 斯米兰", "旱季果冻海 · 免签"], ["🇲🇻 马尔代夫", "全年最晴朗平浪期"]],
+          skiWhy: "日本北海道与本州迎来全球最深、最轻盈的「JAPOW」暴雪期，阿尔卑斯与北美全面满雪。",
+          skis: [["🇯🇵 二世古 Niseko", "15m 粉雪巅峰月"], ["🇯🇵 白马谷 Hakuba", "高山粉雪+温泉"], ["🇫🇷 三峡谷 Les 3 Vallées", "600km 全开"]],
+          parkWhy: "避开北半球严寒，奥兰多、新加坡、阿布扎比与珠海长隆气候最宜人（20–26°C）。",
+          parks: [["🇺🇸 奥兰多环球/迪士尼", "22°C 干爽不晒"], ["🇸🇬 新加坡万态四园", "热带雨林微风"], ["🇦🇪 阿布扎比海洋世界", "冬季中东最舒服"]],
+          indoorWhy: "北半球寒流期间，全室内恒温巨型水族馆与拉斯维加斯驻场大秀是最佳避寒选择。",
+          indoors: [["🇨🇳 珠海长隆飞船乐园", "全室内恒温巨舰"], ["🇺🇸 Sphere & O 秀", "维加斯室内神作"], ["🇺🇸 奥马哈沙漠巨蛋", "暴雪天逛热带雨林"]]
+        },
+        2: {
+          tag: "春节黄金周 · 粉雪深冬与加勒比旱季",
+          beachWhy: "菲律宾、泰国丽贝岛、马尔代夫与加勒比海全境风平浪静，海水透明度达年度最高。",
+          beaches: [["🇵🇭 爱妮岛 / 长滩岛", "旱季平浪玻璃海"], ["🇹🇭 丽贝岛 Koh Lipe", "泰南小马代旱季"], ["🇲🇽 坎昆 / 图卢姆", "加勒比最美松石蓝"]],
+          skiWhy: "北半球雪层最厚实的一个月！北美落基山脉与阿尔卑斯高海拔雪场雪况满分。",
+          skis: [["🇨🇦 惠斯勒 Whistler", "北美第一大雪场"], ["🇨🇭 采尔马特 Zermatt", "马特洪峰绝景"], ["🇯🇵 留寿都 Rusutsu", "树林粉雪天堂"]],
+          parkWhy: "错峰游奥兰多（避开总统日周末）与南半球悉尼/黄金海岸乐园。",
+          parks: [["🇺🇸 迪士尼动物王国", "清晨游猎最活跃"], ["🇦🇺 黄金海岸主题乐园", "南半球盛夏玩水"], ["🇪🇸 特内里费暹罗公园", "全年恒温水乐园"]],
+          indoorWhy: "欧洲与北美各大重器博物馆、水族馆处于淡季，无需排长队。",
+          indoors: [["🇺🇸 乔治亚水族馆", "2400万升鲸鲨巨幕"], ["🇩🇪 德意志博物馆", "慕尼黑室内重工"], ["🇲🇴 澳门水舞间", "270度水舞台复演"]]
+        },
+        3: {
+          tag: "春假错峰 · 高山春雪与热带旱季尾声",
+          beachWhy: "夏威夷、塞舌尔、红海与东南亚依然晴好，且机票酒店比春节回落 30%–40%。",
+          beaches: [["🇸🇨 塞舌尔普拉兰岛", "无风过渡季平浪"], ["🇺🇸 夏威夷茂宜岛", "座头鲸季尾声"], ["🇪🇬 沙姆沙伊赫红海", "25°C 珊瑚浮潜"]],
+          skiWhy: "阳光变暖、日照变长、积雪仍深！阿尔卑斯与北美进入最舒服的「春雪（Spring Skiing）」季。",
+          skis: [["🇦🇹 圣安东 St. Anton", "阳光露台 Après-ski"], ["🇺🇸 维尔 Vail", "落基山蓝天粉雪"], ["🇫🇷 蒂涅-瓦尔迪泽尔", "高海拔冰川保障"]],
+          parkWhy: "日本樱花季前夕与欧洲乐园开园季，气候温和宜人。",
+          parks: [["🇯🇵 东京迪士尼海洋", "春季特饮与夜秀"], ["🇯🇵 日本环球影城 USJ", "马里奥与哈利波特"], ["🇳🇱 艾夫特琳 Efteling", "童话森林苏醒"]],
+          indoorWhy: "冲绳美丽海水族馆与台湾屏东海生馆进入春季少雨期。",
+          indoors: [["🇯🇵 冲绳美丽海水族馆", "黑潮之海鲸鲨"], ["🇹🇼 屏东垦丁海生馆", "阳光珊瑚沉船隧道"], ["🇺🇸 史密森尼航空馆", "华盛顿樱花季同游"]]
+        },
+        4: {
+          tag: "春暖花开 · 动物繁育季与高海拔收官雪",
+          beachWhy: "塞舌尔、大溪地、巴哈马与海南万宁/三亚进入初夏适泳期，台风尚未生成。",
+          beaches: [["🇸🇨 塞舌尔拉迪格岛", "全年风浪最平静月"], ["🇧🇸 巴哈马埃克苏马", "猪岛果冻海"], ["🇨🇳 海南三亚/万宁", "28°C 避开暑期高价"]],
+          skiWhy: "高海拔冰川雪场（Val Thorens、Zermatt、猛犸山、阿拉帕霍盆地）依然大雪纷飞。",
+          skis: [["🇺🇸 猛犸山 Mammoth", "加州春雪滑到6月"], ["🇨🇦 班夫露易丝湖", "落基山绝美冰湖"], ["🇳🇴 赫姆瑟达尔", "北欧极昼春雪"]],
+          parkWhy: "全球动物园与欧洲主题乐园（Europa-Park、梦幻乐园）迎来春季花海与幼崽出生潮。",
+          parks: [["🇩🇪 欧洲公园 Europa-Park", "百花盛开排队短"], ["🇧🇪 比利时天堂动物园", "修道院樱花与象群"], ["🇨🇳 南京红山森林动物园", "春山漫步最舒服"]],
+          indoorWhy: "江南与欧洲春雨绵绵时，重器博物馆与百老汇音乐剧是完美日程。",
+          indoors: [["🇬🇧 伦敦科学博物馆", "瓦特蒸汽机原件"], ["🇬🇧 伦敦西区歌剧魅影", "女王陛下剧院"], ["🇨🇳 只有河南·戏剧幻城", "麦田春景最出片"]]
+        },
+        5: {
+          tag: "初夏黄金月 · 南太平洋旱季开启 & 欧洲乐园最佳期",
+          beachWhy: "大溪地、斐济、库克群岛、毛里求斯正式进入凉爽少雨的旱季；冲绳与地中海南部渐暖。",
+          beaches: [["🇵🇫 大溪地茉莉雅岛", "旱季开启·清爽少雨"], ["🇫🇯 斐济亚萨瓦群岛", "软珊瑚与蓝泻湖"], ["🇯🇵 宫古岛 Miyakojima", "宫古蓝初夏适泳"]],
+          skiWhy: "北半球仅剩冰川雪场营业，南半球（智利、阿根廷、新西兰）开始酝酿初雪。",
+          skis: [["🇦🇹 欣特图克斯冰川", "365天全年可滑"], ["🇺🇸 ティンバーライン", "俄勒冈火山春雪"], ["🇨🇭 萨斯费 Saas-Fee", "3600m 冰川雪道"]],
+          parkWhy: "欧美暑假尚未开始，5 月是去加州、奥兰多、德国、法国逛动物园与游乐园的「神仙空窗期」。",
+          parks: [["🇫🇷 狂人国 Puy du Fou", "史诗实景剧全开"], ["🇩🇪 莱比锡动物园", "冈瓦纳雨林乘船"], ["🇺🇸 加州迪士尼乐园", "避开暑期人潮"]],
+          indoorWhy: "蒙特雷湾水族馆外海进入鲸鱼与海獭活跃期。",
+          indoors: [["🇺🇸 蒙特雷湾水族馆", "真阳光巨藻森林"], ["🇵🇹 里斯本海洋馆", "天野尚水下森林"], ["🇫🇷 巴黎工艺博物馆", "修道院机械珍宝"]]
+        },
+        6: {
+          tag: "仲夏序幕 · 地中海开泳 & 南半球反季开板",
+          beachWhy: "希腊、西班牙马略卡、撒丁岛海水升至 22°C+ 且尚未到 8 月暴晒天价期；印尼巴厘岛/科莫多正值旱季。",
+          beaches: [["🇮🇩 科莫多 / 巴厘岛", "南半球旱季粉红沙滩"], ["🇪🇸 马略卡岛 Mallorca", "地中海初夏果冻湾"], ["🇬🇷 米洛斯 / 扎金索斯", "白色悬崖与沉船湾"]],
+          skiWhy: "南半球反季滑雪正式开板！新西兰皇后镇、澳洲与安第斯山脉迎来第一波粉雪。",
+          skis: [["🇳🇿 皇后镇卡德罗纳", "南半球反季开板"], ["🇦🇺 佩里舍 Perisher", "澳洲最大雪场"], ["🇨🇱 巴耶内瓦多", "安第斯山高海拔"]],
+          parkWhy: "北欧与北美北部进入白昼最长的凉爽初夏，最适合去瑞典、丹麦、俄亥俄刷过山车。",
+          parks: [["🇺🇸 杉点乐园 Cedar Point", "伊利湖畔18座过山车"], ["🇸🇪 里瑟本 Liseberg", "北欧白夜游乐园"], ["🇺🇸 哥伦布 The Wilds", "4000公顷草原游猎"]],
+          indoorWhy: "梅雨季与初夏高温日，走进地下盐矿、潜艇与深海水族馆。",
+          indoors: [["🇵🇱 维利奇卡地下盐矿", "地下135米清凉岩盐宫"], ["🇩🇪 辛斯海姆技术馆", "步入协和与图-144"], ["🇨🇳 上海海昌/陆家嘴馆", "梅雨季室内遛娃"]]
+        },
+        7: {
+          tag: "盛夏巅峰 · 地中海全盛 & 南半球深冬粉雪",
+          beachWhy: "整个地中海（撒丁岛、科西嘉、克罗地亚、希腊）、冲绳、夏威夷与印尼群岛处于全年水温最高期。",
+          beaches: [["🇮🇹 撒丁岛翡翠海岸", "欧洲果冻海天花板"], ["🇭🇷 赫瓦尔岛 Hvar", "亚得里亚海晴空"], ["🇮🇩 四王群岛/仙本那", "赤道无台风带"]],
+          skiWhy: "7–8 月是南半球滑雪的黄金深冬！智利 Portillo、阿根廷巴里洛切与新西兰瓦纳卡粉雪全开。",
+          skis: [["🇦🇷 巴里洛切教堂山", "南美最大滑雪度假村"], ["🇨🇱 波蒂略 Portillo", "印加湖绝景粉雪"], ["🇳🇿 三锥山 Treble Cone", "俯瞰瓦纳卡湖野雪"]],
+          parkWhy: "暑期水上乐园与欧洲森林动物园全线满血运营，夜间烟花大秀每晚加场。",
+          parks: [["🇪🇸 暹罗水上乐园", "全球第一水乐园"], ["🇬🇧 切斯特动物园", "乘船穿越东南亚岛屿"], ["🇨🇭 苏黎世动物园", "阿尔卑斯凉爽夏游"]],
+          indoorWhy: "酷暑 38°C 下午，钻进零下真冰企鹅馆或 20 米深海巨球。",
+          indoors: [["🇪🇸 瓦伦西亚海洋馆", "白鲸冰川馆+水下餐厅"], ["🇩🇪 汉堡哈根贝克", "极地冰海馆看海象"], ["🇺🇸 西雅图飞行博物馆", "太平洋西北清凉行"]]
+        },
+        8: {
+          tag: "八月骄阳 · 欧洲海岸狂欢与反季滑雪盛期",
+          beachWhy: "地中海、红海、黑山科托尔湾、毛里求斯与大溪地（座头鲸同游季！）同处最佳窗口。",
+          beaches: [["🇵🇫 大溪地茉莉雅岛", "8–10月与座头鲸同游！"], ["🇲🇪 科托尔与布德瓦", "峡湾古城暖海"], ["🇹🇷 费特希耶 / 卡什", "绿松石海岸滑翔伞"]],
+          skiWhy: "南半球积雪最深月！南美安第斯山脉 Las Leñas 与新西兰南岛雪况达到年度峰值。",
+          skis: [["🇦🇷 拉斯莱尼亚斯", "南美极限野雪圣地"], ["🇳🇿 卓越山 Remarkables", "皇后镇三大雪场联滑"], ["🇦🇺 斯雷德博 Thredbo", "澳洲最长垂直落差"]],
+          parkWhy: "北美西岸（西雅图、温哥华、旧金山湾区）夏季干爽凉快，只有 22°C。",
+          parks: [["🇺🇸 西雅图林地动物园", "温带古木森林避暑"], ["🇺🇸 奥克兰动物园", "坐缆车吹旧金山海风"], ["🇨🇦 温哥华水族馆", "斯坦利公园看海獭"]],
+          indoorWhy: "法国狂人国《La Cinéscénie》周五周六夜场巨制与百老汇暑期档。",
+          indoors: [["🇫🇷 狂人国夜秀 Cinéscénie", "2500名演员史诗大秀"], ["🇺🇸 芝加哥科工馆", "地下整艘U-505真潜艇"], ["🇯🇵 名古屋港水族馆", "水下看台平视虎鲸"]]
+        },
+        9: {
+          tag: "金秋错峰 · 地中海余温尚存 & 门票房价腰斩",
+          beachWhy: "9 月的地中海海水经过一整个夏天的蓄热依然高达 24–26°C，但欧洲暑期大军撤退，房价立降 40%！",
+          beaches: [["🇬🇷 克里特岛粉红沙滩", "海水仍暖·人少景美"], ["🇪🇸 伊维萨与福门特拉", "松石绿泻湖错峰"], ["🇨🇾 阿依纳帕 Nissi", "东地中海27°C暖海"]],
+          skiWhy: "南半球进入阳光春雪季，北半球冰川雪场开始秋雪热身。",
+          skis: [["🇨🇭 采尔马特冰川", "3883m 四季雪场"], ["🇳🇿 鲁阿佩胡山", "北岛活火山春雪"], ["🇦🇹 索尔登 Sölden", "世界杯揭幕战冰川"]],
+          parkWhy: "全球主题乐园开启「万圣节恐怖夜（Halloween Horror Nights）」限定季，排队仅暑假一半。",
+          parks: [["🇺🇸 好莱坞/奥兰多环球", "万圣节限定鬼屋开启"], ["🇩🇪 梦幻乐园 Phantasialand", "蒸汽朋克造景巅峰"], ["🇯🇵 富士急高原乐园", "秋高气爽看富士山"]],
+          indoorWhy: "秋高气爽最适合逛露天飞机墓场与巨型工业遗址。",
+          indoors: [["🇺🇸 图森皮马航空馆", "沙漠400架真机+核井"], ["🇩🇪 关税同盟煤矿遗址", "鲁尔区金秋工业美学"], ["🇸🇪 瓦萨沉船博物馆", "斯德哥尔摩秋色"]]
+        },
+        10: {
+          tag: "十月金秋 · 红海/阿联酋黄金期 & 森林动物园赏秋",
+          beachWhy: "阿联酋萨迪亚特岛、阿曼、埃及红海褪去暑热降至 28°C；大溪地与塞舌尔正值换季平浪期。",
+          beaches: [["🇦🇪 阿布扎比萨迪亚特岛", "28°C 白沙果冻海"], ["🇪🇬 赫尔格达 / 马萨阿拉姆", "红海珊瑚海豚同游"], ["🇲🇺 毛里求斯", "南半球春暖少雨"]],
+          skiWhy: "奥地利蒂罗尔各大冰川雪场（Stubai、Pitztal、Sölden）率先开板。",
+          skis: [["🇦🇹 斯图拜冰川 Stubai", "10月即开百公里雪道"], ["🇦🇹 皮茨河谷冰川", "奥地利最高冰川缆车"], ["🇨🇭 铁力士山 Engelberg", "高海拔秋雪"]],
+          parkWhy: "层林尽染的秋叶季！北美与欧洲森林系动物园、复古游乐园颜值达到顶峰。",
+          parks: [["🇺🇸 多莉山 Dollywood", "大烟山红叶与过山车"], ["🇨🇿 布拉格动物园", "伏尔塔瓦河谷金秋"], ["🇫🇷 博瓦勒野生动物园", "卢瓦尔河谷城堡秋色"]],
+          indoorWhy: "西安《长恨歌》与郑州《只有河南》进入全年最凉爽舒适的秋夜观演期。",
+          indoors: [["🇨🇳 西安华清宫《长恨歌》", "骊山秋夜真山真水"], ["🇨🇳 只有河南·戏剧幻城", "金黄麦浪季"], ["🇺🇸 代顿国家空军博物馆", "4座巨库360架真机"]]
+        },
+        11: {
+          tag: "初冬转场 · 东南亚/加勒比开季 & 北美雪场早鸟开板",
+          beachWhy: "泰国安达曼海（普吉、甲米、斯米兰每年11月开岛！）、加勒比海与夏威夷进入暖冬旺季。",
+          beaches: [["🇹🇭 斯米兰群岛 & 考拉", "11月正式开岛！"], ["🇺🇸 美属/英属维尔京群岛", "加勒比旱季启幕"], ["🇦🇼 阿鲁巴 / 库拉索", "飓风带外全年晴朗"]],
+          skiWhy: "北美科罗拉多、班夫与新疆阿勒泰（将军山/可可托海）11 月率先迎来早冬粉雪开板！",
+          skis: [["🇨🇳 阿勒泰可可托海", "10–11月超长雪季开板"], ["🇨🇦 班夫阳光村", "11月全天然真雪开滑"], ["🇺🇸 布雷肯里奇", "科罗拉多高海拔早雪"]],
+          parkWhy: "各大主题乐园换上圣诞光影盛装，奥兰多与东京气候凉爽宜人。",
+          parks: [["🇯🇵 东京迪士尼乐园", "11月圣诞梦幻季开启"], ["🇺🇸 布希花园 Busch Gardens", "圣诞镇千万彩灯"], ["🇭🇰 香港海洋公园/迪士尼", "22°C 港岛最舒服季节"]],
+          indoorWhy: "欧洲转冷，正是深度打卡德法英顶尖汽车、铁道与科学博物馆的好时候。",
+          indoors: [["🇩🇪 斯图加特奔驰+保时捷", "双馆联逛汽车圣地"], ["🇬🇧 约克国家铁路博物馆", "室内百台功勋机车"], ["🇩🇪 柏林弗里德里希皇宫", "全球最大舞台驻场秀"]]
+        },
+        12: {
+          tag: "岁末跨年 · 全球滑雪全面盛装 & 热带海岛避寒",
+          beachWhy: "北半球寒冬逃离计划：马尔代夫、泰国、富国岛、三亚、加勒比与澳洲大堡礁全面进入跨年旺季。",
+          beaches: [["🇹🇭 甲米皮皮岛 / 兰塔", "旱季无浪果冻海"], ["🇻🇳 富国岛 Phu Quoc", "免签直飞·旱季平浪"], ["🇹🇨 特克斯和凯科斯", "Grace Bay 顶级白沙"]],
+          skiWhy: "全球北半球 90+ 座顶级雪场在圣诞节前全面开放，北海道、阿尔卑斯、落基山进入滑雪狂欢月！",
+          skis: [["🇫🇷 高雪维尔 Courchevel", "阿尔卑斯圣诞奢华季"], ["🇯🇵 白马 / 野泽温泉", "粉雪+千年外汤温泉"], ["🇺🇸 阿斯本 / 鹿谷", "北美圣诞传奇雪场"]],
+          parkWhy: "全球迪士尼与环球影城跨年烟花夜秀达到年度最华丽规格。",
+          parks: [["🇺🇸 奥兰多魔术王国", "跨年烟花与城堡灯光"], ["🇸🇬 新加坡圣淘沙名胜世界", "热带暖冬跨年"], ["🇦🇪 迪拜地球村与乐园群", "25°C 黄金气候"]],
+          indoorWhy: "纽约百老汇、伦敦西区与拉斯维加斯跨年驻场秀一票难求，建议提前 1 个月锁定座位。",
+          indoors: [["🇺🇸 百老汇《狮子王/Wicked》", "纽约圣诞跨年必看"], ["🇬🇧 伦敦 ABBA Voyage", "全息数字演唱会"], ["🇦🇪 迪拜水族馆 & 失落空间", "跨年室内奇观"]]
+        }
+      };
+
+      var curMonth = new Date().getMonth() + 1;
+      var mBar = document.getElementById("month-bar");
+      var calGrid = document.getElementById("cal-grid");
+      var SEASON_NAMES = ["", "深冬", "晚冬", "初春", "仲春", "初夏", "仲夏", "盛夏", "晚夏", "初秋", "金秋", "初冬", "岁末"];
+
+      function renderCalendar(m) {
+        curMonth = m;
+        mBar.innerHTML = [1,2,3,4,5,6,7,8,9,10,11,12].map(function (n) {
+          return '<button type="button" class="m-btn" data-m="' + n + '" aria-pressed="' + (n === m) + '">' + n + '月<small>' + SEASON_NAMES[n] + '</small></button>';
+        }).join("");
+        var d = CALENDAR_DATA[m];
+        calGrid.innerHTML = [
+          { title: "🏖️ 当月最佳海岸海岛", c: "var(--c-beach)", why: d.beachWhy, list: d.beaches, url: "beaches.html" },
+          { title: "🎿 当月最佳滑雪度假村", c: "var(--c-ski)", why: d.skiWhy, list: d.skis, url: "ski.html" },
+          { title: "🎢 当月推荐乐园与动物园", c: "var(--c-park)", why: d.parkWhy, list: d.parks, url: "themeparks.html" },
+          { title: "🐋 全天候水族馆/重器/大秀", c: "var(--c-abyss)", why: d.indoorWhy, list: d.indoors, url: "aquariums.html" }
+        ].map(function (col) {
+          return '<div class="cal-col">' +
+            '<h3 style="color:' + col.c + '">' + col.title + '</h3>' +
+            '<p class="cal-why">' + esc(col.why) + '</p>' +
+            '<div class="cal-picks">' + col.list.map(function (item) {
+              return '<a class="cal-pick" href="' + col.url + '"><span>' + esc(item[0]) + '</span><small>' + esc(item[1]) + ' →</small></a>';
+            }).join("") + '</div>' +
+          '</div>';
+        }).join("");
+      }
+      mBar.addEventListener("click", function (e) {
+        var b = e.target.closest(".m-btn");
+        if (b) renderCalendar(parseInt(b.getAttribute("data-m"), 10));
+      });
+      renderCalendar(curMonth);
+
+      // 2. Cross-Ranking Omni-Search across all 7 pillars
+      var input = document.getElementById("global-search");
+      var clearBtn = document.getElementById("search-clear-btn");
+      var panel = document.getElementById("search-results-panel");
+
+      window.focusSearch = function () {
+        input.focus();
+        input.scrollIntoView({ behavior: "smooth", block: "center" });
+      };
+      window.setQuery = function (q) {
+        input.value = q;
+        input.focus();
+        doSearch();
+      };
+      window.clearSearch = function () {
+        input.value = "";
+        clearBtn.style.display = "none";
+        panel.style.display = "none";
+        panel.innerHTML = "";
+      };
+
+      function highlightText(text, query) {
+        var str = esc(text);
+        if (!query) return str;
+        var q = esc(query).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        return str.replace(new RegExp(q, "gi"), function (m) {
+          return '<span style="color:#f5b301;font-weight:600">' + m + '</span>';
+        });
+      }
+
+      function doSearch() {
+        var q = input.value.trim().toLowerCase();
+        if (!q) {
+          clearBtn.style.display = "none";
+          panel.style.display = "none";
+          panel.innerHTML = "";
+          return;
+        }
+        clearBtn.style.display = "inline-block";
+
+        var beaches = (window.DESTINATIONS_DATA || []).filter(function (d) {
+          return (d.name + " " + d.region + " " + (d.tags ? d.tags.join(" ") : "") + " " + (d.note || "")).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var aquariums = (window.AQUARIUMS_TOP35 || []).filter(function (d) {
+          return (d.name + " " + d.country + " " + d.city + " " + d.highlight + " " + (d.tip || "")).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var zoos = (window.ZOOS_TOP30 || []).concat(window.US_SAFARI_PARKS_TOP10 || []).filter(function (d) {
+          return (d.name + " " + (d.country || "") + " " + (d.city || d.state || "") + " " + d.highlight).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var museums = (window.INDUSTRIAL_MUSEUMS_TOP100 || []).filter(function (d) {
+          return (d.name + " " + d.country + " " + d.city + " " + d.category + " " + d.highlight).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var parks = (window.THEMEPARKS_TOP100 || []).concat(window.WATERPARKS_TOP15 || []).filter(function (d) {
+          return (d.name + " " + d.country + " " + d.city + " " + d.highlight).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var skis = (window.SKI_RESORTS_TOP100 || []).filter(function (d) {
+          return (d.name + " " + d.country + " " + d.city + " " + (d.region || "") + " " + d.highlight).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var shows = (window.SHOWS_TOP50 || []).filter(function (d) {
+          return (d.name + " " + d.country + " " + d.city + " " + (d.venue || "") + " " + d.highlight).toLowerCase().indexOf(q) > -1;
+        }).slice(0, 4);
+
+        var total = beaches.length + aquariums.length + zoos.length + museums.length + parks.length + skis.length + shows.length;
+        if (total === 0) {
+          panel.innerHTML = '<div class="res-empty">未找到包含“<b>' + esc(input.value.trim()) + '</b>”的目的地，试试搜索“日本”、“奥兰多”、“新加坡”、“鲸鲨”、“粉雪”或“航母”。</div>';
+          panel.style.display = "block";
+          return;
+        }
+
+        var html = '<div class="res-head"><span>跨 7 大榜单共找到 ' + total + '+ 处匹配目的地</span><span>点击直达专题页面</span></div>';
+
+        function groupHtml(title, color, items, url, metaFn) {
+          if (!items.length) return "";
+          return '<div class="res-group"><div class="res-group-title" style="color:' + color + '">' + title + ' (' + items.length + ')</div><div class="res-items">' +
+            items.map(function (it) {
+              return '<a class="res-item" href="' + url + '">' +
+                '<div class="res-item-left"><div class="res-name">' + (it.rank ? 'No.' + it.rank + ' · ' : '') + highlightText(it.name, q) + '</div>' +
+                '<div class="res-desc">' + highlightText(it.highlight || it.note || "", q) + '</div></div>' +
+                '<div class="res-meta">' + metaFn(it) + '</div></a>';
+            }).join("") + '</div></div>';
+        }
+
+        html += groupHtml("🏖️ 海岸与海岛度假", "var(--c-beach)", beaches, "beaches.html", function (b) { return "<b>" + esc(b.region) + "</b><br/>$" + b.priceMin + "/5晚"; });
+        html += groupHtml("🎢 主题与水上乐园", "var(--c-park)", parks, "themeparks.html", function (p) { return "<b>" + esc(p.country + "·" + p.city) + "</b><br/>门票 $" + (p.ticketUsd || ""); });
+        html += groupHtml("🎿 全球滑雪度假村", "var(--c-ski)", skis, "ski.html", function (s) { return "<b>" + esc(s.country + "·" + s.city) + "</b><br/>落差 " + (s.verticalDropM || "") + "m"; });
+        html += groupHtml("🐋 顶级水族馆", "var(--c-abyss)", aquariums, "aquariums.html", function (a) { return "<b>" + esc(a.country + "·" + a.city) + "</b><br/>单池 " + (a.mainTankML || "") + "万升"; });
+        html += groupHtml("🦁 动物园与游猎园", "var(--c-zoo)", zoos, "zoos.html", function (z) { return "<b>" + esc((z.country || "美国") + "·" + (z.city || z.state)) + "</b><br/>" + (z.areaHa || "") + "公顷"; });
+        html += groupHtml("🎭 商业驻场大秀", "var(--c-show)", shows, "shows.html", function (s) { return "<b>" + esc(s.country + "·" + s.city) + "</b><br/>" + esc(s.langFriendly || ""); });
+        html += groupHtml("⚙️ 科技重器博物馆", "var(--c-metal)", museums, "museums.html", function (m) { return "<b>" + esc(m.country + "·" + m.city) + "</b><br/>" + esc(m.category); });
+
+        panel.innerHTML = html;
+        panel.style.display = "block";
+      }
+
+      input.addEventListener("input", doSearch);
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "/" && document.activeElement !== input) {
+          e.preventDefault();
+          focusSearch();
+        } else if (e.key === "Escape") {
+          clearSearch();
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (!panel.contains(e.target) && e.target !== input) {
+          panel.style.display = "none";
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

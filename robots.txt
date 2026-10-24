@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://destination-atlas.example.com/sitemap.xml
