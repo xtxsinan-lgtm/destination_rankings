@@ -7,16 +7,16 @@
 ## 🌐 十一大核心主题榜单矩阵（前端全交互接入）
 
 1. 🏖️ **[`beaches.html`](./beaches.html) — 全球海滨与海岛度假胜地 Top 145（真热带 Top 100 + 季节性 Top 45）**
-2. 🛥️ **[`cruises.html`](./cruises.html) — The Grand Fleet Index · 全球奢华邮轮、内河河轮与加拉帕戈斯游艇 Top 50（含 $/㎡/晚 空间单价 / 巨轮双层复式 vs 六星船 / 14家主流底价矩阵）**
-3. ⚜️ **[`canals.html`](./canals.html) — Waterway Lockkeeper's Log · 全球运河与内河自驾房船路线 Top 20（含免船牌水闸指南 / 3卧4卧2027精确报价 / 176张实景图匹配的8天7晚逐日路书）**
-4. ⛵ **[`sailing.html`](./sailing.html) — The Windward Odyssey · 全球双体帆船跳岛路线 Top 20（含 6 项全包账单拆解 / 26座停靠古镇52张实景图鉴 / 2027年26艘4卧真船跨月比价）**
-5. 🚐 **[`rv.html`](./rv.html) — The Overland Odyssey · 全球殿堂级房车自驾路线 Top 20 & 五大洲 16 城比价中心（含位置特权评分 / 2大3小全包底价 / 30尺大车窄路劝退黑名单）**
+2. 🎢 **[`themeparks.html`](./themeparks.html) — The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15（含过山车数 / 年客流 / 面积 / 门票与快通）**
+3. 🐋 **[`aquariums.html`](./aquariums.html) — The Abyss Index · 全球顶级水族馆 Top 35（含全馆总水体 / 最大单池水体 / 主视窗尺寸 / 物种数 / 生物总数）**
+4. 🦁 **[`zoos.html`](./zoos.html) — Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10（含总面积 / 物种数 / 生物总数 / 体力强度）**
+5. ⛷️ **[`ski.html`](./ski.html) — The Alpine & Powder Index · 全球滑雪度假村 Top 100（含垂直落差 / 雪道总长 / 年降雪量 / 最高海拔 / 雪票价）**
 6. 🎭 **[`shows.html`](./shows.html) — The Grand Stage Index · 全球商业驻场秀 Top 100 & 中国/维加斯 Top 20（含一票一词条 / 0台词重工优先 / 黄金选座与湾区巡演日历）**
-7. 🎢 **[`themeparks.html`](./themeparks.html) — The Thrill & Magic Index · 全球主题游乐园 Top 100 & 水上乐园 Top 15（含过山车数 / 年客流 / 面积 / 门票与快通）**
-8. ⛷️ **[`ski.html`](./ski.html) — The Alpine & Powder Index · 全球滑雪度假村 Top 100（含垂直落差 / 雪道总长 / 年降雪量 / 最高海拔 / 雪票价）**
-9. 🐋 **[`aquariums.html`](./aquariums.html) — The Abyss Index · 全球顶级水族馆 Top 35（含全馆总水体 / 最大单池水体 / 主视窗尺寸 / 物种数 / 生物总数）**
-10. 🦁 **[`zoos.html`](./zoos.html) — Field Notes · 全球顶级动物园 Top 30 & 全美野生动物园 Top 10（含总面积 / 物种数 / 生物总数 / 体力强度）**
-11. 🚀 **[`museums.html`](./museums.html) — Heavy Metal Index · 全球科技、工业与军事重器博物馆 Top 100（含免费场馆筛选 / 镇馆真机巨物 / 门票与时长）**
+7. 🚀 **[`museums.html`](./museums.html) — Heavy Metal Index · 全球科技、工业与军事重器博物馆 Top 100（含免费场馆筛选 / 镇馆真机巨物 / 门票与时长）**
+8. 🛥️ **[`cruises.html`](./cruises.html) — The Grand Fleet Index · 全球奢华邮轮、内河河轮与加拉帕戈斯游艇 Top 50（含 $/㎡/晚 空间单价 / 巨轮双层复式 vs 六星船 / 14家主流底价矩阵）**
+9. ⛵ **[`sailing.html`](./sailing.html) — The Windward Odyssey · 全球双体帆船跳岛路线 Top 20（含 6 项全包账单拆解 / 26座停靠古镇52张实景图鉴 / 2027年26艘4卧真船跨月比价）**
+10. 🚐 **[`rv.html`](./rv.html) — The Overland Odyssey · 全球殿堂级房车自驾路线 Top 20 & 五大洲 16 城比价中心（含位置特权评分 / 2大3小全包底价 / 30尺大车窄路劝退黑名单）**
+11. ⚜️ **[`canals.html`](./canals.html) — Waterway Lockkeeper's Log · 全球运河与内河自驾房船路线 Top 20（含免船牌水闸指南 / 3卧4卧2027精确报价 / 176张实景图匹配的8天7晚逐日路书）**
 
 ---
 
