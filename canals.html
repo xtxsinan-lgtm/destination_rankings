@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waterway Lockkeeper's Log · 全球 20 大运河与内河自驾房船路线图鉴</title>
+  <meta name="description" content="全球20条殿堂级运河与内河房船(Canal Boat / Narrowboat / Houseboat)路线权威评测：免船牌自驾米迪运河、阿尔萨斯、英国天空之溪窄船、苏格兰尼斯湖与加拿大里多运河，含3卧/4卧精确报价与8天7晚逐日176张实景路书。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a1816;
+      --bg-elev: #0f2420;
+      --card: rgba(15, 36, 32, 0.88);
+      --edge: rgba(230, 184, 92, 0.24);
+      --edge-strong: rgba(217, 119, 66, 0.55);
+      --brass: #e6b85c;
+      --brass-soft: rgba(230, 184, 92, 0.15);
+      --terracotta: #d97742;
+      --terracotta-soft: rgba(217, 119, 66, 0.16);
+      --mint: #52d1b2;
+      --mint-soft: rgba(82, 209, 178, 0.14);
+      --text: #f4efe4;
+      --muted: #a7c2bb;
+      --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif SC', serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --shadow: 0 22px 55px rgba(3, 10, 8, 0.7);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+    body {
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(82, 209, 178, 0.12), transparent 36%),
+        radial-gradient(circle at 85% 15%, rgba(217, 119, 66, 0.14), transparent 38%),
+        linear-gradient(180deg, #071210 0%, #0a1816 50%, #0c1d1a 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1380px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* Topbar */
+    .topbar {
+      position: sticky; top: 0; z-index: 90;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      background: rgba(7, 18, 16, 0.88);
+      border-bottom: 1px solid var(--edge);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 15px; color: var(--brass); white-space: nowrap; }
+    .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--terracotta); box-shadow: 0 0 12px var(--terracotta); }
+    .switch { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+    .switch a {
+      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted);
+      border: 1px solid transparent; white-space: nowrap; transition: all 0.2s;
+    }
+    .switch a:hover { color: var(--text); border-color: var(--edge); }
+    .switch a[aria-current="page"] {
+      color: #091614; background: linear-gradient(135deg, var(--brass), #f3d285);
+      font-weight: 600; box-shadow: 0 4px 16px rgba(230, 184, 92, 0.35);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 68px 0 48px;
+      border-bottom: 1px solid var(--edge);
+      background:
+        linear-gradient(180deg, rgba(10, 24, 22, 0.45) 0%, rgba(10, 24, 22, 0.96) 100%),
+        url('rankings/images/canals/r1_d4_1.jpg') center/cover no-repeat;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--brass); background: rgba(10, 24, 22, 0.85);
+      border: 1px solid var(--edge); padding: 6px 14px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.14; font-weight: 700; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: var(--brass); }
+    .hero h1 span.terra { color: var(--terracotta); }
+    .hero .lede { max-width: 940px; font-size: 16.5px; color: #e8e3d6; margin-bottom: 26px; }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px;
+    }
+    .stat-card {
+      background: rgba(11, 28, 25, 0.86); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(10px);
+    }
+    .stat-card b { display: block; font-family: var(--mono); font-size: 24px; color: var(--brass); }
+    .stat-card span { font-size: 12.5px; color: var(--muted); }
+
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 12px;
+    }
+    .pillar {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 18px;
+    }
+    .pillar h3 { font-size: 15px; color: var(--brass); margin-bottom: 6px; }
+    .pillar p { font-size: 13px; color: var(--muted); }
+
+    /* Boat Tiers Section */
+    .tiers-section {
+      margin: 34px 0 28px; padding: 24px;
+      background: rgba(12, 29, 26, 0.92); border: 1px solid var(--edge);
+      border-radius: 18px;
+    }
+    .tiers-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px;
+    }
+    .tier-box {
+      background: rgba(7, 18, 16, 0.8); border: 1px solid rgba(230, 184, 92, 0.2);
+      border-radius: 14px; padding: 16px;
+    }
+    .tier-box h4 { color: var(--brass); font-size: 14.5px; margin-bottom: 4px; }
+    .tier-box .t-price { font-family: var(--mono); font-size: 15px; color: var(--mint); font-weight: 600; margin: 6px 0; }
+    .tier-box .t-models { font-family: var(--mono); font-size: 11.5px; color: var(--terracotta); margin-bottom: 8px; }
+    .tier-box p { font-size: 12.5px; color: var(--muted); }
+
+    /* Filter Bar */
+    .filter-bar {
+      position: sticky; top: 57px; z-index: 70;
+      background: rgba(10, 25, 22, 0.94); backdrop-filter: blur(14px);
+      border: 1px solid var(--edge); border-radius: 16px;
+      padding: 16px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .search-box {
+      flex: 1 1 240px; background: rgba(5, 14, 12, 0.9);
+      border: 1px solid var(--edge); border-radius: 10px;
+      padding: 9px 14px; color: var(--text); font-size: 13.5px;
+    }
+    .chip-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .chip {
+      padding: 6px 12px; border-radius: 999px; font-size: 12px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--edge);
+      color: var(--muted); cursor: pointer; transition: all 0.18s;
+    }
+    .chip:hover { color: var(--text); border-color: var(--brass); }
+    .chip.active { background: var(--brass); color: #091614; font-weight: 600; border-color: var(--brass); }
+    .sort-select {
+      background: rgba(5, 14, 12, 0.95); color: var(--brass);
+      border: 1px solid var(--edge-strong); border-radius: 10px;
+      padding: 8px 12px; font-size: 12.5px; font-family: var(--sans);
+    }
+
+    /* Route Cards */
+    .routes-grid { display: grid; grid-template-columns: 1fr; gap: 26px; margin-bottom: 60px; }
+    .route-card {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
+    }
+    .rc-top { display: grid; grid-template-columns: 380px 1fr; }
+    .rc-media { position: relative; min-height: 280px; background: #06100e; }
+    .rc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .rc-rank-badge {
+      position: absolute; top: 14px; left: 14px;
+      background: rgba(7, 18, 16, 0.9); border: 1px solid var(--brass);
+      color: var(--brass); font-family: var(--mono); font-weight: 700;
+      padding: 6px 12px; border-radius: 10px; font-size: 15px;
+    }
+    .rc-region-badge {
+      position: absolute; bottom: 14px; left: 14px;
+      background: rgba(10, 24, 22, 0.92); border: 1px solid var(--mint);
+      color: var(--mint); font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    }
+    .rc-content { padding: 22px 26px; display: flex; flex-direction: column; justify-content: space-between; }
+    .rc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+    .rc-title { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--text); }
+    .rc-sub { font-size: 12.5px; color: var(--muted); margin-top: 3px; font-family: var(--mono); }
+    .rc-price-orb {
+      text-align: right; background: var(--brass-soft); border: 1px solid var(--edge-strong);
+      padding: 8px 14px; border-radius: 12px; white-space: nowrap;
+    }
+    .rc-price-orb b { display: block; font-family: var(--mono); font-size: 18px; color: var(--brass); }
+    .rc-price-orb small { font-size: 11px; color: var(--muted); }
+
+    .rc-specs {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+      margin: 12px 0; padding: 12px 14px;
+      background: rgba(6, 15, 13, 0.72); border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);
+    }
+    .rc-spec span { display: block; font-size: 11px; color: var(--muted); }
+    .rc-spec b { font-size: 13px; color: var(--mint); font-family: var(--mono); }
+
+    .price-compare-bar {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+      background: rgba(7, 19, 17, 0.92); border: 1px solid rgba(230, 184, 92, 0.28);
+      border-radius: 12px; padding: 11px 14px; margin: 10px 0;
+    }
+    .pc-item small { display: block; font-size: 11px; color: var(--muted); }
+    .pc-item strong { font-family: var(--mono); font-size: 13px; color: var(--brass); }
+
+    .rc-highlights { list-style: none; margin: 10px 0; display: grid; gap: 5px; }
+    .rc-highlights li { font-size: 13.5px; color: #ece6d8; padding-left: 18px; position: relative; }
+    .rc-highlights li::before { content: '⚜️'; position: absolute; left: 0; top: 0; font-size: 11px; }
+
+    .rc-tip {
+      font-size: 12.5px; color: #f5d8b8; background: var(--terracotta-soft);
+      border-left: 3px solid var(--terracotta); padding: 8px 12px; border-radius: 6px; margin-top: 8px;
+    }
+
+    .rc-actions {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .btn-drawer {
+      padding: 9px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
+      background: linear-gradient(135deg, var(--brass), #f0cd7a); color: #091614;
+      border: none; cursor: pointer; transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .btn-drawer:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(230, 184, 92, 0.4); }
+
+    /* 8-Day Dual-Photo Itinerary Drawer */
+    .itinerary-drawer {
+      display: none; padding: 24px 26px; background: rgba(5, 13, 11, 0.96);
+      border-top: 1px solid var(--edge);
+    }
+    .itinerary-drawer.open { display: block; }
+    .day-cards-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px;
+    }
+    .day-photo-card {
+      background: rgba(14, 33, 29, 0.85); border: 1px solid var(--edge);
+      border-radius: 14px; overflow: hidden;
+    }
+    .day-dual-imgs {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 185px; background: #040b09;
+    }
+    .day-dual-imgs figure { position: relative; height: 100%; overflow: hidden; }
+    .day-dual-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .day-dual-imgs figcaption {
+      position: absolute; inset: auto 0 0 0; background: rgba(4, 11, 9, 0.82);
+      font-size: 10.5px; color: #ddd5c4; padding: 4px 7px; line-height: 1.3;
+    }
+    .day-photo-body { padding: 14px 16px; }
+    .day-photo-body h5 { color: var(--brass); font-size: 14.5px; margin-bottom: 6px; }
+    .day-photo-body p { font-size: 12.5px; color: #d8e5e1; }
+
+    .foot { padding: 50px 0; border-top: 1px solid var(--edge); color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 980px) {
+      .rc-top { grid-template-columns: 1fr; }
+      .hero-stats, .pillars-grid, .tiers-grid, .day-cards-grid { grid-template-columns: 1fr; }
+      .rc-specs, .price-compare-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Destination Atlas · 全球运河房船图鉴</span></a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html">奢华邮轮 50</a>
+        <a href="canals.html" aria-current="page">运河房船 20</a>
+        <a href="sailing.html">帆船航线 20</a>
+        <a href="rv.html">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="themeparks.html">主题乐园 100</a>
+        <a href="ski.html">全球雪场 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Waterway Lockkeeper's Log · Self-Drive Canal & Inland Houseboat Atlas</span>
+      <h1>运河水闸日志与<em>法式水岸画报</em><br />全球运河与内河房船路线 <span class="terra">Top 20</span></h1>
+      <p class="lede">
+        无需任何游艇驾照（基地 30 分钟实操培训即拿钥匙），以 8 km/h 的慢节奏开着 3–4 卧室移动水上公寓，驶过 300 年法国梧桐拱廊、英国 38 米高空“天空之溪”水槽桥与苏格兰尼斯湖古堡。傍晚直接把船系在酒庄或中世纪城墙脚下，骑单车去镇上买法棍与勃艮第红酒。本页汇集全球 20 条殿堂级运河航线、<strong>2027 年 6 月初 3卧/4卧精确报价</strong> 及 <strong>176 张实景图片匹配的 8天7晚 逐日路书</strong>。
+      </p>
+      <div class="hero-stats">
+        <div class="stat-card"><b>20 条</b><span>全球顶级运河与内河房船航线</span></div>
+        <div class="stat-card"><b>免船牌</b><span>95% 航线 30 分钟培训即可自驾</span></div>
+        <div class="stat-card"><b>€290 起</b><span>6大3小（9人）整周分摊人均船租</span></div>
+        <div class="stat-card"><b>176 张</b><span>Day 1–Day 8 逐日地标实景配图</span></div>
+        <div class="stat-card"><b>4 大船队</b><span>Le Boat / Locaboat / Nicols / 窄船</span></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>🏰 1. 水岸世遗与古堡密度</h3>
+          <p>顶级运河绝非枯燥水渠：卡尔卡松双层城墙、温莎城堡、布鲁日钟楼、厄克特城堡与庞特卡萨尔特高空水桥皆可直接从船头仰望。</p>
+        </div>
+        <div class="pillar">
+          <h3>⚙️ 2. 船闸体验：全自动 vs 传统手摇</h3>
+          <p>带老人首选苏格兰、泰晤士河、比利时或加拿大里多运河（专职闸夫操作）；想带孩子体验机械乐趣首选英国窄船或米迪运河。</p>
+        </div>
+        <div class="pillar">
+          <h3>🛏️ 3. 6大3小（9人）选船黄金法则</h3>
+          <p>英国 70 尺 3 卧窄船、Le Boat 5星 Vision 3、Locaboat 1180FB、Les Canalous Tarpon 37 均可合法住 9–10 人；追求宽裕则选 4卧 Magnifique / Horizon 4。</p>
+        </div>
+        <div class="pillar">
+          <h3>🚲 4. 纤道骑行与免费停泊特权</h3>
+          <p>英国全线纤道、法国乡村水岸及美国伊利运河市政码头几乎全部免费停泊！甲板带上 3–4 辆自行车，随时骑去村庄买刚出炉的牛角包。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Boat Tiers Comparator -->
+    <section class="tiers-section">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;">
+        <h2 style="font-family:var(--serif);font-size:22px;color:var(--brass);">🛥️ 运河房船 4 大档次与代表船型横评（3卧 vs 4卧4卫 vs 顶奢全包酒店驳船）</h2>
+        <span style="font-size:12.5px;color:var(--muted);font-family:var(--mono);">基准：2027年6月初 · 8天7晚整船价格</span>
+      </div>
+      <div id="tiers-container" class="tiers-grid"></div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input type="search" id="canal-search" class="search-box" placeholder="搜索运河、国家、古堡、船闸（如：米迪、卡尔卡松、尼斯湖、温莎、里多、窄船）..." oninput="renderCanals()" />
+      <div class="chip-group" id="region-chips">
+        <button class="chip active" onclick="setRegion('ALL', this)">全部 20</button>
+        <button class="chip" onclick="setRegion('法国四大王牌', this)">🇫🇷 法国王牌水道 (7)</button>
+        <button class="chip" onclick="setRegion('英伦与苏格兰', this)">🇬🇧 英伦与爱尔兰 (5)</button>
+        <button class="chip" onclick="setRegion('荷比意德欧陆', this)">🇪🇺 荷比意德欧陆 (4)</button>
+        <button class="chip" onclick="setRegion('北美与南半球/亚洲', this)">🌎 北美/澳洲/亚洲 (4)</button>
+      </div>
+      <div class="chip-group" id="diff-chips">
+        <button class="chip active" onclick="setDiff('ALL', this)">全部难度</button>
+        <button class="chip" onclick="setDiff('新手零门槛', this)">新手零门槛 (专人开闸/少闸)</button>
+        <button class="chip" onclick="setDiff('初级休闲', this)">初级休闲</button>
+      </div>
+      <select id="canal-sort" class="sort-select" onchange="renderCanals()">
+        <option value="rank">按综合排名 (Top 1 → 20)</option>
+        <option value="priceAsc">按 9人分摊人均从低到高</option>
+        <option value="locksAsc">按水闸数量从少到多 (最省力)</option>
+      </select>
+    </div>
+
+    <div id="canals-container" class="routes-grid"></div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Waterway Lockkeeper's Log · Global Top 20 Canal & Inland Waterway Atlas · 包含 2027 年 6 月初实测船队报价与 176 张实景地标路书</p>
+    </div>
+  </footer>
+
+  <script src="data_canals_top20.js"></script>
+  <script>
+    let activeRegion = 'ALL';
+    let activeDiff = 'ALL';
+
+    function renderTiers() {
+      const tiers = window.CANAL_BOAT_TIERS_DB || [];
+      document.getElementById('tiers-container').innerHTML = tiers.map(t => `
+        <div class="tier-box">
+          <h4>${t.tierCode}</h4>
+          <div style="font-size:12px;color:var(--text);">${t.config}</div>
+          <div class="t-price">${t.weeklyPriceRange} <small style="color:var(--muted);">(${t.perPerson9Pax})</small></div>
+          <div class="t-models">${t.models}</div>
+          <p>${t.features}</p>
+        </div>
+      `).join('');
+    }
+
+    function setRegion(r, btn) {
+      activeRegion = r;
+      document.querySelectorAll('#region-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      renderCanals();
+    }
+
+    function setDiff(d, btn) {
+      activeDiff = d;
+      document.querySelectorAll('#diff-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      renderCanals();
+    }
+
+    function parseFirstInt(str) {
+      if (!str) return 99999;
+      const m = String(str).replace(/,/g, '').match(/(\d+)/);
+      return m ? parseInt(m[1], 10) : 99999;
+    }
+
+    function toggleItinerary(id) {
+      const el = document.getElementById('itin-' + id);
+      if (el) el.classList.toggle('open');
+    }
+
+    function renderCanals() {
+      const q = (document.getElementById('canal-search').value || '').trim().toLowerCase();
+      const sortBy = document.getElementById('canal-sort').value;
+
+      let list = (window.CANAL_ROUTES_TOP20 || []).filter(r => {
+        if (activeRegion !== 'ALL' && r.regionTag !== activeRegion) return false;
+        if (activeDiff !== 'ALL' && r.difficulty !== activeDiff) return false;
+        if (!q) return true;
+        const hay = [r.name, r.nameEn, r.country, r.basePort, r.bestFleetModels, ...(r.highlights || [])].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+
+      if (sortBy === 'priceAsc') {
+        list.sort((a, b) => parseFirstInt(a.perPerson9PaxEUR) - parseFirstInt(b.perPerson9PaxEUR));
+      } else if (sortBy === 'locksAsc') {
+        list.sort((a, b) => (a.lockCount ?? 99) - (b.lockCount ?? 99));
+      } else {
+        list.sort((a, b) => a.rank - b.rank);
+      }
+
+      document.getElementById('canals-container').innerHTML = list.map(r => {
+        const hasItin = r.itinerary8Days && r.itinerary8Days.length > 0;
+        const itinHtml = hasItin ? `
+          <div id="itin-${r.id}" class="itinerary-drawer">
+            <h4 style="color:var(--brass);font-family:var(--serif);font-size:18px;">📖 ${r.name} · 8天7晚 [Day 1 – Day 8] 逐日停泊与双图精确路书</h4>
+            <div class="day-cards-grid">
+              ${r.itinerary8Days.map(d => {
+                const p1 = d.photos && d.photos[0] ? d.photos[0] : null;
+                const p2 = d.photos && d.photos[1] ? d.photos[1] : p1;
+                return `
+                  <div class="day-photo-card">
+                    ${p1 ? `
+                    <div class="day-dual-imgs">
+                      <figure>
+                        <img src="${p1.src}" alt="${p1.caption}" loading="lazy" />
+                        <figcaption>${p1.caption}</figcaption>
+                      </figure>
+                      ${p2 ? `
+                      <figure>
+                        <img src="${p2.src}" alt="${p2.caption}" loading="lazy" />
+                        <figcaption>${p2.caption}</figcaption>
+                      </figure>` : ''}
+                    </div>` : ''}
+                    <div class="day-photo-body">
+                      <h5>Day ${d.day} · ${d.title}</h5>
+                      <p>${d.desc}</p>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        ` : '';
+
+        return `
+        <article class="route-card">
+          <div class="rc-top">
+            <div class="rc-media">
+              <img src="${r.coverImage}" alt="${r.name}" loading="lazy" />
+              <span class="rc-rank-badge">#${r.rank} · ${r.tier}</span>
+              <span class="rc-region-badge">${r.country} · ${r.difficulty}</span>
+            </div>
+            <div class="rc-content">
+              <div>
+                <div class="rc-header">
+                  <div>
+                    <h2 class="rc-title">${r.name}</h2>
+                    <div class="rc-sub">${r.nameEn} ｜ 📍 基地：${r.basePort}</div>
+                  </div>
+                  <div class="rc-price-orb">
+                    <b>${r.perPerson9PaxEUR}</b>
+                    <small>9人合租整周船租人均</small>
+                  </div>
+                </div>
+
+                <div class="rc-specs">
+                  <div class="rc-spec"><span>驾照门槛</span><b>${r.licenseRequired}</b></div>
+                  <div class="rc-spec"><span>8天往返里程</span><b>${r.distanceKm} km</b></div>
+                  <div class="rc-spec"><span>途经水闸数</span><b>${r.lockCount} 座 (${r.lockType.split(' ')[0]})</b></div>
+                  <div class="rc-spec"><span>日均开船时长</span><b>${r.dailyCruiseHours}</b></div>
+                </div>
+
+                <div class="price-compare-bar">
+                  <div class="pc-item"><small>🛏️ 3卧室船型周租 (2027年6月初)</small><strong>${r.price3CabinsEUR}</strong></div>
+                  <div class="pc-item"><small>🛏️ 4卧室船型周租 (8-10人宽裕)</small><strong>${r.price4CabinsEUR}</strong></div>
+                  <div class="pc-item"><small>🛥️ 首选船队与主力船型</small><strong style="color:var(--mint);font-size:12px;">${r.bestFleetModels}</strong></div>
+                </div>
+
+                <ul class="rc-highlights">
+                  ${(r.highlights || []).map(h => `<li>${h}</li>`).join('')}
+                </ul>
+
+                <div class="rc-tip">💡 <strong>水闸与停泊锦囊：</strong>${r.mooringTip}</div>
+              </div>
+
+              <div class="rc-actions">
+                <span style="font-size:12px;color:var(--muted);font-family:var(--mono);">⚙️ 水闸类型：${r.lockType}</span>
+                ${hasItin ? `<button class="btn-drawer" onclick="toggleItinerary('${r.id}')">📖 展开 8天7晚 逐日停泊与实景双图路书 (${r.itinerary8Days.length * 2}张实景图)</button>` : `<span style="font-size:12px;color:var(--brass);">✨ 经典 7 晚自由停泊环线</span>`}
+              </div>
+            </div>
+          </div>
+          ${itinHtml}
+        </article>`;
+      }).join('');
+    }
+
+    renderTiers();
+    renderCanals();
+  </script>
+</body>
+</html>

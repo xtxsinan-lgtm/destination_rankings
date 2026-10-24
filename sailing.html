@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Windward Odyssey · 全球双体帆船跳岛路线 Top 20 & 2027 实船比价</title>
+  <meta name="description" content="全球20条殿堂级双体帆船(Catamaran)跳岛路线权威评测：涵盖爱奥尼亚牛奶海、撒丁岛+博尼法乔、西西里火山岛、BVI与大溪地，含6维全包成本、26座停靠古镇图鉴与2027年26艘4卧真船比价。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #041524;
+      --bg-elev: #072238;
+      --card: rgba(9, 34, 56, 0.86);
+      --card-hover: rgba(14, 46, 75, 0.94);
+      --edge: rgba(60, 232, 219, 0.22);
+      --edge-strong: rgba(235, 182, 101, 0.5);
+      --cyan: #3ce8db;
+      --cyan-soft: rgba(60, 232, 219, 0.14);
+      --teak: #ebb665;
+      --teak-soft: rgba(235, 182, 101, 0.16);
+      --coral: #f26b5b;
+      --coral-soft: rgba(242, 107, 91, 0.16);
+      --emerald: #4ade80;
+      --text: #f0f8ff;
+      --muted: #9bc1d9;
+      --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif SC', serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --shadow: 0 22px 55px rgba(2, 10, 20, 0.65);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+    body {
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(60, 232, 219, 0.14), transparent 38%),
+        radial-gradient(circle at 84% 16%, rgba(235, 182, 101, 0.12), transparent 40%),
+        linear-gradient(180deg, #03101c 0%, #041524 45%, #061c30 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1380px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* Topbar */
+    .topbar {
+      position: sticky; top: 0; z-index: 90;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      background: rgba(3, 16, 28, 0.88);
+      border-bottom: 1px solid var(--edge);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 15px; color: var(--teak); white-space: nowrap; }
+    .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+    .switch { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+    .switch a {
+      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted);
+      border: 1px solid transparent; white-space: nowrap; transition: all 0.2s;
+    }
+    .switch a:hover { color: var(--text); border-color: var(--edge); }
+    .switch a[aria-current="page"] {
+      color: #03131f; background: linear-gradient(135deg, var(--cyan), #7cf5ec);
+      font-weight: 600; box-shadow: 0 4px 16px rgba(60, 232, 219, 0.35);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 68px 0 48px;
+      border-bottom: 1px solid var(--edge);
+      background:
+        linear-gradient(180deg, rgba(4, 21, 36, 0.35) 0%, rgba(4, 21, 36, 0.96) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Porto_Katsiki_Lefkada_Greece.jpg/1600px-Porto_Katsiki_Lefkada_Greece.jpg') center/cover no-repeat;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--cyan); background: rgba(4, 25, 42, 0.8);
+      border: 1px solid var(--edge); padding: 6px 14px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-size: clamp(32px, 4.8vw, 58px);
+      line-height: 1.12; font-weight: 700; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: var(--cyan); }
+    .hero h1 span.gold { color: var(--teak); }
+    .hero .lede {
+      max-width: 920px; font-size: 16.5px; color: #d6ecfa; margin-bottom: 26px;
+    }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
+      margin-top: 28px;
+    }
+    .stat-card {
+      background: rgba(6, 26, 44, 0.84); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(10px);
+    }
+    .stat-card b { display: block; font-family: var(--mono); font-size: 24px; color: var(--teak); }
+    .stat-card span { font-size: 12.5px; color: var(--muted); }
+
+    /* Methodology 4 Pillars */
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      margin: 28px 0 12px;
+    }
+    .pillar {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 18px;
+    }
+    .pillar h3 { font-size: 15px; color: var(--cyan); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .pillar p { font-size: 13px; color: var(--muted); }
+
+    /* Module Tabs */
+    .module-tabs {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin: 34px 0 24px; padding: 10px;
+      background: rgba(5, 24, 41, 0.9); border: 1px solid var(--edge);
+      border-radius: 16px;
+    }
+    .m-tab {
+      flex: 1 1 220px; padding: 13px 16px; border-radius: 12px;
+      background: transparent; border: 1px solid transparent;
+      color: var(--muted); font-size: 14px; font-weight: 600;
+      cursor: pointer; text-align: left; transition: all 0.2s;
+    }
+    .m-tab small { display: block; font-size: 11.5px; font-weight: 400; opacity: 0.8; margin-top: 3px; }
+    .m-tab:hover { color: var(--text); border-color: var(--edge); }
+    .m-tab.active {
+      background: linear-gradient(135deg, rgba(60, 232, 219, 0.2), rgba(235, 182, 101, 0.18));
+      border-color: var(--cyan); color: var(--text);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .module-pane { display: none; }
+    .module-pane.active { display: block; }
+
+    /* Filter Bar */
+    .filter-bar {
+      position: sticky; top: 57px; z-index: 70;
+      background: rgba(5, 24, 41, 0.94); backdrop-filter: blur(14px);
+      border: 1px solid var(--edge); border-radius: 16px;
+      padding: 16px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .search-box {
+      flex: 1 1 250px; background: rgba(3, 14, 25, 0.85);
+      border: 1px solid var(--edge); border-radius: 10px;
+      padding: 9px 14px; color: var(--text); font-size: 13.5px;
+    }
+    .chip-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .chip {
+      padding: 6px 12px; border-radius: 999px; font-size: 12px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--edge);
+      color: var(--muted); cursor: pointer; transition: all 0.18s;
+    }
+    .chip:hover { color: var(--text); border-color: var(--cyan); }
+    .chip.active { background: var(--cyan); color: #031524; font-weight: 600; border-color: var(--cyan); }
+    .sort-select {
+      background: rgba(3, 14, 25, 0.9); color: var(--teak);
+      border: 1px solid var(--edge-strong); border-radius: 10px;
+      padding: 8px 12px; font-size: 12.5px; font-family: var(--sans);
+    }
+
+    /* Route Cards */
+    .routes-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 60px; }
+    .route-card {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
+      transition: transform 0.22s, border-color 0.22s;
+    }
+    .route-card:hover { border-color: var(--edge-strong); }
+    .rc-top {
+      display: grid; grid-template-columns: 360px 1fr; gap: 0;
+    }
+    .rc-media {
+      position: relative; min-height: 270px; background: #03111d;
+    }
+    .rc-media img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .rc-rank-badge {
+      position: absolute; top: 14px; left: 14px;
+      background: rgba(3, 16, 28, 0.88); border: 1px solid var(--teak);
+      color: var(--teak); font-family: var(--mono); font-weight: 700;
+      padding: 6px 12px; border-radius: 10px; font-size: 15px;
+    }
+    .rc-region-badge {
+      position: absolute; bottom: 14px; left: 14px;
+      background: rgba(4, 25, 42, 0.9); border: 1px solid var(--cyan);
+      color: var(--cyan); font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    }
+    .rc-content { padding: 22px 26px; display: flex; flex-direction: column; justify-content: space-between; }
+    .rc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+    .rc-title { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--text); }
+    .rc-sub { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+    .rc-price-orb {
+      text-align: right; background: var(--teak-soft); border: 1px solid var(--edge-strong);
+      padding: 8px 14px; border-radius: 12px; white-space: nowrap;
+    }
+    .rc-price-orb b { display: block; font-family: var(--mono); font-size: 20px; color: var(--teak); }
+    .rc-price-orb small { font-size: 11px; color: var(--muted); }
+
+    .rc-specs {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+      margin: 12px 0; padding: 11px 14px;
+      background: rgba(3, 14, 24, 0.65); border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);
+    }
+    .rc-spec span { display: block; font-size: 11px; color: var(--muted); }
+    .rc-spec b { font-size: 13px; color: var(--cyan); font-family: var(--mono); }
+
+    /* 6-Part Cost Bar */
+    .cost-strip {
+      background: rgba(4, 20, 35, 0.9); border: 1px solid rgba(60, 232, 219, 0.25);
+      border-radius: 12px; padding: 12px 14px; margin: 10px 0;
+    }
+    .cost-strip-title {
+      font-size: 11.5px; font-family: var(--mono); color: var(--teak);
+      margin-bottom: 8px; display: flex; justify-content: space-between;
+    }
+    .cost-pills {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;
+    }
+    .cost-pill {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      padding: 6px 8px; border-radius: 8px;
+    }
+    .cost-pill small { display: block; font-size: 10.5px; color: var(--muted); }
+    .cost-pill strong { font-family: var(--mono); font-size: 12px; color: var(--text); }
+
+    .rc-highlights { list-style: none; margin: 10px 0; display: grid; gap: 5px; }
+    .rc-highlights li { font-size: 13px; color: #d8ecf8; padding-left: 16px; position: relative; }
+    .rc-highlights li::before { content: '⚓'; position: absolute; left: 0; top: 0; font-size: 11px; }
+
+    .rc-actions {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between;
+      margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .btn-drawer {
+      padding: 8px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+      background: var(--cyan-soft); color: var(--cyan); border: 1px solid var(--cyan);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-drawer:hover { background: var(--cyan); color: #031524; }
+
+    .itinerary-drawer {
+      display: none; padding: 20px 26px; background: rgba(2, 11, 20, 0.92);
+      border-top: 1px solid var(--edge);
+    }
+    .itinerary-drawer.open { display: block; }
+    .days-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px;
+      margin-top: 12px;
+    }
+    .day-box {
+      background: rgba(9, 33, 54, 0.75); border: 1px solid var(--edge);
+      border-radius: 10px; padding: 12px; font-size: 12.5px;
+    }
+    .day-box b { display: block; color: var(--teak); margin-bottom: 4px; font-family: var(--mono); }
+
+    /* Gallery Grid */
+    .stops-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px;
+      margin-bottom: 60px;
+    }
+    .stop-card {
+      background: var(--card); border: 1px solid var(--edge); border-radius: 16px;
+      overflow: hidden;
+    }
+    .stop-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; height: 195px; background: #020d18; }
+    .stop-photos img { width: 100%; height: 100%; object-fit: cover; }
+    .stop-body { padding: 16px 18px; }
+    .stop-body h4 { font-size: 16.5px; color: var(--teak); margin-bottom: 4px; }
+    .stop-meta { font-family: var(--mono); font-size: 11.5px; color: var(--cyan); margin-bottom: 8px; }
+    .stop-body p { font-size: 13px; color: #d5eaf7; margin-bottom: 8px; }
+    .stop-moor { font-size: 12px; color: var(--muted); background: rgba(0,0,0,0.3); padding: 7px 10px; border-radius: 8px; }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto; background: var(--card); border: 1px solid var(--edge);
+      border-radius: 16px; margin-bottom: 36px;
+    }
+    table.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.data-table th, table.data-table td {
+      padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.07); text-align: left;
+    }
+    table.data-table th {
+      background: rgba(3, 15, 26, 0.9); color: var(--teak);
+      font-family: var(--mono); font-size: 12px; white-space: nowrap;
+    }
+    table.data-table tr:hover { background: rgba(60, 232, 219, 0.05); }
+    .btn-link {
+      display: inline-block; padding: 4px 10px; border-radius: 999px;
+      background: var(--cyan-soft); color: var(--cyan); border: 1px solid var(--cyan);
+      font-size: 11.5px; font-family: var(--mono); white-space: nowrap;
+    }
+
+    .warn-box {
+      background: var(--coral-soft); border: 1px solid var(--coral);
+      border-radius: 16px; padding: 22px 24px; margin: 26px 0;
+    }
+    .warn-box h3 { color: #ff9c8f; margin-bottom: 8px; font-size: 18px; }
+
+    .foot { padding: 50px 0; border-top: 1px solid var(--edge); color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 980px) {
+      .rc-top { grid-template-columns: 1fr; }
+      .hero-stats, .pillars-grid, .cost-pills { grid-template-columns: repeat(2, 1fr); }
+      .rc-specs { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Destination Atlas · 全球帆船航线图鉴</span></a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html">奢华邮轮 50</a>
+        <a href="canals.html">运河房船 20</a>
+        <a href="sailing.html" aria-current="page">帆船航线 20</a>
+        <a href="rv.html">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="themeparks.html">主题乐园 100</a>
+        <a href="ski.html">全球雪场 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">The Windward Odyssey · Global Catamaran Charter Atlas</span>
+      <h1>爱奥尼亚牛奶蓝海图与<span class="gold">柚木甲板</span><br />全球双体帆船跳岛路线 <em>Top 20</em></h1>
+      <p class="lede">
+        2 个家庭或 8 位挚友包下一艘 40–45 尺四卧四卫双体帆船（Lagoon 42 / Bali 4.2 / Astrea 42），雇一位熟谙暗礁与秘境海湾的本地船长（Skipper），每天仅航行 1.5–2.5 小时：中午抛锚在陆路绝迹的果冻海浮潜，傍晚停靠在千年古堡或免费餐厅木栈桥旁喝冰镇白葡萄酒。本榜单完整拆解全球 20 大航线的 <strong>6 项全包真实账单</strong>、<strong>风浪平静度</strong> 与 <strong>2027 年 26 艘实船跨月比价</strong>。
+      </p>
+      <div class="hero-stats">
+        <div class="stat-card"><b>20 条</b><span>全球顶级双体帆船跳岛航线</span></div>
+        <div class="stat-card"><b>€890 起</b><span>爱奥尼亚 6 月初 8 人全包人均/周</span></div>
+        <div class="stat-card"><b>26 艘</b><span>2027 实测 4 卧双体船跨月真链接</span></div>
+        <div class="stat-card"><b>52 张</b><span>26 座停泊古镇与海湾实景照片</span></div>
+        <div class="stat-card"><b>1.5–2.5h</b><span>黄金日均航行时长（拒绝苦航）</span></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>💶 1. 算“6项落地全包价”而非裸船价</h3>
+          <p>裸船价仅占总账单 55%–65%。真实成本必须包含：裸船租金 + 专业船长 (€1,400–€1,750/周) + 基地强制清洁包 + 7晚码头/浮球费 + 柴油水费。</p>
+        </div>
+        <div class="pillar">
+          <h3>🌊 2. 内海平静度 vs 外海强风排雷</h3>
+          <p>家庭与首次包船首选爱奥尼亚海、戈杰克湾、BVI 等群岛屏障内海（1–3级微风无涌浪）；严防 7–8 月基克拉泽斯群岛 7–8 级 Meltemi 强北风。</p>
+        </div>
+        <div class="pillar">
+          <h3>🍷 3. 傍晚停靠：餐厅免费栈桥 vs 昂贵码头</h3>
+          <p>土耳其戈杰克与希腊爱奥尼亚小岛盛行“进餐厅吃海鲜晚餐即免费停靠私家木栈桥”，7 晚省下 €800–€2,000 码头费；撒丁岛与阿马尔菲则需重金订位。</p>
+        </div>
+        <div class="pillar">
+          <h3>⛵ 4. 黄金航程：每天 1.5–2.5 小时</h3>
+          <p>顶级跳岛线两岛间距仅 5–12 海里（视线可及），上午睡到自然醒去海湾划桨板，下午喝着冰镇桃红酒轻松转场。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="module-tabs" role="tablist">
+      <button class="m-tab active" onclick="switchPane('pane-routes', this)">
+        🧭 全球 20 大双体帆船航线总榜
+        <small>含 6 项全包账单拆解 + 逐日跳岛与停靠攻略</small>
+      </button>
+      <button class="m-tab" onclick="switchPane('pane-gallery', this)">
+        📸 26 座停靠古镇与果冻海湾实景图鉴
+        <small>希腊莱夫卡达 / 撒丁岛博尼法乔 / 土耳其戈杰克 / 西西里火山岛</small>
+      </button>
+      <button class="m-tab" onclick="switchPane('pane-boats', this)">
+        🛥️ 2027 实测 26 艘 4 卧双体船比价表
+        <small>6月/7月/8月/9月 真实周租与 Boataround 直达链接</small>
+      </button>
+      <button class="m-tab" onclick="switchPane('pane-pk', this)">
+        ⚖️ 加勒比 BVI vs 欧洲地中海 PK & 强风排雷
+        <small>6 维正面对决 + 为什么新手切忌盲选圣托里尼/米科诺斯</small>
+      </button>
+    </div>
+
+    <!-- PANE 1: TOP 20 ROUTES -->
+    <section id="pane-routes" class="module-pane active">
+      <div class="filter-bar">
+        <input type="search" id="route-search" class="search-box" placeholder="搜索航线、母港、国家、海湾（如：莱夫卡达、BVI、大溪地、科西嘉、火山）..." oninput="renderRoutes()" />
+        <div class="chip-group" id="region-chips">
+          <button class="chip active" data-region="ALL" onclick="setRegion('ALL', this)">全部 20</button>
+          <button class="chip" data-region="欧洲地中海" onclick="setRegion('欧洲地中海', this)">欧洲地中海 (10)</button>
+          <button class="chip" data-region="加勒比与美洲" onclick="setRegion('加勒比与美洲', this)">加勒比与美洲 (5)</button>
+          <button class="chip" data-region="印度洋与亚太远征" onclick="setRegion('印度洋与亚太远征', this)">印度洋与亚太 (5)</button>
+        </div>
+        <select id="route-sort" class="sort-select" onchange="renderRoutes()">
+          <option value="rank">按综合推荐排名 (Top 1 → 20)</option>
+          <option value="priceAsc">按 8 人平季全包人均从低到高</option>
+          <option value="milesAsc">按 7 天总海里从少到多 (最轻松)</option>
+        </select>
+      </div>
+      <div id="routes-container" class="routes-grid"></div>
+    </section>
+
+    <!-- PANE 2: 26 STOPS GALLERY -->
+    <section id="pane-gallery" class="module-pane">
+      <div class="filter-bar">
+        <div class="chip-group" id="gallery-chips">
+          <button class="chip active" onclick="renderGallery('ALL', this)">全部 26 座古镇与海湾 (52图)</button>
+          <button class="chip" onclick="renderGallery('greece_ionian_lefkada', this)">🇬🇷 希腊爱奥尼亚南线 (8站)</button>
+          <button class="chip" onclick="renderGallery('sardinia_corsica', this)">🇮🇹🇫🇷 撒丁岛北 + 科西嘉南 (6站)</button>
+          <button class="chip" onclick="renderGallery('turkey_gocek', this)">🇹🇷 土耳其戈杰克 12 岛 (6站)</button>
+          <button class="chip" onclick="renderGallery('sicily_aeolian', this)">🌋 西西里伊奥利亚火山岛 (6站)</button>
+        </div>
+      </div>
+      <div id="gallery-container" class="stops-grid"></div>
+    </section>
+
+    <!-- PANE 3: 26 VERIFIED BOATS 2027 -->
+    <section id="pane-boats" class="module-pane">
+      <div class="filter-bar">
+        <div class="chip-group">
+          <button class="chip active" onclick="renderBoats('ALL', this)">全部 26 艘 2027 实船</button>
+          <button class="chip" onclick="renderBoats('Lefkada', this)">希腊莱夫卡达</button>
+          <button class="chip" onclick="renderBoats('Sardinia', this)">意大利撒丁岛</button>
+          <button class="chip" onclick="renderBoats('Sicily', this)">西西里火山岛</button>
+          <button class="chip" onclick="renderBoats('Göcek', this)">土耳其戈杰克</button>
+          <button class="chip" onclick="renderBoats('Split', this)">克罗地亚斯普利特</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>海域 / 路线</th>
+              <th>船型与年份 (4卧双体)</th>
+              <th>基地母港</th>
+              <th>船长/乘员</th>
+              <th>2027年6月初</th>
+              <th>2027年7月中旬</th>
+              <th>2027年8月峰值</th>
+              <th>2027年9月中旬</th>
+              <th>实船核验与预订</th>
+            </tr>
+          </thead>
+          <tbody id="boats-tbody"></tbody>
+        </table>
+      </div>
+      <div id="platforms-container" class="pillars-grid" style="margin-bottom:50px;"></div>
+    </section>
+
+    <!-- PANE 4: BVI VS EUROPE PK & MELTEMI WARNING -->
+    <section id="pane-pk" class="module-pane">
+      <div class="warn-box" id="meltemi-box"></div>
+      <h2 style="font-family:var(--serif);margin:24px 0 14px;color:var(--teak);">加勒比海 BVI vs 欧洲地中海（希腊/意大利/克罗地亚/土耳其）6 维正面对决</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>对比维度</th>
+              <th>🇻🇬 加勒比海 BVI (英属维尔京)</th>
+              <th>🇬🇷🇮🇹🇭🇷🇹🇷 欧洲地中海四大黄金海区</th>
+            </tr>
+          </thead>
+          <tbody id="pk-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>The Windward Odyssey · Global Top 20 Catamaran Sailing Atlas · 全部价格基于 40–45 尺 4 卧双体帆船整船包船（8 人分摊）与 2026–2027 实船核验</p>
+    </div>
+  </footer>
+
+  <script src="data_sailing_top20.js"></script>
+  <script>
+    let activeRegion = 'ALL';
+
+    function switchPane(paneId, btn) {
+      document.querySelectorAll('.module-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.m-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById(paneId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function setRegion(region, btn) {
+      activeRegion = region;
+      document.querySelectorAll('#region-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      renderRoutes();
+    }
+
+    function parsePriceNum(str) {
+      if (!str) return 99999;
+      const m = String(str).replace(/,/g, '').match(/(\d+)/);
+      return m ? parseInt(m[1], 10) : 99999;
+    }
+
+    function toggleDrawer(id) {
+      const el = document.getElementById('drawer-' + id);
+      if (el) el.classList.toggle('open');
+    }
+
+    function renderRoutes() {
+      const q = (document.getElementById('route-search').value || '').trim().toLowerCase();
+      const sortBy = document.getElementById('route-sort').value;
+      let list = (window.SAILING_ROUTES_TOP20 || []).filter(r => {
+        if (activeRegion !== 'ALL' && r.region !== activeRegion) return false;
+        if (!q) return true;
+        const hay = [r.name, r.countries, r.homePort, r.positioning, ...(r.highlights || [])].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+
+      if (sortBy === 'priceAsc') {
+        list.sort((a, b) => parsePriceNum(a.costBreakdown?.perPerson8Pax) - parsePriceNum(b.costBreakdown?.perPerson8Pax));
+      } else if (sortBy === 'milesAsc') {
+        list.sort((a, b) => parsePriceNum(a.totalNauticalMiles) - parsePriceNum(b.totalNauticalMiles));
+      } else {
+        list.sort((a, b) => a.rank - b.rank);
+      }
+
+      const container = document.getElementById('routes-container');
+      container.innerHTML = list.map(r => {
+        const cb = r.costBreakdown || {};
+        const daysHtml = (r.itinerary7Days || []).map(d => {
+          if (typeof d === 'string') {
+            const parts = d.split('：');
+            return `<div class="day-box"><b>${parts[0] || '行程'}</b><span>${parts.slice(1).join('：') || d}</span></div>`;
+          }
+          return `<div class="day-box"><b>Day ${d.day || ''} · ${d.route || ''}</b><span>${d.highlights || ''}</span></div>`;
+        }).join('');
+
+        const boatsHtml = (r.verifiedBoats || []).map(b =>
+          `<a class="btn-link" href="${b.url}" target="_blank" rel="noopener">🛥️ ${b.model}: 6月${b.junePrice} / 9月${b.septPrice} ↗</a>`
+        ).join(' ');
+
+        return `
+        <article class="route-card">
+          <div class="rc-top">
+            <div class="rc-media">
+              <img src="${r.coverPhoto}" alt="${r.name}" loading="lazy" />
+              <span class="rc-rank-badge">#${r.rank} · ${r.tier || 'T1'}</span>
+              <span class="rc-region-badge">${r.region} · ${r.countries}</span>
+            </div>
+            <div class="rc-content">
+              <div>
+                <div class="rc-header">
+                  <div>
+                    <h2 class="rc-title">${r.name}</h2>
+                    <div class="rc-sub">📍 母港：${r.homePort} ｜ ✈️ 机场：${r.airport}</div>
+                  </div>
+                  <div class="rc-price-orb">
+                    <b>${cb.perPerson8Pax || ''}</b>
+                    <small>8人平季/旺季全包人均</small>
+                  </div>
+                </div>
+                <p style="font-size:13.5px;color:#bde0f5;margin-bottom:8px;"><strong>核心定位：</strong>${r.positioning}</p>
+                <div class="rc-specs">
+                  <div class="rc-spec"><span>最佳月份</span><b>${r.bestMonths}</b></div>
+                  <div class="rc-spec"><span>风浪平静度</span><b>${r.windAndWaveLevel}</b></div>
+                  <div class="rc-spec"><span>7天总航程</span><b>${r.totalNauticalMiles}</b></div>
+                  <div class="rc-spec"><span>日均开船时长</span><b>${r.dailySailHours}</b></div>
+                </div>
+                <div class="cost-strip">
+                  <div class="cost-strip-title">
+                    <span>💰 4卧双体船（8人）7天6晚全包账单拆解</span>
+                    <span>平季整船: <strong>${cb.allInShoulder}</strong> ｜ 旺季整船: <strong>${cb.allInPeak}</strong></span>
+                  </div>
+                  <div class="cost-pills">
+                    <div class="cost-pill"><small>1. 4卧裸船周租</small><strong>${cb.bareboatShoulder}</strong></div>
+                    <div class="cost-pill"><small>2. 专业船长7天</small><strong>${cb.skipper7d}</strong></div>
+                    <div class="cost-pill"><small>3. 基地强制杂费</small><strong>${cb.mandatoryExtras}</strong></div>
+                    <div class="cost-pill"><small>4. 7晚码头/浮球</small><strong>${cb.mooring7d}</strong></div>
+                    <div class="cost-pill"><small>5. 柴油与淡水</small><strong>${cb.fuel7d}</strong></div>
+                    <div class="cost-pill"><small>6. 8人人均全包</small><strong style="color:var(--cyan)">${cb.perPerson8Pax}</strong></div>
+                  </div>
+                </div>
+                <ul class="rc-highlights">
+                  ${(r.highlights || []).slice(0, 4).map(h => `<li>${h}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="rc-actions">
+                <button class="btn-drawer" onclick="toggleDrawer('${r.id}')">🗺️ 展开 Day 1 – Day 7 逐日航程与停靠攻略</button>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">${boatsHtml}</div>
+              </div>
+            </div>
+          </div>
+          <div id="drawer-${r.id}" class="itinerary-drawer">
+            <h4 style="color:var(--cyan);font-size:14px;">⛵ ${r.name} · 7天6晚逐日跳岛与停靠栈桥路书</h4>
+            <div class="days-grid">${daysHtml}</div>
+          </div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderGallery(routeKey, btn) {
+      if (btn) {
+        document.querySelectorAll('#gallery-chips .chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const db = window.SAILING_ROUTE_STOPS_GALLERY || {};
+      const keys = routeKey === 'ALL' ? Object.keys(db) : [routeKey];
+      const cards = [];
+      keys.forEach(k => {
+        const group = db[k];
+        if (!group || !group.stops) return;
+        group.stops.forEach(s => {
+          const p1 = s.photos && s.photos[0] ? s.photos[0].url : '';
+          const p2 = s.photos && s.photos[1] ? s.photos[1].url : p1;
+          cards.push(`
+            <div class="stop-card">
+              <div class="stop-photos">
+                <img src="${p1}" alt="${s.name}" loading="lazy" />
+                <img src="${p2}" alt="${s.name}" loading="lazy" />
+              </div>
+              <div class="stop-body">
+                <div class="stop-meta">${group.routeName} · ${s.day}</div>
+                <h4>${s.name}</h4>
+                <p>${s.vibe}</p>
+                <div class="stop-moor">⚓ <strong>停靠与水费：</strong>${s.mooring}</div>
+              </div>
+            </div>
+          `);
+        });
+      });
+      document.getElementById('gallery-container').innerHTML = cards.join('');
+    }
+
+    function renderBoats(filterStr, btn) {
+      if (btn) {
+        btn.parentElement.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const list = (window.SAILING_VERIFIED_BOATS_2027 || []).filter(b =>
+        filterStr === 'ALL' || (b.routeArea && b.routeArea.includes(filterStr)) || (b.marina && b.marina.includes(filterStr))
+      );
+      document.getElementById('boats-tbody').innerHTML = list.map(b => `
+        <tr>
+          <td><strong>${b.routeArea}</strong></td>
+          <td style="color:var(--cyan);font-family:var(--mono);">${b.model} (${b.year})</td>
+          <td>${b.marina}</td>
+          <td>${b.length} · ${b.cabins}/${b.capacity}</td>
+          <td style="color:var(--emerald);font-family:var(--mono);font-weight:600;">${b.prices2027?.earlyJune || '-'}</td>
+          <td style="font-family:var(--mono);">${b.prices2027?.midJuly || '-'}</td>
+          <td style="color:var(--coral);font-family:var(--mono);">${b.prices2027?.midAugust || '-'}</td>
+          <td style="color:var(--teak);font-family:var(--mono);font-weight:600;">${b.prices2027?.midSept || '-'}</td>
+          <td><a class="btn-link" href="${b.urls?.earlyJune || '#'}" target="_blank" rel="noopener">查看实船报价 ↗</a></td>
+        </tr>
+      `).join('');
+
+      const pf = window.SAILING_PLATFORMS_AND_FLEETS;
+      if (pf && pf.bookingPlatforms) {
+        document.getElementById('platforms-container').innerHTML = pf.bookingPlatforms.map(p => `
+          <div class="pillar">
+            <h3>🌐 ${p.name} <small style="color:var(--teak);font-family:var(--mono);">(${p.role})</small></h3>
+            <p style="margin-bottom:8px;">${p.pros}</p>
+            <a class="btn-link" href="${p.url}" target="_blank" rel="noopener">访问官网 ↗</a>
+          </div>
+        `).join('');
+      }
+    }
+
+    function renderPk() {
+      const pk = window.SAILING_BVI_VS_EUROPE || {};
+      const warn = pk.cycladesWarning || {};
+      document.getElementById('meltemi-box').innerHTML = `
+        <h3>⚠️ 为什么强烈不建议新手/家庭第一条船去圣托里尼 & 米科诺斯？（基克拉泽斯群岛排雷）</h3>
+        <p style="margin-bottom:8px;"><strong>风浪真相：</strong>${warn.windRisk || ''}</p>
+        <p style="margin-bottom:8px;"><strong>海湾短板：</strong>${warn.waterQuality || ''}</p>
+        <p style="color:var(--cyan);"><strong>行家结论：</strong>${warn.verdict || ''}</p>
+      `;
+      document.getElementById('pk-tbody').innerHTML = (pk.dimensions || []).map(d => `
+        <tr>
+          <td style="font-weight:600;color:var(--teak);white-space:nowrap;">${d.dimension}</td>
+          <td>${d.bvi}</td>
+          <td>${d.europe}</td>
+        </tr>
+      `).join('');
+    }
+
+    renderRoutes();
+    renderGallery('ALL');
+    renderBoats('ALL');
+    renderPk();
+  </script>
+</body>
+</html>

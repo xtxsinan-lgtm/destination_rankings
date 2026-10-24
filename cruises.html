@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Grand Fleet Index · 全球 50 大奢华邮轮、内河河轮与加拉帕戈斯游艇图鉴</title>
+  <meta name="description" content="全球50艘殿堂级奢华邮轮权威图鉴：涵盖海洋六星邮轮与酒店超级游艇、主流巨轮双层复式与船中船(Star Class/The Retreat/Yacht Club)、全球传奇内河河轮（三峡探索号/多瑙河/尼罗河/亚马逊）及加拉帕戈斯/印尼科考帆船，含$/㎡/晚空间性价比与实测底价矩阵。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050c16;
+      --bg-elev: #0a1729;
+      --card: rgba(11, 24, 43, 0.88);
+      --edge: rgba(229, 193, 104, 0.24);
+      --edge-strong: rgba(229, 193, 104, 0.58);
+      --gold: #e5c168;
+      --gold-soft: rgba(229, 193, 104, 0.15);
+      --cyan: #4fd1c5;
+      --cyan-soft: rgba(79, 209, 197, 0.14);
+      --bronze: #c87d4b;
+      --emerald: #4ade80;
+      --text: #f5f7fa;
+      --muted: #9eb3cc;
+      --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif SC', serif;
+      --sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --shadow: 0 22px 55px rgba(2, 6, 14, 0.72);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); }
+    body {
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(229, 193, 104, 0.13), transparent 36%),
+        radial-gradient(circle at 82% 14%, rgba(79, 209, 197, 0.12), transparent 38%),
+        linear-gradient(180deg, #040911 0%, #050c16 50%, #081324 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1380px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* Topbar */
+    .topbar {
+      position: sticky; top: 0; z-index: 90;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      background: rgba(4, 9, 17, 0.88);
+      border-bottom: 1px solid var(--edge);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 15px; color: var(--gold); white-space: nowrap; }
+    .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+    .switch { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+    .switch a {
+      padding: 6px 12px; border-radius: 999px; font-size: 12.5px; color: var(--muted);
+      border: 1px solid transparent; white-space: nowrap; transition: all 0.2s;
+    }
+    .switch a:hover { color: var(--text); border-color: var(--edge); }
+    .switch a[aria-current="page"] {
+      color: #050c16; background: linear-gradient(135deg, var(--gold), #f5dc93);
+      font-weight: 600; box-shadow: 0 4px 16px rgba(229, 193, 104, 0.35);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 68px 0 48px;
+      border-bottom: 1px solid var(--edge);
+      background:
+        linear-gradient(180deg, rgba(5, 12, 22, 0.42) 0%, rgba(5, 12, 22, 0.96) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Silver_Nova_in_Geirangerfjord.jpg/1600px-Silver_Nova_in_Geirangerfjord.jpg') center/cover no-repeat;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); background: rgba(6, 15, 28, 0.85);
+      border: 1px solid var(--edge); padding: 6px 14px; border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.13; font-weight: 700; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero h1 span.cyan { color: var(--cyan); }
+    .hero .lede { max-width: 950px; font-size: 16.5px; color: #dbe6f5; margin-bottom: 26px; }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 26px;
+    }
+    .stat-card {
+      background: rgba(8, 18, 34, 0.86); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(10px);
+    }
+    .stat-card b { display: block; font-family: var(--mono); font-size: 24px; color: var(--gold); }
+    .stat-card span { font-size: 12.5px; color: var(--muted); }
+
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0 12px;
+    }
+    .pillar {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 14px; padding: 18px;
+    }
+    .pillar h3 { font-size: 15px; color: var(--gold); margin-bottom: 6px; }
+    .pillar p { font-size: 13px; color: var(--muted); }
+
+    /* Interactive Decision Labs */
+    .labs-wrap {
+      margin: 34px 0 28px; background: rgba(8, 19, 35, 0.92);
+      border: 1px solid var(--edge); border-radius: 18px; padding: 22px 24px;
+    }
+    .lab-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .lab-tab {
+      padding: 10px 16px; border-radius: 10px; font-size: 13.5px; font-weight: 600;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--edge);
+      color: var(--muted); cursor: pointer; transition: all 0.2s;
+    }
+    .lab-tab.active {
+      background: linear-gradient(135deg, rgba(229,193,104,0.22), rgba(79,209,197,0.16));
+      color: var(--gold); border-color: var(--gold);
+    }
+    .lab-pane { display: none; }
+    .lab-pane.active { display: block; }
+
+    .table-wrap {
+      overflow-x: auto; background: rgba(4, 11, 21, 0.85);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
+    }
+    table.data-table { width: 100%; border-collapse: collapse; font-size: 12.8px; }
+    table.data-table th, table.data-table td {
+      padding: 11px 13px; border-bottom: 1px solid rgba(255,255,255,0.07); text-align: left;
+    }
+    table.data-table th {
+      background: rgba(3, 8, 16, 0.95); color: var(--gold);
+      font-family: var(--mono); font-size: 11.5px; white-space: nowrap;
+    }
+    table.data-table tr:hover { background: rgba(229, 193, 104, 0.05); }
+
+    /* Filter Bar */
+    .filter-bar {
+      position: sticky; top: 57px; z-index: 70;
+      background: rgba(6, 15, 28, 0.94); backdrop-filter: blur(14px);
+      border: 1px solid var(--edge); border-radius: 16px;
+      padding: 16px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .search-box {
+      flex: 1 1 250px; background: rgba(3, 8, 16, 0.9);
+      border: 1px solid var(--edge); border-radius: 10px;
+      padding: 9px 14px; color: var(--text); font-size: 13.5px;
+    }
+    .chip-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .chip {
+      padding: 6px 12px; border-radius: 999px; font-size: 12px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--edge);
+      color: var(--muted); cursor: pointer; transition: all 0.18s;
+    }
+    .chip:hover { color: var(--text); border-color: var(--gold); }
+    .chip.active { background: var(--gold); color: #050c16; font-weight: 600; border-color: var(--gold); }
+    .sort-select {
+      background: rgba(3, 8, 16, 0.95); color: var(--gold);
+      border: 1px solid var(--edge-strong); border-radius: 10px;
+      padding: 8px 12px; font-size: 12.5px; font-family: var(--sans);
+    }
+
+    /* Cruise Cards Grid */
+    .cruises-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-bottom: 60px; }
+    .cruise-card {
+      background: var(--card); border: 1px solid var(--edge);
+      border-radius: 18px; overflow: hidden; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .cc-media { position: relative; height: 220px; background: #030811; }
+    .cc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cc-rank {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(4, 10, 19, 0.9); border: 1px solid var(--gold);
+      color: var(--gold); font-family: var(--mono); font-weight: 700;
+      padding: 5px 11px; border-radius: 9px; font-size: 14px;
+    }
+    .cc-domain {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(4, 15, 28, 0.9); border: 1px solid var(--cyan);
+      color: var(--cyan); font-size: 11.5px; padding: 4px 10px; border-radius: 999px;
+    }
+    .cc-price-tag {
+      position: absolute; bottom: 12px; right: 12px;
+      background: rgba(5, 12, 22, 0.92); border: 1px solid var(--gold);
+      padding: 6px 12px; border-radius: 10px; text-align: right;
+    }
+    .cc-price-tag b { font-family: var(--mono); font-size: 17px; color: var(--gold); display: block; }
+    .cc-price-tag small { font-size: 10.5px; color: var(--emerald); font-family: var(--mono); }
+
+    .cc-body { padding: 20px 22px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+    .cc-title { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .cc-brand { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-bottom: 10px; }
+
+    .cc-specs {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+      background: rgba(3, 9, 18, 0.72); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; padding: 10px 12px; margin-bottom: 12px;
+    }
+    .cc-spec span { display: block; font-size: 10.5px; color: var(--muted); }
+    .cc-spec b { font-size: 12.5px; color: var(--cyan); font-family: var(--mono); }
+
+    .cc-highlight { font-size: 13px; color: #dce7f5; margin-bottom: 10px; }
+    .cc-tip {
+      font-size: 12px; color: #f5dfb0; background: var(--gold-soft);
+      border-left: 3px solid var(--gold); padding: 8px 11px; border-radius: 6px; margin-bottom: 12px;
+    }
+    .cc-foot {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11.5px; color: var(--muted);
+    }
+    .btn-link {
+      padding: 5px 12px; border-radius: 999px; background: var(--cyan-soft);
+      color: var(--cyan); border: 1px solid var(--cyan); font-family: var(--mono); font-size: 11.5px; white-space: nowrap;
+    }
+
+    .foot { padding: 50px 0; border-top: 1px solid var(--edge); color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 980px) {
+      .cruises-grid, .hero-stats, .pillars-grid { grid-template-columns: 1fr; }
+      .cc-specs { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Destination Atlas · 全球奢华邮轮图鉴</span></a>
+      <nav class="switch" aria-label="榜单切换">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html" aria-current="page">奢华邮轮 50</a>
+        <a href="canals.html">运河房船 20</a>
+        <a href="sailing.html">帆船航线 20</a>
+        <a href="rv.html">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="themeparks.html">主题乐园 100</a>
+        <a href="ski.html">全球雪场 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">The Grand Fleet Index · Ocean, River & Galapagos Ultra-Luxury Atlas</span>
+      <h1>皇家航海蓝图与<em>香槟金甲板</em><br />全球 50 大奢华邮轮与远征河轮 <span class="cyan">Top 50</span></h1>
+      <p class="lede">
+        当预算来到 <strong>$400–$1,500/人/晚</strong>，你究竟该选世邦/银海/丽晶/意铂等真六星全套房邮轮，还是四季/丽思卡尔顿/安缦超级游艇，抑或皇家加勒比双层复式 Star Class 与名人邮轮 The Retreat 船中船？本图鉴将全球 50 艘标杆船舰（涵盖 <strong>海洋顶奢、巨轮船中船复式、全球传奇内河、加拉帕戈斯与印尼科考帆船</strong> 四大领域）按 <strong>每平米每晚空间单价 ($/㎡/晚)</strong>、<strong>船员乘客比</strong> 与 <strong>实测全包底价</strong> 进行硬核拆解。
+      </p>
+      <div class="hero-stats">
+        <div class="stat-card"><b>50 艘</b><span>海洋 / 船中船 / 内河 / 科考全覆盖</span></div>
+        <div class="stat-card"><b>$7.3 起</b><span>MSC游艇会双层复式 $/㎡/晚 空间王</span></div>
+        <div class="stat-card"><b>$10.4</b><span>2025新船《长江探索号》$/㎡/晚</span></div>
+        <div class="stat-card"><b>1 : 1</b><span>顶奢邮轮白金管家与船员乘客配比</span></div>
+        <div class="stat-card"><b>4 大矩阵</b><span>含14家主流船底价 & 尼罗河/加拉帕戈斯分档</span></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>📐 1. 算“每平米每晚 ($/㎡/晚)”空间价值</h3>
+          <p>普通大船阳台房仅 16㎡，而 RCI 双层复式 LOFT 达 51–67㎡（仅 $8/㎡/晚），世邦/意铂入门套房即 35㎡（$15–$17/㎡/晚），长江探索号 31㎡ 仅 $10.4/㎡/晚。</p>
+        </div>
+        <div class="pillar">
+          <h3>🥂 2. 穿透“一价全包”含金量</h3>
+          <p>丽晶七海连每站岸上观光与名酒洗衣全包；世邦包冲浪鱼子酱与香槟；银海包白金管家；而皇家加勒比 Star Class 包全船付费餐厅无限吃与 Royal Genie 免排队。</p>
+        </div>
+        <div class="pillar">
+          <h3>⚓ 3. 小船进核心内港 vs 大船玩水上乐园</h3>
+          <p>带娃追求滑道大秀选 25 万吨《海洋标志号》或《迪士尼宝藏号》套房；夫妻追求直接停进波尔多/塞维利亚/威尼斯中心或直插北极点，选 3 万吨内奢华小船。</p>
+        </div>
+        <div class="pillar">
+          <h3>🐢 4. 加拉帕戈斯与尼罗河选船铁律</h3>
+          <p>加拉帕戈斯优先选 16–20 人双体游艇（如 Hermes / Eco Galaxy，登陆点最全且常送往返机票）；尼罗河认准拥有独立私人码头的 Oberoi 或现代美学 Historia。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- INTERACTIVE COMPARISON LABS -->
+    <section class="labs-wrap">
+      <div class="lab-tabs">
+        <button class="lab-tab active" onclick="switchLab('lab-1', this)">⚔️ Lab 1: $500/人/晚分水岭 — 皇家双层复式/Retreat vs 真六星邮轮怎么选？</button>
+        <button class="lab-tab" onclick="switchLab('lab-2', this)">📊 Lab 2: 全球 14 大主流/轻奢邮轮 7 晚四档舱房实测底价矩阵</button>
+        <button class="lab-tab" onclick="switchLab('lab-3', this)">🏺 Lab 3: 埃及尼罗河 5 大档次 & 加拉帕戈斯 4 大档位性价比王速查</button>
+      </div>
+
+      <!-- Lab 1 -->
+      <div id="lab-1" class="lab-pane active">
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px;">
+          当预算达到 <strong>$3,000–$5,500/人/7晚（约 $430–$780/晚）</strong>，你既能买到皇家加勒比/MSC/名人邮轮的 <strong>50–69㎡ 双层挑空复式套房</strong>，也能买到世邦/银海/意铂/丽晶的 <strong>33–35㎡ 全包六星套房</strong>。下表列出实测含税底价与空间单价对比：
+        </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>阵营分类</th>
+                <th>船司与代表船型</th>
+                <th>套房名称与面积</th>
+                <th>7晚实测含税总价/人</th>
+                <th>折合每晚 & 空间单价</th>
+                <th>核心礼遇与决选建议</th>
+              </tr>
+            </thead>
+            <tbody id="lab1-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Lab 2 -->
+      <div id="lab-2" class="lab-pane">
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px;">
+          涵盖全球 14 家主流、高阶与小船精品邮轮公司 2026–2027 航季 <strong>7 晚航线全网最低实测含税价（内舱 / 海景 / 阳台 / 套房）</strong>：
+        </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>邮轮品牌</th>
+                <th>档次定位</th>
+                <th>内舱 7晚底价</th>
+                <th>海景 7晚底价</th>
+                <th>阳台 7晚底价</th>
+                <th>套房 7晚底价</th>
+                <th>实测标杆航次与行家点评</th>
+              </tr>
+            </thead>
+            <tbody id="lab2-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Lab 3 -->
+      <div id="lab-3" class="lab-pane">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+          <div>
+            <h4 style="color:var(--gold);margin-bottom:8px;">🇪🇬 埃及尼罗河游轮 5 大档次（卢克索↔阿斯旺 4晚全包）</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr><th>档次</th><th>代表游轮</th><th>4晚参考价</th><th>每晚均价</th><th>核心亮点</th></tr>
+                </thead>
+                <tbody id="nile-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h4 style="color:var(--cyan);margin-bottom:8px;">🐢 加拉帕戈斯 4 大档位性价比王（5天4晚–6天5晚全包）</h4>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr><th>档位</th><th>首选船名与船型</th><th>实测促销价</th><th>每晚均价</th><th>必选理由</th></tr>
+                </thead>
+                <tbody id="gala-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR FOR TOP 50 -->
+    <div class="filter-bar">
+      <input type="search" id="cruise-search" class="search-box" placeholder="搜索邮轮、船司、海域（如：世邦、银海、皇家加勒比、三峡、尼罗河、加拉帕戈斯、安缦）..." oninput="renderCruises()" />
+      <div class="chip-group" id="domain-chips">
+        <button class="chip active" onclick="setDomain('ALL', this)">全部 50 艘</button>
+        <button class="chip" onclick="setDomain('海洋顶奢与超级游艇', this)">🛥️ 海洋顶奢与超级游艇 (19)</button>
+        <button class="chip" onclick="setDomain('主流大船顶奢船中船与复式', this)">👑 巨轮船中船与双层复式 (7)</button>
+        <button class="chip" onclick="setDomain('全球传奇内河与雨林河轮', this)">🏞️ 全球传奇内河与雨林 (14)</button>
+        <button class="chip" onclick="setDomain('加拉帕戈斯与印尼科考帆船', this)">🐢 加拉帕戈斯与印尼帆船 (10)</button>
+      </div>
+      <select id="cruise-sort" class="sort-select" onchange="renderCruises()">
+        <option value="rank">按综合殿堂排名 (Top 1 → 50)</option>
+        <option value="sqmValAsc">按空间性价比 $/㎡/晚 从低到高 (最超值大房)</option>
+        <option value="priceAsc">按每晚单价 $/晚 从低到高</option>
+        <option value="suiteSqmDesc">按套房面积 ㎡ 从大到小</option>
+        <option value="paxAsc">按载客人数从少到多 (最私密)</option>
+      </select>
+    </div>
+
+    <div id="cruises-container" class="cruises-grid"></div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>The Grand Fleet Index · Global Top 50 Luxury Cruises, River Vessels & Expedition Yachts · 数据基于 2026–2027 航季实测含税船票与套房面积核算</p>
+    </div>
+  </footer>
+
+  <script src="data_cruises_top50.js"></script>
+  <script>
+    let activeDomain = 'ALL';
+
+    function switchLab(labId, btn) {
+      document.querySelectorAll('.lab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.lab-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById(labId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function setDomain(dom, btn) {
+      activeDomain = dom;
+      document.querySelectorAll('#domain-chips .chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      renderCruises();
+    }
+
+    function renderLabs() {
+      // Lab 1: Combine CHEAPEST_DUPLEX_SUITES + ULTRA_LUXURY_CRUISES_7N
+      const duplex = (window.CHEAPEST_DUPLEX_SUITES || []).map(d => `
+        <tr>
+          <td><span style="color:var(--cyan);font-family:var(--mono);">巨轮双层复式</span></td>
+          <td><strong>${d.line}</strong><br><small style="color:var(--muted);">${d.ship}</small></td>
+          <td>${d.suiteName} (${d.sizeSqm}㎡)</td>
+          <td style="color:var(--gold);font-family:var(--mono);font-weight:600;">$${d.price7N}/人</td>
+          <td style="font-family:var(--mono);">$${d.perNight}/晚 · <strong style="color:var(--emerald);">$${d.pricePerSqmPerNight}/㎡/晚</strong></td>
+          <td>${d.perks}</td>
+        </tr>
+      `);
+      const ultra = (window.ULTRA_LUXURY_CRUISES_7N || []).map(u => `
+        <tr>
+          <td><span style="color:var(--gold);font-family:var(--mono);">真·六星奢华船</span></td>
+          <td><strong>${u.brand}</strong><br><small style="color:var(--muted);">${u.ship} (${u.tonnage} / ${u.pax}人)</small></td>
+          <td>${u.entrySuite} (${u.suiteSqm}㎡)</td>
+          <td style="color:var(--gold);font-family:var(--mono);font-weight:600;">$${u.cheapest7N_USD}/人</td>
+          <td style="font-family:var(--mono);">$${u.perNightUSD}/晚 · <strong style="color:var(--cyan);">$${u.pricePerSqmPerNight}/㎡/晚</strong></td>
+          <td>${u.allInclusive} (${u.sampleSailing})</td>
+        </tr>
+      `);
+      document.getElementById('lab1-tbody').innerHTML = [...duplex, ...ultra].join('');
+
+      // Lab 2: MAINSTREAM_AND_SPECIALTY_7N_CHEAPEST
+      const mList = window.MAINSTREAM_AND_SPECIALTY_7N_CHEAPEST || [];
+      document.getElementById('lab2-tbody').innerHTML = mList.map(m => `
+        <tr>
+          <td><strong>${m.brand}</strong></td>
+          <td style="color:var(--cyan);font-size:12px;">${m.tier}</td>
+          <td style="font-family:var(--mono);">${m.inside7N ? '$' + m.inside7N + ' ($' + m.insidePerNight + '/晚)' : '全套房无内舱'}</td>
+          <td style="font-family:var(--mono);">$${m.oceanview7N} ($${m.oceanviewPerNight}/晚)</td>
+          <td style="font-family:var(--mono);color:var(--gold);">$${m.balcony7N} ($${m.balconyPerNight}/晚)</td>
+          <td style="font-family:var(--mono);color:var(--emerald);">$${m.suite7N} ($${m.suitePerNight}/晚)</td>
+          <td><small style="color:var(--muted);display:block;">${m.sampleSailing}</small>${m.highlight}</td>
+        </tr>
+      `).join('');
+
+      // Lab 3: NILE_5_TIERS & GALAPAGOS_4_TIERS
+      document.getElementById('nile-tbody').innerHTML = (window.NILE_5_TIERS || []).map(n => `
+        <tr>
+          <td style="color:var(--gold);font-weight:600;">${n.tier}</td>
+          <td><strong>${n.ships}</strong></td>
+          <td style="font-family:var(--mono);">${n.price4N_USD}</td>
+          <td style="font-family:var(--mono);color:var(--cyan);">${n.perNightUSD}</td>
+          <td>${n.features}</td>
+        </tr>
+      `).join('');
+
+      document.getElementById('gala-tbody').innerHTML = (window.GALAPAGOS_4_TIERS || []).map(g => `
+        <tr>
+          <td style="color:var(--cyan);font-weight:600;">${g.tier}</td>
+          <td><strong>${g.bestValueShip}</strong><br><small style="color:var(--muted);">${g.type} · ${g.suiteSize}</small></td>
+          <td style="font-family:var(--mono);color:var(--gold);">${g.promoPrice}</td>
+          <td style="font-family:var(--mono);">${g.perNightUSD}</td>
+          <td>${g.whyBestValue}</td>
+        </tr>
+      `).join('');
+    }
+
+    function renderCruises() {
+      const q = (document.getElementById('cruise-search').value || '').trim().toLowerCase();
+      const sortBy = document.getElementById('cruise-sort').value;
+
+      let list = (window.LUXURY_CRUISES_TOP50 || []).filter(c => {
+        if (activeDomain !== 'ALL' && c.domain !== activeDomain) return false;
+        if (!q) return true;
+        const hay = [c.name, c.brand, c.domain, c.region, c.entrySuiteName, c.highlight, c.tip].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+
+      if (sortBy === 'sqmValAsc') {
+        list.sort((a, b) => (a.pricePerSqmPerNightUsd || 999) - (b.pricePerSqmPerNightUsd || 999));
+      } else if (sortBy === 'priceAsc') {
+        list.sort((a, b) => (a.perNightUsd || 9999) - (b.perNightUsd || 9999));
+      } else if (sortBy === 'suiteSqmDesc') {
+        list.sort((a, b) => (b.suiteSqm || 0) - (a.suiteSqm || 0));
+      } else if (sortBy === 'paxAsc') {
+        list.sort((a, b) => (a.pax || 9999) - (b.pax || 9999));
+      } else {
+        list.sort((a, b) => a.rank - b.rank);
+      }
+
+      document.getElementById('cruises-container').innerHTML = list.map(c => `
+        <article class="cruise-card">
+          <div>
+            <div class="cc-media">
+              <img src="${c.image}" alt="${c.name}" loading="lazy" />
+              <span class="cc-rank">#${c.rank} · ${c.tier}</span>
+              <span class="cc-domain">${c.domain}</span>
+              <div class="cc-price-tag">
+                <b>$${c.perNightUsd}<small style="display:inline;color:var(--muted);">/人/晚起</small></b>
+                <small>空间值: $${c.pricePerSqmPerNightUsd}/㎡/晚</small>
+              </div>
+            </div>
+            <div class="cc-body">
+              <div>
+                <h2 class="cc-title">${c.name}</h2>
+                <div class="cc-brand">${c.brand} ｜ 🌍 ${c.region}</div>
+                <div class="cc-specs">
+                  <div class="cc-spec"><span>标杆套房面积</span><b>${c.suiteSqm} ㎡</b></div>
+                  <div class="cc-spec"><span>满载乘客数</span><b>${c.pax} 人 (${c.tonnage})</b></div>
+                  <div class="cc-spec"><span>船员乘客比</span><b>${c.crewRatio}</b></div>
+                  <div class="cc-spec"><span>实测套餐参考</span><b>${c.sampleTotalUsd}</b></div>
+                </div>
+                <p style="font-size:12px;color:var(--gold);margin-bottom:6px;font-family:var(--mono);">✨ 房型与全包礼遇：${c.entrySuiteName} · ${c.allInclusiveLevel}</p>
+                <p class="cc-highlight">${c.highlight}</p>
+                <div class="cc-tip">💡 <strong>选舱与避坑指南：</strong>${c.tip}</div>
+              </div>
+              <div class="cc-foot">
+                <span>📅 核验航次：${c.verifiedSailing}</span>
+                <a class="btn-link" href="${c.url}" target="_blank" rel="noopener">官方船队 ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    renderLabs();
+    renderCruises();
+  </script>
+</body>
+</html>
