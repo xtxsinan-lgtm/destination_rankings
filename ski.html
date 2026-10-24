@@ -4,555 +4,413 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Alpine & Powder Index · 全球滑雪度假村 Top 100</title>
-  <meta name="description" content="以粉雪质量与降雪量、垂直落差与雪道规模、缆车运力与滑进滑出、全水平道型配比、温泉餐饮与Après-ski、雪票住宿性价比六大维度，严选全球 100 座顶级高山滑雪度假村。" />
-  <meta name="theme-color" content="#f3f7fb" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d2238'/%3E%3Cpath d='M3 26L13 8l5 9 4-6 7 15H3z' fill='%2338bdf8' opacity='0.85'/%3E%3Cpath d='M13 8l3.2 5.8-2.7 1.7-2-2.2L8.8 16 13 8z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230f2442'/%3E%3Cpath d='M2 27L12 9l5 8 4-6 9 16z' fill='%23f5f3ee'/%3E%3Cpath d='M12 9l3 5-2.2 1.4L12 13.6 9.6 15.8z' fill='%230f2442' opacity='.35'/%3E%3Crect x='20' y='3' width='6' height='6' transform='rotate(45 23 6)' fill='%23cf2f2a'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" />
   <style>
     /* ==========================================================================
-       The Alpine & Powder Index — Glacier White · Ice Blue · Slate Peak
+       The Alpine & Powder Index — Swiss trail-map × vintage ski-poster
+       Paper-snow ground · glacier-navy ink · piste code (green/blue/red/black)
+       is the ONLY accent system:  T0 ◆◆ black · T1 ◆ red · T1.5 ■ blue · T2 ● green
        ========================================================================== */
     :root {
-      --glacier: #f3f7fb;
+      --paper: #f5f3ee;
+      --paper-2: #ece9e1;
       --snow: #ffffff;
-      --frost: #e6eff8;
-      --ice-edge: #d0e1f2;
-      --ice-strong: #b4cde6;
-      --slate: #0c1f33;
-      --slate-2: #16324f;
-      --slate-3: #3b5875;
-      --muted: #5c7690;
-      --ice-blue: #0284c7;
-      --ice-cyan: #0ea5e9;
-      --ice-glow: #38bdf8;
-      --ice-soft: #e0f2fe;
-      --powder-violet: #4f46e5;
-      --alpine-gold: #d97706;
-      --safety-orange: #ea580c;
-      --emerald: #059669;
-
-      --serif: "Noto Serif SC", "Songti SC", serif;
-      --display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
-      --sans: "DM Sans", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
-      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-
-      --wrap: 1280px;
-      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --ink: #0f2442;
+      --ink-2: #3a4e6c;
+      --ink-3: #6a7a91;
+      --line: #dcdfe3;
+      --line-2: #c4cbd4;
+      --navy-2: #1d3d66;
+      --ice: #e6edf5;
+      --ice-2: #c9d6e5;
+      --p-green: #1d8a4e;
+      --p-blue: #1f5fbf;
+      --p-red: #cf2f2a;
+      --p-black: #15181c;
+      --display: "Oswald", "Noto Sans SC", sans-serif;
+      --serif: "DM Serif Display", "Noto Serif SC", serif;
+      --sans: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+      --cn: "Noto Sans SC", "Inter", sans-serif;
+      --ease: cubic-bezier(.2,.7,.2,1);
+      --topH: 58px;
+      --wrap: 1240px;
     }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--glacier);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 15px; overflow-x: hidden;
       background-image:
-        radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.14), transparent 42%),
-        radial-gradient(circle at 85% 8%, rgba(14, 165, 233, 0.12), transparent 38%),
-        linear-gradient(180deg, #eef5fc 0%, #f5f9fd 42%, #edf4fb 100%);
-      color: var(--slate);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.68;
-      -webkit-font-smoothing: antialiased;
-      font-variant-numeric: tabular-nums;
-    }
-    h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
-    ul, ol { padding: 0; list-style: none; }
+        radial-gradient(rgba(15,36,66,.035) 1px, transparent 1px);
+      background-size: 22px 22px; }
     a { color: inherit; text-decoration: none; }
     button, input, select { font: inherit; color: inherit; }
-    button { background: none; border: 0; padding: 0; cursor: pointer; }
-    [hidden] { display: none !important; }
-    ::selection { background: #bae6fd; color: var(--slate); }
+    button { cursor: pointer; background: none; border: 0; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(var(--wrap), calc(100% - 48px)); margin: 0 auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-    .wrap { width: min(var(--wrap), 100% - 40px); margin-inline: auto; }
+    /* ---------- Piste markers (shape = tier) ---------- */
+    .pm { position: relative; display: inline-grid; place-items: center; flex-shrink: 0; width: 34px; height: 34px; color: #fff;
+      font-family: var(--display); font-weight: 600; font-size: 14px; line-height: 1; }
+    .pm::before { content: ""; position: absolute; inset: 0; background: var(--pm-c, var(--p-black)); z-index: 0; }
+    .pm > i { position: relative; z-index: 1; font-style: normal; }
+    .pm.t-T2 { --pm-c: var(--p-green); } .pm.t-T2::before { border-radius: 50%; }
+    .pm.t-T1-5 { --pm-c: var(--p-blue); } .pm.t-T1-5::before { inset: 2px; }
+    .pm.t-T1 { --pm-c: var(--p-red); } .pm.t-T1::before { inset: 5px; transform: rotate(45deg); }
+    .pm.t-T0 { --pm-c: var(--p-black); } .pm.t-T0::before { inset: 5px; transform: rotate(45deg); }
+    .pm.t-T0::after { content: ""; position: absolute; width: 11px; height: 11px; right: -12px; top: 50%; margin-top: -5.5px; transform: rotate(45deg); background: var(--p-black); }
+    .pm.sm { width: 14px; height: 14px; font-size: 0; }
+    .pm.sm.t-T1::before, .pm.sm.t-T0::before { inset: 2px; }
+    .pm.sm.t-T1-5::before { inset: 1px; }
+    .pm.sm.t-T0::after { width: 8px; height: 8px; right: -9px; margin-top: -4px; }
+    .pm.sm.t-T0 { margin-right: 9px; }
 
-    /* Top Navigation ------------------------------------------------------- */
-    .site-header {
-      position: sticky; top: 0; z-index: 60;
-      background: rgba(243, 247, 251, 0.88);
-      -webkit-backdrop-filter: saturate(1.6) blur(16px);
-      backdrop-filter: saturate(1.6) blur(16px);
-      border-bottom: 1px solid var(--ice-edge);
-    }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; min-height: 66px; padding: 8px 0;
-    }
-    .brand {
-      display: inline-flex; align-items: center; gap: 11px;
-      color: var(--slate); flex: none;
-    }
-    .brand-mark {
-      width: 32px; height: 32px; border-radius: 9px;
-      background: linear-gradient(135deg, var(--slate) 0%, var(--slate-2) 60%, var(--ice-blue) 100%);
-      display: grid; place-items: center; color: #fff;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.22);
-    }
-    .brand-mark svg { width: 20px; height: 20px; }
-    .brand-text b {
-      display: block; font-family: var(--display); font-size: 19px;
-      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.05;
-    }
-    .brand-text span {
-      display: block; font-size: 11px; color: var(--muted); letter-spacing: 0.06em;
-    }
+    /* ---------- Topbar ---------- */
+    .top { position: sticky; top: 0; z-index: 60; background: var(--ink); color: #f5f3ee; border-bottom: 3px solid var(--paper); box-shadow: 0 1px 0 var(--ink); }
+    .top-inner { display: flex; align-items: center; gap: 22px; min-height: var(--topH); }
+    .logo { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .logo-sign { display: inline-flex; gap: 4px; align-items: center; padding: 6px 8px; background: #fff; border-radius: 3px; }
+    .logo-sign span { width: 9px; height: 9px; display: block; }
+    .logo-sign span:nth-child(1) { background: var(--p-green); border-radius: 50%; }
+    .logo-sign span:nth-child(2) { background: var(--p-blue); }
+    .logo-sign span:nth-child(3) { background: var(--p-red); transform: rotate(45deg) scale(.85); }
+    .logo-sign span:nth-child(4) { background: var(--p-black); transform: rotate(45deg) scale(.85); }
+    .logo b { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: .08em; text-transform: uppercase; }
+    .logo small { display: block; font-size: 10.5px; letter-spacing: .26em; color: rgba(245,243,238,.62); margin-top: -2px; }
+    .switch { display: flex; gap: 2px; margin-left: auto; min-width: 0; overflow-x: auto; scrollbar-width: none; font-size: 12.5px; }
+    .switch::-webkit-scrollbar { display: none; }
+    .switch a { padding: 6px 10px; white-space: nowrap; color: rgba(245,243,238,.7); border-radius: 3px; transition: color .2s, background .2s; }
+    .switch a:hover { color: #fff; background: rgba(255,255,255,.07); }
+    .switch a[aria-current="page"] { background: #fff; color: var(--ink); font-weight: 700; display: inline-flex; align-items: center; gap: 7px; }
+    .switch a[aria-current="page"]::before { content: ""; width: 8px; height: 8px; background: var(--p-red); transform: rotate(45deg); }
 
-    nav.switch {
-      display: flex; align-items: center; gap: 4px; padding: 4px;
-      border: 1px solid var(--ice-edge); border-radius: 999px;
-      background: rgba(255, 255, 255, 0.85);
-      overflow-x: auto; -webkit-overflow-scrolling: touch;
-      max-width: 100%;
-    }
-    nav.switch a {
-      padding: 6px 13px; border-radius: 999px; font-size: 12.5px;
-      font-weight: 500; color: var(--slate-3);
-      transition: all 0.2s var(--ease); white-space: nowrap; flex: none;
-    }
-    nav.switch a:hover { color: var(--ice-blue); background: var(--glacier); }
-    nav.switch a[aria-current="page"] {
-      background: linear-gradient(135deg, var(--slate) 0%, var(--ice-blue) 100%);
-      color: #fff; font-weight: 600;
-      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.28);
-    }
+    /* ---------- Hero ---------- */
+    .hero { position: relative; padding: 60px 0 64px; border-bottom: 1px solid var(--line-2); overflow: hidden; }
+    .hero-contours { position: absolute; inset: 0; z-index: -1; opacity: .55; pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 60px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-2); }
+    .kicker .dots { display: inline-flex; gap: 5px; align-items: center; }
+    .kicker .dots i { width: 8px; height: 8px; display: block; }
+    .kicker .dots i:nth-child(1) { background: var(--p-green); border-radius: 50%; }
+    .kicker .dots i:nth-child(2) { background: var(--p-blue); }
+    .kicker .dots i:nth-child(3) { background: var(--p-red); transform: rotate(45deg) scale(.85); }
+    .kicker .dots i:nth-child(4) { background: var(--p-black); transform: rotate(45deg) scale(.85); }
+    .hero h1 { margin-top: 22px; font-family: var(--cn); font-weight: 900; font-size: clamp(36px, 5vw, 64px); line-height: 1.12; letter-spacing: .01em; color: var(--ink); }
+    .hero h1 .num { font-family: var(--display); font-weight: 700; font-size: 1.32em; line-height: .8; letter-spacing: -.01em; color: var(--ink);
+      -webkit-text-stroke: 0; position: relative; display: inline-block; padding: 0 .04em; }
+    .hero h1 .num::after { content: ""; position: absolute; left: .04em; right: .04em; bottom: -.16em; height: .07em; background: var(--p-red); }
+    .hero h1 .pre { display: block; font-size: .4em; font-weight: 700; letter-spacing: .12em; color: var(--ink-2); margin-bottom: 12px; }
+    .hero h1 .en { display: block; margin-top: 14px; font-family: var(--display); font-weight: 400; font-size: .3em; letter-spacing: .42em; color: var(--ink-3); text-transform: uppercase; }
+    .lede { max-width: 38em; margin-top: 22px; font-size: 15.5px; line-height: 1.9; color: var(--ink-2); }
+    .lede strong { color: var(--ink); font-weight: 600; }
+    .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 32px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+    .stats > div { padding: 14px 10px 13px; }
+    .stats > div + div { border-left: 1px solid var(--line-2); }
+    .stats b { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(22px, 2.3vw, 31px); line-height: 1.05; letter-spacing: .01em; }
+    .stats b small { font-size: .5em; font-weight: 500; color: var(--ink-3); margin-left: 2px; letter-spacing: .04em; }
+    .stats span { display: block; margin-top: 6px; font-size: 11.5px; color: var(--ink-3); line-height: 1.45; }
+    .stats span em { font-style: normal; color: var(--ink-2); font-weight: 500; }
 
-    /* Hero ----------------------------------------------------------------- */
-    .hero {
-      position: relative; overflow: hidden;
-      background: linear-gradient(165deg, #071525 0%, #0d253f 42%, #133b63 76%, #1d578a 100%);
-      color: #fff; padding: clamp(52px, 7vw, 88px) 0 0;
-      border-bottom: 1px solid var(--ice-edge);
-      isolation: isolate;
-    }
-    .hero-bg-svg {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      z-index: -1; pointer-events: none; opacity: 0.85;
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px;
-      align-items: end; padding-bottom: 48px;
-    }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 5px 13px; border-radius: 999px;
-      background: rgba(56, 189, 248, 0.16);
-      border: 1px solid rgba(56, 189, 248, 0.38);
-      font-family: var(--mono); font-size: 11.5px; font-weight: 600;
-      letter-spacing: 0.14em; text-transform: uppercase; color: #7dd3fc;
-    }
-    .hero h1 {
-      margin-top: 18px;
-      font-family: var(--serif);
-      font-size: clamp(34px, 4.8vw, 62px);
-      font-weight: 700; line-height: 1.18; letter-spacing: 0.01em;
-    }
-    .hero h1 em {
-      font-family: var(--display); font-style: italic; font-weight: 600;
-      color: #7dd3fc; padding-right: 4px;
-    }
-    .hero-lede {
-      margin-top: 18px; max-width: 42em;
-      font-size: 15.5px; line-height: 1.85; color: rgba(226, 241, 255, 0.86);
-    }
-    .hero-badges {
-      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 7px 14px; border-radius: 10px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-size: 12.5px; color: #e0f2fe;
-      backdrop-filter: blur(8px);
-    }
-    .hero-badge b { font-family: var(--mono); color: #38bdf8; }
+    .poster { justify-self: center; width: min(440px, 100%); }
+    .poster-frame { background: var(--ink); padding: 10px; border-radius: 4px; box-shadow: 0 30px 60px -32px rgba(15,36,66,.75); }
+    .poster svg { display: block; width: 100%; height: auto; border-radius: 2px; }
+    .poster-cap { margin-top: 12px; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--display); letter-spacing: .3em; font-size: 11.5px; text-transform: uppercase; color: var(--ink-2); }
+    .poster-cap b { font-weight: 600; letter-spacing: .1em; font-size: 20px; color: var(--ink); }
+    .snow-a { animation: snowfall 9s linear infinite; }
+    .snow-b { animation: snowfall 14s linear infinite; animation-delay: -5s; }
+    @keyframes snowfall { from { transform: translate(0, -560px); } to { transform: translate(-30px, 0); } }
 
-    .hero-telemetry {
-      background: rgba(8, 23, 40, 0.68);
-      border: 1px solid rgba(125, 211, 252, 0.28);
-      border-radius: 18px; padding: 22px 24px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
-    }
-    .telemetry-head {
-      display: flex; justify-content: space-between; align-items: center;
-      padding-bottom: 12px; margin-bottom: 14px;
-      border-bottom: 1px solid rgba(125, 211, 252, 0.2);
-      font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
-      color: #7dd3fc; text-transform: uppercase;
-    }
-    .telemetry-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-    }
-    .t-stat {
-      padding: 11px 13px; border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-    }
-    .t-stat b {
-      display: block; font-family: var(--mono);
-      font-size: 24px; font-weight: 700; color: #fff; line-height: 1.15;
-    }
-    .t-stat b small { font-size: 12px; font-weight: 500; color: #7dd3fc; margin-left: 3px; }
-    .t-stat span { display: block; margin-top: 4px; font-size: 12px; color: rgba(224, 242, 254, 0.72); }
+    /* ---------- Section heads (trail-direction sign) ---------- */
+    .section { padding: 72px 0 24px; }
+    .sec-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: start; margin-bottom: 30px; }
+    .sec-no { display: inline-flex; align-items: center; height: 54px; padding: 0 26px 0 16px; background: var(--ink); color: #fff; font-family: var(--display); font-weight: 600; font-size: 26px; letter-spacing: .04em;
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%); position: relative; margin-top: 4px; }
+    .sec-no small { font-size: 10.5px; letter-spacing: .26em; font-weight: 500; opacity: .6; margin-right: 10px; writing-mode: horizontal-tb; }
+    .sec-kicker { font-family: var(--display); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-3); }
+    .sec-head h2 { margin-top: 6px; font-family: var(--cn); font-weight: 900; font-size: clamp(24px, 3vw, 34px); line-height: 1.25; letter-spacing: .01em; }
+    .sec-head p { margin-top: 8px; max-width: 52em; color: var(--ink-2); font-size: 14.5px; line-height: 1.8; }
 
-    /* Interactive Weight & Filter Console ---------------------------------- */
-    .console-section { padding: 36px 0 20px; }
-    .console-card {
-      background: var(--snow);
-      border: 1px solid var(--ice-edge);
-      border-radius: 20px;
-      padding: 24px 28px;
-      box-shadow: 0 12px 36px -12px rgba(12, 31, 51, 0.08);
-    }
-    .console-top {
-      display: flex; flex-wrap: wrap; justify-content: space-between;
-      align-items: center; gap: 14px;
-      padding-bottom: 18px; border-bottom: 1px solid var(--frost);
-    }
-    .console-title {
-      display: flex; align-items: center; gap: 10px;
-    }
-    .console-title h2 {
-      font-size: 18px; font-weight: 700; color: var(--slate);
-    }
-    .console-title span {
-      font-family: var(--mono); font-size: 11.5px; color: var(--ice-blue);
-      background: var(--ice-soft); padding: 3px 9px; border-radius: 999px; font-weight: 600;
-    }
-    .preset-group {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
-    }
-    .preset-label { font-size: 12.5px; color: var(--muted); margin-right: 4px; font-weight: 500; }
-    .preset-btn {
-      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
-      border: 1px solid var(--ice-edge); background: var(--glacier); color: var(--slate-2);
-      transition: all 0.18s var(--ease);
-    }
-    .preset-btn:hover { border-color: var(--ice-cyan); color: var(--ice-blue); }
-    .preset-btn.is-active {
-      background: var(--slate); color: #fff; border-color: var(--slate);
-      box-shadow: 0 3px 10px rgba(12, 31, 51, 0.18);
-    }
+    /* ---------- Method (compact numbered) ---------- */
+    .method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+    .m-item { padding: 20px 22px 22px 0; border-bottom: 1px solid var(--line-2); display: grid; grid-template-columns: 54px minmax(0,1fr); gap: 4px 14px; align-content: start; }
+    .m-item:not(:nth-child(3n+1)) { padding-left: 22px; border-left: 1px solid var(--line); }
+    .m-no { grid-row: span 3; font-family: var(--display); font-weight: 600; font-size: 34px; line-height: 1; color: var(--ink); }
+    .m-no small { display: block; margin-top: 8px; font-size: 12px; letter-spacing: .08em; color: #fff; background: var(--ink); width: max-content; padding: 2px 6px; border-radius: 2px; }
+    .m-item h3 { font-size: 15.5px; font-weight: 700; line-height: 1.35; }
+    .m-item h4 { font-size: 12.5px; font-weight: 600; color: var(--ink-2); line-height: 1.45; }
+    .m-item p { font-size: 12.8px; line-height: 1.7; color: var(--ink-3); margin-top: 4px; }
+    .legend-strip { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; margin-top: 18px; font-size: 12.5px; color: var(--ink-2); }
+    .legend-strip b { font-family: var(--display); font-weight: 500; letter-spacing: .2em; font-size: 11.5px; text-transform: uppercase; color: var(--ink-3); }
+    .legend-strip span { display: inline-flex; align-items: center; gap: 8px; }
 
-    .sliders-grid {
-      display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--frost);
-    }
-    .slider-box {
-      background: var(--glacier);
-      border: 1px solid var(--ice-edge);
-      border-radius: 13px; padding: 11px 13px;
-      transition: border-color 0.2s;
-    }
-    .slider-box:hover { border-color: var(--ice-cyan); }
-    .slider-head {
-      display: flex; justify-content: space-between; align-items: baseline;
-      gap: 6px; margin-bottom: 8px;
-    }
-    .slider-head label {
-      font-size: 12.5px; font-weight: 600; color: var(--slate-2);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .slider-head output {
-      font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ice-blue);
-    }
-    .slider-box input[type="range"] {
-      width: 100%; accent-color: var(--ice-blue); cursor: pointer; height: 5px;
-    }
-    .slider-sub {
-      display: block; margin-top: 4px; font-size: 11px; color: var(--muted);
-    }
+    /* ---------- Data viz ---------- */
+    .viz-card { background: var(--snow); border: 1px solid var(--line-2); border-radius: 4px; padding: 20px 22px 16px; }
+    .viz-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .viz-top h3 { font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; }
+    .viz-top h3 small { font-family: var(--cn); font-weight: 500; font-size: 13px; letter-spacing: 0; text-transform: none; color: var(--ink-3); margin-left: 8px; }
+    .seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 3px; overflow: hidden; background: var(--snow); flex-shrink: 0; }
+    .seg button { padding: 6px 12px; font-size: 12.5px; color: var(--ink-2); white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; transition: background .18s, color .18s; }
+    .seg button + button { border-left: 1px solid var(--line); }
+    .seg button:hover { background: var(--ice); }
+    .seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+    .seg button small { font-family: var(--display); font-size: 11px; opacity: .65; letter-spacing: .04em; }
+    #profile-svg { display: block; width: 100%; height: auto; }
+    #profile-svg .hit { fill: transparent; cursor: crosshair; }
+    .profile-read { display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: center; min-height: 40px; padding: 10px 0 2px; border-top: 1px dashed var(--line-2); margin-top: 6px; font-size: 13px; color: var(--ink-2); }
+    .profile-read b { font-weight: 700; color: var(--ink); }
+    .profile-read .kv { font-family: var(--display); font-size: 14px; letter-spacing: .02em; color: var(--ink); }
+    .profile-read .kv small { font-family: var(--sans); font-size: 11.5px; color: var(--ink-3); margin-right: 4px; }
+    .viz-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+    #scatter-svg { display: block; width: 100%; height: auto; }
+    .records { list-style: none; }
+    .records li { display: grid; grid-template-columns: 22px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); }
+    .records li:last-child { border-bottom: 0; }
+    .records .r-k { font-size: 11.5px; color: var(--ink-3); letter-spacing: .04em; }
+    .records .r-n { font-size: 14px; font-weight: 600; line-height: 1.35; }
+    .records .r-v { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: .01em; text-align: right; }
+    .records .r-v small { font-size: 12px; color: var(--ink-3); font-weight: 500; margin-left: 2px; }
 
-    /* Filter & Sort Rows --------------------------------------------------- */
-    .filter-rows {
-      display: flex; flex-direction: column; gap: 13px; padding-top: 18px;
-    }
-    .filter-row {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-    }
-    .filter-label {
-      font-size: 12px; font-weight: 700; color: var(--muted);
-      letter-spacing: 0.05em; min-width: 66px; text-transform: uppercase;
-    }
-    .pill-group { display: flex; flex-wrap: wrap; gap: 6px; }
-    .pill {
-      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
-      border: 1px solid var(--ice-edge); background: #fff; color: var(--slate-3);
-      transition: all 0.16s var(--ease);
-    }
-    .pill:hover { border-color: var(--ice-cyan); color: var(--ice-blue); }
-    .pill[aria-pressed="true"] {
-      background: var(--ice-blue); border-color: var(--ice-blue); color: #fff; font-weight: 600;
-      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
-    }
-    .pill.tag-chip[aria-pressed="true"] {
-      background: var(--slate); border-color: var(--slate); color: #38bdf8;
-    }
+    /* ---------- Weight mixer (compact) ---------- */
+    .mixer { background: var(--snow); border: 1px solid var(--line-2); border-radius: 4px; padding: 16px 20px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px 22px; align-items: center; }
+    .mixer > * { min-width: 0; }
+    .mixer .disclose { justify-self: start; }
+    .mixer-label { font-family: var(--display); font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-3); line-height: 1.3; }
+    .mixer-label b { display: block; font-family: var(--cn); letter-spacing: 0; font-size: 15px; color: var(--ink); text-transform: none; }
+    #active-preset-tag { display: inline-block; margin-top: 3px; font-family: var(--sans); letter-spacing: 0; text-transform: none; font-size: 11.5px; color: var(--p-red); font-weight: 600; }
+    .wbar { display: flex; height: 30px; border-radius: 2px; overflow: hidden; background: var(--ice); }
+    .wbar span { display: flex; align-items: center; justify-content: center; gap: 4px; min-width: 0; overflow: hidden; white-space: nowrap; font-size: 11.5px; color: #fff; transition: flex-grow .35s var(--ease); }
+    .wbar span b { font-family: var(--display); font-weight: 500; font-size: 12.5px; }
+    .wbar span em { font-style: normal; }
+    .wbar span:nth-child(1) { background: #0f2442; } .wbar span:nth-child(2) { background: #23446e; } .wbar span:nth-child(3) { background: #3d6290; }
+    .wbar span:nth-child(4) { background: #6385ae; } .wbar span:nth-child(5) { background: #8fa8c7; color: var(--ink); } .wbar span:nth-child(6) { background: #bccbde; color: var(--ink); }
+    .mixer-row2 { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+    .disclose { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 3px; font-size: 12.5px; color: var(--ink-2); background: var(--snow); transition: background .18s; }
+    .disclose:hover { background: var(--ice); }
+    .disclose svg { width: 12px; height: 12px; transition: transform .25s var(--ease); }
+    .disclose[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .sliders { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px 18px; padding-top: 14px; border-top: 1px dashed var(--line-2); }
+    .sliders[hidden] { display: none; }
+    .slider-box label { display: flex; justify-content: space-between; align-items: baseline; font-size: 12.5px; font-weight: 600; color: var(--ink); }
+    .slider-box output { font-family: var(--display); font-size: 15px; font-weight: 600; }
+    .slider-box small { display: block; font-size: 11px; color: var(--ink-3); margin-top: 2px; line-height: 1.4; }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: var(--ice-2); border-radius: 2px; outline: none; margin: 10px 0 4px; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; background: var(--ink); transform: rotate(45deg); cursor: pointer; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--ink); }
+    input[type="range"]::-moz-range-thumb { width: 12px; height: 12px; background: var(--ink); border: 2px solid #fff; border-radius: 0; cursor: pointer; }
+    input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px var(--p-blue); }
 
-    .toolbar-bottom {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-      gap: 14px; margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--ice-edge);
-    }
-    .search-box {
-      position: relative; flex: 1 1 280px; max-width: 440px;
-    }
-    .search-box svg {
-      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-      width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 2;
-    }
-    .search-box input {
-      width: 100%; height: 40px; padding: 0 34px 0 40px;
-      border: 1px solid var(--ice-strong); border-radius: 999px;
-      background: var(--glacier); font-size: 13.5px; outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-    }
-    .search-box input:focus {
-      background: #fff; border-color: var(--ice-blue);
-      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.14);
-    }
+    /* ---------- Sticky filter bar (single slim row) ---------- */
+    .filters { position: sticky; top: calc(var(--topH) + 3px); z-index: 30; margin: 14px 0 22px; padding: 8px 10px; background: rgba(245,243,238,.94); backdrop-filter: blur(10px);
+      border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line-2); display: flex; align-items: center; gap: 10px; }
+    .search { position: relative; flex: 1 1 180px; min-width: 140px; }
+    .search svg { position: absolute; left: 10px; top: 50%; width: 15px; height: 15px; transform: translateY(-50%); stroke: var(--ink-3); fill: none; stroke-width: 2; }
+    .search input { width: 100%; height: 34px; padding: 0 10px 0 32px; border: 1px solid var(--line-2); border-radius: 3px; background: var(--snow); font-size: 13px; outline: none; }
+    .search input:focus { border-color: var(--ink); }
+    .sel { position: relative; flex-shrink: 0; }
+    .sel select { -webkit-appearance: none; appearance: none; height: 34px; padding: 0 28px 0 10px; border: 1px solid var(--line-2); border-radius: 3px; background: var(--snow); font-size: 12.5px; color: var(--ink); cursor: pointer; outline: none; }
+    .sel::after { content: ""; position: absolute; right: 11px; top: 50%; width: 6px; height: 6px; border-right: 1.5px solid var(--ink-2); border-bottom: 1.5px solid var(--ink-2); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+    .sel select:focus { border-color: var(--ink); }
+    .filters .seg button { padding: 0 9px; height: 32px; gap: 5px; }
+    .tally { margin-left: auto; flex-shrink: 0; font-size: 12.5px; color: var(--ink-3); white-space: nowrap; padding-left: 4px; }
+    .tally b { font-family: var(--display); font-size: 18px; font-weight: 600; color: var(--ink); }
 
-    .sort-group {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
-    }
-    .sort-btn {
-      padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 500;
-      border: 1px solid var(--ice-edge); background: var(--glacier); color: var(--slate-3);
-      transition: all 0.16s;
-    }
-    .sort-btn:hover { color: var(--ice-blue); border-color: var(--ice-cyan); }
-    .sort-btn[aria-pressed="true"] {
-      background: var(--slate-2); color: #fff; border-color: var(--slate-2); font-weight: 600;
-    }
+    /* ---------- List header ---------- */
+    .list-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 30px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); }
+    .list-head h3 { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; display: flex; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; white-space: nowrap; }
+    .list-head h3 small { white-space: normal; font-family: var(--cn); font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--ink-3); }
+    .ghost-btn { font-size: 12.5px; color: var(--ink-2); border-bottom: 1px solid var(--line-2); padding-bottom: 1px; }
+    .ghost-btn:hover { color: var(--ink); border-color: var(--ink); }
 
-    .result-meta {
-      font-family: var(--mono); font-size: 12.5px; color: var(--muted);
-    }
-    .result-meta b { color: var(--ice-blue); font-weight: 700; }
+    /* ---------- Feature cards (top 12) ---------- */
+    .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .fcard { background: var(--snow); border: 1px solid var(--line-2); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+    .fcard:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -28px rgba(15,36,66,.55); }
+    .media { position: relative; overflow: hidden; background: var(--ice); }
+    .fcard .media { aspect-ratio: 16 / 10; }
+    .media img, .media svg.fb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+    .fcard:hover .media img { transform: scale(1.05); }
+    .media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,36,66,0) 55%, rgba(15,36,66,.35)); pointer-events: none; }
+    .fcard .pm-wrap { position: absolute; left: 12px; top: 12px; z-index: 2; display: inline-flex; align-items: center; padding: 6px 10px 6px 6px; background: rgba(255,255,255,.95); border-radius: 3px; gap: 8px; }
+    .fcard .pm-wrap .pm.t-T0 { margin-right: 12px; }
+    .pm-wrap em { font-style: normal; font-family: var(--display); font-size: 11px; letter-spacing: .14em; color: var(--ink-2); text-transform: uppercase; }
+    .score-tab { position: absolute; right: 12px; top: 12px; z-index: 2; background: var(--ink); color: #fff; padding: 5px 10px 6px; border-radius: 3px; text-align: right; line-height: 1; }
+    .score-tab b { display: block; font-family: var(--display); font-weight: 600; font-size: 22px; }
+    .score-tab span { font-size: 9.5px; letter-spacing: .18em; opacity: .7; font-family: var(--display); }
+    .credit { position: absolute; right: 8px; bottom: 6px; z-index: 2; font-size: 9.5px; color: rgba(255,255,255,.8); max-width: 70%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .fbody { padding: 16px 18px 16px; display: flex; flex-direction: column; flex: 1; }
+    .loc { font-size: 11.5px; color: var(--ink-3); letter-spacing: .04em; display: flex; flex-wrap: wrap; gap: 4px 8px; }
+    .loc b { color: var(--ink-2); font-weight: 600; }
+    .fbody h3 { margin-top: 5px; font-family: var(--cn); font-weight: 700; font-size: 18.5px; line-height: 1.35; }
+    .fbody h3 .en, .row-name .en { display: block; font-family: var(--sans); font-weight: 500; font-size: 12px; color: var(--ink-3); letter-spacing: .01em; margin-top: 1px; }
+    .mstrip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 14px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line-2); }
+    .mstrip > div { padding: 8px 6px 7px; }
+    .mstrip > div + div { border-left: 1px solid var(--line); }
+    .mstrip b { display: block; font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.1; letter-spacing: .01em; }
+    .mstrip b small { font-size: 11px; font-weight: 500; color: var(--ink-3); margin-left: 1px; }
+    .mstrip span { font-size: 10.5px; color: var(--ink-3); letter-spacing: .04em; }
+    .lead { margin-top: 12px; font-size: 13.2px; line-height: 1.75; color: var(--ink-2); }
+    .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+    .chip { font-size: 11px; padding: 2px 7px; border: 1px solid var(--line-2); border-radius: 2px; color: var(--ink-2); background: transparent; white-space: nowrap; }
+    .fmeta { margin-top: auto; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 12px; color: var(--ink-3); }
+    .fmeta .price { font-family: var(--display); font-size: 15px; color: var(--ink); font-weight: 500; }
+    .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--ink); padding: 5px 10px; border: 1px solid var(--ink); border-radius: 3px; transition: background .18s, color .18s; white-space: nowrap; }
+    .toggle:hover { background: var(--ink); color: #fff; }
+    .toggle svg { width: 10px; height: 10px; transition: transform .25s var(--ease); }
+    [aria-expanded="true"].toggle svg { transform: rotate(180deg); }
+    .fcard .shared-slot { padding: 0 18px 14px; }
+    .fcard:not(.is-open) .sw-nearby { display: none; }
+    .fcard .shared-slot .sw-bar { margin-top: 0; }
 
-    /* Resort Cards Grid ---------------------------------------------------- */
-    .cards-section { padding: 16px 0 80px; }
-    .cards-grid {
-      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px;
-    }
-    .ski-card {
-      display: flex; flex-direction: column;
-      background: var(--snow);
-      border: 1px solid var(--ice-edge);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.25s;
-      box-shadow: 0 6px 24px -10px rgba(12, 31, 51, 0.08);
-    }
-    .ski-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--ice-cyan);
-      box-shadow: 0 20px 42px -16px rgba(2, 132, 199, 0.2);
-    }
-    .ski-card.tier-T0 {
-      border-color: rgba(2, 132, 199, 0.45);
-      box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.16);
-    }
+    /* ---------- Compact rows (13–100) ---------- */
+    .rows { border-top: 1px solid var(--line-2); }
+    .tier-divider { display: flex; align-items: center; gap: 12px; padding: 22px 0 10px; font-family: var(--display); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+    .tier-divider small { font-family: var(--cn); letter-spacing: 0; text-transform: none; font-size: 12.5px; color: var(--ink-3); }
+    .row { border-bottom: 1px solid var(--line); background: transparent; transition: background .2s; }
+    .row:hover, .row.is-open { background: var(--snow); }
+    .row-main { display: grid; grid-template-columns: 46px 92px minmax(0, 1fr) minmax(0, 380px) 92px 74px; gap: 16px; align-items: center; padding: 10px 8px; cursor: pointer; }
+    .row-rank { display: flex; justify-content: center; }
+    .row-rank .pm.t-T0 { margin-right: 10px; }
+    .row .media { width: 92px; height: 62px; border-radius: 2px; }
+    .row .media::after { display: none; }
+    .row:hover .media img { transform: scale(1.06); }
+    .row-name { min-width: 0; }
+    .row-name h3 { font-family: var(--cn); font-weight: 700; font-size: 15px; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .row-name .en { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .row-name .loc { margin-top: 2px; }
+    .row-metrics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+    .row-metrics div { line-height: 1.15; }
+    .row-metrics b { display: block; font-family: var(--display); font-weight: 500; font-size: 16px; letter-spacing: .01em; }
+    .row-metrics b small { font-size: 10.5px; color: var(--ink-3); margin-left: 1px; }
+    .row-metrics span { font-size: 10.5px; color: var(--ink-3); }
+    .row-metrics .hot b { font-weight: 700; }
+    .row-score { text-align: right; }
+    .row-score b { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1; }
+    .row-score .mini { height: 3px; background: var(--ice); margin-top: 6px; border-radius: 2px; overflow: hidden; }
+    .row-score .mini i { display: block; height: 100%; background: var(--ink); }
+    .row-score small { display: block; font-size: 10px; color: var(--ink-3); margin-top: 3px; letter-spacing: .04em; }
+    .row .toggle { justify-self: end; padding: 4px 9px; }
 
-    /* Card Visual Cover */
-    .card-cover {
-      position: relative; height: 196px; overflow: hidden;
-      background: linear-gradient(135deg, #0b2239 0%, #164e78 55%, #0284c7 100%);
-      color: #fff;
-    }
-    .card-cover img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.6s var(--ease);
-    }
-    .ski-card:hover .card-cover img { transform: scale(1.04); }
-    .card-cover-svg {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-    }
-    .card-cover-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(7, 19, 34, 0.25) 0%, rgba(7, 19, 34, 0.08) 40%, rgba(7, 19, 34, 0.86) 100%);
-      display: flex; flex-direction: column; justify-content: space-between;
-      padding: 14px 18px;
-    }
-    .cover-top {
-      display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
-    }
-    .rank-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 5px 12px; border-radius: 999px;
-      background: rgba(8, 23, 40, 0.78);
-      border: 1px solid rgba(125, 211, 252, 0.4);
-      backdrop-filter: blur(8px);
-      font-family: var(--mono); font-size: 13px; font-weight: 700; color: #fff;
-    }
-    .rank-badge .tier-pill {
-      padding: 1px 7px; border-radius: 999px; font-size: 11px;
-      background: var(--ice-cyan); color: #fff;
-    }
-    .tier-T0 .rank-badge .tier-pill { background: linear-gradient(135deg, #38bdf8, #818cf8); color: #061322; font-weight: 800; }
+    /* ---------- Detail panel (shared by feature + row) ---------- */
+    .detail { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; padding: 14px 18px 18px; border-top: 1px dashed var(--line-2); }
+    .detail[hidden] { display: none; }
+    .fcard .detail { grid-template-columns: 1fr; gap: 14px; }
+    .row .detail { margin-left: 62px; padding-left: 0; }
+    .d-title { font-family: var(--display); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+    .bars { display: grid; gap: 7px; }
+    .bar { display: grid; grid-template-columns: 34px minmax(0, 1fr) 46px; gap: 8px; align-items: center; font-size: 12px; color: var(--ink-2); }
+    .bar .track { height: 5px; background: var(--ice); border-radius: 3px; overflow: hidden; }
+    .bar .track i { display: block; height: 100%; background: var(--ink); border-radius: 3px; }
+    .bar b { font-family: var(--display); font-weight: 500; font-size: 13px; text-align: right; color: var(--ink); }
+    .hl { list-style: none; display: grid; gap: 6px; }
+    .hl li { position: relative; padding-left: 16px; font-size: 13px; line-height: 1.65; color: var(--ink-2); }
+    .hl li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 6px; height: 6px; background: var(--ink); transform: rotate(45deg); }
+    .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 12px; color: var(--ink-3); }
+    .facts b { color: var(--ink); font-weight: 600; }
+    .tip { font-size: 13px; line-height: 1.75; color: var(--ink-2); padding: 10px 12px; background: var(--paper); border-left: 3px solid var(--ink); }
+    .tip b { display: block; font-family: var(--display); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); margin-bottom: 3px; font-weight: 600; }
+    .row .shared-slot { grid-column: 1 / -1; }
+    .detail .shared-slot:empty { display: none; }
+    .shared-slot .sw-bar { border-top-color: var(--line-2); color: var(--ink-2); }
+    .shared-slot .sw-btn { border-radius: 3px; border-color: var(--line-2); background: var(--snow); color: var(--ink); }
+    .shared-slot .sw-btn:hover { border-color: var(--ink); }
+    .shared-slot .sw-btn.is-wish { background: rgba(207,47,42,.08); border-color: var(--p-red); color: var(--p-red); }
+    .shared-slot .sw-btn.is-visit { background: rgba(29,138,78,.08); border-color: var(--p-green); color: var(--p-green); }
+    .shared-slot .sw-dist { background: var(--ice); color: var(--ink-2); border-radius: 3px; }
+    .shared-slot .sw-near-pill { background: transparent; border-color: var(--line-2); border-radius: 2px; color: var(--ink-2); }
+    .shared-slot .sw-near-pill:hover { background: var(--ice); }
 
-    .score-pill {
-      display: flex; flex-direction: column; align-items: flex-end;
-      padding: 5px 12px; border-radius: 12px;
-      background: rgba(8, 23, 40, 0.8);
-      border: 1px solid rgba(56, 189, 248, 0.42);
-      backdrop-filter: blur(8px);
-    }
-    .score-pill b {
-      font-family: var(--mono); font-size: 20px; font-weight: 700;
-      color: #38bdf8; line-height: 1;
-    }
-    .score-pill span {
-      font-size: 10px; color: rgba(224, 242, 254, 0.8); letter-spacing: 0.06em; margin-top: 2px;
-    }
+    .empty { padding: 60px 20px; text-align: center; color: var(--ink-3); border: 1px dashed var(--line-2); border-radius: 4px; background: var(--snow); }
+    .empty h3 { font-size: 17px; color: var(--ink); margin-bottom: 8px; }
+    .empty button { margin-top: 14px; }
 
-    .cover-bottom h3 {
-      font-size: 18.5px; font-weight: 700; line-height: 1.3;
-      color: #fff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-    }
-    .cover-loc {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-      margin-top: 5px; font-size: 12.5px; color: rgba(224, 242, 254, 0.92);
-    }
-    .cover-loc .season-chip {
-      padding: 1px 8px; border-radius: 999px;
-      background: rgba(56, 189, 248, 0.24); border: 1px solid rgba(125, 211, 252, 0.4);
-      font-family: var(--mono); font-size: 11px; color: #bae6fd;
-    }
+    /* ---------- Footer ---------- */
+    .foot { margin-top: 80px; background: var(--ink); color: rgba(245,243,238,.75); position: relative; }
+    .foot-ridge { display: block; width: 100%; height: 60px; margin-top: -59px; }
+    .foot-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 34px; padding: 34px 0 40px; }
+    .foot strong { color: #fff; font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: .08em; text-transform: uppercase; }
+    .foot p { font-size: 12.5px; margin-top: 8px; line-height: 1.8; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 6px 16px; align-content: start; font-size: 12.5px; }
+    .foot nav a:hover, .foot nav a[aria-current="page"] { color: #fff; }
+    .foot nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--p-red); }
+    .foot .sig { grid-column: 1 / -1; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-family: var(--display); letter-spacing: .24em; font-size: 11px; text-transform: uppercase; color: rgba(245,243,238,.5); }
 
-    /* Card Body & Telemetry Strip */
-    .card-body {
-      padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; flex: 1;
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1180px) {
+      .row-main { grid-template-columns: 46px 84px minmax(0, 1fr) minmax(0, 300px) 70px 70px; gap: 12px; }
+      .row .media { width: 84px; height: 58px; }
+      .row-metrics div:nth-child(5) { display: none; }
+      .row-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .sliders { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .filters { flex-wrap: wrap; }
+      .tally { margin-left: 0; }
     }
-    .metrics-strip {
-      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 7px; background: var(--glacier); padding: 9px;
-      border-radius: 13px; border: 1px solid var(--ice-edge);
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .poster { width: min(400px, 100%); }
+      .method { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .m-item:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+      .m-item:nth-child(2n) { padding-left: 20px; border-left: 1px solid var(--line); }
+      .viz-grid { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .detail { grid-template-columns: 1fr 1fr; }
+      .detail .d-tip { grid-column: 1 / -1; }
+      .mixer { grid-template-columns: minmax(0, 1fr); }
+      .mixer-row2 { grid-column: 1 / -1; }
+      .filters { position: static; }
     }
-    .m-cell {
-      text-align: center; padding: 5px 3px; border-radius: 8px;
-      background: #fff; border: 1px solid rgba(208, 225, 242, 0.65);
-    }
-    .m-cell b {
-      display: block; font-family: var(--mono); font-size: 13.5px;
-      font-weight: 700; color: var(--slate); line-height: 1.2;
-    }
-    .m-cell b.is-snow { color: var(--ice-blue); }
-    .m-cell b.is-drop { color: var(--powder-violet); }
-    .m-cell span {
-      display: block; font-size: 10.5px; color: var(--muted); margin-top: 2px;
-    }
-
-    /* 6-Dim Score Mini Bar */
-    .dim-bars {
-      display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
-    }
-    .dim-item {
-      display: flex; flex-direction: column; gap: 3px;
-    }
-    .dim-item-top {
-      display: flex; justify-content: space-between; font-size: 10.5px; color: var(--muted);
-    }
-    .dim-item-top b { font-family: var(--mono); color: var(--slate-2); }
-    .dim-track {
-      height: 5px; border-radius: 999px; background: var(--frost); overflow: hidden;
-    }
-    .dim-fill {
-      height: 100%; border-radius: 999px;
-      background: linear-gradient(90deg, var(--ice-blue), var(--ice-glow));
-    }
-
-    /* Crowd Tags */
-    .crowd-tags {
-      display: flex; flex-wrap: wrap; gap: 6px;
-    }
-    .crowd-tag {
-      padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
-      background: var(--ice-soft); color: var(--ice-blue);
-      border: 1px solid rgba(2, 132, 199, 0.22);
-    }
-    .crowd-tag[data-tag="粉雪朝圣"] { background: #e0e7ff; color: #3730a3; border-color: #c7d2fe; }
-    .crowd-tag[data-tag="千米落差大神"] { background: #fae8ff; color: #86198f; border-color: #f5d0fe; }
-    .crowd-tag[data-tag="温泉美食"] { background: #ffedd5; color: #c2410c; border-color: #fed7aa; }
-    .crowd-tag[data-tag="反季滑雪"] { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
-
-    /* Highlights List */
-    .highlight-list {
-      display: flex; flex-direction: column; gap: 5px;
-      font-size: 13.2px; color: var(--slate-2); line-height: 1.58;
-    }
-    .highlight-list li {
-      position: relative; padding-left: 15px;
-    }
-    .highlight-list li::before {
-      content: "❄"; position: absolute; left: 0; top: 1px;
-      font-size: 10px; color: var(--ice-cyan);
-    }
-
-    /* Practical Tip Box */
-    .tip-box {
-      margin-top: auto;
-      padding: 10px 13px; border-radius: 11px;
-      background: linear-gradient(90deg, rgba(224, 242, 254, 0.65), rgba(243, 247, 251, 0.9));
-      border-left: 3px solid var(--ice-blue);
-      font-size: 12.3px; color: var(--slate-3); line-height: 1.55;
-    }
-    .tip-box b { color: var(--slate); font-weight: 700; }
-
-    /* Methodology Section -------------------------------------------------- */
-    .method-section {
-      padding: 64px 0; background: var(--snow); border-top: 1px solid var(--ice-edge);
-    }
-    .method-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px;
-    }
-    .method-card {
-      padding: 22px; border-radius: 16px; background: var(--glacier);
-      border: 1px solid var(--ice-edge);
-    }
-    .method-card .pct {
-      font-family: var(--mono); font-size: 24px; font-weight: 700; color: var(--ice-blue);
-    }
-    .method-card h3 { margin-top: 8px; font-size: 16px; font-weight: 700; color: var(--slate); }
-    .method-card p { margin-top: 8px; font-size: 13.2px; color: var(--slate-3); line-height: 1.7; }
-
-    /* Footer --------------------------------------------------------------- */
-    .site-footer {
-      padding: 48px 0; background: var(--slate); color: rgba(224, 242, 254, 0.76);
-      font-size: 13px;
-    }
-    .footer-inner {
-      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;
-    }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
-    .footer-links a {
-      padding: 6px 13px; border-radius: 999px;
-      border: 1px solid rgba(125, 211, 252, 0.25); color: #e0f2fe;
-      font-size: 12.5px; transition: background 0.2s;
-    }
-    .footer-links a:hover { background: rgba(56, 189, 248, 0.2); }
-
-    .empty-state {
-      grid-column: 1 / -1; text-align: center; padding: 64px 20px;
-      background: var(--snow); border: 1px dashed var(--ice-strong); border-radius: 20px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 1060px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .sliders-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .cards-grid { grid-template-columns: 1fr; }
-      .method-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 680px) {
+    @media (max-width: 720px) {
+      :root { --topH: 52px; }
       .wrap { width: calc(100% - 28px); }
-      .sliders-grid { grid-template-columns: 1fr 1fr; }
-      .metrics-strip { grid-template-columns: repeat(3, 1fr); }
-      .dim-bars { grid-template-columns: repeat(3, 1fr); }
-      .method-grid { grid-template-columns: 1fr; }
-      .console-card { padding: 18px 16px; }
+      .top-inner { gap: 12px; }
+      .logo small { display: none; }
+      .logo b { font-size: 16px; }
+      .hero { padding: 36px 0 44px; }
+      .kicker { letter-spacing: .16em; font-size: 11.5px; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats > div:nth-child(odd) { border-left: 0; }
+      .stats > div:nth-child(n+3) { border-top: 1px solid var(--line-2); }
+      .stats > div:nth-child(5) { grid-column: 1 / -1; }
+      .section { padding: 52px 0 16px; }
+      .sec-head { grid-template-columns: 1fr; gap: 10px; }
+      .sec-no { height: 42px; font-size: 20px; width: max-content; }
+      .method { grid-template-columns: 1fr; }
+      .m-item, .m-item:nth-child(2n) { padding: 16px 0; border-left: 0; }
+      .viz-card { padding: 14px 12px 12px; }
+      .records .r-v { font-size: 19px; }
+      .sliders { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mixer { padding: 14px; }
+      .mixer-row2 .seg { width: 100%; overflow-x: auto; scrollbar-width: none; }
+      .seg { max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+      .seg::-webkit-scrollbar { display: none; }
+      .filters { padding: 8px 0; gap: 8px; }
+      .search { flex-basis: 100%; }
+      .filters .seg { width: 100%; }
+      .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+      .wbar em { display: none; }
+      .wbar span b { font-size: 11px; }
+      .fcard .media { aspect-ratio: 16 / 9; }
+      .row-main { grid-template-columns: 76px minmax(0, 1fr) 54px; grid-template-areas: "media name score" "media metrics score"; gap: 6px 12px; padding: 12px 2px; }
+      .row-rank { display: none; }
+      .row .media { grid-area: media; width: 76px; height: 76px; }
+      .row .media .pm-mini { display: grid; }
+      .row-name { grid-area: name; }
+      .row-name h3 { white-space: normal; font-size: 14.5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+      .row-name .en { display: none; }
+      .row-metrics { grid-area: metrics; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .row-metrics div:nth-child(n+4) { display: none; }
+      .row-metrics b { font-size: 14px; }
+      .row-score { grid-area: score; align-self: center; }
+      .row-score b { font-size: 19px; }
+      .row .toggle { display: none; }
+      .row .detail { margin-left: 0; padding: 12px 2px 16px; grid-template-columns: 1fr; }
+      .foot-inner { grid-template-columns: 1fr; }
+    }
+    .pm-mini { display: none; position: absolute; left: 4px; top: 4px; z-index: 2; }
+    .pm-mini .pm { width: 24px; height: 24px; font-size: 11px; }
+    .pm-mini .pm.t-T0::after { width: 8px; height: 8px; right: -9px; margin-top: -4px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
 
@@ -931,19 +789,11 @@
   <!-- END AUTO-SEO -->
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
-            <path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <b>Alpine &amp; Powder Index</b>
-          <span>Destination Atlas · 全球滑雪度假村 Top 100</span>
-        </div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="logo" href="index.html" aria-label="Alpine &amp; Powder Index · 返回图鉴总览">
+        <span class="logo-sign" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span><b>Alpine &amp; Powder</b><small>雪场图鉴 · TOP 100</small></span>
       </a>
       <nav class="switch" aria-label="专题榜单导航">
         <a href="index.html">图鉴总览</a>
@@ -963,250 +813,287 @@
   </header>
 
   <section class="hero">
-    <svg class="hero-bg-svg" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="peakGrad1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
-          <stop offset="100%" stop-color="#071525" stop-opacity="0.05"/>
-        </linearGradient>
-        <linearGradient id="peakGrad2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.22"/>
-          <stop offset="100%" stop-color="#0d253f" stop-opacity="0.0"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,420 L180,210 L340,340 L540,110 L760,310 L980,80 L1210,270 L1440,140 L1440,520 L0,520 Z" fill="url(#peakGrad1)"/>
-      <path d="M0,460 L240,260 L450,380 L710,150 L910,320 L1140,120 L1440,310 L1440,520 L0,520 Z" fill="url(#peakGrad2)"/>
-      <path d="M540,110 L615,178 L570,195 L540,155 L500,205 Z" fill="#ffffff" fill-opacity="0.18"/>
-      <path d="M980,80 L1065,156 L1010,175 L980,130 L930,185 Z" fill="#ffffff" fill-opacity="0.22"/>
+    <svg class="hero-contours" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#0f2442" stroke-opacity=".09" stroke-width="1">
+        <path d="M-40 520 C 180 430 300 470 480 380 S 820 300 1000 340 S 1300 260 1480 300"/>
+        <path d="M-40 560 C 200 470 320 510 500 420 S 840 340 1020 380 S 1320 300 1480 340"/>
+        <path d="M-40 600 C 220 510 340 550 520 460 S 860 380 1040 420 S 1340 340 1480 380"/>
+        <path d="M-40 640 C 240 550 360 590 540 500 S 880 420 1060 460 S 1360 380 1480 420"/>
+        <path d="M-40 140 C 160 90 260 160 420 120 S 700 40 900 90 S 1200 40 1480 70"/>
+        <path d="M-40 180 C 170 130 280 200 440 160 S 720 80 920 130 S 1220 80 1480 110"/>
+        <path d="M-40 220 C 180 170 300 240 460 200 S 740 120 940 170 S 1240 120 1480 150"/>
+      </g>
+      <g fill="none" stroke="#0f2442" stroke-opacity=".06" stroke-dasharray="3 6">
+        <path d="M0 320 H1440"/><path d="M720 0 V640"/>
+      </g>
     </svg>
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">ALPINE &amp; POWDER INDEX · 2026 EDITION</span>
-        <h1>全球滑雪度假村 <em>Top 100</em><br/>从千米冰川落差到齐腰深粉</h1>
-        <p class="hero-lede">
-          拒绝把近郊小雪坡与世界级高山度假村混为一谈。我们按<strong>粉雪质量与降雪量 (25%)</strong>、<strong>垂直落差与雪道规模 (25%)</strong>、<strong>缆车运力与滑进滑出 (15%)</strong>、<strong>全水平道型配比 (15%)</strong>、<strong>温泉餐饮与Après-ski (10%)</strong>及<strong>雪票住宿性价比 (10%)</strong>六大硬核指标，严选横跨阿尔卑斯、北美落基山、日本粉雪带与南半球安第斯的 100 座殿堂级雪山。
+        <span class="kicker"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The Alpine &amp; Powder Index · 2026/27</span>
+        <h1><span class="pre">从千米冰川落差到齐腰深粉</span>地球上最好的<br/><span class="num">100</span> 座雪山<span class="en">Powder · Vertical · Lifts · Après</span></h1>
+        <p class="lede">
+          拒绝把近郊小雪坡与世界级高山度假村混为一谈。我们用<strong>六项硬核指标</strong>——粉雪与降雪、垂直落差与规模、缆车与滑进滑出、全水平道型、温泉餐饮 Après-ski、雪票住宿性价比——严选横跨<strong>阿尔卑斯、北美落基山、日本粉雪带与南半球安第斯</strong>的 100 座殿堂级雪山；权重可以由你亲手重新调配。
         </p>
-        <div class="hero-badges">
-          <span class="hero-badge">🏔️ 最大互联雪道 <b>1,200 km</b> (多洛米蒂)</span>
-          <span class="hero-badge">📐 最大垂直落差 <b>2,807 m</b> (霞慕尼南针峰)</span>
-          <span class="hero-badge">❄️ 最高年均降雪 <b>16.0 m</b> (北海道喜乐乐/新井)</span>
-          <span class="hero-badge">🚡 最高缆车海拔 <b>3,962 m</b> (布雷肯里奇)</span>
-        </div>
+        <div class="stats" id="hero-stats" aria-label="全球百大雪场核心数据"></div>
       </div>
-      <aside class="hero-telemetry" aria-label="全球百大雪场核心遥测数据">
-        <div class="telemetry-head">
-          <span>GLOBAL TELEMETRY · 100 RESORTS</span>
-          <span>4 REGIONS</span>
+      <figure class="poster" aria-label="复古滑雪海报插画：雪山、雪道与缆车">
+        <div class="poster-frame">
+          <svg id="poster-svg" viewBox="0 0 400 520" role="img" aria-label="雪山、四色雪道与缆车插画">
+            <defs>
+              <linearGradient id="pSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#bcd0e6"/><stop offset=".62" stop-color="#eef1f3"/><stop offset="1" stop-color="#f5f3ee"/>
+              </linearGradient>
+              <linearGradient id="pFace" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef2f7"/>
+              </linearGradient>
+              <clipPath id="pClip"><rect width="400" height="520"/></clipPath>
+            </defs>
+            <g clip-path="url(#pClip)">
+              <rect width="400" height="520" fill="url(#pSky)"/>
+              <circle cx="300" cy="112" r="44" fill="#fff" fill-opacity=".85"/>
+              <circle cx="300" cy="112" r="56" fill="none" stroke="#fff" stroke-opacity=".5"/>
+              <text x="24" y="40" font-family="Oswald, sans-serif" font-size="11" letter-spacing="4" fill="#0f2442" fill-opacity=".7">ALPES · ROCKIES · HOKKAIDO · ANDES</text>
+              <!-- back range -->
+              <path d="M0 300 L48 236 L92 268 L140 206 L182 252 L232 196 L280 246 L330 188 L400 250 L400 400 L0 400 Z" fill="#9fb5cf" fill-opacity=".75"/>
+              <path d="M140 206 L156 226 L146 230 L140 220 L130 232 Z M330 188 L348 210 L336 214 L330 204 L318 216 Z" fill="#fff" fill-opacity=".8"/>
+              <!-- mid range -->
+              <path d="M0 340 L60 280 L110 318 L170 262 L220 300 L280 256 L340 300 L400 270 L400 420 L0 420 Z" fill="#5f81aa"/>
+              <path d="M60 280 L76 296 L66 300 L60 292 L50 302 Z M280 256 L298 274 L286 278 L280 270 L268 280 Z" fill="#fff" fill-opacity=".9"/>
+              <!-- main peak -->
+              <path d="M10 520 L120 300 L200 120 L248 214 L282 196 L400 352 L400 520 Z" fill="url(#pFace)"/>
+              <path d="M200 120 L248 214 L282 196 L400 352 L400 520 L246 520 L222 330 L212 230 Z" fill="#c9d6e5"/>
+              <path d="M200 120 L214 150 L206 160 L200 146 L190 162 L186 156 Z" fill="#0f2442"/>
+              <path d="M212 232 L220 262 L214 270 M226 300 L232 330 M262 236 L270 252" stroke="#0f2442" stroke-opacity=".35" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- pistes -->
+              <g fill="none" stroke-width="3.2" stroke-linecap="round">
+                <path d="M204 168 C 196 204 222 226 206 262 S 194 318 210 352" stroke="#15181c"/>
+                <path d="M252 228 C 284 258 252 296 278 326 S 304 374 288 420" stroke="#cf2f2a"/>
+                <path d="M176 246 C 146 286 188 316 158 356 S 130 404 150 446" stroke="#1f5fbf"/>
+                <path d="M110 380 C 84 408 122 436 96 466 S 78 500 92 520" stroke="#1d8a4e"/>
+              </g>
+              <g>
+                <rect x="198" y="160" width="9" height="9" transform="rotate(45 202.5 164.5)" fill="#15181c"/>
+                <rect x="247" y="221" width="9" height="9" transform="rotate(45 251.5 225.5)" fill="#cf2f2a"/>
+                <rect x="172" y="238" width="9" height="9" fill="#1f5fbf"/>
+                <circle cx="111" cy="374" r="5" fill="#1d8a4e"/>
+              </g>
+              <!-- gondola -->
+              <line x1="18" y1="452" x2="300" y2="190" stroke="#0f2442" stroke-width="1.4"/>
+              <line x1="18" y1="460" x2="300" y2="198" stroke="#0f2442" stroke-width=".8" stroke-opacity=".6"/>
+              <path d="M128 350 L128 420 M122 420 L134 420 M232 254 L232 300 M226 300 L238 300" stroke="#0f2442" stroke-width="2"/>
+              <rect x="292" y="182" width="22" height="14" fill="#0f2442"/>
+              <g id="cabin-1">
+                <line x1="0" y1="0" x2="0" y2="9" stroke="#0f2442" stroke-width="1.2"/>
+                <rect x="-8" y="9" width="16" height="13" rx="2" fill="#cf2f2a"/>
+                <rect x="-6" y="12" width="12" height="5" fill="#fff" fill-opacity=".85"/>
+                <animateMotion dur="16s" repeatCount="indefinite" path="M18 452 L300 190"/>
+              </g>
+              <g>
+                <line x1="0" y1="0" x2="0" y2="9" stroke="#0f2442" stroke-width="1.2"/>
+                <rect x="-8" y="9" width="16" height="13" rx="2" fill="#0f2442"/>
+                <rect x="-6" y="12" width="12" height="5" fill="#fff" fill-opacity=".85"/>
+                <animateMotion dur="16s" begin="-8s" repeatCount="indefinite" path="M18 452 L300 190"/>
+              </g>
+              <!-- pines -->
+              <g fill="#0f2442">
+                <path d="M300 470 l12 -34 l12 34 z M318 474 l9 -26 l9 26 z M336 472 l14 -40 l14 40 z M356 476 l10 -28 l10 28 z M370 474 l13 -38 l13 38 z"/>
+                <path d="M20 474 l10 -30 l10 30 z M34 476 l8 -22 l8 22 z"/>
+              </g>
+              <g id="poster-snow" fill="#fff"></g>
+              <rect y="474" width="400" height="46" fill="#0f2442"/>
+              <text x="24" y="504" font-family="Oswald, sans-serif" font-size="17" font-weight="600" letter-spacing="5" fill="#fff">SKI · TOP 100</text>
+              <g transform="translate(300 491)">
+                <circle cx="0" cy="6" r="5.5" fill="#1d8a4e"/><rect x="14" y="0.5" width="11" height="11" fill="#1f5fbf"/>
+                <rect x="34" y="0.5" width="10" height="10" transform="rotate(45 39 5.5)" fill="#cf2f2a"/><rect x="54" y="0.5" width="10" height="10" transform="rotate(45 59 5.5)" fill="#fff"/>
+              </g>
+            </g>
+          </svg>
         </div>
-        <div class="telemetry-grid">
-          <div class="t-stat">
-            <b>50<small>座</small></b>
-            <span>阿尔卑斯与欧洲 (法/瑞/奥/意/北欧)</span>
-          </div>
-          <div class="t-stat">
-            <b>28<small>座</small></b>
-            <span>北美落基山与西岸 (美/加 Epic &amp; Ikon)</span>
-          </div>
-          <div class="t-stat">
-            <b>16<small>座</small></b>
-            <span>日本粉雪与亚洲 (北海道/长野/阿勒泰)</span>
-          </div>
-          <div class="t-stat">
-            <b>6<small>座</small></b>
-            <span>南半球 6–10 月盛夏反季雪场</span>
-          </div>
-        </div>
-      </aside>
+        <figcaption class="poster-cap"><span>Saison d'hiver · 4 Regions</span><b>Nº 100</b></figcaption>
+      </figure>
     </div>
   </section>
 
   <main class="wrap">
-    <!-- Interactive Weight Sliders & Filters Console -->
-    <section class="console-section" aria-label="动态权重与多维筛选台">
-      <div class="console-card">
-        <div class="console-top">
-          <div class="console-title">
-            <h2>六维评分权重调音台</h2>
-            <span id="active-preset-tag">默认均衡权重</span>
-          </div>
-          <div class="preset-group" role="group" aria-label="权重预设">
-            <span class="preset-label">一键偏好预设：</span>
-            <button type="button" class="preset-btn is-active" data-preset="balanced">⚖️ 默认均衡</button>
-            <button type="button" class="preset-btn" data-preset="powder">❄️ 粉雪猎人 (Japow/野雪)</button>
-            <button type="button" class="preset-btn" data-preset="bigmountain">🏔️ 千米落差刷道狂魔</button>
-            <button type="button" class="preset-btn" data-preset="family">👨‍👩‍👧 亲子滑进滑出 &amp; 温泉</button>
-            <button type="button" class="preset-btn" data-preset="value">💰 极致性价比</button>
-          </div>
-        </div>
-
-        <div class="sliders-grid">
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-snow">❄️ 粉雪质量与降雪</label>
-              <output id="out-snow">25%</output>
-            </div>
-            <input type="range" id="w-snow" min="0" max="50" step="5" value="25" />
-            <span class="slider-sub">满分25 · 年降雪量/干粉含水量</span>
-          </div>
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-terrain">🏔️ 垂直落差与规模</label>
-              <output id="out-terrain">25%</output>
-            </div>
-            <input type="range" id="w-terrain" min="0" max="50" step="5" value="25" />
-            <span class="slider-sub">满分25 · 千米落差/雪道总长</span>
-          </div>
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-lifts">🚡 缆车与滑进滑出</label>
-              <output id="out-lifts">15%</output>
-            </div>
-            <input type="range" id="w-lifts" min="0" max="40" step="5" value="15" />
-            <span class="slider-sub">满分15 · 高速贡多拉/Ski-in</span>
-          </div>
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-variety">🎿 全水平道型配比</label>
-              <output id="out-variety">15%</output>
-            </div>
-            <input type="range" id="w-variety" min="0" max="40" step="5" value="15" />
-            <span class="slider-sub">满分15 · 绿蓝红黑道/公园/树林</span>
-          </div>
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-apres">♨️ 温泉餐饮Après</label>
-              <output id="out-apres">10%</output>
-            </div>
-            <input type="range" id="w-apres" min="0" max="40" step="5" value="10" />
-            <span class="slider-sub">满分10 · 露天温泉/山屋米其林</span>
-          </div>
-          <div class="slider-box">
-            <div class="slider-head">
-              <label for="w-value">💎 雪票住宿性价比</label>
-              <output id="out-value">10%</output>
-            </div>
-            <input type="range" id="w-value" min="0" max="40" step="5" value="10" />
-            <span class="slider-sub">满分10 · 日票价格/季卡覆盖</span>
-          </div>
-        </div>
-
-        <div class="filter-rows">
-          <div class="filter-row">
-            <span class="filter-label">地理大区</span>
-            <div class="pill-group" id="region-tabs" role="group" aria-label="按地理大区筛选">
-              <button type="button" class="pill" data-region="ALL" aria-pressed="true">全部大区 (100)</button>
-              <button type="button" class="pill" data-region="阿尔卑斯与欧洲" aria-pressed="false">🇪🇺 阿尔卑斯与欧洲 (50)</button>
-              <button type="button" class="pill" data-region="北美落基山与西岸" aria-pressed="false">🌎 北美落基山与西岸 (28)</button>
-              <button type="button" class="pill" data-region="日本粉雪与亚洲" aria-pressed="false">🇯🇵 日本粉雪与亚洲 (16)</button>
-              <button type="button" class="pill" data-region="南半球反季" aria-pressed="false">🇦🇷 南半球反季 (6)</button>
-            </div>
-          </div>
-
-          <div class="filter-row">
-            <span class="filter-label">等级梯队</span>
-            <div class="pill-group" id="tier-tabs" role="group" aria-label="按梯队筛选">
-              <button type="button" class="pill" data-tier="ALL" aria-pressed="true">全部梯队</button>
-              <button type="button" class="pill" data-tier="T0" aria-pressed="false">👑 T0 殿堂神山 (1–12)</button>
-              <button type="button" class="pill" data-tier="T1" aria-pressed="false">🏆 T1 世界旗舰 (13–35)</button>
-              <button type="button" class="pill" data-tier="T1.5" aria-pressed="false">⭐ T1.5 区域王牌 (36–65)</button>
-              <button type="button" class="pill" data-tier="T2" aria-pressed="false">🎿 T2 特色名山 (66–100)</button>
-            </div>
-          </div>
-
-          <div class="filter-row">
-            <span class="filter-label">人群标签</span>
-            <div class="pill-group" id="crowd-chips" role="group" aria-label="按适合人群标签筛选">
-              <button type="button" class="pill tag-chip" data-crowd="ALL" aria-pressed="true">全部人群</button>
-              <button type="button" class="pill tag-chip" data-crowd="粉雪朝圣" aria-pressed="false">❄️ 粉雪朝圣</button>
-              <button type="button" class="pill tag-chip" data-crowd="千米落差大神" aria-pressed="false">⚡ 千米落差大神</button>
-              <button type="button" class="pill tag-chip" data-crowd="新手家庭友好" aria-pressed="false">👨‍👩‍👧 新手家庭友好</button>
-              <button type="button" class="pill tag-chip" data-crowd="Ski-in/Ski-out" aria-pressed="false">🛷 Ski-in/Ski-out</button>
-              <button type="button" class="pill tag-chip" data-crowd="温泉美食" aria-pressed="false">♨️ 温泉美食</button>
-              <button type="button" class="pill tag-chip" data-crowd="反季滑雪" aria-pressed="false">☀️ 反季滑雪 (6–10月)</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="toolbar-bottom">
-          <label class="search-box" aria-label="搜索雪场">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
-            <input type="search" id="search-input" placeholder="搜索雪场名、国家、Ikon/Epic、冰川、温泉、树冰..." autocomplete="off" />
-          </label>
-
-          <div class="sort-group" id="sort-buttons" role="group" aria-label="排序方式">
-            <button type="button" class="sort-btn" data-sort="score" aria-pressed="true">按综合得分</button>
-            <button type="button" class="sort-btn" data-sort="pisteKm" aria-pressed="false">按雪道总长(km)</button>
-            <button type="button" class="sort-btn" data-sort="verticalDropM" aria-pressed="false">按垂直落差(m)</button>
-            <button type="button" class="sort-btn" data-sort="snowfallM" aria-pressed="false">按年均降雪量(m)</button>
-            <button type="button" class="sort-btn" data-sort="dayPassUsd" aria-pressed="false">按雪票价格($)</button>
-          </div>
-
-          <div class="result-meta" id="result-count">正在加载 <b>100</b> 座雪场...</div>
+    <!-- I. Methodology -->
+    <section class="section" id="methodology" aria-labelledby="method-title">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true"><small>PISTE</small>01</div>
+        <div>
+          <div class="sec-kicker">Methodology · 评分体系</div>
+          <h2 id="method-title">六项硬指标，决定一座雪山的分量</h2>
+          <p>为什么这 100 座雪山代表地球滑雪体验的巅峰？每座雪场按以下六个维度打分，满分 100；下方权重台可一键切换偏好或手动微调，榜单即时重排。</p>
         </div>
       </div>
-    </section>
-
-    <!-- Cards Container -->
-    <section class="cards-section" aria-label="滑雪度假村排行榜列表">
-      <div class="cards-grid" id="cards-grid"></div>
-    </section>
-  </main>
-
-  <!-- Methodology Section -->
-  <section class="method-section" id="methodology">
-    <div class="wrap">
-      <span class="eyebrow" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;">METHODOLOGY · 评分体系说明</span>
-      <h2 style="margin-top:12px;font-family:var(--serif);font-size:28px;">为什么这 100 座雪山代表地球滑雪体验的巅峰？</h2>
-      <div class="method-grid">
-        <article class="method-card">
-          <div class="pct">25% · 粉雪质量与降雪量</div>
-          <h3>年均降雪厚度 × 干粉含水量 × 保雪朝向</h3>
+      <div class="method">
+        <article class="m-item">
+          <div class="m-no">01<small>25%</small></div>
+          <h3>粉雪质量与降雪量</h3>
+          <h4>年均降雪厚度 × 干粉含水量 × 保雪朝向</h4>
           <p>综合考量年均天然降雪量（如北海道喜乐乐 16m、犹他阿尔塔 13.9m）、冷干程度（西伯利亚寒流或大盐湖效应带来的 7–9% 超低含水量香槟粉雪）以及海拔 2000m–3800m 冰川北坡对春雪的保存能力。</p>
         </article>
-        <article class="method-card">
-          <div class="pct">25% · 垂直落差与雪道规模</div>
-          <h3>不间断有效落差 × 全缆车互联里程</h3>
+        <article class="m-item">
+          <div class="m-no">02<small>25%</small></div>
+          <h3>垂直落差与雪道规模</h3>
+          <h4>不间断有效落差 × 全缆车互联里程</h4>
           <p>只统计无需脱板坐巴士的实测连续垂直落差（如霞慕尼 2807m、韦尔比耶 2509m、采尔马特 2279m、雷夫尔斯托克 1713m）与真实互联雪道面积，剔除注水虚标。</p>
         </article>
-        <article class="method-card">
-          <div class="pct">15% · 缆车运力与滑进滑出</div>
-          <h3>3S跨谷巨缆 × 零步行 Ski-in/Ski-out</h3>
+        <article class="m-item">
+          <div class="m-no">03<small>15%</small></div>
+          <h3>缆车运力与滑进滑出</h3>
+          <h4>3S 跨谷巨缆 × 零步行 Ski-in/Ski-out</h4>
           <p>评估多索道 3S 抗风贡多拉、加热气泡高速吊椅的排队效率，以及像法国葱仁谷、阿沃里亚兹、上陶恩那样推开酒店门即踩上雪道的无车村规划。</p>
         </article>
-        <article class="method-card">
-          <div class="pct">15% · 全水平道型配比</div>
-          <h3>从地毯绿道到双黑钻陡槽 &amp; 树林野雪门</h3>
-          <p>兼顾新手家庭的宽阔压雪绿蓝道（如多洛米蒂、铜山天然分流）、自由式公园（LAAX 200米U池）与大神级陡槽（Jackson Hole Corbet's Couloir、二世古 11 大野雪门）。</p>
+        <article class="m-item">
+          <div class="m-no">04<small>15%</small></div>
+          <h3>全水平道型配比</h3>
+          <h4>从地毯绿道到双黑钻陡槽 &amp; 树林野雪门</h4>
+          <p>兼顾新手家庭的宽阔压雪绿蓝道（如多洛米蒂、铜山天然分流）、自由式公园（LAAX 200 米 U 池）与大神级陡槽（Jackson Hole Corbet's Couloir、二世古 11 大野雪门）。</p>
         </article>
-        <article class="method-card">
-          <div class="pct">10% · 温泉餐饮与 Après-ski</div>
-          <h3>火山天然外汤 × 阿尔卑斯米其林山屋</h3>
+        <article class="m-item">
+          <div class="m-no">05<small>10%</small></div>
+          <h3>温泉餐饮与 Après-ski</h3>
+          <h4>火山天然外汤 × 阿尔卑斯米其林山屋</h4>
           <p>从日本野泽温泉 13 座江户古汤、藏王硫磺露天风吕，到意大利多洛米蒂 Rifugio 松露意面、奥地利圣安东 MooserWirt 与伊施格尔传奇电音派对。</p>
         </article>
-        <article class="method-card">
-          <div class="pct">10% · 雪票与住宿性价比</div>
-          <h3>单日雪票亲民度 × Epic/Ikon 国际通票权益</h3>
+        <article class="m-item">
+          <div class="m-no">06<small>10%</small></div>
+          <h3>雪票与住宿性价比</h3>
+          <h4>单日雪票亲民度 × Epic/Ikon 国际通票权益</h4>
           <p>对比北美窗口票动辄 $230+ 与欧洲 300km 级大雪场仅 $70–$85、日本 $45–$65、格鲁吉亚古道里 $26 的真实花费，并提供季卡换乘省钱秘籍。</p>
         </article>
       </div>
-    </div>
-  </section>
+      <div class="legend-strip" aria-label="雪道标识图例">
+        <b>Piste code = 榜单梯队</b>
+        <span><i class="pm sm t-T0"></i>T0 殿堂神山 · 双黑钻</span>
+        <span><i class="pm sm t-T1"></i>T1 世界旗舰 · 红道</span>
+        <span><i class="pm sm t-T1-5"></i>T1.5 区域王牌 · 蓝道</span>
+        <span><i class="pm sm t-T2"></i>T2 特色名山 · 绿道</span>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
+    <!-- II. Visualisation -->
+    <section class="section" id="profile" aria-labelledby="profile-title">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true"><small>PISTE</small>02</div>
+        <div>
+          <div class="sec-kicker">Elevation Profile · 海拔剖面</div>
+          <h2 id="profile-title">百座雪山连成一条山脊线</h2>
+          <p>每座三角峰代表一座雪场：峰顶 = 最高缆车海拔，深色部分 = 可滑垂直落差，峰底宽度随雪道总长变化。悬停查看数据。</p>
+        </div>
+      </div>
+      <div class="viz-card">
+        <div class="viz-top">
+          <h3>Vertical Skyline<small>海拔 × 落差 × 雪道规模</small></h3>
+          <div class="seg" id="profile-seg" role="group" aria-label="剖面排序">
+            <button type="button" data-order="rank" aria-pressed="true">按排名</button>
+            <button type="button" data-order="peak" aria-pressed="false">按海拔</button>
+            <button type="button" data-order="region" aria-pressed="false">按大区</button>
+          </div>
+        </div>
+        <svg id="profile-svg" viewBox="0 0 1200 300" role="img" aria-label="100 座雪场的海拔与垂直落差剖面图"></svg>
+        <div class="profile-read" id="profile-read" aria-live="polite"></div>
+      </div>
+      <div class="viz-grid">
+        <div class="viz-card">
+          <div class="viz-top">
+            <h3>Drop vs. Powder<small>垂直落差 × 年均降雪</small></h3>
+          </div>
+          <svg id="scatter-svg" viewBox="0 0 640 400" role="img" aria-label="垂直落差与年均降雪散点图"></svg>
+        </div>
+        <div class="viz-card">
+          <div class="viz-top"><h3>Record Board<small>六项之最</small></h3></div>
+          <ul class="records" id="records"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- III. Ranking -->
+    <section class="section" id="ranking" aria-labelledby="ranking-title">
+      <div class="sec-head">
+        <div class="sec-no" aria-hidden="true"><small>PISTE</small>03</div>
+        <div>
+          <div class="sec-kicker">The Index · 百大雪场榜</div>
+          <h2 id="ranking-title">按你的滑雪风格，重排这 100 座雪山</h2>
+        </div>
+      </div>
+
+      <div class="mixer" aria-label="六维评分权重">
+        <div class="mixer-label">Weights<b>评分权重</b><span id="active-preset-tag">默认均衡权重</span></div>
+        <div class="wbar" id="wbar" aria-hidden="true"></div>
+        <button type="button" class="disclose" id="custom-toggle" aria-expanded="false" aria-controls="sliders">
+          自定义权重
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
+        <div class="mixer-row2">
+          <div class="seg" id="preset-seg" role="group" aria-label="权重预设">
+            <button type="button" class="preset-btn" data-preset="balanced" aria-pressed="true">默认均衡</button>
+            <button type="button" class="preset-btn" data-preset="powder" aria-pressed="false">粉雪猎人</button>
+            <button type="button" class="preset-btn" data-preset="bigmountain" aria-pressed="false">千米落差</button>
+            <button type="button" class="preset-btn" data-preset="family" aria-pressed="false">亲子 · 温泉</button>
+            <button type="button" class="preset-btn" data-preset="value" aria-pressed="false">极致性价比</button>
+          </div>
+        </div>
+        <div class="sliders" id="sliders" hidden>
+          <div class="slider-box"><label for="w-snow">粉雪与降雪 <output id="out-snow">25%</output></label><input type="range" id="w-snow" min="0" max="50" step="5" value="25" /><small>年降雪量 / 干粉含水量</small></div>
+          <div class="slider-box"><label for="w-terrain">落差与规模 <output id="out-terrain">25%</output></label><input type="range" id="w-terrain" min="0" max="50" step="5" value="25" /><small>千米落差 / 雪道总长</small></div>
+          <div class="slider-box"><label for="w-lifts">缆车与滑进滑出 <output id="out-lifts">15%</output></label><input type="range" id="w-lifts" min="0" max="40" step="5" value="15" /><small>高速贡多拉 / Ski-in</small></div>
+          <div class="slider-box"><label for="w-variety">全水平道型 <output id="out-variety">15%</output></label><input type="range" id="w-variety" min="0" max="40" step="5" value="15" /><small>绿蓝红黑道 / 公园 / 树林</small></div>
+          <div class="slider-box"><label for="w-apres">温泉餐饮 Après <output id="out-apres">10%</output></label><input type="range" id="w-apres" min="0" max="40" step="5" value="10" /><small>露天温泉 / 山屋米其林</small></div>
+          <div class="slider-box"><label for="w-value">雪票住宿性价比 <output id="out-value">10%</output></label><input type="range" id="w-value" min="0" max="40" step="5" value="10" /><small>日票价格 / 季卡覆盖</small></div>
+        </div>
+      </div>
+
+      <div class="filters" id="filters" role="search">
+        <label class="search">
+          <span class="sr-only">搜索雪场</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
+          <input type="search" id="search-input" placeholder="雪场 / 国家 / Ikon · Epic / 冰川 / 温泉…" autocomplete="off" />
+        </label>
+        <div class="seg" id="region-seg" role="group" aria-label="按地理大区筛选"></div>
+        <div class="seg" id="tier-seg" role="group" aria-label="按梯队筛选"></div>
+        <label class="sel"><span class="sr-only">适合人群</span><select id="crowd-sel" aria-label="按适合人群筛选"></select></label>
+        <label class="sel"><span class="sr-only">排序</span>
+          <select id="sort-sel" aria-label="排序方式">
+            <option value="score">排序：综合得分</option>
+            <option value="pisteKm">排序：雪道总长</option>
+            <option value="verticalDropM">排序：垂直落差</option>
+            <option value="snowfallM">排序：年均降雪</option>
+            <option value="peakElevM">排序：最高海拔</option>
+            <option value="dayPassUsd">排序：雪票最低</option>
+          </select>
+        </label>
+        <div class="tally" id="result-count" aria-live="polite">显示 <b>100</b> / 100</div>
+      </div>
+
+      <div id="list"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <svg class="foot-ridge" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 44 L120 20 L190 38 L300 6 L390 34 L470 22 L560 46 L680 12 L760 30 L860 4 L960 36 L1040 24 L1150 48 L1260 14 L1350 34 L1440 22 L1440 60 Z" fill="#0f2442"/>
+    </svg>
+    <div class="wrap foot-inner">
       <div>
-        <strong style="color:#fff;">The Alpine &amp; Powder Index · 全球滑雪度假村 Top 100</strong>
-        <p style="margin-top:4px;">Destination Atlas 全球目的地严肃排名工程 · 数据涵盖海拔、落差、雪道里程、年降雪量与 Epic/Ikon 实用攻略。</p>
+        <strong>The Alpine &amp; Powder Index</strong>
+        <p>全球滑雪度假村 Top 100 · Destination Atlas 全球目的地严肃排名工程。数据涵盖海拔、落差、雪道里程、年降雪量与 Epic/Ikon 实用攻略；雪票为成人旺季窗口单日价折合美元，仅供规划参考。</p>
       </div>
-      <div class="footer-links">
-        <a href="index.html">返回总览</a>
-        <a href="beaches.html">海滨度假</a>
-        <a href="aquariums.html">水族馆</a>
-        <a href="zoos.html">动物园</a>
-        <a href="museums.html">科技军工博物馆</a>
-        <a href="themeparks.html">主题乐园</a>
-        <a href="shows.html">实景演艺</a>
-      </div>
+      <nav aria-label="站点导航">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html">奢华邮轮 50</a>
+        <a href="canals.html">运河房船 20</a>
+        <a href="sailing.html">帆船航线 20</a>
+        <a href="rv.html">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="themeparks.html">主题乐园 100</a>
+        <a href="ski.html" aria-current="page">全球雪场 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+      <div class="sig"><span>◆ Alpine &amp; Powder Index · 2026/27 Season</span><span>Photos: Wikimedia Commons (CC)</span></div>
     </div>
   </footer>
 
@@ -1215,338 +1102,577 @@
   <script src="shared_widgets.js" defer></script>
   <script>
     (function () {
-      const rawData = Array.isArray(window.SKI_RESORTS_TOP100) ? window.SKI_RESORTS_TOP100 : [];
+      "use strict";
+      var rawData = Array.isArray(window.SKI_RESORTS_TOP100) ? window.SKI_RESORTS_TOP100 : [];
+      var THEMED = window.THEMED_IMAGES || {};
+      var NS = "http://www.w3.org/2000/svg";
 
-      const PRESETS = {
+      var PRESETS = {
         balanced: { label: "默认均衡权重", weights: { snow: 25, terrain: 25, lifts: 15, variety: 15, apres: 10, value: 10 } },
         powder: { label: "粉雪猎人模式", weights: { snow: 50, terrain: 20, lifts: 10, variety: 10, apres: 5, value: 5 } },
         bigmountain: { label: "千米落差刷道模式", weights: { snow: 20, terrain: 45, lifts: 20, variety: 10, apres: 0, value: 5 } },
         family: { label: "亲子滑进滑出 & 温泉", weights: { snow: 15, terrain: 10, lifts: 25, variety: 25, apres: 20, value: 5 } },
         value: { label: "极致性价比模式", weights: { snow: 20, terrain: 20, lifts: 10, variety: 10, apres: 5, value: 35 } }
       };
+      var DIMS = [
+        { k: "snow", label: "粉雪", max: 25 }, { k: "terrain", label: "落差", max: 25 }, { k: "lifts", label: "缆车", max: 15 },
+        { k: "variety", label: "道型", max: 15 }, { k: "apres", label: "温泉", max: 10 }, { k: "value", label: "性价", max: 10 }
+      ];
+      var REGIONS = [
+        { k: "阿尔卑斯与欧洲", short: "阿尔卑斯" }, { k: "北美落基山与西岸", short: "北美" },
+        { k: "日本粉雪与亚洲", short: "日本·亚洲" }, { k: "南半球反季", short: "南半球" }
+      ];
+      var TIERS = [
+        { k: "T0", label: "殿堂神山" }, { k: "T1", label: "世界旗舰" }, { k: "T1.5", label: "区域王牌" }, { k: "T2", label: "特色名山" }
+      ];
+      var CROWDS = ["粉雪朝圣", "千米落差大神", "新手家庭友好", "Ski-in/Ski-out", "温泉美食", "反季滑雪"];
+      var SORT_LABEL = { score: "综合得分", pisteKm: "雪道总长", verticalDropM: "垂直落差", snowfallM: "年均降雪", peakElevM: "最高海拔", dayPassUsd: "雪票价格" };
+      var mqMobile = window.matchMedia ? window.matchMedia("(max-width: 720px)") : null;
+      var FEATURE_N = 12;
+      function featureN() { return mqMobile && mqMobile.matches ? 4 : FEATURE_N; }
 
-      const state = {
-        weights: { snow: 25, terrain: 25, lifts: 15, variety: 15, apres: 10, value: 10 },
-        region: "ALL",
-        tier: "ALL",
-        crowd: "ALL",
-        sortBy: "score",
-        query: ""
+      var state = {
+        weights: Object.assign({}, PRESETS.balanced.weights),
+        region: "ALL", tier: "ALL", crowd: "ALL", sortBy: "score", query: "",
+        open: {}
       };
 
-      const sliders = {
-        snow: document.getElementById("w-snow"),
-        terrain: document.getElementById("w-terrain"),
-        lifts: document.getElementById("w-lifts"),
-        variety: document.getElementById("w-variety"),
-        apres: document.getElementById("w-apres"),
-        value: document.getElementById("w-value")
+      /* ---------- helpers ---------- */
+      function esc(str) {
+        return String(str == null ? "" : str).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      function num(v) { return typeof v === "number" && isFinite(v); }
+      function fmt(v, d) { return num(v) ? v.toLocaleString("en-US", { maximumFractionDigits: d || 0, minimumFractionDigits: d || 0 }) : "—"; }
+      function tierCls(t) { return "t-" + String(t || "T2").replace(".", "-"); }
+      function pm(item, n, extra) {
+        return '<span class="pm ' + tierCls(item.tier) + (extra ? " " + extra : "") + '" title="' + esc(item.tier) + '"><i>' + (n == null ? "" : n) + "</i></span>";
+      }
+      function splitName(name) {
+        var m = String(name || "").match(/^(.*?)\s*[(（](.*)[)）]\s*$/);
+        return m ? { cn: m[1], en: m[2] } : { cn: String(name || ""), en: "" };
+      }
+      function shortName(name) { return splitName(name).cn.split(" · ")[0].split("–")[0].trim(); }
+      function stripTags(s) { return String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim(); }
+      function imgOf(item) {
+        if (item.noPhoto) return null;
+        var e = item.image || THEMED[item.id];
+        if (!e) return null;
+        if (typeof e === "string") return { src: e };
+        return e.src ? e : null;
+      }
+      function isDefaultWeights() {
+        var b = PRESETS.balanced.weights, w = state.weights;
+        return Object.keys(b).every(function (k) { return b[k] === w[k]; });
+      }
+
+      /* ---------- themed fallback cover ---------- */
+      var fbCount = 0;
+      function fallbackSvg(id) {
+        var item = rawData.find(function (d) { return d.id === id; }) || { rank: 1, tier: "T2" };
+        var seed = ((item.rank || 1) * 37) % 90, gid = "fbg" + (++fbCount);
+        var p1 = 70 + seed, p2 = 250 + (seed % 60);
+        var col = { T0: "#15181c", T1: "#cf2f2a", "T1.5": "#1f5fbf", T2: "#1d8a4e" }[item.tier] || "#1f5fbf";
+        return '<svg class="fb" viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
+          '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd0e6"/><stop offset="1" stop-color="#f5f3ee"/></linearGradient></defs>' +
+          '<rect width="480" height="300" fill="url(#' + gid + ')"/>' +
+          '<circle cx="' + (380 - seed % 40) + '" cy="70" r="30" fill="#fff" fill-opacity=".8"/>' +
+          '<path d="M-10 300 L' + p1 + ' 120 L' + (p1 + 90) + ' 210 L' + p2 + ' 90 L400 200 L490 140 L490 300 Z" fill="#8fa8c7"/>' +
+          '<path d="M' + p2 + ' 90 L' + (p2 + 30) + ' 135 L' + (p2 + 10) + ' 142 L' + (p2 - 4) + ' 122 L' + (p2 - 22) + ' 146 Z" fill="#fff"/>' +
+          '<path d="M20 300 L170 150 L250 230 L330 170 L490 300 Z" fill="#fff"/>' +
+          '<path d="M170 150 L250 230 L330 170 L490 300 L230 300 Z" fill="#dfe7f0"/>' +
+          '<path d="M172 168 C 160 200 196 222 176 256 S 168 290 180 300" fill="none" stroke="' + col + '" stroke-width="4" stroke-linecap="round"/>' +
+          '<rect y="276" width="480" height="24" fill="#0f2442"/>' +
+          '<text x="16" y="293" font-family="Oswald, sans-serif" font-size="12" letter-spacing="4" fill="#fff">ALPINE &amp; POWDER · Nº ' + esc(item.rank) + '</text></svg>';
+      }
+      window.skiImgFail = function (img) {
+        var m = img.closest ? img.closest(".media") : null;
+        if (!m) { img.style.display = "none"; return; }
+        var id = m.getAttribute("data-fb");
+        img.remove();
+        m.insertAdjacentHTML("afterbegin", fallbackSvg(id));
       };
+      function mediaHtml(item, opts) {
+        var im = imgOf(item);
+        var inner = im
+          ? '<img src="' + esc(im.src) + '" alt="' + esc(splitName(item.name).cn) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;window.skiImgFail(this)" />'
+          : fallbackSvg(item.id);
+        var credit = "";
+        if (opts && opts.credit && im && (im.artist || im.license)) {
+          credit = '<span class="credit">© ' + esc(stripTags(im.artist) || "Wikimedia Commons") + (im.license ? " · " + esc(im.license) : "") + "</span>";
+        }
+        return '<div class="media" data-fb="' + esc(item.id) + '">' + inner + (opts && opts.extra ? opts.extra : "") + credit + "</div>";
+      }
 
-      const outputs = {
-        snow: document.getElementById("out-snow"),
-        terrain: document.getElementById("out-terrain"),
-        lifts: document.getElementById("out-lifts"),
-        variety: document.getElementById("out-variety"),
-        apres: document.getElementById("out-apres"),
-        value: document.getElementById("out-value")
-      };
-
-      const gridEl = document.getElementById("cards-grid");
-      const countEl = document.getElementById("result-count");
-      const presetTagEl = document.getElementById("active-preset-tag");
-      const searchInput = document.getElementById("search-input");
-
+      /* ---------- scoring ---------- */
       function computeWeightedScore(item) {
-        const s = item.scores || { snow: 20, terrain: 20, lifts: 12, variety: 12, apres: 8, value: 8 };
-        const w = state.weights;
-        const totalW = (w.snow + w.terrain + w.lifts + w.variety + w.apres + w.value) || 100;
-
-        // Normalize each dimension to 0..1 ratio based on its max score (25, 25, 15, 15, 10, 10)
-        const normSnow = (s.snow / 25) * w.snow;
-        const normTerrain = (s.terrain / 25) * w.terrain;
-        const normLifts = (s.lifts / 15) * w.lifts;
-        const normVariety = (s.variety / 15) * w.variety;
-        const normApres = (s.apres / 10) * w.apres;
-        const normValue = (s.value / 10) * w.value;
-
-        const rawSum = normSnow + normTerrain + normLifts + normVariety + normApres + normValue;
-        return (rawSum / totalW) * 100;
+        var s = item.scores || { snow: 20, terrain: 20, lifts: 12, variety: 12, apres: 8, value: 8 };
+        var w = state.weights;
+        var totalW = w.snow + w.terrain + w.lifts + w.variety + w.apres + w.value;
+        if (!totalW) return 0;
+        var raw = (s.snow / 25) * w.snow + (s.terrain / 25) * w.terrain + (s.lifts / 15) * w.lifts +
+          (s.variety / 15) * w.variety + (s.apres / 10) * w.apres + (s.value / 10) * w.value;
+        return (raw / totalW) * 100;
       }
 
-      function buildFallbackSvg(item) {
-        const palettes = {
-          "阿尔卑斯与欧洲": ["#091e36", "#134775", "#38bdf8"],
-          "北美落基山与西岸": ["#0f172a", "#1e3a8a", "#60a5fa"],
-          "日本粉雪与亚洲": ["#111827", "#312e81", "#818cf8"],
-          "南半球反季": ["#06283d", "#1363df", "#47b5ff"]
-        };
-        const [c1, c2, c3] = palettes[item.region] || palettes["阿尔卑斯与欧洲"];
-        const seed = (item.rank * 37) % 90;
-        const p1x = 95 + seed;
-        const p2x = 260 + (seed % 50);
-        return `
-          <svg class="card-cover-svg" viewBox="0 0 480 200" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="bg-${item.id}" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="${c1}"/>
-                <stop offset="60%" stop-color="${c2}"/>
-                <stop offset="100%" stop-color="${c3}"/>
-              </linearGradient>
-            </defs>
-            <rect width="480" height="200" fill="url(#bg-${item.id})"/>
-            <circle cx="${390 - (seed % 40)}" cy="42" r="18" fill="#ffffff" fill-opacity="0.14"/>
-            <path d="M-20,200 L${p1x},52 L${p1x + 115},165 L${p2x},38 L410,155 L500,85 L500,200 Z" fill="#ffffff" fill-opacity="0.13"/>
-            <path d="M${p2x},38 L${p2x + 38},92 L${p2x + 12},102 L${p2x - 4},74 L${p2x - 24},106 Z" fill="#ffffff" fill-opacity="0.32"/>
-            <path d="M40,200 L175,88 L295,180 L385,72 L500,200 Z" fill="#071526" fill-opacity="0.35"/>
-          </svg>
-        `;
+      /* ---------- hero stats ---------- */
+      function maxBy(f, asc) {
+        return rawData.slice().filter(function (d) { return num(f(d)); }).sort(function (a, b) { return asc ? f(a) - f(b) : f(b) - f(a); })[0];
+      }
+      function renderHeroStats() {
+        var el = document.getElementById("hero-stats");
+        if (!rawData.length) { el.style.display = "none"; return; }
+        var counts = REGIONS.map(function (r) { return rawData.filter(function (d) { return d.region === r.k; }).length; });
+        var nCountry = Object.keys(rawData.reduce(function (m, d) { if (d.country) m[d.country] = 1; return m; }, {})).length;
+        var drop = maxBy(function (d) { return d.verticalDropM; }), km = maxBy(function (d) { return d.pisteKm; });
+        var snow = maxBy(function (d) { return d.snowfallM; }), cheap = maxBy(function (d) { return d.dayPassUsd; }, true);
+        el.innerHTML =
+          '<div><b>' + rawData.length + '<small>座</small></b><span>横跨 <em>' + nCountry + ' 国</em> · ' + counts.filter(Boolean).length + " 大雪区</span></div>" +
+          '<div><b>' + fmt(drop.verticalDropM) + '<small>m</small></b><span>最大垂直落差 · <em>' + esc(shortName(drop.name)) + "</em></span></div>" +
+          '<div><b>' + fmt(km.pisteKm) + '<small>km</small></b><span>最长互联雪道 · <em>' + esc(shortName(km.name)) + "</em></span></div>" +
+          '<div><b>' + fmt(snow.snowfallM, 1) + '<small>m</small></b><span>最深年均降雪 · <em>' + esc(shortName(snow.name)) + "</em></span></div>" +
+          '<div><b>$' + fmt(cheap.dayPassUsd) + '<small>/天</small></b><span>最亲民雪票 · <em>' + esc(shortName(cheap.name)) + "</em></span></div>";
       }
 
-      function escapeHtml(str) {
-        return String(str || "")
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;");
+      /* ---------- poster snowfall ---------- */
+      function buildSnow() {
+        var g = document.getElementById("poster-snow");
+        if (!g) return;
+        var out = "", s = 7;
+        function rnd() { s = (s * 9301 + 49297) % 233280; return s / 233280; }
+        ["snow-a", "snow-b"].forEach(function (cls, li) {
+          var dots = "";
+          for (var i = 0; i < 46; i++) {
+            var x = rnd() * 430, y = rnd() * 560, r = li ? 1 + rnd() * 1.2 : 1.6 + rnd() * 1.8;
+            dots += '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + r.toFixed(1) + '"/>';
+            dots += '<circle cx="' + x.toFixed(1) + '" cy="' + (y + 560).toFixed(1) + '" r="' + r.toFixed(1) + '"/>';
+          }
+          out += '<g class="' + cls + '" fill-opacity="' + (li ? .7 : .95) + '">' + dots + "</g>";
+        });
+        g.innerHTML = out;
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          var svg = document.getElementById("poster-svg");
+          if (svg && svg.pauseAnimations) svg.pauseAnimations();
+        }
       }
 
-      function renderCards() {
-        const q = state.query.trim().toLowerCase();
+      /* ---------- elevation profile ---------- */
+      var profileOrder = "rank", profileList = [];
+      var PF = { W: 1200, H: 300, pl: 46, pr: 8, pt: 18, pb: 18, maxE: 4200 };
+      function pfY(e) { return PF.pt + (1 - Math.max(0, e) / PF.maxE) * (PF.H - PF.pt - PF.pb); }
+      function pfW(d, step) { return Math.min(30, step * 0.7 + Math.sqrt(Math.max(0, d.pisteKm)) * 0.75); }
+      function tierColor(t) { return { T0: "#15181c", T1: "#cf2f2a", "T1.5": "#1f5fbf", T2: "#1d8a4e" }[t] || "#1f5fbf"; }
+      function renderProfile() {
+        var svg = document.getElementById("profile-svg");
+        var list = rawData.slice();
+        if (profileOrder === "peak") list.sort(function (a, b) { return b.peakElevM - a.peakElevM; });
+        else if (profileOrder === "region") list.sort(function (a, b) {
+          var ia = REGIONS.findIndex(function (r) { return r.k === a.region; }), ib = REGIONS.findIndex(function (r) { return r.k === b.region; });
+          return ia - ib || a.rank - b.rank;
+        });
+        else list.sort(function (a, b) { return a.rank - b.rank; });
+        profileList = list;
+        var n = list.length || 1, step = (PF.W - PF.pl - PF.pr) / n, ground = pfY(0);
+        var h = "";
+        [1000, 2000, 3000, 4000].forEach(function (e) {
+          var y = pfY(e).toFixed(1);
+          h += '<line x1="' + PF.pl + '" x2="' + (PF.W - PF.pr) + '" y1="' + y + '" y2="' + y + '" stroke="#0f2442" stroke-opacity=".1" stroke-dasharray="2 4"/>';
+          h += '<text x="' + (PF.pl - 8) + '" y="' + (+y + 4) + '" text-anchor="end" font-family="Oswald, sans-serif" font-size="11" fill="#6a7a91">' + e + "m</text>";
+        });
+        var idx = list.map(function (d, i) { return i; }).sort(function (a, b) { return list[b].peakElevM - list[a].peakElevM; });
+        var body = "";
+        idx.forEach(function (i) {
+          var d = list[i], x = PF.pl + step * (i + 0.5);
+          var yp = pfY(d.peakElevM), yb = pfY(d.peakElevM - d.verticalDropM);
+          var w = pfW(d, step);
+          var frac = (yb - yp) / (ground - yp || 1), wb = w * frac, wc = wb * 0.22, yc = yp + (yb - yp) * 0.22;
+          body += '<path d="M' + x.toFixed(1) + " " + yp.toFixed(1) + "L" + (x - w).toFixed(1) + " " + ground.toFixed(1) + "L" + (x + w).toFixed(1) + " " + ground.toFixed(1) + 'Z" fill="#c9d6e5" fill-opacity=".28"/>';
+          body += '<path d="M' + x.toFixed(1) + " " + yp.toFixed(1) + "L" + (x - wb).toFixed(1) + " " + yb.toFixed(1) + "L" + (x + wb).toFixed(1) + " " + yb.toFixed(1) + 'Z" fill="#1d3d66" fill-opacity=".5" stroke="#fff" stroke-opacity=".8" stroke-width=".7"/>';
+          body += '<path d="M' + x.toFixed(1) + " " + yp.toFixed(1) + "L" + (x - wc).toFixed(1) + " " + yc.toFixed(1) + "L" + (x + wc).toFixed(1) + " " + yc.toFixed(1) + 'Z" fill="#fff" fill-opacity=".95"/>';
+        });
+        var dots = "";
+        list.forEach(function (d, i) {
+          var x = PF.pl + step * (i + 0.5);
+          dots += '<rect x="' + (x - step * 0.36).toFixed(1) + '" y="' + (ground + 4) + '" width="' + (step * 0.72).toFixed(2) + '" height="5" fill="' + tierColor(d.tier) + '"/>';
+        });
+        var sep = "";
+        if (profileOrder === "region") {
+          var start = 0;
+          REGIONS.forEach(function (r) {
+            var c = list.filter(function (d) { return d.region === r.k; }).length;
+            if (!c) return;
+            var x0 = PF.pl + step * start;
+            if (start > 0) sep += '<line x1="' + x0.toFixed(1) + '" x2="' + x0.toFixed(1) + '" y1="' + PF.pt + '" y2="' + ground + '" stroke="#0f2442" stroke-opacity=".35" stroke-dasharray="3 3"/>';
+            sep += '<text x="' + (x0 + 6).toFixed(1) + '" y="' + (PF.pt + 4) + '" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1.5" fill="#0f2442">' + esc(r.short) + " · " + c + "</text>";
+            start += c;
+          });
+        }
+        var hits = "";
+        list.forEach(function (d, i) {
+          hits += '<rect class="hit" data-i="' + i + '" x="' + (PF.pl + step * i).toFixed(1) + '" y="0" width="' + step.toFixed(2) + '" height="' + PF.H + '"><title>' + esc("#" + d.rank + " " + shortName(d.name)) + "</title></rect>";
+        });
+        svg.innerHTML = h + '<line x1="' + PF.pl + '" x2="' + (PF.W - PF.pr) + '" y1="' + ground + '" y2="' + ground + '" stroke="#0f2442"/>' +
+          body + dots + sep + '<g id="pf-hl" pointer-events="none"></g>' + hits;
+        profileHighlight(0);
+      }
+      function profileHighlight(i) {
+        var d = profileList[i];
+        if (!d) return;
+        var step = (PF.W - PF.pl - PF.pr) / profileList.length, x = PF.pl + step * (i + 0.5);
+        var yp = pfY(d.peakElevM), yb = pfY(d.peakElevM - d.verticalDropM), ground = pfY(0);
+        var w = pfW(d, step), wb = w * (yb - yp) / (ground - yp || 1);
+        document.getElementById("pf-hl").innerHTML =
+          '<line x1="' + x + '" x2="' + x + '" y1="' + PF.pt + '" y2="' + ground + '" stroke="#cf2f2a" stroke-opacity=".5" stroke-dasharray="2 3"/>' +
+          '<path d="M' + x + " " + yp + "L" + (x - wb) + " " + yb + "L" + (x + wb) + " " + yb + 'Z" fill="none" stroke="#cf2f2a" stroke-width="1.8"/>' +
+          '<line x1="' + (x - wb - 6) + '" x2="' + (x + wb + 6) + '" y1="' + yb + '" y2="' + yb + '" stroke="#cf2f2a" stroke-width="1"/>';
+        document.getElementById("profile-read").innerHTML =
+          pm(d, null, "sm") + "<b>#" + d.rank + " " + esc(shortName(d.name)) + "</b><span>" + esc(d.country) + "</span>" +
+          '<span class="kv"><small>顶</small>' + fmt(d.peakElevM) + "m</span>" +
+          '<span class="kv"><small>底</small>' + fmt(d.peakElevM - d.verticalDropM) + "m</span>" +
+          '<span class="kv"><small>落差</small>' + fmt(d.verticalDropM) + "m</span>" +
+          '<span class="kv"><small>雪道</small>' + fmt(d.pisteKm) + "km</span>";
+      }
 
-        const enriched = rawData.map(item => ({
-          ...item,
-          computedScore: computeWeightedScore(item)
-        }));
+      /* ---------- scatter ---------- */
+      function renderScatter() {
+        var svg = document.getElementById("scatter-svg");
+        var W = 640, H = 400, pl = 46, pr = 18, pt = 16, pb = 44, xMax = 3000, yMax = 17;
+        function X(v) { return pl + (v / xMax) * (W - pl - pr); }
+        function Y(v) { return pt + (1 - v / yMax) * (H - pt - pb); }
+        var g = "";
+        for (var xv = 0; xv <= xMax; xv += 500) {
+          g += '<line x1="' + X(xv) + '" x2="' + X(xv) + '" y1="' + pt + '" y2="' + (H - pb) + '" stroke="#0f2442" stroke-opacity="' + (xv ? .08 : .5) + '"/>';
+          g += '<text x="' + X(xv) + '" y="' + (H - pb + 16) + '" text-anchor="middle" font-family="Oswald, sans-serif" font-size="11" fill="#6a7a91">' + fmt(xv) + "</text>";
+        }
+        for (var yv = 0; yv <= 16; yv += 4) {
+          g += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(yv) + '" y2="' + Y(yv) + '" stroke="#0f2442" stroke-opacity="' + (yv ? .08 : .5) + '"/>';
+          g += '<text x="' + (pl - 8) + '" y="' + (Y(yv) + 4) + '" text-anchor="end" font-family="Oswald, sans-serif" font-size="11" fill="#6a7a91">' + yv + "m</text>";
+        }
+        g += '<text x="' + (W - pr) + '" y="' + (H - 6) + '" text-anchor="end" font-size="11.5" fill="#3a4e6c">垂直落差 (m) →</text>';
+        g += '<text x="' + (pl + 6) + '" y="' + (pt + 12) + '" font-size="11.5" fill="#3a4e6c">↑ 年均降雪 (m)</text>';
+        var pts = "";
+        var order = rawData.slice().sort(function (a, b) { return b.rank - a.rank; });
+        order.forEach(function (d) {
+          if (!num(d.verticalDropM) || !num(d.snowfallM)) return;
+          var x = X(d.verticalDropM), y = Y(d.snowfallM), c = tierColor(d.tier), shape;
+          var t = "<title>" + esc("#" + d.rank + " " + shortName(d.name) + " · 落差 " + fmt(d.verticalDropM) + "m · 降雪 " + fmt(d.snowfallM, 1) + "m") + "</title>";
+          if (d.tier === "T2") shape = '<circle cx="' + x + '" cy="' + y + '" r="4.2" fill="' + c + '"';
+          else if (d.tier === "T1.5") shape = '<rect x="' + (x - 4) + '" y="' + (y - 4) + '" width="8" height="8" fill="' + c + '"';
+          else { var s = d.tier === "T0" ? 6.2 : 5; shape = '<path d="M' + x + " " + (y - s) + "L" + (x + s) + " " + y + "L" + x + " " + (y + s) + "L" + (x - s) + " " + y + 'Z" fill="' + c + '"'; }
+          pts += shape + ' fill-opacity=".85" stroke="#fff" stroke-width="1">' + t + (shape.indexOf("<circle") === 0 ? "</circle>" : shape.indexOf("<rect") === 0 ? "</rect>" : "</path>");
+        });
+        var picks = [], seen = {};
+        function pick(d) { if (d && !seen[d.id]) { seen[d.id] = 1; picks.push(d); } }
+        pick(maxBy(function (d) { return d.verticalDropM; }));
+        pick(maxBy(function (d) { return d.snowfallM; }));
+        pick(maxBy(function (d) { return d.verticalDropM * d.snowfallM; }));
+        pick(rawData.find(function (d) { return d.rank === 1; }));
+        pick(maxBy(function (d) { return d.verticalDropM; }, true));
+        var labels = "";
+        picks.forEach(function (d) {
+          var x = X(d.verticalDropM), y = Y(d.snowfallM), right = x > W * 0.68;
+          var tx = right ? x - 10 : x + 10;
+          labels += '<text x="' + tx + '" y="' + (y - 7) + '" text-anchor="' + (right ? "end" : "start") + '" font-size="11.5" font-weight="600" fill="#0f2442" paint-order="stroke" stroke="#fff" stroke-width="3">' + esc(shortName(d.name)) + "</text>";
+        });
+        svg.innerHTML = g + pts + labels;
+      }
 
-        const filtered = enriched.filter(item => {
+      /* ---------- records ---------- */
+      function renderRecords() {
+        var defs = [
+          { k: "最大垂直落差", f: function (d) { return d.verticalDropM; }, u: "m", d: 0 },
+          { k: "最长互联雪道", f: function (d) { return d.pisteKm; }, u: "km", d: 0 },
+          { k: "最深年均降雪", f: function (d) { return d.snowfallM; }, u: "m", d: 1 },
+          { k: "最高缆车海拔", f: function (d) { return d.peakElevM; }, u: "m", d: 0 },
+          { k: "最多缆车数量", f: function (d) { return d.liftsCount; }, u: "条", d: 0 },
+          { k: "最亲民单日雪票", f: function (d) { return d.dayPassUsd; }, u: "/天", d: 0, asc: true, pre: "$" }
+        ];
+        document.getElementById("records").innerHTML = defs.map(function (r) {
+          var d = maxBy(r.f, r.asc);
+          if (!d) return "";
+          return "<li>" + pm(d, null, "sm") + '<div><div class="r-k">' + esc(r.k) + '</div><div class="r-n">' + esc(shortName(d.name)) + " · " + esc(d.country) + '</div></div><div class="r-v">' + (r.pre || "") + fmt(r.f(d), r.d) + "<small>" + r.u + "</small></div></li>";
+        }).join("");
+      }
+
+      /* ---------- controls ---------- */
+      var sliders = {}, outputs = {};
+      DIMS.forEach(function (d) { sliders[d.k] = document.getElementById("w-" + d.k); outputs[d.k] = document.getElementById("out-" + d.k); });
+      var presetTagEl = document.getElementById("active-preset-tag");
+      var listEl = document.getElementById("list");
+      var countEl = document.getElementById("result-count");
+      var searchInput = document.getElementById("search-input");
+
+      function renderWbar() {
+        var w = state.weights, total = DIMS.reduce(function (s, d) { return s + w[d.k]; }, 0);
+        document.getElementById("wbar").innerHTML = total ? DIMS.map(function (d) {
+          var pct = Math.round(w[d.k] / total * 100);
+          return '<span style="flex-grow:' + w[d.k] + '" title="' + d.label + " " + pct + '%">' + (pct >= 7 ? "<em>" + d.label + "</em> <b>" + pct + "%</b>" : pct >= 4 ? "<b>" + pct + "</b>" : "") + "</span>";
+        }).join("") : '<span style="flex-grow:1;background:transparent;color:#6a7a91">所有权重为 0 · 请调高任一维度</span>';
+      }
+      function segButtons(el, items, active, onPick) {
+        el.innerHTML = items.map(function (it) {
+          return '<button type="button" data-k="' + esc(it.k) + '" aria-pressed="' + (it.k === active) + '"' + (it.title ? ' title="' + esc(it.title) + '"' : "") + ">" + it.html + "</button>";
+        }).join("");
+        el.addEventListener("click", function (e) {
+          var b = e.target.closest("button[data-k]");
+          if (!b) return;
+          el.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          onPick(b.getAttribute("data-k"));
+        });
+      }
+      function buildFilters() {
+        segButtons(document.getElementById("region-seg"),
+          [{ k: "ALL", html: "全部 <small>" + rawData.length + "</small>" }].concat(REGIONS.map(function (r) {
+            return { k: r.k, title: r.k, html: esc(r.short) + " <small>" + rawData.filter(function (d) { return d.region === r.k; }).length + "</small>" };
+          })), "ALL", function (k) { state.region = k; renderList(); });
+        segButtons(document.getElementById("tier-seg"),
+          [{ k: "ALL", html: "全部" }].concat(TIERS.map(function (t) {
+            return { k: t.k, title: t.k + " " + t.label + " · " + rawData.filter(function (d) { return d.tier === t.k; }).length + " 座", html: pm({ tier: t.k }, null, "sm") + esc(t.k) };
+          })), "ALL", function (k) { state.tier = k; renderList(); });
+        var crowdSel = document.getElementById("crowd-sel");
+        crowdSel.innerHTML = '<option value="ALL">人群：全部</option>' + CROWDS.map(function (c) {
+          var n = rawData.filter(function (d) { return (d.bestFor || []).indexOf(c) > -1; }).length;
+          return n ? '<option value="' + esc(c) + '">' + esc(c) + " (" + n + ")</option>" : "";
+        }).join("");
+        crowdSel.addEventListener("change", function () { state.crowd = crowdSel.value; renderList(); });
+        var sortSel = document.getElementById("sort-sel");
+        sortSel.addEventListener("change", function () { state.sortBy = sortSel.value; renderList(); });
+        searchInput.addEventListener("input", function () { state.query = searchInput.value; renderList(); });
+
+        DIMS.forEach(function (d) {
+          sliders[d.k].addEventListener("input", function () {
+            state.weights[d.k] = Number(sliders[d.k].value);
+            outputs[d.k].textContent = state.weights[d.k] + "%";
+            var match = Object.keys(PRESETS).find(function (p) {
+              var pw = PRESETS[p].weights; return DIMS.every(function (x) { return pw[x.k] === state.weights[x.k]; });
+            });
+            presetTagEl.textContent = match ? PRESETS[match].label : "自定义权重";
+            document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.preset === match)); });
+            renderWbar(); renderList();
+          });
+        });
+        document.querySelectorAll(".preset-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var preset = PRESETS[btn.dataset.preset];
+            if (!preset) return;
+            document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+            presetTagEl.textContent = preset.label;
+            DIMS.forEach(function (d) {
+              state.weights[d.k] = preset.weights[d.k];
+              sliders[d.k].value = preset.weights[d.k];
+              outputs[d.k].textContent = preset.weights[d.k] + "%";
+            });
+            renderWbar(); renderList();
+          });
+        });
+        var ct = document.getElementById("custom-toggle"), sl = document.getElementById("sliders");
+        ct.addEventListener("click", function () {
+          var open = ct.getAttribute("aria-expanded") !== "true";
+          ct.setAttribute("aria-expanded", String(open));
+          sl.hidden = !open;
+        });
+        document.querySelectorAll("#profile-seg button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            document.querySelectorAll("#profile-seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+            profileOrder = b.dataset.order; renderProfile();
+          });
+        });
+        var psvg = document.getElementById("profile-svg");
+        psvg.addEventListener("mousemove", function (e) {
+          var r = e.target.closest && e.target.closest(".hit");
+          if (r) profileHighlight(+r.getAttribute("data-i"));
+        });
+        psvg.addEventListener("click", function (e) {
+          var r = e.target.closest && e.target.closest(".hit");
+          if (r) profileHighlight(+r.getAttribute("data-i"));
+        });
+      }
+
+      /* ---------- card pieces ---------- */
+      function metricsCells(item) {
+        return [
+          { k: "verticalDropM", v: fmt(item.verticalDropM), u: "m", l: "垂直落差" },
+          { k: "pisteKm", v: fmt(item.pisteKm), u: "km", l: "雪道总长" },
+          { k: "snowfallM", v: fmt(item.snowfallM, 1), u: "m", l: "年均降雪" },
+          { k: "peakElevM", v: fmt(item.peakElevM), u: "m", l: "最高海拔" },
+          { k: "dayPassUsd", v: num(item.dayPassUsd) ? "$" + fmt(item.dayPassUsd) : "—", u: "", l: "成人日票" }
+        ];
+      }
+      function highlights(item) {
+        return String(item.highlight || "").split(/\s*\+\s*/).filter(Boolean);
+      }
+      function detailHtml(item, withSlot) {
+        var s = item.scores || {};
+        var bars = DIMS.map(function (d) {
+          var v = num(s[d.k]) ? s[d.k] : 0;
+          return '<div class="bar"><span>' + d.label + '</span><div class="track"><i style="width:' + Math.min(100, v / d.max * 100).toFixed(1) + '%"></i></div><b>' + fmt(v, v % 1 ? 1 : 0) + "/" + d.max + "</b></div>";
+        }).join("");
+        var facts = [];
+        if (item.season) facts.push("雪季 <b>" + esc(item.season) + "</b>");
+        if (num(item.liftsCount)) facts.push("缆车 <b>" + fmt(item.liftsCount) + " 条</b>");
+        if (num(item.peakElevM) && num(item.verticalDropM)) facts.push("山脚 <b>" + fmt(item.peakElevM - item.verticalDropM) + " m</b>");
+        if (num(item.dayPassUsd)) facts.push("日票 <b>$" + fmt(item.dayPassUsd) + "</b>");
+        var chips = (item.bestFor || []).map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("");
+        return '<div class="d-bars"><div class="d-title">Score · 六维细分</div><div class="bars">' + bars + "</div></div>" +
+          '<div class="d-hl"><div class="d-title">Highlights · 亮点</div><ul class="hl">' + highlights(item).map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" +
+          '<div class="facts">' + facts.join("") + "</div>" + (withSlot && chips ? '<div class="chips">' + chips + "</div>" : "") + "</div>" +
+          (item.tip ? '<div class="d-tip"><div class="tip"><b>通票与实战贴士</b>' + esc(item.tip) + "</div></div>" : "") +
+          (withSlot ? '<div class="shared-slot"></div>' : "");
+      }
+      var chev = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>';
+      function attrs(item) {
+        return ' data-id="' + esc(item.id) + '" data-dest-id="' + esc(item.id) + '" data-name="' + esc(item.name) + '" data-lat="' + (num(item.lat) ? item.lat : "") + '" data-lon="' + (num(item.lon) ? item.lon : "") + '"';
+      }
+      function rankNote(item) {
+        return item.liveRank !== item.rank ? "编辑榜 #" + item.rank : "";
+      }
+      function featureCard(item) {
+        var nm = splitName(item.name), open = !!state.open[item.id];
+        var cells = metricsCells(item).slice(0, 4).map(function (c) {
+          return "<div><b>" + c.v + "<small>" + c.u + "</small></b><span>" + c.l + "</span></div>";
+        }).join("");
+        var hl = highlights(item);
+        var lead = hl.slice(0, 2).join("；");
+        var chips = (item.bestFor || []).map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("");
+        var extra = '<div class="pm-wrap">' + pm(item, item.liveRank) + "<em>" + (item.liveRank !== item.rank ? "编辑榜 #" + item.rank : esc(item.tier)) + "</em></div>" +
+          '<div class="score-tab" title="当前权重综合得分"><b>' + item.computedScore.toFixed(1) + "</b><span>INDEX</span></div>";
+        return '<article class="fcard ' + tierCls(item.tier) + (open ? " is-open" : "") + '"' + attrs(item) + ">" +
+          mediaHtml(item, { extra: extra, credit: true }) +
+          '<div class="fbody">' +
+          '<div class="loc"><b>' + esc(item.country) + "</b><span>" + esc(item.city) + "</span></div>" +
+          "<h3>" + esc(nm.cn) + (nm.en ? '<span class="en">' + esc(nm.en) + "</span>" : "") + "</h3>" +
+          '<div class="mstrip">' + cells + "</div>" +
+          (lead ? '<p class="lead">' + esc(lead) + "</p>" : "") +
+          (chips ? '<div class="chips">' + chips + "</div>" : "") +
+          '<div class="fmeta"><span><span class="price">' + (num(item.dayPassUsd) ? "$" + fmt(item.dayPassUsd) : "—") + "</span> /天 · 雪季 " + esc(item.season || "—") + "</span>" +
+          '<button type="button" class="toggle" aria-expanded="' + open + '">详情 ' + chev + "</button></div>" +
+          "</div>" +
+          '<div class="detail"' + (open ? "" : " hidden") + ">" + detailHtml(item, false) + "</div>" +
+          '<div class="shared-slot"></div>' +
+          "</article>";
+      }
+      function rowCard(item) {
+        var nm = splitName(item.name), open = !!state.open[item.id];
+        var cells = metricsCells(item).map(function (c) {
+          return '<div class="' + (c.k === state.sortBy ? "hot" : "") + '"><b>' + c.v + "<small>" + c.u + "</small></b><span>" + c.l + "</span></div>";
+        }).join("");
+        return '<article class="row ' + tierCls(item.tier) + (open ? " is-open" : "") + '"' + attrs(item) + ">" +
+          '<div class="row-main">' +
+          '<div class="row-rank">' + pm(item, item.liveRank) + "</div>" +
+          mediaHtml(item, { extra: '<span class="pm-mini">' + pm(item, item.liveRank) + "</span>" }) +
+          '<div class="row-name"><h3>' + esc(nm.cn) + "</h3>" + (nm.en ? '<span class="en">' + esc(nm.en) + "</span>" : "") +
+          '<div class="loc"><b>' + esc(item.country) + "</b><span>" + esc(item.city) + "</span></div></div>" +
+          '<div class="row-metrics">' + cells + "</div>" +
+          '<div class="row-score"><b>' + item.computedScore.toFixed(1) + '</b><div class="mini"><i style="width:' + Math.max(0, Math.min(100, item.computedScore)).toFixed(1) + '%"></i></div><small>' + rankNote(item) + "</small></div>" +
+          '<button type="button" class="toggle" aria-expanded="' + open + '">详情 ' + chev + "</button>" +
+          "</div>" +
+          '<div class="detail"' + (open ? "" : " hidden") + ">" + detailHtml(item, true) + "</div>" +
+          "</article>";
+      }
+
+      /* ---------- main render ---------- */
+      function renderList() {
+        var q = state.query.trim().toLowerCase();
+        var dflt = isDefaultWeights();
+        var enriched = rawData.map(function (item) { return Object.assign({}, item, { computedScore: computeWeightedScore(item) }); });
+        var byScore = enriched.slice().sort(function (a, b) { return b.computedScore - a.computedScore || a.rank - b.rank; });
+        byScore.forEach(function (it, i) { it.liveRank = dflt ? it.rank : i + 1; });
+
+        var filtered = enriched.filter(function (item) {
           if (state.region !== "ALL" && item.region !== state.region) return false;
           if (state.tier !== "ALL" && item.tier !== state.tier) return false;
-          if (state.crowd !== "ALL" && !(item.bestFor || []).includes(state.crowd)) return false;
+          if (state.crowd !== "ALL" && (item.bestFor || []).indexOf(state.crowd) === -1) return false;
           if (q) {
-            const hay = [
-              item.name,
-              item.country,
-              item.region,
-              item.city,
-              item.season,
-              item.highlight,
-              item.tip,
-              ...(item.bestFor || [])
-            ].join(" ").toLowerCase();
-            if (!hay.includes(q)) return false;
+            var hay = [item.name, item.country, item.region, item.city, item.season, item.highlight, item.tip].concat(item.bestFor || []).join(" ").toLowerCase();
+            if (hay.indexOf(q) === -1) return false;
           }
           return true;
         });
-
-        filtered.sort((a, b) => {
-          if (state.sortBy === "pisteKm") return b.pisteKm - a.pisteKm || b.computedScore - a.computedScore;
-          if (state.sortBy === "verticalDropM") return b.verticalDropM - a.verticalDropM || b.computedScore - a.computedScore;
-          if (state.sortBy === "snowfallM") return b.snowfallM - a.snowfallM || b.computedScore - a.computedScore;
-          if (state.sortBy === "dayPassUsd") return a.dayPassUsd - b.dayPassUsd || b.computedScore - a.computedScore;
-          return b.computedScore - a.computedScore || a.rank - b.rank;
+        var sb = state.sortBy;
+        filtered.sort(function (a, b) {
+          if (sb === "dayPassUsd") return a.dayPassUsd - b.dayPassUsd || b.computedScore - a.computedScore;
+          if (sb !== "score") return (b[sb] - a[sb]) || b.computedScore - a.computedScore;
+          return a.liveRank - b.liveRank;
         });
 
-        countEl.innerHTML = `当前筛选共 <b>${filtered.length}</b> / ${rawData.length} 座滑雪度假村`;
+        countEl.innerHTML = "显示 <b>" + filtered.length + "</b> / " + rawData.length;
 
-        if (filtered.length === 0) {
-          gridEl.innerHTML = `
-            <div class="empty-state">
-              <h3 style="font-size:18px;color:var(--slate);">未找到匹配的滑雪度假村</h3>
-              <p style="margin-top:8px;">请尝试切换地理大区、人群标签或清空搜索关键词。</p>
-            </div>
-          `;
+        if (!filtered.length) {
+          listEl.innerHTML = '<div class="empty"><h3>没有符合条件的雪场</h3><p>试试切换大区、梯队或人群标签，或清空搜索关键词。</p><button type="button" class="toggle" id="reset-filters">重置全部筛选</button></div>';
           return;
         }
-
-        const themedImages = window.THEMED_IMAGES || {};
-
-        gridEl.innerHTML = filtered.map((item, idx) => {
-          const imgEntry = themedImages[item.id];
-          const imgUrl = imgEntry ? (typeof imgEntry === "string" ? imgEntry : imgEntry.src) : "";
-          const coverVisual = imgUrl
-            ? `<img src="${escapeHtml(imgUrl)}" alt="${escapeHtml(item.name)}" loading="lazy" onerror="this.remove()" />`
-            : buildFallbackSvg(item);
-
-          const highlights = String(item.highlight || "")
-            .split(/\s*\+\s*/)
-            .filter(Boolean)
-            .map(h => `<li>${escapeHtml(h)}</li>`)
-            .join("");
-
-          const crowdHtml = (item.bestFor || [])
-            .map(tag => `<span class="crowd-tag" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</span>`)
-            .join("");
-
-          const s = item.scores || {};
-
-          return `
-            <article class="ski-card tier-${escapeHtml(item.tier)}" data-id="${escapeHtml(item.id)}" data-dest-id="${escapeHtml(item.id)}" data-lat="${item.lat || ""}" data-lon="${item.lon || ""}" data-name="${escapeHtml(item.name)}">
-              <div class="card-cover">
-                ${coverVisual}
-                <div class="card-cover-overlay">
-                  <div class="cover-top">
-                    <div class="rank-badge">
-                      <span>#${item.rank}</span>
-                      <span class="tier-pill">${escapeHtml(item.tier)}</span>
-                      <span style="font-weight:500;font-size:11.5px;color:#bae6fd;">${escapeHtml(item.country)} · ${escapeHtml(item.region)}</span>
-                    </div>
-                    <div class="score-pill" title="当前权重综合得分">
-                      <b>${item.computedScore.toFixed(1)}</b>
-                      <span>INDEX SCORE</span>
-                    </div>
-                  </div>
-                  <div class="cover-bottom">
-                    <h3>${escapeHtml(item.name)}</h3>
-                    <div class="cover-loc">
-                      <span>📍 ${escapeHtml(item.city)}</span>
-                      <span>·</span>
-                      <span>🚡 ${item.liftsCount} 条缆车</span>
-                      <span class="season-chip">🗓️ 雪季 ${escapeHtml(item.season)}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-body">
-                <div class="metrics-strip" aria-label="核心雪场指标">
-                  <div class="m-cell">
-                    <b class="is-drop">${item.verticalDropM.toLocaleString()}m</b>
-                    <span>垂直落差</span>
-                  </div>
-                  <div class="m-cell">
-                    <b>${item.pisteKm.toLocaleString()}km</b>
-                    <span>雪道总长</span>
-                  </div>
-                  <div class="m-cell">
-                    <b class="is-snow">${item.snowfallM}m</b>
-                    <span>年均降雪</span>
-                  </div>
-                  <div class="m-cell">
-                    <b>${item.peakElevM.toLocaleString()}m</b>
-                    <span>最高海拔</span>
-                  </div>
-                  <div class="m-cell">
-                    <b>$${item.dayPassUsd}/天</b>
-                    <span>成人雪票</span>
-                  </div>
-                </div>
-
-                <div class="dim-bars" aria-label="六维细分得分">
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>粉雪</span><b>${s.snow}/25</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.snow / 25) * 100}%"></div></div>
-                  </div>
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>落差</span><b>${s.terrain}/25</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.terrain / 25) * 100}%"></div></div>
-                  </div>
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>缆车</span><b>${s.lifts}/15</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.lifts / 15) * 100}%"></div></div>
-                  </div>
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>道型</span><b>${s.variety}/15</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.variety / 15) * 100}%"></div></div>
-                  </div>
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>温泉</span><b>${s.apres}/10</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.apres / 10) * 100}%"></div></div>
-                  </div>
-                  <div class="dim-item">
-                    <div class="dim-item-top"><span>性价</span><b>${s.value}/10</b></div>
-                    <div class="dim-track"><div class="dim-fill" style="width:${(s.value / 10) * 100}%"></div></div>
-                  </div>
-                </div>
-
-                <div class="crowd-tags">${crowdHtml}</div>
-
-                <ul class="highlight-list">${highlights}</ul>
-
-                <div class="tip-box">
-                  <b>💡 通票与实战贴士：</b>${escapeHtml(item.tip)}
-                </div>
-                <div class="shared-slot"></div>
-              </div>
-            </article>
-          `;
-        }).join("");
+        var fN = featureN();
+        var feats = filtered.slice(0, fN), rest = filtered.slice(fN);
+        var sortTxt = SORT_LABEL[sb] + (sb === "dayPassUsd" ? "（低→高）" : "");
+        var html = '<div class="list-head"><h3>Top ' + feats.length + "<small>" + (sb === "score" ? (dflt ? "殿堂精选 · 按综合得分" : "按「" + esc(presetTagEl.textContent) + "」重排") : "按" + sortTxt + "排序") + '</small></h3><button type="button" class="ghost-btn" id="expand-all">全部展开详情</button></div>';
+        html += '<div class="feature-grid">' + feats.map(featureCard).join("") + "</div>";
+        if (rest.length) {
+          html += '<div class="list-head"><h3>No. ' + (fN + 1) + "–" + filtered.length + "<small>其余 " + rest.length + " 座 · 点击任一行展开评分、亮点、贴士与顺路推荐</small></h3></div>";
+          var grouped = sb === "score" && dflt;
+          var prevTier = feats[feats.length - 1].tier, rows = "";
+          rest.forEach(function (item) {
+            if (grouped && item.tier !== prevTier) {
+              var t = TIERS.find(function (x) { return x.k === item.tier; });
+              rows += '<div class="tier-divider">' + pm(item, null, "sm") + esc(item.tier) + " · " + esc(t ? t.label : "") + "<small>" + rawData.filter(function (d) { return d.tier === item.tier; }).length + " 座</small></div>";
+              prevTier = item.tier;
+            }
+            rows += rowCard(item);
+          });
+          html += '<div class="rows">' + rows + "</div>";
+        }
+        listEl.innerHTML = html;
         if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
       }
 
-      // Bind sliders
-      Object.keys(sliders).forEach(key => {
-        sliders[key].addEventListener("input", () => {
-          state.weights[key] = Number(sliders[key].value);
-          outputs[key].textContent = state.weights[key] + "%";
-          presetTagEl.textContent = "自定义权重";
-          document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("is-active"));
-          renderCards();
-        });
-      });
-
-      // Bind presets
-      document.querySelectorAll(".preset-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const pKey = btn.dataset.preset;
-          const preset = PRESETS[pKey];
-          if (!preset) return;
-          document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("is-active"));
-          btn.classList.add("is-active");
-          presetTagEl.textContent = preset.label;
-          Object.keys(preset.weights).forEach(k => {
-            state.weights[k] = preset.weights[k];
-            sliders[k].value = preset.weights[k];
-            outputs[k].textContent = preset.weights[k] + "%";
+      function setOpen(card, open) {
+        var id = card.getAttribute("data-id"), det = card.querySelector(".detail"), btn = card.querySelector(".toggle");
+        if (open) state.open[id] = 1; else delete state.open[id];
+        card.classList.toggle("is-open", open);
+        if (det) det.hidden = !open;
+        if (btn) btn.setAttribute("aria-expanded", String(open));
+      }
+      listEl.addEventListener("click", function (e) {
+        if (e.target.closest("#reset-filters")) {
+          state.region = state.tier = state.crowd = "ALL"; state.query = ""; searchInput.value = "";
+          document.getElementById("crowd-sel").value = "ALL";
+          ["region-seg", "tier-seg"].forEach(function (id) {
+            document.querySelectorAll("#" + id + " button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-k") === "ALL")); });
           });
-          renderCards();
-        });
+          renderList(); return;
+        }
+        if (e.target.closest("#expand-all")) {
+          var cards = listEl.querySelectorAll("[data-dest-id]");
+          var anyClosed = Array.prototype.some.call(cards, function (c) { return !c.classList.contains("is-open"); });
+          cards.forEach(function (c) { setOpen(c, anyClosed); });
+          e.target.closest("#expand-all").textContent = anyClosed ? "全部收起详情" : "全部展开详情";
+          return;
+        }
+        if (e.target.closest("a, .shared-slot, .detail")) return;
+        var btn = e.target.closest(".toggle");
+        var card = e.target.closest(".fcard, .row");
+        if (!card) return;
+        if (btn || (card.classList.contains("row") && e.target.closest(".row-main"))) {
+          setOpen(card, !card.classList.contains("is-open"));
+        }
       });
 
-      // Bind region tabs
-      document.getElementById("region-tabs").addEventListener("click", e => {
-        const btn = e.target.closest("button[data-region]");
-        if (!btn) return;
-        state.region = btn.dataset.region;
-        document.querySelectorAll("#region-tabs .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
-        renderCards();
-      });
-
-      // Bind tier tabs
-      document.getElementById("tier-tabs").addEventListener("click", e => {
-        const btn = e.target.closest("button[data-tier]");
-        if (!btn) return;
-        state.tier = btn.dataset.tier;
-        document.querySelectorAll("#tier-tabs .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
-        renderCards();
-      });
-
-      // Bind crowd chips
-      document.getElementById("crowd-chips").addEventListener("click", e => {
-        const btn = e.target.closest("button[data-crowd]");
-        if (!btn) return;
-        state.crowd = btn.dataset.crowd;
-        document.querySelectorAll("#crowd-chips .pill").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
-        renderCards();
-      });
-
-      // Bind sort buttons
-      document.getElementById("sort-buttons").addEventListener("click", e => {
-        const btn = e.target.closest("button[data-sort]");
-        if (!btn) return;
-        state.sortBy = btn.dataset.sort;
-        document.querySelectorAll("#sort-buttons .sort-btn").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
-        renderCards();
-      });
-
-      // Bind search
-      searchInput.addEventListener("input", () => {
-        state.query = searchInput.value;
-        renderCards();
-      });
-
-      // Initial render
-      renderCards();
+      if (!rawData.length) {
+        listEl.innerHTML = '<div class="empty"><h3>雪场数据加载失败</h3><p>请确认 data_ski.js 与本页位于同一目录。</p></div>';
+        return;
+      }
+      renderHeroStats();
+      buildSnow();
+      renderProfile();
+      renderScatter();
+      renderRecords();
+      buildFilters();
+      renderWbar();
+      renderList();
+      if (mqMobile) {
+        var onMq = function () { renderList(); };
+        if (mqMobile.addEventListener) mqMobile.addEventListener("change", onMq); else if (mqMobile.addListener) mqMobile.addListener(onMq);
+      }
     })();
   </script>
 </body>

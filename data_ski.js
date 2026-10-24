@@ -96,6 +96,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "st-anton-arlberg",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/STANTON2.jpg/960px-STANTON2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:STANTON2.jpg", "artist": "Johnfmh at English Wikipedia", "license": "Public domain", "title": "File:STANTON2.jpg"},
     rank: 5,
     name: "圣安东 · 阿尔贝格滑雪区 (St. Anton / Ski Arlberg)",
     country: "奥地利",
@@ -234,6 +235,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "vail",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Powder_Day_Vail_Colorado_USA.jpg/960px-Powder_Day_Vail_Colorado_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Powder_Day_Vail_Colorado_USA.jpg", "artist": "Flickr user: Brendan Gray London, UK https://www.flickr.com/photos/grayskull/", "license": "CC BY-SA 2.0", "title": "File:Powder Day Vail Colorado USA.jpg"},
     rank: 11,
     name: "范尔滑雪度假村 (Vail Ski Resort)",
     country: "美国",
@@ -349,6 +351,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "revelstoke",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/A_day%27s_skiing_at_spedtacular_Mt_Revelstoke_-_Noth_Americas_biggest_vertical_drop_at_1713m_%285620_ft%29_-_the_mid_mountain_day_lodge_-_%2828620313540%29.jpg/960px-A_day%27s_skiing_at_spedtacular_Mt_Revelstoke_-_Noth_Americas_biggest_vertical_drop_at_1713m_%285620_ft%29_-_the_mid_mountain_day_lodge_-_%2828620313540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:A_day%27s_skiing_at_spedtacular_Mt_Revelstoke_-_Noth_Americas_biggest_vertical_drop_at_1713m_(5620_ft)_-_the_mid_mountain_day_lodge_-_(28620313540).jpg", "artist": "Murray Foubister", "license": "CC BY-SA 2.0", "title": "File:A day's skiing at spedtacular Mt Revelstoke - Noth Americas biggest vertical drop at 1713m (5620 ft) - the mid mountain day lodge - (28620313540).jpg"},
     rank: 16,
     name: "雷夫尔斯托克 (Revelstoke Mountain Resort)",
     country: "加拿大",
@@ -372,6 +375,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "portes-du-soleil",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Avoriaz_France_winter_december_2008.jpg/960px-Avoriaz_France_winter_december_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Avoriaz_France_winter_december_2008.jpg", "artist": "Look Sharp!", "license": "CC BY-SA 3.0", "title": "File:Avoriaz France winter december 2008.jpg"},
     rank: 17,
     name: "太阳门 · 阿沃里亚兹/莫尔济讷 (Portes du Soleil - Avoriaz)",
     country: "法国",
@@ -441,6 +445,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "banff-sunshine-lake-louise",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Sunshine_Village%2C_December_2004_15.jpg/960px-Sunshine_Village%2C_December_2004_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Sunshine_Village,_December_2004_15.jpg", "artist": "Axel Pettersson", "license": "CC BY-SA 4.0", "title": "File:Sunshine Village, December 2004 15.jpg"},
     rank: 20,
     name: "班夫三大雪场 · 露易丝湖/阳光村 (SkiBig3: Lake Louise & Sunshine)",
     country: "加拿大",
@@ -648,6 +653,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "jungfrau-region",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/The_view_over_the_kleine_scheidegg.jpg/960px-The_view_over_the_kleine_scheidegg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:The_view_over_the_kleine_scheidegg.jpg", "artist": "David Haberthür from bern, Switzerland", "license": "CC BY 2.0", "title": "File:The view over the kleine scheidegg.jpg"},
     rank: 29,
     name: "少女峰滑雪区 · 格林德瓦/温根 (Jungfrau Ski Region)",
     country: "瑞士",
@@ -763,6 +769,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "laax",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/LAAX_1516_Halfpipe_by_Philipp_Ruggli.jpg/960px-LAAX_1516_Halfpipe_by_Philipp_Ruggli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:LAAX_1516_Halfpipe_by_Philipp_Ruggli.jpg", "artist": "Philipp Ruggli", "license": "CC BY-SA 4.0", "title": "File:LAAX 1516 Halfpipe by Philipp Ruggli.jpg"},
     rank: 34,
     name: "莱克斯 · 弗利姆斯 (LAAX - Flims Laax Falera)",
     country: "瑞士",
@@ -878,6 +885,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "davos-klosters",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Weissfluhjoch_Panorama_winter.jpg/960px-Weissfluhjoch_Panorama_winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Weissfluhjoch_Panorama_winter.jpg", "artist": "Capricorn4049", "license": "CC BY-SA 3.0", "title": "File:Weissfluhjoch Panorama winter.jpg"},
     rank: 39,
     name: "达沃斯–克洛斯特斯 (Davos Klosters)",
     country: "瑞士",
@@ -1154,6 +1162,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "myoko-kogen",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Akakura_Onsen_Ski_Area.jpg/960px-Akakura_Onsen_Ski_Area.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Akakura_Onsen_Ski_Area.jpg", "artist": "663highland", "license": "CC BY-SA 3.0", "title": "File:Akakura Onsen Ski Area.jpg"},
     rank: 51,
     name: "妙高高原 · 赤仓观光/杉之原 (Myoko Kogen)",
     country: "日本",
@@ -1177,6 +1186,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "lotte-arai",
+    noPhoto: true, // THEMED_IMAGES cover is an off-season lawn; use themed SVG poster instead
     rank: 52,
     name: "乐天新井度假村 (Lotte Arai Resort)",
     country: "日本",
@@ -1223,6 +1233,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "madonna-di-campiglio",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Madonna_di_campiglio%2C_vista_da_pradalago.jpg/960px-Madonna_di_campiglio%2C_vista_da_pradalago.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Madonna_di_campiglio,_vista_da_pradalago.jpg", "artist": "Marypozzi", "license": "CC BY-SA 3.0", "title": "File:Madonna di campiglio, vista da pradalago.jpg"},
     rank: 54,
     name: "坎皮格里奥圣母村 (Madonna di Campiglio)",
     country: "意大利",
@@ -1292,6 +1303,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "obergurgl-hochgurgl",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Obergurgl.JPG/960px-Obergurgl.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Obergurgl.JPG", "artist": "Suppengrün", "license": "Public domain", "title": "File:Obergurgl.JPG"},
     rank: 57,
     name: "奥伯古格尔–霍赫古格尔 (Gurgl: Obergurgl-Hochgurgl)",
     country: "奥地利",
@@ -1338,6 +1350,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "grandvalira",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Grandvalira_-_Pas_de_la_Casa_-_Grau_Roig_%282%29.jpg/960px-Grandvalira_-_Pas_de_la_Casa_-_Grau_Roig_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Grandvalira_-_Pas_de_la_Casa_-_Grau_Roig_(2).jpg", "artist": "Alberto-g-rovi", "license": "CC BY 3.0", "title": "File:Grandvalira - Pas de la Casa - Grau Roig (2).jpg"},
     rank: 59,
     name: "格兰瓦利拉 (Grandvalira)",
     country: "安道尔",
@@ -1476,6 +1489,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "valle-nevado",
+    image: {"src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Valle_Nevado_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled", "page": "https://commons.wikimedia.org/wiki/File:Valle_Nevado_2008.jpg", "artist": "Lucasartes", "license": "Public domain", "title": "File:Valle Nevado 2008.jpg"},
     rank: 65,
     name: "内瓦多山谷 · 三山谷联滑 (Valle Nevado / Tres Valles)",
     country: "智利",
@@ -1683,6 +1697,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "arosa-lenzerheide",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Black_Diamond_Slope_Arosa_15._M%C3%A4rz_2020.jpg/960px-Black_Diamond_Slope_Arosa_15._M%C3%A4rz_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Black_Diamond_Slope_Arosa_15._M%C3%A4rz_2020.jpg", "artist": "Andres Passwirth", "license": "CC BY-SA 4.0", "title": "File:Black Diamond Slope Arosa 15. März 2020.jpg"},
     rank: 74,
     name: "阿罗萨–伦策海德 (Arosa Lenzerheide)",
     country: "瑞士",
@@ -1775,6 +1790,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "monterosa-ski",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Castore_e_Lyskamm_visti_da_poco_sopra_Gressoney.jpg/960px-Castore_e_Lyskamm_visti_da_poco_sopra_Gressoney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Castore_e_Lyskamm_visti_da_poco_sopra_Gressoney.jpg", "artist": "SkiNick890", "license": "CC BY-SA 4.0", "title": "File:Castore e Lyskamm visti da poco sopra Gressoney.jpg"},
     rank: 78,
     name: "蒙特罗萨三谷 · 阿拉尼亚 (Monterosa Ski - Champoluc / Gressoney / Alagna)",
     country: "意大利",
@@ -1821,6 +1837,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "sierra-nevada-spain",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Estaci%C3%B3n_de_esqu%C3%AD_de_Sierra_Nevada_%28ESP%29_2006.jpg/960px-Estaci%C3%B3n_de_esqu%C3%AD_de_Sierra_Nevada_%28ESP%29_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_de_esqu%C3%AD_de_Sierra_Nevada_(ESP)_2006.jpg", "artist": "acebal from La Felguera, Spain", "license": "CC BY 2.0", "title": "File:Estación de esquí de Sierra Nevada (ESP) 2006.jpg"},
     rank: 80,
     name: "内华达山脉滑雪场 (Sierra Nevada)",
     country: "西班牙",
@@ -1890,6 +1907,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "levi-finland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Gondola_in_Levi%2C_Finland.jpg/960px-Gondola_in_Levi%2C_Finland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Gondola_in_Levi,_Finland.jpg", "artist": "DanielMichaelPerry", "license": "CC0", "title": "File:Gondola in Levi, Finland.jpg"},
     rank: 83,
     name: "列维滑雪度假村 (Levi)",
     country: "芬兰",
@@ -1936,6 +1954,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "garmisch-partenkirchen",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Snowy_mountains_in_Kandahar.jpg/960px-Snowy_mountains_in_Kandahar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Snowy_mountains_in_Kandahar.jpg", "artist": "Bernd Brägelmann from Cologne, Germany", "license": "CC BY-SA 2.0", "title": "File:Snowy mountains in Kandahar.jpg"},
     rank: 85,
     name: "加米施–帕滕基兴与楚格峰 (Garmisch-Partenkirchen & Zugspitze)",
     country: "德国",
@@ -2143,6 +2162,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "hoshino-tomamu",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Tomamu_ski_resort_01.jpg/960px-Tomamu_ski_resort_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Tomamu_ski_resort_01.jpg", "artist": "Masahiro TAKAGI from Osaka, Japan", "license": "CC BY 2.0", "title": "File:Tomamu ski resort 01.jpg"},
     rank: 94,
     name: "星野TOMAMU度假村 (Hoshino Resorts Tomamu)",
     country: "日本",
@@ -2166,6 +2186,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "hemu-jikepulin",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Hemu_Village_in_the_snow.jpg/960px-Hemu_Village_in_the_snow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Hemu_Village_in_the_snow.jpg", "artist": "Leeinm", "license": "CC BY-SA 4.0", "title": "File:Hemu Village in the snow.jpg"},
     rank: 95,
     name: "禾木吉克普林国际滑雪度假区 (Hemu Jikepulin Ski Resort)",
     country: "中国",
@@ -2189,6 +2210,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "koktokay",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Irtysh_river_in_Koktokay_panorama_in_winter_time.jpg/960px-Irtysh_river_in_Koktokay_panorama_in_winter_time.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Irtysh_river_in_Koktokay_panorama_in_winter_time.jpg", "artist": "KING-FISH①", "license": "CC BY-SA 3.0", "title": "File:Irtysh river in Koktokay panorama in winter time.jpg"},
     rank: 96,
     name: "可可托海国际滑雪度假区 (Koktokay Ski Resort)",
     country: "中国",
@@ -2281,6 +2303,7 @@ window.SKI_RESORTS_TOP100 = [
   },
   {
     id: "queenstown-wanaka",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/New_zealand_remarkables.jpg/960px-New_zealand_remarkables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:New_zealand_remarkables.jpg", "artist": "User: (WT-shared) Inas at  wts wikivoyage", "license": "Public domain", "title": "File:New zealand remarkables.jpg"},
     rank: 100,
     name: "皇后镇与瓦纳卡四大雪场 · 卓越山/卡德罗纳/三锥山 (Queenstown & Wanaka: Remarkables / Cardrona / Treble Cone)",
     country: "新西兰",

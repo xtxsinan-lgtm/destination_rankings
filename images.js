@@ -1159,5 +1159,445 @@ window.DEST_IMAGES = {
   "license": "CC BY-SA 4.0",
   "title": "File:Bermuda - Horseshoe Bay Cove.jpg",
   "q": "Horseshoe Bay Bermuda"
+ },
+ "rangiroa-fakarava": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/5/56/Lagoon_of_Rangiroa_Atoll_in_French_Polynesia_%289223220416%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Lagoon_of_Rangiroa_Atoll_in_French_Polynesia_(9223220416).jpg",
+  "artist": "Derek Keats from Johannesburg, South Africa",
+  "license": "CC BY 2.0",
+  "title": "File:Lagoon of Rangiroa Atoll in French Polynesia (9223220416).jpg",
+  "q": "Rangiroa lagoon beach"
+ },
+ "new-caledonia-pins": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Ile_des_pins_new_caledonia.jpg/1280px-Ile_des_pins_new_caledonia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ile_des_pins_new_caledonia.jpg",
+  "artist": "Jesiane",
+  "license": "CC0",
+  "title": "File:Ile des pins new caledonia.jpg",
+  "q": "Ile des Pins New Caledonia lagoon"
+ },
+ "sumba": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Pantai_Mandorak%2C_Sumba_Barat_Daya.jpg/1280px-Pantai_Mandorak%2C_Sumba_Barat_Daya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Pantai_Mandorak,_Sumba_Barat_Daya.jpg",
+  "artist": "Zahrasrtn",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Pantai Mandorak, Sumba Barat Daya.jpg",
+  "q": "Sumba beach Indonesia"
+ },
+ "holbox-mujeres": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Playa_del_Norte_Isla_Mujeres_%288951167819%29.jpg/1280px-Playa_del_Norte_Isla_Mujeres_%288951167819%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Playa_del_Norte_Isla_Mujeres_(8951167819).jpg",
+  "artist": "Kirt Edblom from Albany, Oregon, United States",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Playa del Norte Isla Mujeres (8951167819).jpg",
+  "q": "Isla Mujeres Playa Norte beach"
+ },
+ "mustique-bequia": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Admiralty_Bay_on_Bequia%2C_Saint_Vincent_and_the_Grenadines_%2849793026732%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Admiralty_Bay_on_Bequia,_Saint_Vincent_and_the_Grenadines_(49793026732).jpg",
+  "artist": "David Stanley from Nanaimo, Canada.",
+  "license": "CC BY 2.0",
+  "title": "File:Admiralty Bay on Bequia, Saint Vincent and the Grenadines (49793026732).jpg",
+  "q": "Bequia beach Saint Vincent"
+ },
+ "la-reunion": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/La_Reunion_lagoon_dsc00240.jpg/1280px-La_Reunion_lagoon_dsc00240.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:La_Reunion_lagoon_dsc00240.jpg",
+  "artist": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "title": "File:La Reunion lagoon dsc00240.jpg",
+  "q": "L'Ermitage lagoon Reunion Island"
+ },
+ "derawan-maratua": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Derawan_Island_East_Kalimantan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Derawan_Island_East_Kalimantan.jpg",
+  "artist": "Riza Nugraha %uF8FF from Utrecht, The Netherlands",
+  "license": "CC BY 2.0",
+  "title": "File:Derawan Island East Kalimantan.jpg",
+  "q": "Derawan island beach"
+ },
+ "wakatobi-banda": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/2016%2C_wakatobi%2C_house_reef_at_night%2C_cup_corals_%2831350567801%29.jpg/1280px-2016%2C_wakatobi%2C_house_reef_at_night%2C_cup_corals_%2831350567801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:2016,_wakatobi,_house_reef_at_night,_cup_corals_(31350567801).jpg",
+  "artist": "q phia",
+  "license": "CC BY 2.0",
+  "title": "File:2016, wakatobi, house reef at night, cup corals (31350567801).jpg",
+  "q": "Wakatobi coral reef"
+ },
+ "andaman-havelock": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Havelock_Island%2C_Radhanagar_Beach_before_sunset%2C_Andaman_Islands.jpg/1280px-Havelock_Island%2C_Radhanagar_Beach_before_sunset%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Radhanagar_Beach_before_sunset,_Andaman_Islands.jpg",
+  "artist": "Vyacheslav Argenberg",
+  "license": "CC BY 4.0",
+  "title": "File:Havelock Island, Radhanagar Beach before sunset, Andaman Islands.jpg",
+  "q": "Radhanagar Beach Havelock Island"
+ },
+ "tonga-vavau": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Vava%27u_beach2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Vava%27u_beach2.jpg",
+  "artist": "Jansan",
+  "license": "CC BY 2.5 pl",
+  "title": "File:Vava'u beach2.jpg",
+  "q": "Vavau Tonga island"
+ },
+ "trancoso-espelho": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/MARCIO_FILHO_PRAIA_DO_ESPELHO_TRANCOSO_BAHIA_%2826106407367%29.jpg/1280px-MARCIO_FILHO_PRAIA_DO_ESPELHO_TRANCOSO_BAHIA_%2826106407367%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:MARCIO_FILHO_PRAIA_DO_ESPELHO_TRANCOSO_BAHIA_(26106407367).jpg",
+  "artist": "MTur Destinos",
+  "license": "Public domain",
+  "title": "File:MARCIO FILHO PRAIA DO ESPELHO TRANCOSO BAHIA (26106407367).jpg",
+  "q": "Praia do Espelho Trancoso Bahia"
+ },
+ "lamu-watamu": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Watamu_Beach%2C_Kenya_01.jpg/1280px-Watamu_Beach%2C_Kenya_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Watamu_Beach,_Kenya_01.jpg",
+  "artist": "Jenny Kellett",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Watamu Beach, Kenya 01.jpg",
+  "q": "Watamu beach Kenya"
+ },
+ "mafia-pemba": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Vumawimbi_Beach%2C_Pemba_Island.jpg/1280px-Vumawimbi_Beach%2C_Pemba_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Vumawimbi_Beach,_Pemba_Island.jpg",
+  "artist": "Marcel Oosterwijk from Amsterdam, The Netherlands",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Vumawimbi Beach, Pemba Island.jpg",
+  "q": "Pemba Island Tanzania beach"
+ },
+ "milagres-pipa": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/PipaBeachView.JPG/1280px-PipaBeachView.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:PipaBeachView.JPG",
+  "artist": "Bjørn Christian Tørrissen",
+  "license": "CC BY-SA 4.0",
+  "title": "File:PipaBeachView.JPG",
+  "q": "Praia de Pipa Brazil beach"
+ },
+ "con-dao": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Pulo_Condore_island_beach.jpg/1280px-Pulo_Condore_island_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Pulo_Condore_island_beach.jpg",
+  "artist": "[Tycho]  talk , http://shansov.net",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Pulo Condore island beach.jpg",
+  "q": "Con Dao island beach Vietnam"
+ },
+ "siquijor-apo": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Mystic_Beach%2C_Vancouver_Island%2C_Canada_10.jpg/1280px-Mystic_Beach%2C_Vancouver_Island%2C_Canada_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg",
+  "artist": "Michal Klajban",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Mystic Beach, Vancouver Island, Canada 10.jpg",
+  "q": "Apo beach"
+ },
+ "bantayan-malapascua": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Beach_Bantayan_Island.jpg/1280px-Beach_Bantayan_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Beach_Bantayan_Island.jpg",
+  "artist": "SYKE Travel & Tours",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Beach Bantayan Island.jpg",
+  "q": "Bantayan Island beach Philippines"
+ },
+ "koh-rong": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Pier_%28206590095%29.jpeg/1280px-Pier_%28206590095%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Pier_(206590095).jpeg",
+  "artist": "Reinhard Onasch",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Pier (206590095).jpeg",
+  "q": "Koh Rong Samloem beach Cambodia"
+ },
+ "belitung-karimunjawa": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Pantai_Tanjung_Tinggi.jpg/1280px-Pantai_Tanjung_Tinggi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Pantai_Tanjung_Tinggi.jpg",
+  "artist": "Ayufib",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Pantai Tanjung Tinggi.jpg",
+  "q": "Tanjung Tinggi beach Belitung"
+ },
+ "zihuatanejo-ixtapa": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Playa_La_Ropa%2C_Zihuatanejo_-_panoramio.jpg/1280px-Playa_La_Ropa%2C_Zihuatanejo_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Playa_La_Ropa,_Zihuatanejo_-_panoramio.jpg",
+  "artist": "eurimaco",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Playa La Ropa, Zihuatanejo - panoramio.jpg",
+  "q": "Zihuatanejo Playa La Ropa beach"
+ },
+ "dominica": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Calibishie_Beach_%28Dominica%29.jpg/1280px-Calibishie_Beach_%28Dominica%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Calibishie_Beach_(Dominica).jpg",
+  "artist": "Hans Hillewaert",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Calibishie Beach (Dominica).jpg",
+  "q": "Dominica beach"
+ },
+ "mayotte": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Sakouli_baobabs.jpg/1280px-Sakouli_baobabs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Sakouli_baobabs.jpg",
+  "artist": "Frédéric Ducarme",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Sakouli baobabs.jpg",
+  "q": "Mayotte beach"
+ },
+ "niue": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Avatele_Beach%2C_looking_southwest.jpg/1280px-Avatele_Beach%2C_looking_southwest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Avatele_Beach,_looking_southwest.jpg",
+  "artist": "Pseudopanax at English Wikipedia",
+  "license": "Public domain",
+  "title": "File:Avatele Beach, looking southwest.jpg",
+  "q": "Niue beach"
+ },
+ "camiguin": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Camiguin_White_Island.jpg/1280px-Camiguin_White_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Camiguin_White_Island.jpg",
+  "artist": "Theglennpalacio",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Camiguin White Island.jpg",
+  "q": "White Island Camiguin Philippines"
+ },
+ "lakshadweep": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Agatti_island%2C_Lakshadweep.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Agatti_island,_Lakshadweep.jpg",
+  "artist": "icultist",
+  "license": "CC BY 2.0",
+  "title": "File:Agatti island, Lakshadweep.jpg",
+  "q": "Agatti beach"
+ },
+ "ngapali-mergui": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Ngapali_Beach%2C_Myanmar_%2811007417563%29.jpg/1280px-Ngapali_Beach%2C_Myanmar_%2811007417563%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ngapali_Beach,_Myanmar_(11007417563).jpg",
+  "artist": "ReflectedSerendipity from United Kingdom",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Ngapali Beach, Myanmar (11007417563).jpg",
+  "q": "Ngapali Beach Myanmar"
+ },
+ "corn-islands": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Otto_Beach%2C_Little_Corn_Island.jpg/1280px-Otto_Beach%2C_Little_Corn_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Otto_Beach,_Little_Corn_Island.jpg",
+  "artist": "Brian Johnson & Dane Kantner",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Otto Beach, Little Corn Island.jpg",
+  "q": "Little Corn Island beach Nicaragua"
+ },
+ "providencia": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Providencia%2C_Colombia_-_panoramio_%2823%29.jpg/1280px-Providencia%2C_Colombia_-_panoramio_%2823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Providencia,_Colombia_-_panoramio_(23).jpg",
+  "artist": "Jose Rafael Luna Lop…",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Providencia, Colombia - panoramio (23).jpg",
+  "q": "Providencia beach"
+ },
+ "cocos-keeling": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Direction_Island_Beach_%2825264455845%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Direction_Island_Beach_(25264455845).jpg",
+  "artist": "David Stanley from Nanaimo, Canada",
+  "license": "CC BY 2.0",
+  "title": "File:Direction Island Beach (25264455845).jpg",
+  "q": "Direction Island Cocos Keeling lagoon"
+ },
+ "santa-marta-tayrona": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Cabo_San_Juan_de_la_Guia_-_Parque_Tayrona_%284626267056%29.jpg/1280px-Cabo_San_Juan_de_la_Guia_-_Parque_Tayrona_%284626267056%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Cabo_San_Juan_de_la_Guia_-_Parque_Tayrona_(4626267056).jpg",
+  "artist": "Jorge Láscar from Australia",
+  "license": "CC BY 2.0",
+  "title": "File:Cabo San Juan de la Guia - Parque Tayrona (4626267056).jpg",
+  "q": "Cabo San Juan Tayrona beach"
+ },
+ "menorca": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Cala_Macarella.jpg/1280px-Cala_Macarella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Cala_Macarella.jpg",
+  "artist": "Paul Stephenson",
+  "license": "CC BY 2.0",
+  "title": "File:Cala Macarella.jpg",
+  "q": "Cala Macarella Menorca beach"
+ },
+ "lampedusa-favignana": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/SPIAGGIA_DEI_CONIGLI_LAMPEDUSA_2.jpg/1280px-SPIAGGIA_DEI_CONIGLI_LAMPEDUSA_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:SPIAGGIA_DEI_CONIGLI_LAMPEDUSA_2.jpg",
+  "artist": "ALY MOHAMED YOUSSEF",
+  "license": "CC BY-SA 4.0",
+  "title": "File:SPIAGGIA DEI CONIGLI LAMPEDUSA 2.jpg",
+  "q": "Spiaggia dei Conigli Lampedusa"
+ },
+ "sicily-taormina": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Isola_Bella-Taormina-Messina-Sicilia-Italy_-_Creative_Commons_by_gnuckx_%283810870675%29.jpg/1280px-Isola_Bella-Taormina-Messina-Sicilia-Italy_-_Creative_Commons_by_gnuckx_%283810870675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Isola_Bella-Taormina-Messina-Sicilia-Italy_-_Creative_Commons_by_gnuckx_(3810870675).jpg",
+  "artist": "gnuckx",
+  "license": "CC BY 2.0",
+  "title": "File:Isola Bella-Taormina-Messina-Sicilia-Italy - Creative Commons by gnuckx (3810870675).jpg",
+  "q": "Isola Bella Taormina Sicily beach"
+ },
+ "lord-howe-island": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg/1280px-Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg",
+  "artist": "Granitethighs",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Needle Spined Urchin Lagoon Beach Lord Howe Island 11 June 2011.jpg",
+  "q": "Lord Howe Island lagoon beach"
+ },
+ "corfu-paxos": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Corfu_Paleokastritsa_Beach_R01.jpg/1280px-Corfu_Paleokastritsa_Beach_R01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Corfu_Paleokastritsa_Beach_R01.jpg",
+  "artist": "Marc Ryckaert (MJJR)",
+  "license": "CC BY 3.0",
+  "title": "File:Corfu Paleokastritsa Beach R01.jpg",
+  "q": "Paleokastritsa Corfu beach"
+ },
+ "amami-kerama": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Okinawa_kerama_islands.jpg/1280px-Okinawa_kerama_islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Okinawa_kerama_islands.jpg",
+  "artist": "Paipateroma",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Okinawa kerama islands.jpg",
+  "q": "Zamami Kerama Okinawa"
+ },
+ "puglia-salento": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Polignano_a_Mare%2C_Puglia_-_panoramio_%2812%29.jpg/1280px-Polignano_a_Mare%2C_Puglia_-_panoramio_%2812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Polignano_a_Mare,_Puglia_-_panoramio_(12).jpg",
+  "artist": "Patrick Nouhailler's…",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Polignano a Mare, Puglia - panoramio (12).jpg",
+  "q": "Polignano a Mare beach Puglia"
+ },
+ "rhodes-symi": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Yachts_in_the_St._Paul_bay._Rhodes%2C_Greece.jpg/1280px-Yachts_in_the_St._Paul_bay._Rhodes%2C_Greece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Yachts_in_the_St._Paul_bay._Rhodes,_Greece.jpg",
+  "artist": "Ввласенко",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Yachts in the St. Paul bay. Rhodes, Greece.jpg",
+  "q": "St Pauls Bay Lindos Rhodes"
+ },
+ "paros-naxos": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/Naousa_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Naousa_beach.jpg",
+  "artist": "Smtunli,  Svein-Magne Tunli - http://www.tunliweb.no/SM/English/sm_eng.htm",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Naousa beach.jpg",
+  "q": "Kolymbithres Beach Paros Greece"
+ },
+ "lefkada": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Porto_Katsiki_Beach%2C_Lefkada%2C_Ionian_Islands%2C_Greece.jpg/1280px-Porto_Katsiki_Beach%2C_Lefkada%2C_Ionian_Islands%2C_Greece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Porto_Katsiki_Beach,_Lefkada,_Ionian_Islands,_Greece.jpg",
+  "artist": "Dimitra Papadimitriou",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Porto Katsiki Beach, Lefkada, Ionian Islands, Greece.jpg",
+  "q": "Porto Katsiki Lefkada beach"
+ },
+ "costa-brava": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/WLM_-_2020_-_Castillo_de_Tosa_de_Mar.jpg/1280px-WLM_-_2020_-_Castillo_de_Tosa_de_Mar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:WLM_-_2020_-_Castillo_de_Tosa_de_Mar.jpg",
+  "artist": "Moahim",
+  "license": "CC BY-SA 4.0",
+  "title": "File:WLM - 2020 - Castillo de Tosa de Mar.jpg",
+  "q": "Tossa de Mar beach castle"
+ },
+ "bodrum-antalya": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/K%C3%BCd%C3%BCr%2C_Bodrum_02.jpg/1280px-K%C3%BCd%C3%BCr%2C_Bodrum_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:K%C3%BCd%C3%BCr,_Bodrum_02.jpg",
+  "artist": "CeeGee",
+  "license": "CC0",
+  "title": "File:Küdür, Bodrum 02.jpg",
+  "q": "Bodrum peninsula bay Turkey"
+ },
+ "esperance-lucky-bay": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg/1280px-Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg",
+  "artist": "Aleks Scholz",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Beach at Lucky Scaup - geograph.org.uk - 8055900.jpg",
+  "q": "Lucky beach"
+ },
+ "dubrovnik-korcula": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Banje_Beach.jpg/1280px-Banje_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Banje_Beach.jpg",
+  "artist": "Chris Brown",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Banje Beach.jpg",
+  "q": "Banje beach"
+ },
+ "ksamil-riviera": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Ksamil_Albania_-_panoramio_%2822%29.jpg/1280px-Ksamil_Albania_-_panoramio_%2822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ksamil_Albania_-_panoramio_(22).jpg",
+  "artist": "czernik.jerzy",
+  "license": "CC BY 3.0",
+  "title": "File:Ksamil Albania - panoramio (22).jpg",
+  "q": "Ksamil islands beach Albania"
+ },
+ "lanzarote-fuerteventura": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Lanzarote_1_Luc_Viatour.jpg/1280px-Lanzarote_1_Luc_Viatour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Lanzarote_1_Luc_Viatour.jpg",
+  "artist": "Lviatour",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Lanzarote 1 Luc Viatour.jpg",
+  "q": "Playa de Papagayo Lanzarote"
+ },
+ "madeira-porto-santo": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Porto_Moniz_%28Madeira%2C_Portugal%29%2C_Piscinas_Naturais_do_Porto_Moniz_--_2025_--_1779.jpg/1280px-Porto_Moniz_%28Madeira%2C_Portugal%29%2C_Piscinas_Naturais_do_Porto_Moniz_--_2025_--_1779.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Porto_Moniz_(Madeira,_Portugal),_Piscinas_Naturais_do_Porto_Moniz_--_2025_--_1779.jpg",
+  "artist": "Dietmar Rabich",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Porto Moniz (Madeira, Portugal), Piscinas Naturais do Porto Moniz -- 2025 -- 1779.jpg",
+  "q": "Porto Moniz natural pools Madeira"
+ },
+ "jervis-bay-byron": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Hyams_Beach%2C_Jervis_Bay%2C_Australia.jpg/1280px-Hyams_Beach%2C_Jervis_Bay%2C_Australia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Hyams_Beach,_Jervis_Bay,_Australia.jpg",
+  "artist": "Dave Naithani",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Hyams Beach, Jervis Bay, Australia.jpg",
+  "q": "Hyams Beach Jervis Bay Australia"
+ },
+ "florianopolis": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Ilha_do_Campeche_Florianopolis.JPG/1280px-Ilha_do_Campeche_Florianopolis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ilha_do_Campeche_Florianopolis.JPG",
+  "artist": "Alessandra Giacomin",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Ilha do Campeche Florianopolis.JPG",
+  "q": "Ilha do Campeche Florianopolis beach"
+ },
+ "cinque-terre-portofino": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg/1280px-Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg",
+  "artist": "A.Savin",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Park of 300 Years Spb - Baltic Beach 03.jpg",
+  "q": "Baia beach"
+ },
+ "elba-tuscany": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg/1280px-Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Mangrove_tree_on_the_beach,_Andaman_Islands.jpg",
+  "artist": "Vyacheslav Argenberg",
+  "license": "CC BY 4.0",
+  "title": "File:Havelock Island, Mangrove tree on the beach, Andaman Islands.jpg",
+  "q": "Spiaggia beach"
+ },
+ "marbella-nerja": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Nerja%2C_view_from_the_Balc%C3%B3n_de_Europa_to_the_beach_%22Playa_de_Calahonda%22.jpg/1280px-Nerja%2C_view_from_the_Balc%C3%B3n_de_Europa_to_the_beach_%22Playa_de_Calahonda%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Nerja,_view_from_the_Balc%C3%B3n_de_Europa_to_the_beach_%22Playa_de_Calahonda%22.jpg",
+  "artist": "Dguendel",
+  "license": "CC BY 3.0",
+  "title": "File:Nerja, view from the Balcón de Europa to the beach \"Playa de Calahonda\".jpg",
+  "q": "Calahonda Beach Balcon de Europa Nerja"
+ },
+ "rovinj-istria": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Rovinj%2C_Croatia_%2815748211121%29.jpg/1280px-Rovinj%2C_Croatia_%2815748211121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Rovinj,_Croatia_(15748211121).jpg",
+  "artist": "Beraldo Leal from Natal / RN, Brazil",
+  "license": "CC BY 2.0",
+  "title": "File:Rovinj, Croatia (15748211121).jpg",
+  "q": "Rovinj Croatia coast"
+ },
+ "azores-sao-miguel": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Vila_Franca_Islet_with_Vila_Franca_do_Campo_in_the_background%2C_S%C3%A3o_Miguel_Island%2C_Azores%2C_Portugal_%28PPL1-Corrected%29.jpg/1280px-Vila_Franca_Islet_with_Vila_Franca_do_Campo_in_the_background%2C_S%C3%A3o_Miguel_Island%2C_Azores%2C_Portugal_%28PPL1-Corrected%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Vila_Franca_Islet_with_Vila_Franca_do_Campo_in_the_background,_S%C3%A3o_Miguel_Island,_Azores,_Portugal_(PPL1-Corrected).jpg",
+  "artist": "Jules Verne Times Two",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Vila Franca Islet with Vila Franca do Campo in the background, São Miguel Island, Azores, Portugal (PPL1-Corrected).jpg",
+  "q": "Ilheu de Vila Franca do Campo Azores"
+ },
+ "aqaba-red-sea": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Octopus_macropus_-_The_Coral_Kingdom_Collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Octopus_macropus_-_The_Coral_Kingdom_Collection.jpg",
+  "artist": "Wikimedia Commons",
+  "license": "Public domain",
+  "title": "File:Octopus macropus - The Coral Kingdom Collection.jpg",
+  "q": "Aqaba Red Sea coral"
  }
 };
