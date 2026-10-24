@@ -144,6 +144,16 @@
     (window.SHOWS_TOP50 || []).forEach(function (s) {
       if (s.lat != null) pts.push({ id: s.id || ("show-" + s.rank), name: s.name.replace(/\s*\(.*?\)/, ""), cat: "🎭 驻场秀", url: "shows.html", lat: s.lat, lon: s.lon });
     });
+    (window.CANAL_ROUTES_TOP20 || []).forEach(function (c) {
+      if (c.lat != null) pts.push({ id: "canal-" + c.id, name: c.name, cat: "⚜️ 运河房船", url: "canals.html#route-" + c.id, lat: c.lat, lon: c.lon });
+    });
+    (window.SAILING_ROUTES_TOP20 || []).forEach(function (s) {
+      var nm = typeof s.name === "string" ? s.name : ((s.name && s.name.zh) || s.id);
+      if (s.lat != null) pts.push({ id: "sail-" + s.id, name: String(nm).replace(/\s*\(.*?\)/, ""), cat: "⛵ 帆船航线", url: "sailing.html#r-" + s.id, lat: s.lat, lon: s.lon });
+    });
+    (window.RV_ROUTES_TOP20 || []).forEach(function (r) {
+      if (r.lat != null) pts.push({ id: r.id, name: r.name, cat: "🚐 房车路线", url: "rv.html#" + r.id, lat: r.lat, lon: r.lon });
+    });
     allPoints = pts;
   }
 
@@ -426,7 +436,10 @@
       { check: "AQUARIUMS_TOP35", src: "data_aquariums_zoos_museums.js" },
       { check: "THEMEPARKS_TOP100", src: "data_themeparks.js" },
       { check: "SKI_RESORTS_TOP100", src: "data_ski.js" },
-      { check: "SHOWS_TOP50", src: "data_shows.js" }
+      { check: "SHOWS_TOP50", src: "data_shows.js" },
+      { check: "CANAL_ROUTES_TOP20", src: "data_canals_top20.js" },
+      { check: "SAILING_ROUTES_TOP20", src: "data_sailing_top20.js" },
+      { check: "RV_ROUTES_TOP20", src: "data_rv_top20.js" }
     ];
     var loadedAny = false;
     var pending = 0;
