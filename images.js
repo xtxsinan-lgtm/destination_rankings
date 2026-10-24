@@ -1217,12 +1217,12 @@ window.DEST_IMAGES = {
   "q": "Derawan island beach"
  },
  "wakatobi-banda": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/2016%2C_wakatobi%2C_house_reef_at_night%2C_cup_corals_%2831350567801%29.jpg/1280px-2016%2C_wakatobi%2C_house_reef_at_night%2C_cup_corals_%2831350567801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:2016,_wakatobi,_house_reef_at_night,_cup_corals_(31350567801).jpg",
-  "artist": "q phia",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Pulau_Kital_%2848185595287%29.jpg/960px-Pulau_Kital_%2848185595287%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Pulau_Kital_(48185595287).jpg",
+  "artist": "David Stanley from Nanaimo, Canada",
   "license": "CC BY 2.0",
-  "title": "File:2016, wakatobi, house reef at night, cup corals (31350567801).jpg",
-  "q": "Wakatobi coral reef"
+  "title": "File:Pulau Kital (48185595287).jpg",
+  "q": "Banda Islands beach Maluku"
  },
  "andaman-havelock": {
   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Havelock_Island%2C_Radhanagar_Beach_before_sunset%2C_Andaman_Islands.jpg/1280px-Havelock_Island%2C_Radhanagar_Beach_before_sunset%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1281,12 +1281,12 @@ window.DEST_IMAGES = {
   "q": "Con Dao island beach Vietnam"
  },
  "siquijor-apo": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Mystic_Beach%2C_Vancouver_Island%2C_Canada_10.jpg/1280px-Mystic_Beach%2C_Vancouver_Island%2C_Canada_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg",
-  "artist": "Michal Klajban",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Salagdoong_Beach_Siquijor-Daylight.jpg/960px-Salagdoong_Beach_Siquijor-Daylight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Salagdoong_Beach_Siquijor-Daylight.jpg",
+  "artist": "Genpasaporte2",
   "license": "CC BY-SA 4.0",
-  "title": "File:Mystic Beach, Vancouver Island, Canada 10.jpg",
-  "q": "Apo beach"
+  "title": "File:Salagdoong Beach Siquijor-Daylight.jpg",
+  "q": "Salagdoong Beach Siquijor"
  },
  "bantayan-malapascua": {
   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Beach_Bantayan_Island.jpg/1280px-Beach_Bantayan_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1425,12 +1425,12 @@ window.DEST_IMAGES = {
   "q": "Isola Bella Taormina Sicily beach"
  },
  "lord-howe-island": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg/1280px-Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Needle_Spined_Urchin_Lagoon_Beach_Lord_Howe_Island_11_June_2011.jpg",
-  "artist": "Granitethighs",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Lord_Howe_Island_lagoon_panorama.jpg/960px-Lord_Howe_Island_lagoon_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Lord_Howe_Island_lagoon_panorama.jpg",
+  "artist": "Toby Hudson",
   "license": "CC BY-SA 3.0",
-  "title": "File:Needle Spined Urchin Lagoon Beach Lord Howe Island 11 June 2011.jpg",
-  "q": "Lord Howe Island lagoon beach"
+  "title": "File:Lord Howe Island lagoon panorama.jpg",
+  "q": "Lord Howe Island lagoon"
  },
  "corfu-paxos": {
   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Corfu_Paleokastritsa_Beach_R01.jpg/1280px-Corfu_Paleokastritsa_Beach_R01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1497,12 +1497,12 @@ window.DEST_IMAGES = {
   "q": "Bodrum peninsula bay Turkey"
  },
  "esperance-lucky-bay": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg/1280px-Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Beach_at_Lucky_Scaup_-_geograph.org.uk_-_8055900.jpg",
-  "artist": "Aleks Scholz",
-  "license": "CC BY-SA 2.0",
-  "title": "File:Beach at Lucky Scaup - geograph.org.uk - 8055900.jpg",
-  "q": "Lucky beach"
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Lucky_Bay%2C_Cape_Le_Grand_National_Park%2C_January_2025_03.jpg/960px-Lucky_Bay%2C_Cape_Le_Grand_National_Park%2C_January_2025_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Lucky_Bay,_Cape_Le_Grand_National_Park,_January_2025_03.jpg",
+  "artist": "DaHuzyBru",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Lucky Bay, Cape Le Grand National Park, January 2025 03.jpg",
+  "q": "Lucky Bay Cape Le Grand"
  },
  "dubrovnik-korcula": {
   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Banje_Beach.jpg/1280px-Banje_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1553,20 +1553,20 @@ window.DEST_IMAGES = {
   "q": "Ilha do Campeche Florianopolis beach"
  },
  "cinque-terre-portofino": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg/1280px-Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Park_of_300_Years_Spb_-_Baltic_Beach_03.jpg",
-  "artist": "A.Savin",
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Monterosso_al_Mare-panorama-Fegina1.jpg/960px-Monterosso_al_Mare-panorama-Fegina1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Monterosso_al_Mare-panorama-Fegina1.jpg",
+  "artist": "Davide Papalini",
   "license": "CC BY-SA 3.0",
-  "title": "File:Park of 300 Years Spb - Baltic Beach 03.jpg",
-  "q": "Baia beach"
+  "title": "File:Monterosso al Mare-panorama-Fegina1.jpg",
+  "q": "Monterosso al Mare beach"
  },
  "elba-tuscany": {
-  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg/1280px-Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "page": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Mangrove_tree_on_the_beach,_Andaman_Islands.jpg",
-  "artist": "Vyacheslav Argenberg",
-  "license": "CC BY 4.0",
-  "title": "File:Havelock Island, Mangrove tree on the beach, Andaman Islands.jpg",
-  "q": "Spiaggia beach"
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Spiaggia_di_Sansone%2C_Elba_-_panoramio.jpg/960px-Spiaggia_di_Sansone%2C_Elba_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Spiaggia_di_Sansone,_Elba_-_panoramio.jpg",
+  "artist": "Carlo Pelagalli",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Spiaggia di Sansone, Elba - panoramio.jpg",
+  "q": "Spiaggia di Sansone Elba"
  },
  "marbella-nerja": {
   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Nerja%2C_view_from_the_Balc%C3%B3n_de_Europa_to_the_beach_%22Playa_de_Calahonda%22.jpg/1280px-Nerja%2C_view_from_the_Balc%C3%B3n_de_Europa_to_the_beach_%22Playa_de_Calahonda%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1593,11 +1593,11 @@ window.DEST_IMAGES = {
   "q": "Ilheu de Vila Franca do Campo Azores"
  },
  "aqaba-red-sea": {
-  "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Octopus_macropus_-_The_Coral_Kingdom_Collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-  "page": "https://commons.wikimedia.org/wiki/File:Octopus_macropus_-_The_Coral_Kingdom_Collection.jpg",
-  "artist": "Wikimedia Commons",
-  "license": "Public domain",
-  "title": "File:Octopus macropus - The Coral Kingdom Collection.jpg",
-  "q": "Aqaba Red Sea coral"
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Aqaba%2C_Red_Sea%2C_sunset_%286737672001%29.jpg/960px-Aqaba%2C_Red_Sea%2C_sunset_%286737672001%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Aqaba,_Red_Sea,_sunset_(6737672001).jpg",
+  "artist": "Arian Zwegers",
+  "license": "CC BY 2.0",
+  "title": "File:Aqaba, Red Sea, sunset (6737672001).jpg",
+  "q": "Aqaba beach Red Sea"
  }
 };

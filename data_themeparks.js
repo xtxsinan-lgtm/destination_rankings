@@ -32,6 +32,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "universal-epic-universe",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Stardust_Racers_in_twilight.jpg/960px-Stardust_Racers_in_twilight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Stardust_Racers_in_twilight.jpg", "artist": "Gfgbeach", "license": "CC0", "title": "File:Stardust Racers in twilight.jpg"},
     rank: 2,
     name: "奥兰多环球影城史诗宇宙 (Universal Epic Universe)",
     country: "美国",
@@ -74,6 +75,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "europa-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Europa-Park_-_Blue_Fire_Megacoaster_%2807%29.JPG/960px-Europa-Park_-_Blue_Fire_Megacoaster_%2807%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Europa-Park_-_Blue_Fire_Megacoaster_(07).JPG", "artist": "Jérémy-Günther-Heinz Jähnick", "license": "CC BY-SA 3.0", "title": "File:Europa-Park - Blue Fire Megacoaster (07).JPG"},
     rank: 4,
     name: "德国欧洲公园 (Europa-Park)",
     country: "德国",
@@ -116,6 +118,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "phantasialand",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Taron-1.jpg/960px-Taron-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Taron-1.jpg", "artist": "Stefan Scheer", "license": "CC BY-SA 4.0", "title": "File:Taron-1.jpg"},
     rank: 6,
     name: "德国幻想曲乐园 (Phantasialand)",
     country: "德国",
@@ -137,6 +140,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "disney-magic-kingdom",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Cinderella_Castle%2C_Magic_Kingdom_Walt_Disney_World_%282024%29.jpg/960px-Cinderella_Castle%2C_Magic_Kingdom_Walt_Disney_World_%282024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Cinderella_Castle,_Magic_Kingdom_Walt_Disney_World_(2024).jpg", "artist": "Jedi94", "license": "CC BY-SA 4.0", "title": "File:Cinderella Castle, Magic Kingdom Walt Disney World (2024).jpg"},
     rank: 7,
     name: "奥兰多迪士尼奇幻王国 (Magic Kingdom)",
     country: "美国",
@@ -179,6 +183,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "cedar-point",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Millennium_Force_%28Cedar_Point%29_06.JPG/960px-Millennium_Force_%28Cedar_Point%29_06.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Millennium_Force_(Cedar_Point)_06.JPG", "artist": "Coasterman1234", "license": "CC BY-SA 3.0", "title": "File:Millennium Force (Cedar Point) 06.JPG"},
     rank: 9,
     name: "美国杉点乐园 (Cedar Point)",
     country: "美国",
@@ -200,6 +205,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "disney-hollywood-studios",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Hollywood_Tower_Hotel.jpg/960px-Hollywood_Tower_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Hollywood_Tower_Hotel.jpg", "artist": "Benjamin D. Esham (bdesham)", "license": "CC BY-SA 4.0", "title": "File:Hollywood Tower Hotel.jpg"},
     rank: 10,
     name: "奥兰多迪士尼好莱坞影城 (Disney's Hollywood Studios)",
     country: "美国",
@@ -221,6 +227,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "universal-studios-japan",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Super_Nintendo_World_Theme_Park_at_USJ_Osaka_Evening_Sky.jpg/960px-Super_Nintendo_World_Theme_Park_at_USJ_Osaka_Evening_Sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Super_Nintendo_World_Theme_Park_at_USJ_Osaka_Evening_Sky.jpg", "artist": "Japanexperterna.se", "license": "CC BY-SA 2.0", "title": "File:Super Nintendo World Theme Park at USJ Osaka Evening Sky.jpg"},
     rank: 11,
     name: "日本环球影城 (Universal Studios Japan)",
     country: "日本",
@@ -242,6 +249,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "shanghai-disneyland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Enchanted_Storybook_Castle.jpg/960px-Enchanted_Storybook_Castle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Enchanted_Storybook_Castle.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Enchanted Storybook Castle.jpg"},
     rank: 12,
     name: "上海迪士尼乐园 (Shanghai Disneyland)",
     country: "中国",
@@ -263,6 +271,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "disney-animal-kingdom",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Tree_of_Life%2C_Disney%27s_Animal_Kingdom.jpg/960px-Tree_of_Life%2C_Disney%27s_Animal_Kingdom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Tree_of_Life,_Disney%27s_Animal_Kingdom.jpg", "artist": "Jedi94", "license": "CC BY-SA 4.0", "title": "File:Tree of Life, Disney's Animal Kingdom.jpg"},
     rank: 13,
     name: "奥兰多迪士尼动物王国 (Disney's Animal Kingdom)",
     country: "美国",
@@ -284,6 +293,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "disney-epcot",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Spaceship_Earth_2021_night_lighting.jpg/960px-Spaceship_Earth_2021_night_lighting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Spaceship_Earth_2021_night_lighting.jpg", "artist": "Jedi94", "license": "CC BY-SA 4.0", "title": "File:Spaceship Earth 2021 night lighting.jpg"},
     rank: 14,
     name: "奥兰多迪士尼艾波卡特 (EPCOT)",
     country: "美国",
@@ -368,6 +378,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "puy-du-fou",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Le_Puy_du_Fou_-_Grand_Spectacle_-_04_-_Le_Secret_de_la_Lance.jpg/960px-Le_Puy_du_Fou_-_Grand_Spectacle_-_04_-_Le_Secret_de_la_Lance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Le_Puy_du_Fou_-_Grand_Spectacle_-_04_-_Le_Secret_de_la_Lance.jpg", "artist": "Absinthologue", "license": "CC0", "title": "File:Le Puy du Fou - Grand Spectacle - 04 - Le Secret de la Lance.jpg"},
     rank: 18,
     name: "法国狂人国历史主题公园 (Puy du Fou)",
     country: "法国",
@@ -389,6 +400,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "dollywood",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Wild_Eagle_Partial_Layout.jpg/960px-Wild_Eagle_Partial_Layout.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Wild_Eagle_Partial_Layout.jpg", "artist": "Whitewolf Photography", "license": "CC BY-SA 2.0", "title": "File:Wild Eagle Partial Layout.jpg"},
     rank: 19,
     name: "美国多莉山主题公园 (Dollywood)",
     country: "美国",
@@ -410,6 +422,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "busch-gardens-tampa",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Montu_at_Busch_Gardens_Tampa_Bay_15.jpg/960px-Montu_at_Busch_Gardens_Tampa_Bay_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Montu_at_Busch_Gardens_Tampa_Bay_15.jpg", "artist": "Jeremy Thompson from United States of America", "license": "CC BY 2.0", "title": "File:Montu at Busch Gardens Tampa Bay 15.jpg"},
     rank: 20,
     name: "坦帕布希花园 (Busch Gardens Tampa Bay)",
     country: "美国",
@@ -473,6 +486,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "silver-dollar-city",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Time_Traveler_%28Silver_Dollar_City%29_5.jpg/960px-Time_Traveler_%28Silver_Dollar_City%29_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Time_Traveler_(Silver_Dollar_City)_5.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Time Traveler (Silver Dollar City) 5.jpg"},
     rank: 23,
     name: "美国银元城主题公园 (Silver Dollar City)",
     country: "美国",
@@ -515,6 +529,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "fuji-q-highland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Fujiyama_rollercoaster_2005-05.JPG/960px-Fujiyama_rollercoaster_2005-05.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Fujiyama_rollercoaster_2005-05.JPG", "artist": "No machine-readable author provided. Geomr~commonswiki assumed (based on copyrig", "license": "CC BY-SA 3.0", "title": "File:Fujiyama rollercoaster 2005-05.JPG"},
     rank: 25,
     name: "日本富士急高原乐园 (Fuji-Q Highland)",
     country: "日本",
@@ -557,6 +572,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "busch-gardens-williamsburg",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Alpengeist_%28Busch_Gardens_Europe%29_04.JPG/960px-Alpengeist_%28Busch_Gardens_Europe%29_04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Alpengeist_(Busch_Gardens_Europe)_04.JPG", "artist": "Coasterman1234", "license": "CC BY-SA 3.0", "title": "File:Alpengeist (Busch Gardens Europe) 04.JPG"},
     rank: 27,
     name: "威廉斯堡布希花园 (Busch Gardens Williamsburg)",
     country: "美国",
@@ -599,6 +615,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "nagashima-spa-land",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Steel_Dragon_2000.JPG/960px-Steel_Dragon_2000.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Steel_Dragon_2000.JPG", "artist": "Alpsdake", "license": "CC BY-SA 4.0", "title": "File:Steel Dragon 2000.JPG"},
     rank: 29,
     name: "日本长岛温泉乐园 (Nagashima Spa Land)",
     country: "日本",
@@ -641,6 +658,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "alton-towers",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Smiler_April_2013_2.JPG/960px-The_Smiler_April_2013_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:The_Smiler_April_2013_2.JPG", "artist": "Christophe Badoux", "license": "CC0", "title": "File:The Smiler April 2013 2.JPG"},
     rank: 31,
     name: "英国奥尔顿塔 (Alton Towers)",
     country: "英国",
@@ -725,6 +743,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "hong-kong-disneyland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Castle_of_Magical_Dreams.jpg/960px-Castle_of_Magical_Dreams.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Castle_of_Magical_Dreams.jpg", "artist": "Castleofmagicaldreams2020", "license": "CC BY-SA 4.0", "title": "File:Castle of Magical Dreams.jpg"},
     rank: 35,
     name: "香港迪士尼乐园 (Hong Kong Disneyland)",
     country: "中国",
@@ -767,6 +786,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "liseberg",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Balder_seen_from_Gothia_Towers_2012-09-05_2.JPG/960px-Balder_seen_from_Gothia_Towers_2012-09-05_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Balder_seen_from_Gothia_Towers_2012-09-05_2.JPG", "artist": "Albin Olsson", "license": "CC BY-SA 3.0", "title": "File:Balder seen from Gothia Towers 2012-09-05 2.JPG"},
     rank: 37,
     name: "瑞典里瑟本游乐园 (Liseberg)",
     country: "瑞典",
@@ -809,6 +829,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "warner-bros-world-abu-dhabi",
+    noPhoto: true,
     rank: 39,
     name: "阿布扎比华纳兄弟世界 (Warner Bros. World Abu Dhabi)",
     country: "阿联酋",
@@ -830,6 +851,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "ferrari-world-abu-dhabi",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Formula_Rossa_coaster.jpg/960px-Formula_Rossa_coaster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Formula_Rossa_coaster.jpg", "artist": "Jazon88", "license": "CC BY-SA 3.0", "title": "File:Formula Rossa coaster.jpg"},
     rank: 40,
     name: "阿布扎比法拉利世界 (Ferrari World Abu Dhabi)",
     country: "阿联酋",
@@ -851,6 +873,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "seaworld-orlando",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Manta_at_SeaWorld_Orlando_60.jpg/960px-Manta_at_SeaWorld_Orlando_60.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Manta_at_SeaWorld_Orlando_60.jpg", "artist": "Jeremy Thompson from United States of America", "license": "CC BY 2.0", "title": "File:Manta at SeaWorld Orlando 60.jpg"},
     rank: 41,
     name: "奥兰多海洋世界 (SeaWorld Orlando)",
     country: "美国",
@@ -872,6 +895,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "everland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/T_Express_Everland_Resort.jpg/960px-T_Express_Everland_Resort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:T_Express_Everland_Resort.jpg", "artist": "Roller Coaster Philosophy, Jeremy Thompson", "license": "Public domain", "title": "File:T Express Everland Resort.jpg"},
     rank: 42,
     name: "韩国爱宝乐园 (Everland)",
     country: "韩国",
@@ -977,6 +1001,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "six-flags-great-adventure",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Kingda_Ka.jpg/960px-Kingda_Ka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Kingda_Ka.jpg", "artist": "Dusso Janladde", "license": "CC BY-SA 3.0", "title": "File:Kingda Ka.jpg"},
     rank: 47,
     name: "六旗大冒险乐园 (Six Flags Great Adventure)",
     country: "美国",
@@ -1040,6 +1065,7 @@ window.THEMEPARKS_TOP100 = [
   },
   {
     id: "gardaland",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/BlueTornado.jpg/960px-BlueTornado.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:BlueTornado.jpg", "artist": "Stefan Scheer", "license": "CC BY-SA 3.0", "title": "File:BlueTornado.jpg"},
     rank: 50,
     name: "意大利加达云霄乐园 (Gardaland)",
     country: "意大利",
@@ -1064,6 +1090,7 @@ window.THEMEPARKS_TOP100 = [
 window.THEMEPARKS_TOP100.push(
   {
     id: "hansa-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Kaernan.jpg/960px-Kaernan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Kaernan.jpg", "artist": "EHRENBERG Kommunikation", "license": "CC BY 2.0", "title": "File:Kaernan.jpg"},
     rank: 51,
     name: "德国汉莎公园 (Hansa-Park)",
     country: "德国",
@@ -1232,6 +1259,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "parque-warner-madrid",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/29_La_espectacular_monta%C3%B1a_rusa_de_Superman.jpg/960px-29_La_espectacular_monta%C3%B1a_rusa_de_Superman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:29_La_espectacular_monta%C3%B1a_rusa_de_Superman.jpg", "artist": "Miguel303xm", "license": "CC BY-SA 2.5", "title": "File:29 La espectacular montaña rusa de Superman.jpg"},
     rank: 59,
     name: "马德里华纳公园 (Parque Warner Madrid)",
     country: "西班牙",
@@ -1253,6 +1281,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "xcaret-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Xcaret_Letras.jpg/960px-Xcaret_Letras.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Xcaret_Letras.jpg", "artist": "Tativert", "license": "CC BY-SA 4.0", "title": "File:Xcaret Letras.jpg"},
     rank: 60,
     name: "墨西哥谢卡瑞特生态主题公园 (Xcaret Park)",
     country: "墨西哥",
@@ -1295,6 +1324,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "kolmarden-wildlife-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/WildfireKolm%C3%A5rden2017.jpg/960px-WildfireKolm%C3%A5rden2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:WildfireKolm%C3%A5rden2017.jpg", "artist": "Kigsz", "license": "CC BY-SA 4.0", "title": "File:WildfireKolmården2017.jpg"},
     rank: 62,
     name: "瑞典科尔莫登森林过山车园 (Kolmården)",
     country: "瑞典",
@@ -1316,6 +1346,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "six-flags-great-america",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Raging_Bull_in_the_Southwest_Territory.jpg/960px-Raging_Bull_in_the_Southwest_Territory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Raging_Bull_in_the_Southwest_Territory.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Raging Bull in the Southwest Territory.jpg"},
     rank: 63,
     name: "六旗大美国乐园 (Six Flags Great America)",
     country: "美国",
@@ -1337,6 +1368,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "six-flags-over-georgia",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Goliath_%28Six_Flags_Over_Georgia%29_05.JPG/960px-Goliath_%28Six_Flags_Over_Georgia%29_05.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Goliath_(Six_Flags_Over_Georgia)_05.JPG", "artist": "Coasterman1234", "license": "CC BY-SA 3.0", "title": "File:Goliath (Six Flags Over Georgia) 05.JPG"},
     rank: 64,
     name: "六旗乔治亚乐园 (Six Flags Over Georgia)",
     country: "美国",
@@ -1421,6 +1453,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "lagoon-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Cannibal_%28Lagoon%29_2.jpg/960px-Cannibal_%28Lagoon%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Cannibal_(Lagoon)_2.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Cannibal (Lagoon) 2.jpg"},
     rank: 68,
     name: "犹他州泻湖游乐园 (Lagoon Amusement Park)",
     country: "美国",
@@ -1442,6 +1475,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "seaworld-san-antonio",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Steel-Eel-Purple-Repaint-SeaWorld-San-Antonio.jpg/960px-Steel-Eel-Purple-Repaint-SeaWorld-San-Antonio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Steel-Eel-Purple-Repaint-SeaWorld-San-Antonio.jpg", "artist": "Wasurber", "license": "CC BY-SA 4.0", "title": "File:Steel-Eel-Purple-Repaint-SeaWorld-San-Antonio.jpg"},
     rank: 69,
     name: "圣安东尼奥海洋世界 (SeaWorld San Antonio)",
     country: "美国",
@@ -1463,6 +1497,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "seaworld-san-diego",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Atlantis_SeaWorld_San_Diego.jpg/960px-Atlantis_SeaWorld_San_Diego.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Atlantis_SeaWorld_San_Diego.jpg", "artist": "Leon7", "license": "CC BY-SA 3.0", "title": "File:Atlantis SeaWorld San Diego.jpg"},
     rank: 70,
     name: "圣地亚哥海洋世界 (SeaWorld San Diego)",
     country: "美国",
@@ -1526,6 +1561,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "shanghai-haichang-ocean-park",
+    noPhoto: true,
     rank: 73,
     name: "上海海昌海洋公园 (Shanghai Haichang Ocean Park)",
     country: "中国",
@@ -1589,6 +1625,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "happy-valley-shenzhen",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Happy_Valley_Shenzhen_-_5763616237.jpg/960px-Happy_Valley_Shenzhen_-_5763616237.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Happy_Valley_Shenzhen_-_5763616237.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Happy Valley Shenzhen - 5763616237.jpg"},
     rank: 76,
     name: "深圳欢乐谷 (Happy Valley Shenzhen)",
     country: "中国",
@@ -1631,6 +1668,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "fantawild-oriental-heritage",
+    noPhoto: true,
     rank: 78,
     name: "芜湖方特东方神画 (Fantawild Oriental Heritage)",
     country: "中国",
@@ -1673,6 +1711,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "hong-kong-ocean-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Hair_Raiser.jpg/960px-Hair_Raiser.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Hair_Raiser.jpg", "artist": "Jeremy Thompson", "license": "CC BY 2.0", "title": "File:Hair Raiser.jpg"},
     rank: 80,
     name: "香港海洋公园 (Ocean Park Hong Kong)",
     country: "中国",
@@ -1715,6 +1754,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "suzuka-circuit-park",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Ferris_wheel_at_Suzuka_Circuit_on_27th_August_2023.jpg/960px-Ferris_wheel_at_Suzuka_Circuit_on_27th_August_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Ferris_wheel_at_Suzuka_Circuit_on_27th_August_2023.jpg", "artist": "Tokumeigakarinoaoshima", "license": "CC BY-SA 4.0", "title": "File:Ferris wheel at Suzuka Circuit on 27th August 2023.jpg"},
     rank: 82,
     name: "日本铃鹿赛道乐园 (Suzuka Circuit Park)",
     country: "日本",
@@ -1736,6 +1776,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "parque-espana-shima",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/La_Villa_Espa%C3%B1ola_de_Shima%2C_Parque_Espa%C3%B1a_-_Plaza_de_Mayor.jpg/960px-La_Villa_Espa%C3%B1ola_de_Shima%2C_Parque_Espa%C3%B1a_-_Plaza_de_Mayor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:La_Villa_Espa%C3%B1ola_de_Shima,_Parque_Espa%C3%B1a_-_Plaza_de_Mayor.jpg", "artist": "Yanajin33", "license": "CC BY-SA 3.0", "title": "File:La Villa Española de Shima, Parque España - Plaza de Mayor.jpg"},
     rank: 83,
     name: "日本志摩西班牙村 (Shima Spain Village)",
     country: "日本",
@@ -1862,6 +1903,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "genting-skyworlds",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Genting_Highlands_theme_park.jpg/960px-Genting_Highlands_theme_park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Genting_Highlands_theme_park.jpg", "artist": "Angcr", "license": "CC BY 3.0", "title": "File:Genting Highlands theme park.jpg"},
     rank: 89,
     name: "马来西亚云顶天城世界 (Genting SkyWorlds)",
     country: "马来西亚",
@@ -1883,6 +1925,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "motiongate-dubai",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Entrance_of_motiongate_Dubai_.jpg/960px-Entrance_of_motiongate_Dubai_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Entrance_of_motiongate_Dubai_.jpg", "artist": "DPR 2016", "license": "CC BY-SA 4.0", "title": "File:Entrance of motiongate Dubai .jpg"},
     rank: 90,
     name: "迪拜之门好莱坞乐园 (Motiongate Dubai)",
     country: "阿联酋",
@@ -1946,6 +1989,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "dreamworld-gold-coast",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Steel_Taipan_first_turn.jpg/960px-Steel_Taipan_first_turn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Steel_Taipan_first_turn.jpg", "artist": "Tamgarat", "license": "CC0", "title": "File:Steel Taipan first turn.jpg"},
     rank: 93,
     name: "澳大利亚黄金海岸梦幻世界 (Dreamworld)",
     country: "澳大利亚",
@@ -1988,6 +2032,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "beto-carrero-world",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Beto_Carrero_World%2C_Penha%2C_Santa_Catarina_-_Feb_2011.jpg/960px-Beto_Carrero_World%2C_Penha%2C_Santa_Catarina_-_Feb_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Beto_Carrero_World,_Penha,_Santa_Catarina_-_Feb_2011.jpg", "artist": "Marybro", "license": "CC BY-SA 4.0", "title": "File:Beto Carrero World, Penha, Santa Catarina - Feb 2011.jpg"},
     rank: 95,
     name: "巴西贝托卡雷罗世界 (Beto Carrero World)",
     country: "巴西",
@@ -2009,6 +2054,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "six-flags-mexico",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Boomerang_-_Six_Flags_Mexico.jpg/960px-Boomerang_-_Six_Flags_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Boomerang_-_Six_Flags_Mexico.jpg", "artist": "Cohete verde", "license": "CC BY-SA 3.0", "title": "File:Boomerang - Six Flags Mexico.jpg"},
     rank: 96,
     name: "墨西哥六旗乐园 (Six Flags México)",
     country: "墨西哥",
@@ -2072,6 +2118,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "legoland-billund",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Nyhavn_with_snow_and_Christmas%2C_Legoland.jpg/960px-Nyhavn_with_snow_and_Christmas%2C_Legoland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Nyhavn_with_snow_and_Christmas,_Legoland.jpg", "artist": "Thomas Dahlstrøm Nielsen", "license": "CC BY 4.0", "title": "File:Nyhavn with snow and Christmas, Legoland.jpg"},
     rank: 99,
     name: "丹麦比隆乐高乐园 (Legoland Billund Resort)",
     country: "丹麦",
@@ -2093,6 +2140,7 @@ window.THEMEPARKS_TOP100.push(
   },
   {
     id: "chessington-world-of-adventures",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Dragons_fury_cwoa.jpg/960px-Dragons_fury_cwoa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Dragons_fury_cwoa.jpg", "artist": "Stefan Scheer", "license": "CC BY-SA 3.0", "title": "File:Dragons fury cwoa.jpg"},
     rank: 100,
     name: "英国切辛顿冒险世界 (Chessington World of Adventures)",
     country: "英国",
@@ -2146,6 +2194,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "aquaventure-dubai",
+    noPhoto: true,
     rank: 3,
     name: "迪拜棕榈岛亚特兰蒂斯水世界 (Aquaventure World Dubai)",
     country: "阿联酋",
@@ -2185,6 +2234,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "chimelong-water-park",
+    noPhoto: true,
     rank: 6,
     name: "广州长隆水上乐园 (Chimelong Water Park)",
     country: "中国",
@@ -2198,6 +2248,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "yas-waterworld-abu-dhabi",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Yas_Waterworld_Abu_Dhabi_2.jpg/960px-Yas_Waterworld_Abu_Dhabi_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Yas_Waterworld_Abu_Dhabi_2.jpg", "artist": "LittleOneM", "license": "CC BY-SA 4.0", "title": "File:Yas Waterworld Abu Dhabi 2.jpg"},
     rank: 7,
     name: "阿布扎比亚斯水世界 (Yas Waterworld Abu Dhabi)",
     country: "阿联酋",
@@ -2263,6 +2314,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "aquaventure-bahamas",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mayan_Temple_Slides_at_Atlantis_1.jpg/960px-Mayan_Temple_Slides_at_Atlantis_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Mayan_Temple_Slides_at_Atlantis_1.jpg", "artist": "Fred Hsu (Wikipedia:User:Fredhsu on en.wikipedia)", "license": "CC BY-SA 3.0", "title": "File:Mayan Temple Slides at Atlantis 1.jpg"},
     rank: 12,
     name: "巴哈马天堂岛亚特兰蒂斯水世界 (Aquaventure Bahamas)",
     country: "巴哈马",
@@ -2276,6 +2328,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "beach-park-brazil",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Suites_Beach_Park_Resort.jpg/960px-Suites_Beach_Park_Resort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:Suites_Beach_Park_Resort.jpg", "artist": "Beach Park", "license": "CC BY-SA 4.0", "title": "File:Suites Beach Park Resort.jpg"},
     rank: 13,
     name: "巴西福塔莱萨海滩水公园 (Beach Park)",
     country: "巴西",
@@ -2289,6 +2342,7 @@ window.WATERPARKS_TOP15 = [
   },
   {
     id: "caribbean-bay-korea",
+    image: {"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88_%EB%B2%A0%EC%9D%B4_%ED%8F%AC%ED%8A%B8%EB%A6%AC%EC%8A%A4_1.jpg/960px-%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88_%EB%B2%A0%EC%9D%B4_%ED%8F%AC%ED%8A%B8%EB%A6%AC%EC%8A%A4_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail", "page": "https://commons.wikimedia.org/wiki/File:%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88_%EB%B2%A0%EC%9D%B4_%ED%8F%AC%ED%8A%B8%EB%A6%AC%EC%8A%A4_1.jpg", "artist": "박은영", "license": "CC BY 4.0", "title": "File:캐리비안 베이 포트리스 1.jpg"},
     rank: 14,
     name: "韩国加勒比海湾水上乐园 (Caribbean Bay)",
     country: "韩国",

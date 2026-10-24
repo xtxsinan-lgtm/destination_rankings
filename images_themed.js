@@ -2946,5 +2946,250 @@ window.THEMED_IMAGES = {
   "artist": "Christine Harrison Frei",
   "license": "CC BY-SA 4.0",
   "title": "File:CabaretZaZouChicago.png"
+ },
+ "zoo-munich-hellabrunn": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Elefantenhaus_Tierpark_Hellabrunn_2008.jpg/960px-Elefantenhaus_Tierpark_Hellabrunn_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Elefantenhaus_Tierpark_Hellabrunn_2008.jpg",
+  "artist": "High Contrast",
+  "license": "CC BY 3.0 de",
+  "title": "File:Elefantenhaus Tierpark Hellabrunn 2008.jpg"
+ },
+ "zoo-basel": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Int%C3%A9rieur_El%C3%A9phant_Tembea_Zoo_B%C3%A2le.jpg/960px-Int%C3%A9rieur_El%C3%A9phant_Tembea_Zoo_B%C3%A2le.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_El%C3%A9phant_Tembea_Zoo_B%C3%A2le.jpg",
+  "artist": "Léodras",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Intérieur Eléphant Tembea Zoo Bâle.jpg"
+ },
+ "zoo-madrid-faunia": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Ailuropoda_melanoleuca.001_-_Zoo_Aquarium_de_Madrid.JPG/960px-Ailuropoda_melanoleuca.001_-_Zoo_Aquarium_de_Madrid.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Ailuropoda_melanoleuca.001_-_Zoo_Aquarium_de_Madrid.JPG",
+  "artist": "Fernando Losada Rodríguez",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Ailuropoda melanoleuca.001 - Zoo Aquarium de Madrid.JPG"
+ },
+ "zoo-kobe-adventure": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Balaeniceps_rex_%28Shoebill%29_Animal_Kingdom_Kobe_hdsr_S5_12.jpg/960px-Balaeniceps_rex_%28Shoebill%29_Animal_Kingdom_Kobe_hdsr_S5_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_(Shoebill)_Animal_Kingdom_Kobe_hdsr_S5_12.jpg",
+  "artist": "Hyppolyte de Saint-Rambert",
+  "license": "CC BY 4.0",
+  "title": "File:Balaeniceps rex (Shoebill) Animal Kingdom Kobe hdsr S5 12.jpg"
+ },
+ "zoo-asahiyama-ueno": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Asahiyama_zoo.jpg/960px-Asahiyama_zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo.jpg",
+  "artist": "ヨシキ",
+  "license": "CC BY 2.0",
+  "title": "File:Asahiyama zoo.jpg"
+ },
+ "zoo-dubonga-western-plains": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2020-10-07_Bongo_%28Tragelaphus_eurycerus%29_in_Taronga_Western_Plains_Zoo%2C_Dubbo%2C_NSW_5.jpg/960px-2020-10-07_Bongo_%28Tragelaphus_eurycerus%29_in_Taronga_Western_Plains_Zoo%2C_Dubbo%2C_NSW_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:2020-10-07_Bongo_(Tragelaphus_eurycerus)_in_Taronga_Western_Plains_Zoo,_Dubbo,_NSW_5.jpg",
+  "artist": "Maksym Kozlenko",
+  "license": "CC BY-SA 4.0",
+  "title": "File:2020-10-07 Bongo (Tragelaphus eurycerus) in Taronga Western Plains Zoo, Dubbo, NSW 5.jpg"
+ },
+ "zoo-johannesburg-pretoria": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/South_Africa-Pretoria_Zoo-005.jpg/960px-South_Africa-Pretoria_Zoo-005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:South_Africa-Pretoria_Zoo-005.jpg",
+  "artist": "NJR ZA",
+  "license": "CC BY-SA 3.0",
+  "title": "File:South Africa-Pretoria Zoo-005.jpg"
+ },
+ "aq-genoa": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Acquario_di_Genova.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "page": "https://commons.wikimedia.org/wiki/File:Acquario_di_Genova.jpg",
+  "artist": "Stillyna at Italian Wikipedia",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Acquario di Genova.jpg"
+ },
+ "aq-sumida-sunshine": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Magellanic_Penguin_%28Spheniscus_magellanicus%29_-_GRB.JPG/960px-Magellanic_Penguin_%28Spheniscus_magellanicus%29_-_GRB.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Magellanic_Penguin_(Spheniscus_magellanicus)_-_GRB.JPG",
+  "artist": "George Berninger Jr.",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Magellanic Penguin (Spheniscus magellanicus) - GRB.JPG"
+ },
+ "aq-enoshima": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Infrastructure_at_Enoshima_Aquarium_8.jpg/960px-Infrastructure_at_Enoshima_Aquarium_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Infrastructure_at_Enoshima_Aquarium_8.jpg",
+  "artist": "Syced",
+  "license": "CC0",
+  "title": "File:Infrastructure at Enoshima Aquarium 8.jpg"
+ },
+ "aq-toba": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Dugong_dugon%2C_Toba_Aquarium_1.jpg/960px-Dugong_dugon%2C_Toba_Aquarium_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Dugong_dugon,_Toba_Aquarium_1.jpg",
+  "artist": "Motokoka",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Dugong dugon, Toba Aquarium 1.jpg"
+ },
+ "aq-melbourne-sydney": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Entrance_of_S.E.A._Aquarium%2C_Resorts_World_Sentosa%2C_Singapore_-_20180220.jpg/960px-Entrance_of_S.E.A._Aquarium%2C_Resorts_World_Sentosa%2C_Singapore_-_20180220.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Entrance_of_S.E.A._Aquarium,_Resorts_World_Sentosa,_Singapore_-_20180220.jpg",
+  "artist": "Banej",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Entrance of S.E.A. Aquarium, Resorts World Sentosa, Singapore - 20180220.jpg"
+ },
+ "aq-aqwa-perth": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/AQWA_Main_Entrance.jpg/960px-AQWA_Main_Entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:AQWA_Main_Entrance.jpg",
+  "artist": "SheDev",
+  "license": "CC BY-SA 4.0",
+  "title": "File:AQWA Main Entrance.jpg"
+ },
+ "aq-new-england": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Top_of_Giant_Ocean_Tank_at_New_England_Aquarium_Oct_2024_2.jpg/960px-Top_of_Giant_Ocean_Tank_at_New_England_Aquarium_Oct_2024_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Top_of_Giant_Ocean_Tank_at_New_England_Aquarium_Oct_2024_2.jpg",
+  "artist": "4300streetcar",
+  "license": "CC BY 4.0",
+  "title": "File:Top of Giant Ocean Tank at New England Aquarium Oct 2024 2.jpg"
+ },
+ "aq-texas-state": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Texas_State_Aquarium%2C_Corpus_Christi%2C_TX_%2814418392088%29.jpg/960px-Texas_State_Aquarium%2C_Corpus_Christi%2C_TX_%2814418392088%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Texas_State_Aquarium,_Corpus_Christi,_TX_(14418392088).jpg",
+  "artist": "Ted Gresham from Lufkin, United States",
+  "license": "CC BY 2.0",
+  "title": "File:Texas State Aquarium, Corpus Christi, TX (14418392088).jpg"
+ },
+ "aq-wonders-wildlife": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Wonders_of_Wildlife_Museum_%28interior%29.JPG/960px-Wonders_of_Wildlife_Museum_%28interior%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Wonders_of_Wildlife_Museum_(interior).JPG",
+  "artist": "Robert Lawton",
+  "license": "CC BY-SA 2.5",
+  "title": "File:Wonders of Wildlife Museum (interior).JPG"
+ },
+ "aq-loveland-living-planet": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Petting_a_ray.jpg/960px-Petting_a_ray.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Petting_a_ray.jpg",
+  "artist": "cifraser1",
+  "license": "CC BY 2.0",
+  "title": "File:Petting a ray.jpg"
+ },
+ "aq-poema-del-mar": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Poema_del_Mar%2C_Gran_Canaria.jpg/960px-Poema_del_Mar%2C_Gran_Canaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Poema_del_Mar,_Gran_Canaria.jpg",
+  "artist": "Aneta p",
+  "license": "CC BY 4.0",
+  "title": "File:Poema del Mar, Gran Canaria.jpg"
+ },
+ "aq-palma": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Palma_Aquarium-Tibur%C3%B3n_puntas_negras.JPG/960px-Palma_Aquarium-Tibur%C3%B3n_puntas_negras.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Palma_Aquarium-Tibur%C3%B3n_puntas_negras.JPG",
+  "artist": "Bajoelmar",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Palma Aquarium-Tiburón puntas negras.JPG"
+ },
+ "aq-stralsund-ozeaneum": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Aquarium_im_Ozeaneum_Stralsund_001.jpg/960px-Aquarium_im_Ozeaneum_Stralsund_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Aquarium_im_Ozeaneum_Stralsund_001.jpg",
+  "artist": "Sebastian Wallroth",
+  "license": "CC BY 4.0",
+  "title": "File:Aquarium im Ozeaneum Stralsund 001.jpg"
+ },
+ "aq-aqua-rio": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Mural%2C_Acuario_R%C3%ADo_de_Janeiro_A74266720241123.jpg/960px-Mural%2C_Acuario_R%C3%ADo_de_Janeiro_A74266720241123.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Mural,_Acuario_R%C3%ADo_de_Janeiro_A74266720241123.jpg",
+  "artist": "Rjcastillo",
+  "license": "CC BY 4.0",
+  "title": "File:Mural, Acuario Río de Janeiro A74266720241123.jpg"
+ },
+ "aq-hangzhou-polar": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Beluga_Whale_%28Underwater%29%2C_Vancouver_Aquarium_%28319841848%29.jpg/960px-Beluga_Whale_%28Underwater%29%2C_Vancouver_Aquarium_%28319841848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Beluga_Whale_(Underwater),_Vancouver_Aquarium_(319841848).jpg",
+  "artist": "Antony Stanley from Gloucester, UK",
+  "license": "CC BY-SA 2.0",
+  "title": "File:Beluga Whale (Underwater), Vancouver Aquarium (319841848).jpg"
+ },
+ "zoo-vienna-schonbrunn": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Graureiher_Ardea_cinerea-4883.jpg/960px-Graureiher_Ardea_cinerea-4883.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Graureiher_Ardea_cinerea-4883.jpg",
+  "artist": "Isiwal",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Graureiher Ardea cinerea-4883.jpg"
+ },
+ "zoo-st-louis": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Western_pygmy_marmoset_in_the_Leningrad_zoo_4.jpg/960px-Western_pygmy_marmoset_in_the_Leningrad_zoo_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Western_pygmy_marmoset_in_the_Leningrad_zoo_4.jpg",
+  "artist": "Горбунова М.С.",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Western pygmy marmoset in the Leningrad zoo 4.jpg"
+ },
+ "zoo-cincinnati": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Polar_Bear_in_Cincinnati_Zoo_2.jpg/960px-Polar_Bear_in_Cincinnati_Zoo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Polar_Bear_in_Cincinnati_Zoo_2.jpg",
+  "artist": "Meena Kurian",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Polar Bear in Cincinnati Zoo 2.jpg"
+ },
+ "zoo-brookfield-lincoln": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Brookfield_zoo_0235.jpg/960px-Brookfield_zoo_0235.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Brookfield_zoo_0235.jpg",
+  "artist": "Ronincmc",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Brookfield zoo 0235.jpg"
+ },
+ "zoo-denver-cheyenne": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Giraffe%2C_Cheyenne_Mountain_Zoo%2C_March_2016.jpg/960px-Giraffe%2C_Cheyenne_Mountain_Zoo%2C_March_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Giraffe,_Cheyenne_Mountain_Zoo,_March_2016.jpg",
+  "artist": "Obeastly",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Giraffe, Cheyenne Mountain Zoo, March 2016.jpg"
+ },
+ "zoo-fort-worth-dallas": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Rio_Grande_River_Cooter_Fort_Worth_Zoo_061721.jpg/960px-Rio_Grande_River_Cooter_Fort_Worth_Zoo_061721.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Rio_Grande_River_Cooter_Fort_Worth_Zoo_061721.jpg",
+  "artist": "Sesamehoneytart",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Rio Grande River Cooter Fort Worth Zoo 061721.jpg"
+ },
+ "zoo-memphis": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Teton_trek_memphis_zoo_bears3.jpg/960px-Teton_trek_memphis_zoo_bears3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Teton_trek_memphis_zoo_bears3.jpg",
+  "artist": "Pinethicket at English Wikipedia",
+  "license": "CC BY-SA 3.0",
+  "title": "File:Teton trek memphis zoo bears3.jpg"
+ },
+ "zoo-toronto": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Toronto_Zoo_%28Scarborough_-_Rouge%29_%285531295706%29.jpg/960px-Toronto_Zoo_%28Scarborough_-_Rouge%29_%285531295706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Toronto_Zoo_(Scarborough_-_Rouge)_(5531295706).jpg",
+  "artist": "JasonParis",
+  "license": "CC BY 2.0",
+  "title": "File:Toronto Zoo (Scarborough - Rouge) (5531295706).jpg"
+ },
+ "zoo-granby-biodome": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tropical_Rainforest_ecosystem_%40_Biod%C3%B4me_%40_Hochelaga-Maisonneuve_%40_Montreal_%2830314734372%29.jpg/960px-Tropical_Rainforest_ecosystem_%40_Biod%C3%B4me_%40_Hochelaga-Maisonneuve_%40_Montreal_%2830314734372%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Tropical_Rainforest_ecosystem_@_Biod%C3%B4me_@_Hochelaga-Maisonneuve_@_Montreal_(30314734372).jpg",
+  "artist": "Guilhem Vellut from Annecy, France",
+  "license": "CC BY 2.0",
+  "title": "File:Tropical Rainforest ecosystem @ Biodôme @ Hochelaga-Maisonneuve @ Montreal (30314734372).jpg"
+ },
+ "zoo-dublin": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/African_Plains_area_of_Dublin_Zoo_-_geograph.org.uk_-_5948321.jpg/960px-African_Plains_area_of_Dublin_Zoo_-_geograph.org.uk_-_5948321.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:African_Plains_area_of_Dublin_Zoo_-_geograph.org.uk_-_5948321.jpg",
+  "artist": "Anthony Parkes",
+  "license": "CC BY-SA 2.0",
+  "title": "File:African Plains area of Dublin Zoo - geograph.org.uk - 5948321.jpg"
+ },
+ "zoo-edinburgh-highland": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Rock_hopper_Penguin_%2811280208716%29.jpg/960px-Rock_hopper_Penguin_%2811280208716%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Rock_hopper_Penguin_(11280208716).jpg",
+  "artist": "William Warby from London, England",
+  "license": "CC BY 2.0",
+  "title": "File:Rock hopper Penguin (11280208716).jpg"
+ },
+ "zoo-whipsnade-london": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Elephant_House%2C_Whipsnade_Zoo%2C_September_2025_03.jpg/960px-Elephant_House%2C_Whipsnade_Zoo%2C_September_2025_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Elephant_House,_Whipsnade_Zoo,_September_2025_03.jpg",
+  "artist": "No Swan So Fine",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Elephant House, Whipsnade Zoo, September 2025 03.jpg"
+ },
+ "zoo-koln-frankfurt": {
+  "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Crocodylus_niloticus_im_K%C3%B6lner_Zoo_-20110912-RM-141253.jpg/960px-Crocodylus_niloticus_im_K%C3%B6lner_Zoo_-20110912-RM-141253.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "page": "https://commons.wikimedia.org/wiki/File:Crocodylus_niloticus_im_K%C3%B6lner_Zoo_-20110912-RM-141253.jpg",
+  "artist": "Ermell",
+  "license": "CC BY-SA 4.0",
+  "title": "File:Crocodylus niloticus im Kölner Zoo -20110912-RM-141253.jpg"
  }
 };

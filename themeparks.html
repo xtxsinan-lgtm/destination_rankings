@@ -4,454 +4,452 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Thrill &amp; Magic Index · 全球主题游乐园 Top 100 ＆ 水上乐园 Top 15</title>
-  <meta name="description" content="兼顾硬核过山车统治力、殿堂级暗黑骑乘造景与真实排队运营体验：全球 100 座顶级主题游乐园与 15 座传奇水上乐园权威图鉴。" />
-  <meta name="theme-color" content="#0b0818" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0818'/%3E%3Cpath d='M3 24 C10 24, 10 8, 16 8 C22 8, 22 24, 29 24' fill='none' stroke='%23ffb830' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='8' r='3' fill='%23ff4d79'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1129'/%3E%3Ccircle cx='16' cy='14' r='9' fill='none' stroke='%23f4c34d' stroke-width='2'/%3E%3Cpath d='M16 5v18M7 14h18M9.6 7.6l12.8 12.8M22.4 7.6L9.6 20.4' stroke='%23f4c34d' stroke-width='1.1'/%3E%3Cpath d='M10 29l6-15 6 15' fill='none' stroke='%23f6ecd4' stroke-width='1.8'/%3E%3Ccircle cx='16' cy='14' r='2.4' fill='%23e5483b'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@400;500;600&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" />
   <style>
     /* ==========================================================================
-       The Thrill & Magic Index — Twilight Starlight & Coaster Track Stylesheet
-       Deep twilight indigo · electric coaster gold · magic rose · aqua splash
+       The Thrill & Magic Index — "Fairground at Dusk" poster & ticket stylesheet
+       midnight navy · marquee-bulb gold · candy red / teal used sparingly · ticket cream
        ========================================================================== */
     :root {
-      --bg: #080612;
-      --bg-2: #100c24;
-      --card: rgba(22, 18, 46, 0.72);
-      --card-hover: rgba(30, 24, 62, 0.88);
-      --glass: rgba(255, 255, 255, 0.04);
-      --edge: rgba(255, 200, 120, 0.15);
-      --edge-2: rgba(255, 200, 120, 0.34);
-      --text: #f7f4ff;
-      --muted: rgba(228, 220, 250, 0.68);
-      --faint: rgba(228, 220, 250, 0.42);
-      --gold: #ffb830;
-      --rose: #ff4d79;
-      --violet: #a77bff;
-      --aqua: #2be4dc;
-      --lime: #5ce69b;
-      --display: "Sora", "Noto Sans SC", system-ui, sans-serif;
-      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+      --night: #0b1129; --night-2: #111a3b; --night-3: #18234d; --night-4: #223062;
+      --line: rgba(244, 195, 77, .16); --line-2: rgba(244, 195, 77, .32);
+      --gold: #f4c34d; --bulb: #ffe7a8; --red: #e5483b; --teal: #2bb3a3; --peri: #9aa6dc;
+      --cream: #f6ecd4; --cream-2: #e8d9b5; --ink: #1a1f3d;
+      --text: #f4eedf; --muted: rgba(244, 238, 223, .7); --faint: rgba(244, 238, 223, .46);
+      --display: "Alfa Slab One", "Noto Serif SC", Georgia, serif;
+      --cond: "Oswald", "Noto Sans SC", system-ui, sans-serif;
+      --serif: "Noto Serif SC", "Songti SC", Georgia, serif;
       --sans: "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
-      --wrap: 1240px;
-      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --wrap: 1240px; --topH: 60px;
+      --ease: cubic-bezier(.22, .61, .36, 1);
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 130px; }
     body {
-      margin: 0; min-height: 100vh;
-      background: var(--bg); color: var(--text);
-      font-family: var(--sans); font-size: 15px; line-height: 1.72;
-      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
-      overflow-x: hidden;
+      margin: 0; background: var(--night); color: var(--text);
+      font-family: var(--sans); font-size: 15px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums; overflow-x: hidden;
+      background-image:
+        radial-gradient(1200px 600px at 85% -10%, rgba(229, 72, 59, .16), transparent 60%),
+        radial-gradient(900px 520px at 5% 0%, rgba(43, 179, 163, .10), transparent 60%),
+        linear-gradient(180deg, #0f1636 0, var(--night) 900px);
+      background-repeat: no-repeat;
     }
-    h1, h2, h3, h4, p, ul, ol { margin: 0; }
+    h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
     ul, ol { padding: 0; list-style: none; }
     a { color: inherit; text-decoration: none; }
     button, input, select { font: inherit; color: inherit; }
     button { background: none; border: 0; padding: 0; cursor: pointer; }
-    ::selection { background: rgba(255, 184, 48, 0.32); color: #fff; }
-    .wrap { width: min(var(--wrap), 100% - 44px); margin-inline: auto; }
+    ::selection { background: rgba(244, 195, 77, .35); color: #fff; }
+    .wrap { width: min(var(--wrap), 100% - 48px); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-    /* Twilight sky & subtle coaster grid ------------------------------------ */
-    .sky-bg {
-      position: fixed; inset: 0; z-index: -2; pointer-events: none;
-      background:
-        radial-gradient(85% 55% at 18% 0%, rgba(167, 123, 255, 0.22), transparent 65%),
-        radial-gradient(75% 50% at 85% 10%, rgba(255, 77, 121, 0.18), transparent 60%),
-        radial-gradient(90% 60% at 50% 100%, rgba(43, 228, 220, 0.10), transparent 70%),
-        linear-gradient(180deg, #120d2b 0%, #090716 55%, #06040f 100%);
-    }
-    .track-grid {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.28;
-      background-image:
-        linear-gradient(rgba(255, 184, 48, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 184, 48, 0.05) 1px, transparent 1px);
-      background-size: 56px 56px;
-      -webkit-mask-image: radial-gradient(circle at 50% 25%, #000 0%, transparent 80%);
-      mask-image: radial-gradient(circle at 50% 25%, #000 0%, transparent 80%);
-    }
+    /* marquee bulb strip (reusable) */
+    .bulbs { height: 10px; background: radial-gradient(circle at 50% 50%, var(--bulb) 0 2.4px, rgba(255, 231, 168, .25) 3px, transparent 4.5px) 0 0 / 18px 10px repeat-x; animation: twinkle 2.4s steps(2) infinite; }
+    .bulbs.alt { animation-delay: -1.2s; }
+    @keyframes twinkle { 50% { opacity: .55; } }
 
-    /* Top Nav --------------------------------------------------------------- */
-    .top {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(8, 6, 18, 0.78);
-      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--edge);
-    }
-    .top-inner { display: flex; align-items: center; gap: 18px; min-height: 68px; padding: 8px 0; }
-    .logo {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: var(--display); font-weight: 600; font-size: 13px;
-      letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
-      white-space: nowrap;
-    }
-    .logo svg { width: 26px; height: 26px; flex: none; }
-    .switch {
-      display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto; padding: 4px;
-      border: 1px solid var(--edge); border-radius: 999px;
-      background: rgba(16, 12, 36, 0.65);
-    }
-    .switch a {
-      padding: 6px 13px; border-radius: 999px; font-size: 13px;
-      color: var(--muted); transition: all 0.2s; white-space: nowrap;
-    }
-    .switch a:hover { color: var(--text); }
-    .switch a[aria-current="page"] {
-      background: linear-gradient(135deg, rgba(255, 184, 48, 0.24), rgba(255, 77, 121, 0.24));
-      color: var(--gold); border: 1px solid rgba(255, 184, 48, 0.45);
-      box-shadow: 0 0 18px rgba(255, 184, 48, 0.2);
-    }
+    /* ---------- Topbar ---------- */
+    .top { position: sticky; top: 0; z-index: 60; background: rgba(11, 17, 41, .94); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line-2); }
+    .top-inner { display: flex; align-items: center; gap: 22px; min-height: var(--topH); }
+    .logo { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .logo-tk { position: relative; display: grid; place-items: center; width: 44px; height: 32px; background: var(--gold); color: var(--ink); border-radius: 3px;
+      -webkit-mask: radial-gradient(circle 4px at 0 50%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 4px at 100% 50%, #0000 97%, #000) right / 51% 100% no-repeat;
+      mask: radial-gradient(circle 4px at 0 50%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 4px at 100% 50%, #0000 97%, #000) right / 51% 100% no-repeat; }
+    .logo-tk svg { width: 22px; height: 22px; }
+    .logo b { display: block; font-family: var(--display); font-weight: 400; font-size: 17px; letter-spacing: .06em; color: var(--cream); line-height: 1.1; }
+    .logo small { display: block; font-family: var(--cond); font-size: 10.5px; letter-spacing: .3em; color: var(--gold); text-transform: uppercase; }
+    .switch { display: flex; gap: 2px; margin-left: auto; min-width: 0; overflow-x: auto; scrollbar-width: none; font-size: 12.5px; -webkit-mask-image: linear-gradient(90deg, #000 94%, transparent); mask-image: linear-gradient(90deg, #000 94%, transparent); padding-right: 18px; }
+    .switch::-webkit-scrollbar { display: none; }
+    .switch a { padding: 6px 10px; white-space: nowrap; color: var(--muted); border-radius: 3px; transition: color .2s, background .2s; }
+    .switch a:hover { color: #fff; background: rgba(255, 255, 255, .06); }
+    .switch a[aria-current="page"] { background: var(--cream); color: var(--ink); font-weight: 700; padding-inline: 14px;
+      -webkit-mask: radial-gradient(circle 3.5px at 0 50%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 3.5px at 100% 50%, #0000 97%, #000) right / 51% 100% no-repeat;
+      mask: radial-gradient(circle 3.5px at 0 50%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 3.5px at 100% 50%, #0000 97%, #000) right / 51% 100% no-repeat; }
 
-    /* Hero ------------------------------------------------------------------ */
-    .hero {
-      position: relative; padding: 68px 0 84px; overflow: hidden;
-      border-bottom: 1px solid var(--edge);
-    }
-    .hero-coaster-svg {
-      position: absolute; inset: auto 0 0 0; width: 100%; height: 320px;
-      pointer-events: none; z-index: -1; opacity: 0.32;
-    }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-family: var(--display); font-size: 11.5px; font-weight: 600;
-      letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold);
-    }
-    .eyebrow::before {
-      content: ""; width: 28px; height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--rose));
-    }
-    .hero h1 {
-      margin-top: 22px; font-family: var(--sans); font-weight: 300;
-      font-size: clamp(38px, 5.6vw, 76px); line-height: 1.15; letter-spacing: 0.01em;
-    }
-    .hero h1 em {
-      font-style: normal; font-family: var(--display); font-weight: 600;
-      background: linear-gradient(120deg, var(--gold) 0%, #ff7a59 50%, var(--rose) 100%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .hero p.lede {
-      max-width: 44em; margin-top: 24px; font-size: 16px; line-height: 1.95;
-      color: var(--muted); font-weight: 300;
-    }
-    .hero-jump { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn-jump {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 500;
-      border: 1px solid var(--edge-2); background: rgba(255, 184, 48, 0.1); color: var(--gold);
-      transition: all 0.2s;
-    }
-    .btn-jump:hover { background: var(--gold); color: #120b00; box-shadow: 0 0 24px rgba(255, 184, 48, 0.4); }
-    .btn-jump.is-aqua { border-color: rgba(43, 228, 220, 0.4); background: rgba(43, 228, 220, 0.1); color: var(--aqua); }
-    .btn-jump.is-aqua:hover { background: var(--aqua); color: #012022; box-shadow: 0 0 24px rgba(43, 228, 220, 0.4); }
+    /* ---------- Hero ---------- */
+    .hero { position: relative; padding: 56px 0 60px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 12px; font-family: var(--cond); font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+    .kicker i { font-style: normal; color: var(--red); }
+    .hero h1 { margin-top: 20px; font-family: var(--serif); font-weight: 900; font-size: clamp(36px, 4.8vw, 62px); line-height: 1.14; letter-spacing: .01em; color: var(--cream); }
+    .hero h1 .pre { display: block; font-size: .42em; font-weight: 700; letter-spacing: .14em; color: var(--muted); margin-bottom: 14px; }
+    .hero h1 .num { font-family: var(--display); font-weight: 400; font-size: 1.5em; line-height: .8; color: var(--gold); display: inline-block; letter-spacing: .01em;
+      text-shadow: 0 0 22px rgba(244, 195, 77, .45), 3px 3px 0 var(--red); }
+    .hero h1 .en { display: block; margin-top: 16px; font-family: var(--cond); font-weight: 500; font-size: .28em; letter-spacing: .46em; color: var(--faint); text-transform: uppercase; }
+    .lede { max-width: 38em; margin-top: 22px; font-size: 15.5px; line-height: 1.9; color: var(--muted); }
+    .lede strong { color: var(--cream); font-weight: 500; }
+    .jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .jump a { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 16px; font-size: 13px; font-weight: 500; border: 1px dashed var(--line-2); border-radius: 3px; color: var(--cream); transition: all .2s; }
+    .jump a:first-child { background: var(--gold); color: var(--ink); border: 1px solid var(--gold); font-weight: 700; }
+    .jump a:hover { border-color: var(--gold); transform: translateY(-1px); }
+    .jump a:first-child:hover { box-shadow: 0 0 22px rgba(244, 195, 77, .45); }
+    .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 32px; border-top: 2px solid var(--gold); border-bottom: 1px solid var(--line-2); }
+    .stats > div { padding: 14px 10px 13px; }
+    .stats > div + div { border-left: 1px dashed var(--line-2); }
+    .stats b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(22px, 2.3vw, 30px); line-height: 1.05; color: var(--cream); }
+    .stats b small { font-family: var(--cond); font-size: .5em; color: var(--gold); margin-left: 3px; letter-spacing: .04em; }
+    .stats span { display: block; margin-top: 6px; font-size: 11.5px; color: var(--faint); line-height: 1.45; }
+    .stats span em { font-style: normal; color: var(--muted); }
 
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
-      margin-top: 52px; padding-top: 24px; border-top: 1px solid var(--edge); gap: 18px;
-    }
-    .hero-stats div + div { padding-left: 18px; border-left: 1px solid var(--edge); }
-    .hero-stats b {
-      display: block; font-family: var(--display); font-weight: 300;
-      font-size: clamp(26px, 3vw, 42px); line-height: 1.05; color: var(--text);
-    }
-    .hero-stats b small { font-size: 0.45em; color: var(--gold); margin-left: 4px; font-weight: 400; }
-    .hero-stats span { display: block; margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+    .poster { justify-self: center; width: min(460px, 100%); }
+    .poster-frame { position: relative; padding: 14px; background: #1b1430; border-radius: 10px; box-shadow: 0 0 0 2px var(--gold), 0 0 0 6px #1b1430, 0 0 0 7px var(--line-2), 0 40px 70px -30px rgba(0, 0, 0, .8); }
+    .poster svg { display: block; width: 100%; height: auto; border-radius: 4px; }
+    .poster-cap { margin-top: 18px; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--cond); letter-spacing: .3em; font-size: 11.5px; text-transform: uppercase; color: var(--faint); }
+    .poster-cap b { font-family: var(--display); font-weight: 400; letter-spacing: .08em; font-size: 18px; color: var(--gold); }
+    .fw { transform-box: fill-box; transform-origin: center; animation: burst 4.2s ease-out infinite; opacity: 0; }
+    .fw.b { animation-delay: -1.4s; } .fw.c { animation-delay: -2.8s; }
+    @keyframes burst { 0% { transform: scale(.15); opacity: 0; } 12% { opacity: 1; } 55% { transform: scale(1); opacity: .9; } 80%, 100% { transform: scale(1.08); opacity: 0; } }
+    .wheel { transform-box: fill-box; transform-origin: center; animation: spin 60s linear infinite; }
+    .gond { transform-box: fill-box; transform-origin: 50% 0; animation: spin 60s linear infinite reverse; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .pbulb { animation: twinkle 1.8s steps(2) infinite; }
+    .pbulb.o { animation-delay: -.9s; }
+    .star { animation: twinkle 3.2s ease-in-out infinite; }
 
-    /* Sections & Weight Tuner ----------------------------------------------- */
-    .section { padding: 84px 0; }
-    .sec-head { max-width: 780px; margin-bottom: 40px; }
-    .sec-head h2 { margin-top: 12px; font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; }
-    .sec-head h2 em { font-style: normal; color: var(--gold); }
-    .sec-head p { margin-top: 12px; color: var(--muted); font-weight: 300; line-height: 1.9; }
+    /* ---------- Section heads (marquee sign) ---------- */
+    .section { padding: 72px 0 20px; }
+    .sec-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: start; margin-bottom: 28px; }
+    .sec-no { position: relative; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--night-3); color: var(--gold); font-family: var(--display); font-size: 24px; line-height: 1;
+      box-shadow: 0 0 0 2px var(--gold), 0 0 0 7px var(--night), 0 0 18px 4px rgba(244, 195, 77, .2); }
+    .sec-no::after { content: ""; position: absolute; inset: -9px; border-radius: 50%; border: 3px dotted var(--bulb); opacity: .75; animation: twinkle 2.4s steps(2) infinite; }
+    .sec-kicker { font-family: var(--cond); font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+    .sec-head h2 { margin-top: 6px; font-family: var(--serif); font-weight: 900; font-size: clamp(24px, 3vw, 34px); line-height: 1.25; color: var(--cream); }
+    .sec-head p { margin-top: 8px; max-width: 54em; color: var(--muted); font-size: 14.5px; line-height: 1.8; }
 
-    .tuner {
-      padding: 28px 30px; border: 1px solid var(--edge-2); border-radius: 24px;
-      background: linear-gradient(145deg, rgba(28, 22, 58, 0.85), rgba(14, 11, 32, 0.92));
-      box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.7);
-      margin-bottom: 32px;
-    }
-    .tuner-top {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-      gap: 14px; padding-bottom: 20px; border-bottom: 1px solid var(--edge);
-    }
-    .tuner-title { font-size: 16px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
-    .tuner-title span.badge {
-      padding: 3px 10px; border-radius: 999px; font-family: var(--mono); font-size: 11px;
-      background: rgba(255, 184, 48, 0.16); color: var(--gold); border: 1px solid rgba(255, 184, 48, 0.35);
-    }
-    .presets { display: flex; flex-wrap: wrap; gap: 8px; }
-    .preset-btn {
-      padding: 6px 14px; border-radius: 999px; font-size: 12.5px;
-      border: 1px solid var(--edge); color: var(--muted); background: rgba(255, 255, 255, 0.03);
-      transition: all 0.2s;
-    }
-    .preset-btn:hover { color: var(--text); border-color: var(--edge-2); }
-    .preset-btn[aria-pressed="true"] {
-      background: var(--gold); color: #160f00; border-color: var(--gold); font-weight: 600;
-      box-shadow: 0 0 16px rgba(255, 184, 48, 0.35);
-    }
-    .sliders-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px 26px; margin-top: 22px;
-    }
-    .s-item { display: flex; flex-direction: column; gap: 6px; }
-    .s-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--text); }
-    .s-label b { font-family: var(--mono); color: var(--gold); font-weight: 500; }
-    .s-sub { font-size: 11.5px; color: var(--faint); margin-top: -2px; }
-    .s-item input[type="range"] {
-      -webkit-appearance: none; appearance: none; width: 100%; height: 6px;
-      border-radius: 999px; background: rgba(255, 255, 255, 0.12); outline: none;
-    }
-    .s-item input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; appearance: none; width: 16px; height: 16px;
-      border-radius: 50%; background: var(--gold); cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 184, 48, 0.7);
-    }
+    /* ---------- Method ---------- */
+    .method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .m-item { position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 2px 14px; padding: 18px 18px 18px 16px; background: var(--night-2); border: 1px solid var(--line); border-radius: 6px; }
+    .m-no { grid-row: span 3; font-family: var(--display); font-size: 30px; line-height: 1; color: var(--gold); }
+    .m-no small { display: block; margin-top: 8px; width: max-content; padding: 2px 6px; border-radius: 2px; font-family: var(--cond); font-size: 12px; letter-spacing: .06em; background: var(--cream); color: var(--ink); }
+    .m-item h3 { font-size: 15.5px; font-weight: 700; color: var(--cream); }
+    .m-item h3 span { margin-left: 6px; font-family: var(--cond); font-weight: 400; font-size: 11px; letter-spacing: .2em; color: var(--faint); text-transform: uppercase; }
+    .m-item p { font-size: 13px; line-height: 1.7; color: var(--muted); }
+    .m-meter { height: 4px; margin-top: 8px; background: rgba(255, 255, 255, .07); border-radius: 2px; overflow: hidden; }
+    .m-meter i { display: block; height: 100%; background: linear-gradient(90deg, var(--gold), var(--red)); }
 
-    /* Filter & Sort Controls ------------------------------------------------ */
-    .controls {
-      position: sticky; top: 69px; z-index: 35;
-      display: flex; flex-direction: column; gap: 12px;
-      padding: 16px 20px; margin-bottom: 36px;
-      border: 1px solid var(--edge); border-radius: 20px;
-      background: rgba(12, 9, 28, 0.88);
-      -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
-      box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.75);
-    }
-    .ctrl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
-    .search { position: relative; flex: 1 1 260px; }
-    .search svg {
-      position: absolute; left: 14px; top: 50%; width: 16px; height: 16px;
-      transform: translateY(-50%); stroke: var(--muted); fill: none; stroke-width: 1.8;
-    }
-    .search input {
-      width: 100%; height: 40px; padding: 0 14px 0 40px;
-      border: 1px solid var(--edge); border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04); outline: none; font-size: 13.5px;
-    }
+    /* ---------- Viz ---------- */
+    .viz-card { background: var(--night-2); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px 16px; }
+    .viz-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin-bottom: 10px; }
+    .viz-top h3 { font-family: var(--serif); font-weight: 700; font-size: 17px; color: var(--cream); }
+    .viz-top h3 small { margin-left: 10px; font-family: var(--cond); font-weight: 400; font-size: 11px; letter-spacing: .24em; color: var(--faint); text-transform: uppercase; }
+    .viz-card svg { display: block; width: 100%; height: auto; }
+    .track-svg .hit { fill: transparent; cursor: crosshair; }
+    .readout { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; min-height: 30px; margin-top: 8px; padding-top: 10px; border-top: 1px dashed var(--line-2); font-size: 13px; color: var(--muted); }
+    .readout b { color: var(--cream); font-weight: 700; }
+    .readout .kv { font-family: var(--cond); letter-spacing: .04em; color: var(--cream); }
+    .readout .kv small { color: var(--faint); margin-right: 4px; font-family: var(--sans); }
+    .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--faint); }
+    .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+    .viz-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; margin-top: 16px; }
+    .records { display: grid; gap: 0; }
+    .records li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px dashed var(--line); }
+    .records li:last-child { border-bottom: 0; }
+    .records .r-k { font-family: var(--cond); font-size: 11px; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; }
+    .records .r-n { font-size: 14px; font-weight: 500; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .records .r-v { font-family: var(--display); font-size: 22px; color: var(--cream); white-space: nowrap; }
+    .records .r-v small { font-family: var(--cond); font-size: 12px; color: var(--faint); margin-left: 3px; }
+
+    /* ---------- Ticket badge ---------- */
+    .tk { --tc: var(--gold); position: relative; display: inline-grid; place-items: center; min-width: 50px; height: 36px; padding: 0 8px; background: var(--cream); color: var(--ink); border-radius: 3px;
+      font-family: var(--display); font-size: 17px; line-height: 1; box-shadow: inset 0 3px 0 var(--tc);
+      -webkit-mask: radial-gradient(circle 4.5px at 0 55%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 4.5px at 100% 55%, #0000 97%, #000) right / 51% 100% no-repeat;
+      mask: radial-gradient(circle 4.5px at 0 55%, #0000 97%, #000) left / 51% 100% no-repeat, radial-gradient(circle 4.5px at 100% 55%, #0000 97%, #000) right / 51% 100% no-repeat; }
+    .tk small { position: absolute; top: 5px; left: 7px; font-family: var(--cond); font-size: 8px; letter-spacing: .14em; color: rgba(26, 31, 61, .55); }
+    .tk.big { min-width: 66px; height: 48px; font-size: 24px; padding-top: 4px; }
+    .tk.sm { min-width: 22px; height: 18px; padding: 0 4px; font-size: 0; box-shadow: inset 0 4px 0 var(--tc); -webkit-mask: none; mask: none; border-radius: 2px; }
+    .t-T0 { --tc: var(--gold); } .t-T1 { --tc: var(--red); } .t-T1-5 { --tc: var(--teal); } .t-T2 { --tc: var(--peri); }
+
+    /* ---------- Mixer ---------- */
+    .mixer { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px 18px; align-items: center; padding: 14px 18px; background: var(--night-2); border: 1px solid var(--line); border-radius: 8px; }
+    .mixer-label { font-family: var(--cond); font-size: 11px; letter-spacing: .26em; color: var(--faint); text-transform: uppercase; line-height: 1.3; }
+    .mixer-label b { display: block; font-family: var(--sans); letter-spacing: .04em; font-size: 14px; color: var(--cream); text-transform: none; }
+    .mixer-label span { display: block; font-family: var(--sans); letter-spacing: 0; font-size: 11.5px; color: var(--gold); text-transform: none; }
+    .wbar { display: flex; height: 30px; border-radius: 4px; overflow: hidden; gap: 2px; min-width: 0; }
+    .wbar span { display: flex; align-items: center; justify-content: center; gap: 4px; min-width: 0; overflow: hidden; white-space: nowrap; font-size: 11.5px; color: var(--ink); font-weight: 500; transition: flex-grow .35s var(--ease); }
+    .wbar span b { font-family: var(--cond); font-weight: 600; }
+    .wbar em { font-style: normal; }
+    .disclose { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; font-size: 12.5px; font-weight: 500; border: 1px solid var(--line-2); border-radius: 3px; color: var(--cream); transition: all .2s; white-space: nowrap; }
+    .disclose:hover { border-color: var(--gold); color: var(--gold); }
+    .disclose svg { width: 10px; height: 10px; transition: transform .25s var(--ease); }
+    .disclose[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .mixer-row2 { grid-column: 1 / -1; }
+    .seg { display: inline-flex; padding: 3px; gap: 2px; border: 1px solid var(--line-2); border-radius: 4px; background: rgba(0, 0, 0, .18); max-width: 100%; }
+    .seg button { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border-radius: 2px; font-size: 12.5px; color: var(--muted); white-space: nowrap; transition: all .18s; }
+    .seg button small { font-family: var(--cond); font-size: 10.5px; color: var(--faint); }
+    .seg button:hover { color: var(--cream); }
+    .seg button[aria-pressed="true"] { background: var(--gold); color: var(--ink); font-weight: 700; }
+    .seg button[aria-pressed="true"] small { color: rgba(26, 31, 61, .6); }
+    .seg .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--tc); box-shadow: 0 0 0 1.5px rgba(0, 0, 0, .25); }
+    .sliders { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px 18px; padding-top: 12px; border-top: 1px dashed var(--line-2); }
+    .sliders[hidden] { display: none; }
+    .slider-box label { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--cream); }
+    .slider-box output { font-family: var(--cond); color: var(--gold); }
+    .slider-box small { display: block; font-size: 11px; color: var(--faint); line-height: 1.4; }
+    .slider-box input { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; margin: 10px 0 6px; border-radius: 2px; background: rgba(255, 255, 255, .14); outline: none; }
+    .slider-box input::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); border: 3px solid var(--night); box-shadow: 0 0 0 1.5px var(--gold), 0 0 10px rgba(244, 195, 77, .6); cursor: pointer; }
+    .slider-box input::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 0; }
+
+    /* ---------- Filters (single slim sticky row) ---------- */
+    .filters { position: sticky; top: var(--topH); z-index: 40; display: flex; align-items: center; gap: 8px; margin: 14px 0 26px; padding: 10px 0; background: rgb(11, 17, 41); border-bottom: 1px solid var(--line-2);
+      box-shadow: 0 0 0 100vmax rgb(11, 17, 41); clip-path: inset(0 -100vmax); }
+    .filters .seg button { padding: 0 9px; }
+    .search { position: relative; flex: 1 1 220px; min-width: 140px; }
+    .search svg { position: absolute; left: 11px; top: 50%; width: 15px; height: 15px; transform: translateY(-50%); stroke: var(--faint); fill: none; stroke-width: 2; }
+    .search input { width: 100%; height: 36px; padding: 0 12px 0 34px; border: 1px solid var(--line-2); border-radius: 4px; background: rgba(255, 255, 255, .04); outline: none; font-size: 13px; }
     .search input::placeholder { color: var(--faint); }
-    .search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255, 184, 48, 0.15); }
+    .search input:focus { border-color: var(--gold); }
+    .sel select { height: 36px; padding: 0 28px 0 11px; border: 1px solid var(--line-2); border-radius: 4px; font-size: 12.5px; cursor: pointer; -webkit-appearance: none; appearance: none;
+      background: rgba(255, 255, 255, .04) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23f4c34d' stroke-width='1.8'/%3E%3C/svg%3E") right 9px center / 10px no-repeat; }
+    .sel select option { background: var(--night-2); color: var(--text); }
+    .tally { margin-left: auto; white-space: nowrap; font-family: var(--cond); font-size: 13px; letter-spacing: .04em; color: var(--faint); }
+    .tally b { font-family: var(--display); font-weight: 400; font-size: 17px; color: var(--gold); }
 
-    .chip-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-    .chip-group-label { font-size: 12px; color: var(--faint); margin-right: 4px; font-family: var(--mono); }
-    .chip {
-      height: 32px; padding: 0 13px; border: 1px solid var(--edge); border-radius: 999px;
-      font-size: 12.5px; color: var(--muted); background: rgba(255, 255, 255, 0.02);
-      transition: all 0.18s; white-space: nowrap;
-    }
-    .chip:hover { color: var(--text); border-color: var(--edge-2); }
-    .chip[aria-pressed="true"] {
-      color: #140d00; background: var(--gold); border-color: var(--gold); font-weight: 600;
-      box-shadow: 0 0 14px rgba(255, 184, 48, 0.35);
-    }
-    .chip.is-tag[aria-pressed="true"] {
-      color: #fff; background: var(--rose); border-color: var(--rose);
-      box-shadow: 0 0 14px rgba(255, 77, 121, 0.4);
-    }
-    .sort-bar { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--edge); border-radius: 999px; background: rgba(0, 0, 0, 0.25); }
-    .sort-btn { height: 28px; padding: 0 12px; border-radius: 999px; font-size: 12px; color: var(--muted); transition: all 0.18s; }
-    .sort-btn[aria-pressed="true"] { background: rgba(167, 123, 255, 0.28); color: #fff; font-weight: 500; }
-    .count { margin-left: auto; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
-    .count b { color: var(--gold); }
+    /* ---------- List heads & feature cards ---------- */
+    .list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 30px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line-2); }
+    .list-head:first-child { margin-top: 0; }
+    .list-head h3 { font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--cream); letter-spacing: .02em; }
+    .list-head h3 small { margin-left: 12px; font-family: var(--sans); font-size: 13px; color: var(--muted); letter-spacing: 0; }
+    .ghost-btn { font-size: 12.5px; color: var(--gold); border-bottom: 1px dashed var(--gold); white-space: nowrap; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .fcard { --tc: var(--gold); position: relative; display: flex; flex-direction: column; background: var(--night-2); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transition: transform .28s var(--ease), border-color .25s, box-shadow .28s; }
+    .fcard:hover { transform: translateY(-3px); border-color: var(--tc); box-shadow: 0 26px 50px -28px rgba(0, 0, 0, .9); }
+    .media { position: relative; overflow: hidden; background: var(--night-3); }
+    .media img, .media .fb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s var(--ease); }
+    .fcard .media { aspect-ratio: 16 / 10; }
+    .fcard:hover .media img, .row:hover .media img, .wcard:hover .media img { transform: scale(1.05); }
+    .fcard .media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11, 17, 41, 0) 50%, rgba(11, 17, 41, .75)); pointer-events: none; }
+    .tk-wrap { position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; align-items: center; gap: 8px; }
+    .tk-wrap em { font-style: normal; font-family: var(--cond); font-size: 11px; letter-spacing: .14em; padding: 2px 7px; border-radius: 2px; background: rgba(11, 17, 41, .78); color: var(--tc); border: 1px solid var(--tc); }
+    .score-tab { position: absolute; right: 12px; bottom: 10px; z-index: 2; text-align: right; color: var(--cream); line-height: 1; }
+    .score-tab b { display: block; font-family: var(--display); font-weight: 400; font-size: 28px; color: var(--gold); text-shadow: 0 2px 10px rgba(0, 0, 0, .7); }
+    .score-tab span { font-family: var(--cond); font-size: 10px; letter-spacing: .3em; color: var(--muted); }
+    .credit { position: absolute; left: 10px; bottom: 8px; z-index: 2; max-width: 60%; font-size: 9.5px; color: rgba(255, 255, 255, .55); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .fbody { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px 16px; flex: 1; }
+    .loc { display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 12px; color: var(--faint); }
+    .loc b { color: var(--gold); font-weight: 500; font-family: var(--cond); letter-spacing: .08em; }
+    .fcard h3 { font-family: var(--serif); font-weight: 900; font-size: 19px; line-height: 1.3; color: var(--cream); }
+    .fcard h3 .en, .row-name .en { display: block; font-family: var(--cond); font-weight: 400; font-size: 12px; letter-spacing: .08em; color: var(--faint); margin-top: 3px; }
+    .mstrip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px dashed var(--line-2); border-bottom: 1px dashed var(--line-2); }
+    .mstrip div { padding: 8px 0 7px; text-align: center; }
+    .mstrip div + div { border-left: 1px dashed var(--line); }
+    .mstrip b, .row-metrics b { display: block; font-family: var(--display); font-weight: 400; font-size: 17px; line-height: 1.1; color: var(--cream); }
+    .mstrip b small, .row-metrics b small { font-family: var(--cond); font-size: 10.5px; color: var(--faint); margin-left: 2px; }
+    .mstrip span, .row-metrics span { display: block; margin-top: 3px; font-size: 10.5px; color: var(--faint); letter-spacing: .04em; }
+    .lead { font-size: 13px; line-height: 1.7; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .chip { font-size: 11.5px; padding: 1px 8px; border-radius: 2px; border: 1px solid var(--line-2); color: var(--muted); }
+    .fmeta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; color: var(--faint); }
+    .fmeta .price { font-family: var(--display); font-size: 16px; color: var(--gold); }
+    .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 500; color: var(--gold); padding: 5px 10px; border: 1px solid var(--line-2); border-radius: 3px; transition: all .2s; white-space: nowrap; }
+    .toggle:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+    .toggle svg { width: 10px; height: 10px; transition: transform .25s var(--ease); }
+    [aria-expanded="true"].toggle svg { transform: rotate(180deg); }
+    .fcard .detail { padding: 0 18px 16px; display: grid; gap: 14px; }
+    .fcard .detail[hidden], .row .detail[hidden], .wcard .detail[hidden] { display: none; }
+    .fcard > .shared-slot { padding: 0 18px 14px; }
 
-    /* Cards & Tier Zones ---------------------------------------------------- */
-    .zone { margin-top: 64px; }
-    .zone:first-child { margin-top: 0; }
-    .zone-head {
-      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
-      gap: 12px; padding-bottom: 16px; margin-bottom: 22px;
-      border-bottom: 1px solid var(--edge-2);
-    }
-    .zone-title { display: flex; align-items: baseline; gap: 14px; }
-    .zone-tier {
-      font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3.5vw, 44px);
-      color: var(--zone-c, var(--gold)); letter-spacing: -0.02em;
-    }
-    .zone-name { font-size: 20px; font-weight: 500; }
-    .zone-note { font-size: 13.5px; color: var(--muted); font-weight: 300; }
+    /* lead card (#1) spans full width */
+    .fcard.is-lead { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+    .fcard.is-lead .media { aspect-ratio: auto; min-height: 360px; grid-row: 1 / span 3; }
+    .fcard.is-lead .fbody { padding: 22px 24px 18px; }
+    .fcard.is-lead h3 { font-size: 26px; }
+    .fcard.is-lead .lead { -webkit-line-clamp: 4; font-size: 13.5px; }
+    .fcard.is-lead .detail { padding: 0 24px 18px; }
+    .fcard.is-lead > .shared-slot { padding: 0 24px 16px; }
 
-    .list { display: grid; gap: 18px; }
-    .card {
-      position: relative; overflow: hidden;
-      border: 1px solid var(--edge); border-radius: 22px;
-      background: var(--card);
-      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-      transition: transform 0.28s var(--ease), border-color 0.25s, background 0.25s;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: var(--zone-c, var(--gold));
-      background: var(--card-hover);
-      box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.85);
-    }
-    .card.is-t0 { border-color: rgba(255, 184, 48, 0.36); }
+    /* ---------- Rows ---------- */
+    .rows { border-top: 1px solid var(--line-2); }
+    .tier-divider { display: flex; align-items: center; gap: 10px; padding: 22px 0 8px; font-family: var(--cond); font-size: 13px; letter-spacing: .18em; color: var(--cream); text-transform: uppercase; border-bottom: 1px solid var(--line-2); }
+    .tier-divider small { margin-left: auto; font-size: 11.5px; color: var(--faint); letter-spacing: .1em; }
+    .tier-divider .note { font-family: var(--sans); letter-spacing: 0; text-transform: none; font-size: 12px; color: var(--faint); }
+    .row { --tc: var(--gold); border-bottom: 1px dashed var(--line); transition: background .2s; }
+    .row:hover, .row.is-open { background: rgba(255, 255, 255, .025); }
+    .row-main { display: grid; grid-template-columns: 62px 96px minmax(0, 1fr) minmax(0, 340px) 70px 70px; gap: 16px; align-items: center; padding: 10px 6px; cursor: pointer; }
+    .row .media { width: 96px; height: 62px; border-radius: 4px; }
+    .row-name { min-width: 0; }
+    .row-name h3 { font-family: var(--serif); font-weight: 700; font-size: 15.5px; line-height: 1.35; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .row-name .en { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .row-name .loc { margin-top: 2px; }
+    .row-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: center; }
+    .row-metrics div { padding: 2px 4px; border-radius: 3px; }
+    .row-metrics div.hot { background: rgba(244, 195, 77, .1); }
+    .row-metrics div.hot b { color: var(--gold); }
+    .row-score { text-align: right; }
+    .row-score b { font-family: var(--display); font-weight: 400; font-size: 21px; color: var(--gold); line-height: 1; }
+    .row-score .mini { height: 3px; margin-top: 6px; background: rgba(255, 255, 255, .08); border-radius: 2px; overflow: hidden; }
+    .row-score .mini i { display: block; height: 100%; background: var(--tc); }
+    .row-score small { display: block; margin-top: 4px; font-size: 10px; color: var(--faint); white-space: nowrap; }
+    .row .toggle { justify-self: end; padding: 4px 9px; }
+    .row .detail { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr) minmax(0, 1fr); gap: 18px 26px; margin-left: 78px; padding: 6px 6px 18px; }
+    .d-title { font-family: var(--cond); font-size: 11px; letter-spacing: .24em; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
+    .bars { display: grid; gap: 6px; }
+    .bar { display: grid; grid-template-columns: 52px minmax(0, 1fr) 44px; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); }
+    .bar .track { height: 5px; background: rgba(255, 255, 255, .08); border-radius: 3px; overflow: hidden; }
+    .bar .track i { display: block; height: 100%; background: var(--tc); border-radius: 3px; }
+    .bar b { font-family: var(--cond); font-weight: 500; font-size: 12.5px; text-align: right; color: var(--cream); }
+    .hl { display: grid; gap: 5px; }
+    .hl li { position: relative; padding-left: 18px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+    .hl li::before { content: "★"; position: absolute; left: 0; top: 0; font-size: 10px; color: var(--gold); }
+    .facts { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 12px; color: var(--faint); }
+    .facts b { color: var(--cream); font-weight: 500; }
+    .facts a { color: var(--teal); border-bottom: 1px dotted var(--teal); }
+    .tip { font-size: 13px; line-height: 1.75; color: var(--muted); padding: 10px 12px; background: rgba(244, 195, 77, .06); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; }
+    .tip b { display: block; font-family: var(--cond); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; font-weight: 500; }
+    .detail .chips { margin-top: 10px; }
+    .row .shared-slot { grid-column: 1 / -1; }
+    .detail .shared-slot:empty { display: none; }
+    .shared-slot .sw-bar { border-top-color: var(--line-2); color: var(--muted); }
+    .shared-slot .sw-btn { border-radius: 3px; border-color: var(--line-2); background: rgba(255, 255, 255, .03); color: var(--cream); }
+    .shared-slot .sw-btn:hover { border-color: var(--gold); }
+    .shared-slot .sw-btn.is-wish { background: rgba(229, 72, 59, .15); border-color: var(--red); color: #ff8a7e; }
+    .shared-slot .sw-btn.is-visit { background: rgba(43, 179, 163, .15); border-color: var(--teal); color: #6fe0d2; }
+    .shared-slot .sw-dist { background: rgba(244, 195, 77, .08); color: var(--muted); border-radius: 3px; }
+    .shared-slot .sw-near-pill { background: transparent; border-color: var(--line-2); border-radius: 2px; color: var(--muted); }
+    .shared-slot .sw-near-pill:hover { background: rgba(244, 195, 77, .1); }
+    .empty { padding: 60px 20px; text-align: center; color: var(--faint); border: 1px dashed var(--line-2); border-radius: 6px; }
+    .empty h3 { font-size: 17px; color: var(--cream); margin-bottom: 8px; }
+    .empty button { margin-top: 14px; }
 
-    /* Optional Cover Banner / Stylized Fallback */
-    .c-banner {
-      position: relative; height: 148px; overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      background: var(--banner-grad, linear-gradient(125deg, #1d133b, #36194b 55%, #162347));
-    }
-    .c-banner img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      filter: saturate(1.08) contrast(1.04);
-      transition: transform 0.6s var(--ease);
-    }
-    .card:hover .c-banner img { transform: scale(1.03); }
-    .c-banner-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(8, 6, 18, 0.15) 0%, rgba(8, 6, 18, 0.86) 100%);
-    }
-    .c-banner-art {
-      position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.26; pointer-events: none;
-    }
-    .c-banner-meta {
-      position: absolute; left: 24px; right: 24px; bottom: 14px;
-      display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;
-    }
-    .c-rank-box { display: flex; align-items: baseline; gap: 10px; }
-    .c-rank {
-      font-family: var(--display); font-weight: 700; font-size: 38px; line-height: 1;
-      color: var(--zone-c, var(--gold)); text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-    }
-    .c-tier-pill {
-      padding: 2px 9px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 600;
-      background: rgba(0, 0, 0, 0.55); color: var(--zone-c, var(--gold));
-      border: 1px solid var(--zone-c, var(--gold));
-    }
-    .c-score-box {
-      text-align: right; background: rgba(8, 6, 18, 0.72);
-      padding: 6px 14px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.14);
-      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    }
-    .c-score-val {
-      font-family: var(--display); font-size: 26px; font-weight: 600; line-height: 1;
-      color: var(--gold);
-    }
-    .c-score-val small { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 3px; }
-    .c-score-bars {
-      display: flex; gap: 3px; margin-top: 5px; justify-content: flex-end;
-    }
-    .c-score-bars i {
-      display: block; height: 4px; border-radius: 2px; background: var(--gold);
-    }
+    /* ---------- Water parks ---------- */
+    .water { position: relative; margin-top: 80px; padding: 64px 0 56px; background: linear-gradient(180deg, #0a2a3a 0%, #0b1f33 100%); }
+    .water::before { content: ""; position: absolute; left: 0; right: 0; top: -28px; height: 30px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30' preserveAspectRatio='none'%3E%3Cpath d='M0 30 V18 Q15 4 30 18 T60 18 T90 18 T120 18 V30 Z' fill='%230a2a3a'/%3E%3C/svg%3E") 0 0 / 120px 30px repeat-x; }
+    .water .sec-no { background: #0f3a4a; color: #7fe8dc; box-shadow: 0 0 0 2px var(--teal), 0 0 0 7px #0a2a3a, 0 0 18px 4px rgba(43, 179, 163, .25); }
+    .water .sec-no::after { border-color: #9df2e8; }
+    .water .sec-kicker { color: #7fe8dc; }
+    .water-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .wcard { display: flex; flex-direction: column; background: rgba(9, 40, 56, .75); border: 1px solid rgba(43, 179, 163, .25); border-radius: 8px; overflow: hidden; transition: transform .25s var(--ease), border-color .25s; }
+    .wcard:hover { transform: translateY(-3px); border-color: var(--teal); }
+    .wcard .media { aspect-ratio: 16 / 7; }
+    .wcard .tk { --tc: var(--teal); }
+    .wcard .tk-wrap em { --tc: #7fe8dc; }
+    .wbody { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 14px; flex: 1; }
+    .wbody h3 { font-family: var(--serif); font-weight: 700; font-size: 16px; line-height: 1.35; color: var(--cream); }
+    .wbody h3 .en { display: block; font-family: var(--cond); font-weight: 400; font-size: 11.5px; letter-spacing: .08em; color: var(--faint); margin-top: 2px; }
+    .wbody .loc b { color: #7fe8dc; }
+    .wbody .hl li::before { content: "≈"; color: #7fe8dc; font-size: 13px; top: -1px; }
+    .wfoot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 8px; border-top: 1px dashed rgba(43, 179, 163, .3); font-size: 12px; color: var(--faint); }
+    .wfoot b { font-family: var(--display); font-weight: 400; font-size: 15px; color: #7fe8dc; }
+    .wcard .toggle { color: #7fe8dc; border-color: rgba(43, 179, 163, .45); }
+    .wcard .toggle:hover { background: var(--teal); color: #04161d; }
+    .wcard .detail { display: grid; gap: 10px; padding: 0 16px 14px; }
+    .wcard .detail .w-dup { display: none; }
+    .wcard .tip { background: rgba(43, 179, 163, .08); border-left-color: var(--teal); }
+    .wcard .tip b { color: #7fe8dc; }
+    .wcard > .shared-slot { padding: 0 16px 12px; }
 
-    .c-body { padding: 20px 24px 24px; }
-    .c-head-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; }
-    .c-name { font-size: 20px; font-weight: 600; line-height: 1.35; color: var(--text); }
-    .c-en { font-family: var(--display); font-size: 13px; font-weight: 300; color: var(--muted); margin-left: 8px; }
-    .c-loc {
-      display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted);
-    }
-    .c-loc a {
-      color: var(--aqua); border-bottom: 1px dotted rgba(43, 228, 220, 0.5); margin-left: 4px;
-    }
+    /* ---------- Pitfalls ---------- */
+    .pitfalls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .pitfall { position: relative; padding: 18px 18px 16px; background: var(--night-2); border: 1px solid rgba(229, 72, 59, .3); border-radius: 6px; }
+    .pitfall::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; border-radius: 6px 6px 0 0; background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--cream) 10px 20px); opacity: .85; }
+    .pitfall h3 { margin-top: 6px; font-size: 15px; font-weight: 700; line-height: 1.45; color: var(--cream); }
+    .pitfall h3 span { display: inline-block; margin-right: 8px; padding: 1px 7px; border-radius: 2px; font-family: var(--display); font-weight: 400; font-size: 11px; letter-spacing: .06em; background: var(--red); color: var(--cream); vertical-align: 2px; }
+    .pitfall p { margin-top: 8px; font-size: 13px; line-height: 1.8; color: var(--muted); }
+    .pitfall p b { color: var(--cream); font-weight: 500; }
 
-    /* Key Data Badges Row */
-    .c-metrics {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
-      padding-bottom: 14px; border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-    }
-    .m-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 11px; border-radius: 8px; font-size: 12.5px;
-      background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.09);
-      color: var(--text);
-    }
-    .m-badge b { font-family: var(--mono); color: var(--gold); font-weight: 600; }
-    .m-badge.is-coaster b { color: var(--rose); }
-    .m-badge.is-crowd {
-      background: rgba(255, 77, 121, 0.12); border-color: rgba(255, 77, 121, 0.3);
-      color: #ff9eb5; font-size: 12px;
-    }
+    /* ---------- Footer ---------- */
+    .foot { margin-top: 80px; background: #080d20; color: var(--muted); border-top: 1px solid var(--line-2); }
+    .foot .bulbs { margin-top: -5px; }
+    .foot-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 34px; padding: 34px 0 40px; }
+    .foot strong { font-family: var(--display); font-weight: 400; font-size: 19px; letter-spacing: .06em; color: var(--gold); }
+    .foot p { font-size: 12.5px; margin-top: 8px; line-height: 1.8; }
+    .foot nav { display: flex; flex-wrap: wrap; gap: 6px 16px; align-content: start; font-size: 12.5px; }
+    .foot nav a:hover, .foot nav a[aria-current="page"] { color: var(--cream); }
+    .foot nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--gold); }
+    .foot .sig { grid-column: 1 / -1; padding-top: 16px; border-top: 1px dashed var(--line); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-family: var(--cond); letter-spacing: .24em; font-size: 11px; text-transform: uppercase; color: var(--faint); }
 
-    /* Highlights & Tip */
-    .c-feats { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
-    .c-feats li {
-      padding: 5px 12px; border-radius: 999px; font-size: 13px; line-height: 1.5;
-      background: rgba(167, 123, 255, 0.08); border: 1px solid rgba(167, 123, 255, 0.2);
-      color: rgba(247, 244, 255, 0.92);
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1180px) {
+      .row-main { grid-template-columns: 58px 84px minmax(0, 1fr) minmax(0, 280px) 64px 66px; gap: 12px; }
+      .row .media { width: 84px; height: 56px; }
+      .sliders { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .filters { flex-wrap: wrap; }
+      .tally { margin-left: 0; }
     }
-    .c-feats li:first-child {
-      background: rgba(255, 184, 48, 0.11); border-color: rgba(255, 184, 48, 0.38);
-      color: #fff; font-weight: 500;
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .poster { width: min(420px, 100%); }
+      .method, .pitfalls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .viz-grid { grid-template-columns: 1fr; }
+      .feature-grid, .water-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .fcard.is-lead { grid-template-columns: 1fr; }
+      .fcard.is-lead .media { min-height: 0; aspect-ratio: 16 / 9; grid-row: auto; }
+      .row .detail { grid-template-columns: 1fr 1fr; }
+      .row .detail .d-tip { grid-column: 1 / -1; }
+      .mixer { grid-template-columns: minmax(0, 1fr) auto; }
+      .mixer .wbar { grid-column: 1 / -1; order: 3; }
+      .filters { position: static; }
     }
-    .c-tip {
-      margin-top: 14px; padding: 10px 14px; border-radius: 12px;
-      background: rgba(43, 228, 220, 0.06); border-left: 3px solid var(--aqua);
-      font-size: 13px; line-height: 1.65; color: var(--muted);
-    }
-    .c-tip strong { color: var(--aqua); font-weight: 500; margin-right: 6px; }
-
-    /* Water Parks Top 15 Section -------------------------------------------- */
-    .water-sec {
-      background: linear-gradient(180deg, rgba(10, 36, 48, 0.35), rgba(6, 18, 28, 0.55));
-      border-top: 1px solid rgba(43, 228, 220, 0.25);
-      border-bottom: 1px solid rgba(43, 228, 220, 0.25);
-    }
-    .water-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 18px; }
-    .w-card {
-      border: 1px solid rgba(43, 228, 220, 0.24); border-radius: 20px;
-      background: rgba(8, 26, 38, 0.72); overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform 0.25s var(--ease), border-color 0.25s;
-    }
-    .w-card:hover { transform: translateY(-3px); border-color: var(--aqua); }
-    .w-banner {
-      position: relative; height: 120px; overflow: hidden;
-      background: linear-gradient(135deg, #064e63 0%, #0b8793 60%, #16bffd 100%);
-    }
-    .w-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .w-banner-meta {
-      position: absolute; inset: auto 18px 10px 18px;
-      display: flex; justify-content: space-between; align-items: baseline;
-    }
-    .w-rank { font-family: var(--display); font-size: 32px; font-weight: 700; color: var(--aqua); text-shadow: 0 2px 12px rgba(0,0,0,0.65); }
-    .w-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
-
-    /* Pitfalls Section ------------------------------------------------------ */
-    .pitfalls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .pitfall {
-      padding: 24px 26px; border: 1px dashed rgba(255, 77, 121, 0.35);
-      border-radius: 18px; background: rgba(255, 77, 121, 0.04);
-    }
-    .pitfall h3 { font-size: 16.5px; font-weight: 600; color: var(--text); }
-    .pitfall h3 span {
-      margin-right: 10px; padding: 2px 8px; border-radius: 6px;
-      font-family: var(--mono); font-size: 11px; background: rgba(255, 77, 121, 0.2); color: var(--rose);
-    }
-    .pitfall p { margin-top: 10px; font-size: 13.8px; line-height: 1.85; color: var(--muted); }
-
-    /* Footer ---------------------------------------------------------------- */
-    .foot { padding: 72px 0 56px; border-top: 1px solid var(--edge); }
-    .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
-    .foot p { max-width: 36em; font-size: 13.5px; color: var(--muted); font-weight: 300; }
-    .foot nav { display: flex; flex-wrap: wrap; gap: 10px; }
-    .foot nav a {
-      padding: 9px 16px; border: 1px solid var(--edge); border-radius: 999px;
-      font-size: 13px; color: var(--muted); transition: all 0.2s;
-    }
-    .foot nav a:hover { color: var(--gold); border-color: var(--gold); }
-    .foot .mark {
-      margin-top: 48px; font-family: var(--display); font-weight: 700;
-      font-size: clamp(42px, 9.5vw, 132px); line-height: 1; letter-spacing: -0.03em;
-      color: transparent; -webkit-text-stroke: 1px rgba(255, 184, 48, 0.16);
-      white-space: nowrap; overflow: hidden;
-    }
-
-    @media (max-width: 960px) {
-      .sliders-grid { grid-template-columns: 1fr 1fr; }
-      .hero-stats { grid-template-columns: repeat(3, 1fr); }
-      .pitfalls { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 680px) {
+    @media (max-width: 720px) {
+      :root { --topH: 52px; }
       .wrap { width: calc(100% - 28px); }
-      .sliders-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .hero-stats div + div { padding-left: 0; border-left: 0; }
-      .controls { position: static; }
-      .switch { overflow-x: auto; max-width: 100%; flex-wrap: nowrap; }
+      .top-inner { gap: 12px; }
+      .logo small { display: none; }
+      .logo b { font-size: 14px; }
+      .logo-tk { width: 36px; height: 28px; }
+      .hero { padding: 34px 0 40px; }
+      .kicker { letter-spacing: .16em; font-size: 11.5px; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats > div:nth-child(odd) { border-left: 0; }
+      .stats > div:nth-child(n+3) { border-top: 1px dashed var(--line-2); }
+      .stats > div:nth-child(5) { grid-column: 1 / -1; }
+      .section { padding: 52px 0 12px; }
+      .sec-head { grid-template-columns: 1fr; gap: 14px; }
+      .sec-no { width: 50px; height: 50px; font-size: 19px; margin-left: 8px; margin-top: 8px; }
+      .method, .pitfalls, .water-grid { grid-template-columns: 1fr; }
+      .viz-card { padding: 14px 12px 12px; }
+      .records .r-v { font-size: 18px; }
+      .sliders { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mixer { padding: 12px; }
+      .mixer-row2 .seg, .seg { width: 100%; overflow-x: auto; scrollbar-width: none; }
+      .seg::-webkit-scrollbar { display: none; }
+      .filters { padding: 8px 0; gap: 8px; }
+      .search { flex-basis: 100%; }
+      .filters .seg { width: 100%; }
+      .sel { flex: 1 1 40%; } .sel select { width: 100%; }
+      .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+      .wbar em { display: none; }
+      .list-head { flex-wrap: wrap; }
+      .list-head h3 small { display: block; margin: 4px 0 0; }
+      .fcard.is-lead h3 { font-size: 21px; }
+      .row-main { grid-template-columns: 76px minmax(0, 1fr) 54px; grid-template-areas: "media name score" "media metrics score"; gap: 6px 12px; padding: 12px 2px; }
+      .row-rank { display: none; }
+      .row .media { grid-area: media; width: 76px; height: 76px; }
+      .row .media .tk-mini { display: block; }
+      .row-name { grid-area: name; }
+      .row-name h3 { white-space: normal; font-size: 14.5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+      .row-name .en, .row-name .loc { display: none; }
+      .row-metrics { grid-area: metrics; grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: left; }
+      .row-metrics div { padding: 0; }
+      .row-metrics div:nth-child(n+4) { display: none; }
+      .row-metrics b { font-size: 14px; }
+      .row-score { grid-area: score; align-self: center; }
+      .row-score b { font-size: 19px; }
+      .row .toggle { display: none; }
+      .row .detail { margin-left: 0; padding: 10px 2px 16px; grid-template-columns: 1fr; }
+      .foot-inner { grid-template-columns: 1fr; }
+      .tier-divider .note { display: none; }
+      .wcard { display: grid; grid-template-columns: 96px minmax(0, 1fr); }
+      .wcard .media { aspect-ratio: auto; min-height: 112px; }
+      .wcard .tk-wrap { left: 6px; top: 6px; }
+      .wcard .tk-wrap em { display: none; }
+      .wcard .tk { min-width: 34px; height: 26px; font-size: 13px; padding: 0 5px; }
+      .wcard .tk small { display: none; }
+      .wbody { padding: 10px 12px; gap: 5px; }
+      .wbody .w-lead { display: none; }
+      .wcard .detail { grid-column: 1 / -1; padding: 4px 12px 12px; }
+      .wcard .detail .w-dup { display: list-item; }
+    }
+    .tk-mini { display: none; position: absolute; left: 4px; top: 4px; z-index: 2; }
+    .tk-mini .tk { min-width: 30px; height: 22px; font-size: 12px; padding: 0 5px; }
+    .tk-mini .tk small { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .fw { opacity: .85; }
     }
   </style>
 
@@ -830,19 +828,13 @@
   <!-- END AUTO-SEO -->
 </head>
 <body>
-  <div class="sky-bg" aria-hidden="true"></div>
-  <div class="track-grid" aria-hidden="true"></div>
-
   <header class="top">
     <div class="wrap top-inner">
-      <a class="logo" href="#top">
-        <svg viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M2 25 C9 25, 9 7, 16 7 C23 7, 23 25, 30 25" fill="none" stroke="#ffb830" stroke-width="2.2" stroke-linecap="round"/>
-          <circle cx="16" cy="7" r="3" fill="#ff4d79"/>
-          <circle cx="8" cy="19" r="2" fill="#2be4dc"/>
-          <circle cx="24" cy="19" r="2" fill="#2be4dc"/>
-        </svg>
-        <span>Thrill &amp; Magic</span>
+      <a class="logo" href="#top" aria-label="Thrill &amp; Magic Index 顶部">
+        <span class="logo-tk" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="7" fill="none" stroke="#1a1f3d" stroke-width="1.8"/><path d="M12 3v14M5 10h14M7 5l10 10M17 5L7 15" stroke="#1a1f3d" stroke-width="1"/><path d="M7.5 22 12 10l4.5 12" fill="none" stroke="#1a1f3d" stroke-width="1.8"/><circle cx="12" cy="10" r="1.8" fill="#e5483b"/></svg>
+        </span>
+        <span><b>THRILL &amp; MAGIC</b><small>Index · 2026</small></span>
       </a>
       <nav class="switch" aria-label="榜单切换">
         <a href="index.html">图鉴总览</a>
@@ -863,139 +855,239 @@
 
   <main id="top">
     <section class="hero">
-      <svg class="hero-coaster-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,280 C240,280 280,40 460,40 C640,40 660,260 840,260 C1020,260 1080,80 1240,80 C1360,80 1400,220 1440,240" fill="none" stroke="rgba(255,184,48,0.45)" stroke-width="3"/>
-        <path d="M0,300 C320,300 400,120 620,120 C840,120 900,290 1120,290 C1280,290 1360,150 1440,150" fill="none" stroke="rgba(255,77,121,0.35)" stroke-width="2" stroke-dasharray="6 6"/>
-      </svg>
-      <div class="wrap">
-        <span class="eyebrow">The Thrill &amp; Magic Index · 2026 全球主题乐园与水乐园权威榜</span>
-        <h1>失重抛射与<em>造梦奇境</em><br />全球主题游乐园 Top <em>100</em></h1>
-        <p class="lede">
-          有的乐园用百米高空的 4.5G 俯冲让你肾上腺素狂飙，有的乐园用百亿美金的实景魔法街区让你忘却现实世界。本榜单拒绝单纯按客流量排座次，从「镇园大项目与过山车」「造景沉浸与IP」「运营吞吐与排队体验」「全龄亲子」「餐饮夜间大秀」「门票快通性价比」六大维度，对全球 100 座顶级主题游乐园及 15 座传奇水上乐园进行量化拆解。
-        </p>
-        <div class="hero-jump">
-          <a class="btn-jump" href="#ranking">🎢 浏览主题乐园 Top 100</a>
-          <a class="btn-jump is-aqua" href="#waterparks">🌊 直达全球水上乐园 Top 15</a>
-          <a class="btn-jump" href="#pitfalls" style="border-color:rgba(255,77,121,0.4);color:#ff9eb5;background:rgba(255,77,121,0.1)">⚠️ 全球游乐园排雷与快通避坑</a>
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker"><i>★</i> Admit One · 2026 全球主题乐园权威榜 <i>★</i></div>
+          <h1>
+            <span class="pre">失重抛射 × 造梦奇境</span>
+            全球主题游乐园<br />Top <span class="num">100</span>
+            <span class="en">The Thrill &amp; Magic Index</span>
+          </h1>
+          <p class="lede">
+            有的乐园用百米高空的 4.5G 俯冲让你肾上腺素狂飙，有的乐园用百亿美金的实景魔法街区让你忘却现实世界。本榜单拒绝单纯按客流量排座次，从<strong>「镇园大项目与过山车」「造景沉浸与IP」「运营吞吐与排队体验」「全龄亲子」「餐饮夜间大秀」「门票快通性价比」</strong>六大维度，对全球 100 座顶级主题游乐园及 15 座传奇水上乐园进行量化拆解。
+          </p>
+          <div class="jump">
+            <a href="#ranking">🎢 浏览主题乐园 Top 100</a>
+            <a href="#waterparks">🌊 全球水上乐园 Top 15</a>
+            <a href="#pitfalls">⚠️ 排雷与快通避坑</a>
+          </div>
+          <div class="stats" id="hero-stats"></div>
         </div>
-        <div class="hero-stats">
-          <div><b>100<small>座</small></b><span>全球标杆主题游乐园</span></div>
-          <div><b>682<small>座</small></b><span>榜单收录过山车总数</span></div>
-          <div><b>$62<small>起</small></b><span>榜首东京迪士尼海洋门票</span></div>
-          <div><b>20<small>座</small></b><span>单园最多过山车 · 六旗魔术山</span></div>
-          <div><b>15<small>座</small></b><span>全球殿堂级水上乐园附榜</span></div>
+
+        <figure class="poster" aria-label="复古游乐场海报插画：黄昏烟花下的城堡、摩天轮与过山车回环">
+          <div class="poster-frame">
+            <svg id="poster-svg" viewBox="0 0 440 560" aria-hidden="true">
+              <defs>
+                <linearGradient id="p-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0c1134"/><stop offset=".42" stop-color="#262058"/><stop offset=".72" stop-color="#6a3462"/><stop offset="1" stop-color="#e07a4f"/>
+                </linearGradient>
+                <radialGradient id="p-glow" cx=".5" cy="1" r=".8">
+                  <stop offset="0" stop-color="#ffb36b" stop-opacity=".55"/><stop offset="1" stop-color="#ffb36b" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="440" height="560" fill="url(#p-sky)"/>
+              <rect y="260" width="440" height="300" fill="url(#p-glow)"/>
+              <g id="p-stars" fill="#ffe7a8"></g>
+              <circle cx="372" cy="62" r="17" fill="#ffe7a8"/><circle cx="380" cy="56" r="15" fill="#10163b"/>
+              <text x="220" y="40" text-anchor="middle" font-family="Oswald, sans-serif" font-size="11" letter-spacing="5" fill="#f6ecd4" fill-opacity=".72">GRAND FAIRGROUND OF THE WORLD</text>
+              <g id="p-fw"></g>
+
+              <!-- Ferris wheel -->
+              <g stroke="#f4c34d" stroke-width="2.4" fill="none" opacity=".95">
+                <path d="M334 300 L292 478 M334 300 L376 478 M300 440 H368"/>
+              </g>
+              <g class="wheel" id="p-wheel"></g>
+              <circle cx="334" cy="300" r="6" fill="#e5483b" stroke="#f4c34d" stroke-width="2"/>
+
+              <!-- Castle -->
+              <g fill="#14143a">
+                <rect x="96" y="384" width="98" height="96"/>
+                <path d="M96 384 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h8 v8"/>
+                <rect x="66" y="404" width="32" height="76"/><path d="M62 406 L82 342 L102 406 Z"/>
+                <rect x="192" y="404" width="32" height="76"/><path d="M188 406 L208 342 L228 406 Z"/>
+                <rect x="126" y="318" width="38" height="70"/><path d="M121 320 L145 236 L169 320 Z"/>
+                <rect x="104" y="352" width="18" height="34"/><path d="M101 354 L113 318 L125 354 Z"/>
+                <rect x="168" y="352" width="18" height="34"/><path d="M165 354 L177 318 L189 354 Z"/>
+              </g>
+              <g fill="#e5483b"><path d="M145 236 v-16 l12 5 -12 5"/><path d="M82 342 v-12 l9 4 -9 4"/><path d="M208 342 v-12 l9 4 -9 4"/></g>
+              <g fill="#f4c34d">
+                <rect x="140" y="336" width="10" height="16" rx="5"/><rect x="77" y="420" width="8" height="12" rx="4"/><rect x="203" y="420" width="8" height="12" rx="4"/>
+                <rect x="110" y="404" width="7" height="11" rx="3.5"/><rect x="173" y="404" width="7" height="11" rx="3.5"/>
+                <path d="M132 480 v-26 a13 13 0 0 1 26 0 v26 Z" fill-opacity=".85"/>
+              </g>
+
+              <!-- Fairground tents -->
+              <g>
+                <path d="M8 488 L34 450 L60 488 Z" fill="#e5483b"/>
+                <path d="M34 450 L21 488 H29 Z M34 450 L39 488 H47 Z" fill="#f6ecd4"/>
+                <path d="M34 450 v-12 l9 4 -9 4" fill="#f4c34d"/>
+                <path d="M386 492 L408 462 L430 492 Z" fill="#2bb3a3"/>
+                <path d="M408 462 L397 492 H404 Z M408 462 L412 492 H419 Z" fill="#f6ecd4"/>
+              </g>
+
+              <!-- ground -->
+              <path d="M0 486 Q60 474 120 482 T240 484 T360 480 T440 486 V560 H0 Z" fill="#0a0d24"/>
+
+              <!-- Coaster with vertical loop -->
+              <g id="p-supports" stroke="#f6ecd4" stroke-opacity=".28" stroke-width="1.4"></g>
+              <defs><path id="p-track" d="M-10 522 C30 522 50 466 80 466 C110 466 122 524 170 522 C222 520 290 506 290 464 C290 432 268 420 250 422 C226 425 214 456 228 482 C242 508 280 520 320 518 C360 516 378 488 408 490 C430 492 440 506 452 506" fill="none"/></defs>
+              <use href="#p-track" stroke="#0a0d24" stroke-width="10" stroke-linecap="round"/>
+              <use href="#p-track" stroke="#f6ecd4" stroke-opacity=".55" stroke-width="7" stroke-dasharray="1.5 6"/>
+              <use href="#p-track" stroke="#f4c34d" stroke-width="2.4"/>
+              <g id="p-train">
+                <g>
+                  <rect x="-9" y="-9" width="14" height="8" rx="2" fill="#e5483b"/><rect x="-25" y="-9" width="14" height="8" rx="2" fill="#f6ecd4"/><rect x="-41" y="-9" width="14" height="8" rx="2" fill="#e5483b"/>
+                  <animateMotion dur="8s" repeatCount="indefinite" rotate="auto"><mpath href="#p-track"/></animateMotion>
+                </g>
+              </g>
+
+              <text x="220" y="543" text-anchor="middle" font-family="'Alfa Slab One', Georgia, serif" font-size="14" letter-spacing="3" fill="#f4c34d">ADMIT ONE ★ 2026</text>
+              <g id="p-bulbs"></g>
+            </svg>
+          </div>
+          <figcaption class="poster-cap"><span>Fairground at Dusk</span><b>Nº 100</b></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="methodology" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no" aria-hidden="true">I</div>
+          <div>
+            <div class="sec-kicker">Ride Rubric · 评分方法</div>
+            <h2 id="method-title">六个维度，百分制量化每一座乐园</h2>
+            <p>满分 100 = 刺激 25 + 造景 25 + 运营 15 + 亲子 15 + 大秀 10 + 性价比 10。客流参考 TEA/AECOM 全球主题公园报告，过山车数据参考 RCDB，票价为成人单日基准价折算美元。下方榜单可按你的玩法重新分配权重。</p>
+          </div>
+        </div>
+        <div class="method" id="method"></div>
+      </div>
+    </section>
+
+    <section class="section" id="charts" aria-labelledby="charts-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-no" aria-hidden="true">II</div>
+          <div>
+            <div class="sec-kicker">Coaster Track · 数据图谱</div>
+            <h2 id="charts-title">把 100 座乐园铺成一条过山车轨道</h2>
+            <p>横轴为编辑榜排名 1→100，轨道高度随所选指标起伏；悬停或点击轨道查看单园数据。下方散点图揭示门票价格与综合得分的关系，右侧为全榜纪录板。</p>
+          </div>
+        </div>
+        <div class="viz-card">
+          <div class="viz-top">
+            <h3>排名轨道<small>Ranked Ride Profile</small></h3>
+            <div class="seg" id="track-seg" role="group" aria-label="轨道指标">
+              <button type="button" data-m="coasterCount" aria-pressed="true">过山车数量</button>
+              <button type="button" data-m="attendanceM" aria-pressed="false">年客流</button>
+              <button type="button" data-m="ticketUsd" aria-pressed="false">门票价格</button>
+              <button type="button" data-m="score" aria-pressed="false">综合得分</button>
+            </div>
+          </div>
+          <svg class="track-svg" id="track-svg" viewBox="0 0 1200 290" role="img" aria-label="100 座乐园按排名排列的指标轨道图"></svg>
+          <div class="readout" id="track-read" aria-live="polite"></div>
+        </div>
+        <div class="viz-grid">
+          <div class="viz-card">
+            <div class="viz-top">
+              <h3>门票 vs 综合得分<small>Price × Score</small></h3>
+              <div class="legend" id="scatter-legend"></div>
+            </div>
+            <svg id="scatter-svg" viewBox="0 0 640 380" role="img" aria-label="门票价格与综合得分散点图"></svg>
+          </div>
+          <div class="viz-card">
+            <div class="viz-top"><h3>全榜纪录板<small>Records Board</small></h3></div>
+            <ul class="records" id="records"></ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="ranking" style="padding-top: 56px;">
+    <section class="section" id="ranking" aria-labelledby="ranking-title">
       <div class="wrap">
-        <header class="sec-head">
-          <span class="eyebrow">Interactive Rubric · 动态权重实验室</span>
-          <h2>定制你的<em>专属百分制</em>游乐园榜单</h2>
-          <p>每个人的完美乐园截然不同：硬核玩家只看 RMC 与 Intamin 神车数量，情侣与亲子更看重免排队、城堡烟花与沉浸造景。点击预设或拖动下方 6 个滑块，100 座乐园的综合得分与排名将实时重算。</p>
-        </header>
-
-        <div class="tuner" aria-label="评分权重调节器">
-          <div class="tuner-top">
-            <div class="tuner-title">
-              <span>🎛️ 实时六维权重引擎</span>
-              <span class="badge" id="weight-summary">均衡模式 · 100% 归一化</span>
-            </div>
-            <div class="presets" id="presets">
-              <button type="button" class="preset-btn" data-preset="default" aria-pressed="true">⚖️ 默认综合均衡</button>
-              <button type="button" class="preset-btn" data-preset="coaster" aria-pressed="false">🎢 过山车狂热模式</button>
-              <button type="button" class="preset-btn" data-preset="immersion" aria-pressed="false">🏰 IP造景与大秀控</button>
-              <button type="button" class="preset-btn" data-preset="family" aria-pressed="false">👨‍👩‍👧 遛娃全龄省心游</button>
-              <button type="button" class="preset-btn" data-preset="value" aria-pressed="false">💎 穷游高性价比党</button>
-            </div>
-          </div>
-          <div class="sliders-grid">
-            <label class="s-item">
-              <span class="s-label"><span>1. 镇园项目与过山车</span><b id="val-thrill">25%</b></span>
-              <span class="s-sub">钢铁/木质神车阵容、E-Ticket 顶级暗黑骑乘</span>
-              <input type="range" id="sl-thrill" min="0" max="60" value="25" />
-            </label>
-            <label class="s-item">
-              <span class="s-label"><span>2. 造景沉浸与IP还原</span><b id="val-immersion">25%</b></span>
-              <span class="s-sub">建筑美学细节、视线遮蔽、世界观包裹感</span>
-              <input type="range" id="sl-immersion" min="0" max="60" value="25" />
-            </label>
-            <label class="s-item">
-              <span class="s-label"><span>3. 运营与排队友好度</span><b id="val-ops">15%</b></span>
-              <span class="s-sub">发车吞吐效率、单人通道、虚拟排队与遮阳</span>
-              <input type="range" id="sl-ops" min="0" max="40" value="15" />
-            </label>
-            <label class="s-item">
-              <span class="s-label"><span>4. 全龄与亲子友好度</span><b id="val-family">15%</b></span>
-              <span class="s-sub">身高限制宽容度、家庭骑乘占比、无障碍动线</span>
-              <input type="range" id="sl-family" min="0" max="40" value="15" />
-            </label>
-            <label class="s-item">
-              <span class="s-label"><span>5. 餐饮与夜间大秀</span><b id="val-diningShow">10%</b></span>
-              <span class="s-sub">特色主题餐饮、花车巡游、烟花水幕大秀</span>
-              <input type="range" id="sl-diningShow" min="0" max="40" value="10" />
-            </label>
-            <label class="s-item">
-              <span class="s-label"><span>6. 门票快通性价比</span><b id="val-value">10%</b></span>
-              <span class="s-sub">门票与 Express 快通溢价合理度、免费福利</span>
-              <input type="range" id="sl-value" min="0" max="40" value="10" />
-            </label>
+        <div class="sec-head">
+          <div class="sec-no" aria-hidden="true">III</div>
+          <div>
+            <div class="sec-kicker">The Index · 百大乐园榜</div>
+            <h2 id="ranking-title">按你的玩法，重排这 100 座乐园</h2>
           </div>
         </div>
 
-        <div class="controls" role="search">
-          <div class="ctrl-row">
-            <label class="search">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-              <input id="q" type="search" placeholder="搜索乐园名称、国家、城市或镇园项目（如：任天堂、哈利波特、木质过山车、鲸鲨）" autocomplete="off" />
-            </label>
-            <div class="sort-bar" role="group" aria-label="排序方式">
-              <button type="button" class="sort-btn" data-sort="score" aria-pressed="true">按综合得分</button>
-              <button type="button" class="sort-btn" data-sort="coasters" aria-pressed="false">按过山车数量</button>
-              <button type="button" class="sort-btn" data-sort="attendance" aria-pressed="false">按年客流量</button>
-              <button type="button" class="sort-btn" data-sort="area" aria-pressed="false">按占地面积</button>
-              <button type="button" class="sort-btn" data-sort="ticket" aria-pressed="false">按门票价格</button>
-            </div>
-            <span class="count" id="count"></span>
-          </div>
-          <div class="ctrl-row">
-            <div class="chip-group" id="region-chips">
-              <span class="chip-group-label">REGION</span>
-            </div>
-            <div class="chip-group" id="tier-chips">
-              <span class="chip-group-label">TIER</span>
+        <div class="mixer" aria-label="六维评分权重">
+          <div class="mixer-label">Weights<b>评分权重</b><span id="weight-summary">默认综合均衡</span></div>
+          <div class="wbar" id="wbar" aria-hidden="true"></div>
+          <button type="button" class="disclose" id="custom-toggle" aria-expanded="false" aria-controls="sliders">
+            自定义权重
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
+          </button>
+          <div class="mixer-row2">
+            <div class="seg" id="presets" role="group" aria-label="权重预设">
+              <button type="button" class="preset-btn" data-preset="default" aria-pressed="true">⚖️ 默认均衡</button>
+              <button type="button" class="preset-btn" data-preset="coaster" aria-pressed="false">🎢 过山车狂热</button>
+              <button type="button" class="preset-btn" data-preset="immersion" aria-pressed="false">🏰 IP造景大秀</button>
+              <button type="button" class="preset-btn" data-preset="family" aria-pressed="false">👨‍👩‍👧 遛娃省心</button>
+              <button type="button" class="preset-btn" data-preset="value" aria-pressed="false">💎 高性价比</button>
             </div>
           </div>
-          <div class="ctrl-row">
-            <div class="chip-group" id="crowd-chips">
-              <span class="chip-group-label">BEST FOR</span>
-            </div>
+          <div class="sliders" id="sliders" hidden>
+            <div class="slider-box"><label for="sl-thrill">镇园项目与过山车 <output id="val-thrill">25%</output></label><input type="range" id="sl-thrill" min="0" max="60" value="25" /><small>神车阵容 / E-Ticket 暗黑骑乘</small></div>
+            <div class="slider-box"><label for="sl-immersion">造景沉浸与IP <output id="val-immersion">25%</output></label><input type="range" id="sl-immersion" min="0" max="60" value="25" /><small>建筑细节 / 世界观包裹感</small></div>
+            <div class="slider-box"><label for="sl-ops">运营与排队 <output id="val-ops">15%</output></label><input type="range" id="sl-ops" min="0" max="40" value="15" /><small>吞吐 / 单人通道 / 虚拟排队</small></div>
+            <div class="slider-box"><label for="sl-family">全龄与亲子 <output id="val-family">15%</output></label><input type="range" id="sl-family" min="0" max="40" value="15" /><small>身高限制 / 家庭骑乘占比</small></div>
+            <div class="slider-box"><label for="sl-diningShow">餐饮与夜间大秀 <output id="val-diningShow">10%</output></label><input type="range" id="sl-diningShow" min="0" max="40" value="10" /><small>主题餐饮 / 巡游 / 烟花水幕</small></div>
+            <div class="slider-box"><label for="sl-value">门票快通性价比 <output id="val-value">10%</output></label><input type="range" id="sl-value" min="0" max="40" value="10" /><small>门票与快通溢价 / 免费福利</small></div>
           </div>
         </div>
 
-        <div id="zones"></div>
+        <div class="filters" id="filters" role="search">
+          <label class="search">
+            <span class="sr-only">搜索乐园</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
+            <input id="q" type="search" placeholder="乐园 / 国家 / 城市 / 任天堂 · 哈利波特 · 木质过山车…" autocomplete="off" />
+          </label>
+          <div class="seg" id="region-seg" role="group" aria-label="按地区筛选"></div>
+          <div class="seg" id="tier-seg" role="group" aria-label="按梯队筛选"></div>
+          <label class="sel"><span class="sr-only">适合人群</span><select id="crowd-sel" aria-label="按适合人群筛选"></select></label>
+          <label class="sel"><span class="sr-only">排序</span>
+            <select id="sort-sel" aria-label="排序方式">
+              <option value="score">排序：综合得分</option>
+              <option value="coasters">排序：过山车数量</option>
+              <option value="attendance">排序：年客流量</option>
+              <option value="area">排序：占地面积</option>
+              <option value="ticket">排序：门票最低</option>
+            </select>
+          </label>
+          <div class="tally" id="count" aria-live="polite">显示 <b>100</b> / 100</div>
+        </div>
+
+        <div id="list"></div>
       </div>
     </section>
 
-    <section class="section water-sec" id="waterparks">
+    <section class="water" id="waterparks" aria-labelledby="water-title">
       <div class="wrap">
-        <header class="sec-head">
-          <span class="eyebrow" style="color:var(--aqua)">Splash &amp; Thermal · 全球水上乐园 Top 15</span>
-          <h2>从火山激流到<em>热带巨型穹顶</em></h2>
-          <p>按水上过山车科技含量、造浪池体量、全天候恒温能力与造景沉浸感选出的全球 15 座殿堂级水上乐园。无论是穿过真鲨鱼池的垂直滑道，还是建在飞艇机库里的室内热带雨林，都值得专程湿身。</p>
-        </header>
+        <div class="sec-head">
+          <div class="sec-no" aria-hidden="true">IV</div>
+          <div>
+            <div class="sec-kicker">Splash &amp; Thermal · 水上乐园附榜</div>
+            <h2 id="water-title">从火山激流到热带巨型穹顶 · Top 15</h2>
+            <p>按水上过山车科技含量、造浪池体量、全天候恒温能力与造景沉浸感选出的全球 15 座殿堂级水上乐园。无论是穿过真鲨鱼池的垂直滑道，还是建在飞艇机库里的室内热带雨林，都值得专程湿身。</p>
+          </div>
+        </div>
         <div class="water-grid" id="water-list"></div>
       </div>
     </section>
 
-    <section class="section" id="pitfalls">
+    <section class="section" id="pitfalls" aria-labelledby="pit-title">
       <div class="wrap">
-        <header class="sec-head">
-          <span class="eyebrow" style="color:var(--rose)">Pitfalls &amp; Field Notes · 避坑对标说明</span>
-          <h2>买票前必读的<em>六条铁律与排雷指南</em></h2>
-          <p>主题游乐园是全球信息差最大的旅游消费场景之一：选错入园日期或快通策略，150 美金门票可能换来全天晒太阳排 3 个项目的惨痛体验。</p>
-        </header>
+        <div class="sec-head">
+          <div class="sec-no" aria-hidden="true">V</div>
+          <div>
+            <div class="sec-kicker">Pitfalls &amp; Field Notes · 避坑对标说明</div>
+            <h2 id="pit-title">买票前必读的六条铁律与排雷指南</h2>
+            <p>主题游乐园是全球信息差最大的旅游消费场景之一：选错入园日期或快通策略，150 美金门票可能换来全天晒太阳排 3 个项目的惨痛体验。</p>
+          </div>
+        </div>
         <div class="pitfalls">
           <article class="pitfall">
             <h3><span>TRAP 01</span>大阪 USJ / 奥兰多热门园「裸票盲冲」陷阱</h3>
@@ -1027,20 +1119,27 @@
   </main>
 
   <footer class="foot">
-    <div class="wrap">
-      <div class="foot-grid">
-        <p>The Thrill &amp; Magic Index 是 Destination Atlas 专题图鉴之一。客流数据参考 TEA/AECOM 全球主题公园报告，过山车数据参考 RCDB，票价为成人单日基准价折算美元。</p>
-        <nav aria-label="其他榜单">
-          <a href="index.html">图鉴总览</a>
-          <a href="beaches.html">海岸度假</a>
-          <a href="aquariums.html">水族馆 Top 35</a>
-          <a href="zoos.html">动物园 Top 30</a>
-          <a href="museums.html">重器博物馆 Top 100</a>
-          <a href="ski.html">滑雪场</a>
-          <a href="shows.html">必看大秀</a>
-        </nav>
+    <div class="bulbs" aria-hidden="true"></div>
+    <div class="wrap foot-inner">
+      <div>
+        <strong>The Thrill &amp; Magic Index</strong>
+        <p>全球主题游乐园 Top 100 ＆ 水上乐园 Top 15 · Destination Atlas 专题图鉴之一。客流数据参考 TEA/AECOM 全球主题公园报告，过山车数据参考 RCDB，票价为成人单日基准价折算美元，仅供规划参考。</p>
       </div>
-      <p class="mark" aria-hidden="true">THRILL &amp; MAGIC</p>
+      <nav aria-label="站点导航">
+        <a href="index.html">图鉴总览</a>
+        <a href="beaches.html">海岸度假 145</a>
+        <a href="cruises.html">奢华邮轮 50</a>
+        <a href="canals.html">运河房船 20</a>
+        <a href="sailing.html">帆船航线 20</a>
+        <a href="rv.html">房车自驾 20</a>
+        <a href="shows.html">驻场大秀 100</a>
+        <a href="themeparks.html" aria-current="page">主题乐园 100</a>
+        <a href="ski.html">全球雪场 100</a>
+        <a href="aquariums.html">水族馆 35</a>
+        <a href="zoos.html">动物园 40</a>
+        <a href="museums.html">重器博物馆 100</a>
+      </nav>
+      <div class="sig"><span>★ Thrill &amp; Magic Index · Admit One · 2026</span><span>Photos: Wikimedia Commons (CC)</span></div>
     </div>
   </footer>
 
@@ -1050,346 +1149,615 @@
   <script>
     (function () {
       "use strict";
-      var PARKS = (window.THEMEPARKS_TOP100 || []).slice();
-      var WATERS = (window.WATERPARKS_TOP15 || []).slice();
+      var PARKS = Array.isArray(window.THEMEPARKS_TOP100) ? window.THEMEPARKS_TOP100.slice() : [];
+      var WATERS = Array.isArray(window.WATERPARKS_TOP15) ? window.WATERPARKS_TOP15.slice() : [];
+      var THEMED = window.THEMED_IMAGES || {};
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      var MAX_SCORES = {
-        thrill: 25,
-        immersion: 25,
-        ops: 15,
-        family: 15,
-        diningShow: 10,
-        value: 10
-      };
-
+      var DIMS = [
+        { k: "thrill", label: "刺激", full: "镇园项目与过山车", en: "Thrill", max: 25, d: "钢铁/木质神车阵容、E-Ticket 顶级暗黑骑乘的统治力。" },
+        { k: "immersion", label: "造景", full: "造景沉浸与IP还原", en: "Immersion", max: 25, d: "建筑美学细节、视线遮蔽、IP 世界观包裹感。" },
+        { k: "ops", label: "运营", full: "运营与排队友好度", en: "Operations", max: 15, d: "发车吞吐效率、单人通道、虚拟排队与遮阳。" },
+        { k: "family", label: "亲子", full: "全龄与亲子友好度", en: "Family", max: 15, d: "身高限制宽容度、家庭骑乘占比、无障碍动线。" },
+        { k: "diningShow", label: "大秀", full: "餐饮与夜间大秀", en: "Shows", max: 10, d: "特色主题餐饮、花车巡游、烟花水幕大秀。" },
+        { k: "value", label: "性价", full: "门票快通性价比", en: "Value", max: 10, d: "门票与 Express 快通溢价合理度、免费福利。" }
+      ];
+      var DIM_COLORS = { thrill: "#e5483b", immersion: "#f4c34d", ops: "#2bb3a3", family: "#9aa6dc", diningShow: "#f6ecd4", value: "#e8a35c" };
       var PRESETS = {
-        default:   { label: "均衡模式",       w: { thrill: 25, immersion: 25, ops: 15, family: 15, diningShow: 10, value: 10 } },
+        default:   { label: "默认综合均衡",   w: { thrill: 25, immersion: 25, ops: 15, family: 15, diningShow: 10, value: 10 } },
         coaster:   { label: "过山车狂热模式", w: { thrill: 55, immersion: 10, ops: 15, family: 5,  diningShow: 5,  value: 10 } },
         immersion: { label: "IP造景与大秀控", w: { thrill: 15, immersion: 45, ops: 10, family: 10, diningShow: 15, value: 5  } },
         family:    { label: "遛娃全龄省心游", w: { thrill: 10, immersion: 20, ops: 25, family: 30, diningShow: 10, value: 5  } },
         value:     { label: "穷游高性价比党", w: { thrill: 20, immersion: 20, ops: 20, family: 10, diningShow: 5,  value: 25 } }
       };
-
-      var ZONES = [
-        { tier: "T0",   name: "殿堂神作 · 全球朝圣地",   c: "#ffb830", grad: "linear-gradient(125deg, #2d1638 0%, #4a1c40 50%, #1f294f 100%)", note: "Ranks 1–10：人类造梦工业与极限工程的最高结晶，值得专门为其跨洋飞一趟。" },
-        { tier: "T1",   name: "全球专程 · 区域绝对统治", c: "#ff4d79", grad: "linear-gradient(125deg, #1b1438 0%, #3b173c 55%, #14223d 100%)", note: "Ranks 11–30：拥有世界级镇园之宝或现象级过山车矩阵，撑起整座城市的旅游目的。" },
-        { tier: "T1.5", name: "区域王牌 · 独门绝活标杆", c: "#a77bff", grad: "linear-gradient(125deg, #151230 0%, #261b47 55%, #102038 100%)", note: "Ranks 31–60：在特定领域（如悬崖神车、全室内恒温、百年童话或天然暗河）无可替代。" },
-        { tier: "T2",   name: "顺路必刷 · 洲际高分强园", c: "#2be4dc", grad: "linear-gradient(125deg, #0f1b2e 0%, #152b3d 55%, #111930 100%)", note: "Ranks 61–100：本国或本大洲的国民级游乐重镇，顺路行程必排一天。" }
+      var REGIONS = [{ k: "北美", s: "北美" }, { k: "亚洲", s: "亚洲" }, { k: "欧洲", s: "欧洲" }, { k: "中东 · 拉美 · 大洋洲", s: "中东·拉美·澳" }];
+      var TIERS = [
+        { k: "T0", label: "殿堂神作 · 全球朝圣地", c: "#f4c34d", note: "人类造梦工业与极限工程的最高结晶，值得专门为其跨洋飞一趟。" },
+        { k: "T1", label: "全球专程 · 区域绝对统治", c: "#e5483b", note: "拥有世界级镇园之宝或现象级过山车矩阵，撑起整座城市的旅游目的。" },
+        { k: "T1.5", label: "区域王牌 · 独门绝活标杆", c: "#2bb3a3", note: "在特定领域（悬崖神车、全室内恒温、百年童话或天然暗河）无可替代。" },
+        { k: "T2", label: "顺路必刷 · 洲际高分强园", c: "#9aa6dc", note: "本国或本大洲的国民级游乐重镇，顺路行程必排一天。" }
       ];
+      var CROWDS = ["过山车狂热", "IP沉浸造景", "低龄亲子", "情侣出片", "夜景大秀", "全天候室内"];
+      var SORTS = {
+        score: { label: "综合得分" },
+        coasters: { label: "过山车数量", f: "coasterCount" },
+        attendance: { label: "年客流量", f: "attendanceM" },
+        area: { label: "占地面积", f: "areaHa" },
+        ticket: { label: "门票价格（低→高）", f: "ticketUsd", asc: true }
+      };
+      var mq = window.matchMedia ? window.matchMedia("(max-width: 720px)") : null;
+      function featureN() { return mq && mq.matches ? 4 : 10; }
 
+      var state = { q: "", region: "ALL", tier: "ALL", crowd: "ALL", sort: "score", weights: Object.assign({}, PRESETS.default.w), open: {} };
+
+      /* ---------- helpers ---------- */
       function esc(s) {
         return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
           return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
         });
       }
-
+      function num(v) { return typeof v === "number" && isFinite(v); }
+      function fmt(v, d) { return num(v) ? v.toLocaleString("en-US", { maximumFractionDigits: d || 0, minimumFractionDigits: d || 0 }) : "—"; }
       function splitName(n) {
-        var m = String(n).match(/\s*\(([^()]*[A-Za-z][^()]*)\)/);
-        return m ? { zh: n.replace(m[0], "").trim(), en: m[1] } : { zh: n, en: "" };
+        var m = String(n || "").match(/^(.*?)\s*\(([^()]*[A-Za-z][^()]*)\)\s*$/);
+        return m ? { zh: m[1].trim(), en: m[2].trim() } : { zh: String(n || ""), en: "" };
+      }
+      function shortName(n) { return splitName(n).zh.replace(/（[^）]*）/g, ""); }
+      function stripTags(s) { return String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim(); }
+      function tierCls(t) { return "t-" + String(t || "T2").replace(".", "-"); }
+      function tierColor(t) { var z = TIERS.filter(function (x) { return x.k === t; })[0]; return z ? z.c : "#9aa6dc"; }
+      function tk(item, n, extra) {
+        return '<span class="tk ' + tierCls(item.tier) + (extra ? " " + extra : "") + '"><small>Nº</small>' + (n == null ? "" : n) + "</span>";
+      }
+      function feats(item) { return String(item.highlight || "").split(/\s+\+\s+/).map(function (s) { return s.trim(); }).filter(Boolean); }
+      function ticketTxt(v) { return num(v) ? (v > 0 ? "$" + fmt(v) : "免费") : "—"; }
+      function expressTxt(v) { return num(v) ? (v > 0 ? "+$" + fmt(v) : "免费预约 / 无需快通") : "—"; }
+      function mapUrl(item, nm) { return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((nm.en || nm.zh) + " " + (item.city || "")); }
+      function rawScore(p) { var s = p.scores || {}; return DIMS.reduce(function (a, d) { return a + (num(s[d.k]) ? s[d.k] : 0); }, 0); }
+      function maxBy(list, f, asc) {
+        return list.filter(function (d) { return num(f(d)); }).sort(function (a, b) { return asc ? f(a) - f(b) : f(b) - f(a); })[0];
       }
 
-      PARKS.forEach(function (p) {
-        var nm = splitName(p.name);
-        p._zh = nm.zh;
-        p._en = nm.en;
-        p._feats = String(p.highlight || "").split(/\s+\+\s+/);
-      });
+      PARKS.forEach(function (p) { var nm = splitName(p.name); p._zh = nm.zh; p._en = nm.en; p._base = rawScore(p); });
+      WATERS.forEach(function (w) { var nm = splitName(w.name); w._zh = nm.zh; w._en = nm.en; });
 
-      WATERS.forEach(function (w) {
-        var nm = splitName(w.name);
-        w._zh = nm.zh;
-        w._en = nm.en;
-        w._feats = String(w.highlight || "").split(/\s+\+\s+/);
-      });
-
-      var state = {
-        q: "",
-        region: "全部",
-        tier: "全部",
-        crowd: "全部人群",
-        sort: "score",
-        weights: { thrill: 25, immersion: 25, ops: 15, family: 15, diningShow: 10, value: 10 }
+      /* ---------- images: item.image -> THEMED_IMAGES -> themed SVG ---------- */
+      function imgOf(item) {
+        if (item.noPhoto) return null;
+        var e = item.image || THEMED[item.id];
+        if (!e) return null;
+        if (typeof e === "string") return { src: e };
+        return e.src ? e : null;
+      }
+      var fbCount = 0;
+      function fallbackSvg(id, kind) {
+        var item = PARKS.concat(WATERS).filter(function (d) { return d.id === id; })[0] || { rank: 1, tier: "T2" };
+        var g = "fbg" + (++fbCount), seed = ((item.rank || 1) * 37) % 60;
+        if (kind === "water") {
+          return '<svg class="fb" viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="' + g + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d3550"/><stop offset="1" stop-color="#1b8f8a"/></linearGradient></defs>' +
+            '<rect width="480" height="300" fill="url(#' + g + ')"/><circle cx="' + (360 - seed) + '" cy="70" r="30" fill="#ffe7a8" fill-opacity=".8"/>' +
+            '<path d="M60 300 V120 Q60 90 90 90 H120 Q160 90 170 140 Q190 230 280 230 H330" fill="none" stroke="#f6ecd4" stroke-width="10" stroke-linecap="round"/>' +
+            '<path d="M0 240 Q30 225 60 240 T120 240 T180 240 T240 240 T300 240 T360 240 T420 240 T480 240 V300 H0 Z" fill="#7fe8dc" fill-opacity=".55"/>' +
+            '<path d="M0 260 Q30 248 60 260 T120 260 T180 260 T240 260 T300 260 T360 260 T420 260 T480 260 V300 H0 Z" fill="#0a2a3a" fill-opacity=".55"/>' +
+            '<text x="16" y="290" font-family="Oswald, sans-serif" font-size="12" letter-spacing="4" fill="#f6ecd4">SPLASH · Nº ' + esc(item.rank) + "</text></svg>";
+        }
+        var c = tierColor(item.tier), cx = 330 - seed, spokes = "";
+        for (var i = 0; i < 12; i++) { var a = i * Math.PI / 6; spokes += "M" + cx + " 130 L" + (cx + Math.cos(a) * 80).toFixed(1) + " " + (130 + Math.sin(a) * 80).toFixed(1) + " "; }
+        return '<svg class="fb" viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="' + g + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151a46"/><stop offset=".65" stop-color="#5a2f5e"/><stop offset="1" stop-color="#d9774f"/></linearGradient></defs>' +
+          '<rect width="480" height="300" fill="url(#' + g + ')"/>' +
+          '<g stroke="' + c + '" fill="none" stroke-width="2.5"><circle cx="' + cx + '" cy="130" r="80"/><path d="' + spokes + '" stroke-width="1"/><path d="M' + cx + " 130 L" + (cx - 40) + " 270 M" + cx + " 130 L" + (cx + 40) + ' 270"/></g>' +
+          '<path d="M60 270 v-70 h20 v-30 l12 -36 12 36 v30 h20 v70 Z" fill="#14143a"/>' +
+          '<path d="M-10 260 C60 260 90 190 140 190 C190 190 200 250 260 250 S 400 230 490 240" fill="none" stroke="#f4c34d" stroke-width="3"/>' +
+          '<rect y="272" width="480" height="28" fill="#0b1129"/>' +
+          '<text x="16" y="291" font-family="Oswald, sans-serif" font-size="12" letter-spacing="4" fill="#f4c34d">THRILL &amp; MAGIC · Nº ' + esc(item.rank) + "</text></svg>";
+      }
+      window.tpImgFail = function (img) {
+        var m = img.closest ? img.closest(".media") : null;
+        if (!m) { img.style.display = "none"; return; }
+        img.remove();
+        m.insertAdjacentHTML("afterbegin", fallbackSvg(m.getAttribute("data-fb"), m.getAttribute("data-kind")));
       };
+      function mediaHtml(item, opts) {
+        opts = opts || {};
+        var im = imgOf(item), nm = splitName(item.name);
+        var inner = im
+          ? '<img src="' + esc(im.src) + '" alt="' + esc(nm.zh) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;window.tpImgFail(this)" />'
+          : fallbackSvg(item.id, opts.kind);
+        var credit = "";
+        if (opts.credit && im && (im.artist || im.license)) {
+          credit = '<span class="credit">© ' + esc(stripTags(im.artist) || "Wikimedia Commons") + (im.license ? " · " + esc(im.license) : "") + "</span>";
+        }
+        return '<div class="media" data-fb="' + esc(item.id) + '" data-kind="' + (opts.kind || "park") + '">' + inner + (opts.extra || "") + credit + "</div>";
+      }
 
-      function computeScores() {
-        var w = state.weights;
-        var sumW = w.thrill + w.immersion + w.ops + w.family + w.diningShow + w.value;
-        if (sumW <= 0) sumW = 1;
-        PARKS.forEach(function (p) {
-          var s = p.scores;
-          var weighted =
-            (s.thrill / MAX_SCORES.thrill) * (w.thrill / sumW) * 100 +
-            (s.immersion / MAX_SCORES.immersion) * (w.immersion / sumW) * 100 +
-            (s.ops / MAX_SCORES.ops) * (w.ops / sumW) * 100 +
-            (s.family / MAX_SCORES.family) * (w.family / sumW) * 100 +
-            (s.diningShow / MAX_SCORES.diningShow) * (w.diningShow / sumW) * 100 +
-            (s.value / MAX_SCORES.value) * (w.value / sumW) * 100;
-          p._dynScore = weighted;
+      /* ---------- scoring ---------- */
+      function computeScore(p) {
+        var s = p.scores || {}, w = state.weights;
+        var tot = DIMS.reduce(function (a, d) { return a + w[d.k]; }, 0);
+        if (!tot) return 0;
+        var raw = DIMS.reduce(function (a, d) { return a + ((num(s[d.k]) ? s[d.k] : 0) / d.max) * w[d.k]; }, 0);
+        return raw / tot * 100;
+      }
+      function isDefault() { var b = PRESETS.default.w; return DIMS.every(function (d) { return b[d.k] === state.weights[d.k]; }); }
+
+      /* ---------- hero ---------- */
+      function renderHeroStats() {
+        var el = document.getElementById("hero-stats");
+        if (!PARKS.length) { el.style.display = "none"; return; }
+        var nC = Object.keys(PARKS.reduce(function (m, d) { if (d.country) m[d.country] = 1; return m; }, {})).length;
+        var totalC = PARKS.reduce(function (a, d) { return a + (num(d.coasterCount) ? d.coasterCount : 0); }, 0);
+        var mc = maxBy(PARKS, function (d) { return d.coasterCount; }), ma = maxBy(PARKS, function (d) { return d.attendanceM; });
+        el.innerHTML =
+          "<div><b>" + PARKS.length + "<small>座</small></b><span>横跨 <em>" + nC + " 国</em> · 4 大区</span></div>" +
+          "<div><b>" + fmt(totalC) + "<small>座</small></b><span>榜单收录 <em>过山车总数</em></span></div>" +
+          "<div><b>" + fmt(mc.coasterCount) + "<small>座</small></b><span>单园最多过山车 · <em>" + esc(shortName(mc.name)) + "</em></span></div>" +
+          "<div><b>" + fmt(ma.attendanceM, 1) + "<small>M</small></b><span>最高年客流 · <em>" + esc(shortName(ma.name)) + "</em></span></div>" +
+          "<div><b>" + WATERS.length + "<small>座</small></b><span>殿堂级 <em>水上乐园附榜</em></span></div>";
+      }
+      function buildPoster() {
+        var s = 11;
+        function rnd() { s = (s * 9301 + 49297) % 233280; return s / 233280; }
+        var st = "";
+        for (var i = 0; i < 46; i++) {
+          st += '<circle class="star" style="animation-delay:' + (-rnd() * 3).toFixed(2) + 's" cx="' + (rnd() * 440).toFixed(1) + '" cy="' + (rnd() * 250).toFixed(1) + '" r="' + (0.5 + rnd() * 1.2).toFixed(2) + '" fill-opacity="' + (0.4 + rnd() * 0.6).toFixed(2) + '"/>';
+        }
+        document.getElementById("p-stars").innerHTML = st;
+        var fw = [[108, 112, "#f4c34d", 34, "a"], [236, 84, "#e5483b", 28, "b"], [318, 160, "#2bb3a3", 30, "c"]].map(function (f) {
+          var h = '<g class="fw ' + f[4] + '" stroke="' + f[2] + '" stroke-width="2" stroke-linecap="round" fill="' + f[2] + '">';
+          for (var k = 0; k < 18; k++) {
+            var a = k / 18 * Math.PI * 2, r0 = f[3] * 0.25, r1 = f[3];
+            h += '<line x1="' + (f[0] + Math.cos(a) * r0).toFixed(1) + '" y1="' + (f[1] + Math.sin(a) * r0).toFixed(1) + '" x2="' + (f[0] + Math.cos(a) * r1).toFixed(1) + '" y2="' + (f[1] + Math.sin(a) * r1).toFixed(1) + '"/>';
+            h += '<circle cx="' + (f[0] + Math.cos(a) * (r1 + 5)).toFixed(1) + '" cy="' + (f[1] + Math.sin(a) * (r1 + 5)).toFixed(1) + '" r="1.4" stroke="none"/>';
+          }
+          return h + "</g>";
+        }).join("");
+        document.getElementById("p-fw").innerHTML = fw;
+        var cx = 334, cy = 300, R = 98, w = '<circle cx="' + cx + '" cy="' + cy + '" r="' + R + '" fill="none" stroke="#f4c34d" stroke-width="3"/>' +
+          '<circle cx="' + cx + '" cy="' + cy + '" r="' + (R - 12) + '" fill="none" stroke="#f4c34d" stroke-opacity=".5" stroke-width="1.2"/>' +
+          '<circle cx="' + cx + '" cy="' + cy + '" r="26" fill="none" stroke="#f4c34d" stroke-opacity=".6" stroke-width="1.2"/>';
+        for (var j = 0; j < 16; j++) {
+          var a = j / 16 * Math.PI * 2, x = cx + Math.cos(a) * R, y = cy + Math.sin(a) * R;
+          w += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="#f4c34d" stroke-opacity=".55" stroke-width="1"/>';
+          w += '<circle class="pbulb' + (j % 2 ? " o" : "") + '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="2.6" fill="#ffe7a8"/>';
+          if (j % 2 === 0) w += '<rect x="' + (x - 7).toFixed(1) + '" y="' + (y + 3).toFixed(1) + '" width="14" height="11" rx="3" fill="' + (j % 4 ? "#2bb3a3" : "#e5483b") + '" stroke="#0b1129" stroke-width="1"/>';
+        }
+        document.getElementById("p-wheel").innerHTML = w;
+        var track = document.getElementById("p-track"), sup = "";
+        if (track.getTotalLength) {
+          var L = track.getTotalLength();
+          for (var t = 0; t <= L; t += 22) {
+            var p = track.getPointAtLength(t);
+            if (p.x < 0 || p.x > 440) continue;
+            if (p.x > 208 && p.x < 298 && p.y < 508) continue; // keep the loop free-standing
+            if (p.y > 512) continue;
+            sup += '<line x1="' + p.x.toFixed(1) + '" y1="' + (p.y + 4).toFixed(1) + '" x2="' + p.x.toFixed(1) + '" y2="528"/>';
+          }
+        }
+        document.getElementById("p-supports").innerHTML = sup;
+        var b = "", n = 0;
+        function bulb(x, y) { b += '<circle class="pbulb' + (n++ % 2 ? " o" : "") + '" cx="' + x + '" cy="' + y + '" r="2.8" fill="#ffe7a8"/>'; }
+        for (var bx = 10; bx <= 430; bx += 21) { bulb(bx, 9); bulb(bx, 551); }
+        for (var by = 30; by <= 530; by += 21) { bulb(9, by); bulb(431, by); }
+        document.getElementById("p-bulbs").innerHTML = b;
+        if (reduceMotion) { var svg = document.getElementById("poster-svg"); if (svg.pauseAnimations) svg.pauseAnimations(); }
+      }
+
+      /* ---------- method ---------- */
+      function renderMethod() {
+        document.getElementById("method").innerHTML = DIMS.map(function (d, i) {
+          return '<div class="m-item"><div class="m-no">0' + (i + 1) + "<small>" + d.max + " 分</small></div>" +
+            "<h3>" + esc(d.full) + "<span>" + d.en + "</span></h3><p>" + esc(d.d) + '</p><div class="m-meter"><i style="width:' + (d.max * 4) + '%"></i></div></div>';
+        }).join("");
+      }
+
+      /* ---------- coaster-track chart ---------- */
+      var trackMetric = "coasterCount", trackList = [];
+      var TR = { W: 1200, H: 290, pl: 46, pr: 10, pt: 24, pb: 40 };
+      var TM = {
+        coasterCount: { label: "过山车", u: " 座", d: 0 }, attendanceM: { label: "年客流", u: "M", d: 1 },
+        ticketUsd: { label: "门票", u: "", pre: "$", d: 0 }, score: { label: "综合得分", u: "", d: 1 }
+      };
+      function tv(p, m) { return m === "score" ? p._base : p[m]; }
+      function niceMax(v) { var e = Math.pow(10, Math.floor(Math.log10(v || 1))), f = v / e; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * e; }
+      function renderTrack() {
+        var svg = document.getElementById("track-svg"), m = trackMetric;
+        trackList = PARKS.slice().sort(function (a, b) { return a.rank - b.rank; });
+        var vals = trackList.map(function (p) { return num(tv(p, m)) ? tv(p, m) : 0; });
+        var lo = m === "score" ? 60 : 0, hi = m === "score" ? 100 : niceMax(Math.max.apply(null, vals) * 1.05);
+        var n = trackList.length || 1, step = (TR.W - TR.pl - TR.pr) / n, base = TR.H - TR.pb;
+        function X(i) { return TR.pl + step * (i + 0.5); }
+        function Y(v) { return TR.pt + (1 - (Math.max(lo, v) - lo) / (hi - lo)) * (base - TR.pt); }
+        var g = "";
+        for (var k = 0; k <= 4; k++) {
+          var gv = lo + (hi - lo) * k / 4, gy = Y(gv).toFixed(1);
+          g += '<line x1="' + TR.pl + '" x2="' + (TR.W - TR.pr) + '" y1="' + gy + '" y2="' + gy + '" stroke="#f4c34d" stroke-opacity="' + (k ? .08 : .35) + '" stroke-dasharray="' + (k ? "2 5" : "0") + '"/>';
+          g += '<text x="' + (TR.pl - 8) + '" y="' + (+gy + 4) + '" text-anchor="end" font-family="Oswald, sans-serif" font-size="11" fill="rgba(244,238,223,.45)">' + (TM[m].pre || "") + fmt(gv, gv % 1 ? 1 : 0) + "</text>";
+        }
+        var pts = trackList.map(function (p, i) { return [X(i), Y(vals[i])]; });
+        var d = "M" + pts[0][0].toFixed(1) + " " + pts[0][1].toFixed(1);
+        for (var i = 0; i < pts.length - 1; i++) {
+          var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+          d += "C" + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + " " + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + " " + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + " " + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + " " + p2[0].toFixed(1) + " " + p2[1].toFixed(1);
+        }
+        var sup = pts.map(function (p, i) {
+          return '<line x1="' + p[0].toFixed(1) + '" x2="' + p[0].toFixed(1) + '" y1="' + (p[1] + 3).toFixed(1) + '" y2="' + base + '" stroke="#f6ecd4" stroke-opacity="' + (i % 2 ? .07 : .14) + '"/>';
+        }).join("");
+        var fill = '<path d="' + d + "L" + pts[pts.length - 1][0].toFixed(1) + " " + base + "L" + pts[0][0].toFixed(1) + " " + base + 'Z" fill="url(#trk-fill)"/>';
+        var rail = '<path d="' + d + '" fill="none" stroke="#f6ecd4" stroke-opacity=".35" stroke-width="7" stroke-dasharray="1.5 5"/><path d="' + d + '" fill="none" stroke="#f4c34d" stroke-width="2.2"/>';
+        var dots = pts.map(function (p, i) { return '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="' + (trackList[i].tier === "T0" ? 3.6 : 2.6) + '" fill="' + tierColor(trackList[i].tier) + '" stroke="#0b1129" stroke-width="1"/>'; }).join("");
+        var band = "", start = 0;
+        TIERS.forEach(function (t) {
+          var c = trackList.filter(function (p) { return p.tier === t.k; }).length;
+          if (!c) return;
+          var x0 = TR.pl + step * start;
+          band += '<rect x="' + x0.toFixed(1) + '" y="' + (base + 6) + '" width="' + (step * c - 2).toFixed(1) + '" height="5" fill="' + t.c + '"/>';
+          band += '<text x="' + (x0 + 2).toFixed(1) + '" y="' + (base + 26) + '" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1.5" fill="' + t.c + '">' + t.k + " · " + c + "</text>";
+          start += c;
+        });
+        var top = trackList.map(function (p, i) { return i; }).sort(function (a, b) { return vals[b] - vals[a]; }).slice(0, 3);
+        var labs = top.map(function (i) {
+          var p = pts[i], right = p[0] > TR.W * 0.8;
+          return '<text x="' + (right ? p[0] - 8 : p[0] + 8).toFixed(1) + '" y="' + (p[1] - 8).toFixed(1) + '" text-anchor="' + (right ? "end" : "start") + '" font-size="11.5" font-weight="500" fill="#f6ecd4" paint-order="stroke" stroke="#111a3b" stroke-width="3">' + esc(shortName(trackList[i].name)) + "</text>";
+        }).join("");
+        var hits = trackList.map(function (p, i) {
+          return '<rect class="hit" data-i="' + i + '" x="' + (TR.pl + step * i).toFixed(1) + '" y="0" width="' + step.toFixed(2) + '" height="' + TR.H + '"><title>' + esc("#" + p.rank + " " + shortName(p.name)) + "</title></rect>";
+        }).join("");
+        svg.innerHTML = '<defs><linearGradient id="trk-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4c34d" stop-opacity=".18"/><stop offset="1" stop-color="#f4c34d" stop-opacity="0"/></linearGradient></defs>' +
+          g + sup + fill + rail + dots + band + labs + '<g id="trk-hl" pointer-events="none"></g>' + hits;
+        TR._X = X; TR._Y = Y; TR._vals = vals;
+        trackHighlight(0);
+      }
+      function trackHighlight(i) {
+        var p = trackList[i]; if (!p) return;
+        var x = TR._X(i), y = TR._Y(TR._vals[i]), base = TR.H - TR.pb;
+        document.getElementById("trk-hl").innerHTML = '<line x1="' + x + '" x2="' + x + '" y1="' + TR.pt + '" y2="' + base + '" stroke="#e5483b" stroke-opacity=".7" stroke-dasharray="2 3"/>' +
+          '<circle cx="' + x + '" cy="' + y + '" r="7" fill="none" stroke="#e5483b" stroke-width="2"/><circle cx="' + x + '" cy="' + y + '" r="3" fill="#f6ecd4"/>';
+        document.getElementById("track-read").innerHTML = tk(p, null, "sm") + "<b>#" + p.rank + " " + esc(shortName(p.name)) + "</b><span>" + esc(p.country) + " · " + esc(p.tier) + "</span>" +
+          '<span class="kv"><small>过山车</small>' + fmt(p.coasterCount) + " 座</span>" +
+          '<span class="kv"><small>年客流</small>' + fmt(p.attendanceM, 1) + "M</span>" +
+          '<span class="kv"><small>门票</small>' + ticketTxt(p.ticketUsd) + "</span>" +
+          '<span class="kv"><small>综合</small>' + fmt(p._base, 1) + "</span>";
+      }
+
+      /* ---------- scatter ---------- */
+      function renderScatter() {
+        var svg = document.getElementById("scatter-svg");
+        var W = 640, H = 380, pl = 44, pr = 16, pt = 16, pb = 42;
+        var xMax = niceMax(Math.max.apply(null, PARKS.map(function (p) { return num(p.ticketUsd) ? p.ticketUsd : 0; })) * 1.05);
+        var yMin = Math.floor(Math.min.apply(null, PARKS.map(function (p) { return p._base; })) / 5) * 5, yMax = 100;
+        function X(v) { return pl + (v / xMax) * (W - pl - pr); }
+        function Y(v) { return pt + (1 - (v - yMin) / (yMax - yMin)) * (H - pt - pb); }
+        var g = '<rect x="' + pl + '" y="' + pt + '" width="' + (X(xMax / 2) - pl).toFixed(1) + '" height="' + (Y((yMin + yMax) / 2) - pt).toFixed(1) + '" fill="#2bb3a3" fill-opacity=".06"/>' +
+          '<text x="' + (pl + 8) + '" y="' + (pt + 16) + '" font-size="11" fill="#7fe8dc" fill-opacity=".8">高分 · 低价区</text>';
+        var xs = xMax / 5;
+        for (var xv = 0; xv <= xMax + 0.01; xv += xs) {
+          g += '<line x1="' + X(xv).toFixed(1) + '" x2="' + X(xv).toFixed(1) + '" y1="' + pt + '" y2="' + (H - pb) + '" stroke="#f4c34d" stroke-opacity="' + (xv ? .07 : .35) + '"/>';
+          g += '<text x="' + X(xv).toFixed(1) + '" y="' + (H - pb + 16) + '" text-anchor="middle" font-family="Oswald, sans-serif" font-size="11" fill="rgba(244,238,223,.45)">$' + fmt(xv) + "</text>";
+        }
+        for (var yv = yMin; yv <= yMax; yv += 5) {
+          g += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(yv).toFixed(1) + '" y2="' + Y(yv).toFixed(1) + '" stroke="#f4c34d" stroke-opacity="' + (yv === yMin ? .35 : .07) + '"/>';
+          g += '<text x="' + (pl - 8) + '" y="' + (Y(yv) + 4).toFixed(1) + '" text-anchor="end" font-family="Oswald, sans-serif" font-size="11" fill="rgba(244,238,223,.45)">' + yv + "</text>";
+        }
+        g += '<text x="' + (W - pr) + '" y="' + (H - 6) + '" text-anchor="end" font-size="11.5" fill="rgba(244,238,223,.6)">成人单日门票 (USD) →</text>';
+        g += '<text x="' + (W - pr) + '" y="' + (pt + 12) + '" text-anchor="end" font-size="11.5" fill="rgba(244,238,223,.6)">↑ 默认权重综合得分</text>';
+        var pts = PARKS.slice().sort(function (a, b) { return b.rank - a.rank; }).map(function (p) {
+          if (!num(p.ticketUsd)) return "";
+          var r = p.tier === "T0" ? 6 : p.tier === "T1" ? 4.8 : 3.8;
+          return '<circle cx="' + X(p.ticketUsd).toFixed(1) + '" cy="' + Y(p._base).toFixed(1) + '" r="' + r + '" fill="' + tierColor(p.tier) + '" fill-opacity=".88" stroke="#0b1129" stroke-width="1"><title>' + esc("#" + p.rank + " " + shortName(p.name) + " · " + ticketTxt(p.ticketUsd) + " · " + fmt(p._base, 1) + " 分") + "</title></circle>";
+        }).join("");
+        var picks = [], seen = {};
+        function pick(d) { if (d && !seen[d.id]) { seen[d.id] = 1; picks.push(d); } }
+        pick(PARKS.filter(function (p) { return p.rank === 1; })[0]);
+        pick(maxBy(PARKS, function (p) { return p.ticketUsd; }));
+        pick(maxBy(PARKS.filter(function (p) { return p.ticketUsd > 0; }), function (p) { return p._base / p.ticketUsd; }));
+        pick(maxBy(PARKS, function (p) { return p._base; }, true));
+        var labs = picks.map(function (p) {
+          var x = X(p.ticketUsd), y = Y(p._base), right = x > W * 0.66;
+          return '<text x="' + (right ? x - 10 : x + 10).toFixed(1) + '" y="' + (y - 7).toFixed(1) + '" text-anchor="' + (right ? "end" : "start") + '" font-size="11.5" font-weight="500" fill="#f6ecd4" paint-order="stroke" stroke="#111a3b" stroke-width="3">' + esc(shortName(p.name)) + "</text>";
+        }).join("");
+        svg.innerHTML = g + pts + labs;
+        document.getElementById("scatter-legend").innerHTML = TIERS.map(function (t) { return '<span><i style="background:' + t.c + '"></i>' + t.k + "</span>"; }).join("");
+      }
+
+      /* ---------- records ---------- */
+      function renderRecords() {
+        var defs = [
+          { k: "最多过山车", f: function (d) { return d.coasterCount; }, u: "座" },
+          { k: "最高年客流", f: function (d) { return d.attendanceM; }, u: "M", d: 1 },
+          { k: "最大占地", f: function (d) { return d.areaHa; }, u: "公顷" },
+          { k: "最低门票", f: function (d) { return d.ticketUsd; }, asc: true, money: true },
+          { k: "最贵快通", f: function (d) { return d.expressUsd; }, money: true },
+          { k: "刺激分最高", f: function (d) { return d.scores && d.scores.thrill; }, u: "/25", d: 1 }
+        ];
+        document.getElementById("records").innerHTML = defs.map(function (r) {
+          var d = maxBy(PARKS, r.f, r.asc); if (!d) return "";
+          var v = r.f(d), val = r.money ? (v > 0 ? "$" + fmt(v) : "免费") : fmt(v, r.d) + "<small>" + r.u + "</small>";
+          return "<li>" + tk(d, d.rank) + '<div><div class="r-k">' + esc(r.k) + '</div><div class="r-n">' + esc(shortName(d.name)) + " · " + esc(d.country) + '</div></div><div class="r-v">' + val + "</div></li>";
+        }).join("");
+      }
+
+      /* ---------- controls ---------- */
+      var listEl = document.getElementById("list"), countEl = document.getElementById("count"), qEl = document.getElementById("q");
+      var summaryEl = document.getElementById("weight-summary");
+      function renderWbar() {
+        var w = state.weights, tot = DIMS.reduce(function (a, d) { return a + w[d.k]; }, 0);
+        document.getElementById("wbar").innerHTML = tot ? DIMS.map(function (d) {
+          var pct = Math.round(w[d.k] / tot * 100);
+          return '<span style="flex-grow:' + w[d.k] + ";background:" + DIM_COLORS[d.k] + '" title="' + d.full + " " + pct + '%">' + (pct >= 8 ? "<em>" + d.label + "</em> <b>" + pct + "%</b>" : pct >= 4 ? "<b>" + pct + "</b>" : "") + "</span>";
+        }).join("") : '<span style="flex-grow:1;background:transparent;color:rgba(244,238,223,.5)">所有权重为 0 · 请调高任一维度</span>';
+        DIMS.forEach(function (d) {
+          var o = document.getElementById("val-" + d.k);
+          if (o) o.textContent = (tot ? Math.round(w[d.k] / tot * 100) : 0) + "%";
+        });
+      }
+      function segButtons(el, items, active, onPick) {
+        el.innerHTML = items.map(function (it) {
+          return '<button type="button" data-k="' + esc(it.k) + '" aria-pressed="' + (it.k === active) + '"' + (it.title ? ' title="' + esc(it.title) + '"' : "") + ">" + it.html + "</button>";
+        }).join("");
+        el.addEventListener("click", function (e) {
+          var b = e.target.closest("button[data-k]"); if (!b) return;
+          el.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          onPick(b.getAttribute("data-k"));
+        });
+      }
+      function buildControls() {
+        segButtons(document.getElementById("region-seg"),
+          [{ k: "ALL", title: "全部地区 · " + PARKS.length + " 座", html: "全部" }].concat(REGIONS.map(function (r) {
+            return { k: r.k, title: r.k + " · " + PARKS.filter(function (d) { return d.region === r.k; }).length + " 座", html: esc(r.s) };
+          })), "ALL", function (k) { state.region = k; renderList(); });
+        segButtons(document.getElementById("tier-seg"),
+          [{ k: "ALL", title: "全部梯队", html: "全部" }].concat(TIERS.map(function (t) {
+            return { k: t.k, title: t.k + " " + t.label, html: '<i class="dot ' + tierCls(t.k) + '"></i>' + t.k };
+          })), "ALL", function (k) { state.tier = k; renderList(); });
+        var cs = document.getElementById("crowd-sel");
+        cs.innerHTML = '<option value="ALL">人群：全部</option>' + CROWDS.map(function (c) {
+          var n = PARKS.filter(function (d) { return (d.bestFor || []).indexOf(c) > -1; }).length;
+          return n ? '<option value="' + esc(c) + '">' + esc(c) + " (" + n + ")</option>" : "";
+        }).join("");
+        cs.addEventListener("change", function () { state.crowd = cs.value; renderList(); });
+        var ss = document.getElementById("sort-sel");
+        ss.addEventListener("change", function () { state.sort = ss.value; renderList(); });
+        qEl.addEventListener("input", function () { state.q = qEl.value.trim().toLowerCase(); renderList(); });
+
+        DIMS.forEach(function (d) {
+          var sl = document.getElementById("sl-" + d.k);
+          sl.addEventListener("input", function () {
+            state.weights[d.k] = parseFloat(sl.value) || 0;
+            var match = Object.keys(PRESETS).filter(function (p) { return DIMS.every(function (x) { return PRESETS[p].w[x.k] === state.weights[x.k]; }); })[0];
+            summaryEl.textContent = match ? PRESETS[match].label : "自定义滑块权重";
+            document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-preset") === match)); });
+            renderWbar(); renderList();
+          });
+        });
+        document.getElementById("presets").addEventListener("click", function (e) {
+          var b = e.target.closest(".preset-btn"); if (!b) return;
+          var pr = PRESETS[b.getAttribute("data-preset")]; if (!pr) return;
+          DIMS.forEach(function (d) { state.weights[d.k] = pr.w[d.k]; document.getElementById("sl-" + d.k).value = pr.w[d.k]; });
+          document.querySelectorAll(".preset-btn").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          summaryEl.textContent = pr.label;
+          renderWbar(); renderList();
+        });
+        var ct = document.getElementById("custom-toggle"), sw = document.getElementById("sliders");
+        ct.addEventListener("click", function () {
+          var open = ct.getAttribute("aria-expanded") !== "true";
+          ct.setAttribute("aria-expanded", String(open)); sw.hidden = !open;
+        });
+        document.getElementById("track-seg").addEventListener("click", function (e) {
+          var b = e.target.closest("button[data-m]"); if (!b) return;
+          document.querySelectorAll("#track-seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          trackMetric = b.getAttribute("data-m"); renderTrack();
+        });
+        var tsvg = document.getElementById("track-svg");
+        ["mousemove", "click"].forEach(function (ev) {
+          tsvg.addEventListener(ev, function (e) { var r = e.target.closest && e.target.closest(".hit"); if (r) trackHighlight(+r.getAttribute("data-i")); });
         });
       }
 
-      // Initialize Filter Chips
-      var REGIONS = ["全部", "北美", "亚洲", "欧洲", "中东 · 拉美 · 大洋洲"];
-      var TIERS = ["全部", "T0", "T1", "T1.5", "T2"];
-      var CROWDS = ["全部人群", "过山车狂热", "IP沉浸造景", "低龄亲子", "情侣出片", "夜景大秀", "全天候室内"];
+      /* ---------- card pieces ---------- */
+      var chev = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg>';
+      function attrs(p) {
+        return ' data-id="' + esc(p.id) + '" data-dest-id="' + esc(p.id) + '" data-name="' + esc(p._zh) + '" data-lat="' + (num(p.lat) ? p.lat : "") + '" data-lon="' + (num(p.lon) ? p.lon : "") + '"';
+      }
+      function metricsCells(p) {
+        return [
+          { k: "coasters", v: fmt(p.coasterCount), u: "座", l: "过山车" },
+          { k: "attendance", v: fmt(p.attendanceM, 1), u: "M", l: "年客流" },
+          { k: "area", v: fmt(p.areaHa), u: "ha", l: "占地" },
+          { k: "ticket", v: ticketTxt(p.ticketUsd), u: "", l: "门票" }
+        ];
+      }
+      function detailHtml(p, withSlot, nm) {
+        var s = p.scores || {};
+        var bars = DIMS.map(function (d) {
+          var v = num(s[d.k]) ? s[d.k] : 0;
+          return '<div class="bar"><span>' + d.label + '</span><div class="track"><i style="width:' + Math.min(100, v / d.max * 100).toFixed(1) + '%"></i></div><b>' + fmt(v, 1) + "/" + d.max + "</b></div>";
+        }).join("");
+        var facts = [];
+        facts.push("快通 <b>" + expressTxt(p.expressUsd) + "</b>");
+        if (p.durationDays) facts.push("建议游玩 <b>" + esc(p.durationDays) + "</b>");
+        facts.push('<a href="' + mapUrl(p, nm) + '" target="_blank" rel="noopener">地图 ↗</a>');
+        var chips = (p.bestFor || []).map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("");
+        return '<div class="d-bars"><div class="d-title">Score · 六维细分</div><div class="bars">' + bars + "</div></div>" +
+          '<div class="d-hl"><div class="d-title">Rides · 镇园项目</div><ul class="hl">' + feats(p).map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" +
+          '<div class="facts">' + facts.join("") + "</div>" + (withSlot && chips ? '<div class="chips">' + chips + "</div>" : "") + "</div>" +
+          (p.tip ? '<div class="d-tip"><div class="tip"><b>玩家省时锦囊</b>' + esc(p.tip) + "</div></div>" : "") +
+          (withSlot ? '<div class="shared-slot"></div>' : "");
+      }
+      function rankNote(p) { return p.liveRank !== p.rank ? "编辑榜 #" + p.rank : ""; }
+      function featureCard(p, i) {
+        var nm = splitName(p.name), open = !!state.open[p.id];
+        var cells = metricsCells(p).map(function (c) { return "<div><b>" + c.v + "<small>" + c.u + "</small></b><span>" + c.l + "</span></div>"; }).join("");
+        var lead = feats(p).slice(0, i === 0 ? 3 : 2).join("；");
+        var chips = (p.bestFor || []).map(function (t) { return '<span class="chip">' + esc(t) + "</span>"; }).join("");
+        var extra = '<div class="tk-wrap">' + tk(p, p.liveRank, "big") + "<em>" + (p.liveRank !== p.rank ? "编辑榜 #" + p.rank : esc(p.tier) + " · " + esc(p.region)) + "</em></div>" +
+          '<div class="score-tab" title="当前权重综合得分"><b>' + p._score.toFixed(1) + "</b><span>INDEX</span></div>";
+        return '<article class="fcard ' + tierCls(p.tier) + (i === 0 ? " is-lead" : "") + (open ? " is-open" : "") + '"' + attrs(p) + ">" +
+          mediaHtml(p, { extra: extra, credit: true }) +
+          '<div class="fbody">' +
+          '<div class="loc"><b>' + esc(p.country) + "</b><span>" + esc(p.city) + "</span></div>" +
+          "<h3>" + esc(nm.zh) + (nm.en ? '<span class="en">' + esc(nm.en) + "</span>" : "") + "</h3>" +
+          '<div class="mstrip">' + cells + "</div>" +
+          (lead ? '<p class="lead">' + esc(lead) + "</p>" : "") +
+          (chips ? '<div class="chips">' + chips + "</div>" : "") +
+          '<div class="fmeta"><span>快通 ' + expressTxt(p.expressUsd) + " · " + esc(p.durationDays || "—") + "</span>" +
+          '<button type="button" class="toggle" aria-expanded="' + open + '">详情 ' + chev + "</button></div>" +
+          "</div>" +
+          '<div class="detail"' + (open ? "" : " hidden") + ">" + detailHtml(p, false, nm) + "</div>" +
+          '<div class="shared-slot"></div>' +
+          "</article>";
+      }
+      function rowCard(p) {
+        var nm = splitName(p.name), open = !!state.open[p.id];
+        var cells = metricsCells(p).map(function (c) {
+          return '<div class="' + (c.k === state.sort ? "hot" : "") + '"><b>' + c.v + "<small>" + c.u + "</small></b><span>" + c.l + "</span></div>";
+        }).join("");
+        return '<article class="row ' + tierCls(p.tier) + (open ? " is-open" : "") + '"' + attrs(p) + ">" +
+          '<div class="row-main">' +
+          '<div class="row-rank">' + tk(p, p.liveRank) + "</div>" +
+          mediaHtml(p, { extra: '<span class="tk-mini">' + tk(p, p.liveRank) + "</span>" }) +
+          '<div class="row-name"><h3>' + esc(nm.zh) + "</h3>" + (nm.en ? '<span class="en">' + esc(nm.en) + "</span>" : "") +
+          '<div class="loc"><b>' + esc(p.country) + "</b><span>" + esc(p.city) + "</span></div></div>" +
+          '<div class="row-metrics">' + cells + "</div>" +
+          '<div class="row-score"><b>' + p._score.toFixed(1) + '</b><div class="mini"><i style="width:' + Math.max(0, Math.min(100, p._score)).toFixed(1) + '%"></i></div><small>' + rankNote(p) + "</small></div>" +
+          '<button type="button" class="toggle" aria-expanded="' + open + '">详情 ' + chev + "</button>" +
+          "</div>" +
+          '<div class="detail"' + (open ? "" : " hidden") + ">" + detailHtml(p, true, nm) + "</div>" +
+          "</article>";
+      }
 
-      var regEl = document.getElementById("region-chips");
-      regEl.insertAdjacentHTML("beforeend", REGIONS.map(function (r) {
-        return '<button type="button" class="chip" data-r="' + esc(r) + '" aria-pressed="' + (r === "全部") + '">' + esc(r) + "</button>";
-      }).join(""));
-
-      var tierEl = document.getElementById("tier-chips");
-      tierEl.insertAdjacentHTML("beforeend", TIERS.map(function (t) {
-        return '<button type="button" class="chip" data-t="' + esc(t) + '" aria-pressed="' + (t === "全部") + '">' + (t === "全部" ? "全部梯队" : esc(t)) + "</button>";
-      }).join(""));
-
-      var crowdEl = document.getElementById("crowd-chips");
-      crowdEl.insertAdjacentHTML("beforeend", CROWDS.map(function (c) {
-        return '<button type="button" class="chip is-tag" data-c="' + esc(c) + '" aria-pressed="' + (c === "全部人群") + '">' + esc(c) + "</button>";
-      }).join(""));
-
-      regEl.addEventListener("click", function (e) {
-        var b = e.target.closest(".chip"); if (!b) return;
-        state.region = b.getAttribute("data-r");
-        regEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
-        render();
-      });
-
-      tierEl.addEventListener("click", function (e) {
-        var b = e.target.closest(".chip"); if (!b) return;
-        state.tier = b.getAttribute("data-t");
-        tierEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
-        render();
-      });
-
-      crowdEl.addEventListener("click", function (e) {
-        var b = e.target.closest(".chip"); if (!b) return;
-        state.crowd = b.getAttribute("data-c");
-        crowdEl.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
-        render();
-      });
-
-      document.querySelectorAll(".sort-btn").forEach(function (b) {
-        b.addEventListener("click", function () {
-          state.sort = b.getAttribute("data-sort");
-          document.querySelectorAll(".sort-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
-          render();
+      /* ---------- main render ---------- */
+      function renderList() {
+        var dflt = isDefault();
+        PARKS.forEach(function (p) { p._score = computeScore(p); });
+        PARKS.slice().sort(function (a, b) { return b._score - a._score || a.rank - b.rank; }).forEach(function (p, i) { p.liveRank = dflt ? p.rank : i + 1; });
+        var q = state.q;
+        var list = PARKS.filter(function (p) {
+          if (state.region !== "ALL" && p.region !== state.region) return false;
+          if (state.tier !== "ALL" && p.tier !== state.tier) return false;
+          if (state.crowd !== "ALL" && (p.bestFor || []).indexOf(state.crowd) === -1) return false;
+          if (q) {
+            var hay = [p.name, p.country, p.region, p.city, p.highlight, p.tip].concat(p.bestFor || []).join(" ").toLowerCase();
+            if (hay.indexOf(q) === -1) return false;
+          }
+          return true;
         });
-      });
-
-      var qEl = document.getElementById("q");
-      qEl.addEventListener("input", function () {
-        state.q = qEl.value.trim().toLowerCase();
-        render();
-      });
-
-      // Sliders & Presets
-      var KEYS = ["thrill", "immersion", "ops", "family", "diningShow", "value"];
-      function syncSlidersUI(labelOverride) {
-        var sum = 0;
-        KEYS.forEach(function (k) { sum += state.weights[k]; });
-        if (sum <= 0) sum = 1;
-        KEYS.forEach(function (k) {
-          var sl = document.getElementById("sl-" + k);
-          var vl = document.getElementById("val-" + k);
-          if (sl) sl.value = state.weights[k];
-          var normPct = Math.round((state.weights[k] / sum) * 100);
-          if (vl) vl.textContent = normPct + "%";
+        var so = SORTS[state.sort];
+        list.sort(function (a, b) {
+          if (so.f) return (so.asc ? a[so.f] - b[so.f] : b[so.f] - a[so.f]) || b._score - a._score;
+          return a.liveRank - b.liveRank;
         });
-        document.getElementById("weight-summary").textContent =
-          (labelOverride || "自定义权重") + " · 已实时重算 100 园得分";
-      }
-
-      KEYS.forEach(function (k) {
-        var sl = document.getElementById("sl-" + k);
-        sl.addEventListener("input", function () {
-          state.weights[k] = parseFloat(sl.value) || 0;
-          document.querySelectorAll(".preset-btn").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
-          syncSlidersUI("自定义滑块模式");
-          computeScores();
-          render();
-        });
-      });
-
-      document.getElementById("presets").addEventListener("click", function (e) {
-        var b = e.target.closest(".preset-btn"); if (!b) return;
-        var pk = b.getAttribute("data-preset");
-        var pr = PRESETS[pk]; if (!pr) return;
-        KEYS.forEach(function (k) { state.weights[k] = pr.w[k]; });
-        document.querySelectorAll(".preset-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
-        syncSlidersUI(pr.label);
-        computeScores();
-        render();
-      });
-
-      function zoneOf(t) {
-        return ZONES.filter(function (z) { return z.tier === t; })[0] || ZONES[3];
-      }
-
-      function getImg(id) {
-        var v = (window.THEMED_IMAGES && window.THEMED_IMAGES[id]) ? window.THEMED_IMAGES[id] : null;
-        return v ? (typeof v === "string" ? v : v.src) : null;
-      }
-
-      function renderParkCard(p, idx) {
-        var z = zoneOf(p.tier);
-        var imgUrl = getImg(p.id);
-        var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((p._en || p._zh) + " " + p.city);
-        var expressLabel = p.expressUsd > 0 ? ("+$" + p.expressUsd + " 快通") : "免快通 / 免费预约";
-        var ticketLabel = p.ticketUsd > 0 ? ("$" + p.ticketUsd) : "免门票入园";
-
-        var bannerArt = '<svg class="c-banner-art" viewBox="0 0 600 150" preserveAspectRatio="none" aria-hidden="true">' +
-          '<path d="M0,130 Q140,20 280,100 T560,40 L600,80 L600,150 L0,150 Z" fill="rgba(255,255,255,0.05)"/>' +
-          '<path d="M0,120 C120,120 160,25 260,25 C360,25 390,125 500,125 C560,125 580,60 600,50" fill="none" stroke="' + z.c + '" stroke-width="2" stroke-dasharray="5 5"/>' +
-          '</svg>';
-
-        return '<article class="card' + (p.tier === "T0" ? " is-t0" : "") + '" data-dest-id="' + esc(p.id) + '" data-lat="' + (p.lat || "") + '" data-lon="' + (p.lon || "") + '" data-name="' + esc(p._zh) + '" style="--zone-c:' + z.c + ';--banner-grad:' + z.grad + '">' +
-          '<div class="c-banner">' +
-            (imgUrl ? '<img src="' + esc(imgUrl) + '" alt="' + esc(p._zh) + '" loading="lazy" onerror="this.style.display=\'none\'" />' : "") +
-            bannerArt +
-            '<div class="c-banner-overlay"></div>' +
-            '<div class="c-banner-meta">' +
-              '<div class="c-rank-box">' +
-                '<span class="c-rank">#' + String(p.rank).padStart(2, "0") + '</span>' +
-                '<span class="c-tier-pill">' + esc(p.tier) + ' · ' + esc(p.region) + '</span>' +
-              '</div>' +
-              '<div class="c-score-box" title="六维加权综合得分">' +
-                '<div class="c-score-val">' + p._dynScore.toFixed(1) + '<small>PTS</small></div>' +
-                '<div class="c-score-bars">' +
-                  '<i style="width:' + Math.round(p.scores.thrill) + 'px;background:#ff4d79"></i>' +
-                  '<i style="width:' + Math.round(p.scores.immersion) + 'px;background:#ffb830"></i>' +
-                  '<i style="width:' + Math.round(p.scores.ops) + 'px;background:#2be4dc"></i>' +
-                '</div>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-          '<div class="c-body">' +
-            '<div class="c-head-row">' +
-              '<h3 class="c-name">' + esc(p._zh) + (p._en ? '<span class="c-en">' + esc(p._en) + '</span>' : '') + '</h3>' +
-              '<div class="c-loc">📍 ' + esc(p.country + " · " + p.city) +
-                ' <a href="' + mapUrl + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
-            '</div>' +
-            '<div class="c-metrics">' +
-              '<span class="m-badge is-coaster">🎢 <b>' + p.coasterCount + '</b> 座过山车</span>' +
-              '<span class="m-badge">👥 <b>' + p.attendanceM.toFixed(1) + 'M</b> 百万客流/年</span>' +
-              '<span class="m-badge">📐 <b>' + p.areaHa + '</b> 公顷</span>' +
-              '<span class="m-badge">🎟️ <b>' + ticketLabel + '</b> 门票 <small style="color:var(--muted)">(' + expressLabel + ')</small></span>' +
-              '<span class="m-badge">⏱️ 建议 <b>' + esc(p.durationDays) + '</b></span>' +
-              (p.bestFor || []).map(function (bf) {
-                return '<span class="m-badge is-crowd">' + esc(bf) + '</span>';
-              }).join("") +
-            '</div>' +
-            '<ul class="c-feats">' +
-              p._feats.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join("") +
-            '</ul>' +
-            '<div class="c-tip"><strong>💡 玩家省时锦囊：</strong>' + esc(p.tip) + '</div>' +
-            '<div class="shared-slot"></div>' +
-          '</div>' +
-        '</article>';
-      }
-
-      function matches(p) {
-        if (state.region !== "全部" && p.region !== state.region) return false;
-        if (state.tier !== "全部" && p.tier !== state.tier) return false;
-        if (state.crowd !== "全部人群" && (!p.bestFor || p.bestFor.indexOf(state.crowd) === -1)) return false;
-        if (!state.q) return true;
-        var hay = (p.name + " " + p.country + " " + p.region + " " + p.city + " " + p.highlight + " " + p.tip + " " + (p.bestFor || []).join(" ")).toLowerCase();
-        return hay.indexOf(state.q) > -1;
-      }
-
-      var zonesEl = document.getElementById("zones");
-
-      function render() {
-        var filtered = PARKS.filter(matches);
-        document.getElementById("count").innerHTML = "显示 <b>" + filtered.length + "</b> / " + PARKS.length + " 座乐园";
-
-        if (!filtered.length) {
-          zonesEl.innerHTML = '<p style="padding:60px 0;text-align:center;color:var(--muted)">没有找到符合当前筛选条件的主题乐园，请尝试切换地区或清空搜索词。</p>';
+        countEl.innerHTML = "显示 <b>" + list.length + "</b> / " + PARKS.length;
+        if (!list.length) {
+          listEl.innerHTML = '<div class="empty"><h3>没有符合条件的主题乐园</h3><p>试试切换地区、梯队或人群标签，或清空搜索关键词。</p><button type="button" class="toggle" id="reset-filters">重置全部筛选</button></div>';
           return;
         }
-
-        // Check if custom sort or custom weights are active
-        var isDefaultWeights =
-          state.weights.thrill === 25 && state.weights.immersion === 25 &&
-          state.weights.ops === 15 && state.weights.family === 15 &&
-          state.weights.diningShow === 10 && state.weights.value === 10;
-
-        if (state.sort === "score" && isDefaultWeights) {
-          // Group by Tier (T0, T1, T1.5, T2)
-          var html = "";
-          ZONES.forEach(function (z) {
-            var items = filtered.filter(function (p) { return p.tier === z.tier; });
-            if (!items.length) return;
-            items.sort(function (a, b) { return b._dynScore - a._dynScore || a.rank - b.rank; });
-            html += '<section class="zone" style="--zone-c:' + z.c + '">' +
-              '<header class="zone-head">' +
-                '<div class="zone-title"><span class="zone-tier">' + esc(z.tier) + '</span><h3 class="zone-name">' + esc(z.name) + '</h3></div>' +
-                '<p class="zone-note">' + esc(z.note) + '</p>' +
-              '</header>' +
-              '<div class="list">' + items.map(renderParkCard).join("") + '</div>' +
-            '</section>';
+        var fN = featureN(), ft = list.slice(0, fN), rest = list.slice(fN);
+        var grouped = state.sort === "score" && dflt;
+        var t0 = TIERS[0];
+        var headTxt = state.sort === "score" ? (dflt ? (ft.every(function (p) { return p.tier === "T0"; }) && state.tier !== "T0" ? "T0 · " + t0.label : "精选 · 按综合得分") : "按「" + esc(summaryEl.textContent) + "」重排") : "按" + so.label + "排序";
+        var html = '<div class="list-head"><h3>Top ' + ft.length + "<small>" + headTxt + '</small></h3><button type="button" class="ghost-btn" id="expand-all">全部展开详情</button></div>';
+        html += '<div class="feature-grid">' + ft.map(featureCard).join("") + "</div>";
+        if (rest.length) {
+          html += '<div class="list-head"><h3>Nº ' + (fN + 1) + "–" + list.length + "<small>其余 " + rest.length + " 座 · 点击任一行展开评分、镇园项目、锦囊与顺路推荐</small></h3></div>";
+          var prev = ft[ft.length - 1].tier, rows = "";
+          rest.forEach(function (p) {
+            if (grouped && p.tier !== prev) {
+              var t = TIERS.filter(function (x) { return x.k === p.tier; })[0] || TIERS[3];
+              rows += '<div class="tier-divider">' + tk(p, null, "sm") + esc(t.k) + " · " + esc(t.label) + '<span class="note">' + esc(t.note) + "</span><small>" + PARKS.filter(function (d) { return d.tier === p.tier; }).length + " 座</small></div>";
+              prev = p.tier;
+            }
+            rows += rowCard(p);
           });
-          zonesEl.innerHTML = html;
-        } else {
-          var list = filtered.slice();
-          var title = "按自定义加权得分排序";
-          if (state.sort === "score") {
-            list.sort(function (a, b) { return b._dynScore - a._dynScore || a.rank - b.rank; });
-          } else if (state.sort === "coasters") {
-            title = "按过山车数量从多到少排序";
-            list.sort(function (a, b) { return b.coasterCount - a.coasterCount || b._dynScore - a._dynScore; });
-          } else if (state.sort === "attendance") {
-            title = "按年客流量从高到低排序";
-            list.sort(function (a, b) { return b.attendanceM - a.attendanceM || b._dynScore - a._dynScore; });
-          } else if (state.sort === "area") {
-            title = "按占地面积从大到小排序";
-            list.sort(function (a, b) { return b.areaHa - a.areaHa || b._dynScore - a._dynScore; });
-          } else if (state.sort === "ticket") {
-            title = "按单日门票价格从低到高排序";
-            list.sort(function (a, b) { return a.ticketUsd - b.ticketUsd || b._dynScore - a._dynScore; });
-          }
-          zonesEl.innerHTML = '<section class="zone" style="--zone-c:#ffb830">' +
-            '<header class="zone-head">' +
-              '<div class="zone-title"><span class="zone-tier">RANK</span><h3 class="zone-name">' + esc(title) + '</h3></div>' +
-              '<p class="zone-note">点击上方「默认综合均衡」与「按综合得分」可恢复按 T0–T2 四大梯队分组视图。</p>' +
-            '</header>' +
-            '<div class="list">' + list.map(renderParkCard).join("") + '</div>' +
-          '</section>';
+          html += '<div class="rows">' + rows + "</div>";
         }
+        listEl.innerHTML = html;
         if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
       }
 
-      function renderWaterParks() {
+      function setOpen(card, open) {
+        var id = card.getAttribute("data-id"), det = card.querySelector(".detail"), btn = card.querySelector(".toggle");
+        if (open) state.open[id] = 1; else delete state.open[id];
+        card.classList.toggle("is-open", open);
+        if (det) det.hidden = !open;
+        if (btn) btn.setAttribute("aria-expanded", String(open));
+      }
+      listEl.addEventListener("click", function (e) {
+        if (e.target.closest("#reset-filters")) {
+          state.region = state.tier = state.crowd = "ALL"; state.q = ""; qEl.value = "";
+          document.getElementById("crowd-sel").value = "ALL";
+          ["region-seg", "tier-seg"].forEach(function (id) {
+            document.querySelectorAll("#" + id + " button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-k") === "ALL")); });
+          });
+          renderList(); return;
+        }
+        var ea = e.target.closest("#expand-all");
+        if (ea) {
+          var cards = listEl.querySelectorAll("[data-dest-id]");
+          var anyClosed = Array.prototype.some.call(cards, function (c) { return !c.classList.contains("is-open"); });
+          cards.forEach(function (c) { setOpen(c, anyClosed); });
+          ea.textContent = anyClosed ? "全部收起详情" : "全部展开详情";
+          return;
+        }
+        if (e.target.closest("a, .shared-slot, .detail")) return;
+        var btn = e.target.closest(".toggle"), card = e.target.closest(".fcard, .row");
+        if (!card) return;
+        if (btn || (card.classList.contains("row") && e.target.closest(".row-main"))) setOpen(card, !card.classList.contains("is-open"));
+      });
+
+      /* ---------- water parks ---------- */
+      function renderWater() {
         var el = document.getElementById("water-list");
-        el.innerHTML = WATERS.map(function (w) {
-          var imgUrl = getImg(w.id);
-          var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((w._en || w._zh) + " " + w.city);
-          return '<article class="w-card" data-dest-id="' + esc(w.id) + '" data-lat="' + (w.lat || "") + '" data-lon="' + (w.lon || "") + '" data-name="' + esc(w._zh) + '">' +
-            '<div class="w-banner">' +
-              (imgUrl ? '<img src="' + esc(imgUrl) + '" alt="' + esc(w._zh) + '" loading="lazy" onerror="this.style.display=\'none\'" />' : '') +
-              '<div class="c-banner-overlay"></div>' +
-              '<div class="w-banner-meta">' +
-                '<span class="w-rank">WATER #' + String(w.rank).padStart(2, "0") + '</span>' +
-                '<span class="c-tier-pill" style="color:var(--aqua);border-color:var(--aqua)">🌊 ' + w.areaHa + ' 公顷 · $' + w.ticketUsd + '</span>' +
-              '</div>' +
-            '</div>' +
-            '<div class="w-body">' +
-              '<h3 class="c-name" style="font-size:18px">' + esc(w._zh) + (w._en ? '<span class="c-en" style="display:block;margin:2px 0 0 0">' + esc(w._en) + '</span>' : '') + '</h3>' +
-              '<div class="c-loc" style="margin-top:8px">📍 ' + esc(w.country + " · " + w.city) + ' <a href="' + mapUrl + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
-              '<ul class="c-feats" style="margin-top:12px">' +
-                w._feats.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join("") +
-              '</ul>' +
-              '<div class="c-tip" style="margin-top:auto;padding-top:10px"><strong>💧 玩水贴士：</strong>' + esc(w.tip) + '</div>' +
-              '<div class="shared-slot"></div>' +
-            '</div>' +
-          '</article>';
+        if (!WATERS.length) { document.getElementById("waterparks").style.display = "none"; return; }
+        el.innerHTML = WATERS.slice().sort(function (a, b) { return a.rank - b.rank; }).map(function (w) {
+          var nm = splitName(w.name), fs = feats(w);
+          var meta = [];
+          if (num(w.areaHa)) meta.push(fmt(w.areaHa, w.areaHa % 1 ? 1 : 0) + " 公顷");
+          return '<article class="wcard"' + attrs(w) + ">" +
+            mediaHtml(w, { kind: "water", extra: '<div class="tk-wrap">' + tk({ tier: "T1.5" }, w.rank) + "<em>SPLASH</em></div>" }) +
+            '<div class="wbody">' +
+            '<div class="loc"><b>' + esc(w.country) + "</b><span>" + esc(w.city) + "</span></div>" +
+            "<h3>" + esc(nm.zh) + (nm.en ? '<span class="en">' + esc(nm.en) + "</span>" : "") + "</h3>" +
+            '<ul class="hl w-lead">' + fs.slice(0, 2).map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>" +
+            '<div class="wfoot"><span><b>' + ticketTxt(w.ticketUsd) + "</b> 门票" + (meta.length ? " · " + meta.join(" · ") : "") + "</span>" +
+            '<button type="button" class="toggle" aria-expanded="false">详情 ' + chev + "</button></div>" +
+            "</div>" +
+            '<div class="detail" hidden>' +
+            '<ul class="hl">' + fs.map(function (h, i) { return '<li class="' + (i < 2 ? "w-dup" : "") + '">' + esc(h) + "</li>"; }).join("") + "</ul>" +
+            (w.tip ? '<div class="tip"><b>玩水贴士</b>' + esc(w.tip) + "</div>" : "") +
+            '<div class="facts"><a href="' + mapUrl(w, nm) + '" target="_blank" rel="noopener">地图 ↗</a></div>' +
+            '<div class="shared-slot"></div>' +
+            "</div>" +
+            "</article>";
         }).join("");
+        el.addEventListener("click", function (e) {
+          var btn = e.target.closest(".toggle"); if (!btn) return;
+          var card = btn.closest(".wcard"), det = card.querySelector(".detail"), open = btn.getAttribute("aria-expanded") !== "true";
+          btn.setAttribute("aria-expanded", String(open)); det.hidden = !open;
+        });
         if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance();
       }
 
-      computeScores();
-      render();
-      renderWaterParks();
+      buildPoster();
+      renderMethod();
+      if (!PARKS.length) {
+        listEl.innerHTML = '<div class="empty"><h3>乐园数据加载失败</h3><p>请确认 data_themeparks.js 与本页位于同一目录。</p></div>';
+        document.getElementById("charts").style.display = "none";
+        document.getElementById("hero-stats").style.display = "none";
+      } else {
+        renderHeroStats();
+        renderTrack();
+        renderScatter();
+        renderRecords();
+        buildControls();
+        renderWbar();
+        renderList();
+      }
+      renderWater();
+      if (mq) {
+        var onMq = function () { renderList(); };
+        if (mq.addEventListener) mq.addEventListener("change", onMq); else if (mq.addListener) mq.addListener(onMq);
+      }
+      window.addEventListener("load", function () { if (window.SharedWidgets && window.SharedWidgets.enhance) window.SharedWidgets.enhance(); });
     })();
   </script>
 </body>

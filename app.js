@@ -1,4 +1,4 @@
-// Oceanic Atlas — Global 145 Beach & Island Resort Destinations
+// Oceanic Atlas — Global 200 Beach & Island Resort Destinations
 // Zero-dependency travel-magazine application engine
 
 const MAX_SCORES = {
@@ -967,12 +967,12 @@ function renderWeatherPlanner(allEnriched) {
     if (rainList.length) parts.push(`🌧️ <strong>雨水过多 ${rainList.length} 处</strong>：${esc(sampleRain)}${rainList.length > 3 ? " 等" : ""}`);
 
     const toggleBtn = state.weatherFilterEnabled
-      ? `<button type="button" class="text-link" onclick="toggleWeatherFilterMaster(false)">临时查看全部 145 处 (含天气劝退项)</button>`
-      : `<button type="button" class="text-link" style="color:var(--coral)" onclick="toggleWeatherFilterMaster(true)">重新开启 7 天天气自动过滤 (当前显示全部 145 处)</button>`;
+      ? `<button type="button" class="text-link" onclick="toggleWeatherFilterMaster(false)">临时查看全部 200 处 (含天气劝退项)</button>`
+      : `<button type="button" class="text-link" style="color:var(--coral)" onclick="toggleWeatherFilterMaster(true)">重新开启 7 天天气自动过滤 (当前显示全部 200 处)</button>`;
 
     sumEl.innerHTML = `
       <div>
-        <span><strong>${esc(win.rangeLabel)} 统计：</strong>共 <strong>${passList.length} / 145</strong> 处通过当前天气筛选。</span>
+        <span><strong>${esc(win.rangeLabel)} 统计：</strong>共 <strong>${passList.length} / 200</strong> 处通过当前天气筛选。</span>
         ${parts.length ? `<span style="margin-left:6px">${parts.join(" ； ")}</span>` : ""}
       </div>
       <div>${toggleBtn}</div>
@@ -995,7 +995,7 @@ function renderChipBar() {
 
   const modeChips = [
     `<button type="button" class="chip" aria-pressed="${state.weatherFilterEnabled && state.categoryFilter === 'all'}" onclick="state.categoryFilter='all';toggleWeatherFilterMaster(true)">✨ ${esc(win.startLabel)}后7天适游<span class="count">${passCount}</span></button>`,
-    `<button type="button" class="chip" aria-pressed="${!state.weatherFilterEnabled && state.categoryFilter === 'all'}" onclick="state.categoryFilter='all';toggleWeatherFilterMaster(false)">全部 145 处 (不限天气)<span class="count">${allUnfilteredWeather.length}</span></button>`
+    `<button type="button" class="chip" aria-pressed="${!state.weatherFilterEnabled && state.categoryFilter === 'all'}" onclick="state.categoryFilter='all';toggleWeatherFilterMaster(false)">全部 200 处 (不限天气)<span class="count">${allUnfilteredWeather.length}</span></button>`
   ].join("");
 
   const poolForRegion = allWeatherFiltered.filter(d => state.categoryFilter === "all" || d.category === state.categoryFilter);
@@ -1946,7 +1946,7 @@ window.exportCSV = function() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `oceanic_atlas_145_${state.travelMonth}_${state.travelDay}.csv`;
+  a.download = `oceanic_atlas_200_${state.travelMonth}_${state.travelDay}.csv`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -2122,7 +2122,7 @@ function renderOriginFinder() {
   const cities = window.ORIGIN_CITIES || [];
   const modeChips = [
     { k: "weather", label: `只看 ${win.rangeLabel} 天气适游` },
-    { k: "all", label: "全部 145 处 (不限天气)" },
+    { k: "all", label: "全部 200 处 (不限天气)" },
     { k: "budget", label: "适游且 5晚房价 ≤ $1,200" }
   ].map(m =>
     `<button type="button" class="chip" aria-pressed="${state.originMode === m.k}" onclick="setOriginMode('${m.k}')">${esc(m.label)}</button>`
